@@ -1,0 +1,11 @@
+
+*.sw?
+*-private*
+*-ignore*
+
+*.po
+*.pi
+
+.DS_*/
+node_modules/
+
