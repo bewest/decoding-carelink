@@ -10,6 +10,7 @@ import sys
 import argparse
 import logging
 import binascii
+from os.path import getsize
 
 logging.basicConfig(stream=sys.stdout)
 logger = logging.getLogger('decoder')
@@ -19,19 +20,56 @@ logger.setLevel(logging.DEBUG)
 #import scapy
 from scapy.all import *
 from scapy import utils
+from scapy import automaton
 
-_usb_response = { 0x00: '', 'U': "Success", 'f': "Fail" }
+_usb_response = { 0x00: '', 0x55: "Success", 0x66: "Fail" }
+
+_usb_commands = {
+  0x00: 'nil',
+  0x01: 'MCPY',
+  0x02: 'XFER',
+  0x03: 'POLL',
+  0x04: 'INFO',
+  0x05: 'stat',
+  0x06: 'SIGNAL',
+  0x0C: 'RFLEN',
+}
+
+
+
+class ProdInfo(Packet):
+  name = "ProductInfo"
+  fields_desc = [
+    XByteField('version.major', 0),
+    XByteField('version.minor', 0),
+  ]
 
 class USBReq(Packet):
   name = "USBRequest"
 
   fields_desc = [
-    XByteField("code", 0),
+    ByteEnumField("code", 0x00, _usb_commands),
     ByteEnumField("resp", 0x00, _usb_response),
     XByteField("error", 0),
   ]
 
-class Decoder(object):
+class CLMMComm(Packet):
+  name ="CLMM Hexline"
+  fields_desc = [
+    StrStopField('dir', 'in', ','),
+    PacketField('stick', USBReq( ), USBReq),
+  ]
+  def extract_padding(self, s):
+    return '', s
+
+class CLMMPair(Packet):
+  name = "CLMM command/response"
+  fields_desc = [
+    PacketField('out', CLMMComm( ), CLMMComm),
+    PacketField('in', CLMMComm( ), CLMMComm),
+  ]
+
+class Handler(object):
   def __init__(self, path, opts):
     self.path = path
     self.opts = opts
@@ -52,15 +90,22 @@ class Decoder(object):
     if self.path != '-':
       self.handle.close( )
 
+class Decoder(Handler):
+
+  def clean(self, line):
+    line = line.strip( )
+    method, data = line.split(',')
+    data = binascii.unhexlify(data)
+    return ','.join([ method, data ])
+
   def decode(self):
-    for line in self.handle.readlines( ):
-      line = line.strip( )
-      method, data = line.split(',')
-      data = binascii.unhexlify(data)
-      if method == 'out':
-        print method
-        p = USBReq(data)
-        print p.show( )
+    lines = self.handle.readlines( )
+    L = len(lines)
+    for x in range(0, L, 2):
+      one = self.clean(lines[x])
+      two = self.clean(lines[x+1])
+      p = CLMMPair(one + two)
+      p.show( )
 
 
 
@@ -90,7 +135,7 @@ class Console:
 
   def do_input(self, item):
     decode = Decoder(item, self.opts)
-    print decode( )
+    decode( )
 
   def get_argparser(self):
     """Prepare an argument parser."""
