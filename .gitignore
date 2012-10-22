@@ -3,8 +3,9 @@
 *-private*
 *-ignore*
 
-*.po
-*.pi
+*.pyo
+*.pyi
+*.pyc
 
 .DS_*/
 node_modules/
