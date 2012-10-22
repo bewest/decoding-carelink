@@ -56,17 +56,15 @@ class USBReq(Packet):
 class CLMMComm(Packet):
   name ="CLMM Hexline"
   fields_desc = [
-    StrStopField('dir', 'in', ','),
-    PacketField('stick', USBReq( ), USBReq),
+    StrStopField('dir', 'error', ','),
+    PacketField('stick', None, USBReq),
   ]
-  def extract_padding(self, s):
-    return '', s
 
 class CLMMPair(Packet):
   name = "CLMM command/response"
   fields_desc = [
-    PacketField('out', CLMMComm( ), CLMMComm),
-    PacketField('in', CLMMComm( ), CLMMComm),
+    PacketField('write', None, CLMMComm),
+    PacketField('read', None, CLMMComm),
   ]
 
 class Handler(object):
@@ -104,7 +102,9 @@ class Decoder(Handler):
     for x in range(0, L, 2):
       one = self.clean(lines[x])
       two = self.clean(lines[x+1])
-      p = CLMMPair(one + two)
+      p = CLMMPair( )
+      p.write = CLMMComm(one)
+      p.read = CLMMComm(two)
       p.show( )
 
 
