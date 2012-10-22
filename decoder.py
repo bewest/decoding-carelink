@@ -22,8 +22,8 @@ from scapy import utils
 
 _usb_response = { 0x00: '', 'U': "Success", 'f': "Fail" }
 
-class USBPacket(Packet):
-  name = "USBPacket"
+class USBReq(Packet):
+  name = "USBRequest"
 
   fields_desc = [
     XByteField("code", 0),
@@ -57,8 +57,10 @@ class Decoder(object):
       line = line.strip( )
       method, data = line.split(',')
       data = binascii.unhexlify(data)
-      print method
-      print utils.hexdump(data)
+      if method == 'out':
+        print method
+        p = USBReq(data)
+        print p.show( )
 
 
 
