@@ -1,6 +1,5 @@
 WARNING:scapy.runtime:No route found for IPv6 destination :: (no default route?)
-decoder.py -vv -
-INFO:decoder:opening ['-']
+decoder.py  pcaps/first_run/hexlify.csv
 ###[ CLMM command/response ]###
   \send      \
    |###[ CLMM Hexline ]###
@@ -3647,27 +3646,67 @@ INFO:decoder:opening ['-']
    |   |  error     = 0x0
    |   |###[ Raw ]###
    |   |     load      = '\x00\xce\x80\x80\xa7\x01 \x88Pl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
-### 364 is unusual!
-0000   6F 75 74 2C 01 00 A7 01  20 88 50 80 02 55 00 00   out,.... .P..U..
-0010   00 5D 7A 00 00 00                                  .]z...
-None
-0000   6F 75 74 2C 06 00 00                               out,...
-None
-### 366 is unusual!
-0000   69 6E 2C 01 55 00 C6 CE  80 80 A7 01 20 88 50 6C   in,.U....... .Pl
-0010   00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
-0020   00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
-0030   00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
-0040   00 00 00                                           ...
-None
-0000   6F 75 74 2C 05 00 00                               out,...
-None
-### 368 is unusual!
-0000   69 6E 2C 01 55 00 00 00  00 00 00 00 00 89 00 00   in,.U...........
-0010   00 92 00 00 00 56 00 11  00 32 00 78 00 0A 00 00   .....V...2.x....
-0020   00 00 00 00 01 01 55 00  00 00 00 00 00 00 00 00   ......U.........
-0030   00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
-0040   00 00 00                                           ...
-None
-0000   6F 75 74 2C 05 01 00                               out,...
-None
+### XXX unusual line! out,
+###[ CLMM Hexline ]###
+  dir       = 'out,'
+  \stick     \
+   |###[ USBRequest ]###
+   |  code      = MCPY
+   |  resp      = 
+   |  error     = 0xa7
+   |###[ Raw ]###
+   |     load      = '\x01 \x88P\x80\x02U\x00\x00\x00]z\x00\x00\x00'
+### XXX unusual line! out,
+###[ CLMM Hexline ]###
+  dir       = 'out,'
+  \stick     \
+   |###[ USBRequest ]###
+   |  code      = SIGNAL
+   |  resp      = 
+   |  error     = 0x0
+### XXX unusual line! in,
+###[ CLMM Hexline ]###
+  dir       = 'in,'
+  \stick     \
+   |###[ USBRequest ]###
+   |  code      = MCPY
+   |  resp      = Success
+   |  error     = 0x0
+   |###[ Raw ]###
+   |     load      = '\xc6\xce\x80\x80\xa7\x01 \x88Pl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+### XXX unusual line! out,
+###[ CLMM Hexline ]###
+  dir       = 'out,'
+  \stick     \
+   |###[ USBRequest ]###
+   |  code      = stat
+   |  resp      = 
+   |  error     = 0x0
+### XXX unusual line! in,
+###[ CLMM Hexline ]###
+  dir       = 'in,'
+  \stick     \
+   |###[ USBRequest ]###
+   |  code      = MCPY
+   |  resp      = Success
+   |  error     = 0x0
+   |###[ Raw ]###
+   |     load      = '\x00\x00\x00\x00\x00\x00\x00\x89\x00\x00\x00\x92\x00\x00\x00V\x00\x11\x002\x00x\x00\n\x00\x00\x00\x00\x00\x00\x01\x01U\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+### XXX unusual line! out,
+###[ CLMM Hexline ]###
+  dir       = 'out,'
+  \stick     \
+   |###[ USBRequest ]###
+   |  code      = stat
+   |  resp      = 1
+   |  error     = 0x0
+### XXX unusual line! in,
+###[ CLMM Hexline ]###
+  dir       = 'in,'
+  \stick     \
+   |###[ USBRequest ]###
+   |  code      = MCPY
+   |  resp      = Success
+   |  error     = 0x0
+   |###[ Raw ]###
+   |     load      = '\x00\x00\x00\x00\x00\x00\x01q\x00\x00\x01q\x01t\x02|\x01q\x04\x00\x00\x05\x00\n\x00\x00\x00\x00\x00\x00\x01\x01U\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'

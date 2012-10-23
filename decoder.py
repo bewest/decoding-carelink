@@ -14,7 +14,7 @@ from os.path import getsize
 
 logging.basicConfig(stream=sys.stdout)
 logger = logging.getLogger('decoder')
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 
 # Requires scapy to be in your PYATHONPATH
 #import scapy
@@ -98,21 +98,33 @@ class Decoder(Handler):
 
   def decode(self):
     lines = self.handle.readlines( )
+    self.lines = [ ]
+    self.decoded = [ ]
     L = len(lines)
-    last = [ ]
-    for x in range(0, L, 2):
-      one = self.clean(lines[x])
-      two = self.clean(lines[x+1])
-      if one.startswith('out,') and two.startswith('in,'):
-        p = CLMMPair( )
-        p.send = CLMMComm(one)
-        p.recv = CLMMComm(two)
-        p.show( )
+
+    for x in range(L):
+      line = self.clean(lines[x])
+      p = CLMMComm(line)
+      logger.debug("Line: %s" % x)
+      logger.debug(utils.hexstr(str(p.stick)))
+      if len(self.lines) <= 1:
+        self.lines.append(p)
       else:
-        last.extend([one, two])
-        print "###", x, "is unusual!"
-        print utils.hexdump(one)
-        print utils.hexdump(two)
+        if len(self.lines) == 2 and self.lines[0].dir == p.dir:
+          one = self.lines[0]
+          two = self.lines[1]
+          pair = CLMMPair( )
+          pair.send = one
+          pair.recv = two
+          pair.show( )
+          self.decoded.append(pair)
+          self.lines = [p]
+        else:
+          self.lines.append(p)
+
+    for p in self.lines:
+      print "###", "XXX unusual line!", p.dir
+      p.show( )
 
 
 
