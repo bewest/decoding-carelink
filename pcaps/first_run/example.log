@@ -1,3 +1,4 @@
+# Example
 WARNING:scapy.runtime:No route found for IPv6 destination :: (no default route?)
 decoder.py -vv -
 INFO:decoder:opening ['-']
