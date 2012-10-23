@@ -36,7 +36,6 @@ _usb_commands = {
 }
 
 
-
 class ProdInfo(Packet):
   name = "ProductInfo"
   fields_desc = [
@@ -53,6 +52,7 @@ class USBReq(Packet):
     XByteField("error", 0),
   ]
 
+
 class CLMMComm(Packet):
   name ="CLMM Hexline"
   fields_desc = [
@@ -63,8 +63,8 @@ class CLMMComm(Packet):
 class CLMMPair(Packet):
   name = "CLMM command/response"
   fields_desc = [
-    PacketField('write', None, CLMMComm),
-    PacketField('read', None, CLMMComm),
+    PacketField('send', None, CLMMComm),
+    PacketField('recv', None, CLMMComm),
   ]
 
 class Handler(object):
@@ -99,13 +99,18 @@ class Decoder(Handler):
   def decode(self):
     lines = self.handle.readlines( )
     L = len(lines)
+    last = [ ]
     for x in range(0, L, 2):
       one = self.clean(lines[x])
       two = self.clean(lines[x+1])
-      p = CLMMPair( )
-      p.write = CLMMComm(one)
-      p.read = CLMMComm(two)
-      p.show( )
+      if one.startswith('out,') and two.startswith('in,'):
+        p = CLMMPair( )
+        p.send = CLMMComm(one)
+        p.recv = CLMMComm(two)
+        p.show( )
+      else:
+        last.extend([one, two])
+        print "###", x, "is unusual!", one, two
 
 
 
