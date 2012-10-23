@@ -110,7 +110,9 @@ class Decoder(Handler):
         p.show( )
       else:
         last.extend([one, two])
-        print "###", x, "is unusual!", one, two
+        print "###", x, "is unusual!"
+        print utils.hexdump(one)
+        print utils.hexdump(two)
 
 
 
