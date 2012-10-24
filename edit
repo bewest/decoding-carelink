@@ -1,0 +1,15 @@
+#!/bin/bash
+
+find ./ -not -path './.git*' -type f \
+    \( \
+    -not -name ".*.sw?"  \
+    -not -name "edit"     \
+    -not -name "*.py?"     \
+    -or -name '*.markdown'  \
+    -or -name '*.py'         \
+    -or -name 'README*'       \
+    \) \
+    -exec vim {} +
+
+#####
+# EOF
