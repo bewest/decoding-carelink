@@ -22,7 +22,7 @@ from scapy.all import *
 from scapy import utils
 from scapy import automaton
 
-_usb_response = { 0x00: '', 0x55: "Success", 0x66: "Fail" }
+_usb_response = { 0x00: 'OUT', 0x55: "Success", 0x66: "Fail" }
 
 _usb_commands = {
   0x00: 'nil',
