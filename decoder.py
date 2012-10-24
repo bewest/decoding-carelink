@@ -113,9 +113,9 @@ class Decoder(Handler):
         if len(self.lines) == 2 and self.lines[0].dir == p.dir:
           one = self.lines[0]
           two = self.lines[1]
-          pair = CLMMPair( )
-          pair.send = one
-          pair.recv = two
+          pair = CLMMPair( send = one, recv = two)
+          #pair.
+          #pair.
           pair.show( )
           self.decoded.append(pair)
           self.lines = [p]

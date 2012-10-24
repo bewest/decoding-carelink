@@ -1,0 +1,3712 @@
+WARNING:scapy.runtime:No route found for IPv6 destination :: (no default route?)
+decoder.py  pcaps/third_run/hexlify.csv
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = INFO
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x0b,\x00\x00\x00\x00ComLink II\x01\x10\x02\x00\x01\x01\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = SIGNAL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\xbf,\x00\x00\x00\x00ComLink II\x01\x10\x02\x00\x01\x01\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x02U\x00\x00\x00]z\x01\n\xa2'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\xbf,\x00\x00\x00\x00ComLink II\x01\x10\x02\x00\x01\x01\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00uK\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\xbf,\x00\x00\x00\x00ComLink II\x01\x10\x02\x00\x01\x01\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00mLink II\x01\x10\x02\x00\x01\x01\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00mLink II\x01\x10\x02\x00\x01\x01\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd1\x80@\xa7\x01 \x88P\xb7\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x83\xb2\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd1\x80@\xa7\x01 \x88P\xb7\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\xb7\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\xb7\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd1\x80@\xa7\x01 \x88P\xb7\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x000'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x98\xaf\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd1\x80@\xa7\x01 \x88P\xb7\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\xb7\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\xb7\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x8d\xc7\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x03515\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00E'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x00\x01\x00\xce\xbc\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x03515\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x03515\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x03515\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x000'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x01\x00\x02\x00\x00M\xa7\x00\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00uK\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00p\x11\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x04\x03\x17\x07\xd0\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xd5'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x01\x00\x02\x00\x00M\xa7\x01\x9b'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x04\x03\x17\x07\xd0\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00q\x8a\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x04\x03\x17\x07\xd0\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x04\x03\x17\x07\xd0\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x04\x03\x17\x07\xd0\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x80@\xa7\x01 \x88P\x16208850\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xe3'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00t\xd0\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x80@\xa7\x01 \x88P\x16208850\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x16208850\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x16208850\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x80@\xa7\x01 \x88P\x16VER 2.1A1.1 \x0b\x0b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xca'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x9d\xf5\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x80@\xa7\x01 \x88P\x16VER 2.1A1.1 \x0b\x0b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x16VER 2.1A1.1 \x0b\x0b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x16VER 2.1A1.1 \x0b\x0b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x80@\xa7\x01 \x88P\x16\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00p'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\xc0L\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x80@\xa7\x01 \x88P\x16\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x16\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x16\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x80@\xa7\x01 \x88P\x16\x00\x01\x01\x14\x00d\x00P\x00\x00\x01\x02\x00\x00\x00d\x00\x05\x00\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xbd'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00y\x93\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x80@\xa7\x01 \x88P\x16\x00\x01\x01\x14\x00d\x00P\x00\x00\x01\x02\x00\x00\x00d\x00\x05\x00\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x16\x00\x01\x01\x14\x00d\x00P\x00\x00\x01\x02\x00\x00\x00d\x00\x05\x00\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x16\x00\x01\x01\x14\x00d\x00P\x00\x00\x01\x02\x00\x00\x00d\x00\x05\x00\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x80@\xa7\x01 \x88P\x16\x00l\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00`'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x02\x00\x92\xf9\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x80@\xa7\x01 \x88P\x16\x00l\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x16\x00l\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x00@\xa7\x01 \x88PC0\x00\x00$\x00\x04(\x00\x0e<\x00\x16(\x00 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00~'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00PC0\x00\x00$\x00\x04(\x00\x0e<\x00\x16(\x00 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x00@\xa7\x01 \x88PC\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00PC\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x80@\xa7\x01 \x88P\xc0\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x02\x00\x93b\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x80@\xa7\x01 \x88P\xc0\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\xc0\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x00@\xa7\x01 \x88PC\x02\x00\x00\x04\x00\x0c\x06\x00\x16\x08\x00\x1e\n\x00"\x16\x00&\x18\x00( \x00)$\x00*(\x00,,\x00.4\x00/\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xb5'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00PC\x02\x00\x00\x04\x00\x0c\x06\x00\x16\x08\x00\x1e\n\x00"\x16\x00&\x18\x00( \x00)$\x00*(\x00,,\x00.4\x00/\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x00@\xa7\x01 \x88P\xde\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\xde\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P]\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x02\x00\x94\x95\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P]\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P]\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x00@\xa7\x01 \x88PC\x00\x00\x00\x04\x00\x02\x08\x00\x04\x0c\x00\x06\x10\x00\x08\x14\x00\n\x1a\x00\r\x1c\x00\x0e \x00\x10$\x00\x12(\x00\x14,\x00\x160\x00\x184\x00\x1a8\x00\x1c<\x00\x1e@\x00 D\x00"H\x00$L\x00&P\x00(\x00P'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00PC\x00\x00\x00\x04\x00\x02\x08\x00\x04\x0c\x00\x06\x10\x00\x08\x14\x00\n\x1a\x00\r\x1c\x00\x0e \x00\x10$\x00\x12(\x00\x14,\x00\x160\x00\x184\x00\x1a8\x00\x1c<\x00\x1e@\x00 '
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x00@\xa7\x01 \x88P\xde\x00)\x04\x00*\x06\x00+\x08\x00,\x08\x00-\n\x00.\x0c\x00/\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00a'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\xde\x00)\x04\x00*\x06\x00+\x08\x00,\x08\x00-\n\x00.\x0c\x00/\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P]\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x98\xaf\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P]\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P]\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P]\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00r\xbc\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x98\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00u'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = "\x01 \x88P\x80\x00\x00\x02\x01\x00s'\x00"
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x98\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x00\x00\x98\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x00\x00\x98\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x06\x88\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xa5'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00v}\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x06\x88\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x06\x88\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x06\x88\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b------------------\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xbb'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x83\xb2\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b------------------\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b------------------\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b------------------\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x000'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x86\xe8\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x8d\xc7\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x03515\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00E'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x8e\xf1\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x03515\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x03515\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x03515\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x90'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x97A\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x90\xb6\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x9fX\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x01\x00dd\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xd6'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x89\x06\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x01\x00dd\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x01\x00dd\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x01\x00dd\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x87s\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x8a0\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x01\x00\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x86'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x88\x9d\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x01\x00\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x01\x00\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x01\x00\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x95\xec\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b------------------\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xbb'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x8b\xab\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b------------------\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b------------------\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b------------------\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x01\x002\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x11'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\x8fj\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x01\x002\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x01\x002\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x01\x002\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xaa'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\xc1\xd7\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x00\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x00\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xaa'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\xc3z\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x00\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x00\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x02\x07\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00_'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\xc5\x16\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x02\x07\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x02\x07\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x02\x07\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\xc6 \x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x90'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x00\x00\x02\x01\x00\xc7\xbb\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x02\x00\x00\x05\x04\x00P\x8b\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x3
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x01\x02\x01\x01\x01\x01\x02\x02\x00\x11\x02a]\xc0\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x15'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x01\x00\x02\x02\x00\x80\x9b\x00\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80@\xa7\x01 \x88P\x8b\x01\x02\x01\x01\x01\x01\x02\x02\x00\x11\x02a]\xc0\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00N\x05\x04\x00P\x8b\x01\x02\x01\x01\x01\x01\x02\x02\x00\x11\x02a]\xc0\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = 'N\x95'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x00@\xa7\x01 \x88P\xde\x08\x10\nrC\x01\x00\x00\x02\x00\x02\x04\x00\x04\x08\x00\x06\x0c\x00\x08\x10\x00\n\x14\x00\r\x1a\x00\x0e\x1c\x00\x10 \x00\x12$\x00\x14(\x00\x16,\x00\x180\x00\x1a4\x00\x1c8\x00\x1e@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x9f'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00\xce\x05\x04\x00P\xde\x08\x10\nrC\x01\x00\x00\x02\x00\x02\x04\x00\x04\x08\x00\x06\x0c\x00\x08\x10\x00\n\x14\x00\r\x1a\x00\x0e\x1c\x00\x10 \x00\x12$\x00\x14(\x00\x16,\x00\x180\x00\x1a4\x00\x1c8'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\xce\x9e'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x00\xc0\xa7\x01 \x88P\xb5\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\x1c\nrC\x01\x00\x00\x00\x00\x02\x04\x00\x04\x08\x00\x06\x0c\x00\x08\x10\x00\n\x14\x00\r\x1a\x00\x0e\x1c\x00\x10 \x00\x12$\x00\x14(\x00\x16,\x00\x180\x00\x1a4\x00\x1c8\x00\x1e<\x00 @\x00"D\x00$H\x00&L\x00(P\x00)\x00\x00*\x04\x00+\x06\x00,\x08\x00-\x08\x00.\n\x00/\x0c\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x03\x00\x8e\x05\x04\x00P\xb5\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x8eV'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x00\x80\xa7\x01 \x88PM\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x1e\x00\x18s\x03\x01\x00\x01\x14\x03\x00\x0es#\x01\x00\x1f\x00\x1as\x03\x01\x00-\x01\rt\x03\x01\x00Z\n\rt\x03\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x000'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00\xce\x05\x04\x00PM\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x1e\x00\x18'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\xce\x9e'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x00\xc0\xa7\x01 \x88P\xb5\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x15\x11\x00\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x002\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00dd\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00_[d\x1bt\x03\x01\x00\nP\n2d\x00\n\x00\x00\x03\x00\nd\\\x05\n\x03\x84\x01\n\n\x00\x1bt#\x01\x00!\x00\x10u\x03\x01\x00!\x00\x16u\x03\x01\x00\x03\x00\x00\x00\x0b\x1bu#\x01\x00\x03\x00\x03\x00\x03%u\x03\x01\x00\x1e\x00.v\x03A\x00\x1f\x00\x07w\x03A\x00[d7w\x03\x01\x00\x01P\n2d\x00\x01\x00\x00\r\x00\x01d\\\x052\x06D\x01\x01\x01\x008w#\x01\x00[d\x10'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00\xce\x05\x04\x00P\xb5\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x15\x11\x00\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x002\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\xce\x9e'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x00\xc0\xa7\x01 \x88P\xb5\x0cx\x03\x01\x00\x02P\n2d\x00\x02\x00\x00\x0e\x00\x02d\\\x056\x07D\x01\x02\x02\x00\x0cx#\x01\x00[d\'x\x03\x01\x00\x03P\n2d\x00\x03\x00\x00\x10\x00\x03d\\\x05>\x07D\x01\x03\x03\x00\'x#\x01\x00[d\x05y\x03\x01\x00\x04P\n2d\x00\x04\x00\x00\x13\x00\x04d\\\x05J\x08D\x01\x04\x04\x00\x05y#\x01\x00[d y\x03\x01\x00\x05P\n2d\x00\x05\x00\x00\x17\x00\x05d\\\x05Z\x08D\x01\x05\x05\x00 y#\x01\x00[d\x06z\x03\x01\x00\x06P\n2d\x00\x06\x00\x00\x1c\x00\x06d\\\x05n\tD\x01\x06\x06\x00\x07z#\x01\x00[d+z\x03\x01\x00\x07P\n2d\x00\x07\x00\x00"\x00\x07d\\\x05\x86\t\xaf'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = "\x00\x02\x03\x00\x8e\x05\x04\x00P\xb5\x0cx\x03\x01\x00\x02P\n2d\x00\x02\x00\x00\x0e\x00\x02d\\\x056\x07D\x01\x02\x02\x00\x0cx#\x01\x00[d'x\x03\x01\x00\x03P\n2d\x00\x03\x00\x00\x10\x00\x03"
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x8eV'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd3\x00\x80\xa7\x01 \x88P\xd0D\x01\x07\x07\x00+z#\x01\x00[d\x1f{\x03\x01\x00\x08P\n2d\x00\x08\x00\x00)\x00\x08d\\\x08\n\x00D\x98\nD\x01\x08\x08\x00\x1f{#\x01\x00[d\x10@\x04\x01\x00\tP\n2d\x00\t\x00\x001\x00\td\\\x08*\x01D\x98\x0bD\x01\t\t\x00\x10@$\x01\x00[d\x06A\x04\x01\x00\nP\n2d\x00\n\x00\x00:\x00\nd\\\x08N\x02D\x98\x0cD\x01\n\n\x00\x06A$\x01\x00\x1e\x00\x17C\x04A\x00j'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = POLL
+   |   |  resp      = 
+   |   |  error     = 0x0
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\x02\x01\x00\x8e\x05\x04\x00P\xd0D\x01\x07\x07\x00+z#\x01\x00[d\x1f{\x03\x01\x00\x08P\n2d\x00\x08\x00\x00)\x00\x08d\\\x08\n\x00D\x98\nD\x01\x08\x08\x00\x1f{#\x01\x00[d\x10@'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = RFLEN
+   |   |  resp      = 
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x8eV'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = XFER
+   |   |  resp      = 
+   |   |  error     = 0x4
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80\x80\xa7\x01 \x88P\xce\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xb3\x81\x13'
+###[ CLMM command/response ]###
+  \send      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'out,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = 
+   |   |  error     = 0xa7
+   |   |###[ Raw ]###
+   |   |     load      = '\x01 \x88P\x80\x01\x00\x02\x00\x00M\xa7\x00\x00'
+  \recv      \
+   |###[ CLMM Hexline ]###
+   |  dir       = 'in,'
+   |  \stick     \
+   |   |###[ USBRequest ]###
+   |   |  code      = MCPY
+   |   |  resp      = Success
+   |   |  error     = 0x0
+   |   |###[ Raw ]###
+   |   |     load      = '\x00\xd2\x80\x80\xa7\x01 \x88P\xce\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+### XXX unusual line! out,
+###[ CLMM Hexline ]###
+  dir       = 'out,'
+  \stick     \
+   |###[ USBRequest ]###
+   |  code      = MCPY
+   |  resp      = 
+   |  error     = 0xa7
+   |###[ Raw ]###
+   |     load      = '\x01 \x88P\x80\x02U\x00\x00\x00]z\x00\x00\x00'
+### XXX unusual line! out,
+###[ CLMM Hexline ]###
+  dir       = 'out,'
+  \stick     \
+   |###[ USBRequest ]###
+   |  code      = SIGNAL
+   |  resp      = 
+   |  error     = 0x0
+### XXX unusual line! in,
+###[ CLMM Hexline ]###
+  dir       = 'in,'
+  \stick     \
+   |###[ USBRequest ]###
+   |  code      = MCPY
+   |  resp      = Success
+   |  error     = 0x0
+   |###[ Raw ]###
+   |     load      = '\xc0\xd2\x80\x80\xa7\x01 \x88P\xce\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+### XXX unusual line! out,
+###[ CLMM Hexline ]###
+  dir       = 'out,'
+  \stick     \
+   |###[ USBRequest ]###
+   |  code      = stat
+   |  resp      = 
+   |  error     = 0x0
+### XXX unusual line! in,
+###[ CLMM Hexline ]###
+  dir       = 'in,'
+  \stick     \
+   |###[ USBRequest ]###
+   |  code      = MCPY
+   |  resp      = Success
+   |  error     = 0x0
+   |###[ Raw ]###
+   |     load      = '\x00\x00\x00\x00\x00\x00\x01$\x00\x00\x016\x00\x00\x00\xad\x00$\x00t\x01\x00\x00\x15\x00\x00\x00\x00\x00\x00\x01\x01=\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+### XXX unusual line! out,
+###[ CLMM Hexline ]###
+  dir       = 'out,'
+  \stick     \
+   |###[ USBRequest ]###
+   |  code      = stat
+   |  resp      = 1
+   |  error     = 0x0
+### XXX unusual line! in,
+###[ CLMM Hexline ]###
+  dir       = 'in,'
+  \stick     \
+   |###[ USBRequest ]###
+   |  code      = MCPY
+   |  resp      = Success
+   |  error     = 0x0
+   |###[ Raw ]###
+   |     load      = '\x00\x00\x00\x00\x00\x00\x02\xf2\x00\x00\x02\xf2\x02\xf7\x05\x12\x02\xf2\x04\x00\x00\x05\x00\x15\x00\x00\x00\x00\x00\x00\x01\x01=\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
