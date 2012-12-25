@@ -1,5 +1,7 @@
 
 ## Settings:
+We sampled 6 pages of data, performed some activities, and then sampled 7 page.
+
 ### Bolus Wizard
 
 * units grams
@@ -26,4 +28,14 @@
 * in bolus wizard use blood sugar=103 `0x67`; food=7 grams est total 0.7 8:24 AM        
 * in bolus wizard use blood sugar=599 `0x257`; food=1 gram; est total 0.1 correction 9.9; active insulin=1.0; 9.0 total 8:26 AM
 
+## Discussion
 
+Before resetting the time as mentioned above, we had **6** pages of data.
+After, we have 7.
+
+After resetting the time we noticed the following:
+
+The old `page 0` became the new `page 1`, with new data appended to the
+bottom of the new `page 1` but otherwise identical to the old page 0.
+
+The data in page 7 is new and does not appear in the pages from before our activity.
