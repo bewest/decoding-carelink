@@ -1,57 +1,10 @@
 INFO:auditor:hello world
-INFO:auditor.io:hello world
-INFO:auditor.io:sendComLink2Command:write
-INFO:auditor.io:checkAck:read
-INFO:auditor:ACK OK
-INFO:auditor:readProductInfo:result
 INFO:auditor:product info: {'description': 'ComLink II',
  'interfaces': [(0, 'Paradigm RF'), (1, 'USB')],
  'product.version': '0.0',
  'rf.freq': '916.5Mhz',
  'serial': '0b2c00',
  'software.version': '1.16'}
-INFO:auditor.io:sendComLink2Command:write
-INFO:auditor.io:checkAck:read
-INFO:auditor:ACK OK
-INFO:auditor:<__main__.Link object at 0x2872090>:readSignalStrength:190
-INFO:auditor.io:[1, 0, 167, 1, 32, 136, 80, 128, 2, 85, 0, 0, 0, 93, 122, 1, 10, 162]
-INFO:auditor.io:sendDeviceCommand:write:<__main__.PowerControl object at 0x2886510>
-INFO:auditor.io:checkAck:read
-INFO:auditor:ACK OK
-INFO:auditor.io:[1, 0, 167, 1, 32, 136, 80, 128, 0, 0, 2, 1, 0, 117, 75, 0]
-INFO:auditor.io:sendDeviceCommand:write:<__main__.ReadErrorStatus object at 0x28867d0>
-INFO:auditor.io:checkAck:read
-INFO:auditor:ACK OK
-INFO:auditor.io:sendComLink2Command:write
-INFO:auditor.io:checkAck:read
-INFO:auditor:ACK OK
-INFO:auditor:getNumBytesAvailable:78
-INFO:auditor.io:writeAndRead:
-INFO:auditor:readData ACK
-INFO:auditor:XXX resLength: 64
-INFO:auditor.io:[1, 0, 167, 1, 32, 136, 80, 128, 0, 0, 2, 1, 0, 131, 178, 0]
-INFO:auditor.io:sendDeviceCommand:write:<__main__.ReadPumpState object at 0x2886510>
-INFO:auditor.io:checkAck:read
-INFO:auditor:ACK OK
-INFO:auditor.io:sendComLink2Command:write
-INFO:auditor.io:checkAck:read
-INFO:auditor:ACK OK
-INFO:auditor:getNumBytesAvailable:78
-INFO:auditor.io:writeAndRead:
-INFO:auditor:readData ACK
-INFO:auditor:XXX resLength: 64
-INFO:auditor:read cur page number
-INFO:auditor.io:[1, 0, 167, 1, 32, 136, 80, 128, 0, 0, 2, 1, 0, 157, 245, 0]
-INFO:auditor.io:sendDeviceCommand:write:<__main__.ReadCurPageNumber object at 0x28867d0>
-INFO:auditor.io:checkAck:read
-INFO:auditor:ACK OK
-INFO:auditor.io:sendComLink2Command:write
-INFO:auditor.io:checkAck:read
-INFO:auditor:ACK OK
-INFO:auditor:getNumBytesAvailable:78
-INFO:auditor.io:writeAndRead:
-INFO:auditor:readData ACK
-INFO:auditor:XXX resLength: 64
 INFO:auditor:XXX: READ cur page number:
 0000   0x00 0x00 0x00 0x06 0x00 0x00 0x00 0x00    ........
 0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
