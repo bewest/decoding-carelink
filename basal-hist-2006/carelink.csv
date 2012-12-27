@@ -1,0 +1,516 @@
+Medtronic Diabetes CareLink Personal Data Export File (v1.0.1) 
+PATIENT INFO
+Name,Earle West
+Report Range,7/1/06,to,9/1/06
+DEVICE INFO
+Pump:,Paradigm 515,#208850,Time Changes: 1
+Data Exported on,12/27/12 3:52 PM
+DEVICE DATA (505 records)
+Data Range,7/1/06 00:00:00,to,7/3/06 10:00:14
+Index,Date,Time,Timestamp,New Device Time,BG Reading (mg/dL),Linked BG Meter ID,Temp Basal Amount (U/h),Temp Basal Type,Temp Basal Duration (hh:mm:ss),Bolus Type,Bolus Volume Selected (U),Bolus Volume Delivered (U),Programmed Bolus Duration (hh:mm:ss),Prime Type,Prime Volume Delivered (U),Suspend,Rewind,BWZ Estimate (U),BWZ Target High BG (mg/dL),BWZ Target Low BG (mg/dL),BWZ Carb Ratio (grams),BWZ Insulin Sensitivity (mg/dL),BWZ Carb Input (grams),BWZ BG Input (mg/dL),BWZ Correction Estimate (U),BWZ Food Estimate (U),BWZ Active Insulin (U),Alarm,Sensor Calibration BG (mg/dL),Sensor Glucose (mg/dL),ISIG Value,Daily Insulin Total (U),Raw-Type,Raw-Values,Raw-ID,Raw-Upload ID,Raw-Seq Num,Raw-Device Type
+1,7/1/06,00:00:00,7/1/06 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,27.6,ResultDailyTotal,"AMOUNT=27.65, CONCENTRATION=null",9779566057,51910876,96,Paradigm 515
+2,7/1/06,06:10:22,7/1/06 06:10:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeTimeDisplayFormat,"FORMAT=d24, ACTION_REQUESTOR=pump",9773719114,51908503,114,Paradigm 515
+3,7/1/06,06:10:32,7/1/06 06:10:32,7/1/06 08:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeTime,"NEW_TIME=1151741400000, ACTION_REQUESTOR=pump",9773719113,51908503,113,Paradigm 515
+4,7/1/06,08:12:38,7/1/06 08:12:38,,,,,,,,,,,,,Suspended,,,,,,,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=user_suspend, ACTION_REQUESTOR=pump, PRE_ENABLE=null",9773719112,51908503,112,Paradigm 515
+5,7/1/06,08:13:08,7/1/06 08:13:08,,,,,,,,,,,,,Resume,,,,,,,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=normal_pumping, ACTION_REQUESTOR=pump, PRE_ENABLE=null",9773719111,51908503,111,Paradigm 515
+6,7/1/06,08:17:45,7/1/06 08:17:45,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeActiveBasalProfilePattern,"PATTERN_NAME=pattern a, OLD_PATTERN_NAME=pattern b, ACTION_REQUESTOR=pump",9773719110,51908503,110,Paradigm 515
+7,7/1/06,08:18:05,7/1/06 08:18:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeActiveBasalProfilePattern,"PATTERN_NAME=pattern b, OLD_PATTERN_NAME=pattern a, ACTION_REQUESTOR=pump",9773719109,51908503,109,Paradigm 515
+8,7/1/06,08:19:06,7/1/06 08:19:06,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeActiveBasalProfilePattern,"PATTERN_NAME=pattern a, OLD_PATTERN_NAME=pattern b, ACTION_REQUESTOR=pump",9773719108,51908503,108,Paradigm 515
+9,7/1/06,08:20:08,7/1/06 08:20:08,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeActiveBasalProfilePattern,"PATTERN_NAME=pattern b, OLD_PATTERN_NAME=pattern a, ACTION_REQUESTOR=pump",9773719107,51908503,107,Paradigm 515
+10,7/1/06,08:20:47,7/1/06 08:20:47,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeTimeDisplayFormat,"FORMAT=d12, ACTION_REQUESTOR=pump",9773719106,51908503,106,Paradigm 515
+11,7/1/06,08:21:13,7/1/06 08:21:13,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeTimeDisplayFormat,"FORMAT=d24, ACTION_REQUESTOR=pump",9773719105,51908503,105,Paradigm 515
+12,7/1/06,08:22:10,7/1/06 08:22:10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeTimeDisplayFormat,"FORMAT=d12, ACTION_REQUESTOR=pump",9773719104,51908503,104,Paradigm 515
+13,7/1/06,08:23:47,7/1/06 08:23:47,,,,,,,Normal,0.3,0.3,,,,,,,,,,,,,,,,,,,,,BolusNormal,"AMOUNT=0.3, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.3, ACTION_REQUESTOR=pump, ENABLE=false, IS_DUAL_COMPONENT=false, UNABSORBED_INSULIN_TOTAL=null",9773719102,51908503,102,Paradigm 515
+14,7/1/06,08:23:47,7/1/06 08:23:47,,,,,,,,,,,,,,,0.3,100,100,10,50,3,100,0,0.3,0.0,,,,,,BolusWizardBolusEstimate,"BG_INPUT=100, BG_UNITS=mg dl, CARB_INPUT=3, CARB_UNITS=grams, CARB_RATIO=10, INSULIN_SENSITIVITY=50, BG_TARGET_LOW=100, BG_TARGET_HIGH=100, BOLUS_ESTIMATE=0.3, CORRECTION_ESTIMATE=0, FOOD_ESTIMATE=0.3, UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=0, ACTION_REQUESTOR=pump",9773719103,51908503,103,Paradigm 515
+15,7/1/06,08:24:43,7/1/06 08:24:43,,,,,,,,,,,,,,,0.7,100,100,10,50,7,103,0,0.7,0.3,,,,,,BolusWizardBolusEstimate,"BG_INPUT=103, BG_UNITS=mg dl, CARB_INPUT=7, CARB_UNITS=grams, CARB_RATIO=10, INSULIN_SENSITIVITY=50, BG_TARGET_LOW=100, BG_TARGET_HIGH=100, BOLUS_ESTIMATE=0.7, CORRECTION_ESTIMATE=0, FOOD_ESTIMATE=0.7, UNABSORBED_INSULIN_TOTAL=0.3, UNABSORBED_INSULIN_COUNT=1, ACTION_REQUESTOR=pump",9773719100,51908503,100,Paradigm 515
+16,7/1/06,08:24:43,7/1/06 08:24:43,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=9773719100, INDEX=0, AMOUNT=0.3, RECORD_AGE=1, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=300",9773719101,51908503,101,Paradigm 515
+17,7/1/06,08:24:43,7/1/06 08:24:43,,,,,,,Normal,0.7,0.7,,,,,,,,,,,,,,,,,,,,,BolusNormal,"AMOUNT=0.7, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.7, ACTION_REQUESTOR=pump, ENABLE=false, IS_DUAL_COMPONENT=false, UNABSORBED_INSULIN_TOTAL=null",9773719099,51908503,99,Paradigm 515
+18,7/1/06,08:26:55,7/1/06 08:26:55,,,,,,,,,,,,,,,9.0,100,100,10,50,1,599,9.9,0.1,1.0,,,,,,BolusWizardBolusEstimate,"BG_INPUT=599, BG_UNITS=mg dl, CARB_INPUT=1, CARB_UNITS=grams, CARB_RATIO=10, INSULIN_SENSITIVITY=50, BG_TARGET_LOW=100, BG_TARGET_HIGH=100, BOLUS_ESTIMATE=9, CORRECTION_ESTIMATE=9.9, FOOD_ESTIMATE=0.1, UNABSORBED_INSULIN_TOTAL=1, UNABSORBED_INSULIN_COUNT=1, ACTION_REQUESTOR=pump",9773719097,51908503,97,Paradigm 515
+19,7/1/06,08:26:55,7/1/06 08:26:55,,,,,,,Normal,9.0,9.0,,,,,,,,,,,,,,,,,,,,,BolusNormal,"AMOUNT=9, CONCENTRATION=null, PROGRAMMED_AMOUNT=9, ACTION_REQUESTOR=pump, ENABLE=false, IS_DUAL_COMPONENT=false, UNABSORBED_INSULIN_TOTAL=null",9773719096,51908503,96,Paradigm 515
+20,7/1/06,08:26:55,7/1/06 08:26:55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=9773719097, INDEX=0, AMOUNT=1, RECORD_AGE=3, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=300",9773719098,51908503,98,Paradigm 515
+21,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalRemaining,AMOUNT=130,9773719064,51908503,64,Paradigm 515
+22,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentErrorStatus,RAW_STATUS=0,9773719065,51908503,65,Paradigm 515
+23,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=1, REMOTE_CONTROL_ID=123456",9773719066,51908503,66,Paradigm 515
+24,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=2, REMOTE_CONTROL_ID=213546",9773719067,51908503,67,Paradigm 515
+25,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=3, REMOTE_CONTROL_ID=821650",9773719068,51908503,68,Paradigm 515
+26,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentPumpStatus,STATUS=normal,9773719069,51908503,69,Paradigm 515
+27,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTempBasalType,TEMP_BASAL_TYPE=insulin_units,9773719070,51908503,70,Paradigm 515
+28,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkEnable,ENABLE=false,9773719071,51908503,71,Paradigm 515
+29,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinActionCurve,AMOUNT=300,9773719072,51908503,72,Paradigm 515
+30,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentPumpModelNumber,MODEL_NUMBER=515,9773719073,51908503,73,Paradigm 515
+31,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAlarmClockEnable,ENABLE=false,9773719074,51908503,74,Paradigm 515
+32,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGReminderEnable,ENABLE=false,9773719075,51908503,75,Paradigm 515
+33,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardEnable,ENABLE=true,9773719076,51908503,76,Paradigm 515
+34,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardBGUnits,UNITS=mg dl,9773719077,51908503,77,Paradigm 515
+35,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardCarbUnits,UNITS=grams,9773719078,51908503,78,Paradigm 515
+36,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentDisplayLanguage,LANGUAGE=english,9773719079,51908503,79,Paradigm 515
+37,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=1, PARADIGM_LINK_ID=------",9773719080,51908503,80,Paradigm 515
+38,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=2, PARADIGM_LINK_ID=------",9773719081,51908503,81,Paradigm 515
+39,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=3, PARADIGM_LINK_ID=------",9773719082,51908503,82,Paradigm 515
+40,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardSetupStatus,"IS_SETUP_COMPLETE=true, IS_BOLUS_WIZARD_ENABLED=true, IS_CARB_UNITS_COMPLETE=true, IS_CARB_RATIOS_COMPLETE=true, IS_BG_UNITS_COMPLETE=true, IS_INSULIN_SENSITIVITIES_COMPLETE=true, IS_BG_TARGETS_COMPLETE=true",9773719083,51908503,83,Paradigm 515
+41,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGTargetRangePattern,"ORIGINAL_UNITS=mg dl, SIZE=1",9773719084,51908503,84,Paradigm 515
+42,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGTargetRange,"PATTERN_DATUM=9773719084, INDEX=0, AMOUNT_LOW=100, AMOUNT_HIGH=100, START_TIME=0",9773719085,51908503,85,Paradigm 515
+43,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatioPattern,SIZE=1,9773719086,51908503,86,Paradigm 515
+44,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatio,"PATTERN_DATUM=9773719086, INDEX=0, AMOUNT=10, UNITS=grams, START_TIME=0",9773719087,51908503,87,Paradigm 515
+45,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinSensitivityPattern,"ORIGINAL_UNITS=mg dl, SIZE=1",9773719088,51908503,88,Paradigm 515
+46,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinSensitivity,"PATTERN_DATUM=9773719088, INDEX=0, AMOUNT=50, START_TIME=0",9773719089,51908503,89,Paradigm 515
+47,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentReservoirWarningUnits,UNITS=insulin,9773719090,51908503,90,Paradigm 515
+48,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentReservoirWarningValueInsulin,AMOUNT=20,9773719091,51908503,91,Paradigm 515
+49,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentKeypadLockedEnable,ENABLE=false,9773719092,51908503,92,Paradigm 515
+50,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusReminderEnable,ENABLE=false,9773719093,51908503,93,Paradigm 515
+51,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentHistoryPageNumber,PAGE_NUMBER=7,9773719094,51908503,94,Paradigm 515
+52,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,Suspended,,,,,,,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=user_suspend, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null",9773719095,51908503,95,Paradigm 515
+53,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTimeDisplayFormat,FORMAT=d12,9773719000,51908503,0,Paradigm 515
+54,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAudioBolusStep,"AMOUNT=2, ENABLE=true",9773719001,51908503,1,Paradigm 515
+55,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentVariableBolusEnable,ENABLE=false,9773719002,51908503,2,Paradigm 515
+56,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBeepVolume,LEVEL=high,9773719003,51908503,3,Paradigm 515
+57,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAutoOffDuration,DURATION=0,9773719004,51908503,4,Paradigm 515
+58,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalToday,AMOUNT=10.3,9773719005,51908503,5,Paradigm 515
+59,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTempBasal,"RATE=1.9, DURATION=0",9773719006,51908503,6,Paradigm 515
+60,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentMaxBasal,RATE=2,9773719007,51908503,7,Paradigm 515
+61,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentMaxBolus,AMOUNT=10,9773719008,51908503,8,Paradigm 515
+62,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentActiveBasalProfilePattern,PATTERN_NAME=pattern b,9773719009,51908503,9,Paradigm 515
+63,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=standard, NUM_PROFILES=5",9773719010,51908503,10,Paradigm 515
+64,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719010, PROFILE_INDEX=0, RATE=1.2, START_TIME=0",9773719011,51908503,11,Paradigm 515
+65,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719010, PROFILE_INDEX=1, RATE=0.9, START_TIME=7200000",9773719012,51908503,12,Paradigm 515
+66,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719010, PROFILE_INDEX=2, RATE=1, START_TIME=25200000",9773719013,51908503,13,Paradigm 515
+67,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719010, PROFILE_INDEX=3, RATE=1.5, START_TIME=39600000",9773719014,51908503,14,Paradigm 515
+68,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719010, PROFILE_INDEX=4, RATE=1, START_TIME=57600000",9773719015,51908503,15,Paradigm 515
+69,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=pattern a, NUM_PROFILES=12",9773719016,51908503,16,Paradigm 515
+70,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719016, PROFILE_INDEX=0, RATE=0.05, START_TIME=0",9773719017,51908503,17,Paradigm 515
+71,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719016, PROFILE_INDEX=1, RATE=0.1, START_TIME=21600000",9773719018,51908503,18,Paradigm 515
+72,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719016, PROFILE_INDEX=2, RATE=0.15, START_TIME=39600000",9773719019,51908503,19,Paradigm 515
+73,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719016, PROFILE_INDEX=3, RATE=0.2, START_TIME=54000000",9773719020,51908503,20,Paradigm 515
+74,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719016, PROFILE_INDEX=4, RATE=0.25, START_TIME=61200000",9773719021,51908503,21,Paradigm 515
+75,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719016, PROFILE_INDEX=5, RATE=0.55, START_TIME=68400000",9773719022,51908503,22,Paradigm 515
+76,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719016, PROFILE_INDEX=6, RATE=0.6, START_TIME=72000000",9773719023,51908503,23,Paradigm 515
+77,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719016, PROFILE_INDEX=7, RATE=0.8, START_TIME=73800000",9773719024,51908503,24,Paradigm 515
+78,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719016, PROFILE_INDEX=8, RATE=0.9, START_TIME=75600000",9773719025,51908503,25,Paradigm 515
+79,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719016, PROFILE_INDEX=9, RATE=1, START_TIME=79200000",9773719026,51908503,26,Paradigm 515
+80,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719016, PROFILE_INDEX=10, RATE=1.1, START_TIME=82800000",9773719027,51908503,27,Paradigm 515
+81,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719016, PROFILE_INDEX=11, RATE=1.3, START_TIME=84600000",9773719028,51908503,28,Paradigm 515
+82,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=pattern b, NUM_PROFILES=28",9773719029,51908503,29,Paradigm 515
+83,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=0, RATE=0, START_TIME=0",9773719030,51908503,30,Paradigm 515
+84,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=1, RATE=0.1, START_TIME=3600000",9773719031,51908503,31,Paradigm 515
+85,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=2, RATE=0.2, START_TIME=7200000",9773719032,51908503,32,Paradigm 515
+86,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=3, RATE=0.3, START_TIME=10800000",9773719033,51908503,33,Paradigm 515
+87,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=4, RATE=0.4, START_TIME=14400000",9773719034,51908503,34,Paradigm 515
+88,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=5, RATE=0.5, START_TIME=18000000",9773719035,51908503,35,Paradigm 515
+89,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=6, RATE=0.65, START_TIME=23400000",9773719036,51908503,36,Paradigm 515
+90,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=7, RATE=0.7, START_TIME=25200000",9773719037,51908503,37,Paradigm 515
+91,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=8, RATE=0.8, START_TIME=28800000",9773719038,51908503,38,Paradigm 515
+92,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=9, RATE=0.9, START_TIME=32400000",9773719039,51908503,39,Paradigm 515
+93,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=10, RATE=1, START_TIME=36000000",9773719040,51908503,40,Paradigm 515
+94,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=11, RATE=1.1, START_TIME=39600000",9773719041,51908503,41,Paradigm 515
+95,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=12, RATE=1.2, START_TIME=43200000",9773719042,51908503,42,Paradigm 515
+96,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=13, RATE=1.3, START_TIME=46800000",9773719043,51908503,43,Paradigm 515
+97,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=14, RATE=1.4, START_TIME=50400000",9773719044,51908503,44,Paradigm 515
+98,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=15, RATE=1.5, START_TIME=54000000",9773719045,51908503,45,Paradigm 515
+99,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=16, RATE=1.6, START_TIME=57600000",9773719046,51908503,46,Paradigm 515
+100,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=17, RATE=1.7, START_TIME=61200000",9773719047,51908503,47,Paradigm 515
+101,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=18, RATE=1.8, START_TIME=64800000",9773719048,51908503,48,Paradigm 515
+102,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=19, RATE=1.9, START_TIME=68400000",9773719049,51908503,49,Paradigm 515
+103,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=20, RATE=2, START_TIME=72000000",9773719050,51908503,50,Paradigm 515
+104,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=21, RATE=0, START_TIME=73800000",9773719051,51908503,51,Paradigm 515
+105,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=22, RATE=0.1, START_TIME=75600000",9773719052,51908503,52,Paradigm 515
+106,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=23, RATE=0.15, START_TIME=77400000",9773719053,51908503,53,Paradigm 515
+107,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=24, RATE=0.2, START_TIME=79200000",9773719054,51908503,54,Paradigm 515
+108,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=25, RATE=0.2, START_TIME=81000000",9773719055,51908503,55,Paradigm 515
+109,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=26, RATE=0.25, START_TIME=82800000",9773719056,51908503,56,Paradigm 515
+110,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9773719029, PROFILE_INDEX=27, RATE=0.3, START_TIME=84600000",9773719057,51908503,57,Paradigm 515
+111,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentVariableBasalProfilePatternEnable,ENABLE=true,9773719058,51908503,58,Paradigm 515
+112,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentChildBlockEnable,ENABLE=false,9773719059,51908503,59,Paradigm 515
+113,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAlarmNotifyMode,MODE=audio,9773719060,51908503,60,Paradigm 515
+114,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRFEnable,ENABLE=true,9773719061,51908503,61,Paradigm 515
+115,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalYesterday,AMOUNT=31,9773719062,51908503,62,Paradigm 515
+116,7/1/06,08:36:21,7/1/06 08:36:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBatteryStatus,"STATUS=normal, VOLTAGE=140",9773719063,51908503,63,Paradigm 515
+117,7/1/06,08:36:43,7/1/06 08:36:43,,,,,,,,,,,,,Resume,,,,,,,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=normal_pumping, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null",9779566058,51910876,97,Paradigm 515
+118,7/2/06,00:00:00,7/2/06 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,20.4,ResultDailyTotal,"AMOUNT=20.45, CONCENTRATION=null",9782871806,51912274,96,Paradigm 515
+119,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBatteryStatus,"STATUS=normal, VOLTAGE=138",9779566024,51910876,63,Paradigm 515
+120,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalRemaining,AMOUNT=96,9779566025,51910876,64,Paradigm 515
+121,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentErrorStatus,RAW_STATUS=0,9779566026,51910876,65,Paradigm 515
+122,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=1, REMOTE_CONTROL_ID=123456",9779566027,51910876,66,Paradigm 515
+123,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=2, REMOTE_CONTROL_ID=213546",9779566028,51910876,67,Paradigm 515
+124,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=3, REMOTE_CONTROL_ID=821650",9779566029,51910876,68,Paradigm 515
+125,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentPumpStatus,STATUS=normal,9779566030,51910876,69,Paradigm 515
+126,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTempBasalType,TEMP_BASAL_TYPE=insulin_units,9779566031,51910876,70,Paradigm 515
+127,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkEnable,ENABLE=false,9779566032,51910876,71,Paradigm 515
+128,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinActionCurve,AMOUNT=300,9779566033,51910876,72,Paradigm 515
+129,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentPumpModelNumber,MODEL_NUMBER=515,9779566034,51910876,73,Paradigm 515
+130,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAlarmClockEnable,ENABLE=false,9779566035,51910876,74,Paradigm 515
+131,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGReminderEnable,ENABLE=false,9779566036,51910876,75,Paradigm 515
+132,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardEnable,ENABLE=true,9779566037,51910876,76,Paradigm 515
+133,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardBGUnits,UNITS=mg dl,9779566038,51910876,77,Paradigm 515
+134,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardCarbUnits,UNITS=grams,9779566039,51910876,78,Paradigm 515
+135,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentDisplayLanguage,LANGUAGE=english,9779566040,51910876,79,Paradigm 515
+136,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=1, PARADIGM_LINK_ID=------",9779566041,51910876,80,Paradigm 515
+137,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=2, PARADIGM_LINK_ID=------",9779566042,51910876,81,Paradigm 515
+138,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=3, PARADIGM_LINK_ID=------",9779566043,51910876,82,Paradigm 515
+139,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardSetupStatus,"IS_SETUP_COMPLETE=true, IS_BOLUS_WIZARD_ENABLED=true, IS_CARB_UNITS_COMPLETE=true, IS_CARB_RATIOS_COMPLETE=true, IS_BG_UNITS_COMPLETE=true, IS_INSULIN_SENSITIVITIES_COMPLETE=true, IS_BG_TARGETS_COMPLETE=true",9779566044,51910876,83,Paradigm 515
+140,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGTargetRangePattern,"ORIGINAL_UNITS=mg dl, SIZE=1",9779566045,51910876,84,Paradigm 515
+141,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGTargetRange,"PATTERN_DATUM=9779566045, INDEX=0, AMOUNT_LOW=100, AMOUNT_HIGH=100, START_TIME=0",9779566046,51910876,85,Paradigm 515
+142,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatioPattern,SIZE=1,9779566047,51910876,86,Paradigm 515
+143,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatio,"PATTERN_DATUM=9779566047, INDEX=0, AMOUNT=10, UNITS=grams, START_TIME=0",9779566048,51910876,87,Paradigm 515
+144,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinSensitivityPattern,"ORIGINAL_UNITS=mg dl, SIZE=1",9779566049,51910876,88,Paradigm 515
+145,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinSensitivity,"PATTERN_DATUM=9779566049, INDEX=0, AMOUNT=50, START_TIME=0",9779566050,51910876,89,Paradigm 515
+146,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentReservoirWarningUnits,UNITS=insulin,9779566051,51910876,90,Paradigm 515
+147,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentReservoirWarningValueInsulin,AMOUNT=20,9779566052,51910876,91,Paradigm 515
+148,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentKeypadLockedEnable,ENABLE=false,9779566053,51910876,92,Paradigm 515
+149,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusReminderEnable,ENABLE=false,9779566054,51910876,93,Paradigm 515
+150,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentHistoryPageNumber,PAGE_NUMBER=7,9779566055,51910876,94,Paradigm 515
+151,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,Suspended,,,,,,,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=user_suspend, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null",9779566056,51910876,95,Paradigm 515
+152,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTimeDisplayFormat,FORMAT=d12,9779565961,51910876,0,Paradigm 515
+153,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAudioBolusStep,"AMOUNT=2, ENABLE=true",9779565962,51910876,1,Paradigm 515
+154,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentVariableBolusEnable,ENABLE=false,9779565963,51910876,2,Paradigm 515
+155,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBeepVolume,LEVEL=high,9779565964,51910876,3,Paradigm 515
+156,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAutoOffDuration,DURATION=0,9779565965,51910876,4,Paradigm 515
+157,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalToday,AMOUNT=16.1,9779565966,51910876,5,Paradigm 515
+158,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTempBasal,"RATE=1.9, DURATION=0",9779565967,51910876,6,Paradigm 515
+159,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentMaxBasal,RATE=2,9779565968,51910876,7,Paradigm 515
+160,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentMaxBolus,AMOUNT=10,9779565969,51910876,8,Paradigm 515
+161,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentActiveBasalProfilePattern,PATTERN_NAME=pattern b,9779565970,51910876,9,Paradigm 515
+162,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=standard, NUM_PROFILES=5",9779565971,51910876,10,Paradigm 515
+163,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565971, PROFILE_INDEX=0, RATE=1.2, START_TIME=0",9779565972,51910876,11,Paradigm 515
+164,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565971, PROFILE_INDEX=1, RATE=0.9, START_TIME=7200000",9779565973,51910876,12,Paradigm 515
+165,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565971, PROFILE_INDEX=2, RATE=1, START_TIME=25200000",9779565974,51910876,13,Paradigm 515
+166,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565971, PROFILE_INDEX=3, RATE=1.5, START_TIME=39600000",9779565975,51910876,14,Paradigm 515
+167,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565971, PROFILE_INDEX=4, RATE=1, START_TIME=57600000",9779565976,51910876,15,Paradigm 515
+168,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=pattern a, NUM_PROFILES=12",9779565977,51910876,16,Paradigm 515
+169,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565977, PROFILE_INDEX=0, RATE=0.05, START_TIME=0",9779565978,51910876,17,Paradigm 515
+170,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565977, PROFILE_INDEX=1, RATE=0.1, START_TIME=21600000",9779565979,51910876,18,Paradigm 515
+171,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565977, PROFILE_INDEX=2, RATE=0.15, START_TIME=39600000",9779565980,51910876,19,Paradigm 515
+172,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565977, PROFILE_INDEX=3, RATE=0.2, START_TIME=54000000",9779565981,51910876,20,Paradigm 515
+173,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565977, PROFILE_INDEX=4, RATE=0.25, START_TIME=61200000",9779565982,51910876,21,Paradigm 515
+174,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565977, PROFILE_INDEX=5, RATE=0.55, START_TIME=68400000",9779565983,51910876,22,Paradigm 515
+175,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565977, PROFILE_INDEX=6, RATE=0.6, START_TIME=72000000",9779565984,51910876,23,Paradigm 515
+176,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565977, PROFILE_INDEX=7, RATE=0.8, START_TIME=73800000",9779565985,51910876,24,Paradigm 515
+177,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565977, PROFILE_INDEX=8, RATE=0.9, START_TIME=75600000",9779565986,51910876,25,Paradigm 515
+178,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565977, PROFILE_INDEX=9, RATE=1, START_TIME=79200000",9779565987,51910876,26,Paradigm 515
+179,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565977, PROFILE_INDEX=10, RATE=1.1, START_TIME=82800000",9779565988,51910876,27,Paradigm 515
+180,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565977, PROFILE_INDEX=11, RATE=1.3, START_TIME=84600000",9779565989,51910876,28,Paradigm 515
+181,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=pattern b, NUM_PROFILES=28",9779565990,51910876,29,Paradigm 515
+182,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=0, RATE=0, START_TIME=0",9779565991,51910876,30,Paradigm 515
+183,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=1, RATE=0.1, START_TIME=3600000",9779565992,51910876,31,Paradigm 515
+184,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=2, RATE=0.2, START_TIME=7200000",9779565993,51910876,32,Paradigm 515
+185,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=3, RATE=0.3, START_TIME=10800000",9779565994,51910876,33,Paradigm 515
+186,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=4, RATE=0.4, START_TIME=14400000",9779565995,51910876,34,Paradigm 515
+187,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=5, RATE=0.5, START_TIME=18000000",9779565996,51910876,35,Paradigm 515
+188,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=6, RATE=0.65, START_TIME=23400000",9779565997,51910876,36,Paradigm 515
+189,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=7, RATE=0.7, START_TIME=25200000",9779565998,51910876,37,Paradigm 515
+190,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=8, RATE=0.8, START_TIME=28800000",9779565999,51910876,38,Paradigm 515
+191,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=9, RATE=0.9, START_TIME=32400000",9779566000,51910876,39,Paradigm 515
+192,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=10, RATE=1, START_TIME=36000000",9779566001,51910876,40,Paradigm 515
+193,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=11, RATE=1.1, START_TIME=39600000",9779566002,51910876,41,Paradigm 515
+194,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=12, RATE=1.2, START_TIME=43200000",9779566003,51910876,42,Paradigm 515
+195,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=13, RATE=1.3, START_TIME=46800000",9779566004,51910876,43,Paradigm 515
+196,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=14, RATE=1.4, START_TIME=50400000",9779566005,51910876,44,Paradigm 515
+197,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=15, RATE=1.5, START_TIME=54000000",9779566006,51910876,45,Paradigm 515
+198,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=16, RATE=1.6, START_TIME=57600000",9779566007,51910876,46,Paradigm 515
+199,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=17, RATE=1.7, START_TIME=61200000",9779566008,51910876,47,Paradigm 515
+200,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=18, RATE=1.8, START_TIME=64800000",9779566009,51910876,48,Paradigm 515
+201,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=19, RATE=1.9, START_TIME=68400000",9779566010,51910876,49,Paradigm 515
+202,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=20, RATE=2, START_TIME=72000000",9779566011,51910876,50,Paradigm 515
+203,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=21, RATE=0, START_TIME=73800000",9779566012,51910876,51,Paradigm 515
+204,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=22, RATE=0.1, START_TIME=75600000",9779566013,51910876,52,Paradigm 515
+205,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=23, RATE=0.15, START_TIME=77400000",9779566014,51910876,53,Paradigm 515
+206,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=24, RATE=0.2, START_TIME=79200000",9779566015,51910876,54,Paradigm 515
+207,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=25, RATE=0.2, START_TIME=81000000",9779566016,51910876,55,Paradigm 515
+208,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=26, RATE=0.25, START_TIME=82800000",9779566017,51910876,56,Paradigm 515
+209,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779565990, PROFILE_INDEX=27, RATE=0.3, START_TIME=84600000",9779566018,51910876,57,Paradigm 515
+210,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentVariableBasalProfilePatternEnable,ENABLE=true,9779566019,51910876,58,Paradigm 515
+211,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentChildBlockEnable,ENABLE=false,9779566020,51910876,59,Paradigm 515
+212,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAlarmNotifyMode,MODE=audio,9779566021,51910876,60,Paradigm 515
+213,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRFEnable,ENABLE=true,9779566022,51910876,61,Paradigm 515
+214,7/2/06,18:29:32,7/2/06 18:29:32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalYesterday,AMOUNT=27.6,9779566023,51910876,62,Paradigm 515
+215,7/2/06,18:30:24,7/2/06 18:30:24,,,,,,,,,,,,,Resume,,,,,,,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=normal_pumping, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null",9779570207,51910881,96,Paradigm 515
+216,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTimeDisplayFormat,FORMAT=d12,9779570111,51910881,0,Paradigm 515
+217,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAudioBolusStep,"AMOUNT=2, ENABLE=true",9779570112,51910881,1,Paradigm 515
+218,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentVariableBolusEnable,ENABLE=false,9779570113,51910881,2,Paradigm 515
+219,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBeepVolume,LEVEL=high,9779570114,51910881,3,Paradigm 515
+220,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAutoOffDuration,DURATION=0,9779570115,51910881,4,Paradigm 515
+221,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalToday,AMOUNT=16.3,9779570116,51910881,5,Paradigm 515
+222,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTempBasal,"RATE=1.9, DURATION=0",9779570117,51910881,6,Paradigm 515
+223,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentMaxBasal,RATE=2,9779570118,51910881,7,Paradigm 515
+224,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentMaxBolus,AMOUNT=10,9779570119,51910881,8,Paradigm 515
+225,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentActiveBasalProfilePattern,PATTERN_NAME=pattern b,9779570120,51910881,9,Paradigm 515
+226,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=standard, NUM_PROFILES=5",9779570121,51910881,10,Paradigm 515
+227,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570121, PROFILE_INDEX=0, RATE=1.2, START_TIME=0",9779570122,51910881,11,Paradigm 515
+228,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570121, PROFILE_INDEX=1, RATE=0.9, START_TIME=7200000",9779570123,51910881,12,Paradigm 515
+229,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570121, PROFILE_INDEX=2, RATE=1, START_TIME=25200000",9779570124,51910881,13,Paradigm 515
+230,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570121, PROFILE_INDEX=3, RATE=1.5, START_TIME=39600000",9779570125,51910881,14,Paradigm 515
+231,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570121, PROFILE_INDEX=4, RATE=1, START_TIME=57600000",9779570126,51910881,15,Paradigm 515
+232,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=pattern a, NUM_PROFILES=12",9779570127,51910881,16,Paradigm 515
+233,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570127, PROFILE_INDEX=0, RATE=0.05, START_TIME=0",9779570128,51910881,17,Paradigm 515
+234,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570127, PROFILE_INDEX=1, RATE=0.1, START_TIME=21600000",9779570129,51910881,18,Paradigm 515
+235,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570127, PROFILE_INDEX=2, RATE=0.15, START_TIME=39600000",9779570130,51910881,19,Paradigm 515
+236,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570127, PROFILE_INDEX=3, RATE=0.2, START_TIME=54000000",9779570131,51910881,20,Paradigm 515
+237,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570127, PROFILE_INDEX=4, RATE=0.25, START_TIME=61200000",9779570132,51910881,21,Paradigm 515
+238,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570127, PROFILE_INDEX=5, RATE=0.55, START_TIME=68400000",9779570133,51910881,22,Paradigm 515
+239,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570127, PROFILE_INDEX=6, RATE=0.6, START_TIME=72000000",9779570134,51910881,23,Paradigm 515
+240,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570127, PROFILE_INDEX=7, RATE=0.8, START_TIME=73800000",9779570135,51910881,24,Paradigm 515
+241,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570127, PROFILE_INDEX=8, RATE=0.9, START_TIME=75600000",9779570136,51910881,25,Paradigm 515
+242,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570127, PROFILE_INDEX=9, RATE=1, START_TIME=79200000",9779570137,51910881,26,Paradigm 515
+243,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570127, PROFILE_INDEX=10, RATE=1.1, START_TIME=82800000",9779570138,51910881,27,Paradigm 515
+244,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570127, PROFILE_INDEX=11, RATE=1.3, START_TIME=84600000",9779570139,51910881,28,Paradigm 515
+245,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=pattern b, NUM_PROFILES=28",9779570140,51910881,29,Paradigm 515
+246,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=0, RATE=0, START_TIME=0",9779570141,51910881,30,Paradigm 515
+247,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=1, RATE=0.1, START_TIME=3600000",9779570142,51910881,31,Paradigm 515
+248,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=2, RATE=0.2, START_TIME=7200000",9779570143,51910881,32,Paradigm 515
+249,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=3, RATE=0.3, START_TIME=10800000",9779570144,51910881,33,Paradigm 515
+250,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=4, RATE=0.4, START_TIME=14400000",9779570145,51910881,34,Paradigm 515
+251,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=5, RATE=0.5, START_TIME=18000000",9779570146,51910881,35,Paradigm 515
+252,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=6, RATE=0.65, START_TIME=23400000",9779570147,51910881,36,Paradigm 515
+253,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=7, RATE=0.7, START_TIME=25200000",9779570148,51910881,37,Paradigm 515
+254,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=8, RATE=0.8, START_TIME=28800000",9779570149,51910881,38,Paradigm 515
+255,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=9, RATE=0.9, START_TIME=32400000",9779570150,51910881,39,Paradigm 515
+256,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=10, RATE=1, START_TIME=36000000",9779570151,51910881,40,Paradigm 515
+257,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=11, RATE=1.1, START_TIME=39600000",9779570152,51910881,41,Paradigm 515
+258,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=12, RATE=1.2, START_TIME=43200000",9779570153,51910881,42,Paradigm 515
+259,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=13, RATE=1.3, START_TIME=46800000",9779570154,51910881,43,Paradigm 515
+260,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=14, RATE=1.4, START_TIME=50400000",9779570155,51910881,44,Paradigm 515
+261,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=15, RATE=1.5, START_TIME=54000000",9779570156,51910881,45,Paradigm 515
+262,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=16, RATE=1.6, START_TIME=57600000",9779570157,51910881,46,Paradigm 515
+263,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=17, RATE=1.7, START_TIME=61200000",9779570158,51910881,47,Paradigm 515
+264,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=18, RATE=1.8, START_TIME=64800000",9779570159,51910881,48,Paradigm 515
+265,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=19, RATE=1.9, START_TIME=68400000",9779570160,51910881,49,Paradigm 515
+266,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=20, RATE=2, START_TIME=72000000",9779570161,51910881,50,Paradigm 515
+267,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=21, RATE=0, START_TIME=73800000",9779570162,51910881,51,Paradigm 515
+268,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=22, RATE=0.1, START_TIME=75600000",9779570163,51910881,52,Paradigm 515
+269,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=23, RATE=0.15, START_TIME=77400000",9779570164,51910881,53,Paradigm 515
+270,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=24, RATE=0.2, START_TIME=79200000",9779570165,51910881,54,Paradigm 515
+271,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=25, RATE=0.2, START_TIME=81000000",9779570166,51910881,55,Paradigm 515
+272,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=26, RATE=0.25, START_TIME=82800000",9779570167,51910881,56,Paradigm 515
+273,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779570140, PROFILE_INDEX=27, RATE=0.3, START_TIME=84600000",9779570168,51910881,57,Paradigm 515
+274,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentVariableBasalProfilePatternEnable,ENABLE=true,9779570169,51910881,58,Paradigm 515
+275,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentChildBlockEnable,ENABLE=false,9779570170,51910881,59,Paradigm 515
+276,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAlarmNotifyMode,MODE=audio,9779570171,51910881,60,Paradigm 515
+277,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRFEnable,ENABLE=true,9779570172,51910881,61,Paradigm 515
+278,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalYesterday,AMOUNT=27.6,9779570173,51910881,62,Paradigm 515
+279,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBatteryStatus,"STATUS=normal, VOLTAGE=138",9779570174,51910881,63,Paradigm 515
+280,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalRemaining,AMOUNT=96,9779570175,51910881,64,Paradigm 515
+281,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentErrorStatus,RAW_STATUS=0,9779570176,51910881,65,Paradigm 515
+282,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=1, REMOTE_CONTROL_ID=123456",9779570177,51910881,66,Paradigm 515
+283,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=2, REMOTE_CONTROL_ID=213546",9779570178,51910881,67,Paradigm 515
+284,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=3, REMOTE_CONTROL_ID=821650",9779570179,51910881,68,Paradigm 515
+285,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentPumpStatus,STATUS=normal,9779570180,51910881,69,Paradigm 515
+286,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTempBasalType,TEMP_BASAL_TYPE=insulin_units,9779570181,51910881,70,Paradigm 515
+287,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkEnable,ENABLE=false,9779570182,51910881,71,Paradigm 515
+288,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinActionCurve,AMOUNT=300,9779570183,51910881,72,Paradigm 515
+289,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentPumpModelNumber,MODEL_NUMBER=515,9779570184,51910881,73,Paradigm 515
+290,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAlarmClockEnable,ENABLE=false,9779570185,51910881,74,Paradigm 515
+291,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGReminderEnable,ENABLE=false,9779570186,51910881,75,Paradigm 515
+292,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardEnable,ENABLE=true,9779570187,51910881,76,Paradigm 515
+293,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardBGUnits,UNITS=mg dl,9779570188,51910881,77,Paradigm 515
+294,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardCarbUnits,UNITS=grams,9779570189,51910881,78,Paradigm 515
+295,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentDisplayLanguage,LANGUAGE=english,9779570190,51910881,79,Paradigm 515
+296,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=1, PARADIGM_LINK_ID=------",9779570191,51910881,80,Paradigm 515
+297,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=2, PARADIGM_LINK_ID=------",9779570192,51910881,81,Paradigm 515
+298,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=3, PARADIGM_LINK_ID=------",9779570193,51910881,82,Paradigm 515
+299,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardSetupStatus,"IS_SETUP_COMPLETE=true, IS_BOLUS_WIZARD_ENABLED=true, IS_CARB_UNITS_COMPLETE=true, IS_CARB_RATIOS_COMPLETE=true, IS_BG_UNITS_COMPLETE=true, IS_INSULIN_SENSITIVITIES_COMPLETE=true, IS_BG_TARGETS_COMPLETE=true",9779570194,51910881,83,Paradigm 515
+300,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGTargetRangePattern,"ORIGINAL_UNITS=mg dl, SIZE=1",9779570195,51910881,84,Paradigm 515
+301,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGTargetRange,"PATTERN_DATUM=9779570195, INDEX=0, AMOUNT_LOW=100, AMOUNT_HIGH=100, START_TIME=0",9779570196,51910881,85,Paradigm 515
+302,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatioPattern,SIZE=1,9779570197,51910881,86,Paradigm 515
+303,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatio,"PATTERN_DATUM=9779570197, INDEX=0, AMOUNT=10, UNITS=grams, START_TIME=0",9779570198,51910881,87,Paradigm 515
+304,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinSensitivityPattern,"ORIGINAL_UNITS=mg dl, SIZE=1",9779570199,51910881,88,Paradigm 515
+305,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinSensitivity,"PATTERN_DATUM=9779570199, INDEX=0, AMOUNT=50, START_TIME=0",9779570200,51910881,89,Paradigm 515
+306,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentReservoirWarningUnits,UNITS=insulin,9779570201,51910881,90,Paradigm 515
+307,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentReservoirWarningValueInsulin,AMOUNT=20,9779570202,51910881,91,Paradigm 515
+308,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentKeypadLockedEnable,ENABLE=false,9779570203,51910881,92,Paradigm 515
+309,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusReminderEnable,ENABLE=false,9779570204,51910881,93,Paradigm 515
+310,7/2/06,18:37:22,7/2/06 18:37:22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentHistoryPageNumber,PAGE_NUMBER=7,9779570205,51910881,94,Paradigm 515
+311,7/2/06,18:37:23,7/2/06 18:37:23,,,,,,,,,,,,,Suspended,,,,,,,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=user_suspend, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null",9779570206,51910881,95,Paradigm 515
+312,7/2/06,18:37:41,7/2/06 18:37:41,,,,,,,,,,,,,Resume,,,,,,,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=normal_pumping, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null",9779598589,51910796,96,Paradigm 515
+313,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalRemaining,AMOUNT=96,9779598557,51910796,64,Paradigm 515
+314,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentErrorStatus,RAW_STATUS=0,9779598558,51910796,65,Paradigm 515
+315,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=1, REMOTE_CONTROL_ID=123456",9779598559,51910796,66,Paradigm 515
+316,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=2, REMOTE_CONTROL_ID=213546",9779598560,51910796,67,Paradigm 515
+317,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=3, REMOTE_CONTROL_ID=821650",9779598561,51910796,68,Paradigm 515
+318,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentPumpStatus,STATUS=normal,9779598562,51910796,69,Paradigm 515
+319,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTempBasalType,TEMP_BASAL_TYPE=insulin_units,9779598563,51910796,70,Paradigm 515
+320,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkEnable,ENABLE=false,9779598564,51910796,71,Paradigm 515
+321,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinActionCurve,AMOUNT=300,9779598565,51910796,72,Paradigm 515
+322,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentPumpModelNumber,MODEL_NUMBER=515,9779598566,51910796,73,Paradigm 515
+323,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAlarmClockEnable,ENABLE=false,9779598567,51910796,74,Paradigm 515
+324,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGReminderEnable,ENABLE=false,9779598568,51910796,75,Paradigm 515
+325,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardEnable,ENABLE=true,9779598569,51910796,76,Paradigm 515
+326,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardBGUnits,UNITS=mg dl,9779598570,51910796,77,Paradigm 515
+327,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardCarbUnits,UNITS=grams,9779598571,51910796,78,Paradigm 515
+328,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentDisplayLanguage,LANGUAGE=english,9779598572,51910796,79,Paradigm 515
+329,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=1, PARADIGM_LINK_ID=------",9779598573,51910796,80,Paradigm 515
+330,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=2, PARADIGM_LINK_ID=------",9779598574,51910796,81,Paradigm 515
+331,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=3, PARADIGM_LINK_ID=------",9779598575,51910796,82,Paradigm 515
+332,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardSetupStatus,"IS_SETUP_COMPLETE=true, IS_BOLUS_WIZARD_ENABLED=true, IS_CARB_UNITS_COMPLETE=true, IS_CARB_RATIOS_COMPLETE=true, IS_BG_UNITS_COMPLETE=true, IS_INSULIN_SENSITIVITIES_COMPLETE=true, IS_BG_TARGETS_COMPLETE=true",9779598576,51910796,83,Paradigm 515
+333,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGTargetRangePattern,"ORIGINAL_UNITS=mg dl, SIZE=1",9779598577,51910796,84,Paradigm 515
+334,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGTargetRange,"PATTERN_DATUM=9779598577, INDEX=0, AMOUNT_LOW=100, AMOUNT_HIGH=100, START_TIME=0",9779598578,51910796,85,Paradigm 515
+335,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatioPattern,SIZE=1,9779598579,51910796,86,Paradigm 515
+336,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatio,"PATTERN_DATUM=9779598579, INDEX=0, AMOUNT=10, UNITS=grams, START_TIME=0",9779598580,51910796,87,Paradigm 515
+337,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinSensitivityPattern,"ORIGINAL_UNITS=mg dl, SIZE=1",9779598581,51910796,88,Paradigm 515
+338,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinSensitivity,"PATTERN_DATUM=9779598581, INDEX=0, AMOUNT=50, START_TIME=0",9779598582,51910796,89,Paradigm 515
+339,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentReservoirWarningUnits,UNITS=insulin,9779598583,51910796,90,Paradigm 515
+340,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentReservoirWarningValueInsulin,AMOUNT=20,9779598584,51910796,91,Paradigm 515
+341,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentKeypadLockedEnable,ENABLE=false,9779598585,51910796,92,Paradigm 515
+342,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusReminderEnable,ENABLE=false,9779598586,51910796,93,Paradigm 515
+343,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentHistoryPageNumber,PAGE_NUMBER=7,9779598587,51910796,94,Paradigm 515
+344,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,Suspended,,,,,,,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=user_suspend, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null",9779598588,51910796,95,Paradigm 515
+345,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTimeDisplayFormat,FORMAT=d12,9779598493,51910796,0,Paradigm 515
+346,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAudioBolusStep,"AMOUNT=2, ENABLE=true",9779598494,51910796,1,Paradigm 515
+347,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentVariableBolusEnable,ENABLE=false,9779598495,51910796,2,Paradigm 515
+348,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBeepVolume,LEVEL=high,9779598496,51910796,3,Paradigm 515
+349,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAutoOffDuration,DURATION=0,9779598497,51910796,4,Paradigm 515
+350,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalToday,AMOUNT=16.9,9779598498,51910796,5,Paradigm 515
+351,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTempBasal,"RATE=1.9, DURATION=0",9779598499,51910796,6,Paradigm 515
+352,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentMaxBasal,RATE=2,9779598500,51910796,7,Paradigm 515
+353,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentMaxBolus,AMOUNT=10,9779598501,51910796,8,Paradigm 515
+354,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentActiveBasalProfilePattern,PATTERN_NAME=pattern b,9779598502,51910796,9,Paradigm 515
+355,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=standard, NUM_PROFILES=5",9779598503,51910796,10,Paradigm 515
+356,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598503, PROFILE_INDEX=0, RATE=1.2, START_TIME=0",9779598504,51910796,11,Paradigm 515
+357,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598503, PROFILE_INDEX=1, RATE=0.9, START_TIME=7200000",9779598505,51910796,12,Paradigm 515
+358,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598503, PROFILE_INDEX=2, RATE=1, START_TIME=25200000",9779598506,51910796,13,Paradigm 515
+359,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598503, PROFILE_INDEX=3, RATE=1.5, START_TIME=39600000",9779598507,51910796,14,Paradigm 515
+360,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598503, PROFILE_INDEX=4, RATE=1, START_TIME=57600000",9779598508,51910796,15,Paradigm 515
+361,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=pattern a, NUM_PROFILES=12",9779598509,51910796,16,Paradigm 515
+362,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598509, PROFILE_INDEX=0, RATE=0.05, START_TIME=0",9779598510,51910796,17,Paradigm 515
+363,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598509, PROFILE_INDEX=1, RATE=0.1, START_TIME=21600000",9779598511,51910796,18,Paradigm 515
+364,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598509, PROFILE_INDEX=2, RATE=0.15, START_TIME=39600000",9779598512,51910796,19,Paradigm 515
+365,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598509, PROFILE_INDEX=3, RATE=0.2, START_TIME=54000000",9779598513,51910796,20,Paradigm 515
+366,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598509, PROFILE_INDEX=4, RATE=0.25, START_TIME=61200000",9779598514,51910796,21,Paradigm 515
+367,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598509, PROFILE_INDEX=5, RATE=0.55, START_TIME=68400000",9779598515,51910796,22,Paradigm 515
+368,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598509, PROFILE_INDEX=6, RATE=0.6, START_TIME=72000000",9779598516,51910796,23,Paradigm 515
+369,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598509, PROFILE_INDEX=7, RATE=0.8, START_TIME=73800000",9779598517,51910796,24,Paradigm 515
+370,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598509, PROFILE_INDEX=8, RATE=0.9, START_TIME=75600000",9779598518,51910796,25,Paradigm 515
+371,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598509, PROFILE_INDEX=9, RATE=1, START_TIME=79200000",9779598519,51910796,26,Paradigm 515
+372,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598509, PROFILE_INDEX=10, RATE=1.1, START_TIME=82800000",9779598520,51910796,27,Paradigm 515
+373,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598509, PROFILE_INDEX=11, RATE=1.3, START_TIME=84600000",9779598521,51910796,28,Paradigm 515
+374,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=pattern b, NUM_PROFILES=28",9779598522,51910796,29,Paradigm 515
+375,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=0, RATE=0, START_TIME=0",9779598523,51910796,30,Paradigm 515
+376,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=1, RATE=0.1, START_TIME=3600000",9779598524,51910796,31,Paradigm 515
+377,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=2, RATE=0.2, START_TIME=7200000",9779598525,51910796,32,Paradigm 515
+378,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=3, RATE=0.3, START_TIME=10800000",9779598526,51910796,33,Paradigm 515
+379,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=4, RATE=0.4, START_TIME=14400000",9779598527,51910796,34,Paradigm 515
+380,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=5, RATE=0.5, START_TIME=18000000",9779598528,51910796,35,Paradigm 515
+381,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=6, RATE=0.65, START_TIME=23400000",9779598529,51910796,36,Paradigm 515
+382,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=7, RATE=0.7, START_TIME=25200000",9779598530,51910796,37,Paradigm 515
+383,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=8, RATE=0.8, START_TIME=28800000",9779598531,51910796,38,Paradigm 515
+384,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=9, RATE=0.9, START_TIME=32400000",9779598532,51910796,39,Paradigm 515
+385,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=10, RATE=1, START_TIME=36000000",9779598533,51910796,40,Paradigm 515
+386,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=11, RATE=1.1, START_TIME=39600000",9779598534,51910796,41,Paradigm 515
+387,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=12, RATE=1.2, START_TIME=43200000",9779598535,51910796,42,Paradigm 515
+388,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=13, RATE=1.3, START_TIME=46800000",9779598536,51910796,43,Paradigm 515
+389,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=14, RATE=1.4, START_TIME=50400000",9779598537,51910796,44,Paradigm 515
+390,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=15, RATE=1.5, START_TIME=54000000",9779598538,51910796,45,Paradigm 515
+391,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=16, RATE=1.6, START_TIME=57600000",9779598539,51910796,46,Paradigm 515
+392,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=17, RATE=1.7, START_TIME=61200000",9779598540,51910796,47,Paradigm 515
+393,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=18, RATE=1.8, START_TIME=64800000",9779598541,51910796,48,Paradigm 515
+394,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=19, RATE=1.9, START_TIME=68400000",9779598542,51910796,49,Paradigm 515
+395,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=20, RATE=2, START_TIME=72000000",9779598543,51910796,50,Paradigm 515
+396,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=21, RATE=0, START_TIME=73800000",9779598544,51910796,51,Paradigm 515
+397,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=22, RATE=0.1, START_TIME=75600000",9779598545,51910796,52,Paradigm 515
+398,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=23, RATE=0.15, START_TIME=77400000",9779598546,51910796,53,Paradigm 515
+399,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=24, RATE=0.2, START_TIME=79200000",9779598547,51910796,54,Paradigm 515
+400,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=25, RATE=0.2, START_TIME=81000000",9779598548,51910796,55,Paradigm 515
+401,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=26, RATE=0.25, START_TIME=82800000",9779598549,51910796,56,Paradigm 515
+402,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9779598522, PROFILE_INDEX=27, RATE=0.3, START_TIME=84600000",9779598550,51910796,57,Paradigm 515
+403,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentVariableBasalProfilePatternEnable,ENABLE=true,9779598551,51910796,58,Paradigm 515
+404,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentChildBlockEnable,ENABLE=false,9779598552,51910796,59,Paradigm 515
+405,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAlarmNotifyMode,MODE=audio,9779598553,51910796,60,Paradigm 515
+406,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRFEnable,ENABLE=true,9779598554,51910796,61,Paradigm 515
+407,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalYesterday,AMOUNT=27.6,9779598555,51910796,62,Paradigm 515
+408,7/2/06,18:57:35,7/2/06 18:57:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBatteryStatus,"STATUS=normal, VOLTAGE=138",9779598556,51910796,63,Paradigm 515
+409,7/2/06,18:58:58,7/2/06 18:58:58,,,,,,,,,,,,,Resume,,,,,,,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=normal_pumping, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null",9782871807,51912274,97,Paradigm 515
+410,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalRemaining,AMOUNT=88,9782871774,51912274,64,Paradigm 515
+411,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentErrorStatus,RAW_STATUS=0,9782871775,51912274,65,Paradigm 515
+412,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=1, REMOTE_CONTROL_ID=123456",9782871776,51912274,66,Paradigm 515
+413,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=2, REMOTE_CONTROL_ID=213546",9782871777,51912274,67,Paradigm 515
+414,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=3, REMOTE_CONTROL_ID=821650",9782871778,51912274,68,Paradigm 515
+415,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentPumpStatus,STATUS=normal,9782871779,51912274,69,Paradigm 515
+416,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTempBasalType,TEMP_BASAL_TYPE=insulin_units,9782871780,51912274,70,Paradigm 515
+417,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkEnable,ENABLE=false,9782871781,51912274,71,Paradigm 515
+418,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinActionCurve,AMOUNT=300,9782871782,51912274,72,Paradigm 515
+419,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentPumpModelNumber,MODEL_NUMBER=515,9782871783,51912274,73,Paradigm 515
+420,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAlarmClockEnable,ENABLE=false,9782871784,51912274,74,Paradigm 515
+421,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGReminderEnable,ENABLE=false,9782871785,51912274,75,Paradigm 515
+422,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardEnable,ENABLE=true,9782871786,51912274,76,Paradigm 515
+423,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardBGUnits,UNITS=mg dl,9782871787,51912274,77,Paradigm 515
+424,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardCarbUnits,UNITS=grams,9782871788,51912274,78,Paradigm 515
+425,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentDisplayLanguage,LANGUAGE=english,9782871789,51912274,79,Paradigm 515
+426,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=1, PARADIGM_LINK_ID=------",9782871790,51912274,80,Paradigm 515
+427,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=2, PARADIGM_LINK_ID=------",9782871791,51912274,81,Paradigm 515
+428,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=3, PARADIGM_LINK_ID=------",9782871792,51912274,82,Paradigm 515
+429,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardSetupStatus,"IS_SETUP_COMPLETE=true, IS_BOLUS_WIZARD_ENABLED=true, IS_CARB_UNITS_COMPLETE=true, IS_CARB_RATIOS_COMPLETE=true, IS_BG_UNITS_COMPLETE=true, IS_INSULIN_SENSITIVITIES_COMPLETE=true, IS_BG_TARGETS_COMPLETE=true",9782871793,51912274,83,Paradigm 515
+430,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGTargetRangePattern,"ORIGINAL_UNITS=mg dl, SIZE=1",9782871794,51912274,84,Paradigm 515
+431,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGTargetRange,"PATTERN_DATUM=9782871794, INDEX=0, AMOUNT_LOW=100, AMOUNT_HIGH=100, START_TIME=0",9782871795,51912274,85,Paradigm 515
+432,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatioPattern,SIZE=1,9782871796,51912274,86,Paradigm 515
+433,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatio,"PATTERN_DATUM=9782871796, INDEX=0, AMOUNT=10, UNITS=grams, START_TIME=0",9782871797,51912274,87,Paradigm 515
+434,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinSensitivityPattern,"ORIGINAL_UNITS=mg dl, SIZE=1",9782871798,51912274,88,Paradigm 515
+435,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinSensitivity,"PATTERN_DATUM=9782871798, INDEX=0, AMOUNT=50, START_TIME=0",9782871799,51912274,89,Paradigm 515
+436,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentReservoirWarningUnits,UNITS=insulin,9782871800,51912274,90,Paradigm 515
+437,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentReservoirWarningValueInsulin,AMOUNT=20,9782871801,51912274,91,Paradigm 515
+438,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentKeypadLockedEnable,ENABLE=false,9782871802,51912274,92,Paradigm 515
+439,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusReminderEnable,ENABLE=false,9782871803,51912274,93,Paradigm 515
+440,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentHistoryPageNumber,PAGE_NUMBER=7,9782871804,51912274,94,Paradigm 515
+441,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,Suspended,,,,,,,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=user_suspend, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null",9782871805,51912274,95,Paradigm 515
+442,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTimeDisplayFormat,FORMAT=d12,9782871710,51912274,0,Paradigm 515
+443,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAudioBolusStep,"AMOUNT=2, ENABLE=true",9782871711,51912274,1,Paradigm 515
+444,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentVariableBolusEnable,ENABLE=false,9782871712,51912274,2,Paradigm 515
+445,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBeepVolume,LEVEL=high,9782871713,51912274,3,Paradigm 515
+446,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAutoOffDuration,DURATION=0,9782871714,51912274,4,Paradigm 515
+447,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalToday,AMOUNT=4.5,9782871715,51912274,5,Paradigm 515
+448,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTempBasal,"RATE=1.9, DURATION=0",9782871716,51912274,6,Paradigm 515
+449,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentMaxBasal,RATE=2,9782871717,51912274,7,Paradigm 515
+450,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentMaxBolus,AMOUNT=10,9782871718,51912274,8,Paradigm 515
+451,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentActiveBasalProfilePattern,PATTERN_NAME=pattern b,9782871719,51912274,9,Paradigm 515
+452,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=standard, NUM_PROFILES=5",9782871720,51912274,10,Paradigm 515
+453,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871720, PROFILE_INDEX=0, RATE=1.2, START_TIME=0",9782871721,51912274,11,Paradigm 515
+454,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871720, PROFILE_INDEX=1, RATE=0.9, START_TIME=7200000",9782871722,51912274,12,Paradigm 515
+455,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871720, PROFILE_INDEX=2, RATE=1, START_TIME=25200000",9782871723,51912274,13,Paradigm 515
+456,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871720, PROFILE_INDEX=3, RATE=1.5, START_TIME=39600000",9782871724,51912274,14,Paradigm 515
+457,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871720, PROFILE_INDEX=4, RATE=1, START_TIME=57600000",9782871725,51912274,15,Paradigm 515
+458,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=pattern a, NUM_PROFILES=12",9782871726,51912274,16,Paradigm 515
+459,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871726, PROFILE_INDEX=0, RATE=0.05, START_TIME=0",9782871727,51912274,17,Paradigm 515
+460,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871726, PROFILE_INDEX=1, RATE=0.1, START_TIME=21600000",9782871728,51912274,18,Paradigm 515
+461,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871726, PROFILE_INDEX=2, RATE=0.15, START_TIME=39600000",9782871729,51912274,19,Paradigm 515
+462,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871726, PROFILE_INDEX=3, RATE=0.2, START_TIME=54000000",9782871730,51912274,20,Paradigm 515
+463,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871726, PROFILE_INDEX=4, RATE=0.25, START_TIME=61200000",9782871731,51912274,21,Paradigm 515
+464,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871726, PROFILE_INDEX=5, RATE=0.55, START_TIME=68400000",9782871732,51912274,22,Paradigm 515
+465,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871726, PROFILE_INDEX=6, RATE=0.6, START_TIME=72000000",9782871733,51912274,23,Paradigm 515
+466,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871726, PROFILE_INDEX=7, RATE=0.8, START_TIME=73800000",9782871734,51912274,24,Paradigm 515
+467,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871726, PROFILE_INDEX=8, RATE=0.9, START_TIME=75600000",9782871735,51912274,25,Paradigm 515
+468,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871726, PROFILE_INDEX=9, RATE=1, START_TIME=79200000",9782871736,51912274,26,Paradigm 515
+469,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871726, PROFILE_INDEX=10, RATE=1.1, START_TIME=82800000",9782871737,51912274,27,Paradigm 515
+470,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871726, PROFILE_INDEX=11, RATE=1.3, START_TIME=84600000",9782871738,51912274,28,Paradigm 515
+471,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=pattern b, NUM_PROFILES=28",9782871739,51912274,29,Paradigm 515
+472,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=0, RATE=0, START_TIME=0",9782871740,51912274,30,Paradigm 515
+473,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=1, RATE=0.1, START_TIME=3600000",9782871741,51912274,31,Paradigm 515
+474,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=2, RATE=0.2, START_TIME=7200000",9782871742,51912274,32,Paradigm 515
+475,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=3, RATE=0.3, START_TIME=10800000",9782871743,51912274,33,Paradigm 515
+476,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=4, RATE=0.4, START_TIME=14400000",9782871744,51912274,34,Paradigm 515
+477,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=5, RATE=0.5, START_TIME=18000000",9782871745,51912274,35,Paradigm 515
+478,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=6, RATE=0.65, START_TIME=23400000",9782871746,51912274,36,Paradigm 515
+479,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=7, RATE=0.7, START_TIME=25200000",9782871747,51912274,37,Paradigm 515
+480,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=8, RATE=0.8, START_TIME=28800000",9782871748,51912274,38,Paradigm 515
+481,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=9, RATE=0.9, START_TIME=32400000",9782871749,51912274,39,Paradigm 515
+482,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=10, RATE=1, START_TIME=36000000",9782871750,51912274,40,Paradigm 515
+483,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=11, RATE=1.1, START_TIME=39600000",9782871751,51912274,41,Paradigm 515
+484,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=12, RATE=1.2, START_TIME=43200000",9782871752,51912274,42,Paradigm 515
+485,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=13, RATE=1.3, START_TIME=46800000",9782871753,51912274,43,Paradigm 515
+486,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=14, RATE=1.4, START_TIME=50400000",9782871754,51912274,44,Paradigm 515
+487,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=15, RATE=1.5, START_TIME=54000000",9782871755,51912274,45,Paradigm 515
+488,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=16, RATE=1.6, START_TIME=57600000",9782871756,51912274,46,Paradigm 515
+489,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=17, RATE=1.7, START_TIME=61200000",9782871757,51912274,47,Paradigm 515
+490,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=18, RATE=1.8, START_TIME=64800000",9782871758,51912274,48,Paradigm 515
+491,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=19, RATE=1.9, START_TIME=68400000",9782871759,51912274,49,Paradigm 515
+492,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=20, RATE=2, START_TIME=72000000",9782871760,51912274,50,Paradigm 515
+493,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=21, RATE=0, START_TIME=73800000",9782871761,51912274,51,Paradigm 515
+494,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=22, RATE=0.1, START_TIME=75600000",9782871762,51912274,52,Paradigm 515
+495,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=23, RATE=0.15, START_TIME=77400000",9782871763,51912274,53,Paradigm 515
+496,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=24, RATE=0.2, START_TIME=79200000",9782871764,51912274,54,Paradigm 515
+497,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=25, RATE=0.2, START_TIME=81000000",9782871765,51912274,55,Paradigm 515
+498,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=26, RATE=0.25, START_TIME=82800000",9782871766,51912274,56,Paradigm 515
+499,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=9782871739, PROFILE_INDEX=27, RATE=0.3, START_TIME=84600000",9782871767,51912274,57,Paradigm 515
+500,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentVariableBasalProfilePatternEnable,ENABLE=true,9782871768,51912274,58,Paradigm 515
+501,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentChildBlockEnable,ENABLE=false,9782871769,51912274,59,Paradigm 515
+502,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAlarmNotifyMode,MODE=audio,9782871770,51912274,60,Paradigm 515
+503,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRFEnable,ENABLE=true,9782871771,51912274,61,Paradigm 515
+504,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalYesterday,AMOUNT=20.4,9782871772,51912274,62,Paradigm 515
+505,7/3/06,10:00:14,7/3/06 10:00:14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBatteryStatus,"STATUS=normal, VOLTAGE=134",9782871773,51912274,63,Paradigm 515
+
