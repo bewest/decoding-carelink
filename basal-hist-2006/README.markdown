@@ -7,7 +7,8 @@ new data in the logs should be basal histories.
 
 ## Dumping Insulin Pump Memory
 
-The pump `ReadHistory` command dumps the pump's memory.
+The pump command `ReadHistoryData` (`opcode 128`) dumps the pump's
+memory.
 
 The result piped through `od` looks like this:
 
