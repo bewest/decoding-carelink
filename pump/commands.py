@@ -152,7 +152,7 @@ class PowerControl(PumpCommand):
   params = [ 0x01, 0x0A ]
   retries = 0
   maxRecords = 0
-  timeout = .1
+  #timeout = 1
   effectTime = 9
 
 class PowerControlOff(PowerControl):

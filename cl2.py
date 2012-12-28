@@ -65,7 +65,7 @@ class Link( link.Link ):
     result = self.sendComLink2Command(6, 0)
     # result[0] is signal strength
     log.info('%r:readSignalStrength:%s' % (self, int(result[0])))
-    return result
+    return int(result[0])
 
   def initCommunicationsIO(self):
     # close/open serial
@@ -249,6 +249,7 @@ def initDevice(link):
   #comm   = PowerControl()
   #device.execute(comm)
   #log.info('comm:%s:data:%s' % (comm, getattr(comm, 'data', None)))
+  #time.sleep(3)
 
   comm   = ReadErrorStatus()
   device.execute(comm)
