@@ -249,7 +249,7 @@ def initDevice(link):
   #comm   = PowerControl()
   #device.execute(comm)
   #log.info('comm:%s:data:%s' % (comm, getattr(comm, 'data', None)))
-  #time.sleep(3)
+  #time.sleep(6)
 
   comm   = ReadErrorStatus()
   device.execute(comm)
