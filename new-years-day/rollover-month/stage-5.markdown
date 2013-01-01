@@ -47,13 +47,13 @@ diff -u stage-4/hex-page-4.log stage-5/hex-page-4.log
 ```
 ### Special bits:
 
-Let `MTB` (magic time byte) = `0b1100000` (`0xC0`).
-Let `MMB` (magic minute byte) = `0x3F`.
+Let `time_mask` (magic time byte) = `0b1100000` (`0xC0`).
+Let `time_mask_invert` (magic minute byte) = `0x3F`.
 
 ### Seconds
 To obtain seconds,
 ```
-clock_seconds = seconds & MMB
+clock_seconds = seconds & time_mask_invert
 eg.
 18 = 0x92 & 0x3F
 ```
@@ -61,7 +61,7 @@ eg.
 ### Minutes
 To obtain minutes,
 ```
-clock_minutes = minutes & MMB
+clock_minutes = minutes & time_mask_invert
 ie.
 30 = 0x9e & 0x3F
 
@@ -77,19 +77,19 @@ clock_hours = 11 = 0x0b
 
 ### Day
 ```
-clock_day = day & MMB
+clock_day = day & time_mask_invert
 clock_day = 1 = 0x01 & 0x3F
 ```
 
 ### Months
 To obtain months:
 ```
-high_month_bits = (seconds & MTB) >> 4
+high_month_bits = (seconds & time_mask) >> 4
 eg:
              ... 128 = ( 0x92 & 0xC0 )
 high_month_bits =  8 = ( 128 >> 4 )
 
-low_month_bits  = (minutes & MTB) >> 6
+low_month_bits  = (minutes & time_mask) >> 6
 eg:
 
              ... 128 = ( 0x9e & 0xC0 )
@@ -103,7 +103,7 @@ eg, October
 
 ### Year
 ```
-clock_year = year & MMB
+clock_year = year & time_mask_invert
 clock_year = 1 = (0x06 & 0x3F) + 2000
 ```
 
