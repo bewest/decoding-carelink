@@ -162,7 +162,7 @@ Second bolus @ 4:14
 
 ## Rewind the pump
 
-Rewound at `07Jul, 4:48P` pump time.
+Rewound at `07Jul, 4:49P` pump time.
 Also performed a Fixed Prime of `.03U`
 
 ```diff
@@ -195,7 +195,7 @@ Only in another-single-bolus-16-14/: pump.log
 ```
 
 ### Fixed Prime again
-Immediately followed by another fixed prime at `4:50PM` pump
+Immediately followed by another fixed prime at `5:10PM` pump
 time.
 
 ```diff
@@ -225,7 +225,7 @@ Only in fixed-prime/: pump.log
 
 
 ### Fixed Prime again
-Immediately followed by another fixed prime at `5:29PM` pump
+Immediately followed by another fixed prime at `5:28PM` pump
 time of `0.3U`.
 
 ```diff
