@@ -96,10 +96,9 @@ it.
 2. dump memory (stage 0)
 3. Fixed Prime ( 3 times: 0.3, 0.5, 0.3 )
 4. dump memory (stage 1)
-
 5. wait 31 minutes
-6. dump memory, contrast (stage 2)
-7. Fixed Prime
+6. dump memory, contrast (stage 2) (~12:05AM pump time)
+7. Fixed Prime ( `12:12 AM, Fri 01 Sep 2006`  pump time)
 8. dump memory, contrast (stage 3)
 
 #### stage 0
