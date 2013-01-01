@@ -21,7 +21,7 @@ BG Target: 100 - 100
 Active Ins Time: 5
 
 Glucose: 117
-Food: 6 grams
+Food: 3 grams
 Dose: 0.6U
 ```
 
@@ -328,3 +328,4 @@ diff -u fixed-prime-again-again-5-41/pump.log doubled-fixed-prime/pump.log
 --- fixed-prime-again-again-5-41/pump.log	2012-12-31 20:33:30.314474182 -0800
 +++ doubled-fixed-prime/pump.log	2012-12-31 20:54:26.088589673 -0800
 ```
+
