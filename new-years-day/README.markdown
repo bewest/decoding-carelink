@@ -67,7 +67,7 @@ Or put another way:
 **RF Enable**
 0x1f 0x00 0x73 0xd6 0x12 0x47 0x06 ( 18:22:51 year = 2006)
 
-If 0x40 is added to day, it means RF requested vs manual.
+Theory: If 0x40 is added to day, it means RF requested vs manual.
 We don't know what this means:
 This might be a daily insertion of records at midnight?
 We expect to see something like this, but aren't sure what to make of
@@ -98,8 +98,11 @@ it.
 4. dump memory (stage 1)
 5. wait 31 minutes
 6. dump memory, contrast (stage 2) (~12:05AM pump time)
-7. Fixed Prime ( `12:12 AM, Fri 01 Sep 2006`  pump time)
+7. Fixed Prime ( `12:12 AM, Fri 01 Sep 2006` pump time)
 8. dump memory, contrast (stage 3)
+9. set time to 10/1/2006 11:20AM (performed at ~1:18 pump time)
+10. memory dump (stage 4)
+11. Fixed Prime, memory dump (stage 5)
 
 #### stage 0
 #### stage 1
