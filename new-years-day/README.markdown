@@ -94,12 +94,18 @@ it.
 
 1. set time to 8/31/2006, 23:30 PM
 2. dump memory (stage 0)
-3. Fixed Prime
+3. Fixed Prime ( 3 times: 0.3, 0.5, 0.3 )
 4. dump memory (stage 1)
+
 5. wait 31 minutes
 6. dump memory, contrast (stage 2)
 7. Fixed Prime
 8. dump memory, contrast (stage 3)
+
+#### stage 0
+#### stage 1
+#### stage 2
+#### stage 3
 
 
 
