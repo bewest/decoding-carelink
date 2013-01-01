@@ -90,7 +90,8 @@ Correction: 0.3U
 Active Insulin: 0.5U
 ```
 
-#### This added a single record after the previous bolus.
+#### diff -u after-single-bolus/ another-single-bolus-16-14/
+This added a single record after the previous bolus.
 
 ```diff
 diff -u after-single-bolus/hex-page-0.log another-single-bolus-16-14/hex-page-0.log
