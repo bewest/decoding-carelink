@@ -4,13 +4,90 @@
 For an intro, see
 [insulaudit](https://github.com/bewest/insulaudit/tree/master/questions).
 
+## Status
+
+We can decode many of the opcodes that store configuration settings.
+We can also download all pages of history from the ReadHistoryData
+command, which contains the log of all actions the pump has taken on
+your behalf:
+
+* glucose readings
+* all bolus dosings, all usage of bolus wizard
+* unabsorbed insulin
+* alarms, etc...
+* current settings
+
+### Decoding
+
+We know how to
+[decode time](https://github.com/bewest/decoding-carelink/blob/master/new-years-day/rollover-month/stage-5.markdown)
+and as a result we can find and parse most records now.
+
+And lining this up with the Carelink CSV exports reveals the nature of
+the contents for further analysis.
+
+## Future work
+
+* simplify the protocol driver (see cl2.py)
+  * fixing timing issues causing these problems:
+    * fix comstatus problem - sometimes comes back missing
+    * fix missing CRC - also comes back missing sometimes
+
+* build out more decoders, collect more data
+
+### Help needed
+
+Documentation of protocol, decoders, etc...
+
 ## Data
 
-* `./CareLink-Export-1350867079937.csv` - One day of "use" manipulating lots of
-  settings.
-* `./first_run.csv`  - Interogate basic settings
-* `./second_run.csv` - Add more basals, quick bolus
-* `./third_run.csv`  - More bolus
+* pcaps/
+  * `./CareLink-Export-1350867079937.csv` - One day of "use" manipulating lots of
+    settings.
+  * `./first_run.csv`  - Interogate basic settings
+  * `./second_run.csv` - Add more basals, quick bolus
+  * `./third_run.csv`  - More bolus
+* history/ - some experiments to get any historical data out of a pump 
+* rosetta-july-1-2006 - some initial experiments to perform some
+  activities on the pump and observe changes to the memory dump of the
+  pump
+* basal-hist-2006 - a kind of baseline memory dump the day after
+  rosetta-july-1-2006 activities.
+* ground-start-0 - starting to get pretty rigorous about noticing
+  differences between memory dumps, and isolating various pump
+  activities
+* new-years-day - carefully isolate activities and changes in the
+  memory dump.  See the different stages to watch what happens to the
+  memory as we isolate each activitiy.  Stage-5 results in being able
+  to read the date-times out of the binary logs.
+
+## Tools
+
+#### hexlog2binary.sh
+Convert a hexdump from cl2.py into binary data.
+Used something like:
+
+```bash
+function new_name ( ) { echo $1 | sed -e "s/hex/binary/g" | sed -e "s/log/data/g"; }
+
+bewest:~/src/decoding-carelink/new-years-day/rollover-month/stage-5$ for x in hex-*; do ../../../hexlog2binary.sh  $x $(new_name $x); done
+```
+
+#### list_dates.py
+List records found in binary data by looking for dates.
+
+#### cl2.py
+Download data from an insulin pump.
+[cl2.py src](https://github.com/bewest/insulaudit/blob/master/cl2.py)
+Working on a simpler version...
+
+Covers about a dozen opcodes, including downloading multiple "pages"
+of historical data from a pump.
+
+#### decoder.py
+Run a binary file through a rudimentary scapy model.
+
+#### usblyzer_filter.sh
 
 ```bash
 # usblyzer_filter.sh was used to filter the raw usblyzer csv export into
@@ -30,55 +107,6 @@ $ history
 bewest@paragon:~/src/decoding-carelink$ 
 ```
 
-### What is all this?
-
-We're working with [insulaudit](https://github.com/bewest/insulaudit),
-a python library to audit and interrogate medical devices.  The
-protocols that govern our insulin pumps are locked, ensuring incorrect
-therapy without recourse.  Meanwhile adverse events are attributed to
-"user-error."
-
-Now that I'm a bit more familiar with how the
-[basic model works](https://github.com/bewest/decoding-carelink/wiki/Sequencediagram), I was hoping to use scapy to round out the corners.
-[see decoder.py](https://github.com/bewest/decoding-carelink/blob/master/decoder.py)
-
-But I could use a few pointers in the right direction.  I've been
-reading through some other protocols:
-
-* https://github.com/jwiegley/scapy/blob/master/scapy/layers/llmnr.py
-* https://github.com/moros/osmocombb-scapy/blob/master/l1ctl.py
-* http://stackoverflow.com/questions/7897522/building-scapy-packets-with-packetfields-shorter-than-8-bits
-* http://www.secdev.org/projects/scapy/doc/build_dissect.html#simple-example
-* http://stackoverflow.com/questions/10556593/obtaining-field-types-dynamically-according-to-a-field-from-another-class-using?rq=1
-* http://stackoverflow.com/questions/6572253/scapy-independant-layers-no-encapsulation?rq=1
-* http://stackoverflow.com/questions/11929133/new-protocol-layer-for-scapy
-
-Plus reading through scapy sources, the `ASN.1`, stuff, and looking at how
-bind_layers works.
-
-It appears to me as if multiple requests are required for one logical
-fetch of information, and I'm wondering how to build this up in scapy.
-
-One kind of mega-model that attempts to sniff for context, or is there
-a clever way to do this with thin wrappers that bind correctly
-depending on the context?
-
-It's important to note, I can identify most of the bytes involved
-here:
-* https://github.com/bewest/insulaudit/blob/master/cl2.py
-* https://github.com/bewest/insulaudit/blob/master/src/insulaudit/clmm/usbstick.py
-
-The big problem is that we cannot interpret the actual contents from
-the payloads.  However, the captures in decoding-carelink are 100%
-under my control, with data entered by me, constrained to a single
-day.  And we have made some progress in identifying some of the
-contents: [php analysis](https://gist.github.com/3860720)
-
-So the task immediately before me, I suppose is to patch the tool so
-that it produces packets of command requests and the payload contents
-for further analysis?
-
-Any pointers, help patching MUCH appreciated.
 Thanks,
 -[contributors](https://github.com/bewest/decoding-carelink/network/members)
 
