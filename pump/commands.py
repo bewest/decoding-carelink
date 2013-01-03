@@ -63,7 +63,7 @@ class BaseCommand(object):
   params  = [ ]
   bytesPerRecord = 0
   maxRecords = 0
-  effectTime = 1
+  effectTime = 0
 
   def __init__(self, code, descr, *args):
     self.code   = code

@@ -40,13 +40,33 @@ io.setLevel( logging.DEBUG )
 
 """
 
+class ProtocolError(Exception): pass
+
+class BadDeviceCommError(ProtocolError): pass
+
+class DeviceCommsError(ProtocolError): pass
+class RFFailed(DeviceCommsError): pass
+class AckError(DeviceCommsError): pass
+
+def retry(block, retry=3, sleep=0):
+  r = None
+  for i in xrange(retry):
+    log.info('retry:%s:%i' % (block, i))
+    r = block( )
+    if r:
+      return r
+    if sleep:
+      time.sleep(sleep)
+  return r
+
 class Link( link.Link ):
   class ID:
     VENDOR  = 0x0a21
     PRODUCT = 0x8001
-  timeout = .100
+  timeout = .500
   def __init__( self, port, timeout=None ):
     super(type(self), self).__init__(port, timeout)
+    self.setTimeout(.500)
 
   def setTimeout(self, timeout):
     self.serial.setTimeout(timeout)
@@ -94,22 +114,28 @@ class Link( link.Link ):
   def sendComLink2Command(self, msg, a2=0x00, a3=0x00):
     # generally commands are 3 bytes, most often CMD, 0x00, 0x00
     msg = bytearray([ msg, a2, a3 ])
-    io.info('sendComLink2Command:write')
+    io.info('sendComLink2Command:write:%02x' % msg[0])
     self.write(msg)
+    return retry(self.checkAck, sleep=.01)
     return self.checkAck()
     # throw local usb exception
 
   def checkAck(self):
-    time.sleep(.050)
+    log.info('checkAck sleeping .100')
+    time.sleep(.100)
     result     = bytearray(self.read(64))
     io.info('checkAck:read')
+    if len(result) == 0:
+      log.error("ACK is zero bytes!")
+      return False
+      raise BadDeviceCommError("ACK is not 64 bytes: %s" % lib.hexdump(result))
     commStatus = result[0]
     # usable response
-    assert commStatus == 1
+    assert commStatus == 1, ('commStatus: %02x expected 0x1' % commStatus)
     status     = result[1]
     # status == 102 'f' NAK, look up NAK
     if status == 85: # 'U'
-      log.info('ACK OK')
+      log.info('checkACK OK, found %s total bytes' % len(result))
       return result[3:]
     assert False, "NAK!!"
 
@@ -144,12 +170,18 @@ class Device(object):
 
   def execute(self, command):
     self.command = command
-    self.allocateRawData()
-    self.sendAndRead()
+    for i in xrange(max(1, self.command.retries)):
+      log.info('execute attempt: %s' % (i + 1))
+      try:
+        self.allocateRawData()
+        self.sendAndRead()
+        return
+      except BadDeviceCommError, e:
+        log.critical("ERROR: %s" % e)
+        self.clearBuffers( )
 
   def sendAndRead(self):
     self.sendDeviceCommand()
-    time.sleep(self.command.effectTime)
     if self.expectedLength > 0:
       # in original code, this modifies the length tested in the previous if
       # statement
@@ -159,7 +191,9 @@ class Device(object):
     packet = self.buildTransmitPacket()
     io.info('sendDeviceCommand:write:%r' % (self.command))
     self.link.write(packet)
-    time.sleep(.001)
+    log.info('sleeping: %s' % self.command.effectTime)
+    time.sleep(self.command.effectTime)
+    #time.sleep(.001)
     code = self.command.code
     params = self.command.params
     if code != 93 or params[0] != 0:
@@ -200,7 +234,13 @@ class Device(object):
 
     response = self.writeAndRead(packet, bytesAvailable)
     # assert response.length > 14
-    assert (int(response[0]) == 2), repr(response)
+    log.info('readData validating remote response: %02x' % response[0])
+    log.info('readData; foreign response should be at least 14 bytes? %s %s' % (len(response), len(response) > 14))
+    log.info('readData; retries %s' % int(response[3]))
+    dl_status = int(response[0])
+    if dl_status != 0x02:
+      raise BadDeviceCommError("bad dl response! %r" % response)
+      assert (int(response[0]) == 2), repr(response)
     # response[1] != 0 # interface number !=0
     # response[2] == 5 # timeout occurred
     # response[2] == 2 # NAK
@@ -211,8 +251,8 @@ class Device(object):
   def writeAndRead(self, msg, length):
     io.info("writeAndRead:")
     self.link.write(bytearray(msg))
-    time.sleep(.300)
-    self.link.setTimeout(self.command.timeout)
+    #time.sleep(.250)
+    #self.link.setTimeout(self.command.timeout)
     return bytearray(self.link.read(length))
 
   def getNumBytesAvailable(self):
@@ -222,23 +262,81 @@ class Device(object):
     while result == 0 and time.time() - start < 1:
       log.debug('%r:getNumBytesAvailable:attempt:%s' % (self, i))
       result = self.readStatus( )
+      log.info('sleeping in getNumBytesAvailable, .100')
       time.sleep(.10)
       i += 1
     log.info('getNumBytesAvailable:%s' % result)
     return result
 
+  def clearBuffers(self):
+    garbage = -1
+    while garbage:
+      garbage = self.link.read(64)
+      log.error("found garbage:\n%s" % lib.hexdump(garbage))
+
+
   def readStatus(self):
     result         = self.link.sendComLink2Command(3)
     commStatus     = result[0] # 0 indicates success
-    assert commStatus == 0
+    if commStatus != 0:
+      log.error("readStatus: non-zero status: %02x" % commStatus)
+      raise BadDeviceCommError("readStatus: non-zero status: %02x" % commStatus)
     status         = result[2]
     lb, hb         = result[3], result[4]
     bytesAvailable = lib.BangInt((lb, hb))
     self.status    = status
-
+    log.info('status byte: %02x' % status)
+    if (status & 0x2) > 0:
+      log.info('STATUS: receive in progress!')
+    if (status & 0x4) > 0:
+      log.info('STATUS: transmit in progress!')
+    if (status & 0x8) > 0:
+      log.info('STATUS: interface error!')
+    if (status & 0x10) > 0:
+      log.info('STATUS: recieve overflow!')
+    if (status & 0x20) > 0:
+      log.info('STATUS: transmit overflow!')
+    assert commStatus == 0
     if (status & 0x1) > 0:
       return bytesAvailable
     return 0
+  """
+  def readStatus(self):
+    result = [ ]
+    def fetch_status( ):
+      res = self.link.sendComLink2Command(3)
+      log.info("res: %r" % res)
+      #if res and res[0] == 0: # 0 indicates success
+      if res and len(res) > 0:
+        return res
+      return False
+      
+    result = retry(fetch_status)
+    if not result:
+      raise RFFailed("rf read header indicates failure %s" % lib.hexdump(result))
+    commStatus     = result[0] # 0 indicates success
+    if commStatus != 0:
+      log.error("readStatus: non-zero status: %02x" % commStatus)
+    status         = result[2]
+    lb, hb         = result[3], result[4]
+    bytesAvailable = lib.BangInt((lb, hb))
+    self.status    = status
+    log.info('status byte: %02x' % status)
+    if (status & 0x2) > 0:
+      log.info('STATUS: receive in progress!')
+    if (status & 0x4) > 0:
+      log.info('STATUS: transmit in progress!')
+    if (status & 0x8) > 0:
+      log.info('STATUS: interface error!')
+    if (status & 0x10) > 0:
+      log.info('STATUS: recieve overflow!')
+    if (status & 0x20) > 0:
+      log.info('STATUS: transmit overflow!')
+    assert commStatus == 0, "commStatus must be 0x00 (%02x)" % commStatus
+    if (status & 0x1) > 0:
+      return bytesAvailable
+    return 0
+  """
 
   def buildTransmitPacket(self):
     return self.command.format( )
@@ -246,8 +344,9 @@ class Device(object):
 def initDevice(link):
   device = Device(link)
 
-  #comm   = PowerControl()
-  #device.execute(comm)
+  log.info("TURN POWER ON")
+  comm   = PowerControl()
+  device.execute(comm)
   #log.info('comm:%s:data:%s' % (comm, getattr(comm, 'data', None)))
   #time.sleep(6)
 
@@ -363,8 +462,8 @@ if __name__ == '__main__':
   link = Link(port)
   link.initUSBComms()
   device = initDevice(link)
-  do_commands(device)
-  #get_pages(device)
+  #do_commands(device)
+  get_pages(device)
   #shutdownDevice(device)
   link.endCommunicationsIO()
   #pprint( carelink( USBProductInfo(      ) ).info )
