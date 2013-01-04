@@ -1,12 +1,41 @@
 
 import logging
 
-log = logging.getLogger('pump.commands')
+log = logging.getLogger( ).getChild(__name__)
 
 import lib
 
 def CRC8(data):
   return lib.CRC8.compute(data)
+
+class BaseCommand(object):
+  code    = 0x00
+  descr   = "(error)"
+  retries = 2
+  timeout = 3
+  params  = [ ]
+  bytesPerRecord = 0
+  maxRecords = 0
+  effectTime = 0
+
+  def __init__(self, code, descr, *args):
+    self.code   = code
+    self.descr  = descr
+    self.params = [ ]
+
+  def format(self):
+    pass
+
+class StickCommand(object):
+  """Basic stick command
+  """
+  code = [ 0x00 ]
+  descr = __doc__
+  def format(self):
+    return bytearray(self.code)
+
+  def parse(self, data):
+    self.data = data
 
 class USBProductInfo( object ):
   """Get product info from the usb device."""
@@ -40,6 +69,14 @@ class USBProductInfo( object ):
     , 'interfaces'       : klass.decodeInterfaces( data[ 18: ] )
     }
 
+  _test_ok = bytearray( [
+  ] )
+  def parse(self, data):
+    """
+      >>>
+    """
+    return self.decode(data)
+
 class InterfaceStats( object ):
   code          = [ 5 ]
   INTERFACE_IDX = 19
@@ -54,27 +91,6 @@ class InterfaceStats( object ):
     , 'packets.received': lib.BangLong( data[ 4: 8 ] )
     , 'packets.transmit': lib.BangLong( data[ 8:12 ] )
     }
-
-class BaseCommand(object):
-  code    = 0x00
-  descr   = "(error)"
-  retries = 2
-  timeout = 3
-  params  = [ ]
-  bytesPerRecord = 0
-  maxRecords = 0
-  effectTime = 0
-
-  def __init__(self, code, descr, *args):
-    self.code   = code
-    self.descr  = descr
-    self.params = [ ]
-
-  def format(self):
-    pass
-
-  def allocateRawData(self):
-    self.raw = self.bytesPerRecord * self.maxRecords
 
 class PumpCommand(BaseCommand):
   #serial = '665455'
@@ -94,6 +110,9 @@ class PumpCommand(BaseCommand):
 
   def getData(self):
     return self.data
+
+  def allocateRawData(self):
+    self.raw = self.bytesPerRecord * self.maxRecords
 
   def format(self):
     params = self.params

@@ -223,7 +223,7 @@ class Device(object):
     assert len(data) == resLength
     crc = results[-1]
     # crc check
-    log.info('readDeviceDataIO:msgCRC:%r:expectedCRC:%r:data:%r' % (crc, CRC8(data), data))
+    log.info('readDeviceDataIO:msgCRC:%r:expectedCRC:%r:data:%s' % (crc, CRC8(data), lib.hexdump(data)))
     assert crc == CRC8(data)
     return data
 
@@ -271,7 +271,7 @@ class Device(object):
   def clearBuffers(self):
     garbage = -1
     while garbage:
-      garbage = self.link.read(64)
+      garbage = bytearray(self.link.read(64))
       log.error("found garbage:\n%s" % lib.hexdump(garbage))
 
 
@@ -344,9 +344,9 @@ class Device(object):
 def initDevice(link):
   device = Device(link)
 
-  log.info("TURN POWER ON")
-  comm   = PowerControl()
-  device.execute(comm)
+  #log.info("TURN POWER ON")
+  #comm   = PowerControl()
+  #device.execute(comm)
   #log.info('comm:%s:data:%s' % (comm, getattr(comm, 'data', None)))
   #time.sleep(6)
 

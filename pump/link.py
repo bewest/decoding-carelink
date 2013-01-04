@@ -4,14 +4,13 @@
 #
 
 import serial 
-from insulaudit.log import io, logger as log
-from insulaudit import lib, config
+import logging
+import lib
+io  = logging.getLogger( )
+log = io.getChild(__name__)
 
-
-
-# TODO: implement Buffer API and enable context manager.
 class Link( object ):
-  __timeout__ = config.settings.timeout
+  __timeout__ = .500
   port = None
   def __init__( self, port, timeout=None ):
     if timeout is not None:
@@ -22,8 +21,10 @@ class Link( object ):
   def open( self, newPort=False, **kwds ):
     if newPort:
       self.port = newPort
+    if 'timeout' not in kwds:
+      kwds['timeout'] = self.__timeout__
 
-    self.serial = serial.Serial( self.port, timeout=self.__timeout__, **kwds )
+    self.serial = serial.Serial( self.port, **kwds )
 
     if self.serial.isOpen( ):
       log.info( '{agent} opened serial port: {serial}'\
