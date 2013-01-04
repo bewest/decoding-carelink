@@ -33,17 +33,15 @@ class StickCommand(object):
     if len(raw) == 0:
       log.error("ACK is zero bytes!")
       # return False
-      raise AckError("ACK is not 64 bytes: %s" % lib.hexdump(raw))
+      raise AckError("ACK is 0 bytes: %s" % lib.hexdump(raw))
     commStatus = raw[0]
     # usable response
     assert commStatus == 1, ('commStatus: %02x expected 0x1' % commStatus)
     status     = raw[1]
     # status == 102 'f' NAK, look up NAK
     if status == 85: # 'U'
-      log.info('checkACK OK, found %s total bytes' % len(raw))
-
       return raw[:3], raw[3:]
-    assert False, "NAK!!"
+    assert False, ("NAK!!\n%s" % lib.hexdump(raw[:3]))
     
 
 class ProductInfo(StickCommand):
@@ -304,9 +302,10 @@ class Stick(object):
     log.info('link %s processing %s)' % ( self, self.command ))
     # self.link.process(command)
     self.link.write(self.command.format( ))
+    log.debug('sleeping %s' % self.command.delay)
     time.sleep(self.command.delay)
     raw = bytearray(self.link.read(64))
-    # maybe checkAck? eg: 
+
     ack, response = self.command.respond(raw)
     info = self.command.parse(response)
     log.info('finished processing {0}, returning {1}'.format(self.command, info))
