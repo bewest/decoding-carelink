@@ -5,6 +5,9 @@ import time
 
 log = logging.getLogger( ).getChild(__name__)
 
+def CRC8(data):
+  return lib.CRC8.compute(data)
+
 class StickError(Exception): pass
 
 class AckError(StickError): pass
@@ -150,7 +153,7 @@ class LinkStatus(StickCommand):
       reasons.append('STATUS: transmit overflow!')
     if (status & 0x1) > 0:
       reasons.append('STATUS: OK')
-    msg = '\n'.join([ self, ', '.join(reasons) ])
+    msg = '\n'.join(map(str, [ self, ', '.join(reasons) ]))
     log.info(msg)
     self.reasons = reasons
 
@@ -176,7 +179,15 @@ class ReadRadio(StickCommand):
     packet = [12, 0, lib.HighByte(size), lib.LowByte(size)]
     self.code = packet + [ CRC8(packet) ]
 
-  def checkACK(self, raw):
+  def format(self, *msg):
+    msg = bytearray(msg)
+    return msg
+
+  def respond(self, raw):
+    if len(raw) == 0:
+      log.error("ReadRadio ACK is zero bytes!")
+      # return False
+      raise AckError("ACK is 0 bytes: %s" % lib.hexdump(raw))
     log.info('readData validating remote raw[ack]: %02x' % raw[0])
     log.info('readData; foreign raw should be at least 14 bytes? %s %s' % (len(raw), len(raw) > 14))
     log.info('readData; raw[retries] %s' % int(raw[3]))
@@ -184,7 +195,10 @@ class ReadRadio(StickCommand):
     if dl_status != 0x02: # this differs from the others?
       raise BadDeviceCommError("bad dl raw! %r" % raw)
       assert (int(raw[0]) == 2), repr(raw)
+    return raw[:3], raw[3:]
+    
   def parse(self, raw):
+    """
     log.info('readData validating remote raw[ack]: %02x' % raw[0])
     log.info('readData; foreign raw should be at least 14 bytes? %s %s' % (len(raw), len(raw) > 14))
     log.info('readData; raw[retries] %s' % int(raw[3]))
@@ -197,6 +211,7 @@ class ReadRadio(StickCommand):
     # raw[2] == 2 # NAK
     # raw[2] # should be within 0..4
     log.info("readData ACK")
+    """
     lb, hb    = raw[5] & 0x7F, raw[6]
     self.eod  = (raw[5] & 0x80) > 0
     resLength = lib.BangInt((lb, hb))
@@ -355,11 +370,14 @@ class Stick(object):
   def download(self):
     eod = False
     results  = bytearray( )
-    while not eod:
+    size     = self.poll_size( )
+    while not eod and size > 0:
       size = self.poll_size( )
       data = self.download_packet(size)
       results.extend(data)
       eod = self.command.eod
+      if size == 0:
+        break
     return results
 
   def transmit_packet(self, command):
@@ -391,9 +409,14 @@ if __name__ == '__main__':
   while signal < 50:
     signal = stick.signal_strength( )
   log.info('we seem to have found a nice signal strength of: %s' % signal)
-  log.info("let's inspect the interfaces")
+  log.info("""
+    at this point, we could issue remote commands to a medical
+    device, let's inspect the interfaces""".strip( ))
   log.info(pformat(stick.usb_stats( )))
   log.info(pformat(stick.radio_stats( )))
+  size = stick.poll_size( )
+  log.info("can we poll the size? %s" % (size))
+  log.info("can we download ? %s" % (lib.hexdump(stick.download( ))))
 
 #####
 # EOF
