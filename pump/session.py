@@ -67,10 +67,13 @@ class Pump(Session):
     log.info('setting up to talk with %s' % serial)
 
   def power_control(self):
-    self.should_download = False
+    #self.should_download = False
     self.query(commands.PowerControl)
-    self.should_download = True
-    log.info('try to poll without download' % self.stick.poll_size( ))
+    #self.should_download = True
+    #try:
+    #  log.info('try to poll without download' % self.stick.poll_size( ))
+    #except AckError, e:
+    #  log.info('try again to poll without download' % self.stick.poll_size( ))
 
   def read_model(self):
     model = self.query(commands.ReadPumpModel)

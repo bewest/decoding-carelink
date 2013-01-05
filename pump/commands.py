@@ -45,10 +45,10 @@ class PumpCommand(BaseCommand):
 
   def __str__(self):
     if getattr(self, 'data', False):
-      return self.getData( )
-    return 'unknown'
+      return ':'.join([self.__class__.__name__, repr(self.getData( ))])
+    return self.__class__.__name__
   def __repr__(self):
-    return '<{0}:{1:s}>'.format(self.__class__.__name__, self)
+    return '<{0}>'.format( self)
   def getData(self):
     return self.data
 
