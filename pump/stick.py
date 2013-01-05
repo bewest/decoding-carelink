@@ -18,6 +18,11 @@ class StickCommand(object):
   delay = .001
   size = 64
 
+  def __str__(self):
+    code = ' '.join([ '%#04x' % op for op in self.code ])
+    return '{0}:{1}'.format(self.__class__.__name__, code)
+  def __repr__(self):
+    return '<{0:s}>'.format(self)
   def format(self):
     return self.format_cl2(*self.code)
 
@@ -118,12 +123,20 @@ class SignalStrength(StickCommand):
       #>>>
     """
     # result[0] is signal strength
+    self.value = int(data[0])
     log.info('%r:readSignalStrength:%s' % (self, int(data[0])))
     return int(data[0])
 
 class LinkStatus(StickCommand):
   code = [ 0x03 ]
   reason = ''
+
+  def __str__(self):
+    if getattr(self, 'error', False):
+      return '{0}:error:{2}%s:reason:{1}'.format(self.__class__.__name__, self.error, self.reason)
+    
+    return super(type(self), self).__str__( )
+      
   def record_error(self, result):
     self.error  = True
     self.ack    = result[0] # 0 indicates success
@@ -173,9 +186,17 @@ class ReadRadio(StickCommand):
   code = [ 0x0C, 0x00 ]
   def __init__(self, size):
     self.size = size
+    self.dl_size = size
     packet = [12, 0, lib.HighByte(size), lib.LowByte(size)]
+    if size < 64:
+      log.error('size is less than 64, which will cause an error. trying 64 instead')
+      self.size = 64
     self.code = packet + [ CRC8(packet) ]
 
+  def __str__(self):
+    return '{0}:size:{1}'.format(self.__class__.__name__, self.dl_size)
+  def __repr__(self):
+    return '<{0:s}>'.format(self)
   def format(self):
     msg = bytearray(self.code)
     return msg
@@ -240,6 +261,14 @@ class TransmitPacket(StickCommand):
     self.serial  = command.serial
     self.delay = command.effectTime
 
+  def __str__(self):
+    if getattr(self, 'command', False):
+      return '{0}:{1:s}'.format(self.__class__.__name__, self.command)
+    code = ' '.join([ '%#04x' % op for op in self.head ])
+    return '{0}:{1}'.format(self.__class__.__name__, code)
+  def __repr__(self):
+    return '<{0:s}>'.format(self)
+  
 
   def calcRecordsRequired(self):
     return self.command.calcRecordsRequired( )
@@ -325,6 +354,14 @@ class Stick(object):
     time.sleep(self.command.delay)
     raw = bytearray(self.link.read(self.command.size))
 
+    if len(raw) == 0:
+      log.info('zero length READ, try once more sleep .100')
+      time.sleep(.100)
+      self.link.write(self.command.format( ))
+      log.debug('sleeping %s' % self.command.delay)
+      time.sleep(self.command.delay)
+      raw = bytearray(self.link.read(self.command.size))
+
     ack, response = self.command.respond(raw)
     info = self.command.parse(response)
     log.info('finished processing {0}, returning {1}'.format(self.command, info))
@@ -351,7 +388,8 @@ class Stick(object):
     start = time.time()
     i     = 0
     log.debug('%r:STARTING POLL PHASE:attempt:%s' % (self, i))
-    while size == 0 and size < 64 and time.time() - start < 1:
+    #while size == 0 and size < 64 and time.time() - start < 1:
+    while size < 64 and time.time() - start < 1:
       log.debug('%r:poll:attempt:%s' % (self, i))
       size  = self.read_status( )
       log.debug('sleeping in POLL, .250')
@@ -377,8 +415,14 @@ class Stick(object):
     results  = bytearray( )
     while not eod:
       size = self.poll_size( )
+      if size < 64:
+        size = self.poll_size( )
       if size == 0:
         break
+
+      #assert size > 64, ("size(%s) < 64 will break the stick" % size)
+
+      #if size > 64:
       data = self.download_packet(size)
       results.extend(data)
       eod = self.command.eod
@@ -432,9 +476,10 @@ if __name__ == '__main__':
     device, let's inspect the interfaces""".strip( ))
   log.info(pformat(stick.usb_stats( )))
   log.info(pformat(stick.radio_stats( )))
-  #size = stick.poll_size( )
-  #log.info("can we poll the size? %s" % (size))
-  #log.info("can we download ? %s" % (lib.hexdump(stick.download( ))))
+  size = stick.poll_size( )
+  log.info("can we poll the size? %s" % (size))
+  if size > 64:
+    log.info("can we download ? %s" % (lib.hexdump(stick.download( ))))
 
 #####
 # EOF

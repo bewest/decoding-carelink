@@ -36,7 +36,7 @@ class Session(object):
       except BadDeviceCommError, e:
         log.critical("ERROR: %s" % e)
         # self.clearBuffers( )
-    return self.command.getData( )
+    log.critical('this seems like a problem')
 
   def download(self):
     if self.expectedLength > 0:
@@ -93,7 +93,9 @@ if __name__ == '__main__':
   stick = stick.Stick(link.Link(port, timeout=.100))
   stick.open( )
   session = Pump(stick, '208850')
+  #log.info("POWER CONTROL ON")
   #session.power_control( )
+  #stick.open( )
   log.info('PUMP MODEL: %s' % session.read_model( ))
   
 
