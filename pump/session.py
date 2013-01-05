@@ -91,8 +91,9 @@ if __name__ == '__main__':
   logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
   log.info("howdy! I'm going to take a look at your pump.")
   stick = stick.Stick(link.Link(port, timeout=.100))
+  stick.open( )
   session = Pump(stick, '208850')
   #session.power_control( )
-  session.read_model( )
+  log.info('PUMP MODEL: %s' % session.read_model( ))
   
 

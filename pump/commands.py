@@ -43,6 +43,12 @@ class PumpCommand(BaseCommand):
       value = kwds.get(k, getattr(self, k))
       setattr(self, k, value)
 
+  def __str__(self):
+    if getattr(self, 'data', False):
+      return self.getData( )
+    return 'unknown'
+  def __repr__(self):
+    return '<{0}:{1:s}>'.format(self.__class__.__name__, self)
   def getData(self):
     return self.data
 

@@ -16,6 +16,7 @@ class StickCommand(object):
   code = [ 0x00 ]
   label = __doc__
   delay = .001
+  size = 64
 
   def format(self):
     return self.format_cl2(*self.code)
@@ -219,10 +220,9 @@ class ReadRadio(StickCommand):
     data = raw[13:13+resLength]
     self.packet = data
     log.info('found packet len(%s)\n%s' % (len(self.packet), lib.hexdump(self.packet)))
-    #assert len(data) == resLength
+    assert len(data) == resLength
     head = raw[13:]
-    assert len(raw) == resLength
-    crc = raw[:13][-1]
+    crc = raw[-1]
     # crc check
     log.info('readDeviceDataIO:msgCRC:%r:expectedCRC:%r:data:%s' % (crc, CRC8(data), lib.hexdump(data)))
     assert crc == CRC8(data)
@@ -323,7 +323,7 @@ class Stick(object):
     self.link.write(self.command.format( ))
     log.debug('sleeping %s' % self.command.delay)
     time.sleep(self.command.delay)
-    raw = bytearray(self.link.read(64))
+    raw = bytearray(self.link.read(self.command.size))
 
     ack, response = self.command.respond(raw)
     info = self.command.parse(response)
@@ -351,11 +351,11 @@ class Stick(object):
     start = time.time()
     i     = 0
     log.debug('%r:STARTING POLL PHASE:attempt:%s' % (self, i))
-    while size == 0 and time.time() - start < 1:
+    while size == 0 and size < 64 and time.time() - start < 1:
       log.debug('%r:poll:attempt:%s' % (self, i))
       size  = self.read_status( )
-      log.debug('sleeping in POLL, .100')
-      time.sleep(.100)
+      log.debug('sleeping in POLL, .250')
+      time.sleep(.250)
       i += 1
     log.info('STOP POLL after %s attempts:size:%s' % (i, size))
     return size
@@ -391,6 +391,19 @@ class Stick(object):
     result = self.process( )
     return result
 
+  def open(self):
+    for attempt in xrange( 3 ):
+      try:
+        log.info('%s' % self.product_info( ))
+        log.info('get signal strength of %s' % self)
+        signal = 0
+        while signal < 50:
+          signal = self.signal_strength( )
+        log.info('we seem to have found a nice signal strength of: %s' % signal)
+      except AckError, e:
+        log.info('failed:(%s):\n%s' % (attempt, e))
+    
+
 if __name__ == '__main__':
   import doctest
   doctest.testmod( )
@@ -406,6 +419,7 @@ if __name__ == '__main__':
   logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
   log.info("howdy! I'm going to take a look at your carelink usb stick.")
   stick = Stick(link.Link(port))
+  stick.open( )
   log.info('test fetching product info %s' % stick)
   log.info(pformat(stick.product_info( )))
   log.info('get signal strength of %s' % stick)
