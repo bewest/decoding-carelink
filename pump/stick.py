@@ -403,7 +403,7 @@ class Stick(object):
     while size == 0 and time.time() - start < 1:
       log.debug('%r:poll:attempt:%s' % (self, i))
       size  = self.read_status( )
-      log.debug('sleeping in POLL, .250')
+      log.debug('sleeping in POLL, .100')
       time.sleep(.250)
       i += 1
     log.info('STOP POLL after %s attempts:size:%s' % (i, size))
