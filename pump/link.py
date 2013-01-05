@@ -44,7 +44,7 @@ class Link( object ):
   def read( self, c ):
     r = self.serial.read( c )
     io.info( 'usb.read.len: %s'   % ( len( r ) ) )
-    io.info( 'usb.read.raw: \n%s' % ( lib.hexdump( bytearray( r ) ) ) )
+    io.info( 'usb.read.raw:\n%s' % ( lib.hexdump( bytearray( r ) ) ) )
     return r
     
   def readline( self ):

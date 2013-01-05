@@ -133,7 +133,7 @@ class LinkStatus(StickCommand):
 
   def __str__(self):
     if getattr(self, 'error', False):
-      return '{0}:error:{2}%s:reason:{1}'.format(self.__class__.__name__, self.error, self.reason)
+      return '{0}:error:{1}:reason:{2}'.format(self.__class__.__name__, self.error, self.reason)
     
     return super(type(self), self).__str__( )
       
@@ -346,6 +346,14 @@ class Stick(object):
     self.link = link
     self.command = None
 
+  def __str__(self):
+    s = [ self.__class__.__name__,
+          'status', repr(getattr(self, 'last_status', None)),
+          'command', repr(getattr(self, 'command', None)),
+        ]
+    return ':'.join(s)
+  def __repr__(self):
+    return '<{0}>'.format(str(self))
   def process(self):
     log.info('link %s processing %s)' % ( self, self.command ))
     # self.link.process(command)
