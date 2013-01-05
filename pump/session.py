@@ -10,6 +10,7 @@ from errors import StickError, AckError, BadDeviceCommError
 class Session(object):
   def __init__(self, stick):
     self.stick = stick
+    self.should_download = True
   def init(self, skip_power_control=False):
     stick = self.stick
     log.info('test fetching product info %s' % stick)
@@ -31,7 +32,8 @@ class Session(object):
       try:
         self.expectedLength = self.command.bytesPerRecord * self.command.maxRecords
         self.transfer( )
-        self.download( )
+        if self.should_download:
+          self.download( )
         return
       except BadDeviceCommError, e:
         log.critical("ERROR: %s" % e)
@@ -62,7 +64,10 @@ class Pump(Session):
     log.info('setting up to talk with %s' % serial)
 
   def power_control(self):
+    self.should_download = False
     self.query(commands.PowerControl)
+    self.should_download = True
+    log.info('try to poll without download' % self.stick.poll_size( ))
 
   def read_model(self):
     model = self.query(commands.ReadPumpModel)
@@ -95,7 +100,9 @@ if __name__ == '__main__':
   session = Pump(stick, '208850')
   #log.info("POWER CONTROL ON")
   #session.power_control( )
-  #stick.open( )
+  log.info(pformat(stick.interface_stats( )))
   log.info('PUMP MODEL: %s' % session.read_model( ))
+  log.info(pformat(stick.interface_stats( )))
+  # stick.open( )
   
 

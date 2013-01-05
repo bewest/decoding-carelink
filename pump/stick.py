@@ -364,7 +364,7 @@ class Stick(object):
 
     ack, response = self.command.respond(raw)
     info = self.command.parse(response)
-    log.info('finished processing {0}, returning {1}'.format(self.command, info))
+    log.info('finished processing {0}, {1}'.format(self.command, repr(info)))
     return info
     
   def query(self, Command):
@@ -374,6 +374,9 @@ class Stick(object):
   def product_info(self):
     return self.query(ProductInfo)
 
+  def interface_stats(self):
+    return {'usb': self.usb_stats( ), 'radio': self.radio_stats( ) }
+    
   def usb_stats(self):
     return self.query(UsbStats)
 
