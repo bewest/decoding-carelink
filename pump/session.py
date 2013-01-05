@@ -68,12 +68,14 @@ class Pump(Session):
     log.info('setting up to talk with %s' % serial)
 
   def power_control(self):
-    #self.should_download = False
+    self.should_download = False
+    self.query(commands.PowerControl)
+    self.should_download = True
     try:
-      self.query(commands.PowerControl)
-    except BadDeviceCommError, e:
+      self.download( )
       size = self.stick.poll_size( )
       log.info("SIZE %s" % size)
+    except BadDeviceCommError, e:
 
       # self.stick.download_packet(size)
       download = stick.ReadRadio(size)
@@ -89,7 +91,6 @@ class Pump(Session):
         packet = download.parse(body)
       return packet
       
-    #self.should_download = True
     #try:
     #  log.info('try to poll without download' % self.stick.poll_size( ))
     #except AckError, e:
@@ -125,9 +126,9 @@ if __name__ == '__main__':
   stick.open( )
   session = Pump(stick, '208850')
   log.info(pformat(stick.interface_stats( )))
-  #log.info("POWER CONTROL ON")
-  #session.power_control( )
-  #log.info(pformat(stick.interface_stats( )))
+  log.info("POWER CONTROL ON")
+  session.power_control( )
+  log.info(pformat(stick.interface_stats( )))
   log.info('PUMP MODEL: %s' % session.read_model( ))
   log.info(pformat(stick.interface_stats( )))
   # stick.open( )
