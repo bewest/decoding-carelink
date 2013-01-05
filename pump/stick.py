@@ -368,9 +368,6 @@ class Stick(object):
     if len(raw) == 0:
       log.info('zero length READ, try once more sleep .100')
       time.sleep(.100)
-      self.link.write(self.command.format( ))
-      log.debug('sleeping %s' % self.command.delay)
-      time.sleep(self.command.delay)
       raw = bytearray(self.link.read(self.command.size))
 
     ack, response = self.command.respond(raw)
