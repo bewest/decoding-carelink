@@ -184,6 +184,8 @@ class LinkStatus(StickCommand):
 
 class ReadRadio(StickCommand):
   code = [ 0x0C, 0x00 ]
+  dl_size = 0
+  size = 64
   def __init__(self, size):
     self.size = size
     self.dl_size = size
@@ -360,7 +362,8 @@ class Stick(object):
     self.link.write(self.command.format( ))
     log.debug('sleeping %s' % self.command.delay)
     time.sleep(self.command.delay)
-    raw = bytearray(self.link.read(self.command.size))
+    size = max(64, self.command.size)
+    raw = bytearray(self.link.read(size))
 
     if len(raw) == 0:
       log.info('zero length READ, try once more sleep .100')
@@ -395,12 +398,12 @@ class Stick(object):
     return self.query(SignalStrength)
 
   def poll_size(self):
-    size  = self.read_status( )
+    size  = 0
     start = time.time()
     i     = 0
     log.debug('%r:STARTING POLL PHASE:attempt:%s' % (self, i))
     #while size == 0 and size < 64 and time.time() - start < 1:
-    while size < 64 and time.time() - start < 1:
+    while size == 0 and time.time() - start < 1:
       log.debug('%r:poll:attempt:%s' % (self, i))
       size  = self.read_status( )
       log.debug('sleeping in POLL, .250')
@@ -426,8 +429,6 @@ class Stick(object):
     results  = bytearray( )
     while not eod:
       size = self.poll_size( )
-      if size < 64:
-        size = self.poll_size( )
       if size == 0:
         break
 
@@ -489,7 +490,7 @@ if __name__ == '__main__':
   log.info(pformat(stick.radio_stats( )))
   size = stick.poll_size( )
   log.info("can we poll the size? %s" % (size))
-  if size > 64:
+  if size > 14:
     log.info("can we download ? %s" % (lib.hexdump(stick.download( ))))
 
 #####

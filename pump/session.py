@@ -41,6 +41,7 @@ class Session(object):
     log.critical('this seems like a problem')
 
   def download(self):
+    errors = [ ]
     if self.expectedLength > 0:
       for i in xrange(3):
         try:
@@ -51,8 +52,10 @@ class Session(object):
         except AckError, e:
           time.sleep(.010)
           log.error(e)
+          errors.append(e)
     else:
       log.info('no download required')
+    assert not errors, "\n".join( map(str, errors) )
   def transfer(self):
     log.info('session transferring packet')
     self.stick.transmit_packet(self.command)
@@ -99,9 +102,9 @@ if __name__ == '__main__':
   stick.open( )
   session = Pump(stick, '208850')
   log.info(pformat(stick.interface_stats( )))
-  log.info("POWER CONTROL ON")
-  session.power_control( )
-  log.info(pformat(stick.interface_stats( )))
+  #log.info("POWER CONTROL ON")
+  #session.power_control( )
+  #log.info(pformat(stick.interface_stats( )))
   log.info('PUMP MODEL: %s' % session.read_model( ))
   log.info(pformat(stick.interface_stats( )))
   # stick.open( )
