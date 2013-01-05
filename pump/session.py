@@ -98,6 +98,7 @@ if __name__ == '__main__':
   stick = stick.Stick(link.Link(port, timeout=.100))
   stick.open( )
   session = Pump(stick, '208850')
+  #log.info(pformat(stick.interface_stats( )))
   #log.info("POWER CONTROL ON")
   #session.power_control( )
   log.info(pformat(stick.interface_stats( )))
