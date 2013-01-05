@@ -47,7 +47,7 @@ class PumpCommand(BaseCommand):
     return self.data
 
   def allocateRawData(self):
-    self.raw = self.bytesPerRecord * self.maxRecords
+    self.size = self.bytesPerRecord * self.maxRecords
 
   def format(self):
     params = self.params
@@ -105,7 +105,7 @@ class PowerControl(PumpCommand):
   descr = "RF Power On"
   params = [ 0x01, 0x0A ]
   retries = 0
-  maxRecords = 0
+  maxRecords = 1
   #timeout = 1
   effectTime = 17
 
@@ -421,6 +421,11 @@ class ReadPumpModel(PumpCommand):
     self.model = msg
     return str(msg)
 
+def do_commands(device):
+  comm = ReadPumpModel( )
+  device.execute(comm)
+  log.info('comm:%s:data:%s' % (comm, getattr(comm.getData( ), 'data', None)))
+  log.info('REMOTE PUMP MODEL NUMBER: %s' % comm.getData( ))
 
 if __name__ == '__main__':
   import doctest

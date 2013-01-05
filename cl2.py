@@ -10,6 +10,7 @@ from pprint import pprint, pformat
 
 from pump import link
 from pump.commands import *
+from pump.stick import ProductInfo, InterfaceStats
 from pump import lib
 
 logging.basicConfig( stream=sys.stdout )
@@ -109,7 +110,7 @@ class Link( link.Link ):
     # decodeInterface stats
       
   def decodeProductInfo(self, data):
-    return USBProductInfo.decode(data)
+    return ProductInfo.decode(data)
 
   def sendComLink2Command(self, msg, a2=0x00, a3=0x00):
     # generally commands are 3 bytes, most often CMD, 0x00, 0x00
@@ -438,7 +439,8 @@ def get_pages(device):
     log.info('comm:READ HISTORY DATA page number: %r' % (x))
     comm = ReadHistoryData( params=[ x ] )
     device.execute(comm)
-    comm.getData( )
+    page = comm.getData( )
+    log.info("XXX: READ HISTORY DATA!!:\n%s" % lib.hexdump(page))
   #log.info('comm:READ history data!!!: %r' % (comm.getData( )))
 
 def shutdownDevice(device):
@@ -466,7 +468,7 @@ if __name__ == '__main__':
   get_pages(device)
   #shutdownDevice(device)
   link.endCommunicationsIO()
-  #pprint( carelink( USBProductInfo(      ) ).info )
+  #pprint( carelink( ProductInfo(      ) ).info )
 
 
 #####

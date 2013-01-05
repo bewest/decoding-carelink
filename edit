@@ -1,8 +1,16 @@
 #!/bin/bash
 
-find ./ -not -path './.git*' -type f \
-    \( \
+find ./ \( \
+      -name "*.py" \
+      -or -name '*.sh'  \
+      -or -name '*.markdown'  \
+      -or -name 'README*'       \
+    \) -not -path './.git*' -type f \
+    \(  \
     -not -name ".*.sw?"  \
+    -not -name "*.data"     \
+    -not -name "*.log"     \
+    -not -name "*.png"     \
     -not -name "edit"     \
     -not -name "*.py?"     \
     -or -name '*.markdown'  \

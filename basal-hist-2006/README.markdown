@@ -5,12 +5,22 @@ We think that the only difference between this run and the "rosetta"
 run is the passing of time.  No bolus were given.  This means the only
 new data in the logs should be basal histories.
 
+No new data was found between these runs and the rosetta runs.
+It appears state changes between basal rates while executing the basal
+schedule are not written into the history pages.  As an editorial
+note, we believe these changes are important and find it odd to
+observe them missing.
+
+BTW, running the carelink diagnostic software will write new entries
+into the history log.
+
 ## Dumping Insulin Pump Memory
 
 The pump command `ReadHistoryData` (`opcode 128`) dumps the pump's
 memory.
 
 The result piped through `od` looks like this:
+Force everything to unsigned decimals, 8 at a time.
 
 `od -t u1 --width=8`
 

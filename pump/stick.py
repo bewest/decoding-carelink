@@ -5,14 +5,10 @@ import time
 
 log = logging.getLogger( ).getChild(__name__)
 
+from errors import StickError, AckError, BadDeviceCommError
+
 def CRC8(data):
   return lib.CRC8.compute(data)
-
-class StickError(Exception): pass
-
-class AckError(StickError): pass
-
-class BadDeviceCommError(AckError): pass
 
 class StickCommand(object):
   """Basic stick command
@@ -179,8 +175,8 @@ class ReadRadio(StickCommand):
     packet = [12, 0, lib.HighByte(size), lib.LowByte(size)]
     self.code = packet + [ CRC8(packet) ]
 
-  def format(self, *msg):
-    msg = bytearray(msg)
+  def format(self):
+    msg = bytearray(self.code)
     return msg
 
   def respond(self, raw):
@@ -195,7 +191,7 @@ class ReadRadio(StickCommand):
     if dl_status != 0x02: # this differs from the others?
       raise BadDeviceCommError("bad dl raw! %r" % raw)
       assert (int(raw[0]) == 2), repr(raw)
-    return raw[:3], raw[3:]
+    return raw[:1], raw
     
   def parse(self, raw):
     """
@@ -211,6 +207,8 @@ class ReadRadio(StickCommand):
     # raw[2] == 2 # NAK
     # raw[2] # should be within 0..4
     log.info("readData ACK")
+    lb, hb    = raw[5] & 0x7F, raw[6]
+    self.eod  = (raw[5] & 0x80) > 0
     """
     lb, hb    = raw[5] & 0x7F, raw[6]
     self.eod  = (raw[5] & 0x80) > 0
@@ -220,8 +218,11 @@ class ReadRadio(StickCommand):
 
     data = raw[13:13+resLength]
     self.packet = data
-    assert len(data) == resLength
-    crc = raw[-1]
+    log.info('found packet len(%s)\n%s' % (len(self.packet), lib.hexdump(self.packet)))
+    #assert len(data) == resLength
+    head = raw[13:]
+    assert len(raw) == resLength
+    crc = raw[:13][-1]
     # crc check
     log.info('readDeviceDataIO:msgCRC:%r:expectedCRC:%r:data:%s' % (crc, CRC8(data), lib.hexdump(data)))
     assert crc == CRC8(data)
@@ -279,12 +280,15 @@ class TransmitPacket(StickCommand):
     return bytearray(packet)
 
   def respond(self, raw):
-    return (bytearray(raw), bytearray(raw))
-  def parse(self, results):
     code = self.command.code
     params = self.params
     if code != 93 or params[0] != 0:
-      ack, body = self.split_ack(raw)
+      ack, body = super(type(self), self).respond(raw)
+      return ack, body
+      
+    return (bytearray(raw), bytearray(raw))
+  def parse(self, results):
+    return results
     #self.checkAck(results)
 
 
@@ -357,6 +361,7 @@ class Stick(object):
     return size
     
   def read_status(self):
+    log.debug('read_status')
     result = self.query(LinkStatus)
     self.last_status = self.command
     return result
@@ -370,20 +375,19 @@ class Stick(object):
   def download(self):
     eod = False
     results  = bytearray( )
-    size     = self.poll_size( )
-    while not eod and size > 0:
+    while not eod:
       size = self.poll_size( )
+      if size == 0:
+        break
       data = self.download_packet(size)
       results.extend(data)
       eod = self.command.eod
-      if size == 0:
-        break
     return results
 
   def transmit_packet(self, command):
     packet = TransmitPacket(command)
     self.command = packet
-    io.info('transmit_packet:write:%r' % (self.command))
+    log.info('transmit_packet:write:%r' % (self.command))
     result = self.process( )
     return result
 
@@ -414,9 +418,9 @@ if __name__ == '__main__':
     device, let's inspect the interfaces""".strip( ))
   log.info(pformat(stick.usb_stats( )))
   log.info(pformat(stick.radio_stats( )))
-  size = stick.poll_size( )
-  log.info("can we poll the size? %s" % (size))
-  log.info("can we download ? %s" % (lib.hexdump(stick.download( ))))
+  #size = stick.poll_size( )
+  #log.info("can we poll the size? %s" % (size))
+  #log.info("can we download ? %s" % (lib.hexdump(stick.download( ))))
 
 #####
 # EOF
