@@ -4,6 +4,7 @@ import time
 log = logging.getLogger( ).getChild(__name__)
 import commands
 import lib
+import stick
 from errors import StickError, AckError, BadDeviceCommError
 
 
@@ -68,7 +69,26 @@ class Pump(Session):
 
   def power_control(self):
     #self.should_download = False
-    self.query(commands.PowerControl)
+    try:
+      self.query(commands.PowerControl)
+    except BadDeviceCommError, e:
+      size = self.stick.poll_size( )
+      log.info("SIZE %s" % size)
+
+      # self.stick.download_packet(size)
+      download = stick.ReadRadio(size)
+      log.info("power_control download_packet:%s" % (size))
+
+      self.stick.command = download
+      packet = None
+      try:
+        packet = self.stick.process( )
+      except BadDeviceCommError, e:
+        raw = self.stick.link.read(64)
+        ack, body = download.respond(raw)
+        packet = download.parse(body)
+      return packet
+      
     #self.should_download = True
     #try:
     #  log.info('try to poll without download' % self.stick.poll_size( ))
