@@ -457,11 +457,14 @@ class Stick(object):
         raw = bytearray(self.link.read(self.command.size))
 
       if len(raw) != 0:
-        log.info(' '.join(['quit send_force_read, found',
-                           'len:', str(len(raw)), 'after',
-                           str(attempt), 'attempts']))
+        log.info(' '.join(['quit send_force_read,',
+                           'found len:', str(len(raw)),
+                           'expected', str(size),
+                           'after', str(attempt), 'attempts']))
         return raw
-    log.critical("FAILED TO DOWNLOAD ANYTHING, after %s" % size)
+    log.critical(' '.join([ "FAILED TO DOWNLOAD ANYTHING,",
+                            "after %s " % (attempt),
+                            "expected:%s" % (size) ]))
     assert not raw
     
   def download_packet(self, size):
