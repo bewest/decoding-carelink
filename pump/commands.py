@@ -133,7 +133,7 @@ class ReadErrorStatus(PumpCommand):
 
 class ReadHistoryData(PumpCommand):
   """
-    >>> ReadHistoryData(serial='208850').format() == ReadHistoryData._test_ok
+    >>> ReadHistoryData(serial='208850', params=[ 0x03 ]).format() == ReadHistoryData._test_ok
     True
   """
   _test_ok = bytearray([ 0x01, 0x00, 0xA7, 0x01, 0x20, 0x88, 0x50, 0x80,
@@ -343,6 +343,10 @@ class ReadSettings(PumpCommand):
   retries = 2
   maxRecords = 1
 
+  byte_map = {
+
+  }
+
   def alarm(self, alarm):
     d = { 'volume': alarm, 'mode': 2 }
     if alarm == 4:
@@ -381,7 +385,12 @@ class ReadSettings(PumpCommand):
     low_reservoir_warn_point = data[19]
     keypad_lock_status = data[20]
 
-    return locals( )
+    values = locals( )
+    # safety
+    values.pop('self')
+    values.pop('data')
+
+    return values
 
 class ReadPumpState(PumpCommand):
   """
@@ -433,6 +442,90 @@ def do_commands(device):
   log.info('comm:%s:data:%s' % (comm, getattr(comm.getData( ), 'data', None)))
   log.info('REMOTE PUMP MODEL NUMBER: %s' % comm.getData( ))
 
+  log.info("READ RTC")
+  comm = ReadRTC( )
+  device.execute(comm)
+  log.info('comm:RTC:%s' % (comm.getData( )))
+
+  log.info("READ PUMP ID")
+  comm = ReadPumpID( )
+  device.execute(comm)
+  log.info('comm:READ PUMP ID: ID: %s' % (comm.getData( )))
+
+
+  log.info("Battery Status")
+  comm = ReadBatteryStatus( )
+  device.execute(comm)
+  log.info('comm:READ Battery Status: %r' % (comm.getData( )))
+
+  log.info("Firmware Version")
+  comm = ReadFirmwareVersion( )
+  device.execute(comm)
+  log.info('comm:READ Firmware Version: %r' % (comm.getData( )))
+
+  log.info("remaining insulin")
+  comm = ReadRemainingInsulin( )
+  device.execute(comm)
+  log.info('comm:READ Remaining Insulin: %r' % (comm.getData( )))
+
+  log.info("read totals today")
+  comm = ReadTotalsToday( )
+  device.execute(comm)
+  log.info('comm:READ totals today: %r' % (comm.getData( )))
+
+  log.info("read remote IDS")
+  comm = ReadRadioCtrlACL( )
+  device.execute(comm)
+  log.info('comm:READ radio ACL: %r' % (comm.getData( )))
+
+  log.info("read temporary basal")
+  comm = ReadBasalTemp( )
+  device.execute(comm)
+  log.info('comm:READ temp basal: %r' % (comm.getData( )))
+
+  log.info("read settings")
+  comm = ReadSettings( )
+  device.execute(comm)
+  log.info('comm:READ settings!: %r' % (comm.getData( )))
+
+  log.info("read contrast")
+  comm = ReadContrast( )
+  device.execute(comm)
+  log.info('comm:READ contrast: %r' % (comm.getData( )))
+
+  log.info("read cur page number")
+  comm = ReadCurPageNumber( )
+  device.execute(comm)
+  log.info('comm:READ page number!!!: %r' % (comm.getData( )))
+
+  log.info("read HISTORY DATA")
+  comm = ReadHistoryData( )
+  device.execute(comm)
+  #log.info('comm:READ history data!!!: %r' % (comm.getData( )))
+
 if __name__ == '__main__':
   import doctest
   doctest.testmod( )
+
+  import sys
+  port = None
+  port = sys.argv[1:] and sys.argv[1] or False
+  serial_num = sys.argv[2:] and sys.argv[2] or False
+  if not port or not serial_num:
+    print "usage:\n%s <port> <serial>, eg /dev/ttyUSB0 208850" % sys.argv[0]
+    sys.exit(1)
+  import link
+  import stick
+  import session
+  from pprint import pformat
+  logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+  log.info("howdy! I'm going to take a look at your pump and grab lots of info.")
+  stick = stick.Stick(link.Link(port, timeout=.100))
+  stick.open( )
+  session = session.Pump(stick, '208850')
+  log.info(pformat(stick.interface_stats( )))
+  log.info('PUMP MODEL: %s' % session.read_model( ))
+  do_commands(session)
+  log.info(pformat(stick.interface_stats( )))
+  # stick.open( )
+  
