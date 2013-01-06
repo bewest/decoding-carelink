@@ -141,9 +141,21 @@ class ReadHistoryData(PumpCommand):
                0x01, 0x00, 0x02, 0x02, 0x00, 0x80, 0x9B, 0x03,
                0x36, ])
 
+  def __init__(self, page=3, **kwds):
+    if page is None and kwds.get('params', [ ]):
+      page = kwds.pop('params')[0]
+
+    self.page = int(page)
+    kwds['params'] = [ self.page ]
+    super(type(self), self).__init__(**kwds)
+  def __str__(self):
+    base = ''.join([ self.__class__.__name__, '[page][%s]' % self.page ])
+    if getattr(self, 'data', False):
+      return ':'.join([base, repr(self.getData( ))])
+    return base
   code = 128
   descr = "Read History Data"
-  params = [ 0x00 ]
+  params = [ ]
   retries = 2
   maxRecords = 2
   effectTime = .100
