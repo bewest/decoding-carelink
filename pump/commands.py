@@ -111,7 +111,7 @@ class PowerControl(PumpCommand):
   descr = "RF Power On"
   params = [ 0x01, 0x0A ]
   retries = 0
-  maxRecords = 1
+  maxRecords = 0
   #timeout = 1
   effectTime = 17
 
