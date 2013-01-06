@@ -238,18 +238,26 @@ class ReadRadio(StickCommand):
     lb, hb    = raw[5] & 0x7F, raw[6]
     self.eod  = (raw[5] & 0x80) > 0
     resLength = lib.BangInt((lb, hb))
-    log.info('XXX resLength: %s' % resLength)
+    # we don't really care about the length
     #assert resLength < 64, ("cmd low byte count:\n%s" % lib.hexdump(raw))
 
     data = raw[13:13+resLength]
     self.packet = data
-    log.info('found packet len(%s)\n%s' % (len(self.packet), lib.hexdump(self.packet)))
+    log.info('found packet len(%s), link expects(%s)' % (len(self.packet), resLength))
     assert len(data) == resLength
     head = raw[13:]
     crc = raw[-1]
     # crc check
-    log.info('readDeviceDataIO:msgCRC:%r:expectedCRC:%r:data:%s' % (crc, CRC8(data), lib.hexdump(data)))
-    assert crc == CRC8(data)
+    if crc == 0:
+      log.warn('bad zero CRC?')
+    expected_crc = CRC8(data)
+    if crc != expected_crc:
+      log.info(':'.join( [ 'ReadRadio:BAD ACK:found raw[crc]: %#04x' % (crc),
+                          'expected_crc(data): %#04x' % (expected_crc),
+                          'raw:\n%s\n' % (lib.hexdump(raw)),
+                          'head:\n%s\n' % (lib.hexdump(head)),
+                          'data:\n%s\n' % (lib.hexdump(data)) ] ))
+    assert crc == expected_crc
     return data
 
 class TransmitPacket(StickCommand):
