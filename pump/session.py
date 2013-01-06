@@ -104,7 +104,7 @@ if __name__ == '__main__':
   from pprint import pformat
   logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
   log.info("howdy! I'm going to take a look at your pump.")
-  stick = stick.Stick(link.Link(port, timeout=.100))
+  stick = stick.Stick(link.Link(port, timeout=.200))
   stick.open( )
   session = Pump(stick, '208850')
   log.info(pformat(stick.interface_stats( )))

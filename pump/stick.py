@@ -22,7 +22,7 @@ class StickCommand(object):
     code = ' '.join([ '%#04x' % op for op in self.code ])
     return '{0}:{1}'.format(self.__class__.__name__, code)
   def __repr__(self):
-    return '<{0:s}>'.format(self)
+    return '<{0:s}:size({1})>'.format(self, self.size)
   def format(self):
     return self.format_cl2(*self.code)
 
@@ -132,10 +132,11 @@ class LinkStatus(StickCommand):
   reason = ''
 
   def __str__(self):
+    extra = ''
     if getattr(self, 'error', False):
-      return '{0}:error:{1}:reason:{2}'.format(self.__class__.__name__, self.error, self.reason)
-    
-    return super(type(self), self).__str__( )
+      extra = '{0}:error:{1}:reason:{2}'.format(self.__class__.__name__, self.error, self.reason)
+    base = super(type(self), self).__str__( )
+    return '{0}:error:{1}'.format(base, extra)
       
   def record_error(self, result):
     self.error  = True
@@ -368,8 +369,8 @@ class Stick(object):
     """
     raw = self.send_force_read( )
     if len(raw) == 0:
-      log.info('zero length READ, try once more sleep .100')
-      time.sleep(.100)
+      log.info('process zero length READ, try once more sleep .010')
+      time.sleep(.010)
       raw = bytearray(self.link.read(self.command.size))
 
     ack, response = self.command.respond(raw)
@@ -434,7 +435,8 @@ class Stick(object):
     raw = bytearray( )
     for attempt in xrange(retries):
       log.info(' '.join([
-        'XXX: attempt {0}'.format(attempt), 'to send a command, and force a',
+        'send_force_read: attempt {0}/{1}'.format(attempt, retries),
+        'send command,',
         'read until we get something within some timeout']))
       log.info('link %s sending %s)' % ( self, reader ))
       self.link.write(reader.format( ))
