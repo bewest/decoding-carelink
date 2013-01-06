@@ -442,13 +442,14 @@ class Stick(object):
       time.sleep(reader.delay)
       raw = bytearray(self.link.read(size))
       if len(raw) == 0:
-        log.info('zero length READ, try once more sleep .500')
+        log.info('zero length READ, try once more sleep .250')
         time.sleep(.250)
         raw = bytearray(self.link.read(self.command.size))
 
       if len(raw) != 0:
         log.info(' '.join(['quit send_force_read, found',
-                           'response:\n', lib.hexdump(raw)]))
+                           'len:', str(len(raw)), 'after',
+                           str(attempt), 'attempts']))
         return raw
     log.critical("FAILED TO DOWNLOAD ANYTHING, after %s" % size)
     assert not raw
@@ -524,8 +525,8 @@ class Stick(object):
     while not eod:
       size = self.poll_size( )
       if size == 0:
-        log.info('download found empty poll size, sleep .250 and try again')
-        time.sleep(.250)
+        log.info('download found empty poll size, sleep 3 and try again')
+        time.sleep(3)
         size = self.poll_size( )
         if size == 0:
           break
