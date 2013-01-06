@@ -423,7 +423,7 @@ class Stick(object):
     packet = self.process( )
     return packet
 
-  def send_force_read(self, retries=4, timeout=1):
+  def send_force_read(self, retries=5, timeout=1):
     # 
     # so the behavior of a read_radio should probably be similar to
     # poll_size??
@@ -443,7 +443,7 @@ class Stick(object):
       raw = bytearray(self.link.read(size))
       if len(raw) == 0:
         log.info('zero length READ, try once more sleep .500')
-        time.sleep(.500)
+        time.sleep(.250)
         raw = bytearray(self.link.read(self.command.size))
 
       if len(raw) != 0:
@@ -524,7 +524,11 @@ class Stick(object):
     while not eod:
       size = self.poll_size( )
       if size == 0:
-        break
+        log.info('download found empty poll size, sleep .250 and try again')
+        time.sleep(.250)
+        size = self.poll_size( )
+        if size == 0:
+          break
 
       #assert size > 64, ("size(%s) < 64 will break the stick" % size)
 
