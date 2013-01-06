@@ -432,7 +432,7 @@ class Stick(object):
     raw = bytearray( )
     for attempt in xrange(retries):
       log.info(' '.join([
-        'attempting {0}'.format(attempt), 'to send a command, and force a',
+        'XXX: attempt {0}'.format(attempt), 'to send a command, and force a',
         'read until we get something within some timeout']))
       log.info('link %s sending %s)' % ( self, self.command ))
       self.link.write(reader.format( ))

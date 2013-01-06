@@ -70,7 +70,13 @@ class Pump(Session):
     log.info('setting up to talk with %s' % serial)
 
   def power_control(self):
-    return self.query(commands.PowerControl)
+    log.info('BEGIN POWER CONTROL')
+    response = self.query(commands.PowerControl)
+    power = self.command
+    log.info('manually download PowerControl')
+    data = self.stick.download( )
+    log.info("ENDING manual download:\n%s" % lib.hexdump(data))
+    return data
     self.should_download = True
     try:
       self.download( )
