@@ -421,14 +421,48 @@ class Stick(object):
     packet = self.process( )
     return packet
 
+  def send_force_read(self, retries=3, timeout=1):
+    # 
+    # so the behavior of a read_radio should probably be similar to
+    # poll_size??
+    reader = self.command
+    read_size = 64
+    size = reader.size
+    start = time.time( )
+    raw = bytearray( )
+    for attempt in xrange(retries):
+      log.info(' '.join([
+        'attempting {0}'.format(attempt), 'to send a command, and force a',
+        'read until we get something within some timeout']))
+      log.info('link %s sending %s)' % ( self, self.command ))
+      self.link.write(reader.format( ))
+      log.debug('sleeping %s' % reader.delay)
+      time.sleep(reader.delay)
+      raw = bytearray(self.link.read(size))
+      if len(raw) == 0:
+        log.info('zero length READ, try once more sleep .500')
+        time.sleep(.500)
+        raw = bytearray(self.link.read(self.command.size))
+
+      if len(raw) != 0:
+        log.info(' '.join(['quit send_force_read, found',
+                           'response:\n', lib.hexdump(raw)]))
+        return raw
+    log.critical("FAILED TO DOWNLOAD ANYTHING, after %s" % size)
+    assert not raw
+    
   def download_packet(self, size):
     log.info("download_packet:%s" % (size))
+    # XXX: this is the tricky bit
     original_size = size
     self.command = reader = ReadRadio(size)
-
+    raw = self.send_force_read( )
+    # return
     # packet = self.process( )
     # return packet
 
+    # copy pasted from process
+    """
     log.info('link %s processing %s)' % ( self, self.command ))
     # self.link.process(command)
     self.link.write(self.command.format( ))
@@ -436,8 +470,10 @@ class Stick(object):
     time.sleep(self.command.delay)
     size = max(64, self.command.size)
     raw = bytearray(self.link.read(size))
+    """
 
-    if len(raw) == 0:
+    # if len(raw) == 0:
+    if not raw:
       log.info('zero length READ, try once more sleep .500')
       time.sleep(.500)
       raw = bytearray(self.link.read(self.command.size))
@@ -547,7 +583,7 @@ if __name__ == '__main__':
   size = stick.poll_size( )
   log.info("can we poll the size? %s" % (size))
   if size > 14:
-    log.info("can we download ? %s" % (lib.hexdump(stick.download( ))))
+    log.info('\n'.join(["can we download ?", lib.hexdump(stick.download( ))]))
 
 #####
 # EOF

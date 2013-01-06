@@ -1,4 +1,31 @@
-# if `power_control` has been issued recently, this is reproducible
+# what to do when stick.ReadRadio fails to respond
+
+During the initialization phase for setting up sessions to interrogate
+a pump, the first command to be sent is special:  The
+`commands.PowerControl` tells a pump to charge its radio capacitor for
+a session of about 10 minutes.  If the pump's radio was off, this will
+turn it on.
+
+This creates a warm session that will allow us to
+exchange messages for the pump fairly reliably over the next ten
+minutes.  The original analysis reveals that the carelink applet
+sleeps about 17 seconds for this effect to kick in.  However when I
+try executing this meta command, the response behavior breaks my
+expectation of the rest of the protocol.
+
+Once a radio session has been created, you can reset the stick and
+communicate all kinds of messages, including obtaining complete memory
+dumps of the pump logs.  However, I'd like to make this more robust.
+
+
+
+## if `power_control` has been issued recently, this is reproducible
+
+In a previously created session, you can run like this.  This one is a
+very simple "hello world" style run that asks for the pump's model
+number and exits.  With the warm session active, things work great.
+
+We can issue many commands and watch the counters for sanity.
 
 ```diff
 diff --git a/status-quo.log b/status-quo.log
@@ -441,4 +468,705 @@ index b125074..d6f5169 100644
 +real	0m0.679s
 +user	0m0.112s
 +sys	0m0.008s
+```
+
+## with power control again after some successful runs...
+
+Let's experiment with what happens if use a behavior more similar to POLL?
+Prior, we observe that often the ReadRadio reply comes in a response to a
+subsequent LinkStatus when no replies are initially found.
+
+However breaks the counters (since fixed) and indicates sequence errors.
+Careful, I don't see the expected logging output...
+
+```diff
+diff --git a/pump/session.py b/pump/session.py
+index 03faa9d..e5eaa29 100644
+--- a/pump/session.py
++++ b/pump/session.py
+@@ -127,9 +127,9 @@ if __name__ == '__main__':
+   stick.open( )
+   session = Pump(stick, '208850')
+   log.info(pformat(stick.interface_stats( )))
+-  #log.info("POWER CONTROL ON")
+-  #session.power_control( )
+-  #log.info(pformat(stick.interface_stats( )))
++  log.info("POWER CONTROL ON")
++  session.power_control( )
++  log.info(pformat(stick.interface_stats( )))
+   log.info('PUMP MODEL: %s' % session.read_model( ))
+   log.info(pformat(stick.interface_stats( )))
+   # stick.open( )
+diff --git a/pump/stick.py b/pump/stick.py
+index 607296c..9add62c 100644
+--- a/pump/stick.py
++++ b/pump/stick.py
+@@ -421,14 +421,48 @@ class Stick(object):
+     packet = self.process( )
+     return packet
+ 
++  def send_force_read(self, retries=3, timeout=1):
++    # 
++    # so the behavior of a read_radio should probably be similar to
++    # poll_size??
++    reader = self.command
++    read_size = 64
++    size = reader.size
++    start = time.time( )
++    raw = bytearray( )
++    for attempt in xrange(retries):
++      log.info(' '.join([
++        'attempting {0}'.format(attempt), 'to send a command, and force a',
++        'read until we get something within some timeout']))
++      log.info('link %s sending %s)' % ( self, self.command ))
++      self.link.write(reader.format( ))
++      log.debug('sleeping %s' % reader.delay)
++      time.sleep(reader.delay)
++      raw = bytearray(self.link.read(size))
++      if len(raw) == 0:
++        log.info('zero length READ, try once more sleep .500')
++        time.sleep(.500)
++        raw = bytearray(self.link.read(self.command.size))
++
++      if len(raw) != 0:
++        log.info(' '.join(['quit send_force_read, found',
++                           'response:\n', lib.hexdump(raw)]))
++        return raw
++    log.critical("FAILED TO DOWNLOAD ANYTHING, after %s" % size)
++    assert not raw
++    
+   def download_packet(self, size):
+     log.info("download_packet:%s" % (size))
++    # XXX: this is the tricky bit
+     original_size = size
+     self.command = reader = ReadRadio(size)
+-
++    raw = self.send_force_read( )
++    # return
+     # packet = self.process( )
+     # return packet
+ 
++    # copy pasted from process
++    """
+     log.info('link %s processing %s)' % ( self, self.command ))
+     # self.link.process(command)
+     self.link.write(self.command.format( ))
+@@ -436,8 +470,10 @@ class Stick(object):
+     time.sleep(self.command.delay)
+     size = max(64, self.command.size)
+     raw = bytearray(self.link.read(size))
++    """
+ 
+-    if len(raw) == 0:
++    # if len(raw) == 0:
++    if not raw:
+       log.info('zero length READ, try once more sleep .500')
+       time.sleep(.500)
+       raw = bytearray(self.link.read(self.command.size))
+@@ -547,7 +583,7 @@ if __name__ == '__main__':
+   size = stick.poll_size( )
+   log.info("can we poll the size? %s" % (size))
+   if size > 14:
+-    log.info("can we download ? %s" % (lib.hexdump(stick.download( ))))
++    log.info('\n'.join(["can we download ?", lib.hexdump(stick.download( ))]))
+ 
+ #####
+ # EOF
+diff --git a/status-quo.log b/status-quo.log
+index 5fe9dca..4acd00e 100644
+--- a/status-quo.log
++++ b/status-quo.log
+@@ -9,9 +9,9 @@
+ 
+ #####
+ # EOF
+-Sat Jan  5 22:43:06 PST 2013
++Sun Jan  6 01:04:44 PST 2013
+ INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
+-INFO:link:Link opened serial port: Serial<id=0x2b44f90, open=True>(port='/dev/ttyUSB0', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.5, xonxoff=False, rtscts=False, dsrdtr=False)
++INFO:link:Link opened serial port: Serial<id=0x1ec5190, open=True>(port='/dev/ttyUSB0', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.5, xonxoff=False, rtscts=False, dsrdtr=False)
+ INFO:__main__:link Stick:status:None:command:<ProductInfo:0x04> processing ProductInfo:0x04)
+ INFO:root:usb.write.len: 3
+ 0000   0x04 0x00 0x00                             ...
+@@ -35,7 +35,7 @@ INFO:root:usb.write.len: 3
+ DEBUG:__main__:sleeping 0.001
+ INFO:root:usb.read.len: 64
+ INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0xc0 0x2c 0x00 0x00 0x00    .U..,...
++0000   0x01 0x55 0x00 0xc1 0x2c 0x00 0x00 0x00    .U..,...
+ 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
+ 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
+ 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
+@@ -43,9 +43,9 @@ INFO:root:usb.read.raw:
+ 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:__main__:<SignalStrength:0x06 0x00>:readSignalStrength:192
+-INFO:__main__:finished processing SignalStrength:0x06 0x00, 192
+-INFO:__main__:we seem to have found a nice signal strength of: 192
++INFO:__main__:<SignalStrength:0x06 0x00>:readSignalStrength:193
++INFO:__main__:finished processing SignalStrength:0x06 0x00, 193
++INFO:__main__:we seem to have found a nice signal strength of: 193
+ INFO:__main__:link Stick:status:None:command:<ProductInfo:0x04> processing ProductInfo:0x04)
+ INFO:root:usb.write.len: 3
+ 0000   0x04 0x00 0x00                             ...
+@@ -69,7 +69,7 @@ INFO:root:usb.write.len: 3
+ DEBUG:__main__:sleeping 0.001
+ INFO:root:usb.read.len: 64
+ INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0xc4 0x2c 0x00 0x00 0x00    .U..,...
++0000   0x01 0x55 0x00 0xbf 0x2c 0x00 0x00 0x00    .U..,...
+ 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
+ 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
+ 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
+@@ -77,9 +77,9 @@ INFO:root:usb.read.raw:
+ 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:__main__:<SignalStrength:0x06 0x00>:readSignalStrength:196
+-INFO:__main__:finished processing SignalStrength:0x06 0x00, 196
+-INFO:__main__:we seem to have found a nice signal strength of: 196
++INFO:__main__:<SignalStrength:0x06 0x00>:readSignalStrength:191
++INFO:__main__:finished processing SignalStrength:0x06 0x00, 191
++INFO:__main__:we seem to have found a nice signal strength of: 191
+ INFO:__main__:link Stick:status:None:command:<ProductInfo:0x04> processing ProductInfo:0x04)
+ INFO:root:usb.write.len: 3
+ 0000   0x04 0x00 0x00                             ...
+@@ -103,7 +103,7 @@ INFO:root:usb.write.len: 3
+ DEBUG:__main__:sleeping 0.001
+ INFO:root:usb.read.len: 64
+ INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0xc2 0x2c 0x00 0x00 0x00    .U..,...
++0000   0x01 0x55 0x00 0xc8 0x2c 0x00 0x00 0x00    .U..,...
+ 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
+ 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
+ 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
+@@ -111,9 +111,9 @@ INFO:root:usb.read.raw:
+ 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:__main__:<SignalStrength:0x06 0x00>:readSignalStrength:194
+-INFO:__main__:finished processing SignalStrength:0x06 0x00, 194
+-INFO:__main__:we seem to have found a nice signal strength of: 194
++INFO:__main__:<SignalStrength:0x06 0x00>:readSignalStrength:200
++INFO:__main__:finished processing SignalStrength:0x06 0x00, 200
++INFO:__main__:we seem to have found a nice signal strength of: 200
+ INFO:__main__:test fetching product info Stick:status:None:command:<SignalStrength:0x06 0x00>
+ INFO:__main__:link Stick:status:None:command:<ProductInfo:0x04> processing ProductInfo:0x04)
+ INFO:root:usb.write.len: 3
+@@ -143,7 +143,7 @@ INFO:root:usb.write.len: 3
+ DEBUG:__main__:sleeping 0.001
+ INFO:root:usb.read.len: 64
+ INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0xc0 0x2c 0x00 0x00 0x00    .U..,...
++0000   0x01 0x55 0x00 0xbd 0x2c 0x00 0x00 0x00    .U..,...
+ 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
+ 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
+ 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
+@@ -151,9 +151,9 @@ INFO:root:usb.read.raw:
+ 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:__main__:<SignalStrength:0x06 0x00>:readSignalStrength:192
+-INFO:__main__:finished processing SignalStrength:0x06 0x00, 192
+-INFO:__main__:we seem to have found a nice signal strength of: 192
++INFO:__main__:<SignalStrength:0x06 0x00>:readSignalStrength:189
++INFO:__main__:finished processing SignalStrength:0x06 0x00, 189
++INFO:__main__:we seem to have found a nice signal strength of: 189
+ INFO:__main__:at this point, we could issue remote commands to a medical
+     device, let's inspect the interfaces
+ INFO:__main__:link Stick:status:None:command:<UsbStats:0x05 0x01> processing UsbStats:0x05 0x01)
+@@ -163,20 +163,20 @@ DEBUG:__main__:sleeping 0.001
+ INFO:root:usb.read.len: 64
+ INFO:root:usb.read.raw:
+ 0000   0x01 0x55 0x00 0x00 0x00 0x00 0x00 0x00    .U......
+-0008   0x00 0x03 0x83 0x00 0x00 0x03 0x83 0x03    ........
+-0010   0x84 0x03 0xb2 0x03 0x83 0x04 0x00 0x00    ........
++0008   0x00 0x00 0x7c 0x00 0x00 0x00 0x7c 0x00    ..|...|.
++0010   0x7d 0x00 0x7c 0x00 0x7c 0x04 0x00 0x00    }.|.|...
+ 0018   0x05 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 899L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 899L, 'errors.crc': 0}
++INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 124L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 124L, 'errors.crc': 0}
+ INFO:__main__:{'errors.crc': 0,
+  'errors.naks': 0,
+  'errors.sequence': 0,
+  'errors.timeouts': 0,
+- 'packets.received': 899L,
+- 'packets.transmit': 899L}
++ 'packets.received': 124L,
++ 'packets.transmit': 124L}
+ INFO:__main__:link Stick:status:None:command:<RadioStats:0x05 0x00> processing RadioStats:0x05 0x00)
+ INFO:root:usb.write.len: 3
+ 0000   0x05 0x00 0x00                             ...
+@@ -184,20 +184,20 @@ DEBUG:__main__:sleeping 0.001
+ INFO:root:usb.read.len: 64
+ INFO:root:usb.read.raw:
+ 0000   0x01 0x55 0x00 0x00 0x00 0x00 0x00 0x00    .U......
+-0008   0x00 0x00 0x21 0x00 0x00 0x00 0x21 0x00    ..!...!.
+-0010   0x00 0x00 0x20 0x00 0x02 0x00 0x00 0x00    .. .....
+-0018   0x1f 0x00 0x01 0x00 0x00 0x00 0x00 0x00    ........
+-0020   0x00 0x01 0x00 0x19 0x00 0x00 0x00 0x00    ........
++0008   0x00 0x00 0x0a 0x00 0x00 0x00 0x0a 0x00    ........
++0010   0x00 0x00 0x05 0x00 0x0a 0x00 0x00 0x00    ........
++0018   0x00 0x00 0x05 0x00 0x00 0x00 0x00 0x00    ........
++0020   0x00 0x01 0x00 0x0a 0x00 0x00 0x00 0x00    ........
+ 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 33L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 33L, 'errors.crc': 0}
++INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 10L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 10L, 'errors.crc': 0}
+ INFO:__main__:{'errors.crc': 0,
+  'errors.naks': 0,
+  'errors.sequence': 0,
+  'errors.timeouts': 0,
+- 'packets.received': 33L,
+- 'packets.transmit': 33L}
++ 'packets.received': 10L,
++ 'packets.transmit': 10L}
+ DEBUG:__main__:<Stick:status:None:command:<RadioStats:0x05 0x00>>:STARTING POLL PHASE:attempt:0
+ DEBUG:__main__:<Stick:status:None:command:<RadioStats:0x05 0x00>>:poll:attempt:0
+ DEBUG:__main__:read_status
+@@ -207,86 +207,71 @@ INFO:root:usb.write.len: 3
+ DEBUG:__main__:sleeping 0.001
+ INFO:root:usb.read.len: 64
+ INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0x00 0x02 0x00 0x00 0x00    .U......
+-0008   0x05 0x04 0x00 0x00 0x00 0x00 0x21 0x00    ......!.
+-0010   0x00 0x00 0x20 0x00 0x02 0x00 0x00 0x00    .. .....
+-0018   0x1f 0x00 0x01 0x00 0x00 0x00 0x00 0x00    ........
+-0020   0x00 0x01 0x00 0x19 0x00 0x00 0x00 0x00    ........
++0000   0x01 0x55 0x00 0x00 0x02 0x01 0x00 0x0f    .U......
++0008   0x05 0x04 0x00 0x00 0x00 0x00 0x0a 0x00    ........
++0010   0x00 0x00 0x05 0x00 0x0a 0x00 0x00 0x00    ........
++0018   0x00 0x00 0x05 0x00 0x00 0x00 0x00 0x00    ........
++0020   0x00 0x01 0x00 0x0a 0x00 0x00 0x00 0x00    ........
+ 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:__main__:LinkStatus:error:True:reason:
+-
+-INFO:__main__:finished processing LinkStatus:error:True:reason:, 0
++INFO:__main__:LinkStatus:0x03
++STATUS: OK
++INFO:__main__:finished processing LinkStatus:0x03, 15
+ DEBUG:__main__:sleeping in POLL, .100
+-DEBUG:__main__:<Stick:status:<LinkStatus:error:True:reason:>:command:<LinkStatus:error:True:reason:>>:poll:attempt:1
++INFO:__main__:STOP POLL after 1 attempts:size:15
++INFO:__main__:can we poll the size? 15
++DEBUG:__main__:<Stick:status:<LinkStatus:0x03>:command:<LinkStatus:0x03>>:STARTING POLL PHASE:attempt:0
++DEBUG:__main__:<Stick:status:<LinkStatus:0x03>:command:<LinkStatus:0x03>>:poll:attempt:0
+ DEBUG:__main__:read_status
+-INFO:__main__:link Stick:status:<LinkStatus:error:True:reason:>:command:<LinkStatus:0x03> processing LinkStatus:0x03)
++INFO:__main__:link Stick:status:<LinkStatus:0x03>:command:<LinkStatus:0x03> processing LinkStatus:0x03)
+ INFO:root:usb.write.len: 3
+ 0000   0x03 0x00 0x00                             ...
+ DEBUG:__main__:sleeping 0.001
+ INFO:root:usb.read.len: 64
+ INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0x00 0x02 0x00 0x00 0x00    .U......
+-0008   0x05 0x04 0x00 0x00 0x00 0x00 0x21 0x00    ......!.
+-0010   0x00 0x00 0x20 0x00 0x02 0x00 0x00 0x00    .. .....
+-0018   0x1f 0x00 0x01 0x00 0x00 0x00 0x00 0x00    ........
+-0020   0x00 0x01 0x00 0x19 0x00 0x00 0x00 0x00    ........
++0000   0x01 0x55 0x00 0x00 0x02 0x01 0x00 0x0f    .U......
++0008   0x05 0x04 0x00 0x00 0x00 0x00 0x0a 0x00    ........
++0010   0x00 0x00 0x05 0x00 0x0a 0x00 0x00 0x00    ........
++0018   0x00 0x00 0x05 0x00 0x00 0x00 0x00 0x00    ........
++0020   0x00 0x01 0x00 0x0a 0x00 0x00 0x00 0x00    ........
+ 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:__main__:LinkStatus:error:True:reason:
+-
+-INFO:__main__:finished processing LinkStatus:error:True:reason:, 0
++INFO:__main__:LinkStatus:0x03
++STATUS: OK
++INFO:__main__:finished processing LinkStatus:0x03, 15
+ DEBUG:__main__:sleeping in POLL, .100
+-DEBUG:__main__:<Stick:status:<LinkStatus:error:True:reason:>:command:<LinkStatus:error:True:reason:>>:poll:attempt:2
+-DEBUG:__main__:read_status
+-INFO:__main__:link Stick:status:<LinkStatus:error:True:reason:>:command:<LinkStatus:0x03> processing LinkStatus:0x03)
+-INFO:root:usb.write.len: 3
+-0000   0x03 0x00 0x00                             ...
++INFO:__main__:STOP POLL after 1 attempts:size:15
++INFO:__main__:download_packet:15
++ERROR:__main__:size is less than 64, which will cause an error. trying 64 instead
++INFO:__main__:attempting 0 to send a command, and force a read until we get something within some timeout
++INFO:__main__:link Stick:status:<LinkStatus:0x03>:command:<ReadRadio:size:15> sending ReadRadio:size:15)
++INFO:root:usb.write.len: 5
++0000   0x0c 0x00 0x00 0x0f 0xc6                   .....
+ DEBUG:__main__:sleeping 0.001
+-INFO:root:usb.read.len: 64
++INFO:root:usb.read.len: 15
+ INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0x00 0x02 0x00 0x00 0x00    .U......
+-0008   0x05 0x04 0x00 0x00 0x00 0x00 0x21 0x00    ......!.
+-0010   0x00 0x00 0x20 0x00 0x02 0x00 0x00 0x00    .. .....
+-0018   0x1f 0x00 0x01 0x00 0x00 0x00 0x00 0x00    ........
+-0020   0x00 0x01 0x00 0x19 0x00 0x00 0x00 0x00    ........
+-0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:__main__:LinkStatus:error:True:reason:
+-
+-INFO:__main__:finished processing LinkStatus:error:True:reason:, 0
+-DEBUG:__main__:sleeping in POLL, .100
+-DEBUG:__main__:<Stick:status:<LinkStatus:error:True:reason:>:command:<LinkStatus:error:True:reason:>>:poll:attempt:3
+-DEBUG:__main__:read_status
+-INFO:__main__:link Stick:status:<LinkStatus:error:True:reason:>:command:<LinkStatus:0x03> processing LinkStatus:0x03)
+-INFO:root:usb.write.len: 3
+-0000   0x03 0x00 0x00                             ...
+-DEBUG:__main__:sleeping 0.001
+-INFO:root:usb.read.len: 64
+-INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0x00 0x02 0x00 0x00 0x00    .U......
+-0008   0x05 0x04 0x00 0x00 0x00 0x00 0x21 0x00    ......!.
+-0010   0x00 0x00 0x20 0x00 0x02 0x00 0x00 0x00    .. .....
+-0018   0x1f 0x00 0x01 0x00 0x00 0x00 0x00 0x00    ........
+-0020   0x00 0x01 0x00 0x19 0x00 0x00 0x00 0x00    ........
+-0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:__main__:LinkStatus:error:True:reason:
++0000   0x02 0x00 0x01 0x00 0xde 0x80 0x01 0xa7    ........
++0008   0x01 0x20 0x88 0x50 0x2a 0x00 0x00         . .P*..
++INFO:__main__:quit send_force_read, found response:
++ 0000   0x02 0x00 0x01 0x00 0xde 0x80 0x01 0xa7    ........
++0008   0x01 0x20 0x88 0x50 0x2a 0x00 0x00         . .P*..
++INFO:__main__:readData validating remote raw[ack]: 02
++INFO:__main__:readData; foreign raw should be at least 14 bytes? 15 True
++INFO:__main__:readData; raw[retries] 0
++INFO:__main__:XXX resLength: 1
++INFO:__main__:found packet len(1)
++0000   0x00                                       .
++INFO:__main__:readDeviceDataIO:msgCRC:0:expectedCRC:0:data:0000   0x00                                       .
++INFO:__main__:can we download ?
++0000   0x00                                       .
+ 
+-INFO:__main__:finished processing LinkStatus:error:True:reason:, 0
+-DEBUG:__main__:sleeping in POLL, .100
+-INFO:__main__:STOP POLL after 4 attempts:size:0
+-INFO:__main__:can we poll the size? 0
+-
+-real	0m1.210s
+-user	0m0.068s
+-sys	0m0.032s
++real	0m1.417s
++user	0m0.092s
++sys	0m0.068s
+ INFO:__main__:howdy! I'm going to take a look at your pump.
+-INFO:link:Link opened serial port: Serial<id=0x19315d0, open=True>(port='/dev/ttyUSB0', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.1, xonxoff=False, rtscts=False, dsrdtr=False)
++INFO:link:Link opened serial port: Serial<id=0x281c4d0, open=True>(port='/dev/ttyUSB0', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.1, xonxoff=False, rtscts=False, dsrdtr=False)
+ INFO:stick:link Stick:status:None:command:<ProductInfo:0x04> processing ProductInfo:0x04)
+ INFO:root:usb.write.len: 3
+ 0000   0x04 0x00 0x00                             ...
+@@ -310,7 +295,7 @@ INFO:root:usb.write.len: 3
+ DEBUG:stick:sleeping 0.001
+ INFO:root:usb.read.len: 64
+ INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0xc0 0x2c 0x00 0x00 0x00    .U..,...
++0000   0x01 0x55 0x00 0xbd 0x2c 0x00 0x00 0x00    .U..,...
+ 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
+ 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
+ 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
+@@ -318,9 +303,9 @@ INFO:root:usb.read.raw:
+ 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:stick:<SignalStrength:0x06 0x00>:readSignalStrength:192
+-INFO:stick:finished processing SignalStrength:0x06 0x00, 192
+-INFO:stick:we seem to have found a nice signal strength of: 192
++INFO:stick:<SignalStrength:0x06 0x00>:readSignalStrength:189
++INFO:stick:finished processing SignalStrength:0x06 0x00, 189
++INFO:stick:we seem to have found a nice signal strength of: 189
+ INFO:stick:link Stick:status:None:command:<ProductInfo:0x04> processing ProductInfo:0x04)
+ INFO:root:usb.write.len: 3
+ 0000   0x04 0x00 0x00                             ...
+@@ -344,7 +329,7 @@ INFO:root:usb.write.len: 3
+ DEBUG:stick:sleeping 0.001
+ INFO:root:usb.read.len: 64
+ INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0xc5 0x2c 0x00 0x00 0x00    .U..,...
++0000   0x01 0x55 0x00 0xc3 0x2c 0x00 0x00 0x00    .U..,...
+ 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
+ 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
+ 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
+@@ -352,9 +337,9 @@ INFO:root:usb.read.raw:
+ 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:stick:<SignalStrength:0x06 0x00>:readSignalStrength:197
+-INFO:stick:finished processing SignalStrength:0x06 0x00, 197
+-INFO:stick:we seem to have found a nice signal strength of: 197
++INFO:stick:<SignalStrength:0x06 0x00>:readSignalStrength:195
++INFO:stick:finished processing SignalStrength:0x06 0x00, 195
++INFO:stick:we seem to have found a nice signal strength of: 195
+ INFO:stick:link Stick:status:None:command:<ProductInfo:0x04> processing ProductInfo:0x04)
+ INFO:root:usb.write.len: 3
+ 0000   0x04 0x00 0x00                             ...
+@@ -378,7 +363,7 @@ INFO:root:usb.write.len: 3
+ DEBUG:stick:sleeping 0.001
+ INFO:root:usb.read.len: 64
+ INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0xc1 0x2c 0x00 0x00 0x00    .U..,...
++0000   0x01 0x55 0x00 0xc0 0x2c 0x00 0x00 0x00    .U..,...
+ 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
+ 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
+ 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
+@@ -386,9 +371,9 @@ INFO:root:usb.read.raw:
+ 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:stick:<SignalStrength:0x06 0x00>:readSignalStrength:193
+-INFO:stick:finished processing SignalStrength:0x06 0x00, 193
+-INFO:stick:we seem to have found a nice signal strength of: 193
++INFO:stick:<SignalStrength:0x06 0x00>:readSignalStrength:192
++INFO:stick:finished processing SignalStrength:0x06 0x00, 192
++INFO:stick:we seem to have found a nice signal strength of: 192
+ INFO:__main__:setting up to talk with 208850
+ INFO:stick:link Stick:status:None:command:<UsbStats:0x05 0x01> processing UsbStats:0x05 0x01)
+ INFO:root:usb.write.len: 3
+@@ -397,14 +382,14 @@ DEBUG:stick:sleeping 0.001
+ INFO:root:usb.read.len: 64
+ INFO:root:usb.read.raw:
+ 0000   0x01 0x55 0x00 0x00 0x00 0x00 0x00 0x00    .U......
+-0008   0x00 0x03 0x8f 0x00 0x00 0x03 0x8f 0x03    ........
+-0010   0x90 0x03 0xbe 0x03 0x8f 0x04 0x00 0x00    ........
++0008   0x00 0x00 0x87 0x00 0x00 0x00 0x87 0x00    ........
++0010   0x88 0x00 0x87 0x00 0x87 0x04 0x00 0x00    ........
+ 0018   0x05 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 911L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 911L, 'errors.crc': 0}
++INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 135L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 135L, 'errors.crc': 0}
+ INFO:stick:link Stick:status:None:command:<RadioStats:0x05 0x00> processing RadioStats:0x05 0x00)
+ INFO:root:usb.write.len: 3
+ 0000   0x05 0x00 0x00                             ...
+@@ -412,174 +397,78 @@ DEBUG:stick:sleeping 0.001
+ INFO:root:usb.read.len: 64
+ INFO:root:usb.read.raw:
+ 0000   0x01 0x55 0x00 0x00 0x00 0x00 0x00 0x00    .U......
+-0008   0x00 0x00 0x21 0x00 0x00 0x00 0x21 0x00    ..!...!.
+-0010   0x00 0x00 0x20 0x00 0x02 0x00 0x00 0x00    .. .....
+-0018   0x1f 0x00 0x01 0x00 0x00 0x00 0x00 0x00    ........
+-0020   0x00 0x01 0x00 0x19 0x00 0x00 0x00 0x00    ........
++0008   0x00 0x00 0x0a 0x00 0x00 0x00 0x0a 0x00    ........
++0010   0x00 0x00 0x05 0x00 0x0a 0x00 0x00 0x00    ........
++0018   0x00 0x00 0x05 0x00 0x00 0x00 0x00 0x00    ........
++0020   0x00 0x01 0x00 0x0a 0x00 0x00 0x00 0x00    ........
+ 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 33L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 33L, 'errors.crc': 0}
++INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 10L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 10L, 'errors.crc': 0}
+ INFO:__main__:{'radio': {'errors.crc': 0,
+            'errors.naks': 0,
+            'errors.sequence': 0,
+            'errors.timeouts': 0,
+-           'packets.received': 33L,
+-           'packets.transmit': 33L},
++           'packets.received': 10L,
++           'packets.transmit': 10L},
+  'usb': {'errors.crc': 0,
+          'errors.naks': 0,
+          'errors.sequence': 0,
+          'errors.timeouts': 0,
+-         'packets.received': 911L,
+-         'packets.transmit': 911L}}
++         'packets.received': 135L,
++         'packets.transmit': 135L}}
++INFO:__main__:POWER CONTROL ON
+ INFO:__main__:execute attempt: 1
+ INFO:__main__:session transferring packet
+-INFO:stick:transmit_packet:write:<TransmitPacket:ReadPumpModel>
+-INFO:stick:link Stick:status:None:command:<TransmitPacket:ReadPumpModel> processing TransmitPacket:ReadPumpModel)
+-DEBUG:stick:[1, 0, 167, 1, 32, 136, 80, 128, 0, 0, 2, 1, 0, 141, 199, 0]
+-INFO:root:usb.write.len: 16
++INFO:stick:transmit_packet:write:<TransmitPacket:PowerControl>
++INFO:stick:link Stick:status:None:command:<TransmitPacket:PowerControl> processing TransmitPacket:PowerControl)
++DEBUG:stick:[1, 0, 167, 1, 32, 136, 80, 128, 2, 85, 0, 0, 0, 93, 122, 1, 10, 162]
++INFO:root:usb.write.len: 18
+ 0000   0x01 0x00 0xa7 0x01 0x20 0x88 0x50 0x80    .... .P.
+-0008   0x00 0x00 0x02 0x01 0x00 0x8d 0xc7 0x00    ........
++0008   0x02 0x55 0x00 0x00 0x00 0x5d 0x7a 0x01    .U...]z.
++0010   0x0a 0xa2                                  ..
+ DEBUG:stick:sleeping 0.001
+ INFO:root:usb.read.len: 64
+ INFO:root:usb.read.raw:
+ 0000   0x01 0x55 0x00 0x00 0x00 0x00 0x00 0x00    .U......
+-0008   0x00 0x00 0x21 0x00 0x00 0x00 0x21 0x00    ..!...!.
+-0010   0x00 0x00 0x20 0x00 0x02 0x00 0x00 0x00    .. .....
+-0018   0x1f 0x00 0x01 0x00 0x00 0x00 0x00 0x00    ........
+-0020   0x00 0x01 0x00 0x19 0x00 0x00 0x00 0x00    ........
++0008   0x00 0x00 0x0a 0x00 0x00 0x00 0x0a 0x00    ........
++0010   0x00 0x00 0x05 0x00 0x0a 0x00 0x00 0x00    ........
++0018   0x00 0x00 0x05 0x00 0x00 0x00 0x00 0x00    ........
++0020   0x00 0x01 0x00 0x0a 0x00 0x00 0x00 0x00    ........
+ 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+ 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:stick:finished processing TransmitPacket:ReadPumpModel, bytearray(b'\x00\x00\x00\x00\x00\x00\x00!\x00\x00\x00!\x00\x00\x00 \x00\x02\x00\x00\x00\x1f\x00\x01\x00\x00\x00\x00\x00\x00\x01\x00\x19\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+-INFO:__main__:sleeping 0 before download
+-INFO:__main__:proceeding with download
+-DEBUG:stick:<Stick:status:None:command:<TransmitPacket:ReadPumpModel>>:STARTING POLL PHASE:attempt:0
+-DEBUG:stick:<Stick:status:None:command:<TransmitPacket:ReadPumpModel>>:poll:attempt:0
+-DEBUG:stick:read_status
+-INFO:stick:link Stick:status:None:command:<LinkStatus:0x03> processing LinkStatus:0x03)
++INFO:stick:finished processing TransmitPacket:PowerControl, bytearray(b'\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x05\x00\n\x00\x00\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x01\x00\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
++INFO:__main__:sleeping 17 before download
++INFO:__main__:no download required
++INFO:stick:link Stick:status:None:command:<UsbStats:0x05 0x01> processing UsbStats:0x05 0x01)
+ INFO:root:usb.write.len: 3
+-0000   0x03 0x00 0x00                             ...
++0000   0x05 0x01 0x00                             ...
+ DEBUG:stick:sleeping 0.001
+-INFO:root:usb.read.len: 64
++INFO:root:usb.read.len: 0
+ INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0x00 0x02 0x00 0x00 0x00    .U......
+-0008   0x05 0x04 0x00 0x00 0x00 0x00 0x21 0x00    ......!.
+-0010   0x00 0x00 0x20 0x00 0x02 0x00 0x00 0x00    .. .....
+-0018   0x1f 0x00 0x01 0x00 0x00 0x00 0x00 0x00    ........
+-0020   0x00 0x01 0x00 0x19 0x00 0x00 0x00 0x00    ........
+-0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:stick:LinkStatus:error:True:reason:
+ 
+-INFO:stick:finished processing LinkStatus:error:True:reason:, 0
+-DEBUG:stick:sleeping in POLL, .100
+-DEBUG:stick:<Stick:status:<LinkStatus:error:True:reason:>:command:<LinkStatus:error:True:reason:>>:poll:attempt:1
+-DEBUG:stick:read_status
+-INFO:stick:link Stick:status:<LinkStatus:error:True:reason:>:command:<LinkStatus:0x03> processing LinkStatus:0x03)
+-INFO:root:usb.write.len: 3
+-0000   0x03 0x00 0x00                             ...
+-DEBUG:stick:sleeping 0.001
+-INFO:root:usb.read.len: 64
++INFO:stick:zero length READ, try once more sleep .100
++INFO:root:usb.read.len: 0
+ INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0x00 0x02 0x00 0x00 0x00    .U......
+-0008   0x05 0x04 0x00 0x00 0x00 0x00 0x21 0x00    ......!.
+-0010   0x00 0x00 0x20 0x00 0x02 0x00 0x00 0x00    .. .....
+-0018   0x1f 0x00 0x01 0x00 0x00 0x00 0x00 0x00    ........
+-0020   0x00 0x01 0x00 0x19 0x00 0x00 0x00 0x00    ........
+-0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:stick:LinkStatus:error:True:reason:
+ 
+-INFO:stick:finished processing LinkStatus:error:True:reason:, 0
+-DEBUG:stick:sleeping in POLL, .100
+-DEBUG:stick:<Stick:status:<LinkStatus:error:True:reason:>:command:<LinkStatus:error:True:reason:>>:poll:attempt:2
+-DEBUG:stick:read_status
+-INFO:stick:link Stick:status:<LinkStatus:error:True:reason:>:command:<LinkStatus:0x03> processing LinkStatus:0x03)
+-INFO:root:usb.write.len: 3
+-0000   0x03 0x00 0x00                             ...
+-DEBUG:stick:sleeping 0.001
+-INFO:root:usb.read.len: 64
+-INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0x00 0x02 0x00 0x00 0x00    .U......
+-0008   0x05 0x04 0x00 0x00 0x00 0x00 0x21 0x00    ......!.
+-0010   0x00 0x00 0x20 0x00 0x02 0x00 0x00 0x00    .. .....
+-0018   0x1f 0x00 0x01 0x00 0x00 0x00 0x00 0x00    ........
+-0020   0x00 0x01 0x00 0x19 0x00 0x00 0x00 0x00    ........
+-0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:stick:LinkStatus:error:True:reason:
++ERROR:stick:ACK is zero bytes!
++Traceback (most recent call last):
++  File "pump/session.py", line 132, in <module>
++    log.info(pformat(stick.interface_stats( )))
++  File "/home/bewest/src/decoding-carelink/pump/stick.py", line 386, in interface_stats
++    return {'usb': self.usb_stats( ), 'radio': self.radio_stats( ) }
++  File "/home/bewest/src/decoding-carelink/pump/stick.py", line 389, in usb_stats
++    return self.query(UsbStats)
++  File "/home/bewest/src/decoding-carelink/pump/stick.py", line 380, in query
++    return self.process( )
++  File "/home/bewest/src/decoding-carelink/pump/stick.py", line 373, in process
++    ack, response = self.command.respond(raw)
++  File "/home/bewest/src/decoding-carelink/pump/stick.py", line 41, in respond
++    raise AckError("ACK is 0 bytes:\n%s" % lib.hexdump(raw))
++errors.AckError: ACK is 0 bytes:
+ 
+-INFO:stick:finished processing LinkStatus:error:True:reason:, 0
+-DEBUG:stick:sleeping in POLL, .100
+-DEBUG:stick:<Stick:status:<LinkStatus:error:True:reason:>:command:<LinkStatus:error:True:reason:>>:poll:attempt:3
+-DEBUG:stick:read_status
+-INFO:stick:link Stick:status:<LinkStatus:error:True:reason:>:command:<LinkStatus:0x03> processing LinkStatus:0x03)
+-INFO:root:usb.write.len: 3
+-0000   0x03 0x00 0x00                             ...
+-DEBUG:stick:sleeping 0.001
+-INFO:root:usb.read.len: 64
+-INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0x00 0x02 0x00 0x00 0x00    .U......
+-0008   0x05 0x04 0x00 0x00 0x00 0x00 0x21 0x00    ......!.
+-0010   0x00 0x00 0x20 0x00 0x02 0x00 0x00 0x00    .. .....
+-0018   0x1f 0x00 0x01 0x00 0x00 0x00 0x00 0x00    ........
+-0020   0x00 0x01 0x00 0x19 0x00 0x00 0x00 0x00    ........
+-0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:stick:LinkStatus:error:True:reason:
+-
+-INFO:stick:finished processing LinkStatus:error:True:reason:, 0
+-DEBUG:stick:sleeping in POLL, .100
+-INFO:stick:STOP POLL after 4 attempts:size:0
+-INFO:__main__:PUMP MODEL: ReadPumpModel
+-INFO:stick:link Stick:status:<LinkStatus:error:True:reason:>:command:<UsbStats:0x05 0x01> processing UsbStats:0x05 0x01)
+-INFO:root:usb.write.len: 3
+-0000   0x05 0x01 0x00                             ...
+-DEBUG:stick:sleeping 0.001
+-INFO:root:usb.read.len: 64
+-INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0x00 0x00 0x00 0x00 0x00    .U......
+-0008   0x00 0x03 0x96 0x00 0x00 0x03 0x96 0x03    ........
+-0010   0x97 0x03 0xc5 0x03 0x96 0x04 0x00 0x00    ........
+-0018   0x05 0x00 0x01 0x00 0x00 0x00 0x00 0x00    ........
+-0020   0x00 0x01 0x00 0x19 0x00 0x00 0x00 0x00    ........
+-0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 918L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 918L, 'errors.crc': 0}
+-INFO:stick:link Stick:status:<LinkStatus:error:True:reason:>:command:<RadioStats:0x05 0x00> processing RadioStats:0x05 0x00)
+-INFO:root:usb.write.len: 3
+-0000   0x05 0x00 0x00                             ...
+-DEBUG:stick:sleeping 0.001
+-INFO:root:usb.read.len: 64
+-INFO:root:usb.read.raw:
+-0000   0x01 0x55 0x00 0x00 0x00 0x00 0x00 0x00    .U......
+-0008   0x00 0x00 0x21 0x00 0x00 0x00 0x22 0x00    ..!...".
+-0010   0x00 0x00 0x21 0x00 0x02 0x00 0x00 0x00    ..!.....
+-0018   0x1f 0x00 0x01 0x00 0x00 0x00 0x00 0x00    ........
+-0020   0x00 0x01 0x01 0x19 0x00 0x00 0x00 0x00    ........
+-0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+-INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 34L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 33L, 'errors.crc': 0}
+-INFO:__main__:{'radio': {'errors.crc': 0,
+-           'errors.naks': 0,
+-           'errors.sequence': 0,
+-           'errors.timeouts': 0,
+-           'packets.received': 33L,
+-           'packets.transmit': 34L},
+- 'usb': {'errors.crc': 0,
+-         'errors.naks': 0,
+-         'errors.sequence': 0,
+-         'errors.timeouts': 0,
+-         'packets.received': 918L,
+-         'packets.transmit': 918L}}
+ 
+-real	0m1.159s
+-user	0m0.064s
+-sys	0m0.032s
++real	0m17.556s
++user	0m0.112s
++sys	0m0.072s
 ```
