@@ -503,6 +503,20 @@ def do_commands(device):
   device.execute(comm)
   log.info('comm:READ history data page!!!:\n%s' % (lib.hexdump(comm.getData( ))))
 
+def get_pages(device):
+  log.info("read cur page number")
+  comm = ReadCurPageNumber( )
+  device.execute(comm)
+  pages = comm.getData( )
+  log.info('attempting to read %s pages of history' % pages)
+
+  for x in range(pages + 1):
+    log.info('comm:READ HISTORY DATA page number: %r' % (x))
+    comm = ReadHistoryData( params=[ x ] )
+    device.execute(comm)
+    page = comm.getData( )
+    log.info("XXX: READ HISTORY DATA!!:\n%s" % lib.hexdump(page))
+
 if __name__ == '__main__':
   import doctest
   doctest.testmod( )
@@ -526,6 +540,8 @@ if __name__ == '__main__':
   log.info(pformat(stick.interface_stats( )))
   log.info('PUMP MODEL: %s' % session.read_model( ))
   do_commands(session)
+  log.info(pformat(stick.interface_stats( )))
+  get_pages(session)
   log.info(pformat(stick.interface_stats( )))
   # stick.open( )
   
