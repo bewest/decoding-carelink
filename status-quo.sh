@@ -1,7 +1,7 @@
 #/bin/bash
 # make an example of an interesting log worth sharing
 
-TIME="%C\n\telapsed %E\n\tuser %U\n\tsystem %S\n\tCPU %P (%Xtext+%Ddata %Mmax)k"
+export TIME="%C\n\telapsed %E\n\tuser %U\n\tsystem %S\n\tCPU %P (%Xtext+%Ddata %Mmax)k"
 
 ( cat $0
   date
