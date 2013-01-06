@@ -34,6 +34,8 @@ class Session(object):
         self.expectedLength = self.command.bytesPerRecord * self.command.maxRecords
         self.transfer( )
         if self.should_download:
+          log.info('sleeping %s before download' % command.effectTime)
+          time.sleep(command.effectTime)
           self.download( )
         return
       except BadDeviceCommError, e:
@@ -68,8 +70,7 @@ class Pump(Session):
     log.info('setting up to talk with %s' % serial)
 
   def power_control(self):
-    self.should_download = False
-    self.query(commands.PowerControl)
+    return self.query(commands.PowerControl)
     self.should_download = True
     try:
       self.download( )

@@ -38,7 +38,7 @@ class StickCommand(object):
     if len(raw) == 0:
       log.error("ACK is zero bytes!")
       # return False
-      raise AckError("ACK is 0 bytes: %s" % lib.hexdump(raw))
+      raise AckError("ACK is 0 bytes:\n%s" % lib.hexdump(raw))
     commStatus = raw[0]
     # usable response
     assert commStatus == 1, ('commStatus: %02x expected 0x1' % commStatus)
@@ -261,7 +261,7 @@ class TransmitPacket(StickCommand):
     self.code    = command.code
     self.retries = command.retries
     self.serial  = command.serial
-    self.delay = command.effectTime
+    # self.delay = command.effectTime
 
   def __str__(self):
     if getattr(self, 'command', False):
@@ -415,11 +415,70 @@ class Stick(object):
     self.last_status = self.command
     return result
 
-  def download_packet(self, size):
+  def old_download_packet(self, size):
     log.info("download_packet:%s" % (size))
     self.command = ReadRadio(size)
     packet = self.process( )
     return packet
+
+  def download_packet(self, size):
+    log.info("download_packet:%s" % (size))
+    original_size = size
+    self.command = reader = ReadRadio(size)
+
+    # packet = self.process( )
+    # return packet
+
+    log.info('link %s processing %s)' % ( self, self.command ))
+    # self.link.process(command)
+    self.link.write(self.command.format( ))
+    log.debug('sleeping %s' % self.command.delay)
+    time.sleep(self.command.delay)
+    size = max(64, self.command.size)
+    raw = bytearray(self.link.read(size))
+
+    if len(raw) == 0:
+      log.info('zero length READ, try once more sleep .500')
+      time.sleep(.500)
+      raw = bytearray(self.link.read(self.command.size))
+
+    try:
+      ack, response = self.command.respond(raw)
+      info = self.command.parse(response)
+      return info
+    except BadDeviceCommError, e:
+      log.info("we failed to pass %s ACK!?" % (self.command))
+      log.info('expected size was: %s' % original_size)
+      status = LinkStatus( )
+      if original_size < 64:
+        #size = self.read_status( )
+        #size = self.poll_size( )
+        log.info('XXX:JUST a bit more READ new size: %s, sleep .100' % original_size)
+        self.link.write(status.format( ))
+        time.sleep(.100)
+        raw = bytearray(self.link.read(64))
+        ack, response = reader.respond(raw)
+        info = reader.parse(response)
+        return info
+
+      ack, body = status.respond(raw)
+      size = status.parse(body)
+      log.info('attempt another read')
+      info = None
+
+      raw = bytearray(self.link.read(size))
+      if len(raw) == 0:
+        log.info('NESTED zero length READ, try once more sleep .100')
+        time.sleep(.100)
+        raw = bytearray(self.link.read(self.command.size))
+        info = self.command.respond
+        ack, body = status.respond(raw)
+        info = self.command.parse(body)
+
+
+
+    log.info('finished processing {0}, {1}'.format(self.command, repr(info)))
+    return info
     
   def download(self):
     eod = False
