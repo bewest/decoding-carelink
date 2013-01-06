@@ -5,7 +5,7 @@
   date
   time python pump/stick.py /dev/ttyUSB0
   time python pump/session.py /dev/ttyUSB0 208850
-) | tee status-quo.log
+) 2>&1 | tee status-quo.log
 
 #####
 # EOF
