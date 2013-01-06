@@ -56,7 +56,7 @@ class Session(object):
           errors.append(e)
     else:
       log.info('no download required')
-    assert not errors, "\n".join( map(str, errors) )
+    assert not errors, ("with errors:%s" %"\n".join( map(str, errors) ))
   def transfer(self):
     log.info('session transferring packet')
     self.stick.transmit_packet(self.command)
