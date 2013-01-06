@@ -358,13 +358,15 @@ class Stick(object):
     return '<{0}>'.format(str(self))
   def process(self):
     log.info('link %s processing %s)' % ( self, self.command ))
-    # self.link.process(command)
+    """
     self.link.write(self.command.format( ))
     log.debug('sleeping %s' % self.command.delay)
     time.sleep(self.command.delay)
     size = max(64, self.command.size)
     raw = bytearray(self.link.read(size))
 
+    """
+    raw = self.send_force_read( )
     if len(raw) == 0:
       log.info('zero length READ, try once more sleep .100')
       time.sleep(.100)
@@ -421,7 +423,7 @@ class Stick(object):
     packet = self.process( )
     return packet
 
-  def send_force_read(self, retries=3, timeout=1):
+  def send_force_read(self, retries=4, timeout=1):
     # 
     # so the behavior of a read_radio should probably be similar to
     # poll_size??
@@ -434,7 +436,7 @@ class Stick(object):
       log.info(' '.join([
         'XXX: attempt {0}'.format(attempt), 'to send a command, and force a',
         'read until we get something within some timeout']))
-      log.info('link %s sending %s)' % ( self, self.command ))
+      log.info('link %s sending %s)' % ( self, reader ))
       self.link.write(reader.format( ))
       log.debug('sleeping %s' % reader.delay)
       time.sleep(reader.delay)
