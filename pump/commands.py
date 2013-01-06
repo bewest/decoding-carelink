@@ -2,6 +2,7 @@
 import logging
 
 log = logging.getLogger( ).getChild(__name__)
+import time
 
 import lib
 
@@ -516,6 +517,7 @@ def get_pages(device):
     device.execute(comm)
     page = comm.getData( )
     log.info("XXX: READ HISTORY DATA!!:\n%s" % lib.hexdump(page))
+    time.sleep(.100)
 
 if __name__ == '__main__':
   import doctest
