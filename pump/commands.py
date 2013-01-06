@@ -501,7 +501,7 @@ def do_commands(device):
   log.info("read HISTORY DATA")
   comm = ReadHistoryData( )
   device.execute(comm)
-  #log.info('comm:READ history data!!!: %r' % (comm.getData( )))
+  log.info('comm:READ history data page!!!:\n%s' % (lib.hexdump(comm.getData( ))))
 
 if __name__ == '__main__':
   import doctest
