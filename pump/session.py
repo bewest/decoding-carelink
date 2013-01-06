@@ -77,31 +77,6 @@ class Pump(Session):
     data = self.stick.download( )
     log.info("ENDING manual download:\n%s" % lib.hexdump(data))
     return data
-    self.should_download = True
-    try:
-      self.download( )
-      size = self.stick.poll_size( )
-      log.info("SIZE %s" % size)
-    except BadDeviceCommError, e:
-
-      # self.stick.download_packet(size)
-      download = stick.ReadRadio(size)
-      log.info("power_control download_packet:%s" % (size))
-
-      self.stick.command = download
-      packet = None
-      try:
-        packet = self.stick.process( )
-      except BadDeviceCommError, e:
-        raw = self.stick.link.read(64)
-        ack, body = download.respond(raw)
-        packet = download.parse(body)
-      return packet
-      
-    #try:
-    #  log.info('try to poll without download' % self.stick.poll_size( ))
-    #except AckError, e:
-    #  log.info('try again to poll without download' % self.stick.poll_size( ))
 
   def read_model(self):
     model = self.query(commands.ReadPumpModel)
@@ -133,7 +108,6 @@ if __name__ == '__main__':
   stick.open( )
   session = Pump(stick, '208850')
   log.info(pformat(stick.interface_stats( )))
-  log.info("POWER CONTROL ON")
   session.power_control( )
   log.info(pformat(stick.interface_stats( )))
   log.info('PUMP MODEL: %s' % session.read_model( ))
