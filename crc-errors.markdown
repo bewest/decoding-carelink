@@ -3627,6 +3627,7 @@ export TIME="%C\n\telapsed %E\n\tuser %U\n\tsystem %S\n\tCPU %P (%Xtext+%Ddata %
 # EOF
 ```
 
+### output
 ```
 Sun Jan  6 15:46:53 PST 2013
 INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
