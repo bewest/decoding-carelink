@@ -10,10 +10,8 @@ SERIAL=${2-'208850'}
 
 ( 
   echo "# ${NAME} ${CMD}"
-  echo '```'
   cat $NAME
   date
-  echo '```'
   TIME="$TIME" time python pump/stick.py ${PORT}
   TIME="$TIME" time python pump/session.py ${PORT} ${SERIAL}
   TIME="$TIME" time python pump/commands.py ${PORT} ${SERIAL}
@@ -25,6 +23,21 @@ SERIAL=${2-'208850'}
 
   echo "OUT" | tee explain.log
   ./explain-brief.sh | tee -a explain.log
+
+  echo "# ${NAME} ${CMD}" > explain.markdown
+
+  echo "## cat ${NAME}" >> explain.markdown
+  echo '```bash'        >> explain.markdown
+  cat $NAME             >> explain.markdown
+  echo '```'            >> explain.markdown
+
+  echo "## cat explain-brief.sh" >> explain.markdown
+  echo '```bash'                 >> explain.markdown
+  cat explain-brief.sh           >> explain.markdown
+  echo '```'                     >> explain.markdown
+
+  echo "## cat explain.log" >> explain.markdown
+  cat explain.log           >> explain.markdown
 
 #####
 # EOF
