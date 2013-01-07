@@ -560,21 +560,22 @@ class Stick(object):
     bad = bytearray( )
     raw = bytearray( )
     for attempt in xrange( 3 ):
-      log.info("\n".join([ "ATTEMPT %s to clear_buffer" % (attempt),
+      log_head = "XXX:clear_buffer[attempt][%s]" % (attempt)
+      log.info("\n".join([ "%s:BEGIN" % (log_head),
                            pformat(stick.interface_stats( )) ]))
       size = stick.poll_size( )
-      log.info("can we poll the size? %s" % (size))
+      log.info("%s can we poll the size? %s" % (log_head, size))
       if size == 0:
         break
       
       while size > 14:
-        log.info("DOWNLOADING %s TO clear_buffer CLEAR BUFFER" % size)
+        log.info("%s size:%s TO clear_buffer CLEAR BUFFER" % (log_head, size))
         try:
           segment = stick.download( )
           raw.extend(segment)
         except BadCRC, e:
-          log.critical('clear_buffer:IGNORING:%s' % e)
-        log.info('\n'.join(["clear_buffer downloaded %s segment ?" % len(raw),
+          log.critical('%s:IGNORING:%s' % (log_head, e))
+        log.info('\n'.join(["%s downloaded %s segment" % log_head, len(raw),
                             lib.hexdump(raw)]))
         size = stick.poll_size( )
 
