@@ -10,6 +10,12 @@ function diagnose_crc ( ) {
 
 }
 
+function only_stats ( ) {
+
+  grep -n -E "(errors|packets).(crc|naks|sequence|timeouts|received|transmit)" -
+
+}
+
 function summarize_stick ( ) {
   if [[ 6 -eq $(grep -E "howdy" $LOG | grep stick | wc -l) ]] ; then
     echo "stick runs appear to be ok"
@@ -26,6 +32,19 @@ function summarize_pump ( ) {
   else
     _error=1
     echo "howdy! pump runs were NOT OK"
+    echo "### Last send command"
+    echo '```'
+    grep -B 1000 -E "Traceback" $LOG | grep -A 2 -E "Transmit" | tail -n 4
+    echo '```'
+    echo "### Traceback"
+    echo '```'
+    grep -B 10 -A 15 -E "Traceback" $LOG
+    echo '```'
+    echo "### stats"
+    echo '```'
+    grep -A 1000 -E "Traceback" $LOG | only_stats | head -n 20
+    echo '```'
+
   fi
 
   echo -n PAGES downloaded:
