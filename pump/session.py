@@ -112,6 +112,7 @@ if __name__ == '__main__':
   log.info(pformat(stick.interface_stats( )))
   log.info('PUMP MODEL: %s' % session.read_model( ))
   log.info(pformat(stick.interface_stats( )))
+  log.info("howdy! all done looking at pump")
   # stick.open( )
   
 #####

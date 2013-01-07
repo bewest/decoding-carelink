@@ -681,6 +681,7 @@ if __name__ == '__main__':
     log.info("NO PENDING BUFFER")
   log.info("DONE CLEARING BUFFERS")
   log.info("INTERFACE STATS:\n%s" % pformat(stick.interface_stats( )))
+  log.info("howdy! all done looking at the stick")
 
 #####
 # EOF

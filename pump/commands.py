@@ -557,5 +557,6 @@ if __name__ == '__main__':
   log.info(pformat(stick.interface_stats( )))
   get_pages(session)
   log.info(pformat(stick.interface_stats( )))
+  log.info("howdy! we downloaded a lot of pump info successfully.")
   # stick.open( )
   
