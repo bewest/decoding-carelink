@@ -569,8 +569,11 @@ class Stick(object):
       
       while size > 14:
         log.info("DOWNLOADING %s TO clear_buffer CLEAR BUFFER" % size)
-        segment = stick.download( )
-        raw.extend(segment)
+        try:
+          segment = stick.download( )
+          raw.extend(segment)
+        except BadCRC, e:
+          log.critical('clear_buffer:IGNORING:%s' % e)
         log.info('\n'.join(["clear_buffer downloaded %s segment ?" % len(raw),
                             lib.hexdump(raw)]))
         size = stick.poll_size( )
@@ -638,7 +641,7 @@ if __name__ == '__main__':
   log.info("CLEAR BUFFERS")
   extra = stick.clear_buffer( )
   if extra:
-    lib.info(lib.hexdump(extra))
+    log.info(lib.hexdump(extra))
   else:
     log.info("NO PENDING BUFFER")
   log.info("DONE CLEARING BUFFERS")
