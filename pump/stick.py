@@ -574,7 +574,9 @@ class Stick(object):
           segment = stick.download( )
           raw.extend(segment)
           log.info(":".join([ "%s:tx:found" % (log_head),
-                              size ]))
+                              'len(raw)', str(len(raw)),
+                              'expected', str(size),
+                              'len(segment)', str(len(segment)) ]))
         except BadCRC, e:
           log.critical('%s:IGNORING:%s' % (log_head, e))
         log.info('\n'.join(["%s downloaded %s segment" % (log_head, len(raw)),

@@ -7425,3 +7425,102 @@ python pump/stick.py /dev/ttyUSB0
 	system 0.03
 	CPU 13% (0text+0data 41968max)k
 ```
+
+```bash
+$ grep -E "cleaer_bu|ACKK|ReadHistory|traceback|criticial" status-quo.log
+```
+```
+  echo "Was there an ACK ERROR?"
+INFO:__main__:XXX:clear_buffer[attempt][0]:BEGIN
+INFO:__main__:XXX:clear_buffer[attempt][0] can we poll the size? 0
+INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][0]>
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]> processing TransmitPacket:ReadHistoryData[page][0])
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]> sending TransmitPacket:ReadHistoryData[page][0])
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0], bytearray(b'\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]>>:STARTING POLL PHASE:attempt:0
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]>>:poll:attempt:0
+INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][0]>
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]> processing TransmitPacket:ReadHistoryData[page][0])
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]> sending TransmitPacket:ReadHistoryData[page][0])
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0], bytearray(b'\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]>>:STARTING POLL PHASE:attempt:0
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]>>:poll:attempt:0
+INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][1]>
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][1]> processing TransmitPacket:ReadHistoryData[page][1])
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][1]> sending TransmitPacket:ReadHistoryData[page][1])
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][1], bytearray(b'\x00\xd2\x80\x80\xa7\x01 \x88P\xce\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][1]>>:STARTING POLL PHASE:attempt:0
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][1]>>:poll:attempt:0
+INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][2]>
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][2]> processing TransmitPacket:ReadHistoryData[page][2])
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][2]> sending TransmitPacket:ReadHistoryData[page][2])
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][2], bytearray(b'\x00\xd2\x80\x80\xa7\x01 \x88P\xce\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x03\x00\x03\x92\x9e\x0b\x01\x06\x07\x00\x00\x02L\xa1\x06l\xa1\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x02L\x02Ld\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][2]>>:STARTING POLL PHASE:attempt:0
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][2]>>:poll:attempt:0
+INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][3]>
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][3]> processing TransmitPacket:ReadHistoryData[page][3])
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][3]> sending TransmitPacket:ReadHistoryData[page][3])
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][3], bytearray(b'\x00\xd3\x80\x80\xa7\x01 \x88PS\x04\xda\x82\x0cl\x82\x0c\x05\x00edf\x12\x00\x00\x04\xda\x03\x9eK\x01<\x19\x00O\x01<\x19\x01<d\x00\x00\x00\x00\x00\x00\x10\x10\x00\x00\x00d\x01V\xca\x06\x01\x06\x17\x00')
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][3]>>:STARTING POLL PHASE:attempt:0
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][3]>>:poll:attempt:0
+INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][4]>
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][4]> processing TransmitPacket:ReadHistoryData[page][4])
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][4]> sending TransmitPacket:ReadHistoryData[page][4])
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][4], bytearray(b'\x00\xd3\x80\x80\xa7\x01 \x88PS\x01\x12\x17\x00\x9f\x08\x14\x01\x12\x18\x00\x80\x08\x14\x01\x0c\x07\x00\x00\x00\x06\x81\x12l\x81\x12\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x06\x00\x06d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][4]>>:STARTING POLL PHASE:attempt:0
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][4]>>:poll:attempt:0
+INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][5]>
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][5]> processing TransmitPacket:ReadHistoryData[page][5])
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][5]> sending TransmitPacket:ReadHistoryData[page][5])
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][5], bytearray(b'\x00\xd2\x80\x80\xa7\x01 \x88P\xce\x00\x02\x00!\x00l!\x00\x05\x0c\x00\xe8\x00\x00\x00\x00\x02\x00\x02\x00d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\x00\x0c\x9c\x13\x02\x00\x17')
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][5]>>:STARTING POLL PHASE:attempt:0
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][5]>>:poll:attempt:0
+INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][6]>
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][6]> processing TransmitPacket:ReadHistoryData[page][6])
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][6]> sending TransmitPacket:ReadHistoryData[page][6])
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][6], bytearray(b'\x00\xd2\x80@\xa7\x01 \x88P]\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x00\x00.\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][6]>>:STARTING POLL PHASE:attempt:0
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][6]>>:poll:attempt:0
+INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][7]>
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][7]> processing TransmitPacket:ReadHistoryData[page][7])
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][7]> sending TransmitPacket:ReadHistoryData[page][7])
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][7], bytearray(b'\x00\xd2\x80\x80\xa7\x01 \x88P\xce\x00\x00\x00\x00\x00\x07\x00\x00\x00\x00\x15\x80l\x15\x80\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07')
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][7]>>:STARTING POLL PHASE:attempt:0
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][7]>>:poll:attempt:0
+INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][8]>
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][8]> processing TransmitPacket:ReadHistoryData[page][8])
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][8]> sending TransmitPacket:ReadHistoryData[page][8])
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][8], bytearray(b'\x00\xd2\x80\x80\xa7\x01 \x88P\xce\x1f\x00)C\x04A\x00\x07\x00\x00\x04\xcc\x01\x80l\x01\x80\x05\x00ddd\x0b\x00\x00\x04\xcc\x03\xbeN\x01\x0e\x16\x00A\x01\x0e\x16\x01\x04`\x00\x00\x00\x00\n\x04\x0c\x0b\x00\x00')
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][8]>>:STARTING POLL PHASE:attempt:0
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][8]>>:poll:attempt:0
+Was there an ACK ERROR?
+INFO:__main__:XXX:clear_buffer[attempt][0]:BEGIN
+INFO:__main__:XXX:clear_buffer[attempt][0] can we poll the size? 0
+INFO:__main__:XXX:clear_buffer[attempt][0]:BEGIN
+INFO:__main__:XXX:clear_buffer[attempt][0] can we poll the size? 0
+```
+
+
+### again?
+
+```bash
+$ grep -E "cleaer_bu|ACKK|ReadHistory|traceback|criticial" status-quo.log
+```
+```
+  echo "Was there an ACK ERROR?"
+INFO:__main__:XXX:clear_buffer[attempt][0]:BEGIN
+INFO:__main__:XXX:clear_buffer[attempt][0] can we poll the size? 0
+INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][0]>
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]> processing TransmitPacket:ReadHistoryData[page][0])
+INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]> sending TransmitPacket:ReadHistoryData[page][0])
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0], bytearray(b'\x00\xd2\x80@\xa7\x01 \x88P\x8b\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]>>:STARTING POLL PHASE:attempt:0
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]>>:poll:attempt:0
+INFO:stick:ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0x7a:raw:
+stick.BadCRC: ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0x7a:raw:
+Was there an ACK ERROR?
+INFO:__main__:XXX:clear_buffer[attempt][0]:BEGIN
+INFO:__main__:XXX:clear_buffer[attempt][0] can we poll the size? 398
+INFO:__main__:XXX:clear_buffer[attempt][0] size:398 TO clear_buffer CLEAR BUFFER
+INFO:__main__:XXX:clear_buffer[attempt][0]:tx:found:len(raw):768:expected:398:len(segment):768
+INFO:__main__:XXX:clear_buffer[attempt][0] downloaded 768 segment
