@@ -11,7 +11,7 @@ SERIAL=${2-'208850'}
 ( cat $NAME
   echo "# ${NAME} ${CMD}"
   date
-  TIME="$TIME" time python pump/stick.py 
+  TIME="$TIME" time python pump/stick.py ${PORT}
   TIME="$TIME" time python pump/session.py ${PORT} ${SERIAL}
   TIME="$TIME" time python pump/commands.py ${PORT} ${SERIAL}
   echo "Was there an ACK ERROR?"
