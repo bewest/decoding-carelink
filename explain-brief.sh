@@ -36,14 +36,17 @@ function summarize_pump ( ) {
   else
     _error=1
     echo 'howdy! pump runs were NOT OK'
+
     echo "### Last send command"
     echo '```'
     grep -B 1000 -E "Traceback" $LOG | grep -A 2 -E "Transmit" | tail -n 4
     echo '```'
+
     echo "### Traceback"
     echo '```'
     grep -B 10 -A 15 -E "Traceback" $LOG
     echo '```'
+
     echo "### stats"
     echo '```'
     grep -A 1000 -E "Traceback" $LOG | only_stats | head -n 20
@@ -52,14 +55,19 @@ function summarize_pump ( ) {
   fi
 
   echo -n '* PAGES downloaded:'
+  echo '```'
   grep -E "finished.*ReadHistory" $LOG | sort | uniq | wc -l
+  echo '```'
 
   if [[ 0 -eq $(grep -E "BadCRC" $LOG | wc -l) ]] ; then
     echo "* NO CRC ERROR FOUND"
   else
     _error=1
     echo "* CRC ERROR FOUND"
+    echo '## Diagnose CRC'
+    echo '```'
     diagnose_crc
+    echo '```'
   fi
   if [[ 0 -eq $(grep -E "NAK" $LOG | wc -l) ]] ; then
     echo "* NO NAK FOUND"
