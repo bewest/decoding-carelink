@@ -7,6 +7,8 @@ log = logging.getLogger( ).getChild(__name__)
 
 from errors import StickError, AckError, BadDeviceCommError
 
+class BadCRC(StickError): pass
+
 def CRC8(data):
   return lib.CRC8.compute(data)
 
@@ -252,11 +254,13 @@ class ReadRadio(StickCommand):
       log.warn('bad zero CRC?')
     expected_crc = CRC8(data)
     if crc != expected_crc:
-      log.info(':'.join( [ 'ReadRadio:BAD ACK:found raw[crc]: %#04x' % (crc),
+      msg = ':'.join( [ 'ReadRadio:BAD ACK:found raw[crc]: %#04x' % (crc),
                           'expected_crc(data): %#04x' % (expected_crc),
                           'raw:\n%s\n' % (lib.hexdump(raw)),
                           'head:\n%s\n' % (lib.hexdump(head)),
-                          'data:\n%s\n' % (lib.hexdump(data)) ] ))
+                          'data:\n%s\n' % (lib.hexdump(data)) ] )
+      log.info(msg)
+      raise BadCRC(msg)
     assert crc == expected_crc
     return data
 
@@ -556,7 +560,7 @@ class Stick(object):
     bad = bytearray( )
     raw = bytearray( )
     for attempt in xrange( 3 ):
-      log.info("\n".join([ "ATTEMPT %s to clear buffer" % (attempt),
+      log.info("\n".join([ "ATTEMPT %s to clear_buffer" % (attempt),
                            pformat(stick.interface_stats( )) ]))
       size = stick.poll_size( )
       log.info("can we poll the size? %s" % (size))
@@ -564,10 +568,10 @@ class Stick(object):
         break
       
       while size > 14:
-        log.info("DOWNLOADING %s TO CLEAR BUFFER" % size)
+        log.info("DOWNLOADING %s TO clear_buffer CLEAR BUFFER" % size)
         segment = stick.download( )
         raw.extend(segment)
-        log.info('\n'.join(["clear_buffers downloaded %s segment ?" % len(raw),
+        log.info('\n'.join(["clear_buffer downloaded %s segment ?" % len(raw),
                             lib.hexdump(raw)]))
         size = stick.poll_size( )
 
