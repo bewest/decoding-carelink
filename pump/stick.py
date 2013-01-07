@@ -575,7 +575,7 @@ class Stick(object):
           raw.extend(segment)
         except BadCRC, e:
           log.critical('%s:IGNORING:%s' % (log_head, e))
-        log.info('\n'.join(["%s downloaded %s segment" % log_head, len(raw),
+        log.info('\n'.join(["%s downloaded %s segment" % (log_head, len(raw)),
                             lib.hexdump(raw)]))
         size = stick.poll_size( )
 
