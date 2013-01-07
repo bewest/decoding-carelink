@@ -569,7 +569,10 @@ class Stick(object):
       log.debug('INTERFACE STATS:\n%s' % lib.pformat(self.interface_stats( )))
       log.info(":".join([ log_head, log_detail, "BEGIN ", "first poll" ]))
       size = self.poll_size( )
-      log.info("%s:END first poll: poll the size? %s" % (log_head, size))
+      end_poll = ':'.join( [ log_head, log_detail,
+                             "END first poll %s" % (size),
+                             "SHOULD DOWNLOAD ", str(size != 0) ] )
+      log.info(end_poll)
       if size == 0:
         break
       
