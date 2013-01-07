@@ -1,3 +1,9 @@
+# NAK Error
+
+After running into CRC errors, and continuing to run in the following
+manner,
+
+```bash
 #/bin/bash
 # make an example of an interesting log worth sharing
 
@@ -17,6 +23,12 @@ export TIME="%C\n\telapsed %E\n\tuser %U\n\tsystem %S\n\tCPU %P (%Xtext+%Ddata %
 
 #####
 # EOF
+```
+
+## output
+We get NAK like this...
+
+```
 Sun Jan  6 16:03:38 PST 2013
 INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
 INFO:link:Link opened serial port: Serial<id=0x230a1d0, open=True>(port='/dev/ttyUSB0', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.5, xonxoff=False, rtscts=False, dsrdtr=False)
@@ -8690,3 +8702,4 @@ sys	0m0.040s
 real	0m49.521s
 user	0m1.204s
 sys	0m0.368s
+```
