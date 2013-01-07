@@ -141,7 +141,7 @@ class ReadHistoryData(PumpCommand):
                0x01, 0x00, 0x02, 0x02, 0x00, 0x80, 0x9B, 0x03,
                0x36, ])
 
-  def __init__(self, page=3, **kwds):
+  def __init__(self, page=None, **kwds):
     if page is None and kwds.get('params', [ ]):
       page = kwds.pop('params')[0]
 
@@ -512,7 +512,7 @@ def do_commands(device):
   log.info('comm:READ page number!!!: %r' % (comm.getData( )))
 
   log.info("read HISTORY DATA")
-  comm = ReadHistoryData( )
+  comm = ReadHistoryData(page=0)
   device.execute(comm)
   log.info('comm:READ history data page!!!:\n%s' % (lib.hexdump(comm.getData( ))))
 
