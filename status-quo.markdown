@@ -45,6 +45,13 @@ instead of the current download logic.
 I want to catch it incrementing the received counters just right again
 before doing so.
 
+What I'd like to see in the explain log is lines showing commands.py
+failing during download_packet with a BadCRC, stick.py picking it back
+up, with attempts of running the clear_buffer method incrementing the
+counters as expected.
+Sometimes this works, but more consistently now I seem to be getting
+NAK after these runs.
+
 ```bash
 #/bin/bash
 # make an example of an interesting log worth sharing
