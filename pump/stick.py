@@ -598,12 +598,15 @@ if __name__ == '__main__':
   log.info("""
     at this point, we could issue remote commands to a medical
     device, let's inspect the interfaces""".strip( ))
-  log.info(pformat(stick.usb_stats( )))
-  log.info(pformat(stick.radio_stats( )))
+  #log.info(pformat(stick.usb_stats( )))
+  #log.info(pformat(stick.radio_stats( )))
+  log.info(pformat(stick.interface_stats( )))
   size = stick.poll_size( )
   log.info("can we poll the size? %s" % (size))
   if size > 14:
+    log.info("DOWNLOADING %s TO CLEAR BUFFER" % size)
     log.info('\n'.join(["can we download ?", lib.hexdump(stick.download( ))]))
+  log.info("INTERFACE STATS:\n%s" % pformat(stick.interface_stats( )))
 
 #####
 # EOF
