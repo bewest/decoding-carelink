@@ -552,6 +552,29 @@ class Stick(object):
       eod = self.command.eod
     return results
 
+  def clear_buffer(self):
+    bad = bytearray( )
+    raw = bytearray( )
+    for attempt in xrange( 3 ):
+      log.info("\n".join([ "ATTEMPT %s to clear buffer" % (attempt),
+                           pformat(stick.interface_stats( )) ]))
+      size = stick.poll_size( )
+      log.info("can we poll the size? %s" % (size))
+      if size == 0:
+        break
+      
+      while size > 14:
+        log.info("DOWNLOADING %s TO CLEAR BUFFER" % size)
+        segment = stick.download( )
+        raw.extend(segment)
+        log.info('\n'.join(["clear_buffers downloaded %s segment ?" % len(raw),
+                            lib.hexdump(raw)]))
+        size = stick.poll_size( )
+
+      log.info("INTERFACE STATS:\n%s" % pformat(stick.interface_stats( )))
+      if raw:
+        return raw
+
   def transmit_packet(self, command):
     packet = TransmitPacket(command)
     self.command = packet
@@ -601,11 +624,20 @@ if __name__ == '__main__':
   #log.info(pformat(stick.usb_stats( )))
   #log.info(pformat(stick.radio_stats( )))
   log.info(pformat(stick.interface_stats( )))
+  """
   size = stick.poll_size( )
   log.info("can we poll the size? %s" % (size))
   if size > 14:
     log.info("DOWNLOADING %s TO CLEAR BUFFER" % size)
     log.info('\n'.join(["can we download ?", lib.hexdump(stick.download( ))]))
+  """
+  log.info("CLEAR BUFFERS")
+  extra = stick.clear_buffer( )
+  if extra:
+    lib.info(lib.hexdump(extra))
+  else:
+    log.info("NO PENDING BUFFER")
+  log.info("DONE CLEARING BUFFERS")
   log.info("INTERFACE STATS:\n%s" % pformat(stick.interface_stats( )))
 
 #####
