@@ -503,6 +503,7 @@ class Stick(object):
       info = self.command.parse(response)
       return info
     except BadDeviceCommError, e:
+      log.critical("download_packet:%s:ERROR:%s:ACK!?" % (self, e))
       log.info("we failed to pass %s ACK!?" % (self.command))
       log.info('expected size was: %s' % original_size)
       status = LinkStatus( )
@@ -560,32 +561,58 @@ class Stick(object):
     bad = bytearray( )
     raw = bytearray( )
     for attempt in xrange( 3 ):
+      segments = [ ]
+      segs_vs_raw = 'segments[{0}],total_segments[{1}]:raw[{2}]'
+      seg_stats = ( len(segments), sum(map(len, segments)), len(raw) )
+      log_detail = segs_vs_raw.format(*seg_stats)
       log_head = "XXX:clear_buffer[attempt][%s]" % (attempt)
-      log.info("\n".join([ "%s:BEGIN" % (log_head),
-                           pformat(stick.interface_stats( )) ]))
-      size = stick.poll_size( )
-      log.info("%s can we poll the size? %s" % (log_head, size))
+      log.debug('INTERFACE STATS:\n%s' % lib.pformat(self.interface_stats( )))
+      log.info(":".join([ log_head, log_detail, "BEGIN ", "first poll" ]))
+      size = self.poll_size( )
+      log.info("%s:END first poll: poll the size? %s" % (log_head, size))
       if size == 0:
         break
       
+      seg_stats = ( len(segments), sum(map(len, segments)), len(raw) )
+      log_detail = segs_vs_raw.format(*seg_stats)
+      log.info("%s:download the size? %s:%s" % (log_head, size, log_detail))
+          
       while size > 14:
-        log.info("%s size:%s TO clear_buffer CLEAR BUFFER" % (log_head, size))
+        seg_stats = ( len(segments), sum(map(len, segments)), len(raw) )
+        log_detail = segs_vs_raw.format(*seg_stats)
+        log_head = "XXX:clear_buffer[attempt][%s]" % (attempt)
+        log.info( ':'.join([ "%s size:%s" % (log_head, size),
+                             log_detail,
+                             "clear_buffer BUFFER self.download( )" ]))
         try:
-          segment = stick.download( )
+          segment = self.download( )
           raw.extend(segment)
+          segments.append(segment)
+          seg_stats = ( len(segments), sum(map(len, segments)), len(raw) )
+          log_detail = segs_vs_raw.format(*seg_stats)
           log.info(":".join([ "%s:tx:found" % (log_head),
+                              log_detail,
                               'len(raw)', str(len(raw)),
                               'expected', str(size),
                               'len(segment)', str(len(segment)) ]))
         except BadCRC, e:
-          log.critical('%s:IGNORING:%s' % (log_head, e))
-        log.info('\n'.join(["%s downloaded %s segment" % (log_head, len(raw)),
-                            lib.hexdump(raw)]))
-        size = stick.poll_size( )
+          seg_stats = ( len(segments), sum(map(len, segments)), len(raw) )
+          log_detail = segs_vs_raw.format(*seg_stats)
+          log.critical('%s:IGNORING:%s:%s' % (log_head, log_detail, e))
 
-      log.info("INTERFACE STATS:\n%s" % pformat(stick.interface_stats( )))
+        seg_stats = ( len(segments), sum(map(len, segments)), len(raw) )
+        log_detail = segs_vs_raw.format(*seg_stats)
+        log.info(':'.join([ "%s downloaded %s segment" % (log_head, len(raw)),
+                            log_detail,
+                            "RAW:\n%s" % lib.hexdump(raw) ]))
+        size = self.poll_size( )
+
+      log.debug("INTERFACE STATS:\n%s" % lib.pformat(self.interface_stats( )))
       if raw:
         return raw
+    if size == 0:
+      log.info("\n".join([ "%s:END:no data:INTERFACE STATS" % (log_head),
+                           lib.pformat(self.interface_stats( )) ]))
 
   def transmit_packet(self, command):
     packet = TransmitPacket(command)

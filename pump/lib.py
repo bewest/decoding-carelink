@@ -36,6 +36,8 @@ True
 
 """
 
+from pprint import pformat
+
 import dateutil.parser
 
 def _fmt_hex( bytez ):
@@ -320,6 +322,7 @@ def decodeDCByte(B):
   # B should be 0 < B && B < 63
   # look up in decode table
   return ENCODE_TABLE.index(B)
+
 
 if __name__ == '__main__':
   import doctest
