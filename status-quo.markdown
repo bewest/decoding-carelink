@@ -13058,3 +13058,348 @@ user	0m1.144s
 sys	0m0.140s
 ```
 
+17:  echo "Was there an ACK ERROR?"
+18:  echo "### DIAGNOSE CRC"
+27:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
+262:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4414L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4410L, 'errors.crc': 0}
+280:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2236L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2120L, 'errors.crc': 0}
+281:INFO:__main__:{'radio': {'errors.crc': 0,
+282:           'errors.naks': 0,
+283:           'errors.sequence': 2,
+284:           'errors.timeouts': 6,
+285:           'packets.received': 2120L,
+286:           'packets.transmit': 2236L},
+287: 'usb': {'errors.crc': 0,
+288:         'errors.naks': 4,
+289:         'errors.sequence': 0,
+290:         'errors.timeouts': 0,
+291:         'packets.received': 4410L,
+292:         'packets.transmit': 4414L}}
+311:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4416L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4412L, 'errors.crc': 0}
+329:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2236L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2120L, 'errors.crc': 0}
+331:{'radio': {'errors.crc': 0,
+332:           'errors.naks': 0,
+333:           'errors.sequence': 2,
+334:           'errors.timeouts': 6,
+335:           'packets.received': 2120L,
+336:           'packets.transmit': 2236L},
+337: 'usb': {'errors.crc': 0,
+338:         'errors.naks': 4,
+339:         'errors.sequence': 0,
+340:         'errors.timeouts': 0,
+341:         'packets.received': 4412L,
+342:         'packets.transmit': 4416L}}
+343:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
+392:INFO:__main__:XXX:clear_buffer[attempt][0]:END first poll: poll the size? 15
+393:INFO:__main__:XXX:clear_buffer[attempt][0]:download the size? 15:segments[0],total_segments[0]:raw[0]
+394:INFO:__main__:XXX:clear_buffer[attempt][0] size:15:segments[0],total_segments[0]:raw[0]:clear_buffer BUFFER self.download( )
+436:WARNING:__main__:bad zero CRC?
+437:INFO:__main__:XXX:clear_buffer[attempt][0]:tx:found:segments[1],total_segments[1]:raw[1]:len(raw):1:expected:15:len(segment):1
+438:INFO:__main__:XXX:clear_buffer[attempt][0] downloaded 1 segment:segments[1],total_segments[1]:raw[1]:RAW:
+551:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4426L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4422L, 'errors.crc': 0}
+569:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2237L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2122L, 'errors.crc': 0}
+571:{'radio': {'errors.crc': 0,
+572:           'errors.naks': 0,
+573:           'errors.sequence': 2,
+574:           'errors.timeouts': 6,
+575:           'packets.received': 2122L,
+576:           'packets.transmit': 2237L},
+577: 'usb': {'errors.crc': 0,
+578:         'errors.naks': 4,
+579:         'errors.sequence': 0,
+580:         'errors.timeouts': 0,
+581:         'packets.received': 4422L,
+582:         'packets.transmit': 4426L}}
+602:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4428L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4424L, 'errors.crc': 0}
+620:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2237L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2122L, 'errors.crc': 0}
+622:{'radio': {'errors.crc': 0,
+623:           'errors.naks': 0,
+624:           'errors.sequence': 2,
+625:           'errors.timeouts': 6,
+626:           'packets.received': 2122L,
+627:           'packets.transmit': 2237L},
+628: 'usb': {'errors.crc': 0,
+629:         'errors.naks': 4,
+630:         'errors.sequence': 0,
+631:         'errors.timeouts': 0,
+632:         'packets.received': 4424L,
+633:         'packets.transmit': 4428L}}
+639:INFO:__main__:howdy! I'm going to take a look at your pump.
+779:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4436L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4432L, 'errors.crc': 0}
+797:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2237L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2122L, 'errors.crc': 0}
+798:INFO:__main__:{'radio': {'errors.crc': 0,
+799:           'errors.naks': 0,
+800:           'errors.sequence': 2,
+801:           'errors.timeouts': 6,
+802:           'packets.received': 2122L,
+803:           'packets.transmit': 2237L},
+804: 'usb': {'errors.crc': 0,
+805:         'errors.naks': 4,
+806:         'errors.sequence': 0,
+807:         'errors.timeouts': 0,
+808:         'packets.received': 4432L,
+809:         'packets.transmit': 4436L}}
+883:WARNING:stick:bad zero CRC?
+903:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4441L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4437L, 'errors.crc': 0}
+921:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2239L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2124L, 'errors.crc': 0}
+922:INFO:__main__:{'radio': {'errors.crc': 0,
+923:           'errors.naks': 0,
+924:           'errors.sequence': 2,
+925:           'errors.timeouts': 6,
+926:           'packets.received': 2124L,
+927:           'packets.transmit': 2239L},
+928: 'usb': {'errors.crc': 0,
+929:         'errors.naks': 4,
+930:         'errors.sequence': 0,
+931:         'errors.timeouts': 0,
+932:         'packets.received': 4437L,
+933:         'packets.transmit': 4441L}}
+1048:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4447L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4443L, 'errors.crc': 0}
+1066:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2240L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2125L, 'errors.crc': 0}
+1067:INFO:__main__:{'radio': {'errors.crc': 0,
+1068:           'errors.naks': 0,
+1069:           'errors.sequence': 2,
+1070:           'errors.timeouts': 6,
+1071:           'packets.received': 2125L,
+1072:           'packets.transmit': 2240L},
+1073: 'usb': {'errors.crc': 0,
+1074:         'errors.naks': 4,
+1075:         'errors.sequence': 0,
+1076:         'errors.timeouts': 0,
+1077:         'packets.received': 4443L,
+1078:         'packets.transmit': 4447L}}
+1084:INFO:__main__:howdy! I'm going to take a look at your pump and grab lots of info.
+1224:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4455L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4451L, 'errors.crc': 0}
+1242:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2240L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2125L, 'errors.crc': 0}
+1243:INFO:__main__:{'radio': {'errors.crc': 0,
+1244:           'errors.naks': 0,
+1245:           'errors.sequence': 2,
+1246:           'errors.timeouts': 6,
+1247:           'packets.received': 2125L,
+1248:           'packets.transmit': 2240L},
+1249: 'usb': {'errors.crc': 0,
+1250:         'errors.naks': 4,
+1251:         'errors.sequence': 0,
+1252:         'errors.timeouts': 0,
+1253:         'packets.received': 4451L,
+1254:         'packets.transmit': 4455L}}
+2603:INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][0]>
+2604:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]> processing TransmitPacket:ReadHistoryData[page][0])
+2606:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]> sending TransmitPacket:ReadHistoryData[page][0])
+2624:INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0], bytearray(b'\x00\xcd\x80@\xa7\x01 \x88P\x15\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+2627:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]>>:STARTING POLL PHASE:attempt:0
+2628:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]>>:poll:attempt:0
+2818:WARNING:stick:bad zero CRC?
+2875:WARNING:stick:bad zero CRC?
+2932:WARNING:stick:bad zero CRC?
+2989:WARNING:stick:bad zero CRC?
+3046:WARNING:stick:bad zero CRC?
+3378:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4527L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4523L, 'errors.crc': 0}
+3396:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2271L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2155L, 'errors.crc': 0}
+3397:INFO:__main__:{'radio': {'errors.crc': 0,
+3398:           'errors.naks': 0,
+3399:           'errors.sequence': 2,
+3400:           'errors.timeouts': 6,
+3401:           'packets.received': 2155L,
+3402:           'packets.transmit': 2271L},
+3403: 'usb': {'errors.crc': 0,
+3404:         'errors.naks': 4,
+3405:         'errors.sequence': 0,
+3406:         'errors.timeouts': 0,
+3407:         'packets.received': 4523L,
+3408:         'packets.transmit': 4527L}}
+3519:INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][0]>
+3520:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]> processing TransmitPacket:ReadHistoryData[page][0])
+3522:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]> sending TransmitPacket:ReadHistoryData[page][0])
+3540:INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0], bytearray(b'\x00\xcd\x80@\xa7\x01 \x88P\x15\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+3543:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]>>:STARTING POLL PHASE:attempt:0
+3544:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]>>:poll:attempt:0
+3734:WARNING:stick:bad zero CRC?
+3791:WARNING:stick:bad zero CRC?
+3848:WARNING:stick:bad zero CRC?
+3905:WARNING:stick:bad zero CRC?
+3962:WARNING:stick:bad zero CRC?
+4280:INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][1]>
+4281:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][1]> processing TransmitPacket:ReadHistoryData[page][1])
+4283:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][1]> sending TransmitPacket:ReadHistoryData[page][1])
+4301:INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][1], bytearray(b'\x00\xcd\x80\x80\xa7\x01 \x88PP\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+4304:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][1]>>:STARTING POLL PHASE:attempt:0
+4305:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][1]>>:poll:attempt:0
+5036:INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][2]>
+5037:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][2]> processing TransmitPacket:ReadHistoryData[page][2])
+5039:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][2]> sending TransmitPacket:ReadHistoryData[page][2])
+5057:INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][2], bytearray(b'\x00\xcd\x80\x80\xa7\x01 \x88PP\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x03\x00\x03\x92\x9e\x0b\x01\x06\x07\x00\x00\x02L\xa1\x06l\xa1\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x02L\x02Ld\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+5060:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][2]>>:STARTING POLL PHASE:attempt:0
+5061:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][2]>>:poll:attempt:0
+5792:INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][3]>
+5793:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][3]> processing TransmitPacket:ReadHistoryData[page][3])
+5795:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][3]> sending TransmitPacket:ReadHistoryData[page][3])
+5813:INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][3], bytearray(b'\x00\xcd\x80\x80\xa7\x01 \x88PP\x04\xda\x82\x0cl\x82\x0c\x05\x00edf\x12\x00\x00\x04\xda\x03\x9eK\x01<\x19\x00O\x01<\x19\x01<d\x00\x00\x00\x00\x00\x00\x10\x10\x00\x00\x00d\x01V\xca\x06\x01\x06\x17\x00')
+5816:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][3]>>:STARTING POLL PHASE:attempt:0
+5817:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][3]>>:poll:attempt:0
+6548:INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][4]>
+6549:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][4]> processing TransmitPacket:ReadHistoryData[page][4])
+6551:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][4]> sending TransmitPacket:ReadHistoryData[page][4])
+6569:INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][4], bytearray(b'\x00\xcd\x80\x80\xa7\x01 \x88PP\x01\x12\x17\x00\x9f\x08\x14\x01\x12\x18\x00\x80\x08\x14\x01\x0c\x07\x00\x00\x00\x06\x81\x12l\x81\x12\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x06\x00\x06d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+6572:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][4]>>:STARTING POLL PHASE:attempt:0
+6573:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][4]>>:poll:attempt:0
+7304:INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][5]>
+7305:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][5]> processing TransmitPacket:ReadHistoryData[page][5])
+7307:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][5]> sending TransmitPacket:ReadHistoryData[page][5])
+7325:INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][5], bytearray(b'\x00\xcd\x80\x80\xa7\x01 \x88PP\x00\x02\x00!\x00l!\x00\x05\x0c\x00\xe8\x00\x00\x00\x00\x02\x00\x02\x00d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\x00\x0c\x9c\x13\x02\x00\x17')
+7328:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][5]>>:STARTING POLL PHASE:attempt:0
+7329:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][5]>>:poll:attempt:0
+8060:INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][6]>
+8061:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][6]> processing TransmitPacket:ReadHistoryData[page][6])
+8063:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][6]> sending TransmitPacket:ReadHistoryData[page][6])
+8081:INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][6], bytearray(b'\x00\xcd\x80\x80\xa7\x01 \x88PP\x00\x00,\x00l,\x00\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x00\x00-\x00l-')
+8084:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][6]>>:STARTING POLL PHASE:attempt:0
+8085:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][6]>>:poll:attempt:0
+8816:INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][7]>
+8817:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][7]> processing TransmitPacket:ReadHistoryData[page][7])
+8819:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][7]> sending TransmitPacket:ReadHistoryData[page][7])
+8837:INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][7], bytearray(b'\x00\xcd\x80\x80\xa7\x01 \x88PP\x00\x00\x00\x00\x00\x07\x00\x00\x00\x00\x15\x80l\x15\x80\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07')
+8840:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][7]>>:STARTING POLL PHASE:attempt:0
+8841:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][7]>>:poll:attempt:0
+9572:INFO:stick:transmit_packet:write:<TransmitPacket:ReadHistoryData[page][8]>
+9573:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][8]> processing TransmitPacket:ReadHistoryData[page][8])
+9575:INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][8]> sending TransmitPacket:ReadHistoryData[page][8])
+9593:INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][8], bytearray(b'\x00\xce\x80\x80\xa7\x01 \x88Pl\x1f\x00)C\x04A\x00\x07\x00\x00\x04\xcc\x01\x80l\x01\x80\x05\x00ddd\x0b\x00\x00\x04\xcc\x03\xbeN\x01\x0e\x16\x00A\x01\x0e\x16\x01\x04`\x00\x00\x00\x00\n\x04\x0c\x0b\x00\x00')
+9596:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][8]>>:STARTING POLL PHASE:attempt:0
+9597:DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(142)>:command:<TransmitPacket:ReadHistoryData[page][8]>>:poll:attempt:0
+10342:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4695L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4691L, 'errors.crc': 0}
+10360:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2434L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2309L, 'errors.crc': 0}
+10361:INFO:__main__:{'radio': {'errors.crc': 0,
+10362:           'errors.naks': 0,
+10363:           'errors.sequence': 2,
+10364:           'errors.timeouts': 6,
+10365:           'packets.received': 2309L,
+10366:           'packets.transmit': 2434L},
+10367: 'usb': {'errors.crc': 0,
+10368:         'errors.naks': 4,
+10369:         'errors.sequence': 0,
+10370:         'errors.timeouts': 0,
+10371:         'packets.received': 4691L,
+10372:         'packets.transmit': 4695L}}
+10378:Was there an ACK ERROR?
+10379:### DIAGNOSE CRC
+10380:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
+10567:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4705L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4701L, 'errors.crc': 0}
+10585:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2434L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2309L, 'errors.crc': 0}
+10586:INFO:__main__:{'radio': {'errors.crc': 0,
+10587:           'errors.naks': 0,
+10588:           'errors.sequence': 2,
+10589:           'errors.timeouts': 6,
+10590:           'packets.received': 2309L,
+10591:           'packets.transmit': 2434L},
+10592: 'usb': {'errors.crc': 0,
+10593:         'errors.naks': 4,
+10594:         'errors.sequence': 0,
+10595:         'errors.timeouts': 0,
+10596:         'packets.received': 4701L,
+10597:         'packets.transmit': 4705L}}
+10616:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4707L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4703L, 'errors.crc': 0}
+10634:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2434L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2309L, 'errors.crc': 0}
+10636:{'radio': {'errors.crc': 0,
+10637:           'errors.naks': 0,
+10638:           'errors.sequence': 2,
+10639:           'errors.timeouts': 6,
+10640:           'packets.received': 2309L,
+10641:           'packets.transmit': 2434L},
+10642: 'usb': {'errors.crc': 0,
+10643:         'errors.naks': 4,
+10644:         'errors.sequence': 0,
+10645:         'errors.timeouts': 0,
+10646:         'packets.received': 4703L,
+10647:         'packets.transmit': 4707L}}
+10648:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
+10743:INFO:__main__:XXX:clear_buffer[attempt][0]:END first poll: poll the size? 0
+10761:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4713L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4709L, 'errors.crc': 0}
+10779:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2434L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2309L, 'errors.crc': 0}
+10780:INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
+10781:{'radio': {'errors.crc': 0,
+10782:           'errors.naks': 0,
+10783:           'errors.sequence': 2,
+10784:           'errors.timeouts': 6,
+10785:           'packets.received': 2309L,
+10786:           'packets.transmit': 2434L},
+10787: 'usb': {'errors.crc': 0,
+10788:         'errors.naks': 4,
+10789:         'errors.sequence': 0,
+10790:         'errors.timeouts': 0,
+10791:         'packets.received': 4709L,
+10792:         'packets.transmit': 4713L}}
+10812:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4715L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4711L, 'errors.crc': 0}
+10830:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2434L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2309L, 'errors.crc': 0}
+10832:{'radio': {'errors.crc': 0,
+10833:           'errors.naks': 0,
+10834:           'errors.sequence': 2,
+10835:           'errors.timeouts': 6,
+10836:           'packets.received': 2309L,
+10837:           'packets.transmit': 2434L},
+10838: 'usb': {'errors.crc': 0,
+10839:         'errors.naks': 4,
+10840:         'errors.sequence': 0,
+10841:         'errors.timeouts': 0,
+10842:         'packets.received': 4711L,
+10843:         'packets.transmit': 4715L}}
+10849:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
+11036:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4725L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4721L, 'errors.crc': 0}
+11054:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2434L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2309L, 'errors.crc': 0}
+11055:INFO:__main__:{'radio': {'errors.crc': 0,
+11056:           'errors.naks': 0,
+11057:           'errors.sequence': 2,
+11058:           'errors.timeouts': 6,
+11059:           'packets.received': 2309L,
+11060:           'packets.transmit': 2434L},
+11061: 'usb': {'errors.crc': 0,
+11062:         'errors.naks': 4,
+11063:         'errors.sequence': 0,
+11064:         'errors.timeouts': 0,
+11065:         'packets.received': 4721L,
+11066:         'packets.transmit': 4725L}}
+11085:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4727L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4723L, 'errors.crc': 0}
+11103:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2434L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2309L, 'errors.crc': 0}
+11105:{'radio': {'errors.crc': 0,
+11106:           'errors.naks': 0,
+11107:           'errors.sequence': 2,
+11108:           'errors.timeouts': 6,
+11109:           'packets.received': 2309L,
+11110:           'packets.transmit': 2434L},
+11111: 'usb': {'errors.crc': 0,
+11112:         'errors.naks': 4,
+11113:         'errors.sequence': 0,
+11114:         'errors.timeouts': 0,
+11115:         'packets.received': 4723L,
+11116:         'packets.transmit': 4727L}}
+11117:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
+11212:INFO:__main__:XXX:clear_buffer[attempt][0]:END first poll: poll the size? 0
+11230:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4733L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4729L, 'errors.crc': 0}
+11248:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2434L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2309L, 'errors.crc': 0}
+11249:INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
+11250:{'radio': {'errors.crc': 0,
+11251:           'errors.naks': 0,
+11252:           'errors.sequence': 2,
+11253:           'errors.timeouts': 6,
+11254:           'packets.received': 2309L,
+11255:           'packets.transmit': 2434L},
+11256: 'usb': {'errors.crc': 0,
+11257:         'errors.naks': 4,
+11258:         'errors.sequence': 0,
+11259:         'errors.timeouts': 0,
+11260:         'packets.received': 4729L,
+11261:         'packets.transmit': 4733L}}
+11281:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 4735L, 'errors.naks': 4, 'errors.sequence': 0, 'packets.received': 4731L, 'errors.crc': 0}
+11299:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 6, 'packets.transmit': 2434L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 2309L, 'errors.crc': 0}
+11301:{'radio': {'errors.crc': 0,
+11302:           'errors.naks': 0,
+11303:           'errors.sequence': 2,
+11304:           'errors.timeouts': 6,
+11305:           'packets.received': 2309L,
+11306:           'packets.transmit': 2434L},
+11307: 'usb': {'errors.crc': 0,
+11308:         'errors.naks': 4,
+11309:         'errors.sequence': 0,
+11310:         'errors.timeouts': 0,
+11311:         'packets.received': 4731L,
+11312:         'packets.transmit': 4735L}}
