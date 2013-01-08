@@ -10,7 +10,14 @@ LOG='status-quo.log'
 
 function diagnose_crc ( ) {
 
-  grep -n --color  -E "howdy|clear_bu|BAD|CRC|ACK|IGNORE|download|traceback|critical|(errors|packets).(crc|naks|sequence|timeouts|received|transmit)" $LOG
+  grep -n --color  -E "howdy|clear_bu|NAK|BAD|CRC|ACK|IGNORE|download|traceback|critical|(errors|packets).(crc|naks|sequence|timeouts|received|transmit)" $LOG
+
+}
+
+function diagnose_nak ( ) {
+
+  grep -n --color  -E "howdy|clear_bu|NAK|CRC|ACK|IGNORE|(errors|packets).(crc|naks|sequence|timeouts|received|transmit)" $LOG
+  grep -n -C 20 "NAK" $LOG
 
 }
 
@@ -21,16 +28,19 @@ function only_stats ( ) {
 }
 
 function summarize_stick ( ) {
+  echo ""
   if [[ 6 -eq $(grep -E "howdy" $LOG | grep stick | wc -l) ]] ; then
     echo "* stick runs appear to be ok"
   else
     echo "* not ok"
   fi
+  echo ""
 
 }
 
 function summarize_pump ( ) {
   _error=0
+  echo ""
   if [[ 4 -eq $(grep -E "howdy" $LOG | grep pump | wc -l) ]] ; then
     echo '## howdy! pump runs appear to be OK'
     echo ""
@@ -38,6 +48,7 @@ function summarize_pump ( ) {
     _error=1
     echo 'howdy! pump runs were NOT OK'
 
+    echo ""
     echo "### Last send command"
     echo ""
     echo '```'
@@ -58,29 +69,36 @@ function summarize_pump ( ) {
 
   fi
 
-  echo -n '* PAGES downloaded:'
+  echo -n '## downloaded:'
+  grep -E "finished.*ReadHistory" $LOG | sort | uniq | wc -l
   echo ""
   echo '```'
-  grep -E "finished.*ReadHistory" $LOG | sort | uniq | wc -l
+  grep -E "finished.*ReadHistory" $LOG | sort | uniq
   echo '```'
 
   if [[ 0 -eq $(grep -E "BadCRC" $LOG | wc -l) ]] ; then
     echo "* NO CRC ERROR FOUND"
   else
     _error=1
-    echo "* CRC ERROR FOUND"
     echo ""
     echo '## Diagnose CRC'
     echo ""
     echo '```'
     diagnose_crc
     echo '```'
+    echo ""
   fi
   if [[ 0 -eq $(grep -E "NAK" $LOG | wc -l) ]] ; then
     echo "* NO NAK FOUND"
   else
     _error=1
-    echo "* NAK FOUND"
+    echo ""
+    echo "## NAK FOUND"
+    echo ""
+    echo '```'
+    diagnose_nak
+    echo '```'
+    echo ""
   fi
 
   if [[ 0 -eq $_error ]] ; then
@@ -96,6 +114,7 @@ date
 echo '## stick'
 summarize_stick
 echo '## pump'
+echo ""
 summarize_pump
 
 #####
