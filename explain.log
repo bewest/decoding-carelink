@@ -1,11 +1,12 @@
 OUT
 ## Observations
-Mon Jan  7 14:44:42 PST 2013
+Mon Jan  7 18:46:13 PST 2013
 ## stick
 * stick runs appear to be ok
 ## pump
 howdy! pump runs were NOT OK
 ### Last send command
+
 ```
 DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]>>:STARTING POLL PHASE:attempt:0
 DEBUG:stick:<Stick:status:<LinkStatus:0x03:error::size(78)>:command:<TransmitPacket:ReadHistoryData[page][0]>>:poll:attempt:0
@@ -13,6 +14,7 @@ DEBUG:stick:read_status
 INFO:stick:link Stick:status:<LinkStatus:0x03:error::size(78)>:command:<LinkStatus:0x03:error::size(64)> processing LinkStatus:0x03:error:)
 ```
 ### Traceback
+
 ```
 0078   0x64 0x00 0x00 0x00 0x00 0x00 0x00 0x00    d.......
 0080   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -42,6 +44,7 @@ Traceback (most recent call last):
 stick.BadCRC: ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0xd0:raw:
 ```
 ### stats
+
 ```
 290:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 919L, 'errors.naks': 2, 'errors.sequence': 0, 'packets.received': 917L, 'errors.crc': 0}
 308:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 4, 'packets.transmit': 473L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 446L, 'errors.crc': 0}
@@ -64,11 +67,14 @@ stick.BadCRC: ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0xd0:ra
 361:           'errors.sequence': 2,
 362:           'errors.timeouts': 4,
 ```
-* PAGES downloaded:```
+* PAGES downloaded:
+```
 1
 ```
 * CRC ERROR FOUND
+
 ## Diagnose CRC
+
 ```
 19:  echo "Was there an ACK ERROR?"
 20:  echo "### DIAGNOSE CRC"

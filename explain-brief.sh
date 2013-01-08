@@ -33,21 +33,25 @@ function summarize_pump ( ) {
   _error=0
   if [[ 4 -eq $(grep -E "howdy" $LOG | grep pump | wc -l) ]] ; then
     echo '## howdy! pump runs appear to be OK'
+    echo ""
   else
     _error=1
     echo 'howdy! pump runs were NOT OK'
 
     echo "### Last send command"
+    echo ""
     echo '```'
     grep -B 1000 -E "Traceback" $LOG | grep -A 2 -E "Transmit" | tail -n 4
     echo '```'
 
     echo "### Traceback"
+    echo ""
     echo '```'
     grep -B 10 -A 15 -E "Traceback" $LOG
     echo '```'
 
     echo "### stats"
+    echo ""
     echo '```'
     grep -A 1000 -E "Traceback" $LOG | only_stats | head -n 20
     echo '```'
@@ -55,6 +59,7 @@ function summarize_pump ( ) {
   fi
 
   echo -n '* PAGES downloaded:'
+  echo ""
   echo '```'
   grep -E "finished.*ReadHistory" $LOG | sort | uniq | wc -l
   echo '```'
@@ -64,7 +69,9 @@ function summarize_pump ( ) {
   else
     _error=1
     echo "* CRC ERROR FOUND"
+    echo ""
     echo '## Diagnose CRC'
+    echo ""
     echo '```'
     diagnose_crc
     echo '```'
