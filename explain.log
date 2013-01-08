@@ -1,8 +1,8 @@
 OUT
 ## Observations
-Mon Jan  7 22:11:48 PST 2013
+Mon Jan  7 22:18:38 PST 2013
 ## stick
-* stick runs appear to be ok
+* not ok
 ## pump
 howdy! pump runs were NOT OK
 ### Last send command
@@ -42,30 +42,57 @@ Traceback (most recent call last):
   File "/home/bewest/src/decoding-carelink/pump/stick.py", line 263, in parse
     raise BadCRC(msg)
 stick.BadCRC: ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0xbe:raw:
+--
+INFO:root:usb.read.raw:
+0000   0x01 0x66 0x03 0x0b 0x2c 0x00 0x00 0x00    .f..,...
+0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
+0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
+0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
+Traceback (most recent call last):
+  File "pump/stick.py", line 661, in <module>
+    signal = stick.signal_strength( )
+  File "pump/stick.py", line 410, in signal_strength
+    return self.query(SignalStrength)
+  File "pump/stick.py", line 395, in query
+    return self.process( )
+  File "pump/stick.py", line 388, in process
+    ack, response = self.command.respond(raw)
+  File "pump/stick.py", line 51, in respond
+    assert False, ("NAK!!\n%s" % lib.hexdump(raw[:3]))
+AssertionError: NAK!!
+0000   0x01 0x66 0x03                             .f.
+Command exited with non-zero status 1
+python pump/stick.py /dev/ttyUSB0
+	elapsed 0:00.31
 ```
 ### stats
 
 ```
-290:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 821L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 820L, 'errors.crc': 0}
-308:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 494L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 469L, 'errors.crc': 0}
-309:INFO:__main__:{'radio': {'errors.crc': 0,
-310:           'errors.naks': 0,
-311:           'errors.sequence': 0,
-312:           'errors.timeouts': 0,
-313:           'packets.received': 469L,
-314:           'packets.transmit': 494L},
-315: 'usb': {'errors.crc': 0,
-316:         'errors.naks': 1,
-317:         'errors.sequence': 0,
-318:         'errors.timeouts': 0,
-319:         'packets.received': 820L,
-320:         'packets.transmit': 821L}}
-339:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 823L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 822L, 'errors.crc': 0}
-357:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 494L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 469L, 'errors.crc': 0}
-359:{'radio': {'errors.crc': 0,
-360:           'errors.naks': 0,
-361:           'errors.sequence': 0,
-362:           'errors.timeouts': 0,
+474:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1059L, 'errors.naks': 2, 'errors.sequence': 0, 'packets.received': 1057L, 'errors.crc': 0}
+492:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 606L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 576L, 'errors.crc': 0}
+493:INFO:__main__:{'radio': {'errors.crc': 0,
+494:           'errors.naks': 0,
+495:           'errors.sequence': 0,
+496:           'errors.timeouts': 0,
+497:           'packets.received': 576L,
+498:           'packets.transmit': 606L},
+499: 'usb': {'errors.crc': 0,
+500:         'errors.naks': 2,
+501:         'errors.sequence': 0,
+502:         'errors.timeouts': 0,
+503:         'packets.received': 1057L,
+504:         'packets.transmit': 1059L}}
+523:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1061L, 'errors.naks': 2, 'errors.sequence': 0, 'packets.received': 1059L, 'errors.crc': 0}
+541:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 607L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 577L, 'errors.crc': 0}
+543:{'radio': {'errors.crc': 0,
+544:           'errors.naks': 0,
+545:           'errors.sequence': 0,
+546:           'errors.timeouts': 0,
 ```
 * PAGES downloaded:
 ```
@@ -79,134 +106,134 @@ stick.BadCRC: ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0xbe:ra
 19:  echo "Was there an ACK ERROR?"
 20:  echo "### DIAGNOSE CRC"
 46:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
-233:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 638L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 637L, 'errors.crc': 0}
-251:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 394L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 374L, 'errors.crc': 0}
+233:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 868L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 867L, 'errors.crc': 0}
+251:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 501L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 476L, 'errors.crc': 0}
 252:INFO:__main__:{'radio': {'errors.crc': 0,
 253:           'errors.naks': 0,
 254:           'errors.sequence': 0,
 255:           'errors.timeouts': 0,
-256:           'packets.received': 374L,
-257:           'packets.transmit': 394L},
+256:           'packets.received': 476L,
+257:           'packets.transmit': 501L},
 258: 'usb': {'errors.crc': 0,
 259:         'errors.naks': 1,
 260:         'errors.sequence': 0,
 261:         'errors.timeouts': 0,
-262:         'packets.received': 637L,
-263:         'packets.transmit': 638L}}
-282:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 640L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 639L, 'errors.crc': 0}
-300:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 394L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 374L, 'errors.crc': 0}
+262:         'packets.received': 867L,
+263:         'packets.transmit': 868L}}
+282:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 870L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 869L, 'errors.crc': 0}
+300:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 501L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 476L, 'errors.crc': 0}
 302:{'radio': {'errors.crc': 0,
 303:           'errors.naks': 0,
 304:           'errors.sequence': 0,
 305:           'errors.timeouts': 0,
-306:           'packets.received': 374L,
-307:           'packets.transmit': 394L},
+306:           'packets.received': 476L,
+307:           'packets.transmit': 501L},
 308: 'usb': {'errors.crc': 0,
 309:         'errors.naks': 1,
 310:         'errors.sequence': 0,
 311:         'errors.timeouts': 0,
-312:         'packets.received': 639L,
-313:         'packets.transmit': 640L}}
+312:         'packets.received': 869L,
+313:         'packets.transmit': 870L}}
 314:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
 409:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 0:SHOULD DOWNLOAD :False
-427:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 646L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 645L, 'errors.crc': 0}
-445:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 394L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 374L, 'errors.crc': 0}
+427:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 876L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 875L, 'errors.crc': 0}
+445:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 501L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 476L, 'errors.crc': 0}
 446:INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
 447:{'radio': {'errors.crc': 0,
 448:           'errors.naks': 0,
 449:           'errors.sequence': 0,
 450:           'errors.timeouts': 0,
-451:           'packets.received': 374L,
-452:           'packets.transmit': 394L},
+451:           'packets.received': 476L,
+452:           'packets.transmit': 501L},
 453: 'usb': {'errors.crc': 0,
 454:         'errors.naks': 1,
 455:         'errors.sequence': 0,
 456:         'errors.timeouts': 0,
-457:         'packets.received': 645L,
-458:         'packets.transmit': 646L}}
-478:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 648L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 647L, 'errors.crc': 0}
-496:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 394L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 374L, 'errors.crc': 0}
+457:         'packets.received': 875L,
+458:         'packets.transmit': 876L}}
+478:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 878L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 877L, 'errors.crc': 0}
+496:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 501L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 476L, 'errors.crc': 0}
 498:{'radio': {'errors.crc': 0,
 499:           'errors.naks': 0,
 500:           'errors.sequence': 0,
 501:           'errors.timeouts': 0,
-502:           'packets.received': 374L,
-503:           'packets.transmit': 394L},
+502:           'packets.received': 476L,
+503:           'packets.transmit': 501L},
 504: 'usb': {'errors.crc': 0,
 505:         'errors.naks': 1,
 506:         'errors.sequence': 0,
 507:         'errors.timeouts': 0,
-508:         'packets.received': 647L,
-509:         'packets.transmit': 648L}}
+508:         'packets.received': 877L,
+509:         'packets.transmit': 878L}}
 510:INFO:__main__:howdy! all done looking at the stick
 516:INFO:__main__:howdy! I'm going to take a look at your pump.
-656:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 656L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 655L, 'errors.crc': 0}
-674:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 394L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 374L, 'errors.crc': 0}
+656:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 886L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 885L, 'errors.crc': 0}
+674:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 501L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 476L, 'errors.crc': 0}
 675:INFO:__main__:{'radio': {'errors.crc': 0,
 676:           'errors.naks': 0,
 677:           'errors.sequence': 0,
 678:           'errors.timeouts': 0,
-679:           'packets.received': 374L,
-680:           'packets.transmit': 394L},
+679:           'packets.received': 476L,
+680:           'packets.transmit': 501L},
 681: 'usb': {'errors.crc': 0,
 682:         'errors.naks': 1,
 683:         'errors.sequence': 0,
 684:         'errors.timeouts': 0,
-685:         'packets.received': 655L,
-686:         'packets.transmit': 656L}}
+685:         'packets.received': 885L,
+686:         'packets.transmit': 886L}}
 712:INFO:__main__:sleeping 17 before download
 713:INFO:__main__:no download required
 714:INFO:__main__:manually download PowerControl
 744:INFO:stick:download_packet:15
 760:WARNING:stick:bad zero CRC?
 761:INFO:__main__:ENDING manual download:
-780:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 661L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 660L, 'errors.crc': 0}
-798:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 396L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 376L, 'errors.crc': 0}
+780:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 891L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 890L, 'errors.crc': 0}
+798:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 503L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 478L, 'errors.crc': 0}
 799:INFO:__main__:{'radio': {'errors.crc': 0,
 800:           'errors.naks': 0,
 801:           'errors.sequence': 0,
 802:           'errors.timeouts': 0,
-803:           'packets.received': 376L,
-804:           'packets.transmit': 396L},
+803:           'packets.received': 478L,
+804:           'packets.transmit': 503L},
 805: 'usb': {'errors.crc': 0,
 806:         'errors.naks': 1,
 807:         'errors.sequence': 0,
 808:         'errors.timeouts': 0,
-809:         'packets.received': 660L,
-810:         'packets.transmit': 661L}}
+809:         'packets.received': 890L,
+810:         'packets.transmit': 891L}}
 834:INFO:__main__:sleeping 0 before download
 835:INFO:__main__:proceeding with download
 884:INFO:stick:download_packet:78
-925:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 667L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 666L, 'errors.crc': 0}
-943:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 397L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 377L, 'errors.crc': 0}
+925:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 897L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 896L, 'errors.crc': 0}
+943:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 504L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 479L, 'errors.crc': 0}
 944:INFO:__main__:{'radio': {'errors.crc': 0,
 945:           'errors.naks': 0,
 946:           'errors.sequence': 0,
 947:           'errors.timeouts': 0,
-948:           'packets.received': 377L,
-949:           'packets.transmit': 397L},
+948:           'packets.received': 479L,
+949:           'packets.transmit': 504L},
 950: 'usb': {'errors.crc': 0,
 951:         'errors.naks': 1,
 952:         'errors.sequence': 0,
 953:         'errors.timeouts': 0,
-954:         'packets.received': 666L,
-955:         'packets.transmit': 667L}}
+954:         'packets.received': 896L,
+955:         'packets.transmit': 897L}}
 956:INFO:__main__:howdy! all done looking at pump
 962:INFO:__main__:howdy! I'm going to take a look at your pump and grab lots of info.
-1102:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 675L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 674L, 'errors.crc': 0}
-1120:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 397L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 377L, 'errors.crc': 0}
+1102:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 905L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 904L, 'errors.crc': 0}
+1120:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 504L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 479L, 'errors.crc': 0}
 1121:INFO:__main__:{'radio': {'errors.crc': 0,
 1122:           'errors.naks': 0,
 1123:           'errors.sequence': 0,
 1124:           'errors.timeouts': 0,
-1125:           'packets.received': 377L,
-1126:           'packets.transmit': 397L},
+1125:           'packets.received': 479L,
+1126:           'packets.transmit': 504L},
 1127: 'usb': {'errors.crc': 0,
 1128:         'errors.naks': 1,
 1129:         'errors.sequence': 0,
 1130:         'errors.timeouts': 0,
-1131:         'packets.received': 674L,
-1132:         'packets.transmit': 675L}}
+1131:         'packets.received': 904L,
+1132:         'packets.transmit': 905L}}
 1156:INFO:session:sleeping 0 before download
 1157:INFO:session:proceeding with download
 1206:INFO:stick:download_packet:78
@@ -261,20 +288,20 @@ stick.BadCRC: ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0xbe:ra
 2893:INFO:stick:download_packet:142
 2924:WARNING:stick:bad zero CRC?
 2950:INFO:stick:download_packet:142
-3256:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 747L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 746L, 'errors.crc': 0}
-3274:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 428L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 407L, 'errors.crc': 0}
+3256:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 977L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 976L, 'errors.crc': 0}
+3274:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 535L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 509L, 'errors.crc': 0}
 3275:INFO:__main__:{'radio': {'errors.crc': 0,
 3276:           'errors.naks': 0,
 3277:           'errors.sequence': 0,
 3278:           'errors.timeouts': 0,
-3279:           'packets.received': 407L,
-3280:           'packets.transmit': 428L},
+3279:           'packets.received': 509L,
+3280:           'packets.transmit': 535L},
 3281: 'usb': {'errors.crc': 0,
 3282:         'errors.naks': 1,
 3283:         'errors.sequence': 0,
 3284:         'errors.timeouts': 0,
-3285:         'packets.received': 746L,
-3286:         'packets.transmit': 747L}}
+3285:         'packets.received': 976L,
+3286:         'packets.transmit': 977L}}
 3311:INFO:session:sleeping 0 before download
 3312:INFO:session:proceeding with download
 3361:INFO:stick:download_packet:78
@@ -330,133 +357,104 @@ stick.BadCRC: ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0xbe:ra
 6009:Was there an ACK ERROR?
 6010:### DIAGNOSE CRC
 6011:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
-6198:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 821L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 820L, 'errors.crc': 0}
-6216:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 494L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 469L, 'errors.crc': 0}
-6217:INFO:__main__:{'radio': {'errors.crc': 0,
-6218:           'errors.naks': 0,
-6219:           'errors.sequence': 0,
-6220:           'errors.timeouts': 0,
-6221:           'packets.received': 469L,
-6222:           'packets.transmit': 494L},
-6223: 'usb': {'errors.crc': 0,
-6224:         'errors.naks': 1,
-6225:         'errors.sequence': 0,
-6226:         'errors.timeouts': 0,
-6227:         'packets.received': 820L,
-6228:         'packets.transmit': 821L}}
-6247:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 823L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 822L, 'errors.crc': 0}
-6265:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 494L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 469L, 'errors.crc': 0}
-6267:{'radio': {'errors.crc': 0,
-6268:           'errors.naks': 0,
-6269:           'errors.sequence': 0,
-6270:           'errors.timeouts': 0,
-6271:           'packets.received': 469L,
-6272:           'packets.transmit': 494L},
-6273: 'usb': {'errors.crc': 0,
-6274:         'errors.naks': 1,
-6275:         'errors.sequence': 0,
-6276:         'errors.timeouts': 0,
-6277:         'packets.received': 822L,
-6278:         'packets.transmit': 823L}}
-6279:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
-6305:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 398:SHOULD DOWNLOAD :True
-6306:INFO:__main__:XXX:clear_buffer[attempt][0]:download the size? 398:segments[0],total_segments[0]:raw[0]
-6307:INFO:__main__:XXX:clear_buffer[attempt][0] size:398:segments[0],total_segments[0]:raw[0]:clear_buffer BUFFER self.download( )
-6333:INFO:__main__:download_packet:526
-6437:INFO:__main__:download_packet:142
-6493:INFO:__main__:download_packet:142
-6524:INFO:__main__:XXX:clear_buffer[attempt][0]:tx:found:segments[1],total_segments[768]:raw[768]:len(raw):768:expected:398:len(segment):768
-6525:INFO:__main__:XXX:clear_buffer[attempt][0] downloaded 768 segment:segments[1],total_segments[768]:raw[768]:RAW:
-6733:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 836L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 835L, 'errors.crc': 0}
-6751:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 501L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 476L, 'errors.crc': 0}
-6753:{'radio': {'errors.crc': 0,
-6754:           'errors.naks': 0,
-6755:           'errors.sequence': 0,
-6756:           'errors.timeouts': 0,
-6757:           'packets.received': 476L,
-6758:           'packets.transmit': 501L},
-6759: 'usb': {'errors.crc': 0,
-6760:         'errors.naks': 1,
-6761:         'errors.sequence': 0,
-6762:         'errors.timeouts': 0,
-6763:         'packets.received': 835L,
-6764:         'packets.transmit': 836L}}
-6879:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 838L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 837L, 'errors.crc': 0}
-6897:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 501L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 476L, 'errors.crc': 0}
-6899:{'radio': {'errors.crc': 0,
-6900:           'errors.naks': 0,
-6901:           'errors.sequence': 0,
-6902:           'errors.timeouts': 0,
-6903:           'packets.received': 476L,
-6904:           'packets.transmit': 501L},
-6905: 'usb': {'errors.crc': 0,
-6906:         'errors.naks': 1,
-6907:         'errors.sequence': 0,
-6908:         'errors.timeouts': 0,
-6909:         'packets.received': 837L,
-6910:         'packets.transmit': 838L}}
-6911:INFO:__main__:howdy! all done looking at the stick
-6917:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
-7104:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 848L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 847L, 'errors.crc': 0}
-7122:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 501L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 476L, 'errors.crc': 0}
-7123:INFO:__main__:{'radio': {'errors.crc': 0,
-7124:           'errors.naks': 0,
-7125:           'errors.sequence': 0,
-7126:           'errors.timeouts': 0,
-7127:           'packets.received': 476L,
-7128:           'packets.transmit': 501L},
-7129: 'usb': {'errors.crc': 0,
-7130:         'errors.naks': 1,
-7131:         'errors.sequence': 0,
-7132:         'errors.timeouts': 0,
-7133:         'packets.received': 847L,
-7134:         'packets.transmit': 848L}}
-7153:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 850L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 849L, 'errors.crc': 0}
-7171:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 501L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 476L, 'errors.crc': 0}
-7173:{'radio': {'errors.crc': 0,
-7174:           'errors.naks': 0,
-7175:           'errors.sequence': 0,
-7176:           'errors.timeouts': 0,
-7177:           'packets.received': 476L,
-7178:           'packets.transmit': 501L},
-7179: 'usb': {'errors.crc': 0,
-7180:         'errors.naks': 1,
-7181:         'errors.sequence': 0,
-7182:         'errors.timeouts': 0,
-7183:         'packets.received': 849L,
-7184:         'packets.transmit': 850L}}
-7185:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
-7280:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 0:SHOULD DOWNLOAD :False
-7298:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 856L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 855L, 'errors.crc': 0}
-7316:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 501L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 476L, 'errors.crc': 0}
-7317:INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
-7318:{'radio': {'errors.crc': 0,
-7319:           'errors.naks': 0,
-7320:           'errors.sequence': 0,
-7321:           'errors.timeouts': 0,
-7322:           'packets.received': 476L,
-7323:           'packets.transmit': 501L},
-7324: 'usb': {'errors.crc': 0,
-7325:         'errors.naks': 1,
-7326:         'errors.sequence': 0,
-7327:         'errors.timeouts': 0,
-7328:         'packets.received': 855L,
-7329:         'packets.transmit': 856L}}
-7349:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 858L, 'errors.naks': 1, 'errors.sequence': 0, 'packets.received': 857L, 'errors.crc': 0}
-7367:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 501L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 476L, 'errors.crc': 0}
-7369:{'radio': {'errors.crc': 0,
-7370:           'errors.naks': 0,
-7371:           'errors.sequence': 0,
-7372:           'errors.timeouts': 0,
-7373:           'packets.received': 476L,
-7374:           'packets.transmit': 501L},
-7375: 'usb': {'errors.crc': 0,
-7376:         'errors.naks': 1,
-7377:         'errors.sequence': 0,
-7378:         'errors.timeouts': 0,
-7379:         'packets.received': 857L,
-7380:         'packets.transmit': 858L}}
-7381:INFO:__main__:howdy! all done looking at the stick
+6195:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
+6382:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1059L, 'errors.naks': 2, 'errors.sequence': 0, 'packets.received': 1057L, 'errors.crc': 0}
+6400:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 606L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 576L, 'errors.crc': 0}
+6401:INFO:__main__:{'radio': {'errors.crc': 0,
+6402:           'errors.naks': 0,
+6403:           'errors.sequence': 0,
+6404:           'errors.timeouts': 0,
+6405:           'packets.received': 576L,
+6406:           'packets.transmit': 606L},
+6407: 'usb': {'errors.crc': 0,
+6408:         'errors.naks': 2,
+6409:         'errors.sequence': 0,
+6410:         'errors.timeouts': 0,
+6411:         'packets.received': 1057L,
+6412:         'packets.transmit': 1059L}}
+6431:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1061L, 'errors.naks': 2, 'errors.sequence': 0, 'packets.received': 1059L, 'errors.crc': 0}
+6449:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 607L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 577L, 'errors.crc': 0}
+6451:{'radio': {'errors.crc': 0,
+6452:           'errors.naks': 0,
+6453:           'errors.sequence': 0,
+6454:           'errors.timeouts': 0,
+6455:           'packets.received': 577L,
+6456:           'packets.transmit': 607L},
+6457: 'usb': {'errors.crc': 0,
+6458:         'errors.naks': 2,
+6459:         'errors.sequence': 0,
+6460:         'errors.timeouts': 0,
+6461:         'packets.received': 1059L,
+6462:         'packets.transmit': 1061L}}
+6463:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
+6489:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 718:SHOULD DOWNLOAD :True
+6490:INFO:__main__:XXX:clear_buffer[attempt][0]:download the size? 718:segments[0],total_segments[0]:raw[0]
+6491:INFO:__main__:XXX:clear_buffer[attempt][0] size:718:segments[0],total_segments[0]:raw[0]:clear_buffer BUFFER self.download( )
+6517:INFO:__main__:download_packet:782
+6628:WARNING:__main__:bad zero CRC?
+6629:INFO:__main__:ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0x58:raw:
+6924:CRITICAL:__main__:XXX:clear_buffer[attempt][0]:IGNORING:segments[0],total_segments[0]:raw[0]:ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0x58:raw:
+7219:INFO:__main__:XXX:clear_buffer[attempt][0] downloaded 0 segment:segments[0],total_segments[0]:raw[0]:RAW:
+7332:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1070L, 'errors.naks': 2, 'errors.sequence': 0, 'packets.received': 1068L, 'errors.crc': 0}
+7350:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 608L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 578L, 'errors.crc': 0}
+7352:{'radio': {'errors.crc': 0,
+7353:           'errors.naks': 0,
+7354:           'errors.sequence': 0,
+7355:           'errors.timeouts': 0,
+7356:           'packets.received': 578L,
+7357:           'packets.transmit': 608L},
+7358: 'usb': {'errors.crc': 0,
+7359:         'errors.naks': 2,
+7360:         'errors.sequence': 0,
+7361:         'errors.timeouts': 0,
+7362:         'packets.received': 1068L,
+7363:         'packets.transmit': 1070L}}
+7381:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1072L, 'errors.naks': 2, 'errors.sequence': 0, 'packets.received': 1070L, 'errors.crc': 0}
+7399:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 608L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 578L, 'errors.crc': 0}
+7401:{'radio': {'errors.crc': 0,
+7402:           'errors.naks': 0,
+7403:           'errors.sequence': 0,
+7404:           'errors.timeouts': 0,
+7405:           'packets.received': 578L,
+7406:           'packets.transmit': 608L},
+7407: 'usb': {'errors.crc': 0,
+7408:         'errors.naks': 2,
+7409:         'errors.sequence': 0,
+7410:         'errors.timeouts': 0,
+7411:         'packets.received': 1070L,
+7412:         'packets.transmit': 1072L}}
+7413:INFO:__main__:XXX:clear_buffer[attempt][1]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
+7508:INFO:__main__:XXX:clear_buffer[attempt][1]:segments[0],total_segments[0]:raw[0]:END first poll 0:SHOULD DOWNLOAD :False
+7526:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1078L, 'errors.naks': 2, 'errors.sequence': 0, 'packets.received': 1076L, 'errors.crc': 0}
+7544:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 608L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 578L, 'errors.crc': 0}
+7545:INFO:__main__:XXX:clear_buffer[attempt][1]:END:no data:INTERFACE STATS
+7546:{'radio': {'errors.crc': 0,
+7547:           'errors.naks': 0,
+7548:           'errors.sequence': 0,
+7549:           'errors.timeouts': 0,
+7550:           'packets.received': 578L,
+7551:           'packets.transmit': 608L},
+7552: 'usb': {'errors.crc': 0,
+7553:         'errors.naks': 2,
+7554:         'errors.sequence': 0,
+7555:         'errors.timeouts': 0,
+7556:         'packets.received': 1076L,
+7557:         'packets.transmit': 1078L}}
+7577:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1080L, 'errors.naks': 2, 'errors.sequence': 0, 'packets.received': 1078L, 'errors.crc': 0}
+7595:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 608L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 578L, 'errors.crc': 0}
+7597:{'radio': {'errors.crc': 0,
+7598:           'errors.naks': 0,
+7599:           'errors.sequence': 0,
+7600:           'errors.timeouts': 0,
+7601:           'packets.received': 578L,
+7602:           'packets.transmit': 608L},
+7603: 'usb': {'errors.crc': 0,
+7604:         'errors.naks': 2,
+7605:         'errors.sequence': 0,
+7606:         'errors.timeouts': 0,
+7607:         'packets.received': 1078L,
+7608:         'packets.transmit': 1080L}}
+7609:INFO:__main__:howdy! all done looking at the stick
 ```
-* NO NAK FOUND
+* NAK FOUND
 * NOT A CLEAN RUN
