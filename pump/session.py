@@ -48,7 +48,8 @@ class Session(object):
     if self.expectedLength > 0:
       log.info('proceeding with download')
       data = self.stick.download( )
-      self.command.data = data
+      #self.command.data = data
+      self.command.respond(data)
       return data
       # remove
       for i in xrange(3):
@@ -86,6 +87,15 @@ class Pump(Session):
     self.model = model
     return model
 
+  def read_history_0(self):
+    log.info("read HISTORY DATA")
+    comm = commands.ReadHistoryData(serial=self.serial, page=0)
+    self.execute(comm)
+    log.info('comm:READ history data page!!!:\n%s' % (lib.hexdump(comm.getData( ))))
+
+  def execute(self, command):
+    command.serial = self.serial
+    return super(type(self), self).execute(command)
   def query(self, Command):
     command = Command(serial=self.serial)
     self.execute(command)
@@ -114,6 +124,8 @@ if __name__ == '__main__':
   session.power_control( )
   log.info(pformat(stick.interface_stats( )))
   log.info('PUMP MODEL: %s' % session.read_model( ))
+  log.info(pformat(stick.interface_stats( )))
+  log.info('PUMP READ PAGE 0: %s' % session.read_history_0( ))
   log.info(pformat(stick.interface_stats( )))
   log.info("howdy! all done looking at pump")
   # stick.open( )

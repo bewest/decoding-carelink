@@ -175,7 +175,7 @@ summarize_pump
 ## cat explain.log
 OUT
 ## Observations
-Tue Jan  8 23:36:20 PST 2013
+Wed Jan  9 09:49:45 PST 2013
 
 ## stick
 
@@ -185,13 +185,19 @@ Tue Jan  8 23:36:20 PST 2013
 ## pump
 
 
-## downloaded:4
+## downloaded:10
 
 ```
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0]:data:bytearray(b''), bytearray(b'\x00\xc4\x80\x80\xa7\x01 \x88P\xe4\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0]:data:bytearray(b''), bytearray(b'\x00\xc5\x80\x80\xa7\x01 \x88Py\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0]:data:bytearray(b''), bytearray(b'\x00\xc5\x80@\xa7\x01 \x88P<\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0]:data:bytearray(b''), bytearray(b'\x00\xc5\x80\xc0\xa7\x01 \x88P\x81\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b''), bytearray(b'\x00\x02\x00\x12\x00\x00\x04\xca\x00\x00\x05!\x00\x00\x00\xc2\x00Y\x04\x12\x04q\x00M\x00\x00\x00\x00\x00\x00\x01\x00q\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b''), bytearray(b'\x00\xcf\x80@\xa7\x01 \x88P\xb4\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b''), bytearray(b'\x00\xcf\x80\x80\xa7\x01 \x88P\xf1\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b''), bytearray(b'\x00\xcf\x80\x80\xa7\x01 \x88P\xf1\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x03\x00\x03\x92\x9e\x0b\x01\x06\x07\x00\x00\x02L\xa1\x06l\xa1\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x02L\x02Ld\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b''), bytearray(b'\x00\xcf\x80\x80\xa7\x01 \x88P\xf1\x04\xda\x82\x0cl\x82\x0c\x05\x00edf\x12\x00\x00\x04\xda\x03\x9eK\x01<\x19\x00O\x01<\x19\x01<d\x00\x00\x00\x00\x00\x00\x10\x10\x00\x00\x00d\x01V\xca\x06\x01\x06\x17\x00')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b''), bytearray(b'\x00\xcf\x80\x80\xa7\x01 \x88P\xf1\x01\x12\x17\x00\x9f\x08\x14\x01\x12\x18\x00\x80\x08\x14\x01\x0c\x07\x00\x00\x00\x06\x81\x12l\x81\x12\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x06\x00\x06d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b''), bytearray(b'\x00\xcf\x80\x80\xa7\x01 \x88P\xf1\x00\x02\x00!\x00l!\x00\x05\x0c\x00\xe8\x00\x00\x00\x00\x02\x00\x02\x00d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\x00\x0c\x9c\x13\x02\x00\x17')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b''), bytearray(b'\x00\xcf\x80\x80\xa7\x01 \x88P\xf1\x00\x00,\x00l,\x00\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x00\x00-\x00l-')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b''), bytearray(b'\x00\xcf\x80\x80\xa7\x01 \x88P\xf1\x00\x00\x00\x00\x00\x07\x00\x00\x00\x00\x15\x80l\x15\x80\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b''), bytearray(b'\x00\xcf\x80\x80\xa7\x01 \x88P\xf1\x1f\x00)C\x04A\x00\x07\x00\x00\x04\xcc\x01\x80l\x01\x80\x05\x00ddd\x0b\x00\x00\x04\xcc\x03\xbeN\x01\x0e\x16\x00A\x01\x0e\x16\x01\x04`\x00\x00\x00\x00\n\x04\x0c\x0b\x00\x00')
 ```
 
 ## howdy! pump runs appear to be OK
@@ -203,908 +209,1911 @@ INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0]:data:byte
 19:  echo "Was there an ACK ERROR?"
 20:  echo "### DIAGNOSE CRC"
 46:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
-237:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 337L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 337L, 'errors.crc': 0}
-255:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 197L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 187L, 'errors.crc': 0}
-256:INFO:__main__:{'radio': {'errors.crc': 0,
-257:           'errors.naks': 0,
-258:           'errors.sequence': 0,
-259:           'errors.timeouts': 0,
-260:           'packets.received': 187L,
-261:           'packets.transmit': 197L},
-262: 'usb': {'errors.crc': 0,
-263:         'errors.naks': 0,
-264:         'errors.sequence': 0,
-265:         'errors.timeouts': 0,
-266:         'packets.received': 337L,
-267:         'packets.transmit': 337L}}
-286:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 339L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 339L, 'errors.crc': 0}
-304:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 197L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 187L, 'errors.crc': 0}
-306:{'radio': {'errors.crc': 0,
-307:           'errors.naks': 0,
-308:           'errors.sequence': 0,
-309:           'errors.timeouts': 0,
-310:           'packets.received': 187L,
-311:           'packets.transmit': 197L},
-312: 'usb': {'errors.crc': 0,
-313:         'errors.naks': 0,
-314:         'errors.sequence': 0,
-315:         'errors.timeouts': 0,
-316:         'packets.received': 339L,
-317:         'packets.transmit': 339L}}
-318:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
-413:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 0:SHOULD DOWNLOAD :False
-431:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 345L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 345L, 'errors.crc': 0}
-449:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 197L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 187L, 'errors.crc': 0}
-450:INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
-451:{'radio': {'errors.crc': 0,
-452:           'errors.naks': 0,
-453:           'errors.sequence': 0,
-454:           'errors.timeouts': 0,
-455:           'packets.received': 187L,
-456:           'packets.transmit': 197L},
-457: 'usb': {'errors.crc': 0,
-458:         'errors.naks': 0,
-459:         'errors.sequence': 0,
-460:         'errors.timeouts': 0,
-461:         'packets.received': 345L,
-462:         'packets.transmit': 345L}}
-482:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 347L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 347L, 'errors.crc': 0}
-500:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 197L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 187L, 'errors.crc': 0}
-502:{'radio': {'errors.crc': 0,
-503:           'errors.naks': 0,
-504:           'errors.sequence': 0,
-505:           'errors.timeouts': 0,
-506:           'packets.received': 187L,
-507:           'packets.transmit': 197L},
-508: 'usb': {'errors.crc': 0,
-509:         'errors.naks': 0,
-510:         'errors.sequence': 0,
-511:         'errors.timeouts': 0,
-512:         'packets.received': 347L,
-513:         'packets.transmit': 347L}}
-514:INFO:__main__:howdy! all done looking at the stick
-520:INFO:__main__:howdy! I'm going to take a look at your pump.
-660:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 355L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 355L, 'errors.crc': 0}
-678:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 197L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 187L, 'errors.crc': 0}
-679:INFO:__main__:{'radio': {'errors.crc': 0,
-680:           'errors.naks': 0,
-681:           'errors.sequence': 0,
-682:           'errors.timeouts': 0,
-683:           'packets.received': 187L,
-684:           'packets.transmit': 197L},
-685: 'usb': {'errors.crc': 0,
-686:         'errors.naks': 0,
-687:         'errors.sequence': 0,
-688:         'errors.timeouts': 0,
-689:         'packets.received': 355L,
-690:         'packets.transmit': 355L}}
-716:INFO:__main__:sleeping 17 before download
-717:INFO:__main__:no download required
-718:INFO:__main__:manually download PowerControl
-719:INFO:stick:download:start:0
-720:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-750:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-751:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-752:INFO:stick:download_packet:15
-768:WARNING:stick:bad zero CRC?
-769:INFO:stick:download(attempts[1],expect[15],results[1]:data[1]):adding segment
-770:INFO:stick:download(attempts[1],expect[15],results[1]:data[1]):DONE
-771:INFO:__main__:ENDING manual download:
-790:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 360L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 360L, 'errors.crc': 0}
-808:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 199L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 189L, 'errors.crc': 0}
-809:INFO:__main__:{'radio': {'errors.crc': 0,
-810:           'errors.naks': 0,
-811:           'errors.sequence': 0,
-812:           'errors.timeouts': 0,
-813:           'packets.received': 189L,
-814:           'packets.transmit': 199L},
-815: 'usb': {'errors.crc': 0,
-816:         'errors.naks': 0,
-817:         'errors.sequence': 0,
-818:         'errors.timeouts': 0,
-819:         'packets.received': 360L,
-820:         'packets.transmit': 360L}}
-844:INFO:__main__:sleeping 0 before download
-845:INFO:__main__:proceeding with download
-846:INFO:stick:download:start:0
-847:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-896:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-897:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-898:INFO:stick:download_packet:78
-921:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-922:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-941:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 366L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 366L, 'errors.crc': 0}
-959:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 200L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 190L, 'errors.crc': 0}
-960:INFO:__main__:{'radio': {'errors.crc': 0,
-961:           'errors.naks': 0,
-962:           'errors.sequence': 0,
-963:           'errors.timeouts': 0,
-964:           'packets.received': 190L,
-965:           'packets.transmit': 200L},
-966: 'usb': {'errors.crc': 0,
-967:         'errors.naks': 0,
-968:         'errors.sequence': 0,
-969:         'errors.timeouts': 0,
-970:         'packets.received': 366L,
-971:         'packets.transmit': 366L}}
-972:INFO:__main__:howdy! all done looking at pump
-990:INFO:__main__:howdy! I'm going to take a look at your pump and grab lots of info.
-1130:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 374L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 374L, 'errors.crc': 0}
-1148:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 200L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 190L, 'errors.crc': 0}
-1149:INFO:__main__:{'radio': {'errors.crc': 0,
-1150:           'errors.naks': 0,
-1151:           'errors.sequence': 0,
-1152:           'errors.timeouts': 0,
-1153:           'packets.received': 190L,
-1154:           'packets.transmit': 200L},
-1155: 'usb': {'errors.crc': 0,
-1156:         'errors.naks': 0,
-1157:         'errors.sequence': 0,
-1158:         'errors.timeouts': 0,
-1159:         'packets.received': 374L,
-1160:         'packets.transmit': 374L}}
-1184:INFO:session:sleeping 0 before download
-1185:INFO:session:proceeding with download
-1186:INFO:stick:download:start:0
-1187:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-1236:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-1237:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-1238:INFO:stick:download_packet:78
-1261:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-1262:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-1287:INFO:session:sleeping 0 before download
-1288:INFO:session:proceeding with download
-1289:INFO:stick:download:start:0
-1290:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-1339:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-1340:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-1341:INFO:stick:download_packet:78
-1364:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-1365:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-1392:INFO:session:sleeping 0 before download
-1393:INFO:session:proceeding with download
-1394:INFO:stick:download:start:0
-1395:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-1444:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-1445:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-1446:INFO:stick:download_packet:78
-1469:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-1470:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-1496:INFO:session:sleeping 0 before download
-1497:INFO:session:proceeding with download
-1498:INFO:stick:download:start:0
-1499:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-1548:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-1549:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-1550:INFO:stick:download_packet:78
-1573:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-1574:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-1600:INFO:session:sleeping 0 before download
-1601:INFO:session:proceeding with download
-1602:INFO:stick:download:start:0
-1603:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-1652:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-1653:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-1654:INFO:stick:download_packet:78
-1677:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-1678:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-1704:INFO:session:sleeping 0 before download
-1705:INFO:session:proceeding with download
-1706:INFO:stick:download:start:0
-1707:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-1756:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-1757:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-1758:INFO:stick:download_packet:78
-1781:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-1782:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-1817:INFO:session:sleeping 0 before download
-1818:INFO:session:proceeding with download
-1819:INFO:stick:download:start:0
-1820:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-1869:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-1870:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-1871:INFO:stick:download_packet:78
-1894:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-1895:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-1930:INFO:session:sleeping 0 before download
-1931:INFO:session:proceeding with download
-1932:INFO:stick:download:start:0
-1933:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-1982:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-1983:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-1984:INFO:stick:download_packet:78
-2007:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-2008:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-2043:INFO:session:sleeping 0 before download
-2044:INFO:session:proceeding with download
-2045:INFO:stick:download:start:0
-2046:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-2095:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-2096:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-2097:INFO:stick:download_packet:78
-2120:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-2121:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-2156:INFO:session:sleeping 0 before download
-2157:INFO:session:proceeding with download
-2158:INFO:stick:download:start:0
-2159:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-2208:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-2209:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-2210:INFO:stick:download_packet:78
-2233:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-2234:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-2269:INFO:session:sleeping 0 before download
-2270:INFO:session:proceeding with download
-2271:INFO:stick:download:start:0
-2272:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-2321:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-2322:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-2323:INFO:stick:download_packet:78
-2346:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-2347:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-2382:INFO:session:sleeping 0 before download
-2383:INFO:session:proceeding with download
-2384:INFO:stick:download:start:0
-2385:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-2434:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-2435:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-2436:INFO:stick:download_packet:78
-2459:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-2460:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-2495:INFO:session:sleeping 0 before download
-2496:INFO:session:proceeding with download
-2497:INFO:stick:download:start:0
-2498:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-2547:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-2548:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-2549:INFO:stick:download_packet:78
-2572:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-2573:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-2621:INFO:session:sleeping 0.1 before download
-2622:INFO:session:proceeding with download
-2623:INFO:stick:download:start:0
-2624:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-2677:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-2678:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-2679:INFO:stick:download_packet:78
-2702:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-2703:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
-2729:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):end first poll
-2730:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
-2731:INFO:stick:download_packet:206
-2770:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-2771:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
-2797:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):end first poll
-2798:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
-2799:INFO:stick:download_packet:142
-2830:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-2831:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
-2857:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):end first poll
-2858:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
-2859:INFO:stick:download_packet:142
-2890:WARNING:stick:bad zero CRC?
-2891:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-2892:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
-2918:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):end first poll
-2919:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
-2920:INFO:stick:download_packet:142
-2951:WARNING:stick:bad zero CRC?
-2952:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-2953:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
-2979:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):end first poll
-2980:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
-2981:INFO:stick:download_packet:142
-3012:WARNING:stick:bad zero CRC?
-3013:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-3014:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
-3040:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):end first poll
-3041:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
-3042:INFO:stick:download_packet:142
-3073:WARNING:stick:bad zero CRC?
-3074:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
-3075:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
-3101:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):end first poll
-3102:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
-3103:INFO:stick:download_packet:142
-3134:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
-3135:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
-3411:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 446L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 446L, 'errors.crc': 0}
-3429:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 231L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 220L, 'errors.crc': 0}
-3430:INFO:__main__:{'radio': {'errors.crc': 0,
-3431:           'errors.naks': 0,
-3432:           'errors.sequence': 0,
-3433:           'errors.timeouts': 0,
-3434:           'packets.received': 220L,
-3435:           'packets.transmit': 231L},
-3436: 'usb': {'errors.crc': 0,
-3437:         'errors.naks': 0,
-3438:         'errors.sequence': 0,
-3439:         'errors.timeouts': 0,
-3440:         'packets.received': 446L,
-3441:         'packets.transmit': 446L}}
-3466:INFO:session:sleeping 0 before download
-3467:INFO:session:proceeding with download
-3468:INFO:stick:download:start:0
-3469:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-3518:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-3519:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-3520:INFO:stick:download_packet:78
-3543:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-3544:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-3592:INFO:session:sleeping 0.1 before download
-3593:INFO:session:proceeding with download
-3594:INFO:stick:download:start:0
-3595:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-3648:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-3649:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-3650:INFO:stick:download_packet:78
-3673:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-3674:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
-3700:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):end first poll
-3701:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
-3702:INFO:stick:download_packet:206
-3741:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-3742:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
-3768:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):end first poll
-3769:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
-3770:INFO:stick:download_packet:142
-3801:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-3802:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
-3828:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):end first poll
-3829:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
-3830:INFO:stick:download_packet:142
-3861:WARNING:stick:bad zero CRC?
-3862:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-3863:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
-3889:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):end first poll
-3890:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
-3891:INFO:stick:download_packet:142
-3922:WARNING:stick:bad zero CRC?
-3923:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-3924:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
-3950:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):end first poll
-3951:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
-3952:INFO:stick:download_packet:142
-3983:WARNING:stick:bad zero CRC?
-3984:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-3985:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
-4011:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):end first poll
-4012:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
-4013:INFO:stick:download_packet:142
-4044:WARNING:stick:bad zero CRC?
-4045:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
-4046:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
-4072:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):end first poll
-4073:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
-4074:INFO:stick:download_packet:142
-4105:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
-4106:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
-4402:INFO:session:sleeping 0.1 before download
-4403:INFO:session:proceeding with download
-4404:INFO:stick:download:start:0
-4405:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-4458:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-4459:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-4460:INFO:stick:download_packet:78
-4483:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-4484:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
-4510:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):end first poll
-4511:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
-4512:INFO:stick:download_packet:206
-4551:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-4552:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
-4578:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):end first poll
-4579:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
-4580:INFO:stick:download_packet:142
-4611:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-4612:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
-4638:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):end first poll
-4639:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
-4640:INFO:stick:download_packet:142
-4671:WARNING:stick:bad zero CRC?
-4672:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-4673:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
-4699:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):end first poll
-4700:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
-4701:INFO:stick:download_packet:142
-4732:WARNING:stick:bad zero CRC?
-4733:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-4734:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
-4760:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):end first poll
-4761:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
-4762:INFO:stick:download_packet:142
-4793:WARNING:stick:bad zero CRC?
-4794:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-4795:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
-4821:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):end first poll
-4822:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
-4823:INFO:stick:download_packet:142
-4854:WARNING:stick:bad zero CRC?
-4855:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
-4856:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
-4882:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):end first poll
-4883:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
-4884:INFO:stick:download_packet:142
-4915:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
-4916:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
-5212:INFO:session:sleeping 0.1 before download
-5213:INFO:session:proceeding with download
-5214:INFO:stick:download:start:0
-5215:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-5268:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-5269:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-5270:INFO:stick:download_packet:78
-5293:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-5294:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
-5320:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):end first poll
-5321:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
-5322:INFO:stick:download_packet:206
-5361:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-5362:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
-5388:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):end first poll
-5389:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
-5390:INFO:stick:download_packet:142
-5421:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-5422:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
-5448:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):end first poll
-5449:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
-5450:INFO:stick:download_packet:142
-5481:WARNING:stick:bad zero CRC?
-5482:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-5483:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
-5509:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):end first poll
-5510:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
-5511:INFO:stick:download_packet:142
-5542:WARNING:stick:bad zero CRC?
-5543:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-5544:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
-5570:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):end first poll
-5571:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
-5572:INFO:stick:download_packet:142
-5603:WARNING:stick:bad zero CRC?
-5604:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-5605:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
-5631:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):end first poll
-5632:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
-5633:INFO:stick:download_packet:142
-5664:WARNING:stick:bad zero CRC?
-5665:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
-5666:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
-5692:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):end first poll
-5693:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
-5694:INFO:stick:download_packet:142
-5725:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
-5726:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
-6022:INFO:session:sleeping 0.1 before download
-6023:INFO:session:proceeding with download
-6024:INFO:stick:download:start:0
-6025:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-6078:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-6079:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-6080:INFO:stick:download_packet:78
-6103:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-6104:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
-6130:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):end first poll
-6131:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
-6132:INFO:stick:download_packet:206
-6171:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-6172:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
-6198:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):end first poll
-6199:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
-6200:INFO:stick:download_packet:142
-6231:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-6232:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
-6258:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):end first poll
-6259:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
-6260:INFO:stick:download_packet:142
-6291:WARNING:stick:bad zero CRC?
-6292:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-6293:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
-6319:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):end first poll
-6320:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
-6321:INFO:stick:download_packet:142
-6352:WARNING:stick:bad zero CRC?
-6353:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-6354:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
-6380:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):end first poll
-6381:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
-6382:INFO:stick:download_packet:142
-6413:WARNING:stick:bad zero CRC?
-6414:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-6415:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
-6441:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):end first poll
-6442:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
-6443:INFO:stick:download_packet:142
-6474:WARNING:stick:bad zero CRC?
-6475:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
-6476:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
-6502:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):end first poll
-6503:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
-6504:INFO:stick:download_packet:142
-6535:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
-6536:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
-6832:INFO:session:sleeping 0.1 before download
-6833:INFO:session:proceeding with download
-6834:INFO:stick:download:start:0
-6835:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-6888:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-6889:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-6890:INFO:stick:download_packet:78
-6913:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-6914:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
-6940:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):end first poll
-6941:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
-6942:INFO:stick:download_packet:206
-6981:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-6982:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
-7008:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):end first poll
-7009:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
-7010:INFO:stick:download_packet:142
-7041:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-7042:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
-7068:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):end first poll
-7069:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
-7070:INFO:stick:download_packet:142
-7101:WARNING:stick:bad zero CRC?
-7102:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-7103:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
-7129:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):end first poll
-7130:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
-7131:INFO:stick:download_packet:142
-7162:WARNING:stick:bad zero CRC?
-7163:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-7164:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
-7190:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):end first poll
-7191:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
-7192:INFO:stick:download_packet:142
-7223:WARNING:stick:bad zero CRC?
-7224:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-7225:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
-7251:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):end first poll
-7252:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
-7253:INFO:stick:download_packet:142
-7284:WARNING:stick:bad zero CRC?
-7285:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
-7286:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
-7312:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):end first poll
-7313:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
-7314:INFO:stick:download_packet:142
-7345:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
-7346:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
-7642:INFO:session:sleeping 0.1 before download
-7643:INFO:session:proceeding with download
-7644:INFO:stick:download:start:0
-7645:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-7698:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-7699:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-7700:INFO:stick:download_packet:78
-7723:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-7724:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
-7750:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):end first poll
-7751:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
-7752:INFO:stick:download_packet:206
-7791:WARNING:stick:bad zero CRC?
-7792:INFO:stick:ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0x5f:raw:
-7871:INFO:stick:XXX:BadCRC:returning empty message instead of raising errors.
-7872:INFO:stick:download(attempts[2],expect[206],results[64]:data[0]):no data, try again
-7873:INFO:stick:download(attempts[3],expect[0],results[64]:data[0]):begin first poll
-7899:INFO:stick:download(attempts[3],expect[0],results[64]:data[0]):end first poll
-7900:INFO:stick:download(attempts[3],expect[0],results[64]:data[0]):proceed to download packet
-7901:INFO:stick:download_packet:142
-7932:INFO:stick:download(attempts[3],expect[142],results[192]:data[128]):adding segment
-7933:INFO:stick:download(attempts[4],expect[0],results[192]:data[0]):begin first poll
-7959:INFO:stick:download(attempts[4],expect[0],results[192]:data[0]):end first poll
-7960:INFO:stick:download(attempts[4],expect[0],results[192]:data[0]):proceed to download packet
-7961:INFO:stick:download_packet:142
-7992:WARNING:stick:bad zero CRC?
-7993:INFO:stick:download(attempts[4],expect[142],results[320]:data[128]):adding segment
-7994:INFO:stick:download(attempts[5],expect[0],results[320]:data[0]):begin first poll
-8020:INFO:stick:download(attempts[5],expect[0],results[320]:data[0]):end first poll
-8021:INFO:stick:download(attempts[5],expect[0],results[320]:data[0]):proceed to download packet
-8022:INFO:stick:download_packet:142
-8053:WARNING:stick:bad zero CRC?
-8054:INFO:stick:download(attempts[5],expect[142],results[448]:data[128]):adding segment
-8055:INFO:stick:download(attempts[6],expect[0],results[448]:data[0]):begin first poll
-8081:INFO:stick:download(attempts[6],expect[0],results[448]:data[0]):end first poll
-8082:INFO:stick:download(attempts[6],expect[0],results[448]:data[0]):proceed to download packet
-8083:INFO:stick:download_packet:78
-8106:WARNING:stick:bad zero CRC?
-8107:INFO:stick:download(attempts[6],expect[78],results[512]:data[64]):adding segment
-8108:INFO:stick:download(attempts[7],expect[0],results[512]:data[0]):begin first poll
-8134:INFO:stick:download(attempts[7],expect[0],results[512]:data[0]):end first poll
-8135:INFO:stick:download(attempts[7],expect[0],results[512]:data[0]):proceed to download packet
-8136:INFO:stick:download_packet:142
-8167:WARNING:stick:bad zero CRC?
-8168:INFO:stick:download(attempts[7],expect[142],results[640]:data[128]):adding segment
-8169:INFO:stick:download(attempts[8],expect[0],results[640]:data[0]):begin first poll
-8195:INFO:stick:download(attempts[8],expect[0],results[640]:data[0]):end first poll
-8196:INFO:stick:download(attempts[8],expect[0],results[640]:data[0]):proceed to download packet
-8197:INFO:stick:download_packet:206
-8236:INFO:stick:download(attempts[8],expect[206],results[832]:data[192]):adding segment
-8237:INFO:stick:download(attempts[8],expect[206],results[832]:data[192]):DONE
-8485:INFO:session:sleeping 0.1 before download
-8486:INFO:session:proceeding with download
-8487:INFO:stick:download:start:0
-8488:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-8541:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-8542:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-8543:INFO:stick:download_packet:78
-8566:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-8567:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
-8593:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):end first poll
-8594:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
-8595:INFO:stick:download_packet:206
-8634:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-8635:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
-8661:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):end first poll
-8662:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
-8663:INFO:stick:download_packet:142
-8694:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-8695:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
-8721:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):end first poll
-8722:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
-8723:INFO:stick:download_packet:142
-8754:WARNING:stick:bad zero CRC?
-8755:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-8756:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
-8782:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):end first poll
-8783:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
-8784:INFO:stick:download_packet:142
-8815:WARNING:stick:bad zero CRC?
-8816:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-8817:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
-8843:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):end first poll
-8844:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
-8845:INFO:stick:download_packet:142
-8876:WARNING:stick:bad zero CRC?
-8877:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-8878:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
-8904:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):end first poll
-8905:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
-8906:INFO:stick:download_packet:142
-8937:WARNING:stick:bad zero CRC?
-8938:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
-8939:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
-8965:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):end first poll
-8966:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
-8967:INFO:stick:download_packet:142
-8998:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
-8999:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
-9295:INFO:session:sleeping 0.1 before download
-9296:INFO:session:proceeding with download
-9297:INFO:stick:download:start:0
-9298:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-9351:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-9352:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-9353:INFO:stick:download_packet:78
-9376:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-9377:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
-9403:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):end first poll
-9404:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
-9405:INFO:stick:download_packet:206
-9444:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-9445:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
-9471:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):end first poll
-9472:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
-9473:INFO:stick:download_packet:142
-9504:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-9505:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
-9531:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):end first poll
-9532:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
-9533:INFO:stick:download_packet:142
-9564:WARNING:stick:bad zero CRC?
-9565:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-9566:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
-9592:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):end first poll
-9593:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
-9594:INFO:stick:download_packet:142
-9625:WARNING:stick:bad zero CRC?
-9626:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-9627:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
-9653:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):end first poll
-9654:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
-9655:INFO:stick:download_packet:142
-9686:WARNING:stick:bad zero CRC?
-9687:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-9688:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
-9714:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):end first poll
-9715:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
-9716:INFO:stick:download_packet:142
-9747:WARNING:stick:bad zero CRC?
-9748:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
-9749:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
-9775:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):end first poll
-9776:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
-9777:INFO:stick:download_packet:142
-9808:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
-9809:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
-10105:INFO:session:sleeping 0.1 before download
-10106:INFO:session:proceeding with download
-10107:INFO:stick:download:start:0
-10108:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
-10161:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):end first poll
-10162:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
-10163:INFO:stick:download_packet:78
-10186:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-10187:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
-10213:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):end first poll
-10214:INFO:stick:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
-10215:INFO:stick:download_packet:206
-10254:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-10255:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
-10281:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):end first poll
-10282:INFO:stick:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
-10283:INFO:stick:download_packet:142
-10314:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-10315:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
-10341:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):end first poll
-10342:INFO:stick:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
-10343:INFO:stick:download_packet:142
-10374:WARNING:stick:bad zero CRC?
-10375:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-10376:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
-10402:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):end first poll
-10403:INFO:stick:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
-10404:INFO:stick:download_packet:142
-10435:WARNING:stick:bad zero CRC?
-10436:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-10437:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
-10463:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):end first poll
-10464:INFO:stick:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
-10465:INFO:stick:download_packet:142
-10496:WARNING:stick:bad zero CRC?
-10497:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-10498:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
-10524:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):end first poll
-10525:INFO:stick:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
-10526:INFO:stick:download_packet:142
-10557:WARNING:stick:bad zero CRC?
-10558:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
-10559:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
-10585:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):end first poll
-10586:INFO:stick:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
-10587:INFO:stick:download_packet:142
-10618:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
-10619:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
-10895:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 614L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 614L, 'errors.crc': 0}
-10913:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 394L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 374L, 'errors.crc': 0}
-10914:INFO:__main__:{'radio': {'errors.crc': 0,
-10915:           'errors.naks': 0,
-10916:           'errors.sequence': 0,
-10917:           'errors.timeouts': 0,
-10918:           'packets.received': 374L,
-10919:           'packets.transmit': 394L},
-10920: 'usb': {'errors.crc': 0,
-10921:         'errors.naks': 0,
-10922:         'errors.sequence': 0,
-10923:         'errors.timeouts': 0,
-10924:         'packets.received': 614L,
-10925:         'packets.transmit': 614L}}
-10926:INFO:__main__:howdy! we downloaded a lot of pump info successfully.
-10932:Was there an ACK ERROR?
-10933:### DIAGNOSE CRC
-10934:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
-11121:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 624L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 624L, 'errors.crc': 0}
-11139:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 394L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 374L, 'errors.crc': 0}
-11140:INFO:__main__:{'radio': {'errors.crc': 0,
-11141:           'errors.naks': 0,
-11142:           'errors.sequence': 0,
-11143:           'errors.timeouts': 0,
-11144:           'packets.received': 374L,
-11145:           'packets.transmit': 394L},
-11146: 'usb': {'errors.crc': 0,
-11147:         'errors.naks': 0,
-11148:         'errors.sequence': 0,
-11149:         'errors.timeouts': 0,
-11150:         'packets.received': 624L,
-11151:         'packets.transmit': 624L}}
-11170:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 626L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 626L, 'errors.crc': 0}
-11188:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 394L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 374L, 'errors.crc': 0}
-11190:{'radio': {'errors.crc': 0,
-11191:           'errors.naks': 0,
-11192:           'errors.sequence': 0,
-11193:           'errors.timeouts': 0,
-11194:           'packets.received': 374L,
-11195:           'packets.transmit': 394L},
-11196: 'usb': {'errors.crc': 0,
-11197:         'errors.naks': 0,
-11198:         'errors.sequence': 0,
-11199:         'errors.timeouts': 0,
-11200:         'packets.received': 626L,
-11201:         'packets.transmit': 626L}}
-11202:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
-11297:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 0:SHOULD DOWNLOAD :False
-11315:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 632L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 632L, 'errors.crc': 0}
-11333:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 394L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 374L, 'errors.crc': 0}
-11334:INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
-11335:{'radio': {'errors.crc': 0,
-11336:           'errors.naks': 0,
-11337:           'errors.sequence': 0,
-11338:           'errors.timeouts': 0,
-11339:           'packets.received': 374L,
-11340:           'packets.transmit': 394L},
-11341: 'usb': {'errors.crc': 0,
-11342:         'errors.naks': 0,
-11343:         'errors.sequence': 0,
-11344:         'errors.timeouts': 0,
-11345:         'packets.received': 632L,
-11346:         'packets.transmit': 632L}}
-11366:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 634L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 634L, 'errors.crc': 0}
-11384:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 394L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 374L, 'errors.crc': 0}
-11386:{'radio': {'errors.crc': 0,
-11387:           'errors.naks': 0,
-11388:           'errors.sequence': 0,
-11389:           'errors.timeouts': 0,
-11390:           'packets.received': 374L,
-11391:           'packets.transmit': 394L},
-11392: 'usb': {'errors.crc': 0,
-11393:         'errors.naks': 0,
-11394:         'errors.sequence': 0,
-11395:         'errors.timeouts': 0,
-11396:         'packets.received': 634L,
-11397:         'packets.transmit': 634L}}
-11398:INFO:__main__:howdy! all done looking at the stick
-11404:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
-11591:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 644L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 644L, 'errors.crc': 0}
-11609:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 394L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 374L, 'errors.crc': 0}
-11610:INFO:__main__:{'radio': {'errors.crc': 0,
-11611:           'errors.naks': 0,
-11612:           'errors.sequence': 0,
-11613:           'errors.timeouts': 0,
-11614:           'packets.received': 374L,
-11615:           'packets.transmit': 394L},
-11616: 'usb': {'errors.crc': 0,
-11617:         'errors.naks': 0,
-11618:         'errors.sequence': 0,
-11619:         'errors.timeouts': 0,
-11620:         'packets.received': 644L,
-11621:         'packets.transmit': 644L}}
-11640:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 646L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 646L, 'errors.crc': 0}
-11658:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 394L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 374L, 'errors.crc': 0}
-11660:{'radio': {'errors.crc': 0,
-11661:           'errors.naks': 0,
-11662:           'errors.sequence': 0,
-11663:           'errors.timeouts': 0,
-11664:           'packets.received': 374L,
-11665:           'packets.transmit': 394L},
-11666: 'usb': {'errors.crc': 0,
-11667:         'errors.naks': 0,
-11668:         'errors.sequence': 0,
-11669:         'errors.timeouts': 0,
-11670:         'packets.received': 646L,
-11671:         'packets.transmit': 646L}}
-11672:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
-11767:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 0:SHOULD DOWNLOAD :False
-11785:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 652L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 652L, 'errors.crc': 0}
-11803:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 394L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 374L, 'errors.crc': 0}
-11804:INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
-11805:{'radio': {'errors.crc': 0,
-11806:           'errors.naks': 0,
-11807:           'errors.sequence': 0,
-11808:           'errors.timeouts': 0,
-11809:           'packets.received': 374L,
-11810:           'packets.transmit': 394L},
-11811: 'usb': {'errors.crc': 0,
-11812:         'errors.naks': 0,
-11813:         'errors.sequence': 0,
-11814:         'errors.timeouts': 0,
-11815:         'packets.received': 652L,
-11816:         'packets.transmit': 652L}}
-11836:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 654L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 654L, 'errors.crc': 0}
-11854:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 394L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 374L, 'errors.crc': 0}
-11856:{'radio': {'errors.crc': 0,
-11857:           'errors.naks': 0,
-11858:           'errors.sequence': 0,
-11859:           'errors.timeouts': 0,
-11860:           'packets.received': 374L,
-11861:           'packets.transmit': 394L},
-11862: 'usb': {'errors.crc': 0,
-11863:         'errors.naks': 0,
-11864:         'errors.sequence': 0,
-11865:         'errors.timeouts': 0,
-11866:         'packets.received': 654L,
-11867:         'packets.transmit': 654L}}
-11868:INFO:__main__:howdy! all done looking at the stick
+48:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+50:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+67:INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+68:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+70:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+88:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+90:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+107:INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+108:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+110:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+128:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+130:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+147:INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+148:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+150:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+168:INFO:__main__:test fetching product info Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>]
+169:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+171:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+193:INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+194:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+196:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+216:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+218:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+233:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2546L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2546L, 'errors.crc': 0}
+234:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+236:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+251:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1310L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1223L, 'errors.crc': 0}
+252:INFO:__main__:{'radio': {'errors.crc': 0,
+253:           'errors.naks': 0,
+254:           'errors.sequence': 2,
+255:           'errors.timeouts': 18,
+256:           'packets.received': 1223L,
+257:           'packets.transmit': 1310L},
+258: 'usb': {'errors.crc': 0,
+259:         'errors.naks': 0,
+260:         'errors.sequence': 0,
+261:         'errors.timeouts': 0,
+262:         'packets.received': 2546L,
+263:         'packets.transmit': 2546L}}
+265:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+267:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+282:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2548L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2548L, 'errors.crc': 0}
+283:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+285:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+300:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1310L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1223L, 'errors.crc': 0}
+302:{'radio': {'errors.crc': 0,
+303:           'errors.naks': 0,
+304:           'errors.sequence': 2,
+305:           'errors.timeouts': 18,
+306:           'packets.received': 1223L,
+307:           'packets.transmit': 1310L},
+308: 'usb': {'errors.crc': 0,
+309:         'errors.naks': 0,
+310:         'errors.sequence': 0,
+311:         'errors.timeouts': 0,
+312:         'packets.received': 2548L,
+313:         'packets.transmit': 2548L}}
+314:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
+315:DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>]>:STARTING POLL PHASE:attempt:0
+316:DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[None] poll_size[0] poll_i[0] command[<RadioStats:0x05 0x00:size(64)>]>:poll:attempt:0
+317:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+319:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+338:DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+339:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+341:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+360:DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[2] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:2
+361:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[2] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+363:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[2] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+382:DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[3] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:3
+383:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[3] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+385:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[3] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+404:INFO:__main__:Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[3] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]:STOP POLL after 4 attempts:size:0
+405:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 0:SHOULD DOWNLOAD :False
+406:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+408:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+423:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2554L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2554L, 'errors.crc': 0}
+424:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+426:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+441:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1310L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1223L, 'errors.crc': 0}
+442:INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
+443:{'radio': {'errors.crc': 0,
+444:           'errors.naks': 0,
+445:           'errors.sequence': 2,
+446:           'errors.timeouts': 18,
+447:           'packets.received': 1223L,
+448:           'packets.transmit': 1310L},
+449: 'usb': {'errors.crc': 0,
+450:         'errors.naks': 0,
+451:         'errors.sequence': 0,
+452:         'errors.timeouts': 0,
+453:         'packets.received': 2554L,
+454:         'packets.transmit': 2554L}}
+457:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+459:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+474:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2556L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2556L, 'errors.crc': 0}
+475:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+477:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+492:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1310L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1223L, 'errors.crc': 0}
+494:{'radio': {'errors.crc': 0,
+495:           'errors.naks': 0,
+496:           'errors.sequence': 2,
+497:           'errors.timeouts': 18,
+498:           'packets.received': 1223L,
+499:           'packets.transmit': 1310L},
+500: 'usb': {'errors.crc': 0,
+501:         'errors.naks': 0,
+502:         'errors.sequence': 0,
+503:         'errors.timeouts': 0,
+504:         'packets.received': 2556L,
+505:         'packets.transmit': 2556L}}
+506:INFO:__main__:howdy! all done looking at the stick
+512:INFO:__main__:howdy! I'm going to take a look at your pump.
+514:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+516:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+533:INFO:stick:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+534:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+536:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+554:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+556:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+573:INFO:stick:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+574:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+576:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+594:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+596:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+613:INFO:stick:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+614:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+616:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+635:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+637:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+652:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2564L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2564L, 'errors.crc': 0}
+653:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+655:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+670:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1310L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1223L, 'errors.crc': 0}
+671:INFO:__main__:{'radio': {'errors.crc': 0,
+672:           'errors.naks': 0,
+673:           'errors.sequence': 2,
+674:           'errors.timeouts': 18,
+675:           'packets.received': 1223L,
+676:           'packets.transmit': 1310L},
+677: 'usb': {'errors.crc': 0,
+678:         'errors.naks': 0,
+679:         'errors.sequence': 0,
+680:         'errors.timeouts': 0,
+681:         'packets.received': 2564L,
+682:         'packets.transmit': 2564L}}
+687:INFO:stick:link Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<TransmitPacket:PowerControl:data:unknown>] processing TransmitPacket:PowerControl:data:unknown)
+689:INFO:stick:link Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<TransmitPacket:PowerControl:data:unknown>] sending TransmitPacket:PowerControl:data:unknown)
+708:INFO:__main__:sleeping 17 before download
+709:INFO:__main__:no download required
+710:INFO:__main__:manually download PowerControl
+711:INFO:stick:download:start:0
+712:INFO:stick:Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[None] download_i[1] status[None] poll_size[None] poll_i[None] command[<TransmitPacket:PowerControl:data:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+713:DEBUG:stick:<Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[None] download_i[1] status[None] poll_size[None] poll_i[None] command[<TransmitPacket:PowerControl:data:unknown>]>:STARTING POLL PHASE:attempt:0
+714:DEBUG:stick:<Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[None] download_i[1] status[None] poll_size[0] poll_i[0] command[<TransmitPacket:PowerControl:data:unknown>]>:poll:attempt:0
+715:INFO:stick:link Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[None] download_i[1] status[None] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+717:INFO:stick:link Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[None] download_i[1] status[None] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+740:INFO:stick:Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[0] command[<LinkStatus:0x03:error::size(15)>]:STOP POLL after 1 attempts:size:15
+741:INFO:stick:Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<LinkStatus:0x03:error::size(15)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+742:INFO:stick:Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<LinkStatus:0x03:error::size(15)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+743:INFO:stick:Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<LinkStatus:0x03:error::size(15)>]:download_packet:15
+746:INFO:stick:link Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<ReadRadio:size:15>] sending ReadRadio:size:15)
+759:WARNING:stick:bad zero CRC?
+760:INFO:stick:Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<ReadRadio:size:15>]:download(attempts[1],expect[15],results[1]:data[1]):adding segment
+761:INFO:stick:Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<ReadRadio:size:15>]:download(attempts[1],expect[15],results[1]:data[1]):DONE
+762:INFO:__main__:ENDING manual download:
+764:INFO:stick:link Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[ReadRadio:size:15] download_i[False] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+766:INFO:stick:link Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[ReadRadio:size:15] download_i[False] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+781:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2569L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2569L, 'errors.crc': 0}
+782:INFO:stick:link Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[ReadRadio:size:15] download_i[False] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+784:INFO:stick:link Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[ReadRadio:size:15] download_i[False] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+799:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1312L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1225L, 'errors.crc': 0}
+800:INFO:__main__:{'radio': {'errors.crc': 0,
+801:           'errors.naks': 0,
+802:           'errors.sequence': 2,
+803:           'errors.timeouts': 18,
+804:           'packets.received': 1225L,
+805:           'packets.transmit': 1312L},
+806: 'usb': {'errors.crc': 0,
+807:         'errors.naks': 0,
+808:         'errors.sequence': 0,
+809:         'errors.timeouts': 0,
+810:         'packets.received': 2569L,
+811:         'packets.transmit': 2569L}}
+815:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:15] download_i[False] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<TransmitPacket:ReadPumpModel:data:unknown>] processing TransmitPacket:ReadPumpModel:data:unknown)
+817:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:15] download_i[False] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<TransmitPacket:ReadPumpModel:data:unknown>] sending TransmitPacket:ReadPumpModel:data:unknown)
+835:INFO:__main__:sleeping 0 before download
+836:INFO:__main__:proceeding with download
+837:INFO:stick:download:start:0
+838:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<TransmitPacket:ReadPumpModel:data:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+839:DEBUG:stick:<Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<TransmitPacket:ReadPumpModel:data:unknown>]>:STARTING POLL PHASE:attempt:0
+840:DEBUG:stick:<Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadPumpModel:data:unknown>]>:poll:attempt:0
+841:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+843:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+862:DEBUG:stick:<Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+863:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+865:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+884:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+885:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+886:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+887:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+889:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+910:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+911:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):DONE
+913:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:'515'] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+915:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:'515'] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+930:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2575L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2575L, 'errors.crc': 0}
+931:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:'515'] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+933:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:'515'] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+948:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1313L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1226L, 'errors.crc': 0}
+949:INFO:__main__:{'radio': {'errors.crc': 0,
+950:           'errors.naks': 0,
+951:           'errors.sequence': 2,
+952:           'errors.timeouts': 18,
+953:           'packets.received': 1226L,
+954:           'packets.transmit': 1313L},
+955: 'usb': {'errors.crc': 0,
+956:         'errors.naks': 0,
+957:         'errors.sequence': 0,
+958:         'errors.timeouts': 0,
+959:         'packets.received': 2575L,
+960:         'packets.transmit': 2575L}}
+965:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')>] processing TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b''))
+967:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')>] sending TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b''))
+986:INFO:__main__:sleeping 0.1 before download
+987:INFO:__main__:proceeding with download
+988:INFO:stick:download:start:0
+989:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+990:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')>]>:STARTING POLL PHASE:attempt:0
+991:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')>]>:poll:attempt:0
+992:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+994:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+1013:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+1014:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+1016:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+1035:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+1036:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+1037:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+1038:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+1040:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+1061:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+1062:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
+1063:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]>:STARTING POLL PHASE:attempt:0
+1064:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<ReadRadio:size:78>]>:poll:attempt:0
+1065:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+1067:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+1086:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[0] command[<LinkStatus:0x03:error::size(206)>]:STOP POLL after 1 attempts:size:206
+1087:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):end first poll
+1088:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
+1089:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download_packet:206
+1091:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>] sending ReadRadio:size:206)
+1128:WARNING:stick:bad zero CRC?
+1129:INFO:stick:ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0x5f:raw:
+1208:INFO:stick:XXX:BadCRC:returning empty message instead of raising errors.
+1209:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[2],expect[206],results[64]:data[0]):no data, try again
+1210:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[3],expect[0],results[64]:data[0]):begin first poll
+1211:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]>:STARTING POLL PHASE:attempt:0
+1212:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<ReadRadio:size:206>]>:poll:attempt:0
+1213:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+1215:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+1234:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+1235:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[64]:data[0]):end first poll
+1236:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[64]:data[0]):proceed to download packet
+1237:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+1239:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+1268:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[3],expect[142],results[192]:data[128]):adding segment
+1269:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[0],results[192]:data[0]):begin first poll
+1270:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+1271:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+1272:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+1274:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+1293:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+1294:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[192]:data[0]):end first poll
+1295:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[192]:data[0]):proceed to download packet
+1296:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+1298:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+1327:WARNING:stick:bad zero CRC?
+1328:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[142],results[320]:data[128]):adding segment
+1329:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[0],results[320]:data[0]):begin first poll
+1330:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+1331:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+1332:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+1334:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+1353:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+1354:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[320]:data[0]):end first poll
+1355:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[320]:data[0]):proceed to download packet
+1356:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+1358:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+1387:WARNING:stick:bad zero CRC?
+1388:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[142],results[448]:data[128]):adding segment
+1389:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[0],results[448]:data[0]):begin first poll
+1390:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+1391:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+1392:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+1394:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+1413:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+1414:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[448]:data[0]):end first poll
+1415:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[448]:data[0]):proceed to download packet
+1416:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+1418:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+1447:WARNING:stick:bad zero CRC?
+1448:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[142],results[576]:data[128]):adding segment
+1449:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[0],results[576]:data[0]):begin first poll
+1450:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+1451:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+1452:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+1454:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+1473:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+1474:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[576]:data[0]):end first poll
+1475:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[576]:data[0]):proceed to download packet
+1476:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+1478:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+1507:WARNING:stick:bad zero CRC?
+1508:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[142],results[704]:data[128]):adding segment
+1509:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[0],results[704]:data[0]):begin first poll
+1510:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+1511:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+1512:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+1514:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+1533:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+1534:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[704]:data[0]):end first poll
+1535:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[704]:data[0]):proceed to download packet
+1536:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+1538:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+1567:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[832]:data[128]):adding segment
+1568:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[832]:data[128]):DONE
+1675:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:832:bytearray(b'\x07\x00\x00\x036\xa3\x06l\xa3\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00!\x00\x93\x80\x08\x04\x06\x03\x00\x00\x00\r\x95\x8b(\x04\x06\x03\x00\x00\x00\x00\x1a\x00\x83\x9f\x14\x08\x06\x1a\x01\xae\x9f\x14\x08\x06\x07\x00\x00\x036\xa8\x06l\xa8\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00%\x8c')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+1677:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:832:bytearray(b'\x07\x00\x00\x036\xa3\x06l\xa3\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00!\x00\x93\x80\x08\x04\x06\x03\x00\x00\x00\r\x95\x8b(\x04\x06\x03\x00\x00\x00\x00\x1a\x00\x83\x9f\x14\x08\x06\x1a\x01\xae\x9f\x14\x08\x06\x07\x00\x00\x036\xa8\x06l\xa8\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00%\x8c')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+1692:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2595L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2595L, 'errors.crc': 0}
+1693:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:832:bytearray(b'\x07\x00\x00\x036\xa3\x06l\xa3\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00!\x00\x93\x80\x08\x04\x06\x03\x00\x00\x00\r\x95\x8b(\x04\x06\x03\x00\x00\x00\x00\x1a\x00\x83\x9f\x14\x08\x06\x1a\x01\xae\x9f\x14\x08\x06\x07\x00\x00\x036\xa8\x06l\xa8\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00%\x8c')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+1695:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:832:bytearray(b'\x07\x00\x00\x036\xa3\x06l\xa3\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00!\x00\x93\x80\x08\x04\x06\x03\x00\x00\x00\r\x95\x8b(\x04\x06\x03\x00\x00\x00\x00\x1a\x00\x83\x9f\x14\x08\x06\x1a\x01\xae\x9f\x14\x08\x06\x07\x00\x00\x036\xa8\x06l\xa8\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00%\x8c')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+1710:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1331L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1243L, 'errors.crc': 0}
+1711:INFO:__main__:{'radio': {'errors.crc': 0,
+1712:           'errors.naks': 0,
+1713:           'errors.sequence': 2,
+1714:           'errors.timeouts': 18,
+1715:           'packets.received': 1243L,
+1716:           'packets.transmit': 1331L},
+1717: 'usb': {'errors.crc': 0,
+1718:         'errors.naks': 0,
+1719:         'errors.sequence': 0,
+1720:         'errors.timeouts': 0,
+1721:         'packets.received': 2595L,
+1722:         'packets.transmit': 2595L}}
+1723:INFO:__main__:howdy! all done looking at pump
+1729:INFO:__main__:howdy! I'm going to take a look at your pump and grab lots of info.
+1731:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+1733:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+1750:INFO:stick:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+1751:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+1753:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+1771:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+1773:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+1790:INFO:stick:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+1791:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+1793:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+1811:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+1813:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+1830:INFO:stick:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+1831:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+1833:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+1852:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+1854:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+1869:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2603L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2603L, 'errors.crc': 0}
+1870:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+1872:INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+1887:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1331L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1243L, 'errors.crc': 0}
+1888:INFO:__main__:{'radio': {'errors.crc': 0,
+1889:           'errors.naks': 0,
+1890:           'errors.sequence': 2,
+1891:           'errors.timeouts': 18,
+1892:           'packets.received': 1243L,
+1893:           'packets.transmit': 1331L},
+1894: 'usb': {'errors.crc': 0,
+1895:         'errors.naks': 0,
+1896:         'errors.sequence': 0,
+1897:         'errors.timeouts': 0,
+1898:         'packets.received': 2603L,
+1899:         'packets.transmit': 2603L}}
+1903:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<TransmitPacket:ReadPumpModel:data:unknown>] processing TransmitPacket:ReadPumpModel:data:unknown)
+1905:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<TransmitPacket:ReadPumpModel:data:unknown>] sending TransmitPacket:ReadPumpModel:data:unknown)
+1923:INFO:session:sleeping 0 before download
+1924:INFO:session:proceeding with download
+1925:INFO:stick:download:start:0
+1926:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[None] poll_size[None] poll_i[None] command[<TransmitPacket:ReadPumpModel:data:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+1927:DEBUG:stick:<Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[None] poll_size[None] poll_i[None] command[<TransmitPacket:ReadPumpModel:data:unknown>]>:STARTING POLL PHASE:attempt:0
+1928:DEBUG:stick:<Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[None] poll_size[0] poll_i[0] command[<TransmitPacket:ReadPumpModel:data:unknown>]>:poll:attempt:0
+1929:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[None] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+1931:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[None] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+1950:DEBUG:stick:<Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+1951:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+1953:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+1972:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+1973:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+1974:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+1975:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+1977:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+1998:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+1999:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2004:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadPumpModel:data:unknown>] processing TransmitPacket:ReadPumpModel:data:unknown)
+2006:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadPumpModel:data:unknown>] sending TransmitPacket:ReadPumpModel:data:unknown)
+2024:INFO:session:sleeping 0 before download
+2025:INFO:session:proceeding with download
+2026:INFO:stick:download:start:0
+2027:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadPumpModel:data:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+2028:DEBUG:stick:<Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadPumpModel:data:unknown>]>:STARTING POLL PHASE:attempt:0
+2029:DEBUG:stick:<Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadPumpModel:data:unknown>]>:poll:attempt:0
+2030:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2032:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2051:DEBUG:stick:<Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+2052:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2054:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2073:DEBUG:stick:<Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[2] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:2
+2074:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[2] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2076:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[2] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2095:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[2] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 3 attempts:size:78
+2096:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+2097:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+2098:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+2100:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+2121:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2122:INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2129:INFO:stick:link Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadRTC:data:unknown>] processing TransmitPacket:ReadRTC:data:unknown)
+2131:INFO:stick:link Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadRTC:data:unknown>] sending TransmitPacket:ReadRTC:data:unknown)
+2149:INFO:session:sleeping 0 before download
+2150:INFO:session:proceeding with download
+2151:INFO:stick:download:start:0
+2152:INFO:stick:Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadRTC:data:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+2153:DEBUG:stick:<Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadRTC:data:unknown>]>:STARTING POLL PHASE:attempt:0
+2154:DEBUG:stick:<Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadRTC:data:unknown>]>:poll:attempt:0
+2155:INFO:stick:link Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2157:INFO:stick:link Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2176:DEBUG:stick:<Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+2177:INFO:stick:link Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2179:INFO:stick:link Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2198:INFO:stick:Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+2199:INFO:stick:Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+2200:INFO:stick:Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+2201:INFO:stick:Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+2203:INFO:stick:link Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+2224:INFO:stick:Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2225:INFO:stick:Stick transmit[TransmitPacket:ReadRTC:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2231:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadPumpID:data:unknown>] processing TransmitPacket:ReadPumpID:data:unknown)
+2233:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadPumpID:data:unknown>] sending TransmitPacket:ReadPumpID:data:unknown)
+2251:INFO:session:sleeping 0 before download
+2252:INFO:session:proceeding with download
+2253:INFO:stick:download:start:0
+2254:INFO:stick:Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadPumpID:data:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+2255:DEBUG:stick:<Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadPumpID:data:unknown>]>:STARTING POLL PHASE:attempt:0
+2256:DEBUG:stick:<Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadPumpID:data:unknown>]>:poll:attempt:0
+2257:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2259:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2278:DEBUG:stick:<Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+2279:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2281:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2300:INFO:stick:Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+2301:INFO:stick:Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+2302:INFO:stick:Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+2303:INFO:stick:Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+2305:INFO:stick:link Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+2326:INFO:stick:Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2327:INFO:stick:Stick transmit[TransmitPacket:ReadPumpID:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2333:INFO:stick:link Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadBatteryStatus:data:unknown>] processing TransmitPacket:ReadBatteryStatus:data:unknown)
+2335:INFO:stick:link Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadBatteryStatus:data:unknown>] sending TransmitPacket:ReadBatteryStatus:data:unknown)
+2353:INFO:session:sleeping 0 before download
+2354:INFO:session:proceeding with download
+2355:INFO:stick:download:start:0
+2356:INFO:stick:Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadBatteryStatus:data:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+2357:DEBUG:stick:<Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadBatteryStatus:data:unknown>]>:STARTING POLL PHASE:attempt:0
+2358:DEBUG:stick:<Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadBatteryStatus:data:unknown>]>:poll:attempt:0
+2359:INFO:stick:link Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2361:INFO:stick:link Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2380:DEBUG:stick:<Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+2381:INFO:stick:link Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2383:INFO:stick:link Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2402:INFO:stick:Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+2403:INFO:stick:Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+2404:INFO:stick:Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+2405:INFO:stick:Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+2407:INFO:stick:link Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+2428:INFO:stick:Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2429:INFO:stick:Stick transmit[TransmitPacket:ReadBatteryStatus:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2435:INFO:stick:link Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadFirmwareVersion:data:unknown>] processing TransmitPacket:ReadFirmwareVersion:data:unknown)
+2437:INFO:stick:link Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadFirmwareVersion:data:unknown>] sending TransmitPacket:ReadFirmwareVersion:data:unknown)
+2455:INFO:session:sleeping 0 before download
+2456:INFO:session:proceeding with download
+2457:INFO:stick:download:start:0
+2458:INFO:stick:Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadFirmwareVersion:data:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+2459:DEBUG:stick:<Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadFirmwareVersion:data:unknown>]>:STARTING POLL PHASE:attempt:0
+2460:DEBUG:stick:<Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadFirmwareVersion:data:unknown>]>:poll:attempt:0
+2461:INFO:stick:link Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2463:INFO:stick:link Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2482:DEBUG:stick:<Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+2483:INFO:stick:link Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2485:INFO:stick:link Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2504:INFO:stick:Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+2505:INFO:stick:Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+2506:INFO:stick:Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+2507:INFO:stick:Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+2509:INFO:stick:link Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+2530:INFO:stick:Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2531:INFO:stick:Stick transmit[TransmitPacket:ReadFirmwareVersion:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2555:INFO:stick:link Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadRemainingInsulin:data:unknown>] processing TransmitPacket:ReadRemainingInsulin:data:unknown)
+2557:INFO:stick:link Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadRemainingInsulin:data:unknown>] sending TransmitPacket:ReadRemainingInsulin:data:unknown)
+2575:INFO:session:sleeping 0 before download
+2576:INFO:session:proceeding with download
+2577:INFO:stick:download:start:0
+2578:INFO:stick:Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadRemainingInsulin:data:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+2579:DEBUG:stick:<Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadRemainingInsulin:data:unknown>]>:STARTING POLL PHASE:attempt:0
+2580:DEBUG:stick:<Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadRemainingInsulin:data:unknown>]>:poll:attempt:0
+2581:INFO:stick:link Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2583:INFO:stick:link Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2602:DEBUG:stick:<Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+2603:INFO:stick:link Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2605:INFO:stick:link Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2624:INFO:stick:Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+2625:INFO:stick:Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+2626:INFO:stick:Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+2627:INFO:stick:Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+2629:INFO:stick:link Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+2650:INFO:stick:Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2651:INFO:stick:Stick transmit[TransmitPacket:ReadRemainingInsulin:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2675:INFO:stick:link Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadTotalsToday:data:unknown>] processing TransmitPacket:ReadTotalsToday:data:unknown)
+2677:INFO:stick:link Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadTotalsToday:data:unknown>] sending TransmitPacket:ReadTotalsToday:data:unknown)
+2695:INFO:session:sleeping 0 before download
+2696:INFO:session:proceeding with download
+2697:INFO:stick:download:start:0
+2698:INFO:stick:Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadTotalsToday:data:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+2699:DEBUG:stick:<Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadTotalsToday:data:unknown>]>:STARTING POLL PHASE:attempt:0
+2700:DEBUG:stick:<Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadTotalsToday:data:unknown>]>:poll:attempt:0
+2701:INFO:stick:link Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2703:INFO:stick:link Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2722:DEBUG:stick:<Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+2723:INFO:stick:link Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2725:INFO:stick:link Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2744:INFO:stick:Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+2745:INFO:stick:Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+2746:INFO:stick:Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+2747:INFO:stick:Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+2749:INFO:stick:link Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+2770:INFO:stick:Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2771:INFO:stick:Stick transmit[TransmitPacket:ReadTotalsToday:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2795:INFO:stick:link Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadRadioCtrlACL:data:unknown>] processing TransmitPacket:ReadRadioCtrlACL:data:unknown)
+2797:INFO:stick:link Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadRadioCtrlACL:data:unknown>] sending TransmitPacket:ReadRadioCtrlACL:data:unknown)
+2815:INFO:session:sleeping 0 before download
+2816:INFO:session:proceeding with download
+2817:INFO:stick:download:start:0
+2818:INFO:stick:Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadRadioCtrlACL:data:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+2819:DEBUG:stick:<Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadRadioCtrlACL:data:unknown>]>:STARTING POLL PHASE:attempt:0
+2820:DEBUG:stick:<Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadRadioCtrlACL:data:unknown>]>:poll:attempt:0
+2821:INFO:stick:link Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2823:INFO:stick:link Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2842:DEBUG:stick:<Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+2843:INFO:stick:link Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2845:INFO:stick:link Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2864:INFO:stick:Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+2865:INFO:stick:Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+2866:INFO:stick:Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+2867:INFO:stick:Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+2869:INFO:stick:link Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+2890:INFO:stick:Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2891:INFO:stick:Stick transmit[TransmitPacket:ReadRadioCtrlACL:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2915:INFO:stick:link Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadBasalTemp:data:unknown>] processing TransmitPacket:ReadBasalTemp:data:unknown)
+2917:INFO:stick:link Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadBasalTemp:data:unknown>] sending TransmitPacket:ReadBasalTemp:data:unknown)
+2935:INFO:session:sleeping 0 before download
+2936:INFO:session:proceeding with download
+2937:INFO:stick:download:start:0
+2938:INFO:stick:Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadBasalTemp:data:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+2939:DEBUG:stick:<Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadBasalTemp:data:unknown>]>:STARTING POLL PHASE:attempt:0
+2940:DEBUG:stick:<Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadBasalTemp:data:unknown>]>:poll:attempt:0
+2941:INFO:stick:link Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2943:INFO:stick:link Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2962:DEBUG:stick:<Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+2963:INFO:stick:link Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+2965:INFO:stick:link Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+2984:INFO:stick:Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+2985:INFO:stick:Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+2986:INFO:stick:Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+2987:INFO:stick:Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+2989:INFO:stick:link Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+3010:INFO:stick:Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+3011:INFO:stick:Stick transmit[TransmitPacket:ReadBasalTemp:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):DONE
+3035:INFO:stick:link Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadSettings:data:unknown>] processing TransmitPacket:ReadSettings:data:unknown)
+3037:INFO:stick:link Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadSettings:data:unknown>] sending TransmitPacket:ReadSettings:data:unknown)
+3055:INFO:session:sleeping 0 before download
+3056:INFO:session:proceeding with download
+3057:INFO:stick:download:start:0
+3058:INFO:stick:Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadSettings:data:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+3059:DEBUG:stick:<Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadSettings:data:unknown>]>:STARTING POLL PHASE:attempt:0
+3060:DEBUG:stick:<Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadSettings:data:unknown>]>:poll:attempt:0
+3061:INFO:stick:link Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+3063:INFO:stick:link Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+3082:DEBUG:stick:<Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+3083:INFO:stick:link Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+3085:INFO:stick:link Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+3104:INFO:stick:Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+3105:INFO:stick:Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+3106:INFO:stick:Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+3107:INFO:stick:Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+3109:INFO:stick:link Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+3130:INFO:stick:Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+3131:INFO:stick:Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):DONE
+3155:INFO:stick:link Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadContrast:data:unknown>] processing TransmitPacket:ReadContrast:data:unknown)
+3157:INFO:stick:link Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadContrast:data:unknown>] sending TransmitPacket:ReadContrast:data:unknown)
+3175:INFO:session:sleeping 0 before download
+3176:INFO:session:proceeding with download
+3177:INFO:stick:download:start:0
+3178:INFO:stick:Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadContrast:data:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+3179:DEBUG:stick:<Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadContrast:data:unknown>]>:STARTING POLL PHASE:attempt:0
+3180:DEBUG:stick:<Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadContrast:data:unknown>]>:poll:attempt:0
+3181:INFO:stick:link Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+3183:INFO:stick:link Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+3202:DEBUG:stick:<Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+3203:INFO:stick:link Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+3205:INFO:stick:link Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+3224:INFO:stick:Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+3225:INFO:stick:Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+3226:INFO:stick:Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+3227:INFO:stick:Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+3229:INFO:stick:link Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+3250:INFO:stick:Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+3251:INFO:stick:Stick transmit[TransmitPacket:ReadContrast:data:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):DONE
+3275:INFO:stick:link Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadCurPageNumber:pages:unknown>] processing TransmitPacket:ReadCurPageNumber:pages:unknown)
+3277:INFO:stick:link Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadCurPageNumber:pages:unknown>] sending TransmitPacket:ReadCurPageNumber:pages:unknown)
+3295:INFO:session:sleeping 0 before download
+3296:INFO:session:proceeding with download
+3297:INFO:stick:download:start:0
+3298:INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadCurPageNumber:pages:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+3299:DEBUG:stick:<Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadCurPageNumber:pages:unknown>]>:STARTING POLL PHASE:attempt:0
+3300:DEBUG:stick:<Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadCurPageNumber:pages:unknown>]>:poll:attempt:0
+3301:INFO:stick:link Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+3303:INFO:stick:link Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+3322:DEBUG:stick:<Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+3323:INFO:stick:link Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+3325:INFO:stick:link Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+3344:INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+3345:INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+3346:INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+3347:INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+3349:INFO:stick:link Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+3370:INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+3371:INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):DONE
+3395:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')>] processing TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b''))
+3397:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')>] sending TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b''))
+3416:INFO:session:sleeping 0.1 before download
+3417:INFO:session:proceeding with download
+3418:INFO:stick:download:start:0
+3419:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+3420:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')>]>:STARTING POLL PHASE:attempt:0
+3421:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')>]>:poll:attempt:0
+3422:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+3424:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+3443:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+3444:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+3446:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+3465:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+3466:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+3467:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+3468:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+3470:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+3491:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+3492:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
+3493:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]>:STARTING POLL PHASE:attempt:0
+3494:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<ReadRadio:size:78>]>:poll:attempt:0
+3495:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+3497:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+3516:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[0] command[<LinkStatus:0x03:error::size(206)>]:STOP POLL after 1 attempts:size:206
+3517:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):end first poll
+3518:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
+3519:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download_packet:206
+3521:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>] sending ReadRadio:size:206)
+3558:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+3559:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
+3560:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]>:STARTING POLL PHASE:attempt:0
+3561:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<ReadRadio:size:206>]>:poll:attempt:0
+3562:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+3564:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+3583:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+3584:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):end first poll
+3585:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
+3586:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+3588:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+3617:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+3618:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
+3619:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+3620:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+3621:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+3623:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+3642:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+3643:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):end first poll
+3644:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
+3645:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+3647:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+3676:WARNING:stick:bad zero CRC?
+3677:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[142],results[512]:data[128]):adding segment
+3678:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
+3679:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+3680:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+3681:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+3683:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+3702:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+3703:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):end first poll
+3704:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
+3705:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+3707:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+3736:WARNING:stick:bad zero CRC?
+3737:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[142],results[640]:data[128]):adding segment
+3738:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
+3739:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+3740:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+3741:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+3743:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+3762:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+3763:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):end first poll
+3764:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
+3765:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+3767:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+3796:WARNING:stick:bad zero CRC?
+3797:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[142],results[768]:data[128]):adding segment
+3798:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
+3799:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+3800:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+3801:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+3803:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+3822:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+3823:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):end first poll
+3824:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
+3825:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+3827:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+3856:WARNING:stick:bad zero CRC?
+3857:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[142],results[896]:data[128]):adding segment
+3858:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
+3859:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+3860:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+3861:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+3863:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+3882:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+3883:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):end first poll
+3884:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
+3885:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+3887:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+3916:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
+3917:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):DONE
+4047:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:1024:bytearray(b'\x07\x00\x00\x036\xa3\x06l\xa3\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00!\x00\x93\x80\x08\x04\x06\x03\x00\x00\x00\r\x95\x8b(\x04\x06\x03\x00\x03\x00\x03\x9e\x8b\x08\x04\x06\x07\x00\x00\x030\xa4\x06l\xa4\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x030\x030d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x036\xa5\x06l\xa5\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x036\xa6\x06l\xa6\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x19\x00\x80\x81\x17\x07\x06\x07\x00\x00\x036\xa7\x06l\xa7\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x1a\x00\x83\x9f\x14\x08\x06\x1a\x01\xae\x9f\x14\x08\x06\x07\x00\x00\x036\xa8\x06l\xa8\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00%\x8c')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+4049:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:1024:bytearray(b'\x07\x00\x00\x036\xa3\x06l\xa3\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00!\x00\x93\x80\x08\x04\x06\x03\x00\x00\x00\r\x95\x8b(\x04\x06\x03\x00\x03\x00\x03\x9e\x8b\x08\x04\x06\x07\x00\x00\x030\xa4\x06l\xa4\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x030\x030d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x036\xa5\x06l\xa5\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x036\xa6\x06l\xa6\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x19\x00\x80\x81\x17\x07\x06\x07\x00\x00\x036\xa7\x06l\xa7\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x1a\x00\x83\x9f\x14\x08\x06\x1a\x01\xae\x9f\x14\x08\x06\x07\x00\x00\x036\xa8\x06l\xa8\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00%\x8c')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+4064:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2676L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2676L, 'errors.crc': 0}
+4065:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:1024:bytearray(b'\x07\x00\x00\x036\xa3\x06l\xa3\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00!\x00\x93\x80\x08\x04\x06\x03\x00\x00\x00\r\x95\x8b(\x04\x06\x03\x00\x03\x00\x03\x9e\x8b\x08\x04\x06\x07\x00\x00\x030\xa4\x06l\xa4\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x030\x030d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x036\xa5\x06l\xa5\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x036\xa6\x06l\xa6\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x19\x00\x80\x81\x17\x07\x06\x07\x00\x00\x036\xa7\x06l\xa7\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x1a\x00\x83\x9f\x14\x08\x06\x1a\x01\xae\x9f\x14\x08\x06\x07\x00\x00\x036\xa8\x06l\xa8\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00%\x8c')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+4067:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:1024:bytearray(b'\x07\x00\x00\x036\xa3\x06l\xa3\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00!\x00\x93\x80\x08\x04\x06\x03\x00\x00\x00\r\x95\x8b(\x04\x06\x03\x00\x03\x00\x03\x9e\x8b\x08\x04\x06\x07\x00\x00\x030\xa4\x06l\xa4\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x030\x030d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x036\xa5\x06l\xa5\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x036\xa6\x06l\xa6\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x19\x00\x80\x81\x17\x07\x06\x07\x00\x00\x036\xa7\x06l\xa7\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x1a\x00\x83\x9f\x14\x08\x06\x1a\x01\xae\x9f\x14\x08\x06\x07\x00\x00\x036\xa8\x06l\xa8\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x036\x036d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00%\x8c')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+4082:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1362L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1273L, 'errors.crc': 0}
+4083:INFO:__main__:{'radio': {'errors.crc': 0,
+4084:           'errors.naks': 0,
+4085:           'errors.sequence': 2,
+4086:           'errors.timeouts': 18,
+4087:           'packets.received': 1273L,
+4088:           'packets.transmit': 1362L},
+4089: 'usb': {'errors.crc': 0,
+4090:         'errors.naks': 0,
+4091:         'errors.sequence': 0,
+4092:         'errors.timeouts': 0,
+4093:         'packets.received': 2676L,
+4094:         'packets.transmit': 2676L}}
+4099:INFO:stick:link Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadCurPageNumber:pages:unknown>] processing TransmitPacket:ReadCurPageNumber:pages:unknown)
+4101:INFO:stick:link Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadCurPageNumber:pages:unknown>] sending TransmitPacket:ReadCurPageNumber:pages:unknown)
+4119:INFO:session:sleeping 0 before download
+4120:INFO:session:proceeding with download
+4121:INFO:stick:download:start:0
+4122:INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadCurPageNumber:pages:unknown>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+4123:DEBUG:stick:<Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadCurPageNumber:pages:unknown>]>:STARTING POLL PHASE:attempt:0
+4124:DEBUG:stick:<Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadCurPageNumber:pages:unknown>]>:poll:attempt:0
+4125:INFO:stick:link Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+4127:INFO:stick:link Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+4146:DEBUG:stick:<Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+4147:INFO:stick:link Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+4149:INFO:stick:link Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+4168:INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+4169:INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+4170:INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+4171:INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+4173:INFO:stick:link Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+4194:INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+4195:INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):DONE
+4219:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')>] processing TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b''))
+4221:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[False] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')>] sending TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b''))
+4240:INFO:session:sleeping 0.1 before download
+4241:INFO:session:proceeding with download
+4242:INFO:stick:download:start:0
+4243:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+4244:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')>]>:STARTING POLL PHASE:attempt:0
+4245:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')>]>:poll:attempt:0
+4246:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+4248:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+4267:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+4268:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+4270:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+4289:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+4290:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+4291:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+4292:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+4294:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+4315:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+4316:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
+4317:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]>:STARTING POLL PHASE:attempt:0
+4318:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<ReadRadio:size:78>]>:poll:attempt:0
+4319:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+4321:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+4340:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[0] command[<LinkStatus:0x03:error::size(206)>]:STOP POLL after 1 attempts:size:206
+4341:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):end first poll
+4342:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
+4343:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download_packet:206
+4345:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>] sending ReadRadio:size:206)
+4382:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+4383:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
+4384:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]>:STARTING POLL PHASE:attempt:0
+4385:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<ReadRadio:size:206>]>:poll:attempt:0
+4386:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+4388:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+4407:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+4408:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):end first poll
+4409:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
+4410:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+4412:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+4441:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+4442:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
+4443:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+4444:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+4445:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+4447:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+4466:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+4467:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):end first poll
+4468:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
+4469:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+4471:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+4500:WARNING:stick:bad zero CRC?
+4501:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[142],results[512]:data[128]):adding segment
+4502:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
+4503:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+4504:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+4505:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+4507:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+4526:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+4527:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):end first poll
+4528:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
+4529:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+4531:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+4560:WARNING:stick:bad zero CRC?
+4561:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[142],results[640]:data[128]):adding segment
+4562:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
+4563:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+4564:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+4565:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+4567:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+4586:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+4587:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):end first poll
+4588:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
+4589:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+4591:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+4620:WARNING:stick:bad zero CRC?
+4621:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[142],results[768]:data[128]):adding segment
+4622:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
+4623:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+4624:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+4625:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+4627:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+4646:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+4647:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):end first poll
+4648:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
+4649:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+4651:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+4680:WARNING:stick:bad zero CRC?
+4681:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[142],results[896]:data[128]):adding segment
+4682:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
+4683:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+4684:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+4685:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+4687:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+4706:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+4707:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):end first poll
+4708:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
+4709:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+4711:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+4740:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
+4741:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][0]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):DONE
+4875:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')>] processing TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b''))
+4877:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')>] sending TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b''))
+4896:INFO:session:sleeping 0.1 before download
+4897:INFO:session:proceeding with download
+4898:INFO:stick:download:start:0
+4899:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+4900:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')>]>:STARTING POLL PHASE:attempt:0
+4901:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')>]>:poll:attempt:0
+4902:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+4904:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+4923:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+4924:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+4926:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+4945:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+4946:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+4947:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+4948:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+4950:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+4971:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+4972:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
+4973:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]>:STARTING POLL PHASE:attempt:0
+4974:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<ReadRadio:size:78>]>:poll:attempt:0
+4975:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+4977:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+4996:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[0] command[<LinkStatus:0x03:error::size(206)>]:STOP POLL after 1 attempts:size:206
+4997:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):end first poll
+4998:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
+4999:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download_packet:206
+5001:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>] sending ReadRadio:size:206)
+5038:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+5039:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
+5040:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]>:STARTING POLL PHASE:attempt:0
+5041:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<ReadRadio:size:206>]>:poll:attempt:0
+5042:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+5044:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+5063:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+5064:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):end first poll
+5065:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
+5066:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+5068:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+5097:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+5098:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
+5099:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+5100:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+5101:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+5103:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+5122:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+5123:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):end first poll
+5124:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
+5125:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+5127:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+5156:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[142],results[512]:data[128]):adding segment
+5157:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
+5158:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+5159:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+5160:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+5162:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+5181:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+5182:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):end first poll
+5183:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
+5184:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+5186:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+5215:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[142],results[640]:data[128]):adding segment
+5216:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
+5217:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+5218:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+5219:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+5221:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+5240:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+5241:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):end first poll
+5242:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
+5243:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+5245:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+5274:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[142],results[768]:data[128]):adding segment
+5275:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
+5276:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+5277:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+5278:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+5280:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+5299:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+5300:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):end first poll
+5301:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
+5302:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+5304:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+5333:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[142],results[896]:data[128]):adding segment
+5334:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
+5335:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+5336:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+5337:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+5339:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+5358:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+5359:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):end first poll
+5360:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
+5361:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+5363:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+5392:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
+5393:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][1]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):DONE
+5527:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')>] processing TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b''))
+5529:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')>] sending TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b''))
+5548:INFO:session:sleeping 0.1 before download
+5549:INFO:session:proceeding with download
+5550:INFO:stick:download:start:0
+5551:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+5552:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')>]>:STARTING POLL PHASE:attempt:0
+5553:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')>]>:poll:attempt:0
+5554:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+5556:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+5575:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+5576:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+5578:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+5597:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+5598:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+5599:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+5600:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+5602:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+5623:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+5624:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
+5625:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]>:STARTING POLL PHASE:attempt:0
+5626:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<ReadRadio:size:78>]>:poll:attempt:0
+5627:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+5629:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+5648:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[0] command[<LinkStatus:0x03:error::size(206)>]:STOP POLL after 1 attempts:size:206
+5649:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):end first poll
+5650:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
+5651:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download_packet:206
+5653:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>] sending ReadRadio:size:206)
+5690:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+5691:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
+5692:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]>:STARTING POLL PHASE:attempt:0
+5693:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<ReadRadio:size:206>]>:poll:attempt:0
+5694:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+5696:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+5715:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+5716:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):end first poll
+5717:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
+5718:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+5720:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+5749:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+5750:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
+5751:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+5752:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+5753:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+5755:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+5774:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+5775:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):end first poll
+5776:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
+5777:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+5779:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+5808:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[142],results[512]:data[128]):adding segment
+5809:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
+5810:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+5811:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+5812:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+5814:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+5833:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+5834:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):end first poll
+5835:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
+5836:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+5838:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+5867:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[142],results[640]:data[128]):adding segment
+5868:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
+5869:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+5870:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+5871:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+5873:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+5892:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+5893:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):end first poll
+5894:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
+5895:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+5897:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+5926:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[142],results[768]:data[128]):adding segment
+5927:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
+5928:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+5929:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+5930:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+5932:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+5951:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+5952:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):end first poll
+5953:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
+5954:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+5956:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+5985:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[142],results[896]:data[128]):adding segment
+5986:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
+5987:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+5988:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+5989:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+5991:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+6010:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+6011:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):end first poll
+6012:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
+6013:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+6015:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+6044:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
+6045:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][2]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):DONE
+6179:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')>] processing TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b''))
+6181:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')>] sending TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b''))
+6200:INFO:session:sleeping 0.1 before download
+6201:INFO:session:proceeding with download
+6202:INFO:stick:download:start:0
+6203:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+6204:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')>]>:STARTING POLL PHASE:attempt:0
+6205:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')>]>:poll:attempt:0
+6206:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+6208:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+6227:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+6228:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+6230:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+6249:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+6250:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+6251:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+6252:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+6254:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+6275:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+6276:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
+6277:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]>:STARTING POLL PHASE:attempt:0
+6278:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<ReadRadio:size:78>]>:poll:attempt:0
+6279:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+6281:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+6300:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[0] command[<LinkStatus:0x03:error::size(206)>]:STOP POLL after 1 attempts:size:206
+6301:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):end first poll
+6302:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
+6303:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download_packet:206
+6305:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>] sending ReadRadio:size:206)
+6342:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+6343:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
+6344:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]>:STARTING POLL PHASE:attempt:0
+6345:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<ReadRadio:size:206>]>:poll:attempt:0
+6346:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+6348:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+6367:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+6368:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):end first poll
+6369:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
+6370:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+6372:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+6401:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+6402:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
+6403:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+6404:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+6405:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+6407:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+6426:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+6427:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):end first poll
+6428:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
+6429:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+6431:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+6460:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[142],results[512]:data[128]):adding segment
+6461:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
+6462:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+6463:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+6464:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+6466:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+6485:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+6486:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):end first poll
+6487:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
+6488:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+6490:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+6519:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[142],results[640]:data[128]):adding segment
+6520:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
+6521:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+6522:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+6523:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+6525:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+6544:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+6545:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):end first poll
+6546:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
+6547:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+6549:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+6578:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[142],results[768]:data[128]):adding segment
+6579:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
+6580:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+6581:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+6582:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+6584:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+6603:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+6604:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):end first poll
+6605:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
+6606:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+6608:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+6637:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[142],results[896]:data[128]):adding segment
+6638:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
+6639:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+6640:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+6641:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+6643:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+6662:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+6663:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):end first poll
+6664:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
+6665:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+6667:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+6696:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
+6697:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][3]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):DONE
+6831:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')>] processing TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b''))
+6833:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')>] sending TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b''))
+6852:INFO:session:sleeping 0.1 before download
+6853:INFO:session:proceeding with download
+6854:INFO:stick:download:start:0
+6855:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+6856:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')>]>:STARTING POLL PHASE:attempt:0
+6857:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')>]>:poll:attempt:0
+6858:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+6860:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+6879:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+6880:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+6882:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+6901:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+6902:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+6903:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+6904:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+6906:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+6927:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+6928:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
+6929:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]>:STARTING POLL PHASE:attempt:0
+6930:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<ReadRadio:size:78>]>:poll:attempt:0
+6931:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+6933:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+6952:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[0] command[<LinkStatus:0x03:error::size(206)>]:STOP POLL after 1 attempts:size:206
+6953:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):end first poll
+6954:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
+6955:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download_packet:206
+6957:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>] sending ReadRadio:size:206)
+6994:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+6995:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
+6996:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]>:STARTING POLL PHASE:attempt:0
+6997:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<ReadRadio:size:206>]>:poll:attempt:0
+6998:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+7000:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+7019:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+7020:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):end first poll
+7021:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
+7022:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+7024:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+7053:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+7054:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
+7055:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+7056:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+7057:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+7059:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+7078:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+7079:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):end first poll
+7080:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
+7081:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+7083:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+7112:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[142],results[512]:data[128]):adding segment
+7113:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
+7114:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+7115:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+7116:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+7118:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+7137:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+7138:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):end first poll
+7139:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
+7140:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+7142:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+7171:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[142],results[640]:data[128]):adding segment
+7172:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
+7173:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+7174:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+7175:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+7177:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+7196:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+7197:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):end first poll
+7198:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
+7199:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+7201:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+7230:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[142],results[768]:data[128]):adding segment
+7231:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
+7232:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+7233:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+7234:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+7236:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+7255:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+7256:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):end first poll
+7257:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
+7258:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+7260:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+7289:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[142],results[896]:data[128]):adding segment
+7290:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
+7291:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+7292:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+7293:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+7295:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+7314:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+7315:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):end first poll
+7316:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
+7317:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+7319:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+7348:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
+7349:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][4]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):DONE
+7483:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')>] processing TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b''))
+7485:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')>] sending TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b''))
+7504:INFO:session:sleeping 0.1 before download
+7505:INFO:session:proceeding with download
+7506:INFO:stick:download:start:0
+7507:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+7508:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')>]>:STARTING POLL PHASE:attempt:0
+7509:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')>]>:poll:attempt:0
+7510:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+7512:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+7531:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+7532:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+7534:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+7553:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+7554:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+7555:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+7556:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+7558:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+7579:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+7580:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
+7581:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]>:STARTING POLL PHASE:attempt:0
+7582:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<ReadRadio:size:78>]>:poll:attempt:0
+7583:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+7585:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+7604:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[0] command[<LinkStatus:0x03:error::size(206)>]:STOP POLL after 1 attempts:size:206
+7605:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):end first poll
+7606:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
+7607:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download_packet:206
+7609:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>] sending ReadRadio:size:206)
+7646:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+7647:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
+7648:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]>:STARTING POLL PHASE:attempt:0
+7649:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<ReadRadio:size:206>]>:poll:attempt:0
+7650:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+7652:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+7671:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+7672:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):end first poll
+7673:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
+7674:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+7676:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+7705:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+7706:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
+7707:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+7708:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+7709:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+7711:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+7730:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+7731:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):end first poll
+7732:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
+7733:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+7735:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+7764:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[142],results[512]:data[128]):adding segment
+7765:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
+7766:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+7767:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+7768:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+7770:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+7789:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+7790:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):end first poll
+7791:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
+7792:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+7794:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+7823:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[142],results[640]:data[128]):adding segment
+7824:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
+7825:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+7826:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+7827:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+7829:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+7848:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+7849:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):end first poll
+7850:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
+7851:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+7853:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+7882:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[142],results[768]:data[128]):adding segment
+7883:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
+7884:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+7885:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+7886:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+7888:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+7907:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+7908:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):end first poll
+7909:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
+7910:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+7912:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+7941:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[142],results[896]:data[128]):adding segment
+7942:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
+7943:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+7944:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+7945:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+7947:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+7966:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+7967:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):end first poll
+7968:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
+7969:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+7971:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+8000:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
+8001:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][5]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):DONE
+8135:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')>] processing TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b''))
+8137:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')>] sending TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b''))
+8156:INFO:session:sleeping 0.1 before download
+8157:INFO:session:proceeding with download
+8158:INFO:stick:download:start:0
+8159:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+8160:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')>]>:STARTING POLL PHASE:attempt:0
+8161:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')>]>:poll:attempt:0
+8162:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+8164:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+8183:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+8184:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+8186:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+8205:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+8206:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+8207:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+8208:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+8210:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+8231:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+8232:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
+8233:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]>:STARTING POLL PHASE:attempt:0
+8234:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<ReadRadio:size:78>]>:poll:attempt:0
+8235:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+8237:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+8256:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[0] command[<LinkStatus:0x03:error::size(206)>]:STOP POLL after 1 attempts:size:206
+8257:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):end first poll
+8258:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
+8259:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download_packet:206
+8261:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>] sending ReadRadio:size:206)
+8298:WARNING:stick:bad zero CRC?
+8299:INFO:stick:ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0xac:raw:
+8378:INFO:stick:XXX:BadCRC:returning empty message instead of raising errors.
+8379:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[2],expect[206],results[64]:data[0]):no data, try again
+8380:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[3],expect[0],results[64]:data[0]):begin first poll
+8381:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]>:STARTING POLL PHASE:attempt:0
+8382:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<ReadRadio:size:206>]>:poll:attempt:0
+8383:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+8385:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+8404:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+8405:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[64]:data[0]):end first poll
+8406:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[64]:data[0]):proceed to download packet
+8407:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+8409:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+8438:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[3],expect[142],results[192]:data[128]):adding segment
+8439:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[0],results[192]:data[0]):begin first poll
+8440:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+8441:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+8442:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+8444:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+8463:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+8464:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[192]:data[0]):end first poll
+8465:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[192]:data[0]):proceed to download packet
+8466:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+8468:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+8497:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[142],results[320]:data[128]):adding segment
+8498:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[0],results[320]:data[0]):begin first poll
+8499:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+8500:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+8501:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+8503:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+8522:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+8523:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[320]:data[0]):end first poll
+8524:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[320]:data[0]):proceed to download packet
+8525:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+8527:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+8556:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[142],results[448]:data[128]):adding segment
+8557:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[0],results[448]:data[0]):begin first poll
+8558:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+8559:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+8560:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+8562:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+8581:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+8582:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[448]:data[0]):end first poll
+8583:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[448]:data[0]):proceed to download packet
+8584:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+8586:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+8615:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[142],results[576]:data[128]):adding segment
+8616:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[0],results[576]:data[0]):begin first poll
+8617:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+8618:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+8619:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+8621:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+8640:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+8641:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[576]:data[0]):end first poll
+8642:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[576]:data[0]):proceed to download packet
+8643:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+8645:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+8674:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[142],results[704]:data[128]):adding segment
+8675:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[0],results[704]:data[0]):begin first poll
+8676:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+8677:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+8678:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+8680:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+8699:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+8700:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[704]:data[0]):end first poll
+8701:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[704]:data[0]):proceed to download packet
+8702:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+8704:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+8733:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[832]:data[128]):adding segment
+8734:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][6]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[832]:data[128]):DONE
+8844:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')>] processing TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b''))
+8846:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')>] sending TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b''))
+8865:INFO:session:sleeping 0.1 before download
+8866:INFO:session:proceeding with download
+8867:INFO:stick:download:start:0
+8868:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+8869:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')>]>:STARTING POLL PHASE:attempt:0
+8870:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')>]>:poll:attempt:0
+8871:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+8873:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+8892:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+8893:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+8895:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+8914:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+8915:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+8916:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+8917:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+8919:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+8940:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+8941:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
+8942:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]>:STARTING POLL PHASE:attempt:0
+8943:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<ReadRadio:size:78>]>:poll:attempt:0
+8944:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+8946:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+8965:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[0] command[<LinkStatus:0x03:error::size(206)>]:STOP POLL after 1 attempts:size:206
+8966:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):end first poll
+8967:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
+8968:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download_packet:206
+8970:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>] sending ReadRadio:size:206)
+9007:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+9008:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
+9009:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]>:STARTING POLL PHASE:attempt:0
+9010:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<ReadRadio:size:206>]>:poll:attempt:0
+9011:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+9013:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+9032:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+9033:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):end first poll
+9034:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
+9035:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+9037:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+9066:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+9067:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
+9068:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+9069:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+9070:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+9072:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+9091:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+9092:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):end first poll
+9093:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
+9094:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+9096:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+9125:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[142],results[512]:data[128]):adding segment
+9126:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
+9127:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+9128:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+9129:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+9131:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+9150:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+9151:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):end first poll
+9152:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
+9153:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+9155:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+9184:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[142],results[640]:data[128]):adding segment
+9185:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
+9186:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+9187:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+9188:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+9190:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+9209:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+9210:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):end first poll
+9211:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
+9212:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+9214:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+9243:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[142],results[768]:data[128]):adding segment
+9244:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
+9245:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+9246:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+9247:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+9249:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+9268:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+9269:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):end first poll
+9270:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
+9271:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+9273:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+9302:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[142],results[896]:data[128]):adding segment
+9303:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
+9304:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+9305:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+9306:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+9308:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+9327:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+9328:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):end first poll
+9329:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
+9330:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+9332:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+9361:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
+9362:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][7]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):DONE
+9496:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')>] processing TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b''))
+9498:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')>] sending TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b''))
+9517:INFO:session:sleeping 0.1 before download
+9518:INFO:session:proceeding with download
+9519:INFO:stick:download:start:0
+9520:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')>]:download(attempts[1],expect[0],results[0]:data[0]):begin first poll
+9521:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')>]>:STARTING POLL PHASE:attempt:0
+9522:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')>]>:poll:attempt:0
+9523:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+9525:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+9544:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+9545:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+9547:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+9566:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[1] command[<LinkStatus:0x03:error::size(78)>]:STOP POLL after 2 attempts:size:78
+9567:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):end first poll
+9568:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download(attempts[1],expect[0],results[0]:data[0]):proceed to download packet
+9569:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<LinkStatus:0x03:error::size(78)>]:download_packet:78
+9571:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>] sending ReadRadio:size:78)
+9592:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[1] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+9593:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]:download(attempts[2],expect[0],results[64]:data[0]):begin first poll
+9594:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[78] poll_i[False] command[<ReadRadio:size:78>]>:STARTING POLL PHASE:attempt:0
+9595:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<ReadRadio:size:78>]>:poll:attempt:0
+9596:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+9598:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(78)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+9617:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[0] command[<LinkStatus:0x03:error::size(206)>]:STOP POLL after 1 attempts:size:206
+9618:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):end first poll
+9619:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download(attempts[2],expect[0],results[64]:data[0]):proceed to download packet
+9620:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:78] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<LinkStatus:0x03:error::size(206)>]:download_packet:206
+9622:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>] sending ReadRadio:size:206)
+9659:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[2] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+9660:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]:download(attempts[3],expect[0],results[256]:data[0]):begin first poll
+9661:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[206] poll_i[False] command[<ReadRadio:size:206>]>:STARTING POLL PHASE:attempt:0
+9662:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<ReadRadio:size:206>]>:poll:attempt:0
+9663:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+9665:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(206)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+9684:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+9685:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):end first poll
+9686:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[3],expect[0],results[256]:data[0]):proceed to download packet
+9687:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:206] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+9689:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+9718:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[3] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+9719:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[0],results[384]:data[0]):begin first poll
+9720:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+9721:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+9722:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+9724:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+9743:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+9744:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):end first poll
+9745:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[4],expect[0],results[384]:data[0]):proceed to download packet
+9746:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+9748:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+9777:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[4] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[4],expect[142],results[512]:data[128]):adding segment
+9778:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[0],results[512]:data[0]):begin first poll
+9779:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+9780:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+9781:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+9783:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+9802:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+9803:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):end first poll
+9804:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[5],expect[0],results[512]:data[0]):proceed to download packet
+9805:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+9807:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+9836:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[5] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[5],expect[142],results[640]:data[128]):adding segment
+9837:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[0],results[640]:data[0]):begin first poll
+9838:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+9839:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+9840:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+9842:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+9861:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+9862:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):end first poll
+9863:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[6],expect[0],results[640]:data[0]):proceed to download packet
+9864:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+9866:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+9895:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[6] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[6],expect[142],results[768]:data[128]):adding segment
+9896:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[0],results[768]:data[0]):begin first poll
+9897:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+9898:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+9899:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+9901:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+9920:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+9921:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):end first poll
+9922:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[7],expect[0],results[768]:data[0]):proceed to download packet
+9923:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+9925:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+9954:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[7] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[7],expect[142],results[896]:data[128]):adding segment
+9955:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[0],results[896]:data[0]):begin first poll
+9956:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]>:STARTING POLL PHASE:attempt:0
+9957:DEBUG:stick:<Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<ReadRadio:size:142>]>:poll:attempt:0
+9958:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+9960:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+9979:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[0] command[<LinkStatus:0x03:error::size(142)>]:STOP POLL after 1 attempts:size:142
+9980:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):end first poll
+9981:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download(attempts[8],expect[0],results[896]:data[0]):proceed to download packet
+9982:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<LinkStatus:0x03:error::size(142)>]:download_packet:142
+9984:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>] sending ReadRadio:size:142)
+10013:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
+10014:INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:0:bytearray(b'')] reader[ReadRadio:size:142] download_i[8] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<ReadRadio:size:142>]:download(attempts[8],expect[142],results[1024]:data[128]):DONE
+10144:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:1024:bytearray(b'\x06\x15\x05.\x00@`\x01\x04\x066\x056\x00@`\x01\x04\x06/\x18A\x00@ \xc1\x04\x06/\x0c_\x00@ \xc1\x04\x06/\x0cp\x00@ \xc1\x04\x06/\x0c\x81\x00@ \xc1\x04\x06/\x0c\x92\x00@ \xc1\x04\x06/\x0c\xa3\x00@ \xc1\x04\x06/\x0c\xc7\x00@ \xc1\x04\x06/\x0c\xd8\x00@ \xc1\x04\x06\x11\x0c\xe7\x00@ \xc1\x04\x06\x15\x05\x0c\x00@@\xa1\x04d\x00\x0c@\x00\x01\x04d\x00\x15@\x00\x01\x04\x17\x00\x08A\x00\x01\x04\x18\x00\x00@\x00\x01\x00\x07\x00\x00\x00\x00\x01\x84l\x01\x84\x00\x0c\x00\xe8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00!\x00\x08@\x00\x01\x00\x03\x00\x00\x00\x15\x10@ \x01\x00\x03\x00\x07\x00\x07"@\x00\x01\x00d\x01\x03B\x00\x01\x00d\x00\tB\x00\x01\x00d\x01\x0eB\x00\x01\x00d\x00\x10B\x00\x01\x00d\x01\x12B\x00\x01\x00d\x00\x13B\x00\x01\x00d\x01\x16B\x00\x01\x00d\x00\x17B\x00\x01\x00\x1e\x00\x12e\x03A\x00\x1f\x00$e\x03A\x00\x1e\x00\x17h\x03A\x00\x1f\x00)h\x03A\x00!\x00\x0bi\x03\x01\x00\x03\x00\x00\x00\x16 i#\x01\x00\x03\x00\x03\x00\x03,i\x03\x01\x00\x14\x00\x11l#\x01\x00\x08\x00\x11l#\x01\x00?\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\x0c\x11l#\x01\x00\x00\x02\x00\x0c\x04\x00\x16\x06\x00\x1e\x08\x00"\n\x00&\x16\x00(\x18\x00) \x00*$\x00,(\x00.,\x00/4\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x14\x01#oC\x01\x00\x08\x00#oC\x01\x00?\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\x10#oC\x01\x00\x00\x02\x00\x02\x04\x00\x04\x08\x00\x06\x0c\x00\x08\x10\x00\n\x14\x00\r\x1a\x00\x0e\x1c\x00\x10 \x00\x12$\x00\x14(\x00\x16,\x00\x180\x00\x1a4\x00\x1c8\x00\x1e@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00_\x07')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+10146:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:1024:bytearray(b'\x06\x15\x05.\x00@`\x01\x04\x066\x056\x00@`\x01\x04\x06/\x18A\x00@ \xc1\x04\x06/\x0c_\x00@ \xc1\x04\x06/\x0cp\x00@ \xc1\x04\x06/\x0c\x81\x00@ \xc1\x04\x06/\x0c\x92\x00@ \xc1\x04\x06/\x0c\xa3\x00@ \xc1\x04\x06/\x0c\xc7\x00@ \xc1\x04\x06/\x0c\xd8\x00@ \xc1\x04\x06\x11\x0c\xe7\x00@ \xc1\x04\x06\x15\x05\x0c\x00@@\xa1\x04d\x00\x0c@\x00\x01\x04d\x00\x15@\x00\x01\x04\x17\x00\x08A\x00\x01\x04\x18\x00\x00@\x00\x01\x00\x07\x00\x00\x00\x00\x01\x84l\x01\x84\x00\x0c\x00\xe8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00!\x00\x08@\x00\x01\x00\x03\x00\x00\x00\x15\x10@ \x01\x00\x03\x00\x07\x00\x07"@\x00\x01\x00d\x01\x03B\x00\x01\x00d\x00\tB\x00\x01\x00d\x01\x0eB\x00\x01\x00d\x00\x10B\x00\x01\x00d\x01\x12B\x00\x01\x00d\x00\x13B\x00\x01\x00d\x01\x16B\x00\x01\x00d\x00\x17B\x00\x01\x00\x1e\x00\x12e\x03A\x00\x1f\x00$e\x03A\x00\x1e\x00\x17h\x03A\x00\x1f\x00)h\x03A\x00!\x00\x0bi\x03\x01\x00\x03\x00\x00\x00\x16 i#\x01\x00\x03\x00\x03\x00\x03,i\x03\x01\x00\x14\x00\x11l#\x01\x00\x08\x00\x11l#\x01\x00?\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\x0c\x11l#\x01\x00\x00\x02\x00\x0c\x04\x00\x16\x06\x00\x1e\x08\x00"\n\x00&\x16\x00(\x18\x00) \x00*$\x00,(\x00.,\x00/4\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x14\x01#oC\x01\x00\x08\x00#oC\x01\x00?\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\x10#oC\x01\x00\x00\x02\x00\x02\x04\x00\x04\x08\x00\x06\x0c\x00\x08\x10\x00\n\x14\x00\r\x1a\x00\x0e\x1c\x00\x10 \x00\x12$\x00\x14(\x00\x16,\x00\x180\x00\x1a4\x00\x1c8\x00\x1e@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00_\x07')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+10161:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2844L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2844L, 'errors.crc': 0}
+10162:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:1024:bytearray(b'\x06\x15\x05.\x00@`\x01\x04\x066\x056\x00@`\x01\x04\x06/\x18A\x00@ \xc1\x04\x06/\x0c_\x00@ \xc1\x04\x06/\x0cp\x00@ \xc1\x04\x06/\x0c\x81\x00@ \xc1\x04\x06/\x0c\x92\x00@ \xc1\x04\x06/\x0c\xa3\x00@ \xc1\x04\x06/\x0c\xc7\x00@ \xc1\x04\x06/\x0c\xd8\x00@ \xc1\x04\x06\x11\x0c\xe7\x00@ \xc1\x04\x06\x15\x05\x0c\x00@@\xa1\x04d\x00\x0c@\x00\x01\x04d\x00\x15@\x00\x01\x04\x17\x00\x08A\x00\x01\x04\x18\x00\x00@\x00\x01\x00\x07\x00\x00\x00\x00\x01\x84l\x01\x84\x00\x0c\x00\xe8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00!\x00\x08@\x00\x01\x00\x03\x00\x00\x00\x15\x10@ \x01\x00\x03\x00\x07\x00\x07"@\x00\x01\x00d\x01\x03B\x00\x01\x00d\x00\tB\x00\x01\x00d\x01\x0eB\x00\x01\x00d\x00\x10B\x00\x01\x00d\x01\x12B\x00\x01\x00d\x00\x13B\x00\x01\x00d\x01\x16B\x00\x01\x00d\x00\x17B\x00\x01\x00\x1e\x00\x12e\x03A\x00\x1f\x00$e\x03A\x00\x1e\x00\x17h\x03A\x00\x1f\x00)h\x03A\x00!\x00\x0bi\x03\x01\x00\x03\x00\x00\x00\x16 i#\x01\x00\x03\x00\x03\x00\x03,i\x03\x01\x00\x14\x00\x11l#\x01\x00\x08\x00\x11l#\x01\x00?\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\x0c\x11l#\x01\x00\x00\x02\x00\x0c\x04\x00\x16\x06\x00\x1e\x08\x00"\n\x00&\x16\x00(\x18\x00) \x00*$\x00,(\x00.,\x00/4\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x14\x01#oC\x01\x00\x08\x00#oC\x01\x00?\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\x10#oC\x01\x00\x00\x02\x00\x02\x04\x00\x04\x08\x00\x06\x0c\x00\x08\x10\x00\n\x14\x00\r\x1a\x00\x0e\x1c\x00\x10 \x00\x12$\x00\x14(\x00\x16,\x00\x180\x00\x1a4\x00\x1c8\x00\x1e@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00_\x07')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+10164:INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData[page][8]:data:1024:bytearray(b'\x06\x15\x05.\x00@`\x01\x04\x066\x056\x00@`\x01\x04\x06/\x18A\x00@ \xc1\x04\x06/\x0c_\x00@ \xc1\x04\x06/\x0cp\x00@ \xc1\x04\x06/\x0c\x81\x00@ \xc1\x04\x06/\x0c\x92\x00@ \xc1\x04\x06/\x0c\xa3\x00@ \xc1\x04\x06/\x0c\xc7\x00@ \xc1\x04\x06/\x0c\xd8\x00@ \xc1\x04\x06\x11\x0c\xe7\x00@ \xc1\x04\x06\x15\x05\x0c\x00@@\xa1\x04d\x00\x0c@\x00\x01\x04d\x00\x15@\x00\x01\x04\x17\x00\x08A\x00\x01\x04\x18\x00\x00@\x00\x01\x00\x07\x00\x00\x00\x00\x01\x84l\x01\x84\x00\x0c\x00\xe8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00!\x00\x08@\x00\x01\x00\x03\x00\x00\x00\x15\x10@ \x01\x00\x03\x00\x07\x00\x07"@\x00\x01\x00d\x01\x03B\x00\x01\x00d\x00\tB\x00\x01\x00d\x01\x0eB\x00\x01\x00d\x00\x10B\x00\x01\x00d\x01\x12B\x00\x01\x00d\x00\x13B\x00\x01\x00d\x01\x16B\x00\x01\x00d\x00\x17B\x00\x01\x00\x1e\x00\x12e\x03A\x00\x1f\x00$e\x03A\x00\x1e\x00\x17h\x03A\x00\x1f\x00)h\x03A\x00!\x00\x0bi\x03\x01\x00\x03\x00\x00\x00\x16 i#\x01\x00\x03\x00\x03\x00\x03,i\x03\x01\x00\x14\x00\x11l#\x01\x00\x08\x00\x11l#\x01\x00?\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\x0c\x11l#\x01\x00\x00\x02\x00\x0c\x04\x00\x16\x06\x00\x1e\x08\x00"\n\x00&\x16\x00(\x18\x00) \x00*$\x00,(\x00.,\x00/4\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x14\x01#oC\x01\x00\x08\x00#oC\x01\x00?\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\x10#oC\x01\x00\x00\x02\x00\x02\x04\x00\x04\x08\x00\x06\x0c\x00\x08\x10\x00\n\x14\x00\r\x1a\x00\x0e\x1c\x00\x10 \x00\x12$\x00\x14(\x00\x16,\x00\x180\x00\x1a4\x00\x1c8\x00\x1e@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00_\x07')] reader[ReadRadio:size:142] download_i[False] status[<LinkStatus:0x03:error::size(142)>] poll_size[142] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+10179:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1525L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1427L, 'errors.crc': 0}
+10180:INFO:__main__:{'radio': {'errors.crc': 0,
+10181:           'errors.naks': 0,
+10182:           'errors.sequence': 2,
+10183:           'errors.timeouts': 18,
+10184:           'packets.received': 1427L,
+10185:           'packets.transmit': 1525L},
+10186: 'usb': {'errors.crc': 0,
+10187:         'errors.naks': 0,
+10188:         'errors.sequence': 0,
+10189:         'errors.timeouts': 0,
+10190:         'packets.received': 2844L,
+10191:         'packets.transmit': 2844L}}
+10192:INFO:__main__:howdy! we downloaded a lot of pump info successfully.
+10198:Was there an ACK ERROR?
+10199:### DIAGNOSE CRC
+10200:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
+10202:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+10204:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+10221:INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+10222:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+10224:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+10242:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+10244:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+10261:INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+10262:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+10264:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+10282:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+10284:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+10301:INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+10302:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+10304:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+10322:INFO:__main__:test fetching product info Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>]
+10323:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+10325:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+10347:INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+10348:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+10350:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+10370:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+10372:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+10387:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2854L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2854L, 'errors.crc': 0}
+10388:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+10390:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+10405:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1525L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1427L, 'errors.crc': 0}
+10406:INFO:__main__:{'radio': {'errors.crc': 0,
+10407:           'errors.naks': 0,
+10408:           'errors.sequence': 2,
+10409:           'errors.timeouts': 18,
+10410:           'packets.received': 1427L,
+10411:           'packets.transmit': 1525L},
+10412: 'usb': {'errors.crc': 0,
+10413:         'errors.naks': 0,
+10414:         'errors.sequence': 0,
+10415:         'errors.timeouts': 0,
+10416:         'packets.received': 2854L,
+10417:         'packets.transmit': 2854L}}
+10419:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+10421:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+10436:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2856L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2856L, 'errors.crc': 0}
+10437:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+10439:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+10454:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1525L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1427L, 'errors.crc': 0}
+10456:{'radio': {'errors.crc': 0,
+10457:           'errors.naks': 0,
+10458:           'errors.sequence': 2,
+10459:           'errors.timeouts': 18,
+10460:           'packets.received': 1427L,
+10461:           'packets.transmit': 1525L},
+10462: 'usb': {'errors.crc': 0,
+10463:         'errors.naks': 0,
+10464:         'errors.sequence': 0,
+10465:         'errors.timeouts': 0,
+10466:         'packets.received': 2856L,
+10467:         'packets.transmit': 2856L}}
+10468:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
+10469:DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>]>:STARTING POLL PHASE:attempt:0
+10470:DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[None] poll_size[0] poll_i[0] command[<RadioStats:0x05 0x00:size(64)>]>:poll:attempt:0
+10471:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+10473:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+10492:DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+10493:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+10495:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+10514:DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[2] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:2
+10515:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[2] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+10517:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[2] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+10536:DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[3] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:3
+10537:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[3] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+10539:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[3] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+10558:INFO:__main__:Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[3] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]:STOP POLL after 4 attempts:size:0
+10559:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 0:SHOULD DOWNLOAD :False
+10560:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+10562:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+10577:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2862L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2862L, 'errors.crc': 0}
+10578:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+10580:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+10595:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1525L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1427L, 'errors.crc': 0}
+10596:INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
+10597:{'radio': {'errors.crc': 0,
+10598:           'errors.naks': 0,
+10599:           'errors.sequence': 2,
+10600:           'errors.timeouts': 18,
+10601:           'packets.received': 1427L,
+10602:           'packets.transmit': 1525L},
+10603: 'usb': {'errors.crc': 0,
+10604:         'errors.naks': 0,
+10605:         'errors.sequence': 0,
+10606:         'errors.timeouts': 0,
+10607:         'packets.received': 2862L,
+10608:         'packets.transmit': 2862L}}
+10611:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+10613:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+10628:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2864L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2864L, 'errors.crc': 0}
+10629:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+10631:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+10646:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1525L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1427L, 'errors.crc': 0}
+10648:{'radio': {'errors.crc': 0,
+10649:           'errors.naks': 0,
+10650:           'errors.sequence': 2,
+10651:           'errors.timeouts': 18,
+10652:           'packets.received': 1427L,
+10653:           'packets.transmit': 1525L},
+10654: 'usb': {'errors.crc': 0,
+10655:         'errors.naks': 0,
+10656:         'errors.sequence': 0,
+10657:         'errors.timeouts': 0,
+10658:         'packets.received': 2864L,
+10659:         'packets.transmit': 2864L}}
+10660:INFO:__main__:howdy! all done looking at the stick
+10666:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
+10668:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+10670:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+10687:INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+10688:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+10690:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+10708:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+10710:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+10727:INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+10728:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+10730:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+10748:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+10750:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+10767:INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+10768:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+10770:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+10788:INFO:__main__:test fetching product info Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>]
+10789:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+10791:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+10813:INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
+10814:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
+10816:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] sending SignalStrength:0x06 0x00)
+10836:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+10838:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+10853:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2874L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2874L, 'errors.crc': 0}
+10854:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+10856:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+10871:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1525L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1427L, 'errors.crc': 0}
+10872:INFO:__main__:{'radio': {'errors.crc': 0,
+10873:           'errors.naks': 0,
+10874:           'errors.sequence': 2,
+10875:           'errors.timeouts': 18,
+10876:           'packets.received': 1427L,
+10877:           'packets.transmit': 1525L},
+10878: 'usb': {'errors.crc': 0,
+10879:         'errors.naks': 0,
+10880:         'errors.sequence': 0,
+10881:         'errors.timeouts': 0,
+10882:         'packets.received': 2874L,
+10883:         'packets.transmit': 2874L}}
+10885:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+10887:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+10902:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2876L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2876L, 'errors.crc': 0}
+10903:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+10905:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+10920:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1525L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1427L, 'errors.crc': 0}
+10922:{'radio': {'errors.crc': 0,
+10923:           'errors.naks': 0,
+10924:           'errors.sequence': 2,
+10925:           'errors.timeouts': 18,
+10926:           'packets.received': 1427L,
+10927:           'packets.transmit': 1525L},
+10928: 'usb': {'errors.crc': 0,
+10929:         'errors.naks': 0,
+10930:         'errors.sequence': 0,
+10931:         'errors.timeouts': 0,
+10932:         'packets.received': 2876L,
+10933:         'packets.transmit': 2876L}}
+10934:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
+10935:DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>]>:STARTING POLL PHASE:attempt:0
+10936:DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[None] poll_size[0] poll_i[0] command[<RadioStats:0x05 0x00:size(64)>]>:poll:attempt:0
+10937:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+10939:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[0] poll_i[0] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+10958:DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:1
+10959:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+10961:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[1] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+10980:DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[2] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:2
+10981:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[2] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+10983:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[2] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+11002:DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[3] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:3
+11003:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[3] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
+11005:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[3] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
+11024:INFO:__main__:Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[3] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]:STOP POLL after 4 attempts:size:0
+11025:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 0:SHOULD DOWNLOAD :False
+11026:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+11028:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+11043:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2882L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2882L, 'errors.crc': 0}
+11044:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+11046:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+11061:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1525L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1427L, 'errors.crc': 0}
+11062:INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
+11063:{'radio': {'errors.crc': 0,
+11064:           'errors.naks': 0,
+11065:           'errors.sequence': 2,
+11066:           'errors.timeouts': 18,
+11067:           'packets.received': 1427L,
+11068:           'packets.transmit': 1525L},
+11069: 'usb': {'errors.crc': 0,
+11070:         'errors.naks': 0,
+11071:         'errors.sequence': 0,
+11072:         'errors.timeouts': 0,
+11073:         'packets.received': 2882L,
+11074:         'packets.transmit': 2882L}}
+11077:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
+11079:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
+11094:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2884L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2884L, 'errors.crc': 0}
+11095:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
+11097:INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
+11112:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 1525L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 1427L, 'errors.crc': 0}
+11114:{'radio': {'errors.crc': 0,
+11115:           'errors.naks': 0,
+11116:           'errors.sequence': 2,
+11117:           'errors.timeouts': 18,
+11118:           'packets.received': 1427L,
+11119:           'packets.transmit': 1525L},
+11120: 'usb': {'errors.crc': 0,
+11121:         'errors.naks': 0,
+11122:         'errors.sequence': 0,
+11123:         'errors.timeouts': 0,
+11124:         'packets.received': 2884L,
+11125:         'packets.transmit': 2884L}}
+11126:INFO:__main__:howdy! all done looking at the stick
 ```
 
 * NO NAK FOUND

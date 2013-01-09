@@ -362,13 +362,19 @@ class Stick(object):
   def __init__(self, link):
     self.link = link
     self.command = None
+    self._download_i = False
 
   def __str__(self):
     s = [ self.__class__.__name__,
-          'status', repr(getattr(self, 'last_status', None)),
-          'command', repr(getattr(self, 'command', None)),
+          'transmit[{}]'  .format(str(getattr(self, 'transmit', None))),
+          'reader[{}]'    .format(str(getattr(self, 'reader', None))),
+          'download_i[{}]'.format(str(getattr(self, '_download_i', None))),
+          'status[{}]'    .format(repr(getattr(self, 'last_status', None))),
+          'poll_size[{}]' .format(str(getattr(self, '_poll_size', None))),
+          'poll_i[{}]'    .format(str(getattr(self, '_poll_i', None))),
+          'command[{}]'   .format(repr(getattr(self, 'command', None))),
         ]
-    return ':'.join(s)
+    return ' '.join(s)
   def __repr__(self):
     return '<{0}>'.format(str(self))
   def process(self):
@@ -418,16 +424,21 @@ class Stick(object):
     log.debug('%r:STARTING POLL PHASE:attempt:%s' % (self, i))
     #while size == 0 and size < 64 and time.time() - start < 1:
     while size == 0 and time.time() - start < 1:
+      self._poll_i = i
+      self._poll_size = size
       log.debug('%r:poll:attempt:%s' % (self, i))
       size  = self.read_status( )
+      self._poll_size = size
       log.debug('sleeping in POLL, .100')
       time.sleep(.250)
       i += 1
-    log.info('STOP POLL after %s attempts:size:%s' % (i, size))
+    log.info('%s:STOP POLL after %s attempts:size:%s' % (self, i, size))
+    self._poll_size = size
+    self._poll_i = False
     return size
     
   def read_status(self):
-    log.debug('read_status')
+    # log.debug('read_status')
     result = self.query(LinkStatus)
     self.last_status = self.command
     return result
@@ -474,10 +485,11 @@ class Stick(object):
     assert not raw
     
   def download_packet(self, size):
-    log.info("download_packet:%s" % (size))
+    log.info("%s:download_packet:%s" % (self, size))
     # XXX: this is the tricky bit
     original_size = size
     self.command = reader = ReadRadio(size)
+    self.reader = reader
     raw = self.send_force_read( )
     # return
     # packet = self.process( )
@@ -530,7 +542,7 @@ class Stick(object):
         log.info('NESTED zero length READ, try once more sleep .100')
         time.sleep(.100)
         raw = bytearray(self.link.read(self.command.size))
-        info = self.command.respond
+
         ack, body = status.respond(raw)
         info = self.command.parse(body)
 
@@ -545,41 +557,44 @@ class Stick(object):
     i = 0
     log_head = 'download(attempts[{}])'
     expecting = 'download(attempts[{}],expect[{}])'
-    stats = 'download(attempts[{}],expect[{}],results[{}]:data[{}])'
+    stats = '{}:download(attempts[{}],expect[{}],results[{}]:data[{}])'
     log.info('download:start:%s' % i)
     data = bytearray( )
     while not eod:
       i += 1
+      self._download_i = i
       data = bytearray( )
-      log.info("%s:begin first poll" % (stats.format(i, 0,
+      log.info("%s:begin first poll" % (stats.format(self, i, 0,
                                         len(results), len(data))))
       size = self.poll_size( )
-      log.info("%s:end first poll" % (stats.format(i, 0,
+      log.info("%s:end first poll" % (stats.format(self, i, 0,
                                       len(results), len(data))))
       if size == 0:
-        log.info("%s:found poll size, sleep 3 try again" % (stats.format(i, 0,
-                                        len(results), len(data))))
+        log.info("%s:found poll size, sleep 3 try again" % ( \
+                  stats.format(self, i, 0, len(results), len(data))))
         time.sleep(3)
         size = self.poll_size( )
         if size == 0:
-          log.critical("%s:BAD AILING" % (stats.format(i, 0,
+          log.critical("%s:BAD AILING" % (stats.format(self, i, 0,
                                           len(results), len(data))))
           break
 
-      log.info("%s:proceed to download packet" % (stats.format(i, 0,
+      log.info("%s:proceed to download packet" % (stats.format(self, i, 0,
                                                   len(results), len(data))))
       data = self.download_packet(size)
       if data:
         results.extend(data)
-        log.info("%s:adding segment" % (stats.format(i, size,
+        log.info("%s:adding segment" % (stats.format(self, i, size,
                                         len(results), len(data))))
       else:
-        log.info("%s:no data, try again" % (stats.format(i, size,
+        log.info("%s:no data, try again" % (stats.format(self, i, size,
                                             len(results), len(data))))
       eod = self.command.eod
 
-    log.info("%s:DONE" % (stats.format(i, size,
+    log.info("%s:DONE" % (stats.format(self, i, size,
                           len(results), len(data))))
+    self._download_i = False
+    # self.reader = None
     return results
 
   def clear_buffer(self):
@@ -645,6 +660,7 @@ class Stick(object):
   def transmit_packet(self, command):
     packet = TransmitPacket(command)
     self.command = packet
+    self.transmit = packet
     log.info('transmit_packet:write:%r' % (self.command))
     result = self.process( )
     return result

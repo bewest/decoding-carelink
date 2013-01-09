@@ -150,9 +150,9 @@ class ReadHistoryData(PumpCommand):
                0x01, 0x00, 0x02, 0x02, 0x00, 0x80, 0x9B, 0x03,
                0x36, ])
 
-  def __init__(self, page=0, **kwds):
+  def __init__(self, page=None, **kwds):
     if page is None and kwds.get('params', [ ]):
-      page = kwds.pop('params')[0]
+      page = kwds.pop('params')[0] or 0
 
     if page is not None:
       self.page = int(page)
@@ -160,7 +160,7 @@ class ReadHistoryData(PumpCommand):
     super(type(self), self).__init__(**kwds)
   def __str__(self):
     base = ''.join([ self.__class__.__name__, '[page][%s]' % self.page ])
-    return ':data:'.join([base, repr(self.getData( ))])
+    return '{}:data:{}:{}'.format(base, len(self.data), repr(self.getData( )))
 
   code = 128
   descr = "Read History Data"
@@ -172,7 +172,7 @@ class ReadHistoryData(PumpCommand):
 
   def getData(self):
     data = self.data
-    log.info("XXX: READ HISTORY DATA!!:\n%s" % lib.hexdump(data))
+    # log.info("XXX: READ HISTORY DATA!!:\n%s" % lib.hexdump(data))
     return data
 
 class ReadCurPageNumber(PumpCommand):
@@ -542,7 +542,7 @@ def get_pages(device):
 
   for x in range(pages + 1):
     log.info('comm:READ HISTORY DATA page number: %r' % (x))
-    comm = ReadHistoryData( params=[ x ] )
+    comm = ReadHistoryData(serial=device.serial, params=[ x ] )
     device.execute(comm)
     page = comm.getData( )
     log.info("XXX: READ HISTORY DATA!!:\n%s" % lib.hexdump(page))
