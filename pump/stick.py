@@ -583,16 +583,17 @@ class Stick(object):
       log.info("%s:proceed to download packet" % (stats.format(self, i, 0,
                                                   len(results), len(data))))
       data = self.download_packet(size)
+      expect_eod = False
       if data:
         results.extend(data)
+        expect_eod = self.command.eod 
         log.info("%s:adding segment" % (stats.format(self, i, size,
                                         len(results), len(data))))
       else:
         log.info("%s:no data, try again" % (stats.format(self, i, size,
                                             len(results), len(data))))
-      expect_eod = self.command.eod 
       size = self.poll_size( )
-      eod = expect_eod and size < 15
+      eod = size < 15
 
     log.info("%s:DONE" % (stats.format(self, i, size,
                           len(results), len(data))))
