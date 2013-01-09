@@ -175,7 +175,7 @@ class ReadHistoryData(PumpCommand):
     log.info("%s:download:done?: found[{}] expected[{}]".format(self, found, expect))
     return found >= expect
   def respond(self, raw):
-    self.data = raw
+    self.data.extend(raw)
     self.responded = True
 
   code = 128
