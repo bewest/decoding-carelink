@@ -37,6 +37,7 @@ class Session(object):
           log.info('sleeping %s before download' % command.effectTime)
           time.sleep(command.effectTime)
           self.download( )
+        log.info('finished executing:%s' % command)
         return command
       except BadDeviceCommError, e:
         log.critical("ERROR: %s" % e)

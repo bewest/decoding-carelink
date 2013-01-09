@@ -80,17 +80,28 @@ function summarize_pump ( ) {
   if [[ 0 -eq $(grep -E "BadCRC" $LOG | wc -l) ]] ; then
     echo "* NO CRC ERROR FOUND"
   else
-    _error=1
-    echo ""
-    echo '## Diagnose CRC'
-    echo ""
-    echo '```'
-    diagnose_crc
-    echo '```'
-    echo ""
+    if [[ 0 -eq $(grep -E "BadCRC" $LOG | grep -v -E 'returning empty|IGNORE' | wc -l) ]] ; then
+      echo ""
+      echo -n '## CRC errors found, caught, recovered: '
+      grep -n -E "BadCRC" $LOG | grep -E "returning empty|IGNORE" | wc -l
+      echo ""
+      echo '```'
+      grep -n -E "BadCRC" $LOG | grep -E "returning empty|IGNORE"
+      echo '```'
+      echo ""
+    else
+      _error=1
+      echo ""
+      echo '## Diagnose CRC'
+      echo ""
+      echo '```'
+      diagnose_crc
+      echo '```'
+      echo ""
+    fi
   fi
   if [[ 0 -eq $(grep -E "NAK" $LOG | wc -l) ]] ; then
-    echo "* NO NAK FOUND"
+    echo "* no nak found"
   else
     _error=1
     echo ""

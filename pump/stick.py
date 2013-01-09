@@ -260,7 +260,7 @@ class ReadRadio(StickCommand):
                           'head:\n%s\n' % (lib.hexdump(head)),
                           'data:\n%s\n' % (lib.hexdump(data)) ] )
       log.info(msg)
-      log.info("XXX:BadCRC:returning empty message instead of raising errors.")
+      log.info("XXX:IGNORE:BadCRC:returning empty message instead of raising errors.")
       return bytearray( )
       raise BadCRC(msg)
     assert crc == expected_crc
