@@ -38,7 +38,8 @@ class Session(object):
           time.sleep(command.effectTime)
           self.download( )
         log.info('finished executing:%s' % command)
-        return command
+        if command.done( ):
+          return command
       except BadDeviceCommError, e:
         log.critical("ERROR: %s" % e)
         # self.clearBuffers( )

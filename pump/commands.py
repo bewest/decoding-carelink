@@ -26,9 +26,18 @@ class BaseCommand(object):
     self.descr  = descr
     self.params = [ ]
 
+  def done(self):
+    found = len(self.data or [ ])
+    expect = int(self.maxRecords * self.bytesPerRecord)
+    log.info("%s:download:done?: found[{}] expected[{}]".format(self, found, expect))
+    return found >= expect
   def format(self):
     pass
 
+  def respond(self, data):
+    self.data = data
+    self.getData( )
+    self.responded = True
 
 class PumpCommand(BaseCommand):
   #serial = '665455'
@@ -46,18 +55,16 @@ class PumpCommand(BaseCommand):
     for k in self.__fields__:
       value = kwds.get(k, getattr(self, k))
       setattr(self, k, value)
+    self.allocateRawData( )
 
   def __str__(self):
     if self.responded:
-      return ':data:'.join([self.__class__.__name__, repr(self.getData( ))])
+      return '{}:size[{}]:data:{}'.format(self.__class__.__name__,
+                                          self.size, repr(self.getData( )))
     return '{}:data:unknown'.format(self.__class__.__name__)
 
   def __repr__(self):
     return '<{0}>'.format( self)
-  def respond(self, data):
-    self.data = data
-    self.getData( )
-    self.responded = True
 
   def getData(self):
     return self.data
@@ -161,12 +168,21 @@ class ReadHistoryData(PumpCommand):
   def __str__(self):
     base = ''.join([ self.__class__.__name__, '[page][%s]' % self.page ])
     return '{}:data:{}:{}'.format(base, len(self.data), repr(self.getData( )))
+  
+  def done(self):
+    found = len(self.data or [ ])
+    expect = int(self.maxRecords * self.bytesPerRecord)
+    log.info("%s:download:done?: found[{}] expected[{}]".format(self, found, expect))
+    return found >= expect
+  def respond(self, raw):
+    self.data = raw
+    self.responded = True
 
   code = 128
   descr = "Read History Data"
   params = [ ]
   retries = 2
-  maxRecords = 2
+  maxRecords = 16
   effectTime = .100
   data = bytearray( )
 
@@ -192,6 +208,7 @@ class ReadCurPageNumber(PumpCommand):
   def respond(self, data):
     self.data = data
     self.pages = self.getData( )
+    self.responded = True
   def getData(self):
     data = self.data
     log.info("XXX: READ cur page number:\n%s" % lib.hexdump(data))
