@@ -550,23 +550,29 @@ class Stick(object):
     data = bytearray( )
     while not eod:
       i += 1
-      log.info("%s:begin first poll" % (log_head.format(i)))
+      data = bytearray( )
+      log.info("%s:begin first poll" % (stats.format(i, 0,
+                                        len(results), len(data))))
       size = self.poll_size( )
-      log.info("%s:poll:" % (expecting.format(i, size)))
+      log.info("%s:end first poll" % (stats.format(i, 0,
+                                      len(results), len(data))))
       if size == 0:
-        log.info('download found empty poll size, sleep 3 and try again')
+        log.info("%s:found poll size, sleep 3 try again" % (stats.format(i, 0,
+                                        len(results), len(data))))
         time.sleep(3)
         size = self.poll_size( )
         if size == 0:
+          log.critical("%s:BAD AILING" % (stats.format(i, 0,
+                                          len(results), len(data))))
           break
 
-      #if size > 64:
-      log.info("%s:proceed to download_packet" % (expecting.format(i, size)))
+      log.info("%s:proceed to download packet" % (stats.format(i, 0,
+                                                  len(results), len(data))))
       data = self.download_packet(size)
       if data:
         results.extend(data)
         log.info("%s:adding segment" % (stats.format(i, size,
-                                            len(results), len(data))))
+                                        len(results), len(data))))
       else:
         log.info("%s:no data, try again" % (stats.format(i, size,
                                             len(results), len(data))))

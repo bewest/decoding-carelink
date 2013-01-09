@@ -19,6 +19,8 @@ class BaseCommand(object):
   maxRecords = 0
   effectTime = 0
 
+  responded = False
+
   def __init__(self, code, descr, *args):
     self.code   = code
     self.descr  = descr
@@ -37,6 +39,7 @@ class PumpCommand(BaseCommand):
   bytesPerRecord = 64
   maxRecords = 1
   retries = 2
+  data = bytearray( )
   __fields__ = ['maxRecords', 'code', 'descr',
                 'serial', 'bytesPerRecord', 'params']
   def __init__(self, **kwds):
@@ -45,11 +48,17 @@ class PumpCommand(BaseCommand):
       setattr(self, k, value)
 
   def __str__(self):
-    if getattr(self, 'data', False):
-      return ':'.join([self.__class__.__name__, repr(self.getData( ))])
-    return self.__class__.__name__
+    if self.responded:
+      return ':data:'.join([self.__class__.__name__, repr(self.getData( ))])
+    return '{}:data:unknown'.format(self.__class__.__name__)
+
   def __repr__(self):
     return '<{0}>'.format( self)
+  def respond(self, data):
+    self.data = data
+    self.getData( )
+    self.responded = True
+
   def getData(self):
     return self.data
 
@@ -141,24 +150,25 @@ class ReadHistoryData(PumpCommand):
                0x01, 0x00, 0x02, 0x02, 0x00, 0x80, 0x9B, 0x03,
                0x36, ])
 
-  def __init__(self, page=None, **kwds):
+  def __init__(self, page=0, **kwds):
     if page is None and kwds.get('params', [ ]):
       page = kwds.pop('params')[0]
 
-    self.page = int(page)
-    kwds['params'] = [ self.page ]
+    if page is not None:
+      self.page = int(page)
+      kwds['params'] = [ self.page ]
     super(type(self), self).__init__(**kwds)
   def __str__(self):
     base = ''.join([ self.__class__.__name__, '[page][%s]' % self.page ])
-    if getattr(self, 'data', False):
-      return ':'.join([base, repr(self.getData( ))])
-    return base
+    return ':data:'.join([base, repr(self.getData( ))])
+
   code = 128
   descr = "Read History Data"
   params = [ ]
   retries = 2
   maxRecords = 2
   effectTime = .100
+  data = bytearray( )
 
   def getData(self):
     data = self.data
@@ -174,7 +184,14 @@ class ReadCurPageNumber(PumpCommand):
   params = [ ]
   retries = 2
   maxRecords = 1
+  pages = 'unknown'
 
+  def __str__(self):
+    return ':pages:'.join([self.__class__.__name__, str(self.pages) ])
+
+  def respond(self, data):
+    self.data = data
+    self.pages = self.getData( )
   def getData(self):
     data = self.data
     log.info("XXX: READ cur page number:\n%s" % lib.hexdump(data))
