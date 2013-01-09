@@ -1,6 +1,6 @@
 OUT
 ## Observations
-Tue Jan  8 21:17:22 PST 2013
+Tue Jan  8 21:22:19 PST 2013
 
 ## stick
 
@@ -10,17 +10,18 @@ Tue Jan  8 21:17:22 PST 2013
 ## pump
 
 
-## downloaded:9
+## downloaded:10
 
 ```
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0], bytearray(b'\x00\xc3\x80@\xa7\x01 \x88PD\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][1], bytearray(b'\x02\x00\x80\x00\xa7\x01 \x88Pf\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][2], bytearray(b'\x00\xc3\x80\x80\xa7\x01 \x88P\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x03\x00\x03\x92\x9e\x0b\x01\x06\x07\x00\x00\x02L\xa1\x06l\xa1\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x02L\x02Ld\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][3], bytearray(b'\x00\xc2\x80\x80\xa7\x01 \x88P\x9c\x04\xda\x82\x0cl\x82\x0c\x05\x00edf\x12\x00\x00\x04\xda\x03\x9eK\x01<\x19\x00O\x01<\x19\x01<d\x00\x00\x00\x00\x00\x00\x10\x10\x00\x00\x00d\x01V\xca\x06\x01\x06\x17\x00')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][4], bytearray(b'\x00\xc3\x80\x80\xa7\x01 \x88P\x01\x01\x12\x17\x00\x9f\x08\x14\x01\x12\x18\x00\x80\x08\x14\x01\x0c\x07\x00\x00\x00\x06\x81\x12l\x81\x12\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x06\x00\x06d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][5], bytearray(b'\x00\xc3\x80\x80\xa7\x01 \x88P\x01\x00\x02\x00!\x00l!\x00\x05\x0c\x00\xe8\x00\x00\x00\x00\x02\x00\x02\x00d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\x00\x0c\x9c\x13\x02\x00\x17')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][6], bytearray(b'\x00\xc1\x82@\xa7\x01 \x88P\x04"\x00l"\x00\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x00\x00#\x00l#\x00\x05')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][7], bytearray(b'\x00\xc7\x80\x80\xa7\x01 \x88P\xd8\x00\x00\x00\x00\x00\x07\x00\x00\x00\x00\x15\x80l\x15\x80\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0], bytearray(b'\x00\xc4\x80@\xa7\x01 \x88P\xa1\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0], bytearray(b'\x00\xc6\x80@\xa7\x01 \x88P\x00\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][1], bytearray(b'\x00\xc1\x80\x80\xa7\x01 \x88P\xa0\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][2], bytearray(b'\x00\xc2\x80\x80\xa7\x01 \x88P\x9c\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x03\x00\x03\x92\x9e\x0b\x01\x06\x07\x00\x00\x02L\xa1\x06l\xa1\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x02L\x02Ld\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][3], bytearray(b'\x02\x00\x80\x00\xa7\x01 \x88Pf\x00\xda\x82\x0cl\x82\x0c\x05\x00edf\x12\x00\x00\x04\xda\x03\x9eK\x01<\x19\x00O\x01<\x19\x01<d\x00\x00\x00\x00\x00\x00\x10\x10\x00\x00\x00d\x01V\xca\x06\x01\x06\x17\x00')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][4], bytearray(b'\x02\x00\x80\x00\xa7\x01 \x88Pf\x00&\x08\x05\x07\x00\x00\x03\x96h\x85lh\x85\x05\x00```\x01\x00\x00\x03\x96\x02\xf6S\x00\xa0\x11\x00\x00\x00\xa0\x11\x00\x00\x00\x00\x00\x00\x00\xa0d\x01\x00\x00\x00\x01[d')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][5], bytearray(b'\x00\xc5\x80\x80\xa7\x01 \x88Py\x00\x02\x00!\x00l!\x00\x05\x0c\x00\xe8\x00\x00\x00\x00\x02\x00\x02\x00d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\x00\x0c\x9c\x13\x02\x00\x17')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][6], bytearray(b'\x00\xc3\x80\x80\xa7\x01 \x88P\x01\x00\x00,\x00l,\x00\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x00\x00-\x00l-')
+INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][7], bytearray(b'\x00\xc4\x80\x80\xa7\x01 \x88P\xe4\x00\x00\x00\x00\x00\x07\x00\x00\x00\x00\x15\x80l\x15\x80\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07')
 INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][8], bytearray(b'\x00\xc2\x80\x80\xa7\x01 \x88P\x9c\x1f\x00)C\x04A\x00\x07\x00\x00\x04\xcc\x01\x80l\x01\x80\x05\x00ddd\x0b\x00\x00\x04\xcc\x03\xbeN\x01\x0e\x16\x00A\x01\x0e\x16\x01\x04`\x00\x00\x00\x00\n\x04\x0c\x0b\x00\x00')
 ```
 
@@ -33,870 +34,860 @@ INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][8], bytearra
 19:  echo "Was there an ACK ERROR?"
 20:  echo "### DIAGNOSE CRC"
 46:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
-233:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 444L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 444L, 'errors.crc': 0}
-251:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 7, 'packets.transmit': 193L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 175L, 'errors.crc': 0}
+233:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 773L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 773L, 'errors.crc': 0}
+251:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 390L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 361L, 'errors.crc': 0}
 252:INFO:__main__:{'radio': {'errors.crc': 0,
 253:           'errors.naks': 0,
-254:           'errors.sequence': 2,
-255:           'errors.timeouts': 7,
-256:           'packets.received': 175L,
-257:           'packets.transmit': 193L},
+254:           'errors.sequence': 4,
+255:           'errors.timeouts': 9,
+256:           'packets.received': 361L,
+257:           'packets.transmit': 390L},
 258: 'usb': {'errors.crc': 0,
 259:         'errors.naks': 0,
 260:         'errors.sequence': 0,
 261:         'errors.timeouts': 0,
-262:         'packets.received': 444L,
-263:         'packets.transmit': 444L}}
-282:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 446L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 446L, 'errors.crc': 0}
-300:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 7, 'packets.transmit': 193L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 175L, 'errors.crc': 0}
+262:         'packets.received': 773L,
+263:         'packets.transmit': 773L}}
+282:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 775L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 775L, 'errors.crc': 0}
+300:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 390L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 361L, 'errors.crc': 0}
 302:{'radio': {'errors.crc': 0,
 303:           'errors.naks': 0,
-304:           'errors.sequence': 2,
-305:           'errors.timeouts': 7,
-306:           'packets.received': 175L,
-307:           'packets.transmit': 193L},
+304:           'errors.sequence': 4,
+305:           'errors.timeouts': 9,
+306:           'packets.received': 361L,
+307:           'packets.transmit': 390L},
 308: 'usb': {'errors.crc': 0,
 309:         'errors.naks': 0,
 310:         'errors.sequence': 0,
 311:         'errors.timeouts': 0,
-312:         'packets.received': 446L,
-313:         'packets.transmit': 446L}}
+312:         'packets.received': 775L,
+313:         'packets.transmit': 775L}}
 314:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
 409:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 0:SHOULD DOWNLOAD :False
-427:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 452L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 452L, 'errors.crc': 0}
-445:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 7, 'packets.transmit': 193L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 175L, 'errors.crc': 0}
+427:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 781L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 781L, 'errors.crc': 0}
+445:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 390L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 361L, 'errors.crc': 0}
 446:INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
 447:{'radio': {'errors.crc': 0,
 448:           'errors.naks': 0,
-449:           'errors.sequence': 2,
-450:           'errors.timeouts': 7,
-451:           'packets.received': 175L,
-452:           'packets.transmit': 193L},
+449:           'errors.sequence': 4,
+450:           'errors.timeouts': 9,
+451:           'packets.received': 361L,
+452:           'packets.transmit': 390L},
 453: 'usb': {'errors.crc': 0,
 454:         'errors.naks': 0,
 455:         'errors.sequence': 0,
 456:         'errors.timeouts': 0,
-457:         'packets.received': 452L,
-458:         'packets.transmit': 452L}}
-478:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 454L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 454L, 'errors.crc': 0}
-496:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 7, 'packets.transmit': 193L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 175L, 'errors.crc': 0}
+457:         'packets.received': 781L,
+458:         'packets.transmit': 781L}}
+478:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 783L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 783L, 'errors.crc': 0}
+496:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 390L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 361L, 'errors.crc': 0}
 498:{'radio': {'errors.crc': 0,
 499:           'errors.naks': 0,
-500:           'errors.sequence': 2,
-501:           'errors.timeouts': 7,
-502:           'packets.received': 175L,
-503:           'packets.transmit': 193L},
+500:           'errors.sequence': 4,
+501:           'errors.timeouts': 9,
+502:           'packets.received': 361L,
+503:           'packets.transmit': 390L},
 504: 'usb': {'errors.crc': 0,
 505:         'errors.naks': 0,
 506:         'errors.sequence': 0,
 507:         'errors.timeouts': 0,
-508:         'packets.received': 454L,
-509:         'packets.transmit': 454L}}
+508:         'packets.received': 783L,
+509:         'packets.transmit': 783L}}
 510:INFO:__main__:howdy! all done looking at the stick
 516:INFO:__main__:howdy! I'm going to take a look at your pump.
-656:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 462L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 462L, 'errors.crc': 0}
-674:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 7, 'packets.transmit': 193L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 175L, 'errors.crc': 0}
+656:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 791L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 791L, 'errors.crc': 0}
+674:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 390L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 361L, 'errors.crc': 0}
 675:INFO:__main__:{'radio': {'errors.crc': 0,
 676:           'errors.naks': 0,
-677:           'errors.sequence': 2,
-678:           'errors.timeouts': 7,
-679:           'packets.received': 175L,
-680:           'packets.transmit': 193L},
+677:           'errors.sequence': 4,
+678:           'errors.timeouts': 9,
+679:           'packets.received': 361L,
+680:           'packets.transmit': 390L},
 681: 'usb': {'errors.crc': 0,
 682:         'errors.naks': 0,
 683:         'errors.sequence': 0,
 684:         'errors.timeouts': 0,
-685:         'packets.received': 462L,
-686:         'packets.transmit': 462L}}
+685:         'packets.received': 791L,
+686:         'packets.transmit': 791L}}
 712:INFO:__main__:sleeping 17 before download
 713:INFO:__main__:no download required
 714:INFO:__main__:manually download PowerControl
 715:INFO:stick:download:start:0
 716:INFO:stick:download(attempts[1]):begin first poll
-746:INFO:stick:download(attempts[1],expect[15]):poll:
-747:INFO:stick:download(attempts[1],expect[15]):proceed to download_packet
-748:INFO:stick:download_packet:15
-764:WARNING:stick:bad zero CRC?
-765:INFO:stick:download(attempts[1],expect[15],results[1]:data[1]):adding segment
-766:INFO:stick:download(attempts[1],expect[15],results[1]:data[1]):DONE
-767:INFO:__main__:ENDING manual download:
-786:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 467L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 467L, 'errors.crc': 0}
-804:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 7, 'packets.transmit': 195L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 177L, 'errors.crc': 0}
-805:INFO:__main__:{'radio': {'errors.crc': 0,
-806:           'errors.naks': 0,
-807:           'errors.sequence': 2,
-808:           'errors.timeouts': 7,
-809:           'packets.received': 177L,
-810:           'packets.transmit': 195L},
-811: 'usb': {'errors.crc': 0,
-812:         'errors.naks': 0,
-813:         'errors.sequence': 0,
-814:         'errors.timeouts': 0,
-815:         'packets.received': 467L,
-816:         'packets.transmit': 467L}}
-840:INFO:__main__:sleeping 0 before download
-841:INFO:__main__:proceeding with download
-842:INFO:stick:download:start:0
-843:INFO:stick:download(attempts[1]):begin first poll
-892:INFO:stick:download(attempts[1],expect[78]):poll:
-893:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-894:INFO:stick:download_packet:78
-917:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-918:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-937:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 473L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 473L, 'errors.crc': 0}
-955:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 7, 'packets.transmit': 196L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 178L, 'errors.crc': 0}
-956:INFO:__main__:{'radio': {'errors.crc': 0,
-957:           'errors.naks': 0,
-958:           'errors.sequence': 2,
-959:           'errors.timeouts': 7,
-960:           'packets.received': 178L,
-961:           'packets.transmit': 196L},
-962: 'usb': {'errors.crc': 0,
-963:         'errors.naks': 0,
-964:         'errors.sequence': 0,
-965:         'errors.timeouts': 0,
-966:         'packets.received': 473L,
-967:         'packets.transmit': 473L}}
-968:INFO:__main__:howdy! all done looking at pump
-974:INFO:__main__:howdy! I'm going to take a look at your pump and grab lots of info.
-1114:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 481L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 481L, 'errors.crc': 0}
-1132:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 7, 'packets.transmit': 196L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 178L, 'errors.crc': 0}
-1133:INFO:__main__:{'radio': {'errors.crc': 0,
-1134:           'errors.naks': 0,
-1135:           'errors.sequence': 2,
-1136:           'errors.timeouts': 7,
-1137:           'packets.received': 178L,
-1138:           'packets.transmit': 196L},
-1139: 'usb': {'errors.crc': 0,
-1140:         'errors.naks': 0,
-1141:         'errors.sequence': 0,
-1142:         'errors.timeouts': 0,
-1143:         'packets.received': 481L,
-1144:         'packets.transmit': 481L}}
-1168:INFO:session:sleeping 0 before download
-1169:INFO:session:proceeding with download
-1170:INFO:stick:download:start:0
-1171:INFO:stick:download(attempts[1]):begin first poll
-1220:INFO:stick:download(attempts[1],expect[78]):poll:
-1221:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-1222:INFO:stick:download_packet:78
-1245:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-1246:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-1271:INFO:session:sleeping 0 before download
-1272:INFO:session:proceeding with download
-1273:INFO:stick:download:start:0
-1274:INFO:stick:download(attempts[1]):begin first poll
-1323:INFO:stick:download(attempts[1],expect[78]):poll:
-1324:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-1325:INFO:stick:download_packet:78
-1348:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-1349:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-1376:INFO:session:sleeping 0 before download
-1377:INFO:session:proceeding with download
-1378:INFO:stick:download:start:0
-1379:INFO:stick:download(attempts[1]):begin first poll
-1428:INFO:stick:download(attempts[1],expect[78]):poll:
-1429:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-1430:INFO:stick:download_packet:78
-1453:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-1454:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-1480:INFO:session:sleeping 0 before download
-1481:INFO:session:proceeding with download
-1482:INFO:stick:download:start:0
-1483:INFO:stick:download(attempts[1]):begin first poll
-1532:INFO:stick:download(attempts[1],expect[78]):poll:
-1533:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-1534:INFO:stick:download_packet:78
-1557:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-1558:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-1584:INFO:session:sleeping 0 before download
-1585:INFO:session:proceeding with download
-1586:INFO:stick:download:start:0
-1587:INFO:stick:download(attempts[1]):begin first poll
-1636:INFO:stick:download(attempts[1],expect[78]):poll:
-1637:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-1638:INFO:stick:download_packet:78
-1661:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-1662:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-1688:INFO:session:sleeping 0 before download
-1689:INFO:session:proceeding with download
-1690:INFO:stick:download:start:0
-1691:INFO:stick:download(attempts[1]):begin first poll
-1740:INFO:stick:download(attempts[1],expect[78]):poll:
-1741:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-1742:INFO:stick:download_packet:78
-1765:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-1766:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-1801:INFO:session:sleeping 0 before download
-1802:INFO:session:proceeding with download
-1803:INFO:stick:download:start:0
-1804:INFO:stick:download(attempts[1]):begin first poll
-1853:INFO:stick:download(attempts[1],expect[78]):poll:
-1854:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-1855:INFO:stick:download_packet:78
-1878:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-1879:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-1914:INFO:session:sleeping 0 before download
-1915:INFO:session:proceeding with download
-1916:INFO:stick:download:start:0
-1917:INFO:stick:download(attempts[1]):begin first poll
-1966:INFO:stick:download(attempts[1],expect[78]):poll:
-1967:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-1968:INFO:stick:download_packet:78
-1991:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-1992:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-2027:INFO:session:sleeping 0 before download
-2028:INFO:session:proceeding with download
-2029:INFO:stick:download:start:0
-2030:INFO:stick:download(attempts[1]):begin first poll
-2079:INFO:stick:download(attempts[1],expect[78]):poll:
-2080:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-2081:INFO:stick:download_packet:78
-2104:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-2105:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-2140:INFO:session:sleeping 0 before download
-2141:INFO:session:proceeding with download
-2142:INFO:stick:download:start:0
-2143:INFO:stick:download(attempts[1]):begin first poll
-2192:INFO:stick:download(attempts[1],expect[78]):poll:
-2193:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-2194:INFO:stick:download_packet:78
-2217:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-2218:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-2253:INFO:session:sleeping 0 before download
-2254:INFO:session:proceeding with download
-2255:INFO:stick:download:start:0
-2256:INFO:stick:download(attempts[1]):begin first poll
-2305:INFO:stick:download(attempts[1],expect[78]):poll:
-2306:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-2307:INFO:stick:download_packet:78
-2330:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-2331:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-2366:INFO:session:sleeping 0 before download
-2367:INFO:session:proceeding with download
-2368:INFO:stick:download:start:0
-2369:INFO:stick:download(attempts[1]):begin first poll
-2418:INFO:stick:download(attempts[1],expect[78]):poll:
-2419:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-2420:INFO:stick:download_packet:78
-2443:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-2444:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-2479:INFO:session:sleeping 0 before download
-2480:INFO:session:proceeding with download
-2481:INFO:stick:download:start:0
-2482:INFO:stick:download(attempts[1]):begin first poll
-2531:INFO:stick:download(attempts[1],expect[78]):poll:
-2532:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-2533:INFO:stick:download_packet:78
-2556:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-2557:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-2593:INFO:session:sleeping 0.1 before download
-2594:INFO:session:proceeding with download
-2595:INFO:stick:download:start:0
-2596:INFO:stick:download(attempts[1]):begin first poll
-2645:INFO:stick:download(attempts[1],expect[78]):poll:
-2646:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-2647:INFO:stick:download_packet:78
-2670:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-2671:INFO:stick:download(attempts[2]):begin first poll
-2697:INFO:stick:download(attempts[2],expect[206]):poll:
-2698:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
-2699:INFO:stick:download_packet:206
-2738:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-2739:INFO:stick:download(attempts[3]):begin first poll
-2765:INFO:stick:download(attempts[3],expect[142]):poll:
-2766:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
-2767:INFO:stick:download_packet:142
-2798:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-2799:INFO:stick:download(attempts[4]):begin first poll
-2825:INFO:stick:download(attempts[4],expect[142]):poll:
-2826:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
-2827:INFO:stick:download_packet:142
-2858:WARNING:stick:bad zero CRC?
-2859:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-2860:INFO:stick:download(attempts[5]):begin first poll
-2886:INFO:stick:download(attempts[5],expect[142]):poll:
-2887:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
-2888:INFO:stick:download_packet:142
-2919:WARNING:stick:bad zero CRC?
-2920:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-2921:INFO:stick:download(attempts[6]):begin first poll
-2947:INFO:stick:download(attempts[6],expect[142]):poll:
-2948:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
+792:INFO:stick:download(attempts[1],expect[0]):poll:
+793:INFO:stick:download found empty poll size, sleep 3 and try again
+888:INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):DONE
+889:INFO:__main__:ENDING manual download:
+908:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 801L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 801L, 'errors.crc': 0}
+926:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 391L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 361L, 'errors.crc': 0}
+927:INFO:__main__:{'radio': {'errors.crc': 0,
+928:           'errors.naks': 0,
+929:           'errors.sequence': 4,
+930:           'errors.timeouts': 9,
+931:           'packets.received': 361L,
+932:           'packets.transmit': 391L},
+933: 'usb': {'errors.crc': 0,
+934:         'errors.naks': 0,
+935:         'errors.sequence': 0,
+936:         'errors.timeouts': 0,
+937:         'packets.received': 801L,
+938:         'packets.transmit': 801L}}
+962:INFO:__main__:sleeping 0 before download
+963:INFO:__main__:proceeding with download
+964:INFO:stick:download:start:0
+965:INFO:stick:download(attempts[1]):begin first poll
+1014:INFO:stick:download(attempts[1],expect[78]):poll:
+1015:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+1016:INFO:stick:download_packet:78
+1039:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+1040:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
+1059:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 807L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 807L, 'errors.crc': 0}
+1077:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 392L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 362L, 'errors.crc': 0}
+1078:INFO:__main__:{'radio': {'errors.crc': 0,
+1079:           'errors.naks': 0,
+1080:           'errors.sequence': 4,
+1081:           'errors.timeouts': 9,
+1082:           'packets.received': 362L,
+1083:           'packets.transmit': 392L},
+1084: 'usb': {'errors.crc': 0,
+1085:         'errors.naks': 0,
+1086:         'errors.sequence': 0,
+1087:         'errors.timeouts': 0,
+1088:         'packets.received': 807L,
+1089:         'packets.transmit': 807L}}
+1090:INFO:__main__:howdy! all done looking at pump
+1096:INFO:__main__:howdy! I'm going to take a look at your pump and grab lots of info.
+1236:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 815L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 815L, 'errors.crc': 0}
+1254:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 392L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 362L, 'errors.crc': 0}
+1255:INFO:__main__:{'radio': {'errors.crc': 0,
+1256:           'errors.naks': 0,
+1257:           'errors.sequence': 4,
+1258:           'errors.timeouts': 9,
+1259:           'packets.received': 362L,
+1260:           'packets.transmit': 392L},
+1261: 'usb': {'errors.crc': 0,
+1262:         'errors.naks': 0,
+1263:         'errors.sequence': 0,
+1264:         'errors.timeouts': 0,
+1265:         'packets.received': 815L,
+1266:         'packets.transmit': 815L}}
+1290:INFO:session:sleeping 0 before download
+1291:INFO:session:proceeding with download
+1292:INFO:stick:download:start:0
+1293:INFO:stick:download(attempts[1]):begin first poll
+1342:INFO:stick:download(attempts[1],expect[78]):poll:
+1343:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+1344:INFO:stick:download_packet:78
+1367:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+1368:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
+1393:INFO:session:sleeping 0 before download
+1394:INFO:session:proceeding with download
+1395:INFO:stick:download:start:0
+1396:INFO:stick:download(attempts[1]):begin first poll
+1445:INFO:stick:download(attempts[1],expect[78]):poll:
+1446:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+1447:INFO:stick:download_packet:78
+1470:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+1471:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
+1498:INFO:session:sleeping 0 before download
+1499:INFO:session:proceeding with download
+1500:INFO:stick:download:start:0
+1501:INFO:stick:download(attempts[1]):begin first poll
+1550:INFO:stick:download(attempts[1],expect[78]):poll:
+1551:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+1552:INFO:stick:download_packet:78
+1575:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+1576:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
+1602:INFO:session:sleeping 0 before download
+1603:INFO:session:proceeding with download
+1604:INFO:stick:download:start:0
+1605:INFO:stick:download(attempts[1]):begin first poll
+1654:INFO:stick:download(attempts[1],expect[78]):poll:
+1655:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+1656:INFO:stick:download_packet:78
+1679:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+1680:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
+1706:INFO:session:sleeping 0 before download
+1707:INFO:session:proceeding with download
+1708:INFO:stick:download:start:0
+1709:INFO:stick:download(attempts[1]):begin first poll
+1758:INFO:stick:download(attempts[1],expect[78]):poll:
+1759:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+1760:INFO:stick:download_packet:78
+1783:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+1784:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
+1810:INFO:session:sleeping 0 before download
+1811:INFO:session:proceeding with download
+1812:INFO:stick:download:start:0
+1813:INFO:stick:download(attempts[1]):begin first poll
+1862:INFO:stick:download(attempts[1],expect[78]):poll:
+1863:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+1864:INFO:stick:download_packet:78
+1887:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+1888:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
+1923:INFO:session:sleeping 0 before download
+1924:INFO:session:proceeding with download
+1925:INFO:stick:download:start:0
+1926:INFO:stick:download(attempts[1]):begin first poll
+1975:INFO:stick:download(attempts[1],expect[78]):poll:
+1976:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+1977:INFO:stick:download_packet:78
+2000:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2001:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2036:INFO:session:sleeping 0 before download
+2037:INFO:session:proceeding with download
+2038:INFO:stick:download:start:0
+2039:INFO:stick:download(attempts[1]):begin first poll
+2088:INFO:stick:download(attempts[1],expect[78]):poll:
+2089:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+2090:INFO:stick:download_packet:78
+2113:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2114:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2149:INFO:session:sleeping 0 before download
+2150:INFO:session:proceeding with download
+2151:INFO:stick:download:start:0
+2152:INFO:stick:download(attempts[1]):begin first poll
+2201:INFO:stick:download(attempts[1],expect[78]):poll:
+2202:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+2203:INFO:stick:download_packet:78
+2226:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2227:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2262:INFO:session:sleeping 0 before download
+2263:INFO:session:proceeding with download
+2264:INFO:stick:download:start:0
+2265:INFO:stick:download(attempts[1]):begin first poll
+2314:INFO:stick:download(attempts[1],expect[78]):poll:
+2315:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+2316:INFO:stick:download_packet:78
+2339:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2340:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2375:INFO:session:sleeping 0 before download
+2376:INFO:session:proceeding with download
+2377:INFO:stick:download:start:0
+2378:INFO:stick:download(attempts[1]):begin first poll
+2427:INFO:stick:download(attempts[1],expect[78]):poll:
+2428:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+2429:INFO:stick:download_packet:78
+2452:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2453:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2488:INFO:session:sleeping 0 before download
+2489:INFO:session:proceeding with download
+2490:INFO:stick:download:start:0
+2491:INFO:stick:download(attempts[1]):begin first poll
+2540:INFO:stick:download(attempts[1],expect[78]):poll:
+2541:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+2542:INFO:stick:download_packet:78
+2565:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2566:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2601:INFO:session:sleeping 0 before download
+2602:INFO:session:proceeding with download
+2603:INFO:stick:download:start:0
+2604:INFO:stick:download(attempts[1]):begin first poll
+2653:INFO:stick:download(attempts[1],expect[78]):poll:
+2654:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+2655:INFO:stick:download_packet:78
+2678:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2679:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
+2715:INFO:session:sleeping 0.1 before download
+2716:INFO:session:proceeding with download
+2717:INFO:stick:download:start:0
+2718:INFO:stick:download(attempts[1]):begin first poll
+2767:INFO:stick:download(attempts[1],expect[78]):poll:
+2768:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+2769:INFO:stick:download_packet:78
+2792:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+2793:INFO:stick:download(attempts[2]):begin first poll
+2819:INFO:stick:download(attempts[2],expect[206]):poll:
+2820:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
+2821:INFO:stick:download_packet:206
+2860:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+2861:INFO:stick:download(attempts[3]):begin first poll
+2887:INFO:stick:download(attempts[3],expect[142]):poll:
+2888:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
+2889:INFO:stick:download_packet:142
+2920:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+2921:INFO:stick:download(attempts[4]):begin first poll
+2947:INFO:stick:download(attempts[4],expect[142]):poll:
+2948:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
 2949:INFO:stick:download_packet:142
 2980:WARNING:stick:bad zero CRC?
-2981:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-2982:INFO:stick:download(attempts[7]):begin first poll
-3008:INFO:stick:download(attempts[7],expect[142]):poll:
-3009:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
+2981:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
+2982:INFO:stick:download(attempts[5]):begin first poll
+3008:INFO:stick:download(attempts[5],expect[142]):poll:
+3009:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
 3010:INFO:stick:download_packet:142
 3041:WARNING:stick:bad zero CRC?
-3042:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
-3043:INFO:stick:download(attempts[8]):begin first poll
-3069:INFO:stick:download(attempts[8],expect[142]):poll:
-3070:INFO:stick:download(attempts[8],expect[142]):proceed to download_packet
+3042:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
+3043:INFO:stick:download(attempts[6]):begin first poll
+3069:INFO:stick:download(attempts[6],expect[142]):poll:
+3070:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
 3071:INFO:stick:download_packet:142
-3102:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
-3103:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
-3379:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 553L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 553L, 'errors.crc': 0}
-3397:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 7, 'packets.transmit': 227L, 'errors.naks': 0, 'errors.sequence': 2, 'packets.received': 208L, 'errors.crc': 0}
-3398:INFO:__main__:{'radio': {'errors.crc': 0,
-3399:           'errors.naks': 0,
-3400:           'errors.sequence': 2,
-3401:           'errors.timeouts': 7,
-3402:           'packets.received': 208L,
-3403:           'packets.transmit': 227L},
-3404: 'usb': {'errors.crc': 0,
-3405:         'errors.naks': 0,
-3406:         'errors.sequence': 0,
-3407:         'errors.timeouts': 0,
-3408:         'packets.received': 553L,
-3409:         'packets.transmit': 553L}}
-3434:INFO:session:sleeping 0 before download
-3435:INFO:session:proceeding with download
-3436:INFO:stick:download:start:0
-3437:INFO:stick:download(attempts[1]):begin first poll
-3486:INFO:stick:download(attempts[1],expect[78]):poll:
-3487:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-3488:INFO:stick:download_packet:78
-3511:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-3512:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
-3548:INFO:session:sleeping 0.1 before download
-3549:INFO:session:proceeding with download
-3550:INFO:stick:download:start:0
-3551:INFO:stick:download(attempts[1]):begin first poll
-3600:INFO:stick:download(attempts[1],expect[78]):poll:
-3601:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-3602:INFO:stick:download_packet:78
-3625:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-3626:INFO:stick:download(attempts[2]):begin first poll
-3652:INFO:stick:download(attempts[2],expect[206]):poll:
-3653:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
-3654:INFO:stick:download_packet:206
-3693:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-3694:INFO:stick:download(attempts[3]):begin first poll
-3720:INFO:stick:download(attempts[3],expect[142]):poll:
-3721:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
-3722:INFO:stick:download_packet:142
-3753:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-3754:INFO:stick:download(attempts[4]):begin first poll
-3780:INFO:stick:download(attempts[4],expect[142]):poll:
-3781:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
-3782:INFO:stick:download_packet:142
-3813:WARNING:stick:bad zero CRC?
-3814:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-3815:INFO:stick:download(attempts[5]):begin first poll
-3841:INFO:stick:download(attempts[5],expect[142]):poll:
-3842:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
-3843:INFO:stick:download_packet:142
-3874:WARNING:stick:bad zero CRC?
-3875:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-3876:INFO:stick:download(attempts[6]):begin first poll
-3902:INFO:stick:download(attempts[6],expect[142]):poll:
-3903:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
-3904:INFO:stick:download_packet:142
-3935:WARNING:stick:bad zero CRC?
-3936:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-3937:INFO:stick:download(attempts[7]):begin first poll
-3963:INFO:stick:download(attempts[7],expect[78]):poll:
-3964:INFO:stick:download(attempts[7],expect[78]):proceed to download_packet
-3965:INFO:stick:download_packet:78
-3988:WARNING:stick:bad zero CRC?
-3989:INFO:stick:download(attempts[7],expect[78],results[832]:data[64]):adding segment
-3990:INFO:stick:download(attempts[8]):begin first poll
-4085:INFO:stick:download(attempts[8],expect[0]):poll:
-4086:INFO:stick:download found empty poll size, sleep 3 and try again
-4112:INFO:stick:download(attempts[8],expect[14]):proceed to download_packet
-4113:INFO:stick:download_packet:14
-4129:WARNING:stick:bad zero CRC?
-4130:INFO:stick:download(attempts[8],expect[14],results[832]:data[0]):no data, try again
-4131:INFO:stick:download(attempts[8],expect[14],results[832]:data[0]):DONE
-4367:INFO:session:sleeping 0.1 before download
-4368:INFO:session:proceeding with download
-4369:INFO:stick:download:start:0
-4370:INFO:stick:download(attempts[1]):begin first poll
-4419:INFO:stick:download(attempts[1],expect[78]):poll:
-4420:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-4421:INFO:stick:download_packet:78
-4444:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-4445:INFO:stick:download(attempts[2]):begin first poll
-4471:INFO:stick:download(attempts[2],expect[206]):poll:
-4472:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
-4473:INFO:stick:download_packet:206
-4512:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-4513:INFO:stick:download(attempts[3]):begin first poll
-4539:INFO:stick:download(attempts[3],expect[142]):poll:
-4540:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
-4541:INFO:stick:download_packet:142
-4572:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-4573:INFO:stick:download(attempts[4]):begin first poll
-4599:INFO:stick:download(attempts[4],expect[142]):poll:
-4600:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
-4601:INFO:stick:download_packet:142
-4632:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-4633:INFO:stick:download(attempts[5]):begin first poll
-4659:INFO:stick:download(attempts[5],expect[142]):poll:
-4660:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
-4661:INFO:stick:download_packet:142
-4692:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-4693:INFO:stick:download(attempts[6]):begin first poll
-4719:INFO:stick:download(attempts[6],expect[142]):poll:
-4720:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
-4721:INFO:stick:download_packet:142
-4752:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-4753:INFO:stick:download(attempts[7]):begin first poll
-4779:INFO:stick:download(attempts[7],expect[142]):poll:
-4780:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
-4781:INFO:stick:download_packet:142
-4812:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
-4813:INFO:stick:download(attempts[8]):begin first poll
-4839:INFO:stick:download(attempts[8],expect[142]):poll:
-4840:INFO:stick:download(attempts[8],expect[142]):proceed to download_packet
-4841:INFO:stick:download_packet:142
-4872:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
-4873:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
-5157:INFO:session:sleeping 0.1 before download
-5158:INFO:session:proceeding with download
-5159:INFO:stick:download:start:0
-5160:INFO:stick:download(attempts[1]):begin first poll
-5209:INFO:stick:download(attempts[1],expect[78]):poll:
-5210:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-5211:INFO:stick:download_packet:78
-5234:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-5235:INFO:stick:download(attempts[2]):begin first poll
-5261:INFO:stick:download(attempts[2],expect[206]):poll:
-5262:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
-5263:INFO:stick:download_packet:206
-5302:WARNING:stick:bad zero CRC?
-5303:INFO:stick:ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0x68:raw:
-5382:INFO:stick:XXX:BadCRC:returning empty message instead of raising errors.
-5383:INFO:stick:download(attempts[2],expect[206],results[64]:data[0]):no data, try again
-5384:INFO:stick:download(attempts[3]):begin first poll
-5410:INFO:stick:download(attempts[3],expect[142]):poll:
-5411:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
-5412:INFO:stick:download_packet:142
-5443:INFO:stick:download(attempts[3],expect[142],results[192]:data[128]):adding segment
-5444:INFO:stick:download(attempts[4]):begin first poll
-5470:INFO:stick:download(attempts[4],expect[142]):poll:
-5471:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
-5472:INFO:stick:download_packet:142
-5503:INFO:stick:download(attempts[4],expect[142],results[320]:data[128]):adding segment
-5504:INFO:stick:download(attempts[5]):begin first poll
-5530:INFO:stick:download(attempts[5],expect[142]):poll:
-5531:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
-5532:INFO:stick:download_packet:142
-5563:INFO:stick:download(attempts[5],expect[142],results[448]:data[128]):adding segment
-5564:INFO:stick:download(attempts[6]):begin first poll
-5590:INFO:stick:download(attempts[6],expect[142]):poll:
-5591:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
-5592:INFO:stick:download_packet:142
-5623:INFO:stick:download(attempts[6],expect[142],results[576]:data[128]):adding segment
-5624:INFO:stick:download(attempts[7]):begin first poll
-5650:INFO:stick:download(attempts[7],expect[142]):poll:
-5651:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
-5652:INFO:stick:download_packet:142
-5683:INFO:stick:download(attempts[7],expect[142],results[704]:data[128]):adding segment
-5684:INFO:stick:download(attempts[8]):begin first poll
-5710:INFO:stick:download(attempts[8],expect[142]):poll:
-5711:INFO:stick:download(attempts[8],expect[142]):proceed to download_packet
-5712:INFO:stick:download_packet:142
-5743:INFO:stick:download(attempts[8],expect[142],results[832]:data[128]):adding segment
-5744:INFO:stick:download(attempts[8],expect[142],results[832]:data[128]):DONE
-5980:INFO:session:sleeping 0.1 before download
-5981:INFO:session:proceeding with download
-5982:INFO:stick:download:start:0
-5983:INFO:stick:download(attempts[1]):begin first poll
-6032:INFO:stick:download(attempts[1],expect[78]):poll:
-6033:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-6034:INFO:stick:download_packet:78
-6057:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-6058:INFO:stick:download(attempts[2]):begin first poll
-6084:INFO:stick:download(attempts[2],expect[206]):poll:
-6085:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
-6086:INFO:stick:download_packet:206
-6125:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-6126:INFO:stick:download(attempts[3]):begin first poll
-6152:INFO:stick:download(attempts[3],expect[142]):poll:
-6153:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
-6154:INFO:stick:download_packet:142
-6185:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-6186:INFO:stick:download(attempts[4]):begin first poll
-6212:INFO:stick:download(attempts[4],expect[142]):poll:
-6213:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
-6214:INFO:stick:download_packet:142
-6245:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-6246:INFO:stick:download(attempts[5]):begin first poll
-6272:INFO:stick:download(attempts[5],expect[142]):poll:
-6273:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
-6274:INFO:stick:download_packet:142
-6305:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-6306:INFO:stick:download(attempts[6]):begin first poll
-6332:INFO:stick:download(attempts[6],expect[142]):poll:
-6333:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
-6334:INFO:stick:download_packet:142
-6365:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-6366:INFO:stick:download(attempts[7]):begin first poll
-6392:INFO:stick:download(attempts[7],expect[142]):poll:
-6393:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
-6394:INFO:stick:download_packet:142
-6425:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
-6426:INFO:stick:download(attempts[8]):begin first poll
-6452:INFO:stick:download(attempts[8],expect[142]):poll:
-6453:INFO:stick:download(attempts[8],expect[142]):proceed to download_packet
-6454:INFO:stick:download_packet:142
-6485:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
-6486:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
-6770:INFO:session:sleeping 0.1 before download
-6771:INFO:session:proceeding with download
-6772:INFO:stick:download:start:0
-6773:INFO:stick:download(attempts[1]):begin first poll
-6822:INFO:stick:download(attempts[1],expect[78]):poll:
-6823:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-6824:INFO:stick:download_packet:78
-6847:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-6848:INFO:stick:download(attempts[2]):begin first poll
-6874:INFO:stick:download(attempts[2],expect[206]):poll:
-6875:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
-6876:INFO:stick:download_packet:206
-6915:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-6916:INFO:stick:download(attempts[3]):begin first poll
-6942:INFO:stick:download(attempts[3],expect[142]):poll:
-6943:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
-6944:INFO:stick:download_packet:142
-6975:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-6976:INFO:stick:download(attempts[4]):begin first poll
-7002:INFO:stick:download(attempts[4],expect[142]):poll:
-7003:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
-7004:INFO:stick:download_packet:142
-7035:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-7036:INFO:stick:download(attempts[5]):begin first poll
-7062:INFO:stick:download(attempts[5],expect[142]):poll:
-7063:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
-7064:INFO:stick:download_packet:142
-7095:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-7096:INFO:stick:download(attempts[6]):begin first poll
-7122:INFO:stick:download(attempts[6],expect[142]):poll:
-7123:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
-7124:INFO:stick:download_packet:142
-7155:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-7156:INFO:stick:download(attempts[7]):begin first poll
-7182:INFO:stick:download(attempts[7],expect[142]):poll:
-7183:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
-7184:INFO:stick:download_packet:142
-7215:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
-7216:INFO:stick:download(attempts[8]):begin first poll
-7242:INFO:stick:download(attempts[8],expect[142]):poll:
-7243:INFO:stick:download(attempts[8],expect[142]):proceed to download_packet
-7244:INFO:stick:download_packet:142
-7275:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
-7276:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
-7560:INFO:session:sleeping 0.1 before download
-7561:INFO:session:proceeding with download
-7562:INFO:stick:download:start:0
-7563:INFO:stick:download(attempts[1]):begin first poll
-7612:INFO:stick:download(attempts[1],expect[78]):poll:
-7613:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-7614:INFO:stick:download_packet:78
-7637:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-7638:INFO:stick:download(attempts[2]):begin first poll
-7664:INFO:stick:download(attempts[2],expect[206]):poll:
-7665:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
-7666:INFO:stick:download_packet:206
-7705:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-7706:INFO:stick:download(attempts[3]):begin first poll
-7732:INFO:stick:download(attempts[3],expect[142]):poll:
-7733:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
-7734:INFO:stick:download_packet:142
-7765:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-7766:INFO:stick:download(attempts[4]):begin first poll
-7792:INFO:stick:download(attempts[4],expect[78]):poll:
-7793:INFO:stick:download(attempts[4],expect[78]):proceed to download_packet
-7794:INFO:stick:download_packet:78
-7817:INFO:stick:download(attempts[4],expect[78],results[448]:data[64]):adding segment
-7818:INFO:stick:download(attempts[5]):begin first poll
-7913:INFO:stick:download(attempts[5],expect[0]):poll:
-7914:INFO:stick:download found empty poll size, sleep 3 and try again
-7940:INFO:stick:download(attempts[5],expect[590]):proceed to download_packet
-7941:INFO:stick:download_packet:590
-8028:WARNING:stick:bad zero CRC?
-8029:INFO:stick:ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0xaf:raw:
-8252:INFO:stick:XXX:BadCRC:returning empty message instead of raising errors.
-8253:INFO:stick:download(attempts[5],expect[590],results[448]:data[0]):no data, try again
-8254:INFO:stick:download(attempts[5],expect[590],results[448]:data[0]):DONE
-8394:INFO:session:sleeping 0.1 before download
-8395:INFO:session:proceeding with download
-8396:INFO:stick:download:start:0
-8397:INFO:stick:download(attempts[1]):begin first poll
-8446:INFO:stick:download(attempts[1],expect[78]):poll:
-8447:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-8448:INFO:stick:download_packet:78
-8471:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-8472:INFO:stick:download(attempts[2]):begin first poll
-8498:INFO:stick:download(attempts[2],expect[206]):poll:
-8499:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
-8500:INFO:stick:download_packet:206
-8539:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-8540:INFO:stick:download(attempts[3]):begin first poll
-8566:INFO:stick:download(attempts[3],expect[142]):poll:
-8567:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
-8568:INFO:stick:download_packet:142
-8599:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-8600:INFO:stick:download(attempts[4]):begin first poll
-8626:INFO:stick:download(attempts[4],expect[142]):poll:
-8627:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
-8628:INFO:stick:download_packet:142
-8659:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-8660:INFO:stick:download(attempts[5]):begin first poll
-8686:INFO:stick:download(attempts[5],expect[142]):poll:
-8687:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
-8688:INFO:stick:download_packet:142
-8719:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-8720:INFO:stick:download(attempts[6]):begin first poll
-8746:INFO:stick:download(attempts[6],expect[142]):poll:
-8747:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
-8748:INFO:stick:download_packet:142
-8779:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-8780:INFO:stick:download(attempts[7]):begin first poll
-8806:INFO:stick:download(attempts[7],expect[142]):poll:
-8807:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
-8808:INFO:stick:download_packet:142
-8839:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
-8840:INFO:stick:download(attempts[8]):begin first poll
-8866:INFO:stick:download(attempts[8],expect[142]):poll:
-8867:INFO:stick:download(attempts[8],expect[142]):proceed to download_packet
-8868:INFO:stick:download_packet:142
-8899:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
-8900:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
-9184:INFO:session:sleeping 0.1 before download
-9185:INFO:session:proceeding with download
-9186:INFO:stick:download:start:0
-9187:INFO:stick:download(attempts[1]):begin first poll
-9236:INFO:stick:download(attempts[1],expect[78]):poll:
-9237:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-9238:INFO:stick:download_packet:78
-9261:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-9262:INFO:stick:download(attempts[2]):begin first poll
-9288:INFO:stick:download(attempts[2],expect[206]):poll:
-9289:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
-9290:INFO:stick:download_packet:206
-9329:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
-9330:INFO:stick:download(attempts[3]):begin first poll
-9356:INFO:stick:download(attempts[3],expect[142]):poll:
-9357:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
-9358:INFO:stick:download_packet:142
-9389:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
-9390:INFO:stick:download(attempts[4]):begin first poll
-9416:INFO:stick:download(attempts[4],expect[142]):poll:
-9417:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
-9418:INFO:stick:download_packet:142
-9449:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
-9450:INFO:stick:download(attempts[5]):begin first poll
-9476:INFO:stick:download(attempts[5],expect[142]):poll:
-9477:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
-9478:INFO:stick:download_packet:142
-9509:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
-9510:INFO:stick:download(attempts[6]):begin first poll
-9536:INFO:stick:download(attempts[6],expect[142]):poll:
-9537:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
-9538:INFO:stick:download_packet:142
-9569:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
-9570:INFO:stick:download(attempts[7]):begin first poll
-9596:INFO:stick:download(attempts[7],expect[142]):poll:
-9597:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
-9598:INFO:stick:download_packet:142
-9629:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
-9630:INFO:stick:download(attempts[8]):begin first poll
-9656:INFO:stick:download(attempts[8],expect[142]):poll:
-9657:INFO:stick:download(attempts[8],expect[142]):proceed to download_packet
-9658:INFO:stick:download_packet:142
-9689:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
-9690:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
-9974:INFO:session:sleeping 0.1 before download
-9975:INFO:session:proceeding with download
-9976:INFO:stick:download:start:0
-9977:INFO:stick:download(attempts[1]):begin first poll
-10026:INFO:stick:download(attempts[1],expect[78]):poll:
-10027:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
-10028:INFO:stick:download_packet:78
-10051:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
-10052:INFO:stick:download(attempts[2]):begin first poll
-10078:INFO:stick:download(attempts[2],expect[206]):poll:
-10079:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
-10080:INFO:stick:download_packet:206
-10119:WARNING:stick:bad zero CRC?
-10120:INFO:stick:ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0xcd:raw:
-10199:INFO:stick:XXX:BadCRC:returning empty message instead of raising errors.
-10200:INFO:stick:download(attempts[2],expect[206],results[64]:data[0]):no data, try again
-10201:INFO:stick:download(attempts[3]):begin first poll
-10227:INFO:stick:download(attempts[3],expect[142]):poll:
-10228:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
-10229:INFO:stick:download_packet:142
-10260:INFO:stick:download(attempts[3],expect[142],results[192]:data[128]):adding segment
-10261:INFO:stick:download(attempts[4]):begin first poll
-10287:INFO:stick:download(attempts[4],expect[142]):poll:
-10288:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
-10289:INFO:stick:download_packet:142
-10320:INFO:stick:download(attempts[4],expect[142],results[320]:data[128]):adding segment
-10321:INFO:stick:download(attempts[5]):begin first poll
-10347:INFO:stick:download(attempts[5],expect[142]):poll:
-10348:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
-10349:INFO:stick:download_packet:142
-10380:INFO:stick:download(attempts[5],expect[142],results[448]:data[128]):adding segment
-10381:INFO:stick:download(attempts[6]):begin first poll
-10407:INFO:stick:download(attempts[6],expect[142]):poll:
-10408:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
-10409:INFO:stick:download_packet:142
-10440:INFO:stick:download(attempts[6],expect[142],results[576]:data[128]):adding segment
-10441:INFO:stick:download(attempts[7]):begin first poll
-10467:INFO:stick:download(attempts[7],expect[142]):poll:
-10468:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
-10469:INFO:stick:download_packet:142
-10500:INFO:stick:download(attempts[7],expect[142],results[704]:data[128]):adding segment
-10501:INFO:stick:download(attempts[8]):begin first poll
-10527:INFO:stick:download(attempts[8],expect[142]):poll:
-10528:INFO:stick:download(attempts[8],expect[142]):proceed to download_packet
-10529:INFO:stick:download_packet:142
-10560:INFO:stick:download(attempts[8],expect[142],results[832]:data[128]):adding segment
-10561:INFO:stick:download(attempts[8],expect[142],results[832]:data[128]):DONE
-10789:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 723L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 723L, 'errors.crc': 0}
-10807:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 390L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 361L, 'errors.crc': 0}
-10808:INFO:__main__:{'radio': {'errors.crc': 0,
-10809:           'errors.naks': 0,
-10810:           'errors.sequence': 4,
-10811:           'errors.timeouts': 9,
-10812:           'packets.received': 361L,
-10813:           'packets.transmit': 390L},
-10814: 'usb': {'errors.crc': 0,
-10815:         'errors.naks': 0,
-10816:         'errors.sequence': 0,
-10817:         'errors.timeouts': 0,
-10818:         'packets.received': 723L,
-10819:         'packets.transmit': 723L}}
-10820:INFO:__main__:howdy! we downloaded a lot of pump info successfully.
-10826:Was there an ACK ERROR?
-10827:### DIAGNOSE CRC
-10828:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
-11015:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 733L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 733L, 'errors.crc': 0}
-11033:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 390L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 361L, 'errors.crc': 0}
-11034:INFO:__main__:{'radio': {'errors.crc': 0,
-11035:           'errors.naks': 0,
-11036:           'errors.sequence': 4,
-11037:           'errors.timeouts': 9,
-11038:           'packets.received': 361L,
-11039:           'packets.transmit': 390L},
-11040: 'usb': {'errors.crc': 0,
-11041:         'errors.naks': 0,
-11042:         'errors.sequence': 0,
-11043:         'errors.timeouts': 0,
-11044:         'packets.received': 733L,
-11045:         'packets.transmit': 733L}}
-11064:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 735L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 735L, 'errors.crc': 0}
-11082:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 390L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 361L, 'errors.crc': 0}
-11084:{'radio': {'errors.crc': 0,
-11085:           'errors.naks': 0,
-11086:           'errors.sequence': 4,
-11087:           'errors.timeouts': 9,
-11088:           'packets.received': 361L,
-11089:           'packets.transmit': 390L},
-11090: 'usb': {'errors.crc': 0,
-11091:         'errors.naks': 0,
-11092:         'errors.sequence': 0,
-11093:         'errors.timeouts': 0,
-11094:         'packets.received': 735L,
-11095:         'packets.transmit': 735L}}
-11096:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
-11191:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 0:SHOULD DOWNLOAD :False
-11209:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 741L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 741L, 'errors.crc': 0}
-11227:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 390L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 361L, 'errors.crc': 0}
-11228:INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
-11229:{'radio': {'errors.crc': 0,
-11230:           'errors.naks': 0,
-11231:           'errors.sequence': 4,
-11232:           'errors.timeouts': 9,
-11233:           'packets.received': 361L,
-11234:           'packets.transmit': 390L},
-11235: 'usb': {'errors.crc': 0,
-11236:         'errors.naks': 0,
-11237:         'errors.sequence': 0,
-11238:         'errors.timeouts': 0,
-11239:         'packets.received': 741L,
-11240:         'packets.transmit': 741L}}
-11260:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 743L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 743L, 'errors.crc': 0}
-11278:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 390L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 361L, 'errors.crc': 0}
-11280:{'radio': {'errors.crc': 0,
-11281:           'errors.naks': 0,
-11282:           'errors.sequence': 4,
-11283:           'errors.timeouts': 9,
-11284:           'packets.received': 361L,
-11285:           'packets.transmit': 390L},
-11286: 'usb': {'errors.crc': 0,
-11287:         'errors.naks': 0,
-11288:         'errors.sequence': 0,
-11289:         'errors.timeouts': 0,
-11290:         'packets.received': 743L,
-11291:         'packets.transmit': 743L}}
-11292:INFO:__main__:howdy! all done looking at the stick
-11298:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
-11485:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 753L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 753L, 'errors.crc': 0}
-11503:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 390L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 361L, 'errors.crc': 0}
-11504:INFO:__main__:{'radio': {'errors.crc': 0,
-11505:           'errors.naks': 0,
-11506:           'errors.sequence': 4,
-11507:           'errors.timeouts': 9,
-11508:           'packets.received': 361L,
-11509:           'packets.transmit': 390L},
-11510: 'usb': {'errors.crc': 0,
-11511:         'errors.naks': 0,
-11512:         'errors.sequence': 0,
-11513:         'errors.timeouts': 0,
-11514:         'packets.received': 753L,
-11515:         'packets.transmit': 753L}}
-11534:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 755L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 755L, 'errors.crc': 0}
-11552:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 390L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 361L, 'errors.crc': 0}
-11554:{'radio': {'errors.crc': 0,
-11555:           'errors.naks': 0,
-11556:           'errors.sequence': 4,
-11557:           'errors.timeouts': 9,
-11558:           'packets.received': 361L,
-11559:           'packets.transmit': 390L},
-11560: 'usb': {'errors.crc': 0,
-11561:         'errors.naks': 0,
-11562:         'errors.sequence': 0,
-11563:         'errors.timeouts': 0,
-11564:         'packets.received': 755L,
-11565:         'packets.transmit': 755L}}
-11566:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
-11661:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 0:SHOULD DOWNLOAD :False
-11679:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 761L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 761L, 'errors.crc': 0}
-11697:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 390L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 361L, 'errors.crc': 0}
-11698:INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
-11699:{'radio': {'errors.crc': 0,
-11700:           'errors.naks': 0,
-11701:           'errors.sequence': 4,
-11702:           'errors.timeouts': 9,
-11703:           'packets.received': 361L,
-11704:           'packets.transmit': 390L},
-11705: 'usb': {'errors.crc': 0,
-11706:         'errors.naks': 0,
-11707:         'errors.sequence': 0,
-11708:         'errors.timeouts': 0,
-11709:         'packets.received': 761L,
-11710:         'packets.transmit': 761L}}
-11730:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 763L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 763L, 'errors.crc': 0}
-11748:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 390L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 361L, 'errors.crc': 0}
-11750:{'radio': {'errors.crc': 0,
-11751:           'errors.naks': 0,
-11752:           'errors.sequence': 4,
-11753:           'errors.timeouts': 9,
-11754:           'packets.received': 361L,
-11755:           'packets.transmit': 390L},
-11756: 'usb': {'errors.crc': 0,
-11757:         'errors.naks': 0,
-11758:         'errors.sequence': 0,
-11759:         'errors.timeouts': 0,
-11760:         'packets.received': 763L,
-11761:         'packets.transmit': 763L}}
-11762:INFO:__main__:howdy! all done looking at the stick
+3102:WARNING:stick:bad zero CRC?
+3103:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
+3104:INFO:stick:download(attempts[7]):begin first poll
+3130:INFO:stick:download(attempts[7],expect[142]):poll:
+3131:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
+3132:INFO:stick:download_packet:142
+3163:WARNING:stick:bad zero CRC?
+3164:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
+3165:INFO:stick:download(attempts[8]):begin first poll
+3191:INFO:stick:download(attempts[8],expect[142]):poll:
+3192:INFO:stick:download(attempts[8],expect[142]):proceed to download_packet
+3193:INFO:stick:download_packet:142
+3224:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
+3225:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
+3501:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 887L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 887L, 'errors.crc': 0}
+3519:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 9, 'packets.transmit': 423L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 392L, 'errors.crc': 0}
+3520:INFO:__main__:{'radio': {'errors.crc': 0,
+3521:           'errors.naks': 0,
+3522:           'errors.sequence': 4,
+3523:           'errors.timeouts': 9,
+3524:           'packets.received': 392L,
+3525:           'packets.transmit': 423L},
+3526: 'usb': {'errors.crc': 0,
+3527:         'errors.naks': 0,
+3528:         'errors.sequence': 0,
+3529:         'errors.timeouts': 0,
+3530:         'packets.received': 887L,
+3531:         'packets.transmit': 887L}}
+3556:INFO:session:sleeping 0 before download
+3557:INFO:session:proceeding with download
+3558:INFO:stick:download:start:0
+3559:INFO:stick:download(attempts[1]):begin first poll
+3608:INFO:stick:download(attempts[1],expect[78]):poll:
+3609:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+3610:INFO:stick:download_packet:78
+3633:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+3634:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):DONE
+3670:INFO:session:sleeping 0.1 before download
+3671:INFO:session:proceeding with download
+3672:INFO:stick:download:start:0
+3673:INFO:stick:download(attempts[1]):begin first poll
+3722:INFO:stick:download(attempts[1],expect[78]):poll:
+3723:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+3724:INFO:stick:download_packet:78
+3747:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+3748:INFO:stick:download(attempts[2]):begin first poll
+3774:INFO:stick:download(attempts[2],expect[206]):poll:
+3775:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
+3776:INFO:stick:download_packet:206
+3815:WARNING:stick:bad zero CRC?
+3816:INFO:stick:ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0x5f:raw:
+3895:INFO:stick:XXX:BadCRC:returning empty message instead of raising errors.
+3896:INFO:stick:download(attempts[2],expect[206],results[64]:data[0]):no data, try again
+3897:INFO:stick:download(attempts[3]):begin first poll
+3923:INFO:stick:download(attempts[3],expect[142]):poll:
+3924:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
+3925:INFO:stick:download_packet:142
+3956:INFO:stick:download(attempts[3],expect[142],results[192]:data[128]):adding segment
+3957:INFO:stick:download(attempts[4]):begin first poll
+3983:INFO:stick:download(attempts[4],expect[142]):poll:
+3984:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
+3985:INFO:stick:download_packet:142
+4016:WARNING:stick:bad zero CRC?
+4017:INFO:stick:download(attempts[4],expect[142],results[320]:data[128]):adding segment
+4018:INFO:stick:download(attempts[5]):begin first poll
+4044:INFO:stick:download(attempts[5],expect[142]):poll:
+4045:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
+4046:INFO:stick:download_packet:142
+4077:WARNING:stick:bad zero CRC?
+4078:INFO:stick:download(attempts[5],expect[142],results[448]:data[128]):adding segment
+4079:INFO:stick:download(attempts[6]):begin first poll
+4105:INFO:stick:download(attempts[6],expect[142]):poll:
+4106:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
+4107:INFO:stick:download_packet:142
+4138:WARNING:stick:bad zero CRC?
+4139:INFO:stick:download(attempts[6],expect[142],results[576]:data[128]):adding segment
+4140:INFO:stick:download(attempts[7]):begin first poll
+4166:INFO:stick:download(attempts[7],expect[142]):poll:
+4167:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
+4168:INFO:stick:download_packet:142
+4199:WARNING:stick:bad zero CRC?
+4200:INFO:stick:download(attempts[7],expect[142],results[704]:data[128]):adding segment
+4201:INFO:stick:download(attempts[8]):begin first poll
+4227:INFO:stick:download(attempts[8],expect[142]):poll:
+4228:INFO:stick:download(attempts[8],expect[142]):proceed to download_packet
+4229:INFO:stick:download_packet:142
+4260:INFO:stick:download(attempts[8],expect[142],results[832]:data[128]):adding segment
+4261:INFO:stick:download(attempts[8],expect[142],results[832]:data[128]):DONE
+4497:INFO:session:sleeping 0.1 before download
+4498:INFO:session:proceeding with download
+4499:INFO:stick:download:start:0
+4500:INFO:stick:download(attempts[1]):begin first poll
+4549:INFO:stick:download(attempts[1],expect[78]):poll:
+4550:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+4551:INFO:stick:download_packet:78
+4574:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+4575:INFO:stick:download(attempts[2]):begin first poll
+4601:INFO:stick:download(attempts[2],expect[206]):poll:
+4602:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
+4603:INFO:stick:download_packet:206
+4642:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+4643:INFO:stick:download(attempts[3]):begin first poll
+4669:INFO:stick:download(attempts[3],expect[142]):poll:
+4670:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
+4671:INFO:stick:download_packet:142
+4702:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+4703:INFO:stick:download(attempts[4]):begin first poll
+4729:INFO:stick:download(attempts[4],expect[142]):poll:
+4730:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
+4731:INFO:stick:download_packet:142
+4762:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
+4763:INFO:stick:download(attempts[5]):begin first poll
+4789:INFO:stick:download(attempts[5],expect[142]):poll:
+4790:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
+4791:INFO:stick:download_packet:142
+4822:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
+4823:INFO:stick:download(attempts[6]):begin first poll
+4849:INFO:stick:download(attempts[6],expect[142]):poll:
+4850:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
+4851:INFO:stick:download_packet:142
+4882:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
+4883:INFO:stick:download(attempts[7]):begin first poll
+4909:INFO:stick:download(attempts[7],expect[142]):poll:
+4910:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
+4911:INFO:stick:download_packet:142
+4942:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
+4943:INFO:stick:download(attempts[8]):begin first poll
+4969:INFO:stick:download(attempts[8],expect[142]):poll:
+4970:INFO:stick:download(attempts[8],expect[142]):proceed to download_packet
+4971:INFO:stick:download_packet:142
+5002:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
+5003:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
+5287:INFO:session:sleeping 0.1 before download
+5288:INFO:session:proceeding with download
+5289:INFO:stick:download:start:0
+5290:INFO:stick:download(attempts[1]):begin first poll
+5339:INFO:stick:download(attempts[1],expect[78]):poll:
+5340:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+5341:INFO:stick:download_packet:78
+5364:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+5365:INFO:stick:download(attempts[2]):begin first poll
+5391:INFO:stick:download(attempts[2],expect[206]):poll:
+5392:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
+5393:INFO:stick:download_packet:206
+5432:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+5433:INFO:stick:download(attempts[3]):begin first poll
+5459:INFO:stick:download(attempts[3],expect[142]):poll:
+5460:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
+5461:INFO:stick:download_packet:142
+5492:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+5493:INFO:stick:download(attempts[4]):begin first poll
+5519:INFO:stick:download(attempts[4],expect[142]):poll:
+5520:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
+5521:INFO:stick:download_packet:142
+5552:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
+5553:INFO:stick:download(attempts[5]):begin first poll
+5579:INFO:stick:download(attempts[5],expect[142]):poll:
+5580:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
+5581:INFO:stick:download_packet:142
+5612:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
+5613:INFO:stick:download(attempts[6]):begin first poll
+5639:INFO:stick:download(attempts[6],expect[142]):poll:
+5640:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
+5641:INFO:stick:download_packet:142
+5672:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
+5673:INFO:stick:download(attempts[7]):begin first poll
+5699:INFO:stick:download(attempts[7],expect[142]):poll:
+5700:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
+5701:INFO:stick:download_packet:142
+5732:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
+5733:INFO:stick:download(attempts[8]):begin first poll
+5759:INFO:stick:download(attempts[8],expect[78]):poll:
+5760:INFO:stick:download(attempts[8],expect[78]):proceed to download_packet
+5761:INFO:stick:download_packet:78
+5784:INFO:stick:download(attempts[8],expect[78],results[960]:data[64]):adding segment
+5785:INFO:stick:download(attempts[9]):begin first poll
+5880:INFO:stick:download(attempts[9],expect[0]):poll:
+5881:INFO:stick:download found empty poll size, sleep 3 and try again
+5907:INFO:stick:download(attempts[9],expect[14]):proceed to download_packet
+5908:INFO:stick:download_packet:14
+5924:WARNING:stick:bad zero CRC?
+5925:INFO:stick:download(attempts[9],expect[14],results[960]:data[0]):no data, try again
+5926:INFO:stick:download(attempts[9],expect[14],results[960]:data[0]):DONE
+6194:INFO:session:sleeping 0.1 before download
+6195:INFO:session:proceeding with download
+6196:INFO:stick:download:start:0
+6197:INFO:stick:download(attempts[1]):begin first poll
+6246:INFO:stick:download(attempts[1],expect[78]):poll:
+6247:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+6248:INFO:stick:download_packet:78
+6271:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+6272:INFO:stick:download(attempts[2]):begin first poll
+6298:INFO:stick:download(attempts[2],expect[206]):poll:
+6299:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
+6300:INFO:stick:download_packet:206
+6339:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+6340:INFO:stick:download(attempts[3]):begin first poll
+6366:INFO:stick:download(attempts[3],expect[142]):poll:
+6367:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
+6368:INFO:stick:download_packet:142
+6399:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+6400:INFO:stick:download(attempts[4]):begin first poll
+6426:INFO:stick:download(attempts[4],expect[78]):poll:
+6427:INFO:stick:download(attempts[4],expect[78]):proceed to download_packet
+6428:INFO:stick:download_packet:78
+6451:INFO:stick:download(attempts[4],expect[78],results[448]:data[64]):adding segment
+6452:INFO:stick:download(attempts[5]):begin first poll
+6547:INFO:stick:download(attempts[5],expect[0]):poll:
+6548:INFO:stick:download found empty poll size, sleep 3 and try again
+6574:INFO:stick:download(attempts[5],expect[14]):proceed to download_packet
+6575:INFO:stick:download_packet:14
+6591:WARNING:stick:bad zero CRC?
+6592:INFO:stick:download(attempts[5],expect[14],results[448]:data[0]):no data, try again
+6593:INFO:stick:download(attempts[5],expect[14],results[448]:data[0]):DONE
+6733:INFO:session:sleeping 0.1 before download
+6734:INFO:session:proceeding with download
+6735:INFO:stick:download:start:0
+6736:INFO:stick:download(attempts[1]):begin first poll
+6785:INFO:stick:download(attempts[1],expect[78]):poll:
+6786:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+6787:INFO:stick:download_packet:78
+6810:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+6811:INFO:stick:download(attempts[2]):begin first poll
+6837:INFO:stick:download(attempts[2],expect[206]):poll:
+6838:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
+6839:INFO:stick:download_packet:206
+6878:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+6879:INFO:stick:download(attempts[3]):begin first poll
+6905:INFO:stick:download(attempts[3],expect[142]):poll:
+6906:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
+6907:INFO:stick:download_packet:142
+6938:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+6939:INFO:stick:download(attempts[4]):begin first poll
+6965:INFO:stick:download(attempts[4],expect[142]):poll:
+6966:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
+6967:INFO:stick:download_packet:142
+6998:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
+6999:INFO:stick:download(attempts[5]):begin first poll
+7025:INFO:stick:download(attempts[5],expect[142]):poll:
+7026:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
+7027:INFO:stick:download_packet:142
+7058:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
+7059:INFO:stick:download(attempts[6]):begin first poll
+7085:INFO:stick:download(attempts[6],expect[142]):poll:
+7086:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
+7087:INFO:stick:download_packet:142
+7118:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
+7119:INFO:stick:download(attempts[7]):begin first poll
+7145:INFO:stick:download(attempts[7],expect[142]):poll:
+7146:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
+7147:INFO:stick:download_packet:142
+7178:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
+7179:INFO:stick:download(attempts[8]):begin first poll
+7205:INFO:stick:download(attempts[8],expect[142]):poll:
+7206:INFO:stick:download(attempts[8],expect[142]):proceed to download_packet
+7207:INFO:stick:download_packet:142
+7238:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
+7239:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
+7523:INFO:session:sleeping 0.1 before download
+7524:INFO:session:proceeding with download
+7525:INFO:stick:download:start:0
+7526:INFO:stick:download(attempts[1]):begin first poll
+7575:INFO:stick:download(attempts[1],expect[78]):poll:
+7576:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+7577:INFO:stick:download_packet:78
+7600:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+7601:INFO:stick:download(attempts[2]):begin first poll
+7627:INFO:stick:download(attempts[2],expect[206]):poll:
+7628:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
+7629:INFO:stick:download_packet:206
+7668:WARNING:stick:bad zero CRC?
+7669:INFO:stick:ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0x06:raw:
+7748:INFO:stick:XXX:BadCRC:returning empty message instead of raising errors.
+7749:INFO:stick:download(attempts[2],expect[206],results[64]:data[0]):no data, try again
+7750:INFO:stick:download(attempts[3]):begin first poll
+7776:INFO:stick:download(attempts[3],expect[142]):poll:
+7777:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
+7778:INFO:stick:download_packet:142
+7809:INFO:stick:download(attempts[3],expect[142],results[192]:data[128]):adding segment
+7810:INFO:stick:download(attempts[4]):begin first poll
+7836:INFO:stick:download(attempts[4],expect[142]):poll:
+7837:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
+7838:INFO:stick:download_packet:142
+7869:INFO:stick:download(attempts[4],expect[142],results[320]:data[128]):adding segment
+7870:INFO:stick:download(attempts[5]):begin first poll
+7896:INFO:stick:download(attempts[5],expect[142]):poll:
+7897:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
+7898:INFO:stick:download_packet:142
+7929:INFO:stick:download(attempts[5],expect[142],results[448]:data[128]):adding segment
+7930:INFO:stick:download(attempts[6]):begin first poll
+7956:INFO:stick:download(attempts[6],expect[142]):poll:
+7957:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
+7958:INFO:stick:download_packet:142
+7989:INFO:stick:download(attempts[6],expect[142],results[576]:data[128]):adding segment
+7990:INFO:stick:download(attempts[7]):begin first poll
+8016:INFO:stick:download(attempts[7],expect[142]):poll:
+8017:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
+8018:INFO:stick:download_packet:142
+8049:INFO:stick:download(attempts[7],expect[142],results[704]:data[128]):adding segment
+8050:INFO:stick:download(attempts[8]):begin first poll
+8076:INFO:stick:download(attempts[8],expect[142]):poll:
+8077:INFO:stick:download(attempts[8],expect[142]):proceed to download_packet
+8078:INFO:stick:download_packet:142
+8109:INFO:stick:download(attempts[8],expect[142],results[832]:data[128]):adding segment
+8110:INFO:stick:download(attempts[8],expect[142],results[832]:data[128]):DONE
+8346:INFO:session:sleeping 0.1 before download
+8347:INFO:session:proceeding with download
+8348:INFO:stick:download:start:0
+8349:INFO:stick:download(attempts[1]):begin first poll
+8398:INFO:stick:download(attempts[1],expect[78]):poll:
+8399:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+8400:INFO:stick:download_packet:78
+8423:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+8424:INFO:stick:download(attempts[2]):begin first poll
+8450:INFO:stick:download(attempts[2],expect[206]):poll:
+8451:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
+8452:INFO:stick:download_packet:206
+8491:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+8492:INFO:stick:download(attempts[3]):begin first poll
+8518:INFO:stick:download(attempts[3],expect[142]):poll:
+8519:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
+8520:INFO:stick:download_packet:142
+8551:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+8552:INFO:stick:download(attempts[4]):begin first poll
+8578:INFO:stick:download(attempts[4],expect[142]):poll:
+8579:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
+8580:INFO:stick:download_packet:142
+8611:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
+8612:INFO:stick:download(attempts[5]):begin first poll
+8638:INFO:stick:download(attempts[5],expect[142]):poll:
+8639:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
+8640:INFO:stick:download_packet:142
+8671:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
+8672:INFO:stick:download(attempts[6]):begin first poll
+8698:INFO:stick:download(attempts[6],expect[142]):poll:
+8699:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
+8700:INFO:stick:download_packet:142
+8731:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
+8732:INFO:stick:download(attempts[7]):begin first poll
+8758:INFO:stick:download(attempts[7],expect[142]):poll:
+8759:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
+8760:INFO:stick:download_packet:142
+8791:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
+8792:INFO:stick:download(attempts[8]):begin first poll
+8818:INFO:stick:download(attempts[8],expect[142]):poll:
+8819:INFO:stick:download(attempts[8],expect[142]):proceed to download_packet
+8820:INFO:stick:download_packet:142
+8851:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
+8852:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
+9136:INFO:session:sleeping 0.1 before download
+9137:INFO:session:proceeding with download
+9138:INFO:stick:download:start:0
+9139:INFO:stick:download(attempts[1]):begin first poll
+9188:INFO:stick:download(attempts[1],expect[78]):poll:
+9189:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+9190:INFO:stick:download_packet:78
+9213:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+9214:INFO:stick:download(attempts[2]):begin first poll
+9240:INFO:stick:download(attempts[2],expect[206]):poll:
+9241:INFO:stick:download(attempts[2],expect[206]):proceed to download_packet
+9242:INFO:stick:download_packet:206
+9281:INFO:stick:download(attempts[2],expect[206],results[256]:data[192]):adding segment
+9282:INFO:stick:download(attempts[3]):begin first poll
+9308:INFO:stick:download(attempts[3],expect[142]):poll:
+9309:INFO:stick:download(attempts[3],expect[142]):proceed to download_packet
+9310:INFO:stick:download_packet:142
+9341:INFO:stick:download(attempts[3],expect[142],results[384]:data[128]):adding segment
+9342:INFO:stick:download(attempts[4]):begin first poll
+9368:INFO:stick:download(attempts[4],expect[142]):poll:
+9369:INFO:stick:download(attempts[4],expect[142]):proceed to download_packet
+9370:INFO:stick:download_packet:142
+9401:INFO:stick:download(attempts[4],expect[142],results[512]:data[128]):adding segment
+9402:INFO:stick:download(attempts[5]):begin first poll
+9428:INFO:stick:download(attempts[5],expect[142]):poll:
+9429:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
+9430:INFO:stick:download_packet:142
+9461:INFO:stick:download(attempts[5],expect[142],results[640]:data[128]):adding segment
+9462:INFO:stick:download(attempts[6]):begin first poll
+9488:INFO:stick:download(attempts[6],expect[142]):poll:
+9489:INFO:stick:download(attempts[6],expect[142]):proceed to download_packet
+9490:INFO:stick:download_packet:142
+9521:INFO:stick:download(attempts[6],expect[142],results[768]:data[128]):adding segment
+9522:INFO:stick:download(attempts[7]):begin first poll
+9548:INFO:stick:download(attempts[7],expect[142]):poll:
+9549:INFO:stick:download(attempts[7],expect[142]):proceed to download_packet
+9550:INFO:stick:download_packet:142
+9581:INFO:stick:download(attempts[7],expect[142],results[896]:data[128]):adding segment
+9582:INFO:stick:download(attempts[8]):begin first poll
+9608:INFO:stick:download(attempts[8],expect[142]):poll:
+9609:INFO:stick:download(attempts[8],expect[142]):proceed to download_packet
+9610:INFO:stick:download_packet:142
+9641:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):adding segment
+9642:INFO:stick:download(attempts[8],expect[142],results[1024]:data[128]):DONE
+9926:INFO:session:sleeping 0.1 before download
+9927:INFO:session:proceeding with download
+9928:INFO:stick:download:start:0
+9929:INFO:stick:download(attempts[1]):begin first poll
+9978:INFO:stick:download(attempts[1],expect[78]):poll:
+9979:INFO:stick:download(attempts[1],expect[78]):proceed to download_packet
+9980:INFO:stick:download_packet:78
+10003:INFO:stick:download(attempts[1],expect[78],results[64]:data[64]):adding segment
+10004:INFO:stick:download(attempts[2]):begin first poll
+10030:INFO:stick:download(attempts[2],expect[78]):poll:
+10031:INFO:stick:download(attempts[2],expect[78]):proceed to download_packet
+10032:INFO:stick:download_packet:78
+10055:INFO:stick:download(attempts[2],expect[78],results[128]:data[64]):adding segment
+10056:INFO:stick:download(attempts[3]):begin first poll
+10151:INFO:stick:download(attempts[3],expect[0]):poll:
+10152:INFO:stick:download found empty poll size, sleep 3 and try again
+10178:INFO:stick:download(attempts[3],expect[718]):proceed to download_packet
+10179:INFO:stick:download_packet:718
+10282:WARNING:stick:bad zero CRC?
+10283:INFO:stick:ReadRadio:BAD ACK:found raw[crc]: 0x00:expected_crc(data): 0xf2:raw:
+10554:INFO:stick:XXX:BadCRC:returning empty message instead of raising errors.
+10555:INFO:stick:download(attempts[3],expect[718],results[128]:data[0]):no data, try again
+10556:INFO:stick:download(attempts[4]):begin first poll
+10582:INFO:stick:download(attempts[4],expect[78]):poll:
+10583:INFO:stick:download(attempts[4],expect[78]):proceed to download_packet
+10584:INFO:stick:download_packet:78
+10607:INFO:stick:download(attempts[4],expect[78],results[192]:data[64]):adding segment
+10608:INFO:stick:download(attempts[5]):begin first poll
+10703:INFO:stick:download(attempts[5],expect[0]):poll:
+10704:INFO:stick:download found empty poll size, sleep 3 and try again
+10730:INFO:stick:download(attempts[5],expect[142]):proceed to download_packet
+10731:INFO:stick:download_packet:142
+10762:INFO:stick:download(attempts[5],expect[142],results[320]:data[128]):adding segment
+10763:INFO:stick:download(attempts[5],expect[142],results[320]:data[128]):DONE
+10863:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1061L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 1061L, 'errors.crc': 0}
+10881:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 13, 'packets.transmit': 582L, 'errors.naks': 0, 'errors.sequence': 8, 'packets.received': 540L, 'errors.crc': 0}
+10882:INFO:__main__:{'radio': {'errors.crc': 0,
+10883:           'errors.naks': 0,
+10884:           'errors.sequence': 8,
+10885:           'errors.timeouts': 13,
+10886:           'packets.received': 540L,
+10887:           'packets.transmit': 582L},
+10888: 'usb': {'errors.crc': 0,
+10889:         'errors.naks': 0,
+10890:         'errors.sequence': 0,
+10891:         'errors.timeouts': 0,
+10892:         'packets.received': 1061L,
+10893:         'packets.transmit': 1061L}}
+10894:INFO:__main__:howdy! we downloaded a lot of pump info successfully.
+10900:Was there an ACK ERROR?
+10901:### DIAGNOSE CRC
+10902:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
+11089:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1071L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 1071L, 'errors.crc': 0}
+11107:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 13, 'packets.transmit': 582L, 'errors.naks': 0, 'errors.sequence': 8, 'packets.received': 540L, 'errors.crc': 0}
+11108:INFO:__main__:{'radio': {'errors.crc': 0,
+11109:           'errors.naks': 0,
+11110:           'errors.sequence': 8,
+11111:           'errors.timeouts': 13,
+11112:           'packets.received': 540L,
+11113:           'packets.transmit': 582L},
+11114: 'usb': {'errors.crc': 0,
+11115:         'errors.naks': 0,
+11116:         'errors.sequence': 0,
+11117:         'errors.timeouts': 0,
+11118:         'packets.received': 1071L,
+11119:         'packets.transmit': 1071L}}
+11138:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1073L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 1073L, 'errors.crc': 0}
+11156:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 13, 'packets.transmit': 582L, 'errors.naks': 0, 'errors.sequence': 8, 'packets.received': 540L, 'errors.crc': 0}
+11158:{'radio': {'errors.crc': 0,
+11159:           'errors.naks': 0,
+11160:           'errors.sequence': 8,
+11161:           'errors.timeouts': 13,
+11162:           'packets.received': 540L,
+11163:           'packets.transmit': 582L},
+11164: 'usb': {'errors.crc': 0,
+11165:         'errors.naks': 0,
+11166:         'errors.sequence': 0,
+11167:         'errors.timeouts': 0,
+11168:         'packets.received': 1073L,
+11169:         'packets.transmit': 1073L}}
+11170:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
+11265:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 0:SHOULD DOWNLOAD :False
+11283:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1079L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 1079L, 'errors.crc': 0}
+11301:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 13, 'packets.transmit': 582L, 'errors.naks': 0, 'errors.sequence': 8, 'packets.received': 540L, 'errors.crc': 0}
+11302:INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
+11303:{'radio': {'errors.crc': 0,
+11304:           'errors.naks': 0,
+11305:           'errors.sequence': 8,
+11306:           'errors.timeouts': 13,
+11307:           'packets.received': 540L,
+11308:           'packets.transmit': 582L},
+11309: 'usb': {'errors.crc': 0,
+11310:         'errors.naks': 0,
+11311:         'errors.sequence': 0,
+11312:         'errors.timeouts': 0,
+11313:         'packets.received': 1079L,
+11314:         'packets.transmit': 1079L}}
+11334:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1081L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 1081L, 'errors.crc': 0}
+11352:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 13, 'packets.transmit': 582L, 'errors.naks': 0, 'errors.sequence': 8, 'packets.received': 540L, 'errors.crc': 0}
+11354:{'radio': {'errors.crc': 0,
+11355:           'errors.naks': 0,
+11356:           'errors.sequence': 8,
+11357:           'errors.timeouts': 13,
+11358:           'packets.received': 540L,
+11359:           'packets.transmit': 582L},
+11360: 'usb': {'errors.crc': 0,
+11361:         'errors.naks': 0,
+11362:         'errors.sequence': 0,
+11363:         'errors.timeouts': 0,
+11364:         'packets.received': 1081L,
+11365:         'packets.transmit': 1081L}}
+11366:INFO:__main__:howdy! all done looking at the stick
+11372:INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
+11559:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1091L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 1091L, 'errors.crc': 0}
+11577:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 13, 'packets.transmit': 582L, 'errors.naks': 0, 'errors.sequence': 8, 'packets.received': 540L, 'errors.crc': 0}
+11578:INFO:__main__:{'radio': {'errors.crc': 0,
+11579:           'errors.naks': 0,
+11580:           'errors.sequence': 8,
+11581:           'errors.timeouts': 13,
+11582:           'packets.received': 540L,
+11583:           'packets.transmit': 582L},
+11584: 'usb': {'errors.crc': 0,
+11585:         'errors.naks': 0,
+11586:         'errors.sequence': 0,
+11587:         'errors.timeouts': 0,
+11588:         'packets.received': 1091L,
+11589:         'packets.transmit': 1091L}}
+11608:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1093L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 1093L, 'errors.crc': 0}
+11626:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 13, 'packets.transmit': 582L, 'errors.naks': 0, 'errors.sequence': 8, 'packets.received': 540L, 'errors.crc': 0}
+11628:{'radio': {'errors.crc': 0,
+11629:           'errors.naks': 0,
+11630:           'errors.sequence': 8,
+11631:           'errors.timeouts': 13,
+11632:           'packets.received': 540L,
+11633:           'packets.transmit': 582L},
+11634: 'usb': {'errors.crc': 0,
+11635:         'errors.naks': 0,
+11636:         'errors.sequence': 0,
+11637:         'errors.timeouts': 0,
+11638:         'packets.received': 1093L,
+11639:         'packets.transmit': 1093L}}
+11640:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
+11735:INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 0:SHOULD DOWNLOAD :False
+11753:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1099L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 1099L, 'errors.crc': 0}
+11771:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 13, 'packets.transmit': 582L, 'errors.naks': 0, 'errors.sequence': 8, 'packets.received': 540L, 'errors.crc': 0}
+11772:INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
+11773:{'radio': {'errors.crc': 0,
+11774:           'errors.naks': 0,
+11775:           'errors.sequence': 8,
+11776:           'errors.timeouts': 13,
+11777:           'packets.received': 540L,
+11778:           'packets.transmit': 582L},
+11779: 'usb': {'errors.crc': 0,
+11780:         'errors.naks': 0,
+11781:         'errors.sequence': 0,
+11782:         'errors.timeouts': 0,
+11783:         'packets.received': 1099L,
+11784:         'packets.transmit': 1099L}}
+11804:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1101L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 1101L, 'errors.crc': 0}
+11822:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 13, 'packets.transmit': 582L, 'errors.naks': 0, 'errors.sequence': 8, 'packets.received': 540L, 'errors.crc': 0}
+11824:{'radio': {'errors.crc': 0,
+11825:           'errors.naks': 0,
+11826:           'errors.sequence': 8,
+11827:           'errors.timeouts': 13,
+11828:           'packets.received': 540L,
+11829:           'packets.transmit': 582L},
+11830: 'usb': {'errors.crc': 0,
+11831:         'errors.naks': 0,
+11832:         'errors.sequence': 0,
+11833:         'errors.timeouts': 0,
+11834:         'packets.received': 1101L,
+11835:         'packets.transmit': 1101L}}
+11836:INFO:__main__:howdy! all done looking at the stick
 ```
 
 * NO NAK FOUND
