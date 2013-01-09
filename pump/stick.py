@@ -260,7 +260,8 @@ class ReadRadio(StickCommand):
                           'head:\n%s\n' % (lib.hexdump(head)),
                           'data:\n%s\n' % (lib.hexdump(data)) ] )
       log.info(msg)
-      log.info("XXX:IGNORE:BadCRC:returning empty message instead of raising errors.")
+      log.info("XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.")
+      time.sleep(.100)
       return bytearray( )
       raise BadCRC(msg)
     assert crc == expected_crc
@@ -589,7 +590,9 @@ class Stick(object):
       else:
         log.info("%s:no data, try again" % (stats.format(self, i, size,
                                             len(results), len(data))))
-      eod = self.command.eod
+      expect_eod = self.command.eod 
+      size = self.poll_size( )
+      eod = expect_eod and size < 15
 
     log.info("%s:DONE" % (stats.format(self, i, size,
                           len(results), len(data))))
