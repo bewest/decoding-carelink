@@ -1,6 +1,6 @@
 OUT
 ## Observations
-Tue Jan  8 21:11:50 PST 2013
+Tue Jan  8 21:13:44 PST 2013
 
 ## stick
 
@@ -10,22 +10,75 @@ Tue Jan  8 21:11:50 PST 2013
 ## pump
 
 
-## downloaded:9
+## downloaded:0
 
 ```
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][0], bytearray(b'\x00\xc6\x80@\xa7\x01 \x88P\x00\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][1], bytearray(b'\x00\xc6\x80\x80\xa7\x01 \x88PE\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][2], bytearray(b'\x00\xc6\x80\x80\xa7\x01 \x88PE\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x03\x00\x03\x92\x9e\x0b\x01\x06\x07\x00\x00\x02L\xa1\x06l\xa1\x06\x05\x0c\x00\xe8\x00\x00\x00\x00\x02L\x02Ld\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][3], bytearray(b'\x00\xc6\x80\x80\xa7\x01 \x88PE\x04\xda\x82\x0cl\x82\x0c\x05\x00edf\x12\x00\x00\x04\xda\x03\x9eK\x01<\x19\x00O\x01<\x19\x01<d\x00\x00\x00\x00\x00\x00\x10\x10\x00\x00\x00d\x01V\xca\x06\x01\x06\x17\x00')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][4], bytearray(b'\x00\xc6\x80\x80\xa7\x01 \x88PE\x01\x12\x17\x00\x9f\x08\x14\x01\x12\x18\x00\x80\x08\x14\x01\x0c\x07\x00\x00\x00\x06\x81\x12l\x81\x12\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x06\x00\x06d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][5], bytearray(b'\x00\xc6\x80\x80\xa7\x01 \x88PE\x00\x02\x00!\x00l!\x00\x05\x0c\x00\xe8\x00\x00\x00\x00\x02\x00\x02\x00d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\x00\x0c\x9c\x13\x02\x00\x17')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][6], bytearray(b'\x00\xc6\x81@\xa7\x01 \x88P\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x00\x00(\x00l(\x00\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][7], bytearray(b'\x00\xc6\x80\x80\xa7\x01 \x88PE\x00\x00\x00\x00\x00\x07\x00\x00\x00\x00\x15\x80l\x15\x80\x05\x0c\x00\xe8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07')
-INFO:stick:finished processing TransmitPacket:ReadHistoryData[page][8], bytearray(b'\x00\xc6\x80\x80\xa7\x01 \x88PE\x1f\x00)C\x04A\x00\x07\x00\x00\x04\xcc\x01\x80l\x01\x80\x05\x00ddd\x0b\x00\x00\x04\xcc\x03\xbeN\x01\x0e\x16\x00A\x01\x0e\x16\x01\x04`\x00\x00\x00\x00\n\x04\x0c\x0b\x00\x00')
 ```
 
-## howdy! pump runs appear to be OK
+howdy! pump runs were NOT OK
 
+### Last send command
+
+```
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>:command:<TransmitPacket:ReadPumpModel>>:STARTING POLL PHASE:attempt:0
+DEBUG:stick:<Stick:status:<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>:command:<TransmitPacket:ReadPumpModel>>:poll:attempt:0
+DEBUG:stick:read_status
+INFO:stick:link Stick:status:<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>:command:<LinkStatus:0x03:error::size(64)> processing LinkStatus:0x03:error:)
+```
+### stats before traceback
+
+```
+204:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 78L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 78L, 'errors.crc': 0}
+222:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 4, 'packets.transmit': 8L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 1L, 'errors.crc': 0}
+223:INFO:__main__:{'radio': {'errors.crc': 0,
+224:           'errors.naks': 0,
+225:           'errors.sequence': 0,
+226:           'errors.timeouts': 4,
+227:           'packets.received': 1L,
+228:           'packets.transmit': 8L},
+229: 'usb': {'errors.crc': 0,
+230:         'errors.naks': 0,
+231:         'errors.sequence': 0,
+232:         'errors.timeouts': 0,
+233:         'packets.received': 78L,
+234:         'packets.transmit': 78L}}
+253:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 80L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 80L, 'errors.crc': 0}
+271:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 4, 'packets.transmit': 8L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 1L, 'errors.crc': 0}
+273:{'radio': {'errors.crc': 0,
+274:           'errors.naks': 0,
+275:           'errors.sequence': 0,
+276:           'errors.timeouts': 4,
+```
+### Traceback
+
+```
+0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
+INFO:stick:LinkStatus:0x03:error:LinkStatus:error:True:reason:
+
+INFO:stick:finished processing LinkStatus:0x03:error:LinkStatus:error:True:reason:, 0
+DEBUG:stick:sleeping in POLL, .100
+INFO:stick:STOP POLL after 4 attempts:size:0
+INFO:stick:download(attempts[1],expect[0],results[0]:data[0]):DONE
+Traceback (most recent call last):
+  File "pump/commands.py", line 556, in <module>
+    do_commands(session)
+  File "pump/commands.py", line 455, in do_commands
+    log.info('comm:%s:data:%s' % (comm, getattr(comm.getData( ), 'data', None)))
+  File "pump/commands.py", line 447, in getData
+    length = data[0]
+IndexError: bytearray index out of range
+Command exited with non-zero status 1
+python pump/commands.py /dev/ttyUSB0 208850
+	elapsed 0:10.59
+	user 0.17
+	system 0.07
+	CPU 2% (0text+0data 61184max)k
+Was there an ACK ERROR?
+### DIAGNOSE CRC
+```
 * NO CRC ERROR FOUND
 * NO NAK FOUND
-* SUCCESS, GOOD CLEAN RUN
+* NOT A CLEAN RUN
