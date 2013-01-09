@@ -260,6 +260,8 @@ class ReadRadio(StickCommand):
                           'head:\n%s\n' % (lib.hexdump(head)),
                           'data:\n%s\n' % (lib.hexdump(data)) ] )
       log.info(msg)
+      log.info("XXX:BadCRC:returning empty message instead of raising errors.")
+      return bytearray( )
       raise BadCRC(msg)
     assert crc == expected_crc
     return data
@@ -539,9 +541,18 @@ class Stick(object):
     
   def download(self):
     eod = False
-    results  = bytearray( )
+    results = bytearray( )
+    i = 0
+    log_head = 'download(attempts[{}])'
+    expecting = 'download(attempts[{}],expect[{}])'
+    stats = 'download(attempts[{}],expect[{}],results[{}]:data[{}])'
+    log.info('download:start:%s' % i)
+    data = bytearray( )
     while not eod:
+      i += 1
+      log.info("%s:begin first poll" % (log_head.format(i)))
       size = self.poll_size( )
+      log.info("%s:poll:" % (expecting.format(i, size)))
       if size == 0:
         log.info('download found empty poll size, sleep 3 and try again')
         time.sleep(3)
@@ -549,12 +560,20 @@ class Stick(object):
         if size == 0:
           break
 
-      #assert size > 64, ("size(%s) < 64 will break the stick" % size)
-
       #if size > 64:
+      log.info("%s:proceed to download_packet" % (expecting.format(i, size)))
       data = self.download_packet(size)
-      results.extend(data)
+      if data:
+        results.extend(data)
+        log.info("%s:adding segment" % (stats.format(i, size,
+                                            len(results), len(data))))
+      else:
+        log.info("%s:no data, try again" % (stats.format(i, size,
+                                            len(results), len(data))))
       eod = self.command.eod
+
+    log.info("%s:DONE" % (stats.format(i, size,
+                          len(results), len(data))))
     return results
 
   def clear_buffer(self):

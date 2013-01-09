@@ -46,12 +46,15 @@ class Session(object):
   def download(self):
     errors = [ ]
     if self.expectedLength > 0:
+      log.info('proceeding with download')
+      data = self.stick.download( )
+      self.command.data = data
+      return data
+      # remove
       for i in xrange(3):
+        pass
         try:
-          log.info('proceeding with download')
-          data = self.stick.download( )
-          self.command.data = data
-          return data
+          pass
         except AckError, e:
           time.sleep(.010)
           log.error(e)

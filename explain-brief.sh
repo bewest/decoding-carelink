@@ -16,7 +16,6 @@ function diagnose_crc ( ) {
 
 function diagnose_nak ( ) {
 
-  grep -n --color  -E "howdy|clear_bu|NAK|CRC|ACK|IGNORE|(errors|packets).(crc|naks|sequence|timeouts|received|transmit)" $LOG
   grep -n -C 20 "NAK" $LOG
 
 }
@@ -41,6 +40,14 @@ function summarize_stick ( ) {
 function summarize_pump ( ) {
   _error=0
   echo ""
+  echo -n '## downloaded:'
+  grep -E "finished.*ReadHistory" $LOG | sort | uniq | wc -l
+  echo ""
+  echo '```'
+  grep -E "finished.*ReadHistory" $LOG | sort | uniq
+  echo '```'
+  echo ""
+
   if [[ 4 -eq $(grep -E "howdy" $LOG | grep pump | wc -l) ]] ; then
     echo '## howdy! pump runs appear to be OK'
     echo ""
@@ -55,26 +62,20 @@ function summarize_pump ( ) {
     grep -B 1000 -E "Traceback" $LOG | grep -A 2 -E "Transmit" | tail -n 4
     echo '```'
 
-    echo "### Traceback"
-    echo ""
-    echo '```'
-    grep -B 10 -A 15 -E "Traceback" $LOG
-    echo '```'
-
-    echo "### stats"
+    echo "### stats before traceback"
     echo ""
     echo '```'
     grep -A 1000 -E "Traceback" $LOG | only_stats | head -n 20
     echo '```'
 
+
+    echo "### Traceback"
+    echo ""
+    echo '```'
+    grep -B 10 -A 15 -E "Traceback" $LOG
+    echo '```'
   fi
 
-  echo -n '## downloaded:'
-  grep -E "finished.*ReadHistory" $LOG | sort | uniq | wc -l
-  echo ""
-  echo '```'
-  grep -E "finished.*ReadHistory" $LOG | sort | uniq
-  echo '```'
 
   if [[ 0 -eq $(grep -E "BadCRC" $LOG | wc -l) ]] ; then
     echo "* NO CRC ERROR FOUND"
@@ -111,8 +112,10 @@ function summarize_pump ( ) {
 
 echo '## Observations'
 date
+echo ""
 echo '## stick'
 summarize_stick
+echo ""
 echo '## pump'
 echo ""
 summarize_pump
