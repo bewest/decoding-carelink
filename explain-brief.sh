@@ -41,10 +41,10 @@ function summarize_pump ( ) {
   _error=0
   echo ""
   echo -n '## downloaded:'
-  grep -E "finished.*ReadHistory" $LOG | grep "data:1024" | sort | uniq | wc -l
+  grep -E "session:finished.*ReadHistory" $LOG | grep "data\[1024\]" | sort | uniq | wc -l
   echo ""
   echo '```'
-  grep -E "finished executing.*ReadHistory" $LOG | sort | uniq
+  grep -E "session:finished executing.*ReadHistory" $LOG | sort | uniq
   echo '```'
   echo ""
 

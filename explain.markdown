@@ -90,10 +90,10 @@ function summarize_pump ( ) {
   _error=0
   echo ""
   echo -n '## downloaded:'
-  grep -E "finished.*ReadHistory" $LOG | grep "data:1024" | sort | uniq | wc -l
+  grep -E "session:finished.*ReadHistory" $LOG | grep "data\[1024\]" | sort | uniq | wc -l
   echo ""
   echo '```'
-  grep -E "finished executing.*ReadHistory" $LOG | sort | uniq
+  grep -E "session:finished executing.*ReadHistory" $LOG | sort | uniq
   echo '```'
   echo ""
 
@@ -186,7 +186,7 @@ summarize_pump
 ## cat explain.log
 OUT
 ## Observations
-Wed Jan  9 22:54:16 PST 2013
+Wed Jan  9 23:52:25 PST 2013
 
 ## stick
 
@@ -196,30 +196,38 @@ Wed Jan  9 22:54:16 PST 2013
 ## pump
 
 
-## downloaded:0
+## downloaded:6
 
 ```
-INFO:__main__:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[2048]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[3072]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[3392]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[3392]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[3392]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[3392]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[4416]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[5184]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[6208]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[1472]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[704]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[1152]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[384]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[1152]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[384]:
 ```
 
 ## howdy! pump runs appear to be OK
 
 
-## CRC errors found, caught, recovered: 2
+## CRC errors found, caught, recovered: 9
 
 ```
-12252:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
-16615:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+1848:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+14058:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+15128:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+16909:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+17244:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+18108:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+19849:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+20184:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+21048:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
 ```
 
 * no nak found

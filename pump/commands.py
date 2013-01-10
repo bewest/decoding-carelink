@@ -56,6 +56,7 @@ class PumpCommand(BaseCommand):
       value = kwds.get(k, getattr(self, k))
       setattr(self, k, value)
     self.allocateRawData( )
+    self.data = bytearray( )
 
   def __str__(self):
     if self.responded:
