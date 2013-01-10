@@ -166,15 +166,19 @@ class ReadHistoryData(PumpCommand):
       kwds['params'] = [ self.page ]
     super(type(self), self).__init__(**kwds)
   def __str__(self):
-    base = ''.join([ self.__class__.__name__, '[page][%s]' % self.page ])
-    return '{}:data:{}:{}'.format(base, len(self.data), repr(self.getData( )))
+    base = ''.join([ self.__class__.__name__,
+                    ':size[%s]:' % self.size,
+                    '[page][%s]' % self.page ])
+    return '{}:data[{}]:'.format(base, len(self.data))
   
   def done(self):
     found = len(self.data or [ ])
     expect = int(self.maxRecords * self.bytesPerRecord)
-    log.info("%s:download:done?: found[{}] expected[{}]".format(self, found, expect))
+    log.info("{}:download:done?: found[{}] expected[{}]".format(self, found, expect))
+    log.info("{}:download:done: ACK SIZE expected: found[{}] expected[{}]".format(self, found, expect))
     return found >= expect
   def respond(self, raw):
+    log.info('{} extending original {} with found {}'.format(str(self), len(self.data), len(raw)))
     self.data.extend(raw)
     self.responded = True
 
