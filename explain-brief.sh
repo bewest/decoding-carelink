@@ -40,11 +40,19 @@ function summarize_stick ( ) {
 function summarize_pump ( ) {
   _error=0
   echo ""
-  echo -n '## downloaded:'
+  echo -n '## downloaded: '
   grep -E "session:finished.*ReadHistory" $LOG | grep "data\[1024\]" | sort | uniq | wc -l
   echo ""
   echo '```'
   grep -E "session:finished executing.*ReadHistory" $LOG | sort | uniq
+  echo '```'
+  echo ""
+  echo ""
+  echo -n '## commands session:finished:'
+  grep -E "session:finished.*" $LOG | grep "data\[1024\]" | sort | uniq | wc -l
+  echo ""
+  echo '```'
+  grep -E "session:finished executing" $LOG | sort | uniq
   echo '```'
   echo ""
 
