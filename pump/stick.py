@@ -593,7 +593,7 @@ class Stick(object):
         log.info("%s:no data, try again" % (stats.format(self, i, size,
                                             len(results), len(data))))
       size = self.poll_size( )
-      eod = size < 15
+      eod = eod and size < 15
 
     log.info("%s:DONE" % (stats.format(self, i, size,
                           len(results), len(data))))
