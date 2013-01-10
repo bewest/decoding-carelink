@@ -29,7 +29,8 @@ class BaseCommand(object):
   def done(self):
     found = len(self.data or [ ])
     expect = int(self.maxRecords * self.bytesPerRecord)
-    log.info("%s:download:done?: found[{}] expected[{}]".format(self, found, expect))
+    expect_size = "found[{}] expected[{}]".format(found, expect)
+    log.info("%s:download:done?:%s" % (self, expect_size))
     return found >= expect
   def format(self):
     pass
@@ -173,11 +174,20 @@ class ReadHistoryData(PumpCommand):
     return '{}:data[{}]:'.format(base, len(self.data))
   
   def done(self):
+    eod = False
     found = len(self.data or [ ])
     expect = int(self.maxRecords * self.bytesPerRecord)
-    log.info("{}:download:done?: found[{}] expected[{}]".format(self, found, expect))
-    log.info("{}:download:done: ACK SIZE expected: found[{}] expected[{}]".format(self, found, expect))
+    expect_crc = CRC8(self.data)
+    expect_size = "size check found[{}] expected[{}]".format(found, expect)
+    found_crc = 0
+    if self.responded and len(self.data) > 0:
+      found_crc = self.data[-1]
+      self.eod  = eod = (self.data[5] & 0x80) > 0
+    explain_crc = "CRC ACK check found[{}] expected[{}]".format(found_crc, expect_crc)
+    is_eod = 'and has eod set? %s' % (eod)
+    log.info("%s:download:done %s:%s:%s" % (self, expect_size, explain_crc, is_eod))
     return found >= expect
+
   def respond(self, raw):
     log.info('{} extending original {} with found {}'.format(str(self), len(self.data), len(raw)))
     self.data.extend(raw)
