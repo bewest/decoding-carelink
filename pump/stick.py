@@ -432,8 +432,8 @@ class Stick(object):
       size  = self.read_status( )
       self._poll_size = size
       if size == 0:
-        log.debug('poll zero, sleeping in POLL, .250')
-        time.sleep(.250)
+        log.debug('poll zero, sleeping in POLL, .100')
+        time.sleep(.100)
       i += 1
     log.info('%s:STOP POLL after %s attempts:size:%s' % (self, i, size))
     self._poll_size = size

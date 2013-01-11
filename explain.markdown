@@ -194,7 +194,7 @@ summarize_pump
 ## cat explain.log
 OUT
 ## Observations
-Thu Jan 10 18:17:54 PST 2013
+Thu Jan 10 18:27:01 PST 2013
 
 ## stick
 
@@ -208,6 +208,8 @@ Thu Jan 10 18:17:54 PST 2013
 
 ```
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1664]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[640]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1024]:
@@ -228,6 +230,8 @@ INFO:session:finished executing:ReadContrast:size[64]:data:bytearray(b'\x02\x07\
 INFO:session:finished executing:ReadCurPageNumber:pages:8
 INFO:session:finished executing:ReadFirmwareVersion:size[64]:data:'VER 2.1A1.1'
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1664]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[640]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1024]:
@@ -239,10 +243,10 @@ INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[1024]:
 INFO:session:finished executing:ReadPumpID:size[64]:data:'208850'
 INFO:session:finished executing:ReadPumpModel:size[64]:data:'515'
 INFO:session:finished executing:ReadRadioCtrlACL:size[64]:data:['123456', '213546', '821650']
-INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:39.0
-INFO:session:finished executing:ReadRTC:size[64]:data:'2006-10-10T17:46:9'
+INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:38.7
+INFO:session:finished executing:ReadRTC:size[64]:data:'2006-10-10T17:55:12'
 INFO:session:finished executing:ReadSettings:size[64]:data:{'low_reservoir_warn_point': 20, 'keypad_lock_status': 0, 'maxBasal': 2, 'low_reservoir_warn_type': 0, 'insulinConcentration': 100, 'audio_bolus_enable': True, 'variable_bolus_enable': False, 'alarm': {'volume': 3, 'mode': 2}, 'rf_enable': True, 'block_enable': False, 'timeformat': 0, 'auto_off_duration_hrs': 0, 'audio_bolus_size': 2.0, 'selected_pattern': 2, 'patterns_enabled': True, 'maxBolus': 10.0, 'insulin_action_type': 5}
-INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 20.5, 'today': 14.9}
+INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 20.5, 'today': 15.1}
 ```
 
 ## howdy! pump runs appear to be OK
