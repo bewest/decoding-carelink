@@ -245,6 +245,7 @@ class ReadRadio(StickCommand):
 
     data = raw[13:13+resLength]
     self.packet = data
+    log.info('%s:eod:found eod (%s)' % (self, self.eod))
     log.info('found packet len(%s), link expects(%s)' % (len(self.packet), resLength))
     assert len(data) == resLength
     head = raw[13:]
@@ -430,7 +431,7 @@ class Stick(object):
       log.debug('%r:poll:attempt:%s' % (self, i))
       size  = self.read_status( )
       self._poll_size = size
-      log.debug('sleeping in POLL, .100')
+      log.debug('sleeping in POLL, .250')
       time.sleep(.250)
       i += 1
     log.info('%s:STOP POLL after %s attempts:size:%s' % (self, i, size))
@@ -552,36 +553,40 @@ class Stick(object):
     log.info('finished processing {0}, {1}'.format(self.command, repr(info)))
     return info
     
-  def download(self):
+  def download(self, size=None):
     eod = False
     results = bytearray( )
     i = 0
     log_head = 'download(attempts[{}])'
     expecting = 'download(attempts[{}],expect[{}])'
     stats = '{}:download(attempts[{}],expect[{}],results[{}]:data[{}])'
+    expect_eod = False
     log.info('download:start:%s' % i)
     data = bytearray( )
     while not eod:
       i += 1
       self._download_i = i
       data = bytearray( )
-      log.info("%s:begin first poll" % (stats.format(self, i, 0,
+      if size is None:
+        log.info("%s:begin first poll first sleep .100" % (stats.format(self, i, 0,
+                                          len(results), len(data))))
+        time.sleep(.100)
+        size = self.poll_size( )
+        log.info("%s:end first poll" % (stats.format(self, i, size,
                                         len(results), len(data))))
-      size = self.poll_size( )
-      log.info("%s:end first poll" % (stats.format(self, i, 0,
-                                      len(results), len(data))))
       if size == 0:
         log.info("%s:found poll size, sleep 3 try again" % ( \
-                  stats.format(self, i, 0, len(results), len(data))))
+                  stats.format(self, i, size, len(results), len(data))))
         time.sleep(3)
         size = self.poll_size( )
         if size == 0:
-          log.critical("%s:BAD AILING" % (stats.format(self, i, 0,
+          log.critical("%s:BAD AILING" % (stats.format(self, i, size,
                                           len(results), len(data))))
           break
 
-      log.info("%s:proceed to download packet" % (stats.format(self, i, 0,
+      log.info("%s:proceed to download packet, sleep .100" % (stats.format(self, i, size,
                                                   len(results), len(data))))
+      time.sleep(.100)
       data = self.download_packet(size)
       expect_eod = False
       if data:
@@ -593,7 +598,12 @@ class Stick(object):
         log.info("%s:no data, try again" % (stats.format(self, i, size,
                                             len(results), len(data))))
       size = self.poll_size( )
-      eod = eod and size < 15
+      # eod = expect_eod and size < 15
+      eod = expect_eod or size < 15
+      if not eod:
+        log.info("%s:no eod, sleep .500 try again" % (stats.format(self, i, size,
+                                            len(results), len(data))))
+        time.sleep(.100)
 
     log.info("%s:DONE" % (stats.format(self, i, size,
                           len(results), len(data))))

@@ -67,7 +67,7 @@ class Session(object):
     assert not errors, ("with errors:%s" %"\n".join( map(str, errors) ))
   def transfer(self):
     log.info('session transferring packet')
-    self.stick.transmit_packet(self.command)
+    return self.stick.transmit_packet(self.command)
 
 class Pump(Session):
   def __init__(self, stick, serial='208850'):

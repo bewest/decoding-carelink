@@ -49,6 +49,7 @@ class PumpCommand(BaseCommand):
   bytesPerRecord = 64
   maxRecords = 1
   retries = 2
+  effectTime = .500
   data = bytearray( )
   __fields__ = ['maxRecords', 'code', 'descr',
                 'serial', 'bytesPerRecord', 'params']
