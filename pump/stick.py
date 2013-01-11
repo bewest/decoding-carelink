@@ -576,9 +576,9 @@ class Stick(object):
         log.info("%s:end first poll" % (stats.format(self, i, size,
                                         len(results), len(data))))
       if size == 0:
-        log.info("%s:found poll size, sleep 3 try again" % ( \
+        log.info("%s:zero poll size, sleep .500 try again" % ( \
                   stats.format(self, i, size, len(results), len(data))))
-        time.sleep(3)
+        time.sleep(.500)
         size = self.poll_size( )
         if size == 0:
           log.critical("%s:BAD AILING" % (stats.format(self, i, size,
@@ -602,9 +602,9 @@ class Stick(object):
       eod = expect_eod
       # or size < 15
       if not eod:
-        log.info("%s:no eod, sleep .200 try again" % (stats.format(self, i, size,
+        log.info("%s:no eod, sleep .050 try again" % (stats.format(self, i, size,
                                             len(results), len(data))))
-        time.sleep(.200)
+        time.sleep(.050)
         size = self.poll_size( )
 
     log.info("%s:DONE" % (stats.format(self, i, size,
