@@ -178,7 +178,7 @@ class ReadHistoryData(PumpCommand):
     eod = False
     found = len(self.data or [ ])
     expect = int(self.maxRecords * self.bytesPerRecord)
-    expect_crc = CRC8(self.data)
+    expect_crc = CRC8(self.data[:-1])
     expect_size = "size check found[{}] expected[{}]".format(found, expect)
     found_crc = 0
     if self.responded and len(self.data) > 0:
@@ -191,7 +191,10 @@ class ReadHistoryData(PumpCommand):
 
   def respond(self, raw):
     log.info('{} extending original {} with found {}'.format(str(self), len(self.data), len(raw)))
-    self.data.extend(raw)
+    if len(raw) == self.size:
+      self.data = raw
+    else:
+      self.data.extend(raw)
     self.responded = True
 
   code = 128
