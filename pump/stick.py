@@ -431,8 +431,9 @@ class Stick(object):
       log.debug('%r:poll:attempt:%s' % (self, i))
       size  = self.read_status( )
       self._poll_size = size
-      log.debug('sleeping in POLL, .250')
-      time.sleep(.250)
+      if size == 0:
+        log.debug('poll zero, sleeping in POLL, .250')
+        time.sleep(.250)
       i += 1
     log.info('%s:STOP POLL after %s attempts:size:%s' % (self, i, size))
     self._poll_size = size
@@ -568,9 +569,9 @@ class Stick(object):
       self._download_i = i
       data = bytearray( )
       if size is None:
-        log.info("%s:begin first poll first sleep .100" % (stats.format(self, i, 0,
+        log.info("%s:begin first poll first sleep .150" % (stats.format(self, i, 0,
                                           len(results), len(data))))
-        time.sleep(.100)
+        time.sleep(.150)
         size = self.poll_size( )
         log.info("%s:end first poll" % (stats.format(self, i, size,
                                         len(results), len(data))))
@@ -584,9 +585,9 @@ class Stick(object):
                                           len(results), len(data))))
           break
 
-      log.info("%s:proceed to download packet, sleep .100" % (stats.format(self, i, size,
+      log.info("%s:proceed to download packet" % (stats.format(self, i, size,
                                                   len(results), len(data))))
-      time.sleep(.100)
+      #time.sleep(.100)
       data = self.download_packet(size)
       expect_eod = False
       if data:
@@ -601,9 +602,9 @@ class Stick(object):
       # eod = expect_eod and size < 15
       eod = expect_eod or size < 15
       if not eod:
-        log.info("%s:no eod, sleep .500 try again" % (stats.format(self, i, size,
+        log.info("%s:no eod, sleep .150 try again" % (stats.format(self, i, size,
                                             len(results), len(data))))
-        time.sleep(.100)
+        time.sleep(.150)
 
     log.info("%s:DONE" % (stats.format(self, i, size,
                           len(results), len(data))))
