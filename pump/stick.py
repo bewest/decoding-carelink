@@ -569,9 +569,9 @@ class Stick(object):
       self._download_i = i
       data = bytearray( )
       if size is None:
-        log.info("%s:begin first poll first sleep .150" % (stats.format(self, i, 0,
+        log.info("%s:begin first poll first sleep .200" % (stats.format(self, i, 0,
                                           len(results), len(data))))
-        time.sleep(.150)
+        time.sleep(.200)
         size = self.poll_size( )
         log.info("%s:end first poll" % (stats.format(self, i, size,
                                         len(results), len(data))))
@@ -598,13 +598,14 @@ class Stick(object):
       else:
         log.info("%s:no data, try again" % (stats.format(self, i, size,
                                             len(results), len(data))))
-      size = self.poll_size( )
       # eod = expect_eod and size < 15
-      eod = expect_eod or size < 15
+      eod = expect_eod
+      # or size < 15
       if not eod:
-        log.info("%s:no eod, sleep .150 try again" % (stats.format(self, i, size,
+        log.info("%s:no eod, sleep .200 try again" % (stats.format(self, i, size,
                                             len(results), len(data))))
-        time.sleep(.150)
+        time.sleep(.200)
+        size = self.poll_size( )
 
     log.info("%s:DONE" % (stats.format(self, i, size,
                           len(results), len(data))))
