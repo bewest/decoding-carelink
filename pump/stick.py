@@ -569,9 +569,9 @@ class Stick(object):
       self._download_i = i
       data = bytearray( )
       if size is None:
-        log.info("%s:begin first poll first sleep .200" % (stats.format(self, i, 0,
+        log.info("%s:begin first poll first sleep .250" % (stats.format(self, i, 0,
                                           len(results), len(data))))
-        time.sleep(.200)
+        time.sleep(.250)
         size = self.poll_size( )
         log.info("%s:end first poll" % (stats.format(self, i, size,
                                         len(results), len(data))))
