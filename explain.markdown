@@ -194,7 +194,7 @@ summarize_pump
 ## cat explain.log
 OUT
 ## Observations
-Thu Jan 10 18:37:27 PST 2013
+Thu Jan 10 18:43:20 PST 2013
 
 ## stick
 
@@ -226,7 +226,6 @@ INFO:session:finished executing:ReadBasalTemp:size[64]:data:{'duration': 0, 'rat
 INFO:session:finished executing:ReadBatteryStatus:size[64]:data:{'status': 'normal', 'voltage': 1.34}
 INFO:session:finished executing:ReadContrast:size[64]:data:bytearray(b'\x02\x07\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
 INFO:session:finished executing:ReadCurPageNumber:pages:8
-INFO:session:finished executing:ReadFirmwareVersion:size[64]:data:''
 INFO:session:finished executing:ReadFirmwareVersion:size[64]:data:'VER 2.1A1.1'
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1024]:
@@ -240,10 +239,10 @@ INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[1024]:
 INFO:session:finished executing:ReadPumpID:size[64]:data:'208850'
 INFO:session:finished executing:ReadPumpModel:size[64]:data:'515'
 INFO:session:finished executing:ReadRadioCtrlACL:size[64]:data:['123456', '213546', '821650']
-INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:38.4
-INFO:session:finished executing:ReadRTC:size[64]:data:'2006-10-10T18:5:38'
+INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:38.3
+INFO:session:finished executing:ReadRTC:size[64]:data:'2006-10-10T18:11:34'
 INFO:session:finished executing:ReadSettings:size[64]:data:{'low_reservoir_warn_point': 20, 'keypad_lock_status': 0, 'maxBasal': 2, 'low_reservoir_warn_type': 0, 'insulinConcentration': 100, 'audio_bolus_enable': True, 'variable_bolus_enable': False, 'alarm': {'volume': 3, 'mode': 2}, 'rf_enable': True, 'block_enable': False, 'timeformat': 0, 'auto_off_duration_hrs': 0, 'audio_bolus_size': 2.0, 'selected_pattern': 2, 'patterns_enabled': True, 'maxBolus': 10.0, 'insulin_action_type': 5}
-INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 20.5, 'today': 15.4}
+INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 20.5, 'today': 15.6}
 ```
 
 ## howdy! pump runs appear to be OK
