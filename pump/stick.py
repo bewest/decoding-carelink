@@ -603,9 +603,9 @@ class Stick(object):
       eod = expect_eod
       # or size < 15
       if not eod:
-        log.info("%s:no eod, sleep .150 try again" % (stats.format(self, i, size,
+        log.info("%s:no eod, sleep .125 try again" % (stats.format(self, i, size,
                                             len(results), len(data))))
-        time.sleep(.150)
+        time.sleep(.125)
         size = self.poll_size( )
 
     log.info("%s:DONE" % (stats.format(self, i, size,
