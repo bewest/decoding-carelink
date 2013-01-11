@@ -194,7 +194,7 @@ summarize_pump
 ## cat explain.log
 OUT
 ## Observations
-Thu Jan 10 21:41:09 PST 2013
+Thu Jan 10 21:42:45 PST 2013
 
 ## stick
 
@@ -240,7 +240,7 @@ INFO:session:finished executing:ReadPumpID:size[64]:data:'208850'
 INFO:session:finished executing:ReadPumpModel:size[64]:data:'515'
 INFO:session:finished executing:ReadRadioCtrlACL:size[64]:data:['123456', '213546', '821650']
 INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:33.9
-INFO:session:finished executing:ReadRTC:size[64]:data:'2006-10-10T21:9:23'
+INFO:session:finished executing:ReadRTC:size[64]:data:'2006-10-10T21:10:59'
 INFO:session:finished executing:ReadSettings:size[64]:data:{'low_reservoir_warn_point': 20, 'keypad_lock_status': 0, 'maxBasal': 2, 'low_reservoir_warn_type': 0, 'insulinConcentration': 100, 'audio_bolus_enable': True, 'variable_bolus_enable': False, 'alarm': {'volume': 3, 'mode': 2}, 'rf_enable': True, 'block_enable': False, 'timeformat': 0, 'auto_off_duration_hrs': 0, 'audio_bolus_size': 2.0, 'selected_pattern': 2, 'patterns_enabled': True, 'maxBolus': 10.0, 'insulin_action_type': 5}
 INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 20.5, 'today': 20.0}
 ```
