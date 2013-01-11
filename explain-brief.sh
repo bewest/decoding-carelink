@@ -49,7 +49,7 @@ function summarize_pump ( ) {
   echo ""
   echo ""
   echo -n '## commands session:finished: '
-  grep -E "session:finished executing" $LOG | grep "data\[1024\]" | sort | uniq | wc -l
+  grep -E "session:finished executing" $LOG | sort | uniq | wc -l
   echo ""
   echo '```'
   grep -E "session:finished executing" $LOG | sort | uniq
