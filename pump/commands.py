@@ -192,8 +192,13 @@ class ReadHistoryData(PumpCommand):
   def respond(self, raw):
     log.info('{} extending original {} with found {}'.format(str(self), len(self.data), len(raw)))
     if len(raw) == self.size:
+      log.info('{} download respond replace original {} with found {}'.format(str(self), len(self.data), len(raw)))
       self.data = raw
+    elif len(self.data) == self.size:
+      log.info('{} download respond original {}, XXX IGNORE found {}'.format(str(self), len(self.data), len(raw)))
+      pass
     else:
+      log.info('{} download respond extend original {} with found {}'.format(str(self), len(self.data), len(raw)))
       self.data.extend(raw)
     self.responded = True
 
