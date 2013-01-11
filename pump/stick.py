@@ -596,8 +596,9 @@ class Stick(object):
         log.info("%s:adding segment" % (stats.format(self, i, size,
                                         len(results), len(data))))
       else:
-        log.info("%s:no data, try again" % (stats.format(self, i, size,
+        log.info("%s:no data, try again sleep .200" % (stats.format(self, i, size,
                                             len(results), len(data))))
+        time.sleep(.200)
       # eod = expect_eod and size < 15
       eod = expect_eod
       # or size < 15
