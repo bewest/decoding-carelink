@@ -194,7 +194,7 @@ summarize_pump
 ## cat explain.log
 OUT
 ## Observations
-Fri Jan 11 22:36:34 PST 2013
+Fri Jan 11 22:37:46 PST 2013
 
 ## stick
 
@@ -204,7 +204,7 @@ Fri Jan 11 22:36:34 PST 2013
 ## pump
 
 
-## downloaded: 9
+## downloaded: 8
 
 ```
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
@@ -214,7 +214,7 @@ INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[832]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[1024]:
 ```
 
@@ -234,13 +234,13 @@ INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[832]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[1024]:
 INFO:session:finished executing:ReadPumpID:size[64]:data:'208850'
 INFO:session:finished executing:ReadPumpModel:size[64]:data:'515'
 INFO:session:finished executing:ReadRadioCtrlACL:size[64]:data:['123456', '213546', '821650']
 INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:13.2
-INFO:session:finished executing:ReadRTC:size[64]:data:'2006-10-11T22:4:48'
+INFO:session:finished executing:ReadRTC:size[64]:data:'2006-10-11T22:5:51'
 INFO:session:finished executing:ReadSettings:size[64]:data:{'low_reservoir_warn_point': 20, 'keypad_lock_status': 0, 'maxBasal': 2, 'low_reservoir_warn_type': 0, 'insulinConcentration': 100, 'audio_bolus_enable': True, 'variable_bolus_enable': False, 'alarm': {'volume': 3, 'mode': 2}, 'rf_enable': True, 'block_enable': False, 'timeformat': 0, 'auto_off_duration_hrs': 0, 'audio_bolus_size': 2.0, 'selected_pattern': 2, 'patterns_enabled': True, 'maxBolus': 10.0, 'insulin_action_type': 5}
 INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 20.5, 'today': 20.1}
 ```
