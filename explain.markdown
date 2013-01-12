@@ -194,7 +194,7 @@ summarize_pump
 ## cat explain.log
 OUT
 ## Observations
-Fri Jan 11 21:06:02 PST 2013
+Fri Jan 11 21:28:50 PST 2013
 
 ## stick
 
@@ -212,7 +212,6 @@ INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[64]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[1024]:
@@ -220,7 +219,7 @@ INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[1024]:
 ```
 
 
-## commands session:finished: 22
+## commands session:finished: 21
 
 ```
 INFO:session:finished executing:ReadBasalTemp:size[64]:data:{'duration': 0, 'rate': 1.9}
@@ -233,7 +232,6 @@ INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[64]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[1024]:
@@ -242,7 +240,7 @@ INFO:session:finished executing:ReadPumpID:size[64]:data:'208850'
 INFO:session:finished executing:ReadPumpModel:size[64]:data:'515'
 INFO:session:finished executing:ReadRadioCtrlACL:size[64]:data:['123456', '213546', '821650']
 INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:13.4
-INFO:session:finished executing:ReadRTC:size[64]:data:'2006-10-11T20:34:13'
+INFO:session:finished executing:ReadRTC:size[64]:data:'2006-10-11T20:57:4'
 INFO:session:finished executing:ReadSettings:size[64]:data:{'low_reservoir_warn_point': 20, 'keypad_lock_status': 0, 'maxBasal': 2, 'low_reservoir_warn_type': 0, 'insulinConcentration': 100, 'audio_bolus_enable': True, 'variable_bolus_enable': False, 'alarm': {'volume': 3, 'mode': 2}, 'rf_enable': True, 'block_enable': False, 'timeformat': 0, 'auto_off_duration_hrs': 0, 'audio_bolus_size': 2.0, 'selected_pattern': 2, 'patterns_enabled': True, 'maxBolus': 10.0, 'insulin_action_type': 5}
 INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 20.5, 'today': 19.9}
 ```
