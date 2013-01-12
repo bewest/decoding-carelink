@@ -28,7 +28,7 @@ function only_stats ( ) {
 
 function summarize_stick ( ) {
   echo ""
-  if [[ 6 -eq $(grep -E "howdy" $LOG | grep stick | wc -l) ]] ; then
+  if [[ 4 -eq $(grep -E "howdy" $LOG | grep stick | wc -l) ]] ; then
     echo "* stick runs appear to be ok"
   else
     echo "* not ok"
