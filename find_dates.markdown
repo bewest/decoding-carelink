@@ -26,6 +26,7 @@ Timestamp,Programmed Bolus Duration (hh:mm:ss),BWZ Estimate (U),BWZ Target High 
 ```
 
 ## 2006-07-01T08:23:47 5b
+
 ```
 7/1/06 08:23:47,,,,,,,,,,,,BolusNormal,"AMOUNT=0.3, PROGRAMMED_AMOUNT=0.3
 7/1/06 08:23:47,,0.3,100,100,10,50,3,100,0,0.3,0.0,BolusWizardBolusEstimate,"BG_INPUT=100, CARB_INPUT=3
@@ -34,7 +35,12 @@ Timestamp,Programmed Bolus Duration (hh:mm:ss),BWZ Estimate (U),BWZ Target High 
 0008   0x50 0x0a 0x32 0x64 0x00 0x03 0x00 0x00    P.2d....
 0010   0x00 0x00 0x03 0x64 0x01 0x03 0x03 0x00    ...d....
 
+```
 
+
+## 2006-07-01T08:24:43 5b
+
+```
 7/1/06 08:24:43,,0.7,100,100,10,50,7,103,0,0.7,0.3,BolusWizardBolusEstimate,"BG_INPUT=103, CARB_INPUT=7
 7/1/06 08:24:43,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=9773719100, AMOUNT=0.3
 7/1/06 08:24:43,,,,,,,,,,,,BolusNormal,"AMOUNT=0.7, PROGRAMMED_AMOUNT=0.7
@@ -42,6 +48,7 @@ Timestamp,Programmed Bolus Duration (hh:mm:ss),BWZ Estimate (U),BWZ Target High 
 0000   0x5b 0x67 0x6b 0xd8 0x08 0x01 0x06 0x07    [gk.....
 0008   0x50 0x0a 0x32 0x64 0x00 0x07 0x00 0x00    P.2d....
 0010   0x03 0x00 0x07 0x64 0x5c 0x05 0x0c 0x01    ...d\...
+
 ```
 
 ## 2006-07-01T08:26:55 6b
@@ -54,6 +61,7 @@ Timestamp,Programmed Bolus Duration (hh:mm:ss),BWZ Estimate (U),BWZ Target High 
 0000   0x6b 0xd8 0x28 0x01 0x06 0x5b 0x57 0x77    k.(..[Ww
 0008   0xda 0x08 0x01 0x06 0x01 0x52 0x0a 0x32    .....R.2
 0010   0x64 0x63 0x01                             dc.
+
 ```
 
 
