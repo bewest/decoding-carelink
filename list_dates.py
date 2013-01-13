@@ -7,6 +7,8 @@ from pprint import pprint, pformat
 from binascii import hexlify
 from datetime import datetime
 
+from pump import lib
+
 class NotADate(Exception): pass
 
 
@@ -77,8 +79,8 @@ def parse_date(data):
   try:
     seconds = parse_seconds(data[0])
     minutes = parse_minutes(data[1])
-    hours   = parse_minutes(data[2])
-    day     = parse_minutes(data[3])
+    hours   = parse_hours(data[2])
+    day     = parse_day(data[3])
     year    = parse_years(data[4])
     month   = parse_months( data[0], data[1] )
     date = datetime(year, month, day, hours, minutes, seconds)
@@ -88,12 +90,18 @@ def parse_date(data):
 
 def opcode_read_ahead(opcode, fd):
   TABLE = {
-    0x07: 55,
+    0x5b: 22,
+    #0x64: 4,
+    0x03: 4,
+    0x6b: 12,
+    # 0x00: 4,
+    #0x1f: 22,
+    #0x1f: 8,
   }
-  if TABLE.get(opcode, False) is not False:
-    print "special opcode"
+  if TABLE.get(opcode) is not None:
+    #print "special opcode %#04x, read:%s" % (opcode, TABLE[opcode])
     return bytearray(fd.read(TABLE[opcode]))
-  return bytearray('')
+  return bytearray( )
 
 def sniff_invalid_opcode(opcode):
   if opcode == 0x00:
@@ -109,7 +117,7 @@ def find_dates(stream):
       if len(bolus) <= 5:
         raise NotADate('too short of a record')
       #sniff_invalid_opcode( bolus[0] )
-      #bolus.extend( opcode_read_ahead(bolus[0], stream) )
+      bolus.extend( opcode_read_ahead(bolus[0], stream) )
       records.append( (date, bolus[:-5]) )
       bolus = bytearray(stream.read(4))
     except NotADate, e:
@@ -134,7 +142,7 @@ def main( ):
       opcode = datum[0]
 
       print "%s %02x" % (date.isoformat( ), opcode)
-      print wrapper.fill(hexlify(str(datum)))
+      print lib.hexdump(datum)
 
 if __name__ == '__main__':
   import doctest
