@@ -1,4 +1,5 @@
 
+import time
 import logging
 log = logging.getLogger( ).getChild(__name__)
 
@@ -44,7 +45,7 @@ class PageDownloader(Downloader):
 
   def download_page(self, x):
     log.info('comm:XXX:READ HISTORY DATA page number: %r' % (x))
-    comm = ReadHistoryData(serial=self.device.serial, params=[ x ] )
+    comm = commands.ReadHistoryData(serial=self.device.serial, params=[ x ] )
     self.device.execute(comm)
     page = comm.getData( )
     comm.save(prefix=self.log_format)
@@ -80,6 +81,9 @@ if __name__ == '__main__':
   log.info(pformat(stick.interface_stats( )))
 
   downloader = Downloader(stick, session)
+  downloader.download( )
+
+  downloader = PageDownloader(stick, session)
   downloader.download( )
 
   log.info(pformat(stick.interface_stats( )))
