@@ -59,6 +59,16 @@ class PumpCommand(BaseCommand):
       setattr(self, k, value)
     self.allocateRawData( )
     self.data = bytearray( )
+    self.name = self.log_name( )
+
+  def log_name(self, prefix=''):
+    return prefix + '{}.data'.format(self.__class__.__name__)
+
+  def save(self, prefix=''):
+    name = '{}'.format(self.log_name(prefix))
+    handle = open(name, 'wb')
+    handle.write(self.data)
+    handle.close( )
 
   def __str__(self):
     if self.responded:
@@ -168,6 +178,10 @@ class ReadHistoryData(PumpCommand):
       self.page = int(page)
       kwds['params'] = [ self.page ]
     super(type(self), self).__init__(**kwds)
+
+  def log_name(self, prefix=''):
+    return prefix + '{}-page-{}.data'.format(self.__class__.__name__, self.page)
+
   def __str__(self):
     base = ''.join([ self.__class__.__name__,
                     ':size[%s]:' % self.size,

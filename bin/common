@@ -52,6 +52,12 @@ function run_commands ( ) {
   echo '```'
 }
 
+function run_download ( ) {
+  echo '```'
+  TIME="$TIME" time python pump/download.py ${PORT} ${SERIAL} 2>&1 | tee logs/download.log
+  echo '```'
+}
+
 function dump_repro ( ) {
   if [[ "$NAME" = "/bin/bash" ]] ; then
     NAME='status-quo.sh'
@@ -120,6 +126,7 @@ function run_all ( ) {
   echo "Was there an ACK ERROR?"
   echo "### DIAGNOSE CRC"
   run_postmortem
+  run_download
   # run_stick
 }
 
