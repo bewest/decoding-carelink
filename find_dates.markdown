@@ -28,8 +28,22 @@ Timestamp,Programmed Bolus Duration (hh:mm:ss),BWZ Estimate (U),BWZ Target High 
 ## 2006-07-01T08:23:47 5b
 
 ```
-7/1/06 08:23:47,,,,,,,,,,,,BolusNormal,"AMOUNT=0.3, PROGRAMMED_AMOUNT=0.3
-7/1/06 08:23:47,,0.3,100,100,10,50,3,100,0,0.3,0.0,BolusWizardBolusEstimate,"BG_INPUT=100, CARB_INPUT=3
+Timestamp,BWZ Estimate (U),BWZ Target High BG (mg/dL),BWZ Target Low BG (mg/dL),BWZ Carb Ratio (grams),BWZ Insulin Sensitivity (mg/dL),BWZ Carb Input (grams),BWZ BG Input (mg/dL),BWZ Correction Estimate (U),BWZ Food Estimate (U),BWZ Active Insulin (U),Raw-Type,Raw-Values,Raw-Upload ID
+
+7/1/06 08:23:47,,,,,,,,,,,BolusNormal,"AMOUNT=0.3, PROGRAMMED_AMOUNT=0.3
+Timestamp 7/1/06 08:23:47
+BWZ Estimate (U) 0.3 = 0x03 / 10 (byte 8 or 14 or 19 or 22 or 23)
+BWZ Target High BG (mg/dL) 100 = 0x64 (byte 2 or 12 or 20 )
+BWZ Target Low BG (mg/dL) 100 = 0x64 (byte 2 or 12 or 20 )
+BWZ Carb Ratio (grams) 10 = 0x0a (byte 10)
+BWZ Insulin Sensitivity (mg/dL) 50
+BWZ Carb Input (grams) 3 = 0x03 / 10 (byte 8 or 14 or 19 or 22 or 23)
+BWZ BG Input (mg/dL) 100 = 0x64 (byte 2 or 12 or 20 )
+BWZ Correction Estimate (U) 0
+BWZ Food Estimate (U) 0.3 = 0x03 / 10 (byte 8 or 14 or 19 or 22 or 23)
+BWZ Active Insulin (U) 0.0
+Raw-Type,Raw-Values,Raw-Upload ID
+BolusWizardBolusEstimate,"BG_INPUT=100, CARB_INPUT=3
 2006-07-01T08:23:47 5b
 0000   0x5b 0x64 0x6f 0xd7 0x08 0x01 0x06 0x03    [do.....
 0008   0x50 0x0a 0x32 0x64 0x00 0x03 0x00 0x00    P.2d....
@@ -41,9 +55,11 @@ Timestamp,Programmed Bolus Duration (hh:mm:ss),BWZ Estimate (U),BWZ Target High 
 ## 2006-07-01T08:24:43 5b
 
 ```
-7/1/06 08:24:43,,0.7,100,100,10,50,7,103,0,0.7,0.3,BolusWizardBolusEstimate,"BG_INPUT=103, CARB_INPUT=7
-7/1/06 08:24:43,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=9773719100, AMOUNT=0.3
-7/1/06 08:24:43,,,,,,,,,,,,BolusNormal,"AMOUNT=0.7, PROGRAMMED_AMOUNT=0.7
+Timestamp,BWZ Estimate (U),BWZ Target High BG (mg/dL),BWZ Target Low BG (mg/dL),BWZ Carb Ratio (grams),BWZ Insulin Sensitivity (mg/dL),BWZ Carb Input (grams),BWZ BG Input (mg/dL),BWZ Correction Estimate (U),BWZ Food Estimate (U),BWZ Active Insulin (U),Raw-Type,Raw-Values,Raw-Upload ID
+
+7/1/06 08:24:43,0.7,100,100,10,50,7,103,0,0.7,0.3,BolusWizardBolusEstimate,"BG_INPUT=103, CARB_INPUT=7
+7/1/06 08:24:43,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=9773719100, AMOUNT=0.3
+7/1/06 08:24:43,,,,,,,,,,,BolusNormal,"AMOUNT=0.7, PROGRAMMED_AMOUNT=0.7
 2006-07-01T08:24:43 5b
 0000   0x5b 0x67 0x6b 0xd8 0x08 0x01 0x06 0x07    [gk.....
 0008   0x50 0x0a 0x32 0x64 0x00 0x07 0x00 0x00    P.2d....
@@ -54,9 +70,11 @@ Timestamp,Programmed Bolus Duration (hh:mm:ss),BWZ Estimate (U),BWZ Target High 
 ## 2006-07-01T08:26:55 6b
 
 ```
-7/1/06 08:26:55,,9.0,100,100,10,50,1,599,9.9,0.1,1.0,BolusWizardBolusEstimate,"BG_INPUT=599, CARB_INPUT=1
-7/1/06 08:26:55,,,,,,,,,,,,BolusNormal,"AMOUNT=9, PROGRAMMED_AMOUNT=9
-7/1/06 08:26:55,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=9773719097, AMOUNT=1
+Timestamp,BWZ Estimate (U),BWZ Target High BG (mg/dL),BWZ Target Low BG (mg/dL),BWZ Carb Ratio (grams),BWZ Insulin Sensitivity (mg/dL),BWZ Carb Input (grams),BWZ BG Input (mg/dL),BWZ Correction Estimate (U),BWZ Food Estimate (U),BWZ Active Insulin (U),Raw-Type,Raw-Values,Raw-Upload ID
+
+7/1/06 08:26:55,9.0,100,100,10,50,1,599,9.9,0.1,1.0,BolusWizardBolusEstimate,"BG_INPUT=599, CARB_INPUT=1
+7/1/06 08:26:55,,,,,,,,,,,BolusNormal,"AMOUNT=9, PROGRAMMED_AMOUNT=9
+7/1/06 08:26:55,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=9773719097, AMOUNT=1
 2006-07-01T08:26:55 6b
 0000   0x6b 0xd8 0x28 0x01 0x06 0x5b 0x57 0x77    k.(..[Ww
 0008   0xda 0x08 0x01 0x06 0x01 0x52 0x0a 0x32    .....R.2
@@ -68,7 +86,9 @@ Timestamp,Programmed Bolus Duration (hh:mm:ss),BWZ Estimate (U),BWZ Target High 
 ## 2006-07-01T08:36:21 64
 
 ```
-7/1/06 08:36:21,,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=user_suspend, PRE_ENABLE=null"
+Timestamp,BWZ Estimate (U),BWZ Target High BG (mg/dL),BWZ Target Low BG (mg/dL),BWZ Carb Ratio (grams),BWZ Insulin Sensitivity (mg/dL),BWZ Carb Input (grams),BWZ BG Input (mg/dL),BWZ Correction Estimate (U),BWZ Food Estimate (U),BWZ Active Insulin (U),Raw-Type,Raw-Values,Raw-Upload ID
+
+7/1/06 08:36:21,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=user_suspend, PRE_ENABLE=null"
 2006-07-01T08:36:21 64
 0000   0x64 0x5c 0x05 0x28 0x03 0x44 0x01 0x5a    d\.(.D.Z
 0008   0x5a 0x00 0x77 0xda 0x28 0x01 0x06 0x1e    Z.w.(...
