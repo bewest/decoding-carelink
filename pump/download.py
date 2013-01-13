@@ -14,12 +14,48 @@ class Downloader(object):
     self.log_format = log_format
 
   def download(self):
+    """
+    Download a single page, copy paste from elsewhere.
+    """
 
     log.info("read HISTORY DATA")
     comm = commands.ReadHistoryData(serial=self.device.serial, page=0)
     self.device.execute(comm)
     log.info('comm:READ history data page!!!:\n%s' % (lib.hexdump(comm.getData( ))))
     comm.save(prefix=self.log_format)
+
+class PageDownloader(Downloader):
+  log_format = 'logs/'
+  def __init__(self, stick=None, device=None, log_format=log_format):
+    self.stick = stick
+    stick.open( )
+    self.device = device
+    self.log_format = log_format
+
+  def read_current(self):
+
+    log.info("read cur page number")
+    comm = commands.ReadCurPageNumber( )
+    self.device.execute(comm)
+    self.pages = comm.getData( )
+    log.info('attempting to read %s pages of history' % self.pages)
+    return self.pages
+
+
+  def download_page(self, x):
+    log.info('comm:XXX:READ HISTORY DATA page number: %r' % (x))
+    comm = ReadHistoryData(serial=self.device.serial, params=[ x ] )
+    self.device.execute(comm)
+    page = comm.getData( )
+    comm.save(prefix=self.log_format)
+    log.info("XXX: READ HISTORY DATA page number %r!!:\n%s" % (x, lib.hexdump(page)))
+    time.sleep(.100)
+
+  def download(self):
+    self.read_current( )
+    for x in range(self.pages + 1):
+      log.info("read page %s" % x)
+      self.download_page(x)
 
 if __name__ == '__main__':
   import doctest
