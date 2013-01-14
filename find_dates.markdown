@@ -36,7 +36,7 @@ BWZ Estimate (U) 0.3 = 0x03 / 10 (byte 8 or 14 or 19 or 22 or 23)
 BWZ Target High BG (mg/dL) 100 = 0x64 (byte 2 or 12 or 20 )
 BWZ Target Low BG (mg/dL) 100 = 0x64 (byte 2 or 12 or 20 )
 BWZ Carb Ratio (grams) 10 = 0x0a (byte 10)
-BWZ Insulin Sensitivity (mg/dL) 50
+BWZ Insulin Sensitivity (mg/dL) - 50 = 0x32 (byte 11)
 BWZ Carb Input (grams) 3 = 0x03 / 10 (byte 8 or 14 or 19 or 22 or 23)
 BWZ BG Input (mg/dL) 100 = 0x64 (byte 2 or 12 or 20 )
 BWZ Correction Estimate (U) 0
@@ -55,9 +55,20 @@ BolusWizardBolusEstimate,"BG_INPUT=100, CARB_INPUT=3
 ## 2006-07-01T08:24:43 5b
 
 ```
-Timestamp,BWZ Estimate (U),BWZ Target High BG (mg/dL),BWZ Target Low BG (mg/dL),BWZ Carb Ratio (grams),BWZ Insulin Sensitivity (mg/dL),BWZ Carb Input (grams),BWZ BG Input (mg/dL),BWZ Correction Estimate (U),BWZ Food Estimate (U),BWZ Active Insulin (U),Raw-Type,Raw-Values,Raw-Upload ID
+Timestamp - 7/1/06 08:24:43
+BWZ Estimate (U) - 0.7
+BWZ Target High BG (mg/dL) - 100
+BWZ Target Low BG (mg/dL) - 100
+BWZ Carb Ratio (grams) - 10
+BWZ Insulin Sensitivity (mg/dL) - 50 = 0x32 (byte 11)
+BWZ Carb Input (grams) - 7
+BWZ BG Input (mg/dL) - 103
+BWZ Correction Estimate (U) - 0
+BWZ Food Estimate (U) - 0.7
+BWZ Active Insulin (U) - 0.3
+Raw-Type - BolusWizardBolusEstimate
+Raw-Values - "BG_INPUT=103, CARB_INPUT=7
 
-7/1/06 08:24:43,0.7,100,100,10,50,7,103,0,0.7,0.3,BolusWizardBolusEstimate,"BG_INPUT=103, CARB_INPUT=7
 7/1/06 08:24:43,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=9773719100, AMOUNT=0.3
 7/1/06 08:24:43,,,,,,,,,,,BolusNormal,"AMOUNT=0.7, PROGRAMMED_AMOUNT=0.7
 2006-07-01T08:24:43 5b
@@ -70,9 +81,21 @@ Timestamp,BWZ Estimate (U),BWZ Target High BG (mg/dL),BWZ Target Low BG (mg/dL),
 ## 2006-07-01T08:26:55 6b
 
 ```
-Timestamp,BWZ Estimate (U),BWZ Target High BG (mg/dL),BWZ Target Low BG (mg/dL),BWZ Carb Ratio (grams),BWZ Insulin Sensitivity (mg/dL),BWZ Carb Input (grams),BWZ BG Input (mg/dL),BWZ Correction Estimate (U),BWZ Food Estimate (U),BWZ Active Insulin (U),Raw-Type,Raw-Values,Raw-Upload ID
+Timestamp - 7/1/06 08:26:55
+BWZ Estimate (U) - 9.0
+BWZ Target High BG (mg/dL) - 100
+BWZ Target Low BG (mg/dL) - 100
+BWZ Carb Ratio (grams) - 10
+BWZ Insulin Sensitivity (mg/dL) - 50
+BWZ Carb Input (grams) - 1
+BWZ BG Input (mg/dL) - 599
+BWZ Correction Estimate (U) - 9.9
+BWZ Food Estimate (U) - 0.1
+BWZ Active Insulin (U) - 1.0
+Raw-Type - BolusWizardBolusEstimate
+Raw-Values - "BG_INPUT=599, CARB_INPUT=1
+Raw-Upload ID
 
-7/1/06 08:26:55,9.0,100,100,10,50,1,599,9.9,0.1,1.0,BolusWizardBolusEstimate,"BG_INPUT=599, CARB_INPUT=1
 7/1/06 08:26:55,,,,,,,,,,,BolusNormal,"AMOUNT=9, PROGRAMMED_AMOUNT=9
 7/1/06 08:26:55,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=9773719097, AMOUNT=1
 2006-07-01T08:26:55 6b
