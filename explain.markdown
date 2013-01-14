@@ -1,11 +1,11 @@
-# /bin/bash 
-## cat /bin/bash
+# ./status-quo.sh carelink.ttyUSB0
+## cat ./status-quo.sh
 ```bash
 ```
 ## cat logs/explain.log
 OUT
 ## Observations
-Sat Jan 12 22:47:24 PST 2013
+Mon Jan 14 03:51:09 UTC 2013
 
 ## stick
 
@@ -14,24 +14,37 @@ Sat Jan 12 22:47:24 PST 2013
 ## pump
 
 
-## downloaded: 9
+## downloaded: 8
 
 ```
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1280]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[832]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[1664]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[832]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1280]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[512]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[64]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[832]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[832]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[896]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[768]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[1664]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[448]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[832]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[0]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[192]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[512]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[832]:
 ```
 
 
-## commands session:finished: 23
+## commands session:finished: 36
 
 ```
 INFO:session:finished executing:ReadBasalTemp:size[64]:data:{'duration': 0, 'rate': 1.9}
@@ -41,22 +54,35 @@ INFO:session:finished executing:ReadCurPageNumber:pages:8
 INFO:session:finished executing:ReadFirmwareVersion:size[64]:data:'VER 2.1A1.1'
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1280]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[832]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[1664]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[832]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1280]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[512]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[64]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[832]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[832]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[896]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[768]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[1664]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[448]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[832]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[0]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[192]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[512]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[832]:
 INFO:session:finished executing:ReadPumpID:size[64]:data:'208850'
 INFO:session:finished executing:ReadPumpModel:size[64]:data:'515'
 INFO:session:finished executing:ReadRadioCtrlACL:size[64]:data:['123456', '213546', '821650']
-INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:0.0
-INFO:session:finished executing:ReadRTC:size[64]:data:'2006-10-12T22:15:4'
+INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:164.9
+INFO:session:finished executing:ReadRTC:size[64]:data:'2006-10-13T19:19:23'
 INFO:session:finished executing:ReadSettings:size[64]:data:{'low_reservoir_warn_point': 20, 'keypad_lock_status': 0, 'maxBasal': 2, 'low_reservoir_warn_type': 0, 'insulinConcentration': 100, 'audio_bolus_enable': True, 'variable_bolus_enable': False, 'alarm': {'volume': 3, 'mode': 2}, 'rf_enable': True, 'block_enable': False, 'timeformat': 0, 'auto_off_duration_hrs': 0, 'audio_bolus_size': 2.0, 'selected_pattern': 2, 'patterns_enabled': True, 'maxBolus': 10.0, 'insulin_action_type': 5}
-INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 20.5, 'today': 20.1}
+INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 20.5, 'today': 17.3}
 ```
 
 howdy! pump runs were NOT OK
@@ -73,6 +99,38 @@ howdy! pump runs were NOT OK
 
 ```
 ```
-* NO CRC ERROR FOUND
+
+## CRC errors found, caught, recovered: 27
+
+```
+1333:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+1736:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+6134:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+6736:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+7535:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+7778:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+8021:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+8588:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+8831:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+9422:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+10319:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+10562:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+13295:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+13506:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+17001:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+17619:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+17862:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+18891:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+19509:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+19752:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+20385:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+20689:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+20932:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+21175:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+22134:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+22596:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+24681:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
+```
+
 * no nak found
 * NOT A CLEAN RUN

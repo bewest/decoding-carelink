@@ -1,5 +1,5 @@
 INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
-INFO:link:Link opened serial port: Serial<id=0x1183bd0, open=True>(port='/dev/ttyUSB0', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.5, xonxoff=False, rtscts=False, dsrdtr=False)
+INFO:link:Link opened serial port: Serial<id=0x1866990, open=True>(port='carelink.ttyUSB0', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.5, xonxoff=False, rtscts=False, dsrdtr=False)
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
@@ -68,7 +68,7 @@ INFO:root:usb.write.len: 3
 DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0xc1 0x2c 0x00 0x00 0x00    .U..,...
+0000   0x01 0x55 0x00 0xc0 0x2c 0x00 0x00 0x00    .U..,...
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -77,9 +77,9 @@ INFO:root:usb.read.raw:
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:193
-INFO:__main__:finished processing SignalStrength:0x06 0x00, 193
-INFO:__main__:we seem to have found a nice signal strength of: 193
+INFO:__main__:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:192
+INFO:__main__:finished processing SignalStrength:0x06 0x00, 192
+INFO:__main__:we seem to have found a nice signal strength of: 192
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
@@ -108,7 +108,7 @@ INFO:root:usb.write.len: 3
 DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0xc1 0x2c 0x00 0x00 0x00    .U..,...
+0000   0x01 0x55 0x00 0xbe 0x2c 0x00 0x00 0x00    .U..,...
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -117,9 +117,9 @@ INFO:root:usb.read.raw:
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:193
-INFO:__main__:finished processing SignalStrength:0x06 0x00, 193
-INFO:__main__:we seem to have found a nice signal strength of: 193
+INFO:__main__:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:190
+INFO:__main__:finished processing SignalStrength:0x06 0x00, 190
+INFO:__main__:we seem to have found a nice signal strength of: 190
 INFO:__main__:test fetching product info Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>]
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
@@ -154,7 +154,7 @@ INFO:root:usb.write.len: 3
 DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0xc2 0x2c 0x00 0x00 0x00    .U..,...
+0000   0x01 0x55 0x00 0xbd 0x2c 0x00 0x00 0x00    .U..,...
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -163,9 +163,9 @@ INFO:root:usb.read.raw:
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:194
-INFO:__main__:finished processing SignalStrength:0x06 0x00, 194
-INFO:__main__:we seem to have found a nice signal strength of: 194
+INFO:__main__:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:189
+INFO:__main__:finished processing SignalStrength:0x06 0x00, 189
+INFO:__main__:we seem to have found a nice signal strength of: 189
 INFO:__main__:at this point, we could issue remote commands to a medical
     device, let's inspect the interfaces
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
@@ -177,15 +177,15 @@ DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
 0000   0x01 0x55 0x00 0x00 0x00 0x00 0x00 0x00    .U......
-0008   0x00 0x00 0x08 0x00 0x00 0x00 0x08 0x00    ........
-0010   0x09 0x00 0x08 0x00 0x08 0x04 0x00 0x00    ........
+0008   0x00 0x00 0x20 0x00 0x00 0x00 0x20 0x00    .. ... .
+0010   0x21 0x00 0x20 0x00 0x20 0x04 0x00 0x00    !. . ...
 0018   0x05 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 8L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 8L, 'errors.crc': 0}
+INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 32L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 32L, 'errors.crc': 0}
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
@@ -214,8 +214,8 @@ INFO:__main__:{'radio': {'errors.crc': 0,
          'errors.naks': 0,
          'errors.sequence': 0,
          'errors.timeouts': 0,
-         'packets.received': 8L,
-         'packets.transmit': 8L}}
+         'packets.received': 32L,
+         'packets.transmit': 32L}}
 INFO:__main__:CLEAR BUFFERS
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
@@ -226,15 +226,15 @@ DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
 0000   0x01 0x55 0x00 0x00 0x00 0x00 0x00 0x00    .U......
-0008   0x00 0x00 0x0a 0x00 0x00 0x00 0x0a 0x00    ........
-0010   0x0b 0x00 0x0a 0x00 0x0a 0x04 0x00 0x00    ........
+0008   0x00 0x00 0x22 0x00 0x00 0x00 0x22 0x00    .."...".
+0010   0x23 0x00 0x22 0x00 0x22 0x04 0x00 0x00    #."."...
 0018   0x05 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0020   0x00 0x01 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 10L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 10L, 'errors.crc': 0}
+INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 34L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 34L, 'errors.crc': 0}
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
@@ -264,8 +264,8 @@ DEBUG:__main__:INTERFACE STATS:
          'errors.naks': 0,
          'errors.sequence': 0,
          'errors.timeouts': 0,
-         'packets.received': 10L,
-         'packets.transmit': 10L}}
+         'packets.received': 34L,
+         'packets.transmit': 34L}}
 INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:BEGIN :first poll
 DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>]>:STARTING POLL PHASE:attempt:0
 DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[None] poll_size[0] poll_i[0] command[<RadioStats:0x05 0x00:size(64)>]>:poll:attempt:0
@@ -422,73 +422,7 @@ INFO:__main__:LinkStatus:0x03:error:LinkStatus:error:True:reason:
 
 INFO:__main__:finished processing LinkStatus:0x03:error:LinkStatus:error:True:reason:, 0
 DEBUG:__main__:poll zero, sleeping in POLL, .100
-DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[7] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:7
-INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[7] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
-INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
-INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[7] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
-INFO:root:usb.write.len: 3
-0000   0x03 0x00 0x00                             ...
-DEBUG:__main__:sleeping 0.001
-INFO:root:usb.read.len: 64
-INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0x00 0x02 0x00 0x00 0x00    .U......
-0008   0x05 0x04 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0020   0x00 0x01 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:LinkStatus:0x03:error:LinkStatus:error:True:reason:
-
-INFO:__main__:finished processing LinkStatus:0x03:error:LinkStatus:error:True:reason:, 0
-DEBUG:__main__:poll zero, sleeping in POLL, .100
-DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[8] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:8
-INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[8] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
-INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
-INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[8] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
-INFO:root:usb.write.len: 3
-0000   0x03 0x00 0x00                             ...
-DEBUG:__main__:sleeping 0.001
-INFO:root:usb.read.len: 64
-INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0x00 0x02 0x00 0x00 0x00    .U......
-0008   0x05 0x04 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0020   0x00 0x01 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:LinkStatus:0x03:error:LinkStatus:error:True:reason:
-
-INFO:__main__:finished processing LinkStatus:0x03:error:LinkStatus:error:True:reason:, 0
-DEBUG:__main__:poll zero, sleeping in POLL, .100
-DEBUG:__main__:<Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[9] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]>:poll:attempt:9
-INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[9] command[<LinkStatus:0x03:error::size(64)>] processing LinkStatus:0x03:error:)
-INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
-INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[9] command[<LinkStatus:0x03:error::size(64)>] sending LinkStatus:0x03:error:)
-INFO:root:usb.write.len: 3
-0000   0x03 0x00 0x00                             ...
-DEBUG:__main__:sleeping 0.001
-INFO:root:usb.read.len: 64
-INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0x00 0x02 0x00 0x00 0x00    .U......
-0008   0x05 0x04 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0020   0x00 0x01 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:LinkStatus:0x03:error:LinkStatus:error:True:reason:
-
-INFO:__main__:finished processing LinkStatus:0x03:error:LinkStatus:error:True:reason:, 0
-DEBUG:__main__:poll zero, sleeping in POLL, .100
-INFO:__main__:Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[9] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]:STOP POLL after 10 attempts:size:0
+INFO:__main__:Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[6] command[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>]:STOP POLL after 7 attempts:size:0
 INFO:__main__:XXX:clear_buffer[attempt][0]:segments[0],total_segments[0]:raw[0]:END first poll 0:SHOULD DOWNLOAD :False
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
@@ -499,15 +433,15 @@ DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
 0000   0x01 0x55 0x00 0x00 0x00 0x00 0x00 0x00    .U......
-0008   0x00 0x00 0x16 0x00 0x00 0x00 0x16 0x00    ........
-0010   0x17 0x00 0x16 0x00 0x16 0x04 0x00 0x00    ........
+0008   0x00 0x00 0x2b 0x00 0x00 0x00 0x2b 0x00    ..+...+.
+0010   0x2c 0x00 0x2b 0x00 0x2b 0x04 0x00 0x00    ,.+.+...
 0018   0x05 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0020   0x00 0x01 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 22L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 22L, 'errors.crc': 0}
+INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 43L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 43L, 'errors.crc': 0}
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
@@ -537,8 +471,8 @@ INFO:__main__:XXX:clear_buffer[attempt][0]:END:no data:INTERFACE STATS
          'errors.naks': 0,
          'errors.sequence': 0,
          'errors.timeouts': 0,
-         'packets.received': 22L,
-         'packets.transmit': 22L}}
+         'packets.received': 43L,
+         'packets.transmit': 43L}}
 INFO:__main__:NO PENDING BUFFER
 INFO:__main__:DONE CLEARING BUFFERS
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
@@ -550,15 +484,15 @@ DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
 0000   0x01 0x55 0x00 0x00 0x00 0x00 0x00 0x00    .U......
-0008   0x00 0x00 0x18 0x00 0x00 0x00 0x18 0x00    ........
-0010   0x19 0x00 0x18 0x00 0x18 0x04 0x00 0x00    ........
+0008   0x00 0x00 0x2d 0x00 0x00 0x00 0x2d 0x00    ..-...-.
+0010   0x2e 0x00 0x2d 0x00 0x2d 0x04 0x00 0x00    ..-.-...
 0018   0x05 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0020   0x00 0x01 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 24L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 24L, 'errors.crc': 0}
+INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 45L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 45L, 'errors.crc': 0}
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[<LinkStatus:0x03:error:LinkStatus:error:True:reason::size(0)>] poll_size[0] poll_i[False] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
@@ -588,11 +522,11 @@ INFO:__main__:INTERFACE STATS:
          'errors.naks': 0,
          'errors.sequence': 0,
          'errors.timeouts': 0,
-         'packets.received': 24L,
-         'packets.transmit': 24L}}
+         'packets.received': 45L,
+         'packets.transmit': 45L}}
 INFO:__main__:howdy! all done looking at the stick
-python pump/stick.py /dev/ttyUSB0
-	elapsed 0:01.78
-	user 0.15
-	system 0.08
-	CPU 13% (0text+0data 42336max)k
+python pump/stick.py carelink.ttyUSB0
+	elapsed 0:02.44
+	user 0.14
+	system 0.04
+	CPU 7% (0text+0data 42912max)k
