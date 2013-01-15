@@ -268,5 +268,65 @@ function summarize_pump ( ) {
 
 }
 
+function print_csv( ) {
+   ./history/extractBolus.sh $* \
+     | cat | grep -v "Current"  \
+     | cut -d',' -f 16,15,17,1,2,3,4,5,6,7,8,9,10,11,12,13,14 \
+     | column -x -t -s , -n
+}
+
+function filter_log( ) {
+   ./history/extractBolus.sh $* \
+     | cat | grep -v "Current"  \
+     | cut -d',' -f 16,15,17,1,2,3,4,5,6,7,8,9,10,11,12,13,14
+}
+
+function print_pretty_csv( ) {
+  header=( )
+  _OLD_IFS=$IFS
+  filter_log $* | while read LINE ; do
+  WSP_IFS=$'\x20'$'\x09'$'\x0A'$'\x0D'
+  # read -a columns<<<$LINE
+  LINE=$(echo $LINE | tr -d '\n' | tr -s ' ')
+  IFS=","
+  columns=($LINE)
+  IFS=$WSP_IFS
+  # echo "number of columns" ${#columns[*]}
+  if [[ ${#header} = 0 ]] ; then
+    if [[ ${#columns[*]} = 17 ]] ; then
+      IFS=","
+      header=($LINE)
+      IFS=$WSP_IFS
+      # echo 'reset header'
+      echo ${header[@]}
+    else
+      echo 'unknown' $LINE
+    fi
+  else
+    # echo 'each value' ${#header[*]}
+    name=${columns[15]}
+    descr=${columns[16]}
+    timestamp=${columns[0]}
+    if [[ $name = "" ]] ; then
+      continue
+    fi
+    echo $timestamp $name
+    echo ${descr} | sed -e "s/ && /, /g" | fmt | sed -e "s/^/  /g"
+
+    for x in $(seq 0 $(expr ${#header[*]} - 1)) ; do
+      # echo $col
+      echo '    '$x: ${header[$x]}: ${columns[$x]}
+      # echo -n $x.
+    done
+    # echo 'done'
+    echo
+  fi
+
+  done
+
+  IFS=$WSP_IFS
+
+}
+
 #####
 # EOF

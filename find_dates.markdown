@@ -1,6 +1,7 @@
 
 # Find dates, try to find match records
 
+## begin csv
 ```
 Medtronic Diabetes CareLink Personal Data Export File (v1.0.1) 
 PATIENT INFO
@@ -27,23 +28,36 @@ Timestamp,Programmed Bolus Duration (hh:mm:ss),BWZ Estimate (U),BWZ Target High 
 
 ## 2006-07-01T08:23:47 5b
 
-```
-Timestamp,BWZ Estimate (U),BWZ Target High BG (mg/dL),BWZ Target Low BG (mg/dL),BWZ Carb Ratio (grams),BWZ Insulin Sensitivity (mg/dL),BWZ Carb Input (grams),BWZ BG Input (mg/dL),BWZ Correction Estimate (U),BWZ Food Estimate (U),BWZ Active Insulin (U),Raw-Type,Raw-Values,Raw-Upload ID
+match with our binary records
 
-7/1/06 08:23:47,,,,,,,,,,,BolusNormal,"AMOUNT=0.3, PROGRAMMED_AMOUNT=0.3
-Timestamp 7/1/06 08:23:47
-BWZ Estimate (U) 0.3 = 0x03 / 10 (byte 8 or 14 or 19 or 22 or 23)
-BWZ Target High BG (mg/dL) 100 = 0x64 (byte 2 or 12 or 20 )
-BWZ Target Low BG (mg/dL) 100 = 0x64 (byte 2 or 12 or 20 )
-BWZ Carb Ratio (grams) 10 = 0x0a (byte 10)
-BWZ Insulin Sensitivity (mg/dL) - 50 = 0x32 (byte 11)
-BWZ Carb Input (grams) 3 = 0x03 / 10 (byte 8 or 14 or 19 or 22 or 23)
-BWZ BG Input (mg/dL) 100 = 0x64 (byte 2 or 12 or 20 )
-BWZ Correction Estimate (U) 0
-BWZ Food Estimate (U) 0.3 = 0x03 / 10 (byte 8 or 14 or 19 or 22 or 23)
-BWZ Active Insulin (U) 0.0
-Raw-Type,Raw-Values,Raw-Upload ID
-BolusWizardBolusEstimate,"BG_INPUT=100, CARB_INPUT=3
+```
+
+7/1/06 08:23:47 BolusWizardBolusEstimate
+  "BG_INPUT=100, BG_UNITS=mg dl, CARB_INPUT=3, CARB_UNITS=grams,
+  CARB_RATIO=10, INSULIN_SENSITIVITY=50, BG_TARGET_LOW=100,
+  BG_TARGET_HIGH=100, BOLUS_ESTIMATE=0.3, CORRECTION_ESTIMATE=0,
+  FOOD_ESTIMATE=0.3, UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=0,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/1/06 08:23:47
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U): 0.3
+    6: BWZ Target High BG (mg/dL): 100
+    7: BWZ Target Low BG (mg/dL): 100
+    8: BWZ Carb Ratio (grams): 10
+    9: BWZ Insulin Sensitivity (mg/dL): 50
+    10: BWZ Carb Input (grams): 3
+    11: BWZ BG Input (mg/dL): 100
+    12: BWZ Correction Estimate (U): 0
+    13: BWZ Food Estimate (U): 0.3
+    14: BWZ Active Insulin (U): 0.0
+    15: Raw-Type: BolusWizardBolusEstimate
+    16: Raw-Values: "BG_INPUT=100 && BG_UNITS=mg dl && CARB_INPUT=3 && CARB_UNITS=grams && CARB_RATIO=10 && INSULIN_SENSITIVITY=50 && BG_TARGET_LOW=100 && BG_TARGET_HIGH=100 && BOLUS_ESTIMATE=0.3 && CORRECTION_ESTIMATE=0 && FOOD_ESTIMATE=0.3 && UNABSORBED_INSULIN_TOTAL=0 && UNABSORBED_INSULIN_COUNT=0 && ACTION_REQUESTOR=pump"
+
+
+
 2006-07-01T08:23:47 5b
 0000   0x5b 0x64 0x6f 0xd7 0x08 0x01 0x06 0x03    [do.....
 0008   0x50 0x0a 0x32 0x64 0x00 0x03 0x00 0x00    P.2d....
@@ -54,23 +68,80 @@ BolusWizardBolusEstimate,"BG_INPUT=100, CARB_INPUT=3
 
 ## 2006-07-01T08:24:43 5b
 
-```
-Timestamp - 7/1/06 08:24:43
-BWZ Estimate (U) - 0.7
-BWZ Target High BG (mg/dL) - 100
-BWZ Target Low BG (mg/dL) - 100
-BWZ Carb Ratio (grams) - 10
-BWZ Insulin Sensitivity (mg/dL) - 50 = 0x32 (byte 11)
-BWZ Carb Input (grams) - 7
-BWZ BG Input (mg/dL) - 103
-BWZ Correction Estimate (U) - 0
-BWZ Food Estimate (U) - 0.7
-BWZ Active Insulin (U) - 0.3
-Raw-Type - BolusWizardBolusEstimate
-Raw-Values - "BG_INPUT=103, CARB_INPUT=7
+match with our binary records
 
-7/1/06 08:24:43,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=9773719100, AMOUNT=0.3
-7/1/06 08:24:43,,,,,,,,,,,BolusNormal,"AMOUNT=0.7, PROGRAMMED_AMOUNT=0.7
+```
+7/1/06 08:24:43 BolusWizardBolusEstimate
+  "BG_INPUT=103, BG_UNITS=mg dl, CARB_INPUT=7, CARB_UNITS=grams,
+  CARB_RATIO=10, INSULIN_SENSITIVITY=50, BG_TARGET_LOW=100,
+  BG_TARGET_HIGH=100, BOLUS_ESTIMATE=0.7, CORRECTION_ESTIMATE=0,
+  FOOD_ESTIMATE=0.7, UNABSORBED_INSULIN_TOTAL=0.3,
+  UNABSORBED_INSULIN_COUNT=1, ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/1/06 08:24:43
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U): 0.7
+    6: BWZ Target High BG (mg/dL): 100
+    7: BWZ Target Low BG (mg/dL): 100
+    8: BWZ Carb Ratio (grams): 10
+    9: BWZ Insulin Sensitivity (mg/dL): 50
+    10: BWZ Carb Input (grams): 7
+    11: BWZ BG Input (mg/dL): 103
+    12: BWZ Correction Estimate (U): 0
+    13: BWZ Food Estimate (U): 0.7
+    14: BWZ Active Insulin (U): 0.3
+    15: Raw-Type: BolusWizardBolusEstimate
+    16: Raw-Values: "BG_INPUT=103 && BG_UNITS=mg dl && CARB_INPUT=7 && CARB_UNITS=grams && CARB_RATIO=10 && INSULIN_SENSITIVITY=50 && BG_TARGET_LOW=100 && BG_TARGET_HIGH=100 && BOLUS_ESTIMATE=0.7 && CORRECTION_ESTIMATE=0 && FOOD_ESTIMATE=0.7 && UNABSORBED_INSULIN_TOTAL=0.3 && UNABSORBED_INSULIN_COUNT=1 && ACTION_REQUESTOR=pump"
+
+7/1/06 08:24:43 UnabsorbedInsulin
+  "BOLUS_ESTIMATE_DATUM=9773719100, INDEX=0, AMOUNT=0.3, RECORD_AGE=1,
+  INSULIN_TYPE=null, INSULIN_ACTION_CURVE=300"
+    0: Timestamp: 7/1/06 08:24:43
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: UnabsorbedInsulin
+    16: Raw-Values: "BOLUS_ESTIMATE_DATUM=9773719100 && INDEX=0 && AMOUNT=0.3 && RECORD_AGE=1 && INSULIN_TYPE=null && INSULIN_ACTION_CURVE=300"
+
+7/1/06 08:24:43 BolusNormal
+  "AMOUNT=0.7, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.7,
+  ACTION_REQUESTOR=pump, ENABLE=false, IS_DUAL_COMPONENT=false,
+  UNABSORBED_INSULIN_TOTAL=null"
+    0: Timestamp: 7/1/06 08:24:43
+    1: Bolus Type: Normal
+    2: Bolus Volume Selected (U): 0.7
+    3: Bolus Volume Delivered (U): 0.7
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: BolusNormal
+    16: Raw-Values: "AMOUNT=0.7 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.7 && ACTION_REQUESTOR=pump && ENABLE=false && IS_DUAL_COMPONENT=false && UNABSORBED_INSULIN_TOTAL=null"
+
+
+
+
+
 2006-07-01T08:24:43 5b
 0000   0x5b 0x67 0x6b 0xd8 0x08 0x01 0x06 0x07    [gk.....
 0008   0x50 0x0a 0x32 0x64 0x00 0x07 0x00 0x00    P.2d....
@@ -80,44 +151,122 @@ Raw-Values - "BG_INPUT=103, CARB_INPUT=7
 
 ## 2006-07-01T08:26:55 6b
 
-```
-Timestamp - 7/1/06 08:26:55
-BWZ Estimate (U) - 9.0
-BWZ Target High BG (mg/dL) - 100
-BWZ Target Low BG (mg/dL) - 100
-BWZ Carb Ratio (grams) - 10
-BWZ Insulin Sensitivity (mg/dL) - 50
-BWZ Carb Input (grams) - 1
-BWZ BG Input (mg/dL) - 599
-BWZ Correction Estimate (U) - 9.9
-BWZ Food Estimate (U) - 0.1
-BWZ Active Insulin (U) - 1.0
-Raw-Type - BolusWizardBolusEstimate
-Raw-Values - "BG_INPUT=599, CARB_INPUT=1
-Raw-Upload ID
+match with our binary records
 
-7/1/06 08:26:55,,,,,,,,,,,BolusNormal,"AMOUNT=9, PROGRAMMED_AMOUNT=9
-7/1/06 08:26:55,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=9773719097, AMOUNT=1
+```
+7/1/06 08:26:55 BolusWizardBolusEstimate
+  "BG_INPUT=599, BG_UNITS=mg dl, CARB_INPUT=1, CARB_UNITS=grams,
+  CARB_RATIO=10, INSULIN_SENSITIVITY=50, BG_TARGET_LOW=100,
+  BG_TARGET_HIGH=100, BOLUS_ESTIMATE=9, CORRECTION_ESTIMATE=9.9,
+  FOOD_ESTIMATE=0.1, UNABSORBED_INSULIN_TOTAL=1, UNABSORBED_INSULIN_COUNT=1,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/1/06 08:26:55
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U): 9.0
+    6: BWZ Target High BG (mg/dL): 100
+    7: BWZ Target Low BG (mg/dL): 100
+    8: BWZ Carb Ratio (grams): 10
+    9: BWZ Insulin Sensitivity (mg/dL): 50
+    10: BWZ Carb Input (grams): 1
+    11: BWZ BG Input (mg/dL): 599
+    12: BWZ Correction Estimate (U): 9.9
+    13: BWZ Food Estimate (U): 0.1
+    14: BWZ Active Insulin (U): 1.0
+    15: Raw-Type: BolusWizardBolusEstimate
+    16: Raw-Values: "BG_INPUT=599 && BG_UNITS=mg dl && CARB_INPUT=1 && CARB_UNITS=grams && CARB_RATIO=10 && INSULIN_SENSITIVITY=50 && BG_TARGET_LOW=100 && BG_TARGET_HIGH=100 && BOLUS_ESTIMATE=9 && CORRECTION_ESTIMATE=9.9 && FOOD_ESTIMATE=0.1 && UNABSORBED_INSULIN_TOTAL=1 && UNABSORBED_INSULIN_COUNT=1 && ACTION_REQUESTOR=pump"
+
+7/1/06 08:26:55 BolusNormal
+  "AMOUNT=9, CONCENTRATION=null, PROGRAMMED_AMOUNT=9, ACTION_REQUESTOR=pump,
+  ENABLE=false, IS_DUAL_COMPONENT=false, UNABSORBED_INSULIN_TOTAL=null"
+    0: Timestamp: 7/1/06 08:26:55
+    1: Bolus Type: Normal
+    2: Bolus Volume Selected (U): 9.0
+    3: Bolus Volume Delivered (U): 9.0
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: BolusNormal
+    16: Raw-Values: "AMOUNT=9 && CONCENTRATION=null && PROGRAMMED_AMOUNT=9 && ACTION_REQUESTOR=pump && ENABLE=false && IS_DUAL_COMPONENT=false && UNABSORBED_INSULIN_TOTAL=null"
+
+7/1/06 08:26:55 UnabsorbedInsulin
+  "BOLUS_ESTIMATE_DATUM=9773719097, INDEX=0, AMOUNT=1, RECORD_AGE=3,
+  INSULIN_TYPE=null, INSULIN_ACTION_CURVE=300"
+    0: Timestamp: 7/1/06 08:26:55
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: UnabsorbedInsulin
+    16: Raw-Values: "BOLUS_ESTIMATE_DATUM=9773719097 && INDEX=0 && AMOUNT=1 && RECORD_AGE=3 && INSULIN_TYPE=null && INSULIN_ACTION_CURVE=300"
+
+
 2006-07-01T08:26:55 6b
 0000   0x6b 0xd8 0x28 0x01 0x06 0x5b 0x57 0x77    k.(..[Ww
 0008   0xda 0x08 0x01 0x06 0x01 0x52 0x0a 0x32    .....R.2
-0010   0x64 0x63 0x01                             dc.
+0010   0x64 0x63 0x01 0x00 0x00 0x0a 0x00 0x5a    dc.....Z
+0018   0x64 0x5c 0x05 0x28 0x03 0x44 0x01 0x5a    d\.(.D.Z
+0020   0x5a 0x00                                  Z.
+
+
+
 
 ```
 
 
 ## 2006-07-01T08:36:21 64
 
+match with our binary records
+
 ```
-Timestamp,BWZ Estimate (U),BWZ Target High BG (mg/dL),BWZ Target Low BG (mg/dL),BWZ Carb Ratio (grams),BWZ Insulin Sensitivity (mg/dL),BWZ Carb Input (grams),BWZ BG Input (mg/dL),BWZ Correction Estimate (U),BWZ Food Estimate (U),BWZ Active Insulin (U),Raw-Type,Raw-Values,Raw-Upload ID
 
 7/1/06 08:36:21,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=user_suspend, PRE_ENABLE=null"
-2006-07-01T08:36:21 64
-0000   0x64 0x5c 0x05 0x28 0x03 0x44 0x01 0x5a    d\.(.D.Z
-0008   0x5a 0x00 0x77 0xda 0x28 0x01 0x06 0x1e    Z.w.(...
-0010   0x00                                       .
+7/1/06 08:36:21 ChangeSuspendEnable
+  "ENABLE=user_suspend, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 7/1/06 08:36:21
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=user_suspend && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+
+2006-07-01T08:36:21 1e
+0000   0x1e 0x00                                  ..
 
 hmm... my csv runs out
+we know the previous event is only two bytes though, [0x1e 0x00]
 
 2006-07-01T08:36:43 1f
 0000   0x1f 0x00                                  ..

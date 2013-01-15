@@ -93,7 +93,7 @@ def opcode_read_ahead(opcode, fd):
     0x5b: 22,
     #0x64: 4,
     0x03: 4,
-    0x6b: 12,
+    0x6b: 27,
     # 0x00: 4,
     #0x1f: 22,
     #0x1f: 8,
