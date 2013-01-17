@@ -188,6 +188,15 @@ def parse_date(data):
     raise NotADate(e)
 
 
+def opcode_min_read(opcode):
+  TABLE = {
+    0x07: 30,
+    #0x1f: 8,
+  }
+  offset = TABLE.get(opcode, 1)
+  return offset
+
+
 def opcode_read_ahead(opcode, fd):
   TABLE = {
     0x5b: 22,
@@ -195,8 +204,8 @@ def opcode_read_ahead(opcode, fd):
     0x03: 4,
     #0x6b: 33,
     0x6b: 27,
-    # 0x00: 4,
-    # 0x07: 8,
+    0x45: 6,
+    #0x07: 10,
     #0x1f: 22,
     #0x1f: 8,
   }
@@ -213,10 +222,16 @@ def find_dates(stream):
   records = [ ]
   bolus = bytearray(stream.read(4))
   extra = bytearray( )
+  opcode = ''
   for B in iter(lambda: stream.read(1), ""):
-    bolus.append(B)
+    h, t = B[:1], B[1:]
+    bolus.append(h)
+    bolus.extend(t)
+    if len(bolus) < 6:
+      bolus.extend(stream.read(opcode_min_read(bolus[0])))
     try:
       date = parse_date(bolus[-5:])
+      opcode = bolus[0]
       if len(bolus) <= 5:
         raise NotADate('too short of a record')
       #sniff_invalid_opcode( bolus[0] )
@@ -224,7 +239,9 @@ def find_dates(stream):
       records.append( (date, bolus[:-5], bolus[-5:], extra) )
       bolus = bytearray(stream.read(4))
       extra = bytearray( )
+      opcode = ''
     except NotADate, e:
+      opcode = bolus[0]
       pass
   return records
 
