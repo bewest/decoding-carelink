@@ -17,6 +17,29 @@ your behalf:
 * alarms, etc...
 * current settings
 
+## Future work
+
+* collect more data
+
+### Help needed
+
+Documentation of protocol, decoders, etc...
+
+```bash
+# fork the repo on github
+# clone the repo
+$ git clone git@github.com/<yourname>/decoding-carelink.git
+$ cd decoding-carelink
+$ git checkout -b <yourname>
+$ ./insert.sh # will ask for sudo to configure usbserial for the stick
+# ./status-quo.sh [[<path>|/dev/ttyUSB0>] [<serial>|208850]] eg:
+$ ./status-quo.sh /dev/ttyUSB0 208850
+$ git commit -avm "here is my data <yourname>"
+$ git push -u origin <yourname>
+```
+Thanks!
+If you can include CSV export from carelink, it would be helpful.
+
 ### Decoding
 
 We know how to
@@ -25,19 +48,6 @@ and as a result we can find and parse most records now.
 
 And lining this up with the Carelink CSV exports reveals the nature of
 the contents for further analysis.
-
-## Future work
-
-* simplify the protocol driver (see cl2.py)
-  * fixing timing issues causing these problems:
-    * fix comstatus problem - sometimes comes back missing
-    * fix missing CRC - also comes back missing sometimes
-
-* build out more decoders, collect more data
-
-### Help needed
-
-Documentation of protocol, decoders, etc...
 
 ## Data
 

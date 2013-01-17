@@ -190,7 +190,7 @@ def parse_date(data):
 
 def opcode_min_read(opcode):
   TABLE = {
-    0x07: 30,
+    0x07: 29,
     #0x1f: 8,
   }
   offset = TABLE.get(opcode, 1)

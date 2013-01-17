@@ -1,0 +1,4864 @@
+### `print_pretty_csv Carelink-208850-2006-07-export.csv`
+
+```
+unknown Medtronic Diabetes CareLink Personal Data Export File (v1.0.1)
+unknown PATIENT INFO
+unknown
+unknown 9/20/06
+unknown DEVICE INFO
+unknown Time Changes: 2
+unknown
+unknown DEVICE DATA (825 records)
+unknown 9/1/06 00:44:29
+Timestamp Bolus Type Bolus Volume Selected (U) Bolus Volume Delivered (U) Programmed Bolus Duration (hh:mm:ss) BWZ Estimate (U) BWZ Target High BG (mg/dL) BWZ Target Low BG (mg/dL) BWZ Carb Ratio (grams) BWZ Insulin Sensitivity (mg/dL) BWZ Carb Input (grams) BWZ BG Input (mg/dL) BWZ Correction Estimate (U) BWZ Food Estimate (U) BWZ Active Insulin (U) Raw-Type Raw-Values
+7/1/06 00:00:00 ResultDailyTotal
+  "AMOUNT=27.65, CONCENTRATION=null"
+    0: Timestamp: 7/1/06 00:00:00
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ResultDailyTotal
+    16: Raw-Values: "AMOUNT=27.65 && CONCENTRATION=null"
+
+7/1/06 06:10:22 ChangeTimeDisplayFormat
+  "FORMAT=d24, ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/1/06 06:10:22
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeTimeDisplayFormat
+    16: Raw-Values: "FORMAT=d24 && ACTION_REQUESTOR=pump"
+
+7/1/06 06:10:32 ChangeTime
+  "NEW_TIME=1151741400000, ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/1/06 06:10:32
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeTime
+    16: Raw-Values: "NEW_TIME=1151741400000 && ACTION_REQUESTOR=pump"
+
+7/1/06 08:12:38 ChangeSuspendEnable
+  "ENABLE=user_suspend, ACTION_REQUESTOR=pump, PRE_ENABLE=null"
+    0: Timestamp: 7/1/06 08:12:38
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=user_suspend && ACTION_REQUESTOR=pump && PRE_ENABLE=null"
+
+7/1/06 08:13:08 ChangeSuspendEnable
+  "ENABLE=normal_pumping, ACTION_REQUESTOR=pump, PRE_ENABLE=null"
+    0: Timestamp: 7/1/06 08:13:08
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=normal_pumping && ACTION_REQUESTOR=pump && PRE_ENABLE=null"
+
+7/1/06 08:17:45 ChangeActiveBasalProfilePattern
+  "PATTERN_NAME=pattern a, OLD_PATTERN_NAME=pattern b,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/1/06 08:17:45
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeActiveBasalProfilePattern
+    16: Raw-Values: "PATTERN_NAME=pattern a && OLD_PATTERN_NAME=pattern b && ACTION_REQUESTOR=pump"
+
+7/1/06 08:18:05 ChangeActiveBasalProfilePattern
+  "PATTERN_NAME=pattern b, OLD_PATTERN_NAME=pattern a,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/1/06 08:18:05
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeActiveBasalProfilePattern
+    16: Raw-Values: "PATTERN_NAME=pattern b && OLD_PATTERN_NAME=pattern a && ACTION_REQUESTOR=pump"
+
+7/1/06 08:19:06 ChangeActiveBasalProfilePattern
+  "PATTERN_NAME=pattern a, OLD_PATTERN_NAME=pattern b,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/1/06 08:19:06
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeActiveBasalProfilePattern
+    16: Raw-Values: "PATTERN_NAME=pattern a && OLD_PATTERN_NAME=pattern b && ACTION_REQUESTOR=pump"
+
+7/1/06 08:20:08 ChangeActiveBasalProfilePattern
+  "PATTERN_NAME=pattern b, OLD_PATTERN_NAME=pattern a,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/1/06 08:20:08
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeActiveBasalProfilePattern
+    16: Raw-Values: "PATTERN_NAME=pattern b && OLD_PATTERN_NAME=pattern a && ACTION_REQUESTOR=pump"
+
+7/1/06 08:20:47 ChangeTimeDisplayFormat
+  "FORMAT=d12, ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/1/06 08:20:47
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeTimeDisplayFormat
+    16: Raw-Values: "FORMAT=d12 && ACTION_REQUESTOR=pump"
+
+7/1/06 08:21:13 ChangeTimeDisplayFormat
+  "FORMAT=d24, ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/1/06 08:21:13
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeTimeDisplayFormat
+    16: Raw-Values: "FORMAT=d24 && ACTION_REQUESTOR=pump"
+
+7/1/06 08:22:10 ChangeTimeDisplayFormat
+  "FORMAT=d12, ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/1/06 08:22:10
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeTimeDisplayFormat
+    16: Raw-Values: "FORMAT=d12 && ACTION_REQUESTOR=pump"
+
+7/1/06 08:23:47 BolusNormal
+  "AMOUNT=0.3, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.3,
+  ACTION_REQUESTOR=pump, ENABLE=false, IS_DUAL_COMPONENT=false,
+  UNABSORBED_INSULIN_TOTAL=null"
+    0: Timestamp: 7/1/06 08:23:47
+    1: Bolus Type: Normal
+    2: Bolus Volume Selected (U): 0.3
+    3: Bolus Volume Delivered (U): 0.3
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: BolusNormal
+    16: Raw-Values: "AMOUNT=0.3 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.3 && ACTION_REQUESTOR=pump && ENABLE=false && IS_DUAL_COMPONENT=false && UNABSORBED_INSULIN_TOTAL=null"
+
+7/1/06 08:23:47 BolusWizardBolusEstimate
+  "BG_INPUT=100, BG_UNITS=mg dl, CARB_INPUT=3, CARB_UNITS=grams,
+  CARB_RATIO=10, INSULIN_SENSITIVITY=50, BG_TARGET_LOW=100,
+  BG_TARGET_HIGH=100, BOLUS_ESTIMATE=0.3, CORRECTION_ESTIMATE=0,
+  FOOD_ESTIMATE=0.3, UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=0,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/1/06 08:23:47
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U): 0.3
+    6: BWZ Target High BG (mg/dL): 100
+    7: BWZ Target Low BG (mg/dL): 100
+    8: BWZ Carb Ratio (grams): 10
+    9: BWZ Insulin Sensitivity (mg/dL): 50
+    10: BWZ Carb Input (grams): 3
+    11: BWZ BG Input (mg/dL): 100
+    12: BWZ Correction Estimate (U): 0
+    13: BWZ Food Estimate (U): 0.3
+    14: BWZ Active Insulin (U): 0.0
+    15: Raw-Type: BolusWizardBolusEstimate
+    16: Raw-Values: "BG_INPUT=100 && BG_UNITS=mg dl && CARB_INPUT=3 && CARB_UNITS=grams && CARB_RATIO=10 && INSULIN_SENSITIVITY=50 && BG_TARGET_LOW=100 && BG_TARGET_HIGH=100 && BOLUS_ESTIMATE=0.3 && CORRECTION_ESTIMATE=0 && FOOD_ESTIMATE=0.3 && UNABSORBED_INSULIN_TOTAL=0 && UNABSORBED_INSULIN_COUNT=0 && ACTION_REQUESTOR=pump"
+
+7/1/06 08:24:43 BolusWizardBolusEstimate
+  "BG_INPUT=103, BG_UNITS=mg dl, CARB_INPUT=7, CARB_UNITS=grams,
+  CARB_RATIO=10, INSULIN_SENSITIVITY=50, BG_TARGET_LOW=100,
+  BG_TARGET_HIGH=100, BOLUS_ESTIMATE=0.7, CORRECTION_ESTIMATE=0,
+  FOOD_ESTIMATE=0.7, UNABSORBED_INSULIN_TOTAL=0.3,
+  UNABSORBED_INSULIN_COUNT=1, ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/1/06 08:24:43
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U): 0.7
+    6: BWZ Target High BG (mg/dL): 100
+    7: BWZ Target Low BG (mg/dL): 100
+    8: BWZ Carb Ratio (grams): 10
+    9: BWZ Insulin Sensitivity (mg/dL): 50
+    10: BWZ Carb Input (grams): 7
+    11: BWZ BG Input (mg/dL): 103
+    12: BWZ Correction Estimate (U): 0
+    13: BWZ Food Estimate (U): 0.7
+    14: BWZ Active Insulin (U): 0.3
+    15: Raw-Type: BolusWizardBolusEstimate
+    16: Raw-Values: "BG_INPUT=103 && BG_UNITS=mg dl && CARB_INPUT=7 && CARB_UNITS=grams && CARB_RATIO=10 && INSULIN_SENSITIVITY=50 && BG_TARGET_LOW=100 && BG_TARGET_HIGH=100 && BOLUS_ESTIMATE=0.7 && CORRECTION_ESTIMATE=0 && FOOD_ESTIMATE=0.7 && UNABSORBED_INSULIN_TOTAL=0.3 && UNABSORBED_INSULIN_COUNT=1 && ACTION_REQUESTOR=pump"
+
+7/1/06 08:24:43 UnabsorbedInsulin
+  "BOLUS_ESTIMATE_DATUM=9773719100, INDEX=0, AMOUNT=0.3, RECORD_AGE=1,
+  INSULIN_TYPE=null, INSULIN_ACTION_CURVE=300"
+    0: Timestamp: 7/1/06 08:24:43
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: UnabsorbedInsulin
+    16: Raw-Values: "BOLUS_ESTIMATE_DATUM=9773719100 && INDEX=0 && AMOUNT=0.3 && RECORD_AGE=1 && INSULIN_TYPE=null && INSULIN_ACTION_CURVE=300"
+
+7/1/06 08:24:43 BolusNormal
+  "AMOUNT=0.7, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.7,
+  ACTION_REQUESTOR=pump, ENABLE=false, IS_DUAL_COMPONENT=false,
+  UNABSORBED_INSULIN_TOTAL=null"
+    0: Timestamp: 7/1/06 08:24:43
+    1: Bolus Type: Normal
+    2: Bolus Volume Selected (U): 0.7
+    3: Bolus Volume Delivered (U): 0.7
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: BolusNormal
+    16: Raw-Values: "AMOUNT=0.7 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.7 && ACTION_REQUESTOR=pump && ENABLE=false && IS_DUAL_COMPONENT=false && UNABSORBED_INSULIN_TOTAL=null"
+
+7/1/06 08:26:55 BolusWizardBolusEstimate
+  "BG_INPUT=599, BG_UNITS=mg dl, CARB_INPUT=1, CARB_UNITS=grams,
+  CARB_RATIO=10, INSULIN_SENSITIVITY=50, BG_TARGET_LOW=100,
+  BG_TARGET_HIGH=100, BOLUS_ESTIMATE=9, CORRECTION_ESTIMATE=9.9,
+  FOOD_ESTIMATE=0.1, UNABSORBED_INSULIN_TOTAL=1, UNABSORBED_INSULIN_COUNT=1,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/1/06 08:26:55
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U): 9.0
+    6: BWZ Target High BG (mg/dL): 100
+    7: BWZ Target Low BG (mg/dL): 100
+    8: BWZ Carb Ratio (grams): 10
+    9: BWZ Insulin Sensitivity (mg/dL): 50
+    10: BWZ Carb Input (grams): 1
+    11: BWZ BG Input (mg/dL): 599
+    12: BWZ Correction Estimate (U): 9.9
+    13: BWZ Food Estimate (U): 0.1
+    14: BWZ Active Insulin (U): 1.0
+    15: Raw-Type: BolusWizardBolusEstimate
+    16: Raw-Values: "BG_INPUT=599 && BG_UNITS=mg dl && CARB_INPUT=1 && CARB_UNITS=grams && CARB_RATIO=10 && INSULIN_SENSITIVITY=50 && BG_TARGET_LOW=100 && BG_TARGET_HIGH=100 && BOLUS_ESTIMATE=9 && CORRECTION_ESTIMATE=9.9 && FOOD_ESTIMATE=0.1 && UNABSORBED_INSULIN_TOTAL=1 && UNABSORBED_INSULIN_COUNT=1 && ACTION_REQUESTOR=pump"
+
+7/1/06 08:26:55 BolusNormal
+  "AMOUNT=9, CONCENTRATION=null, PROGRAMMED_AMOUNT=9, ACTION_REQUESTOR=pump,
+  ENABLE=false, IS_DUAL_COMPONENT=false, UNABSORBED_INSULIN_TOTAL=null"
+    0: Timestamp: 7/1/06 08:26:55
+    1: Bolus Type: Normal
+    2: Bolus Volume Selected (U): 9.0
+    3: Bolus Volume Delivered (U): 9.0
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: BolusNormal
+    16: Raw-Values: "AMOUNT=9 && CONCENTRATION=null && PROGRAMMED_AMOUNT=9 && ACTION_REQUESTOR=pump && ENABLE=false && IS_DUAL_COMPONENT=false && UNABSORBED_INSULIN_TOTAL=null"
+
+7/1/06 08:26:55 UnabsorbedInsulin
+  "BOLUS_ESTIMATE_DATUM=9773719097, INDEX=0, AMOUNT=1, RECORD_AGE=3,
+  INSULIN_TYPE=null, INSULIN_ACTION_CURVE=300"
+    0: Timestamp: 7/1/06 08:26:55
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: UnabsorbedInsulin
+    16: Raw-Values: "BOLUS_ESTIMATE_DATUM=9773719097 && INDEX=0 && AMOUNT=1 && RECORD_AGE=3 && INSULIN_TYPE=null && INSULIN_ACTION_CURVE=300"
+
+7/1/06 08:36:21 ChangeSuspendEnable
+  "ENABLE=user_suspend, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 7/1/06 08:36:21
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=user_suspend && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+7/1/06 08:36:43 ChangeSuspendEnable
+  "ENABLE=normal_pumping, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 7/1/06 08:36:43
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=normal_pumping && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+7/2/06 00:00:00 ResultDailyTotal
+  "AMOUNT=20.45, CONCENTRATION=null"
+    0: Timestamp: 7/2/06 00:00:00
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ResultDailyTotal
+    16: Raw-Values: "AMOUNT=20.45 && CONCENTRATION=null"
+
+7/2/06 18:29:32 ChangeSuspendEnable
+  "ENABLE=user_suspend, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 7/2/06 18:29:32
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=user_suspend && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+7/2/06 18:30:24 ChangeSuspendEnable
+  "ENABLE=normal_pumping, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 7/2/06 18:30:24
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=normal_pumping && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+7/2/06 18:37:23 ChangeSuspendEnable
+  "ENABLE=user_suspend, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 7/2/06 18:37:23
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=user_suspend && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+7/2/06 18:37:41 ChangeSuspendEnable
+  "ENABLE=normal_pumping, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 7/2/06 18:37:41
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=normal_pumping && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+7/2/06 18:57:35 ChangeSuspendEnable
+  "ENABLE=user_suspend, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 7/2/06 18:57:35
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=user_suspend && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+7/2/06 18:58:58 ChangeSuspendEnable
+  "ENABLE=normal_pumping, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 7/2/06 18:58:58
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=normal_pumping && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+7/3/06 00:00:00 ResultDailyTotal
+  "AMOUNT=20.55, CONCENTRATION=null"
+    0: Timestamp: 7/3/06 00:00:00
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ResultDailyTotal
+    16: Raw-Values: "AMOUNT=20.55 && CONCENTRATION=null"
+
+7/3/06 10:00:14 ChangeSuspendEnable
+  "ENABLE=user_suspend, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 7/3/06 10:00:14
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=user_suspend && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+7/3/06 10:00:32 ChangeSuspendEnable
+  "ENABLE=normal_pumping, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 7/3/06 10:00:32
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=normal_pumping && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+7/4/06 00:00:00 ResultDailyTotal
+  "AMOUNT=20.55, CONCENTRATION=null"
+    0: Timestamp: 7/4/06 00:00:00
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ResultDailyTotal
+    16: Raw-Values: "AMOUNT=20.55 && CONCENTRATION=null"
+
+7/5/06 00:00:00 ResultDailyTotal
+  "AMOUNT=20.55, CONCENTRATION=null"
+    0: Timestamp: 7/5/06 00:00:00
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ResultDailyTotal
+    16: Raw-Values: "AMOUNT=20.55 && CONCENTRATION=null"
+
+7/6/06 00:00:00 ResultDailyTotal
+  "AMOUNT=20.55, CONCENTRATION=null"
+    0: Timestamp: 7/6/06 00:00:00
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ResultDailyTotal
+    16: Raw-Values: "AMOUNT=20.55 && CONCENTRATION=null"
+
+7/6/06 15:12:00 JournalEntryPumpLowReservoir
+  "AMOUNT=20, ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/6/06 15:12:00
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: JournalEntryPumpLowReservoir
+    16: Raw-Values: "AMOUNT=20 && ACTION_REQUESTOR=pump"
+
+7/7/06 00:00:00 ResultDailyTotal
+  "AMOUNT=21.7, CONCENTRATION=null"
+    0: Timestamp: 7/7/06 00:00:00
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ResultDailyTotal
+    16: Raw-Values: "AMOUNT=21.7 && CONCENTRATION=null"
+
+7/7/06 02:30:01 JournalEntryPumpLowReservoir
+  "AMOUNT=10, ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/7/06 02:30:01
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: JournalEntryPumpLowReservoir
+    16: Raw-Values: "AMOUNT=10 && ACTION_REQUESTOR=pump"
+
+7/7/06 15:05:03 BolusWizardBolusEstimate
+  "BG_INPUT=117, BG_UNITS=mg dl, CARB_INPUT=3, CARB_UNITS=grams,
+  CARB_RATIO=10, INSULIN_SENSITIVITY=50, BG_TARGET_LOW=100,
+  BG_TARGET_HIGH=100, BOLUS_ESTIMATE=0.6, CORRECTION_ESTIMATE=0.3,
+  FOOD_ESTIMATE=0.3, UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=0,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/7/06 15:05:03
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U): 0.6
+    6: BWZ Target High BG (mg/dL): 100
+    7: BWZ Target Low BG (mg/dL): 100
+    8: BWZ Carb Ratio (grams): 10
+    9: BWZ Insulin Sensitivity (mg/dL): 50
+    10: BWZ Carb Input (grams): 3
+    11: BWZ BG Input (mg/dL): 117
+    12: BWZ Correction Estimate (U): 0.3
+    13: BWZ Food Estimate (U): 0.3
+    14: BWZ Active Insulin (U): 0.0
+    15: Raw-Type: BolusWizardBolusEstimate
+    16: Raw-Values: "BG_INPUT=117 && BG_UNITS=mg dl && CARB_INPUT=3 && CARB_UNITS=grams && CARB_RATIO=10 && INSULIN_SENSITIVITY=50 && BG_TARGET_LOW=100 && BG_TARGET_HIGH=100 && BOLUS_ESTIMATE=0.6 && CORRECTION_ESTIMATE=0.3 && FOOD_ESTIMATE=0.3 && UNABSORBED_INSULIN_TOTAL=0 && UNABSORBED_INSULIN_COUNT=0 && ACTION_REQUESTOR=pump"
+
+7/7/06 15:05:03 BolusNormal
+  "AMOUNT=0.6, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.6,
+  ACTION_REQUESTOR=pump, ENABLE=false, IS_DUAL_COMPONENT=false,
+  UNABSORBED_INSULIN_TOTAL=null"
+    0: Timestamp: 7/7/06 15:05:03
+    1: Bolus Type: Normal
+    2: Bolus Volume Selected (U): 0.6
+    3: Bolus Volume Delivered (U): 0.6
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: BolusNormal
+    16: Raw-Values: "AMOUNT=0.6 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.6 && ACTION_REQUESTOR=pump && ENABLE=false && IS_DUAL_COMPONENT=false && UNABSORBED_INSULIN_TOTAL=null"
+
+7/7/06 16:14:05 UnabsorbedInsulin
+  "BOLUS_ESTIMATE_DATUM=9799981764, INDEX=0, AMOUNT=0.6, RECORD_AGE=71,
+  INSULIN_TYPE=null, INSULIN_ACTION_CURVE=300"
+    0: Timestamp: 7/7/06 16:14:05
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: UnabsorbedInsulin
+    16: Raw-Values: "BOLUS_ESTIMATE_DATUM=9799981764 && INDEX=0 && AMOUNT=0.6 && RECORD_AGE=71 && INSULIN_TYPE=null && INSULIN_ACTION_CURVE=300"
+
+7/7/06 16:14:05 BolusWizardBolusEstimate
+  "BG_INPUT=117, BG_UNITS=mg dl, CARB_INPUT=6, CARB_UNITS=grams,
+  CARB_RATIO=10, INSULIN_SENSITIVITY=50, BG_TARGET_LOW=100,
+  BG_TARGET_HIGH=100, BOLUS_ESTIMATE=0.6, CORRECTION_ESTIMATE=0.3,
+  FOOD_ESTIMATE=0.6, UNABSORBED_INSULIN_TOTAL=0.5,
+  UNABSORBED_INSULIN_COUNT=1, ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/7/06 16:14:05
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U): 0.6
+    6: BWZ Target High BG (mg/dL): 100
+    7: BWZ Target Low BG (mg/dL): 100
+    8: BWZ Carb Ratio (grams): 10
+    9: BWZ Insulin Sensitivity (mg/dL): 50
+    10: BWZ Carb Input (grams): 6
+    11: BWZ BG Input (mg/dL): 117
+    12: BWZ Correction Estimate (U): 0.3
+    13: BWZ Food Estimate (U): 0.6
+    14: BWZ Active Insulin (U): 0.5
+    15: Raw-Type: BolusWizardBolusEstimate
+    16: Raw-Values: "BG_INPUT=117 && BG_UNITS=mg dl && CARB_INPUT=6 && CARB_UNITS=grams && CARB_RATIO=10 && INSULIN_SENSITIVITY=50 && BG_TARGET_LOW=100 && BG_TARGET_HIGH=100 && BOLUS_ESTIMATE=0.6 && CORRECTION_ESTIMATE=0.3 && FOOD_ESTIMATE=0.6 && UNABSORBED_INSULIN_TOTAL=0.5 && UNABSORBED_INSULIN_COUNT=1 && ACTION_REQUESTOR=pump"
+
+7/7/06 16:14:05 BolusNormal
+  "AMOUNT=0.6, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.6,
+  ACTION_REQUESTOR=pump, ENABLE=false, IS_DUAL_COMPONENT=false,
+  UNABSORBED_INSULIN_TOTAL=null"
+    0: Timestamp: 7/7/06 16:14:05
+    1: Bolus Type: Normal
+    2: Bolus Volume Selected (U): 0.6
+    3: Bolus Volume Delivered (U): 0.6
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: BolusNormal
+    16: Raw-Values: "AMOUNT=0.6 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.6 && ACTION_REQUESTOR=pump && ENABLE=false && IS_DUAL_COMPONENT=false && UNABSORBED_INSULIN_TOTAL=null"
+
+7/7/06 16:47:57 Rewind
+  ACTION_REQUESTOR=pump
+    0: Timestamp: 7/7/06 16:47:57
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: Rewind
+    16: Raw-Values: ACTION_REQUESTOR=pump
+
+7/7/06 16:48:52 Prime
+  "AMOUNT=1.9, CONCENTRATION=null, PROGRAMMED_AMOUNT=0, PRIME_TYPE=manual,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/7/06 16:48:52
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: Prime
+    16: Raw-Values: "AMOUNT=1.9 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0 && PRIME_TYPE=manual && ACTION_REQUESTOR=pump"
+
+7/7/06 16:49:12 Prime
+  "AMOUNT=0.3, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.3, PRIME_TYPE=fixed,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/7/06 16:49:12
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: Prime
+    16: Raw-Values: "AMOUNT=0.3 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.3 && PRIME_TYPE=fixed && ACTION_REQUESTOR=pump"
+
+7/7/06 17:10:38 Prime
+  "AMOUNT=0.3, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.3, PRIME_TYPE=fixed,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/7/06 17:10:38
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: Prime
+    16: Raw-Values: "AMOUNT=0.3 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.3 && PRIME_TYPE=fixed && ACTION_REQUESTOR=pump"
+
+7/7/06 17:28:51 Prime
+  "AMOUNT=0.3, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.3, PRIME_TYPE=fixed,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/7/06 17:28:51
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: Prime
+    16: Raw-Values: "AMOUNT=0.3 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.3 && PRIME_TYPE=fixed && ACTION_REQUESTOR=pump"
+
+7/7/06 17:41:14 Prime
+  "AMOUNT=0.3, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.3, PRIME_TYPE=fixed,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/7/06 17:41:14
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: Prime
+    16: Raw-Values: "AMOUNT=0.3 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.3 && PRIME_TYPE=fixed && ACTION_REQUESTOR=pump"
+
+7/7/06 17:57:02 Prime
+  "AMOUNT=0.3, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.3, PRIME_TYPE=fixed,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/7/06 17:57:02
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: Prime
+    16: Raw-Values: "AMOUNT=0.3 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.3 && PRIME_TYPE=fixed && ACTION_REQUESTOR=pump"
+
+7/7/06 18:02:05 Prime
+  "AMOUNT=0.3, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.3, PRIME_TYPE=fixed,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/7/06 18:02:05
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: Prime
+    16: Raw-Values: "AMOUNT=0.3 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.3 && PRIME_TYPE=fixed && ACTION_REQUESTOR=pump"
+
+7/7/06 18:22:32 ChangeSuspendEnable
+  "ENABLE=user_suspend, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 7/7/06 18:22:32
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=user_suspend && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+7/7/06 18:22:51 ChangeSuspendEnable
+  "ENABLE=normal_pumping, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 7/7/06 18:22:51
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=normal_pumping && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+7/8/06 00:00:00 ResultDailyTotal
+  "AMOUNT=2.2, CONCENTRATION=null"
+    0: Timestamp: 7/8/06 00:00:00
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ResultDailyTotal
+    16: Raw-Values: "AMOUNT=2.2 && CONCENTRATION=null"
+
+7/8/06 05:22:49 Prime
+  "AMOUNT=0.3, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.3, PRIME_TYPE=fixed,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/8/06 05:22:49
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: Prime
+    16: Raw-Values: "AMOUNT=0.3 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.3 && PRIME_TYPE=fixed && ACTION_REQUESTOR=pump"
+
+7/8/06 05:49:07 ChangeSuspendEnable
+  "ENABLE=user_suspend, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 7/8/06 05:49:07
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=user_suspend && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+7/8/06 05:49:26 ChangeSuspendEnable
+  "ENABLE=normal_pumping, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 7/8/06 05:49:26
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=normal_pumping && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+7/8/06 07:11:37 ChangeTimeDisplayFormat
+  "FORMAT=d12, ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/8/06 07:11:37
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeTimeDisplayFormat
+    16: Raw-Values: "FORMAT=d12 && ACTION_REQUESTOR=pump"
+
+7/8/06 07:12:12 ChangeTime
+  "NEW_TIME=1157067000000, ACTION_REQUESTOR=pump"
+    0: Timestamp: 7/8/06 07:12:12
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeTime
+    16: Raw-Values: "NEW_TIME=1157067000000 && ACTION_REQUESTOR=pump"
+
+8/31/06 00:00:00 ResultDailyTotal
+  "AMOUNT=0.15, CONCENTRATION=null"
+    0: Timestamp: 8/31/06 00:00:00
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ResultDailyTotal
+    16: Raw-Values: "AMOUNT=0.15 && CONCENTRATION=null"
+
+8/31/06 23:33:28 Prime
+  "AMOUNT=0.3, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.3, PRIME_TYPE=fixed,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 8/31/06 23:33:28
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: Prime
+    16: Raw-Values: "AMOUNT=0.3 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.3 && PRIME_TYPE=fixed && ACTION_REQUESTOR=pump"
+
+8/31/06 23:33:54 Prime
+  "AMOUNT=0.5, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.5, PRIME_TYPE=fixed,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 8/31/06 23:33:54
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: Prime
+    16: Raw-Values: "AMOUNT=0.5 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.5 && PRIME_TYPE=fixed && ACTION_REQUESTOR=pump"
+
+8/31/06 23:34:28 Prime
+  "AMOUNT=0.3, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.3, PRIME_TYPE=fixed,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 8/31/06 23:34:28
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: Prime
+    16: Raw-Values: "AMOUNT=0.3 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.3 && PRIME_TYPE=fixed && ACTION_REQUESTOR=pump"
+
+9/1/06 00:12:41 Prime
+  "AMOUNT=0.3, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.3, PRIME_TYPE=fixed,
+  ACTION_REQUESTOR=pump"
+    0: Timestamp: 9/1/06 00:12:41
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: Prime
+    16: Raw-Values: "AMOUNT=0.3 && CONCENTRATION=null && PROGRAMMED_AMOUNT=0.3 && PRIME_TYPE=fixed && ACTION_REQUESTOR=pump"
+
+9/1/06 00:44:29 ChangeSuspendEnable
+  "ENABLE=user_suspend, ACTION_REQUESTOR=rf_diagnostic, PRE_ENABLE=null"
+    0: Timestamp: 9/1/06 00:44:29
+    1: Bolus Type:
+    2: Bolus Volume Selected (U):
+    3: Bolus Volume Delivered (U):
+    4: Programmed Bolus Duration (hh:mm:ss):
+    5: BWZ Estimate (U):
+    6: BWZ Target High BG (mg/dL):
+    7: BWZ Target Low BG (mg/dL):
+    8: BWZ Carb Ratio (grams):
+    9: BWZ Insulin Sensitivity (mg/dL):
+    10: BWZ Carb Input (grams):
+    11: BWZ BG Input (mg/dL):
+    12: BWZ Correction Estimate (U):
+    13: BWZ Food Estimate (U):
+    14: BWZ Active Insulin (U):
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=user_suspend && ACTION_REQUESTOR=rf_diagnostic && PRE_ENABLE=null"
+
+```
+
+## pages
+
+```bash
+python list_dates.py logs/ReadHistoryData-page-0.data logs/ReadHistoryData-page-1.data logs/ReadHistoryData-page-2.data logs/ReadHistoryData-page-3.data logs/ReadHistoryData-page-4.data logs/ReadHistoryData-page-5.data logs/ReadHistoryData-page-6.data logs/ReadHistoryData-page-7.data logs/ReadHistoryData-page-8.data
+```
+
+### logs/ReadHistoryData-page-0.data: 13 records
+```
+RECORD 0: 2006-10-04T08:00:19 0x07
+  hex (47)
+0000   0x07 0x00 0x00 0x03 0x36 0xa3 0x06 0x6c    ....6..l
+0008   0xa3 0x06 0x05 0x0c 0x00 0xe8 0x00 0x00    ........
+0010   0x00 0x00 0x03 0x36 0x03 0x36 0x64 0x00    ...6.6d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x21 0x00         .....!.
+  decimal
+          7    0    0    3   54  163    6  108
+        163    6    5   12    0  232    0    0
+          0    0    3   54    3   54  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0   33    0
+  datetime
+0000   0x93 0x80 0x08 0x04 0x06                   .....
+  extra(0) None
+
+RECORD 1: 2003-08-06T04:40:11 0x03
+  hex (6)
+0000   0x03 0x00 0x00 0x00 0x0d 0x95              ......
+  decimal
+          3    0    0    0   13  149
+  datetime
+0000   0x8b 0x28 0x04 0x06 0x03                   .(...
+  extra(4) 
+0000   0x00 0x03 0x00 0x03                        ....
+          0    3    0    3
+
+RECORD 2: 2007-08-06T04:08:11 0x9e
+  hex (1)
+0000   0x9e                                       .
+  decimal
+        158
+  datetime
+0000   0x8b 0x08 0x04 0x06 0x07                   .....
+  extra(0) None
+
+RECORD 3: 2012-06-05T06:36:44 0x00
+  hex (6)
+0000   0x00 0x00 0x03 0x30 0xa4 0x06              ...0..
+  decimal
+          0    0    3   48  164    6
+  datetime
+0000   0x6c 0xa4 0x06 0x05 0x0c                   l....
+  extra(0) None
+
+RECORD 4: 2012-06-05T06:37:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x03 0x30    .......0
+0008   0x03 0x30 0x64 0x00 0x00 0x00 0x00 0x00    .0d.....
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x03 0x36 0xa5 0x06    .....6..
+  decimal
+          0  232    0    0    0    0    3   48
+          3   48  100    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    3   54  165    6
+  datetime
+0000   0x6c 0xa5 0x06 0x05 0x0c                   l....
+  extra(0) None
+
+RECORD 5: 2012-06-05T06:38:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x03 0x36    .......6
+0008   0x03 0x36 0x64 0x00 0x00 0x00 0x00 0x00    .6d.....
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x03 0x36 0xa6 0x06    .....6..
+  decimal
+          0  232    0    0    0    0    3   54
+          3   54  100    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    3   54  166    6
+  datetime
+0000   0x6c 0xa6 0x06 0x05 0x0c                   l....
+  extra(0) None
+
+RECORD 6: 2006-10-07T23:01:00 0x00
+  hex (35)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x03 0x36    .......6
+0008   0x03 0x36 0x64 0x00 0x00 0x00 0x00 0x00    .6d.....
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x19 0x00                             ...
+  decimal
+          0  232    0    0    0    0    3   54
+          3   54  100    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0   25    0
+  datetime
+0000   0x80 0x81 0x17 0x07 0x06                   .....
+  extra(0) None
+
+RECORD 7: 2006-10-08T20:31:03 0x07
+  hex (47)
+0000   0x07 0x00 0x00 0x03 0x36 0xa7 0x06 0x6c    ....6..l
+0008   0xa7 0x06 0x05 0x0c 0x00 0xe8 0x00 0x00    ........
+0010   0x00 0x00 0x03 0x36 0x03 0x36 0x64 0x00    ...6.6d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x1a 0x00         .......
+  decimal
+          7    0    0    3   54  167    6  108
+        167    6    5   12    0  232    0    0
+          0    0    3   54    3   54  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0   26    0
+  datetime
+0000   0x83 0x9f 0x14 0x08 0x06                   .....
+  extra(0) None
+
+RECORD 8: 2006-10-08T20:31:46 0x1a
+  hex (2)
+0000   0x1a 0x01                                  ..
+  decimal
+         26    1
+  datetime
+0000   0xae 0x9f 0x14 0x08 0x06                   .....
+  extra(0) None
+
+RECORD 9: 2012-06-05T06:41:44 0x07
+  hex (52)
+0000   0x07 0x00 0x00 0x03 0x36 0xa8 0x06 0x6c    ....6..l
+0008   0xa8 0x06 0x05 0x0c 0x00 0xe8 0x00 0x00    ........
+0010   0x00 0x00 0x03 0x36 0x03 0x36 0x64 0x00    ...6.6d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x07 0x00 0x00    ........
+0030   0x03 0x36 0xa9 0x06                        .6..
+  decimal
+          7    0    0    3   54  168    6  108
+        168    6    5   12    0  232    0    0
+          0    0    3   54    3   54  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    7    0    0
+          3   54  169    6
+  datetime
+0000   0x6c 0xa9 0x06 0x05 0x0c                   l....
+  extra(0) None
+
+RECORD 10: 2012-06-05T06:42:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x03 0x36    .......6
+0008   0x03 0x36 0x64 0x00 0x00 0x00 0x00 0x00    .6d.....
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x03 0x36 0xaa 0x06    .....6..
+  decimal
+          0  232    0    0    0    0    3   54
+          3   54  100    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    3   54  170    6
+  datetime
+0000   0x6c 0xaa 0x06 0x05 0x0c                   l....
+  extra(0) None
+
+RECORD 11: 2006-10-11T16:48:45 0x00
+  hex (35)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x03 0x36    .......6
+0008   0x03 0x36 0x64 0x00 0x00 0x00 0x00 0x00    .6d.....
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x34 0xc8                             .4.
+  decimal
+          0  232    0    0    0    0    3   54
+          3   54  100    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0   52  200
+  datetime
+0000   0xad 0xb0 0x10 0x0b 0x06                   .....
+  extra(0) None
+
+RECORD 12: 2006-10-12T07:55:42 0x07
+  hex (47)
+0000   0x07 0x00 0x00 0x03 0x36 0xab 0x06 0x6c    ....6..l
+0008   0xab 0x06 0x05 0x0c 0x00 0xe8 0x00 0x00    ........
+0010   0x00 0x00 0x03 0x36 0x03 0x36 0x64 0x00    ...6.6d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x34 0x64         .....4d
+  decimal
+          7    0    0    3   54  171    6  108
+        171    6    5   12    0  232    0    0
+          0    0    3   54    3   54  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0   52  100
+  datetime
+0000   0xaa 0xb7 0x07 0x0c 0x06                   .....
+  extra(0) None
+
+```
+
+### logs/ReadHistoryData-page-1.data: 45 records
+```
+RECORD 0: 2006-07-01T08:23:47 0x5b
+  hex (2)
+0000   0x5b 0x64                                  [d
+  decimal
+         91  100
+  datetime
+0000   0x6f 0xd7 0x08 0x01 0x06                   o....
+  extra(22) 
+0000   0x03 0x50 0x0a 0x32 0x64 0x00 0x03 0x00    .P.2d...
+0008   0x00 0x00 0x00 0x03 0x64 0x01 0x03 0x03    ....d...
+0010   0x00 0x6f 0xd7 0x28 0x01 0x06              .o.(..
+          3   80   10   50  100    0    3    0
+          0    0    0    3  100    1    3    3
+          0  111  215   40    1    6
+
+RECORD 1: 2006-07-01T08:24:43 0x5b
+  hex (2)
+0000   0x5b 0x67                                  [g
+  decimal
+         91  103
+  datetime
+0000   0x6b 0xd8 0x08 0x01 0x06                   k....
+  extra(22) 
+0000   0x07 0x50 0x0a 0x32 0x64 0x00 0x07 0x00    .P.2d...
+0008   0x00 0x03 0x00 0x07 0x64 0x5c 0x05 0x0c    ....d\..
+0010   0x01 0x44 0x01 0x07 0x07 0x00              .D....
+          7   80   10   50  100    0    7    0
+          0    3    0    7  100   92    5   12
+          1   68    1    7    7    0
+
+RECORD 2: 2006-07-01T08:26:55 0x6b
+  hex (7)
+0000   0x6b 0xd8 0x28 0x01 0x06 0x5b 0x57         k.(..[W
+  decimal
+        107  216   40    1    6   91   87
+  datetime
+0000   0x77 0xda 0x08 0x01 0x06                   w....
+  extra(27) 
+0000   0x01 0x52 0x0a 0x32 0x64 0x63 0x01 0x00    .R.2dc..
+0008   0x00 0x0a 0x00 0x5a 0x64 0x5c 0x05 0x28    ...Zd\.(
+0010   0x03 0x44 0x01 0x5a 0x5a 0x00 0x77 0xda    .D.ZZ.w.
+0018   0x28 0x01 0x06                             (..
+          1   82   10   50  100   99    1    0
+          0   10    0   90  100   92    5   40
+          3   68    1   90   90    0  119  218
+         40    1    6
+
+RECORD 3: 2006-07-01T08:36:21 0x1e
+  hex (2)
+0000   0x1e 0x00                                  ..
+  decimal
+         30    0
+  datetime
+0000   0x55 0xe4 0x08 0x41 0x06                   U..A.
+  extra(0) None
+
+RECORD 4: 2006-07-01T08:36:43 0x1f
+  hex (2)
+0000   0x1f 0x00                                  ..
+  decimal
+         31    0
+  datetime
+0000   0x6b 0xe4 0x08 0x41 0x06                   k..A.
+  extra(0) None
+
+RECORD 5: 2011-08-12T00:36:16 0x07
+  hex (29)
+0000   0x07 0x00 0x00 0x04 0x52 0x61 0x86 0x6c    ....Ra.l
+0008   0x61 0x86 0x05 0x21 0x0b 0x64 0x57 0x03    a..!.dW.
+0010   0x00 0x00 0x04 0x52 0x02 0xc2 0x40 0x01    ...R..@.
+0018   0x90 0x24 0x00 0x0b 0x01                   .$...
+  decimal
+          7    0    0    4   82   97  134  108
+         97  134    5   33   11  100   87    3
+          0    0    4   82    2  194   64    1
+        144   36    0   11    1
+  datetime
+0000   0x90 0x24 0x00 0x2c 0x0b                   .$.,.
+  extra(0) None
+
+RECORD 6: 2006-07-02T18:29:32 0x01
+  hex (13)
+0000   0x01 0x64 0x59 0x00 0x00 0x00 0x03 0x02    .dY.....
+0008   0x00 0x01 0x00 0x1e 0x00                   .....
+  decimal
+          1  100   89    0    0    0    3    2
+          0    1    0   30    0
+  datetime
+0000   0x60 0xdd 0x12 0x42 0x06                   `..B.
+  extra(0) None
+
+RECORD 7: 2006-07-02T18:30:24 0x1f
+  hex (2)
+0000   0x1f 0x00                                  ..
+  decimal
+         31    0
+  datetime
+0000   0x58 0xde 0x12 0x42 0x06                   X..B.
+  extra(0) None
+
+RECORD 8: 2006-07-02T18:37:23 0x1e
+  hex (2)
+0000   0x1e 0x00                                  ..
+  decimal
+         30    0
+  datetime
+0000   0x57 0xe5 0x12 0x42 0x06                   W..B.
+  extra(0) None
+
+RECORD 9: 2006-07-02T18:37:41 0x1f
+  hex (2)
+0000   0x1f 0x00                                  ..
+  decimal
+         31    0
+  datetime
+0000   0x69 0xe5 0x12 0x42 0x06                   i..B.
+  extra(0) None
+
+RECORD 10: 2006-07-02T18:57:35 0x1e
+  hex (2)
+0000   0x1e 0x00                                  ..
+  decimal
+         30    0
+  datetime
+0000   0x63 0xf9 0x12 0x42 0x06                   c..B.
+  extra(0) None
+
+RECORD 11: 2006-07-02T18:58:58 0x1f
+  hex (2)
+0000   0x1f 0x00                                  ..
+  decimal
+         31    0
+  datetime
+0000   0x7a 0xfa 0x12 0x42 0x06                   z..B.
+  extra(0) None
+
+RECORD 12: 2006-07-03T10:00:14 0x07
+  hex (47)
+0000   0x07 0x00 0x00 0x03 0x32 0x62 0x86 0x6c    ....2b.l
+0008   0x62 0x86 0x05 0x0c 0x00 0xe8 0x00 0x00    b.......
+0010   0x00 0x00 0x03 0x32 0x03 0x32 0x64 0x00    ...2.2d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x1e 0x00         .......
+  decimal
+          7    0    0    3   50   98  134  108
+         98  134    5   12    0  232    0    0
+          0    0    3   50    3   50  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0   30    0
+  datetime
+0000   0x4e 0xc0 0x0a 0x43 0x06                   N..C.
+  extra(0) None
+
+RECORD 13: 2006-07-03T10:00:32 0x1f
+  hex (2)
+0000   0x1f 0x00                                  ..
+  decimal
+         31    0
+  datetime
+0000   0x60 0xc0 0x0a 0x43 0x06                   `..C.
+  extra(0) None
+
+RECORD 14: 2006-07-06T15:12:00 0x07
+  hex (137)
+0000   0x07 0x00 0x00 0x03 0x36 0x63 0x86 0x6c    ....6c.l
+0008   0x63 0x86 0x05 0x0c 0x00 0xe8 0x00 0x00    c.......
+0010   0x00 0x00 0x03 0x36 0x03 0x36 0x64 0x00    ...6.6d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x07 0x00 0x00    ........
+0030   0x03 0x36 0x64 0x86 0x6c 0x64 0x86 0x05    .6d.ld..
+0038   0x0c 0x00 0xe8 0x00 0x00 0x00 0x00 0x03    ........
+0040   0x36 0x03 0x36 0x64 0x00 0x00 0x00 0x00    6.6d....
+0048   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0050   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0058   0x00 0x00 0x07 0x00 0x00 0x03 0x36 0x65    ......6e
+0060   0x86 0x6c 0x65 0x86 0x05 0x0c 0x00 0xe8    .le.....
+0068   0x00 0x00 0x00 0x00 0x03 0x36 0x03 0x36    .....6.6
+0070   0x64 0x00 0x00 0x00 0x00 0x00 0x00 0x00    d.......
+0078   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0080   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x34    .......4
+0088   0xc8                                       .
+  decimal
+          7    0    0    3   54   99  134  108
+         99  134    5   12    0  232    0    0
+          0    0    3   54    3   54  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    7    0    0
+          3   54  100  134  108  100  134    5
+         12    0  232    0    0    0    0    3
+         54    3   54  100    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    7    0    0    3   54  101
+        134  108  101  134    5   12    0  232
+          0    0    0    0    3   54    3   54
+        100    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0   52
+        200
+  datetime
+0000   0x40 0xcc 0x0f 0x06 0x06                   @....
+  extra(0) None
+
+RECORD 15: 2006-07-07T02:30:01 0x07
+  hex (47)
+0000   0x07 0x00 0x00 0x03 0x36 0x66 0x86 0x6c    ....6f.l
+0008   0x66 0x86 0x05 0x0c 0x00 0xe8 0x00 0x00    f.......
+0010   0x00 0x00 0x03 0x36 0x03 0x36 0x64 0x00    ...6.6d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x34 0x64         .....4d
+  decimal
+          7    0    0    3   54  102  134  108
+        102  134    5   12    0  232    0    0
+          0    0    3   54    3   54  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0   52  100
+  datetime
+0000   0x41 0xde 0x02 0x07 0x06                   A....
+  extra(0) None
+
+RECORD 16: 2006-07-07T15:05:03 0x5b
+  hex (2)
+0000   0x5b 0x75                                  [u
+  decimal
+         91  117
+  datetime
+0000   0x43 0xc5 0x0f 0x07 0x06                   C....
+  extra(22) 
+0000   0x03 0x50 0x0a 0x32 0x64 0x03 0x03 0x00    .P.2d...
+0008   0x00 0x00 0x00 0x06 0x64 0x01 0x06 0x06    ....d...
+0010   0x00 0x43 0xc5 0x2f 0x07 0x06              .C./..
+          3   80   10   50  100    3    3    0
+          0    0    0    6  100    1    6    6
+          0   67  197   47    7    6
+
+RECORD 17: 2006-07-07T16:14:05 0x5b
+  hex (2)
+0000   0x5b 0x75                                  [u
+  decimal
+         91  117
+  datetime
+0000   0x45 0xce 0x10 0x07 0x06                   E....
+  extra(22) 
+0000   0x06 0x50 0x0a 0x32 0x64 0x03 0x06 0x00    .P.2d...
+0008   0x00 0x05 0x00 0x06 0x64 0x5c 0x05 0x18    ....d\..
+0010   0x47 0x44 0x01 0x06 0x06 0x00              GD....
+          6   80   10   50  100    3    6    0
+          0    5    0    6  100   92    5   24
+         71   68    1    6    6    0
+
+RECORD 18: 2006-07-07T16:47:57 0x45
+  hex (7)
+0000   0x45 0xce 0x30 0x07 0x06 0x21 0x00         E.0..!.
+  decimal
+         69  206   48    7    6   33    0
+  datetime
+0000   0x79 0xef 0x10 0x07 0x06                   y....
+  extra(6) 
+0000   0x03 0x00 0x00 0x00 0x13 0x74              .....t
+          3    0    0    0   19  116
+
+RECORD 19: 2006-07-07T16:49:12 0xf0
+  hex (9)
+0000   0xf0 0x30 0x07 0x06 0x03 0x00 0x03 0x00    .0......
+0008   0x03                                       .
+  decimal
+        240   48    7    6    3    0    3    0
+          3
+  datetime
+0000   0x4c 0xf1 0x10 0x07 0x06                   L....
+  extra(0) None
+
+RECORD 20: 2006-07-07T17:10:38 0x03
+  hex (5)
+0000   0x03 0x00 0x03 0x00 0x03                   .....
+  decimal
+          3    0    3    0    3
+  datetime
+0000   0x66 0xca 0x11 0x07 0x06                   f....
+  extra(4) 
+0000   0x03 0x00 0x03 0x00                        ....
+          3    0    3    0
+
+RECORD 21: 2006-07-07T17:28:51 0x03
+  hex (1)
+0000   0x03                                       .
+  decimal
+          3
+  datetime
+0000   0x73 0xdc 0x11 0x07 0x06                   s....
+  extra(4) 
+0000   0x03 0x00 0x03 0x00                        ....
+          3    0    3    0
+
+RECORD 22: 2006-07-07T17:41:14 0x03
+  hex (1)
+0000   0x03                                       .
+  decimal
+          3
+  datetime
+0000   0x4e 0xe9 0x11 0x07 0x06                   N....
+  extra(4) 
+0000   0x03 0x00 0x03 0x00                        ....
+          3    0    3    0
+
+RECORD 23: 2006-07-07T17:57:02 0x03
+  hex (1)
+0000   0x03                                       .
+  decimal
+          3
+  datetime
+0000   0x42 0xf9 0x11 0x07 0x06                   B....
+  extra(4) 
+0000   0x03 0x00 0x03 0x00                        ....
+          3    0    3    0
+
+RECORD 24: 2006-07-07T18:02:05 0x03
+  hex (1)
+0000   0x03                                       .
+  decimal
+          3
+  datetime
+0000   0x45 0xc2 0x12 0x07 0x06                   E....
+  extra(4) 
+0000   0x1e 0x00 0x60 0xd6                        ..`.
+         30    0   96  214
+
+RECORD 25: 2006-07-07T18:22:51 0x12
+  hex (5)
+0000   0x12 0x47 0x06 0x1f 0x00                   .G...
+  decimal
+         18   71    6   31    0
+  datetime
+0000   0x73 0xd6 0x12 0x47 0x06                   s..G.
+  extra(0) None
+
+RECORD 26: 2006-07-08T05:22:49 0x07
+  hex (50)
+0000   0x07 0x00 0x00 0x03 0x64 0x67 0x86 0x6c    ....dg.l
+0008   0x67 0x86 0x05 0x00 0x75 0x75 0x75 0x05    g...uuu.
+0010   0x00 0x00 0x03 0x64 0x03 0x34 0x5e 0x00    ...d.4^.
+0018   0x30 0x06 0x00 0x09 0x00 0x30 0x06 0x00    0....0..
+0020   0x24 0x4b 0x00 0x0c 0x19 0x00 0x00 0x00    $K......
+0028   0x02 0x01 0x00 0x01 0x00 0x03 0x00 0x03    ........
+0030   0x00 0x03                                  ..
+  decimal
+          7    0    0    3  100  103  134  108
+        103  134    5    0  117  117  117    5
+          0    0    3  100    3   52   94    0
+         48    6    0    9    0   48    6    0
+         36   75    0   12   25    0    0    0
+          2    1    0    1    0    3    0    3
+          0    3
+  datetime
+0000   0x71 0xd6 0x05 0x08 0x06                   q....
+  extra(0) None
+
+RECORD 27: 2006-07-08T05:49:07 0x1e
+  hex (2)
+0000   0x1e 0x00                                  ..
+  decimal
+         30    0
+  datetime
+0000   0x47 0xf1 0x05 0x48 0x06                   G..H.
+  extra(0) None
+
+RECORD 28: 2006-07-08T05:49:26 0x1f
+  hex (2)
+0000   0x1f 0x00                                  ..
+  decimal
+         31    0
+  datetime
+0000   0x5a 0xf1 0x05 0x48 0x06                   Z..H.
+  extra(0) None
+
+RECORD 29: 2006-07-08T07:11:37 0x64
+  hex (2)
+0000   0x64 0x00                                  d.
+  decimal
+        100    0
+  datetime
+0000   0x65 0xcb 0x07 0x08 0x06                   e....
+  extra(0) None
+
+RECORD 30: 2006-07-08T07:12:12 0x17
+  hex (2)
+0000   0x17 0x00                                  ..
+  decimal
+         23    0
+  datetime
+0000   0x4c 0xcc 0x07 0x08 0x06                   L....
+  extra(0) None
+
+RECORD 31: 2006-08-15T23:30:00 0x18
+  hex (2)
+0000   0x18 0x00                                  ..
+  decimal
+         24    0
+  datetime
+0000   0x80 0x1e 0x17 0x1f 0x06                   .....
+  extra(0) None
+
+RECORD 32: 2006-08-15T23:33:28 0x07
+  hex (50)
+0000   0x07 0x00 0x00 0x00 0x58 0x68 0x86 0x6c    ....Xh.l
+0008   0x68 0x86 0x05 0x0c 0x00 0xe8 0x00 0x00    h.......
+0010   0x00 0x00 0x00 0x58 0x00 0x58 0x64 0x00    ...X.Xd.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x03 0x00 0x03    ........
+0030   0x00 0x03                                  ..
+  decimal
+          7    0    0    0   88  104  134  108
+        104  134    5   12    0  232    0    0
+          0    0    0   88    0   88  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    3    0    3
+          0    3
+  datetime
+0000   0x9c 0x21 0x17 0x1f 0x06                   .!...
+  extra(0) None
+
+RECORD 33: 2006-08-15T23:33:54 0x03
+  hex (5)
+0000   0x03 0x00 0x05 0x00 0x05                   .....
+  decimal
+          3    0    5    0    5
+  datetime
+0000   0xb6 0x21 0x17 0x1f 0x06                   .!...
+  extra(4) 
+0000   0x03 0x00 0x03 0x00                        ....
+          3    0    3    0
+
+RECORD 34: 2006-08-15T23:34:28 0x03
+  hex (1)
+0000   0x03                                       .
+  decimal
+          3
+  datetime
+0000   0x9c 0x22 0x17 0x1f 0x06                   ."...
+  extra(4) 
+0000   0x07 0x00 0x00 0x00                        ....
+          7    0    0    0
+
+RECORD 35: 2012-06-05T06:31:44 0x06
+  hex (3)
+0000   0x06 0x9f 0x06                             ...
+  decimal
+          6  159    6
+  datetime
+0000   0x6c 0x9f 0x06 0x05 0x0c                   l....
+  extra(0) None
+
+RECORD 36: 2006-09-01T00:12:41 0x00
+  hex (38)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x06    ........
+0008   0x00 0x06 0x64 0x00 0x00 0x00 0x00 0x00    ..d.....
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x03 0x00 0x03 0x00 0x03              ......
+  decimal
+          0  232    0    0    0    0    0    6
+          0    6  100    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    3    0    3    0    3
+  datetime
+0000   0xa9 0x4c 0x00 0x01 0x06                   .L...
+  extra(0) None
+
+RECORD 37: 2006-09-01T00:44:29 0x1e
+  hex (2)
+0000   0x1e 0x00                                  ..
+  decimal
+         30    0
+  datetime
+0000   0x9d 0x6c 0x00 0x41 0x06                   .l.A.
+  extra(0) None
+
+RECORD 38: 2006-09-01T00:44:48 0x1f
+  hex (2)
+0000   0x1f 0x00                                  ..
+  decimal
+         31    0
+  datetime
+0000   0xb0 0x6c 0x00 0x41 0x06                   .l.A.
+  extra(0) None
+
+RECORD 39: 2006-09-01T01:19:10 0x64
+  hex (2)
+0000   0x64 0x00                                  d.
+  decimal
+        100    0
+  datetime
+0000   0x8a 0x53 0x01 0x01 0x06                   .S...
+  extra(0) None
+
+RECORD 40: 2006-09-01T01:19:34 0x17
+  hex (2)
+0000   0x17 0x00                                  ..
+  decimal
+         23    0
+  datetime
+0000   0xa2 0x53 0x01 0x01 0x06                   .S...
+  extra(0) None
+
+RECORD 41: 2006-10-01T11:20:00 0x18
+  hex (2)
+0000   0x18 0x00                                  ..
+  decimal
+         24    0
+  datetime
+0000   0x80 0x94 0x0b 0x01 0x06                   .....
+  extra(0) None
+
+RECORD 42: 2006-10-01T11:30:18 0x07
+  hex (50)
+0000   0x07 0x00 0x00 0x00 0x02 0x81 0x86 0x6c    .......l
+0008   0x81 0x86 0x05 0x0c 0x00 0xe8 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x02 0x00 0x02 0x64 0x00    ......d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x03 0x00 0x03    ........
+0030   0x00 0x03                                  ..
+  decimal
+          7    0    0    0    2  129  134  108
+        129  134    5   12    0  232    0    0
+          0    0    0    2    0    2  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    3    0    3
+          0    3
+  datetime
+0000   0x92 0x9e 0x0b 0x01 0x06                   .....
+  extra(0) None
+
+RECORD 43: 2006-10-02T19:45:47 0x07
+  hex (47)
+0000   0x07 0x00 0x00 0x02 0x4c 0xa1 0x06 0x6c    ....L..l
+0008   0xa1 0x06 0x05 0x0c 0x00 0xe8 0x00 0x00    ........
+0010   0x00 0x00 0x02 0x4c 0x02 0x4c 0x64 0x00    ...L.Ld.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x34 0xc8         .....4.
+  decimal
+          7    0    0    2   76  161    6  108
+        161    6    5   12    0  232    0    0
+          0    0    2   76    2   76  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0   52  200
+  datetime
+0000   0xaf 0xad 0x13 0x02 0x06                   .....
+  extra(0) None
+
+RECORD 44: 2006-10-03T13:09:13 0x07
+  hex (47)
+0000   0x07 0x00 0x00 0x03 0x36 0xa2 0x06 0x6c    ....6..l
+0008   0xa2 0x06 0x05 0x0c 0x00 0xe8 0x00 0x00    ........
+0010   0x00 0x00 0x03 0x36 0x03 0x36 0x64 0x00    ...6.6d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x34 0x64         .....4d
+  decimal
+          7    0    0    3   54  162    6  108
+        162    6    5   12    0  232    0    0
+          0    0    3   54    3   54  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0   52  100
+  datetime
+0000   0x8d 0x89 0x0d 0x03 0x06                   .....
+  extra(0) None
+
+
+```
+
+### logs/ReadHistoryData-page-2.data: 73 records
+```
+RECORD 0: 2012-08-01T21:28:39 0x03
+  hex (15)
+0000   0x03 0x00 0x00 0x00 0x0a 0x9e 0x1c 0x35    .......5
+0008   0x01 0x0c 0x03 0x00 0x03 0x00 0x03         .......
+  decimal
+          3    0    0    0   10  158   28   53
+          1   12    3    0    3    0    3
+  datetime
+0000   0xa7 0x1c 0x15 0x01 0x0c                   .....
+  extra(4) 
+0000   0x26 0x01 0x8d 0x19                        &...
+         38    1  141   25
+
+RECORD 1: 2012-08-01T22:25:34 0x16
+  hex (19)
+0000   0x16 0x01 0x0c 0x27 0x00 0x00 0x00 0x00    ...'....
+0008   0x00 0x00 0x28 0x00 0x00 0x00 0x00 0x00    ..(.....
+0010   0x00 0x26 0x01                             .&.
+  decimal
+         22    1   12   39    0    0    0    0
+          0    0   40    0    0    0    0    0
+          0   38    1
+  datetime
+0000   0xa2 0x19 0x16 0x01 0x0c                   .....
+  extra(0) None
+
+RECORD 2: 2012-08-01T22:31:47 0x27
+  hex (16)
+0000   0x27 0x01 0xe2 0x40 0x00 0x00 0x00 0x28    '..@...(
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x26 0x01    ......&.
+  decimal
+         39    1  226   64    0    0    0   40
+          0    0    0    0    0    0   38    1
+  datetime
+0000   0xaf 0x1f 0x16 0x01 0x0c                   .....
+  extra(0) None
+
+RECORD 3: 2012-08-01T22:32:32 0x27
+  hex (16)
+0000   0x27 0x01 0xe2 0x40 0x03 0x42 0x2a 0x28    '..@.B*(
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x26 0x01    ......&.
+  decimal
+         39    1  226   64    3   66   42   40
+          0    0    0    0    0    0   38    1
+  datetime
+0000   0xa0 0x20 0x16 0x01 0x0c                   . ...
+  extra(0) None
+
+RECORD 4: 2012-08-01T22:38:22 0x27
+  hex (16)
+0000   0x27 0x01 0xe2 0x40 0x03 0x42 0x2a 0x28    '..@.B*(
+0008   0x0c 0x89 0x92 0x00 0x00 0x00 0x33 0x30    ......30
+  decimal
+         39    1  226   64    3   66   42   40
+         12  137  146    0    0    0   51   48
+  datetime
+0000   0x96 0x26 0x16 0x01 0x0c                   .&...
+  extra(0) None
+
+RECORD 5: 2012-08-01T22:38:22 0x00
+  hex (3)
+0000   0x00 0x16 0x03                             ...
+  decimal
+          0   22    3
+  datetime
+0000   0x96 0x26 0x16 0x01 0x0c                   .&...
+  extra(0) None
+
+RECORD 6: 2012-08-01T22:48:39 0x33
+  hex (2)
+0000   0x33 0x30                                  30
+  decimal
+         51   48
+  datetime
+0000   0xa7 0x30 0x16 0x01 0x0c                   .0...
+  extra(0) None
+
+RECORD 7: 2012-08-01T22:48:39 0x00
+  hex (3)
+0000   0x00 0x16 0x02                             ...
+  decimal
+          0   22    2
+  datetime
+0000   0xa7 0x30 0x16 0x01 0x0c                   .0...
+  extra(0) None
+
+RECORD 8: 2012-08-01T22:51:32 0x33
+  hex (2)
+0000   0x33 0x00                                  3.
+  decimal
+         51    0
+  datetime
+0000   0xa0 0x33 0x16 0x01 0x0c                   .3...
+  extra(0) None
+
+RECORD 9: 2012-08-01T22:51:32 0x00
+  hex (3)
+0000   0x00 0x16 0x00                             ...
+  decimal
+          0   22    0
+  datetime
+0000   0xa0 0x33 0x16 0x01 0x0c                   .3...
+  extra(0) None
+
+RECORD 10: 2012-08-01T22:52:17 0x33
+  hex (2)
+0000   0x33 0x4c                                  3L
+  decimal
+         51   76
+  datetime
+0000   0x91 0x34 0x16 0x01 0x0c                   .4...
+  extra(0) None
+
+RECORD 11: 2012-08-01T22:52:17 0x00
+  hex (3)
+0000   0x00 0x16 0x06                             ...
+  decimal
+          0   22    6
+  datetime
+0000   0x91 0x34 0x16 0x01 0x0c                   .4...
+  extra(0) None
+
+RECORD 12: 2012-08-01T23:04:54 0x33
+  hex (2)
+0000   0x33 0x4c                                  3L
+  decimal
+         51   76
+  datetime
+0000   0xb6 0x04 0x17 0x01 0x0c                   .....
+  extra(0) None
+
+RECORD 13: 2012-08-01T23:04:54 0x00
+  hex (3)
+0000   0x00 0x16 0x06                             ...
+  decimal
+          0   22    6
+  datetime
+0000   0xb6 0x04 0x17 0x01 0x0c                   .....
+  extra(0) None
+
+RECORD 14: 2012-08-01T23:35:20 0x63
+  hex (2)
+0000   0x63 0x04                                  c.
+  decimal
+         99    4
+  datetime
+0000   0x94 0x23 0x17 0x01 0x0c                   .#...
+  extra(0) None
+
+RECORD 15: 2012-08-01T23:38:57 0x63
+  hex (2)
+0000   0x63 0x03                                  c.
+  decimal
+         99    3
+  datetime
+0000   0xb9 0x26 0x17 0x01 0x0c                   .&...
+  extra(0) None
+
+RECORD 16: 2012-08-02T06:52:41 0x07
+  hex (47)
+0000   0x07 0x00 0x00 0x00 0x80 0x81 0x0c 0x6c    .......l
+0008   0x81 0x0c 0x05 0x0c 0x00 0xe8 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x80 0x00 0x80 0x64 0x00    ......d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x5b 0x64         .....[d
+  decimal
+          7    0    0    0  128  129   12  108
+        129   12    5   12    0  232    0    0
+          0    0    0  128    0  128  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0   91  100
+  datetime
+0000   0xa9 0x34 0x06 0x02 0x0c                   .4...
+  extra(0) None
+
+RECORD 17: 2010-01-10T01:36:10 0x0a
+  hex (11)
+0000   0x0a 0x50 0x0a 0x32 0x64 0x00 0x0a 0x00    .P.2d...
+0008   0x00 0x00 0x00                             ...
+  decimal
+         10   80   10   50  100    0   10    0
+          0    0    0
+  datetime
+0000   0x0a 0x64 0x01 0x0a 0x0a                   .d...
+  extra(0) None
+
+RECORD 18: 2012-08-02T06:53:34 0x00
+  hex (8)
+0000   0x00 0xa9 0x34 0x26 0x02 0x0c 0x5b 0x64    ..4&..[d
+  decimal
+          0  169   52   38    2   12   91  100
+  datetime
+0000   0xa2 0x35 0x06 0x02 0x0c                   .5...
+  extra(0) None
+
+RECORD 19: 2010-01-10T01:04:10 0x0a
+  hex (19)
+0000   0x0a 0x50 0x0a 0x32 0x64 0x00 0x0a 0x00    .P.2d...
+0008   0x00 0x0a 0x00 0x0a 0x64 0x5c 0x08 0x14    ....d\..
+0010   0x00 0x44 0x14                             .D.
+  decimal
+         10   80   10   50  100    0   10    0
+          0   10    0   10  100   92    8   20
+          0   68   20
+  datetime
+0000   0x0a 0x44 0x01 0x0a 0x0a                   .D...
+  extra(0) None
+
+RECORD 20: 2012-08-02T06:54:30 0x00
+  hex (8)
+0000   0x00 0xa2 0x35 0x26 0x02 0x0c 0x5b 0x64    ..5&..[d
+  decimal
+          0  162   53   38    2   12   91  100
+  datetime
+0000   0x9e 0x36 0x06 0x02 0x0c                   .6...
+  extra(0) None
+
+RECORD 21: 2010-01-10T01:04:11 0x0a
+  hex (19)
+0000   0x0a 0x50 0x0a 0x32 0x64 0x00 0x0a 0x00    .P.2d...
+0008   0x00 0x14 0x00 0x0a 0x64 0x5c 0x08 0x3c    ....d\.<
+0010   0x01 0x44 0x14                             .D.
+  decimal
+         10   80   10   50  100    0   10    0
+          0   20    0   10  100   92    8   60
+          1   68   20
+  datetime
+0000   0x0b 0x44 0x01 0x0a 0x0a                   .D...
+  extra(0) None
+
+RECORD 22: 2012-08-02T06:55:22 0x00
+  hex (8)
+0000   0x00 0x9e 0x36 0x26 0x02 0x0c 0x5b 0x64    ..6&..[d
+  decimal
+          0  158   54   38    2   12   91  100
+  datetime
+0000   0x96 0x37 0x06 0x02 0x0c                   .7...
+  extra(0) None
+
+RECORD 23: 2002-05-04T08:28:36 0x0a
+  hex (12)
+0000   0x0a 0x50 0x0a 0x32 0x64 0x00 0x0a 0x00    .P.2d...
+0008   0x00 0x1e 0x00 0x0a                        ....
+  decimal
+         10   80   10   50  100    0   10    0
+          0   30    0   10
+  datetime
+0000   0x64 0x5c 0x08 0x64 0x02                   d\.d.
+  extra(0) None
+
+RECORD 24: 2010-01-10T01:04:12 0x44
+  hex (2)
+0000   0x44 0x14                                  D.
+  decimal
+         68   20
+  datetime
+0000   0x0c 0x44 0x01 0x0a 0x0a                   .D...
+  extra(0) None
+
+RECORD 25: 2012-08-02T06:56:37 0x00
+  hex (8)
+0000   0x00 0x97 0x37 0x26 0x02 0x0c 0x5b 0x64    ..7&..[d
+  decimal
+          0  151   55   38    2   12   91  100
+  datetime
+0000   0xa5 0x38 0x06 0x02 0x0c                   .8...
+  extra(0) None
+
+RECORD 26: 2003-05-12T08:28:36 0x0a
+  hex (12)
+0000   0x0a 0x50 0x0a 0x32 0x64 0x00 0x0a 0x00    .P.2d...
+0008   0x00 0x28 0x00 0x0a                        .(..
+  decimal
+         10   80   10   50  100    0   10    0
+          0   40    0   10
+  datetime
+0000   0x64 0x5c 0x08 0x8c 0x03                   d\...
+  extra(0) None
+
+RECORD 27: 2010-01-10T01:04:13 0x44
+  hex (2)
+0000   0x44 0x14                                  D.
+  decimal
+         68   20
+  datetime
+0000   0x0d 0x44 0x01 0x0a 0x0a                   .D...
+  extra(0) None
+
+RECORD 28: 2012-08-02T06:57:33 0x00
+  hex (8)
+0000   0x00 0xa5 0x38 0x26 0x02 0x0c 0x5b 0x64    ..8&..[d
+  decimal
+          0  165   56   38    2   12   91  100
+  datetime
+0000   0xa1 0x39 0x06 0x02 0x0c                   .9...
+  extra(0) None
+
+RECORD 29: 2004-05-04T08:28:36 0x0a
+  hex (12)
+0000   0x0a 0x50 0x0a 0x32 0x64 0x00 0x0a 0x00    .P.2d...
+0008   0x00 0x32 0x00 0x0a                        .2..
+  decimal
+         10   80   10   50  100    0   10    0
+          0   50    0   10
+  datetime
+0000   0x64 0x5c 0x08 0xb4 0x04                   d\...
+  extra(0) None
+
+RECORD 30: 2010-01-10T01:04:14 0x44
+  hex (2)
+0000   0x44 0x14                                  D.
+  decimal
+         68   20
+  datetime
+0000   0x0e 0x44 0x01 0x0a 0x0a                   .D...
+  extra(0) None
+
+RECORD 31: 2012-08-02T06:58:23 0x00
+  hex (8)
+0000   0x00 0xa1 0x39 0x26 0x02 0x0c 0x5b 0x64    ..9&..[d
+  decimal
+          0  161   57   38    2   12   91  100
+  datetime
+0000   0x97 0x3a 0x06 0x02 0x0c                   .:...
+  extra(0) None
+
+RECORD 32: 2005-05-12T08:28:36 0x0a
+  hex (12)
+0000   0x0a 0x50 0x0a 0x32 0x64 0x00 0x0a 0x00    .P.2d...
+0008   0x00 0x3c 0x00 0x0a                        .<..
+  decimal
+         10   80   10   50  100    0   10    0
+          0   60    0   10
+  datetime
+0000   0x64 0x5c 0x08 0xdc 0x05                   d\...
+  extra(0) None
+
+RECORD 33: 2010-01-10T01:04:15 0x44
+  hex (2)
+0000   0x44 0x14                                  D.
+  decimal
+         68   20
+  datetime
+0000   0x0f 0x44 0x01 0x0a 0x0a                   .D...
+  extra(0) None
+
+RECORD 34: 2002-06-07T06:51:37 0x00
+  hex (7)
+0000   0x00 0x97 0x3a 0x26 0x02 0x0c 0x5b         ..:&..[
+  decimal
+          0  151   58   38    2   12   91
+  datetime
+0000   0x65 0xb3 0x06 0x07 0x02                   e....
+  extra(0) None
+
+RECORD 35: 2013-05-04T08:28:36 0x0c
+  hex (13)
+0000   0x0c 0x01 0x50 0x0a 0x32 0x64 0x00 0x01    ..P.2d..
+0008   0x00 0x00 0x46 0x00 0x01                   ..F..
+  decimal
+         12    1   80   10   50  100    0    1
+          0    0   70    0    1
+  datetime
+0000   0x64 0x5c 0x08 0x04 0x0d                   d\...
+  extra(0) None
+
+RECORD 36: 2002-02-07T06:51:00 0x45
+  hex (7)
+0000   0x45 0x14 0x17 0x44 0x01 0x01 0x01         E..D...
+  decimal
+         69   20   23   68    1    1    1
+  datetime
+0000   0x00 0xb3 0x06 0x27 0x02                   ...'.
+  extra(6) 
+0000   0x0c 0x5b 0x65 0x85 0x07 0x07              .[e...
+         12   91  101  133    7    7
+
+RECORD 37: 2004-05-04T11:28:36 0x02
+  hex (14)
+0000   0x02 0x0c 0x01 0x50 0x0a 0x32 0x64 0x00    ...P.2d.
+0008   0x01 0x00 0x00 0x47 0x00 0x01              ...G..
+  decimal
+          2   12    1   80   10   50  100    0
+          1    0    0   71    0    1
+  datetime
+0000   0x64 0x5c 0x0b 0x04 0x04                   d\...
+  extra(0) None
+
+RECORD 38: 2002-02-07T07:05:00 0x44
+  hex (10)
+0000   0x44 0x04 0x0e 0x45 0x14 0x18 0x44 0x01    D..E..D.
+0008   0x01 0x01                                  ..
+  decimal
+         68    4   14   69   20   24   68    1
+          1    1
+  datetime
+0000   0x00 0x85 0x07 0x27 0x02                   ...'.
+  extra(0) None
+
+RECORD 39: 2002-06-07T07:20:37 0x0c
+  hex (2)
+0000   0x0c 0x5b                                  .[
+  decimal
+         12   91
+  datetime
+0000   0x65 0x94 0x07 0x07 0x02                   e....
+  extra(0) None
+
+RECORD 40: 2004-05-08T11:28:36 0x0c
+  hex (13)
+0000   0x0c 0x01 0x50 0x0a 0x32 0x64 0x00 0x01    ..P.2d..
+0008   0x00 0x00 0x48 0x00 0x01                   ..H..
+  decimal
+         12    1   80   10   50  100    0    1
+          0    0   72    0    1
+  datetime
+0000   0x64 0x5c 0x0b 0x08 0x04                   d\...
+  extra(0) None
+
+RECORD 41: 2002-02-07T07:21:00 0x44
+  hex (10)
+0000   0x44 0x04 0x0e 0x45 0x14 0x18 0x44 0x01    D..E..D.
+0008   0x01 0x01                                  ..
+  decimal
+         68    4   14   69   20   24   68    1
+          1    1
+  datetime
+0000   0x00 0x95 0x07 0x27 0x02                   ...'.
+  extra(0) None
+
+RECORD 42: 2002-06-07T08:16:37 0x0c
+  hex (2)
+0000   0x0c 0x5b                                  .[
+  decimal
+         12   91
+  datetime
+0000   0x65 0x90 0x08 0x07 0x02                   e....
+  extra(0) None
+
+RECORD 43: 2005-05-12T11:28:36 0x0c
+  hex (13)
+0000   0x0c 0x01 0x50 0x0a 0x32 0x64 0x00 0x01    ..P.2d..
+0008   0x00 0x00 0x49 0x00 0x01                   ..I..
+  decimal
+         12    1   80   10   50  100    0    1
+          0    0   73    0    1
+  datetime
+0000   0x64 0x5c 0x0b 0x0c 0x05                   d\...
+  extra(0) None
+
+RECORD 44: 2002-02-07T08:16:00 0x44
+  hex (10)
+0000   0x44 0x04 0x0f 0x45 0x14 0x19 0x44 0x01    D..E..D.
+0008   0x01 0x01                                  ..
+  decimal
+         68    4   15   69   20   25   68    1
+          1    1
+  datetime
+0000   0x00 0x90 0x08 0x27 0x02                   ...'.
+  extra(0) None
+
+RECORD 45: 2002-06-07T17:51:38 0x0c
+  hex (2)
+0000   0x0c 0x5b                                  .[
+  decimal
+         12   91
+  datetime
+0000   0x66 0xb3 0x11 0x07 0x02                   f....
+  extra(0) None
+
+RECORD 46: 2002-02-07T17:51:00 0x0c
+  hex (28)
+0000   0x0c 0x01 0x50 0x0a 0x32 0x64 0x00 0x01    ..P.2d..
+0008   0x00 0x00 0x49 0x00 0x01 0x64 0x5c 0x0b    ..I..d\.
+0010   0x10 0x0e 0x44 0x04 0x18 0x45 0x14 0x22    ..D..E."
+0018   0x44 0x01 0x01 0x01                        D...
+  decimal
+         12    1   80   10   50  100    0    1
+          0    0   73    0    1  100   92   11
+         16   14   68    4   24   69   20   34
+         68    1    1    1
+  datetime
+0000   0x00 0xb3 0x11 0x27 0x02                   ...'.
+  extra(0) None
+
+RECORD 47: 2002-06-07T18:00:37 0x0c
+  hex (2)
+0000   0x0c 0x5b                                  .[
+  decimal
+         12   91
+  datetime
+0000   0x65 0x80 0x12 0x07 0x02                   e....
+  extra(0) None
+
+RECORD 48: 2005-05-04T14:28:36 0x0c
+  hex (13)
+0000   0x0c 0x01 0x50 0x0a 0x32 0x64 0x00 0x01    ..P.2d..
+0008   0x00 0x00 0x4a 0x00 0x01                   ..J..
+  decimal
+         12    1   80   10   50  100    0    1
+          0    0   74    0    1
+  datetime
+0000   0x64 0x5c 0x0e 0x04 0x05                   d\...
+  extra(0) None
+
+RECORD 49: 2002-02-07T18:01:00 0x44
+  hex (13)
+0000   0x44 0x10 0x0f 0x44 0x04 0x19 0x45 0x14    D..D..E.
+0008   0x23 0x44 0x01 0x01 0x01                   #D...
+  decimal
+         68   16   15   68    4   25   69   20
+         35   68    1    1    1
+  datetime
+0000   0x00 0x81 0x12 0x27 0x02                   ...'.
+  extra(0) None
+
+RECORD 50: 2002-06-07T18:15:37 0x0c
+  hex (2)
+0000   0x0c 0x5b                                  .[
+  decimal
+         12   91
+  datetime
+0000   0x65 0x8f 0x12 0x07 0x02                   e....
+  extra(0) None
+
+RECORD 51: 2005-05-08T14:28:36 0x0c
+  hex (13)
+0000   0x0c 0x01 0x50 0x0a 0x32 0x64 0x00 0x01    ..P.2d..
+0008   0x00 0x00 0x4b 0x00 0x01                   ..K..
+  decimal
+         12    1   80   10   50  100    0    1
+          0    0   75    0    1
+  datetime
+0000   0x64 0x5c 0x0e 0x08 0x05                   d\...
+  extra(0) None
+
+RECORD 52: 2002-02-07T18:15:00 0x44
+  hex (13)
+0000   0x44 0x10 0x0f 0x44 0x04 0x19 0x45 0x14    D..D..E.
+0008   0x23 0x44 0x01 0x01 0x01                   #D...
+  decimal
+         68   16   15   68    4   25   69   20
+         35   68    1    1    1
+  datetime
+0000   0x00 0x8f 0x12 0x27 0x02                   ...'.
+  extra(0) None
+
+RECORD 53: 2002-06-07T18:25:37 0x0c
+  hex (2)
+0000   0x0c 0x5b                                  .[
+  decimal
+         12   91
+  datetime
+0000   0x65 0x99 0x12 0x07 0x02                   e....
+  extra(0) None
+
+RECORD 54: 2005-05-12T14:28:36 0x0c
+  hex (13)
+0000   0x0c 0x01 0x50 0x0a 0x32 0x64 0x00 0x01    ..P.2d..
+0008   0x00 0x00 0x4c 0x00 0x01                   ..L..
+  decimal
+         12    1   80   10   50  100    0    1
+          0    0   76    0    1
+  datetime
+0000   0x64 0x5c 0x0e 0x0c 0x05                   d\...
+  extra(0) None
+
+RECORD 55: 2002-02-07T18:25:00 0x44
+  hex (13)
+0000   0x44 0x10 0x0f 0x44 0x04 0x19 0x45 0x14    D..D..E.
+0008   0x23 0x44 0x01 0x01 0x01                   #D...
+  decimal
+         68   16   15   68    4   25   69   20
+         35   68    1    1    1
+  datetime
+0000   0x00 0x99 0x12 0x27 0x02                   ...'.
+  extra(0) None
+
+RECORD 56: 2002-06-07T18:40:37 0x0c
+  hex (2)
+0000   0x0c 0x5b                                  .[
+  decimal
+         12   91
+  datetime
+0000   0x65 0xa8 0x12 0x07 0x02                   e....
+  extra(0) None
+
+RECORD 57: 2004-04-04T15:16:04 0x0c
+  hex (18)
+0000   0x0c 0x01 0x50 0x0a 0x32 0x64 0x00 0x01    ..P.2d..
+0008   0x00 0x00 0x4d 0x00 0x01 0x64 0x5c 0x0e    ..M..d\.
+0010   0x10 0x05                                  ..
+  decimal
+         12    1   80   10   50  100    0    1
+          0    0   77    0    1  100   92   14
+         16    5
+  datetime
+0000   0x44 0x10 0x0f 0x44 0x04                   D..D.
+  extra(0) None
+
+RECORD 58: 2002-02-07T18:40:00 0x19
+  hex (8)
+0000   0x19 0x45 0x14 0x23 0x44 0x01 0x01 0x01    .E.#D...
+  decimal
+         25   69   20   35   68    1    1    1
+  datetime
+0000   0x00 0xa8 0x12 0x27 0x02                   ...'.
+  extra(0) None
+
+RECORD 59: 2012-08-02T18:59:16 0x0c
+  hex (3)
+0000   0x0c 0x1e 0x00                             ...
+  decimal
+         12   30    0
+  datetime
+0000   0x90 0x3b 0x12 0x42 0x0c                   .;.B.
+  extra(0) None
+
+RECORD 60: 2012-08-02T18:59:40 0x1f
+  hex (2)
+0000   0x1f 0x00                                  ..
+  decimal
+         31    0
+  datetime
+0000   0xa8 0x3b 0x12 0x42 0x0c                   .;.B.
+  extra(0) None
+
+RECORD 61: 2002-02-04T10:03:01 0x64
+  hex (1)
+0000   0x64                                       d
+  decimal
+        100
+  datetime
+0000   0x01 0x83 0x0a 0x14 0x02                   .....
+  extra(0) None
+
+RECORD 62: 2002-02-04T10:35:00 0x0c
+  hex (2)
+0000   0x0c 0x17                                  ..
+  decimal
+         12   23
+  datetime
+0000   0x00 0xa3 0x0a 0x14 0x02                   .....
+  extra(0) None
+
+RECORD 63: 2006-07-01T06:10:00 0x0c
+  hex (3)
+0000   0x0c 0x18 0x00                             ...
+  decimal
+         12   24    0
+  datetime
+0000   0x40 0xca 0x06 0x01 0x06                   @....
+  extra(0) None
+
+RECORD 64: 2006-07-01T06:10:22 0x07
+  hex (47)
+0000   0x07 0x00 0x00 0x04 0xda 0x82 0x0c 0x6c    .......l
+0008   0x82 0x0c 0x05 0x00 0x65 0x64 0x66 0x12    ....edf.
+0010   0x00 0x00 0x04 0xda 0x03 0x9e 0x4b 0x01    ......K.
+0018   0x3c 0x19 0x00 0x4f 0x01 0x3c 0x19 0x01    <..O.<..
+0020   0x3c 0x64 0x00 0x00 0x00 0x00 0x00 0x00    <d......
+0028   0x10 0x10 0x00 0x00 0x00 0x64 0x01         .....d.
+  decimal
+          7    0    0    4  218  130   12  108
+        130   12    5    0  101  100  102   18
+          0    0    4  218    3  158   75    1
+         60   25    0   79    1   60   25    1
+         60  100    0    0    0    0    0    0
+         16   16    0    0    0  100    1
+  datetime
+0000   0x56 0xca 0x06 0x01 0x06                   V....
+  extra(0) None
+
+RECORD 65: 2006-07-01T06:10:32 0x17
+  hex (2)
+0000   0x17 0x00                                  ..
+  decimal
+         23    0
+  datetime
+0000   0x60 0xca 0x06 0x01 0x06                   `....
+  extra(0) None
+
+RECORD 66: 2006-07-01T08:10:00 0x18
+  hex (2)
+0000   0x18 0x00                                  ..
+  decimal
+         24    0
+  datetime
+0000   0x40 0xca 0x08 0x01 0x06                   @....
+  extra(0) None
+
+RECORD 67: 2006-07-01T08:12:38 0x1e
+  hex (2)
+0000   0x1e 0x00                                  ..
+  decimal
+         30    0
+  datetime
+0000   0x66 0xcc 0x08 0x01 0x06                   f....
+  extra(0) None
+
+RECORD 68: 2006-07-01T08:13:08 0x1f
+  hex (2)
+0000   0x1f 0x00                                  ..
+  decimal
+         31    0
+  datetime
+0000   0x48 0xcd 0x08 0x01 0x06                   H....
+  extra(0) None
+
+RECORD 69: 2002-04-04T06:01:08 0x14
+  hex (11)
+0000   0x14 0x02 0x6d 0xd1 0x28 0x01 0x06 0x14    ..m.(...
+0008   0x01 0x45 0xd2                             .E.
+  decimal
+         20    2  109  209   40    1    6   20
+          1   69  210
+  datetime
+0000   0x48 0x01 0x06 0x14 0x02                   H....
+  extra(0) None
+
+RECORD 70: 2006-07-01T08:20:47 0x46
+  hex (14)
+0000   0x46 0xd3 0x28 0x01 0x06 0x14 0x01 0x48    F.(....H
+0008   0xd4 0x48 0x01 0x06 0x64 0x00              .H..d.
+  decimal
+         70  211   40    1    6   20    1   72
+        212   72    1    6  100    0
+  datetime
+0000   0x6f 0xd4 0x08 0x01 0x06                   o....
+  extra(0) None
+
+RECORD 71: 2006-07-01T08:21:13 0x64
+  hex (2)
+0000   0x64 0x01                                  d.
+  decimal
+        100    1
+  datetime
+0000   0x4d 0xd5 0x08 0x01 0x06                   M....
+  extra(0) None
+
+RECORD 72: 2006-07-01T08:22:10 0x64
+  hex (2)
+0000   0x64 0x00                                  d.
+  decimal
+        100    0
+  datetime
+0000   0x4a 0xd6 0x08 0x01 0x06                   J....
+  extra(0) None
+
+```
+
+### logs/ReadHistoryData-page-3.data: 53 records
+```
+
+RECORD 0: 2002-03-04T07:35:00 0x18
+  hex (2)
+0000   0x18 0x00                                  ..
+  decimal
+         24    0
+  datetime
+0000   0x00 0xe3 0x07 0x04 0x02                   .....
+  extra(0) None
+
+RECORD 1: 2007-04-08T16:00:36 0x07
+  hex (45)
+0000   0x07 0x00 0x00 0x00 0x02 0x21 0x01 0x6c    .....!.l
+0008   0x21 0x01 0x05 0x0c 0x00 0xe8 0x00 0x00    !.......
+0010   0x00 0x00 0x00 0x02 0x00 0x02 0x64 0x00    ......d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00                   .....
+  decimal
+          7    0    0    0    2   33    1  108
+         33    1    5   12    0  232    0    0
+          0    0    0    2    0    2  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0
+  datetime
+0000   0x64 0x00 0x10 0xe8 0x07                   d....
+  extra(0) None
+
+RECORD 2: 2002-03-04T07:40:34 0x04
+  hex (4)
+0000   0x04 0x02 0x17 0x00                        ....
+  decimal
+          4    2   23    0
+  datetime
+0000   0x22 0xe8 0x07 0x04 0x02                   "....
+  extra(0) None
+
+RECORD 3: 2002-03-04T08:00:00 0x18
+  hex (2)
+0000   0x18 0x00                                  ..
+  decimal
+         24    0
+  datetime
+0000   0x00 0xc0 0x08 0x04 0x02                   .....
+  extra(0) None
+
+RECORD 4: 2002-03-04T08:02:37 0x64
+  hex (2)
+0000   0x64 0x00                                  d.
+  decimal
+        100    0
+  datetime
+0000   0x25 0xc2 0x08 0x04 0x02                   %....
+  extra(0) None
+
+RECORD 5: 2002-03-04T08:02:39 0x64
+  hex (2)
+0000   0x64 0x00                                  d.
+  decimal
+        100    0
+  datetime
+0000   0x27 0xc2 0x08 0x04 0x02                   '....
+  extra(0) None
+
+RECORD 6: 2002-03-04T08:02:41 0x64
+  hex (2)
+0000   0x64 0x00                                  d.
+  decimal
+        100    0
+  datetime
+0000   0x29 0xc2 0x08 0x04 0x02                   )....
+  extra(0) None
+
+RECORD 7: 2002-03-04T08:02:52 0x17
+  hex (2)
+0000   0x17 0x00                                  ..
+  decimal
+         23    0
+  datetime
+0000   0x34 0xc2 0x08 0x04 0x02                   4....
+  extra(0) None
+
+RECORD 8: 2002-03-04T09:19:00 0x18
+  hex (2)
+0000   0x18 0x00                                  ..
+  decimal
+         24    0
+  datetime
+0000   0x00 0xd3 0x09 0x04 0x02                   .....
+  extra(0) None
+
+RECORD 9: 2002-03-04T09:25:14 0x64
+  hex (2)
+0000   0x64 0x00                                  d.
+  decimal
+        100    0
+  datetime
+0000   0x0e 0xd9 0x09 0x04 0x02                   .....
+  extra(0) None
+
+RECORD 10: 2002-03-04T09:25:25 0x64
+  hex (2)
+0000   0x64 0x00                                  d.
+  decimal
+        100    0
+  datetime
+0000   0x19 0xd9 0x09 0x04 0x02                   .....
+  extra(0) None
+
+RECORD 11: 2002-03-04T09:25:40 0x17
+  hex (2)
+0000   0x17 0x00                                  ..
+  decimal
+         23    0
+  datetime
+0000   0x28 0xd9 0x09 0x04 0x02                   (....
+  extra(0) None
+
+RECORD 12: 2003-03-01T15:25:00 0x18
+  hex (2)
+0000   0x18 0x00                                  ..
+  decimal
+         24    0
+  datetime
+0000   0x00 0xd9 0x0f 0x01 0x03                   .....
+  extra(0) None
+
+RECORD 13: 2015-04-11T23:00:36 0x07
+  hex (45)
+0000   0x07 0x00 0x00 0x00 0x08 0x24 0x82 0x6c    .....$.l
+0008   0x24 0x82 0x05 0x0c 0x00 0xe8 0x00 0x00    $.......
+0010   0x00 0x00 0x00 0x08 0x00 0x08 0x64 0x00    ......d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00                   .....
+  decimal
+          7    0    0    0    8   36  130  108
+         36  130    5   12    0  232    0    0
+          0    0    0    8    0    8  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0
+  datetime
+0000   0x64 0x00 0x17 0xdb 0x0f                   d....
+  extra(0) None
+
+RECORD 14: 2003-03-01T15:27:34 0x01
+  hex (4)
+0000   0x01 0x03 0x17 0x00                        ....
+  decimal
+          1    3   23    0
+  datetime
+0000   0x22 0xdb 0x0f 0x01 0x03                   "....
+  extra(0) None
+
+RECORD 15: 2004-03-01T15:27:00 0x18
+  hex (2)
+0000   0x18 0x00                                  ..
+  decimal
+         24    0
+  datetime
+0000   0x00 0xdb 0x0f 0x01 0x04                   .....
+  extra(0) None
+
+RECORD 16: 2004-03-01T15:27:33 0x07
+  hex (47)
+0000   0x07 0x00 0x00 0x00 0x02 0x21 0x83 0x6c    .....!.l
+0008   0x21 0x83 0x05 0x0c 0x00 0xe8 0x00 0x00    !.......
+0010   0x00 0x00 0x00 0x02 0x00 0x02 0x64 0x00    ......d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x64 0x00         .....d.
+  decimal
+          7    0    0    0    2   33  131  108
+         33  131    5   12    0  232    0    0
+          0    0    0    2    0    2  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0  100    0
+  datetime
+0000   0x21 0xdb 0x0f 0x01 0x04                   !....
+  extra(0) None
+
+RECORD 17: 2004-03-01T15:27:49 0x17
+  hex (2)
+0000   0x17 0x00                                  ..
+  decimal
+         23    0
+  datetime
+0000   0x31 0xdb 0x0f 0x01 0x04                   1....
+  extra(0) None
+
+RECORD 18: 2012-04-01T15:27:00 0x18
+  hex (2)
+0000   0x18 0x00                                  ..
+  decimal
+         24    0
+  datetime
+0000   0x40 0x1b 0x0f 0x01 0x0c                   @....
+  extra(0) None
+
+RECORD 19: 2012-04-01T15:28:49 0x07
+  hex (47)
+0000   0x07 0x00 0x00 0x00 0x00 0x21 0x84 0x6c    .....!.l
+0008   0x21 0x84 0x05 0x0c 0x00 0xe8 0x00 0x00    !.......
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x64 0x01         .....d.
+  decimal
+          7    0    0    0    0   33  132  108
+         33  132    5   12    0  232    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0  100    1
+  datetime
+0000   0x71 0x1c 0x0f 0x01 0x0c                   q....
+  extra(0) None
+
+RECORD 20: 2012-04-01T15:29:16 0x17
+  hex (2)
+0000   0x17 0x00                                  ..
+  decimal
+         23    0
+  datetime
+0000   0x50 0x1d 0x0f 0x01 0x0c                   P....
+  extra(0) None
+
+RECORD 21: 2005-07-08T06:07:00 0x18
+  hex (2)
+0000   0x18 0x00                                  ..
+  decimal
+         24    0
+  datetime
+0000   0x40 0xc7 0x06 0x08 0x05                   @....
+  extra(0) None
+
+RECORD 22: 2007-12-05T08:38:23 0x07
+  hex (50)
+0000   0x07 0x00 0x00 0x00 0x02 0x41 0x0c 0x6c    .....A.l
+0008   0x41 0x0c 0x05 0x0c 0x00 0xe8 0x00 0x00    A.......
+0010   0x00 0x00 0x00 0x02 0x00 0x02 0x64 0x00    ......d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x01 0x28 0x28    ......((
+0030   0x00 0x65                                  .e
+  decimal
+          7    0    0    0    2   65   12  108
+         65   12    5   12    0  232    0    0
+          0    0    0    2    0    2  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    1   40   40
+          0  101
+  datetime
+0000   0xd7 0x26 0x08 0x05 0x07                   .&...
+  extra(0) None
+
+RECORD 23: 2005-07-09T05:45:53 0x00
+  hex (46)
+0000   0x00 0x00 0x03 0x96 0x68 0x85 0x6c 0x68    ....h.lh
+0008   0x85 0x05 0x00 0x60 0x60 0x60 0x01 0x00    ...```..
+0010   0x00 0x03 0x96 0x02 0xf6 0x53 0x00 0xa0    .....S..
+0018   0x11 0x00 0x00 0x00 0xa0 0x11 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0xa0 0x64 0x01    ......d.
+0028   0x00 0x00 0x00 0x01 0x5b 0x64              ....[d
+  decimal
+          0    0    3  150  104  133  108  104
+        133    5    0   96   96   96    1    0
+          0    3  150    2  246   83    0  160
+         17    0    0    0  160   17    0    0
+          0    0    0    0    0  160  100    1
+          0    0    0    1   91  100
+  datetime
+0000   0x75 0xed 0x05 0x09 0x05                   u....
+  extra(0) None
+
+RECORD 24: 2005-07-09T05:46:07 0x01
+  hex (24)
+0000   0x01 0x50 0x0a 0x32 0x64 0x00 0x01 0x00    .P.2d...
+0008   0x00 0x00 0x00 0x01 0x64 0x01 0x01 0x01    ....d...
+0010   0x00 0x75 0xed 0x25 0x09 0x05 0x5b 0x64    .u.%..[d
+  decimal
+          1   80   10   50  100    0    1    0
+          0    0    0    1  100    1    1    1
+          0  117  237   37    9    5   91  100
+  datetime
+0000   0x47 0xee 0x05 0x09 0x05                   G....
+  extra(0) None
+
+RECORD 25: 2003-05-04T05:28:36 0x02
+  hex (12)
+0000   0x02 0x50 0x0a 0x32 0x64 0x00 0x02 0x00    .P.2d...
+0008   0x00 0x01 0x00 0x02                        ....
+  decimal
+          2   80   10   50  100    0    2    0
+          0    1    0    2
+  datetime
+0000   0x64 0x5c 0x05 0x04 0x03                   d\...
+  extra(0) None
+
+RECORD 26: 2005-07-09T05:46:24 0x44
+  hex (12)
+0000   0x44 0x01 0x02 0x02 0x00 0x48 0xee 0x25    D....H.%
+0008   0x09 0x05 0x5b 0x64                        ..[d
+  decimal
+         68    1    2    2    0   72  238   37
+          9    5   91  100
+  datetime
+0000   0x58 0xee 0x05 0x09 0x05                   X....
+  extra(0) None
+
+RECORD 27: 2003-05-12T05:28:36 0x03
+  hex (12)
+0000   0x03 0x50 0x0a 0x32 0x64 0x00 0x03 0x00    .P.2d...
+0008   0x00 0x03 0x00 0x03                        ....
+  decimal
+          3   80   10   50  100    0    3    0
+          0    3    0    3
+  datetime
+0000   0x64 0x5c 0x05 0x0c 0x03                   d\...
+  extra(4) 
+0000   0x44 0x01 0x03 0x03                        D...
+         68    1    3    3
+
+RECORD 28: 2007-12-05T09:37:46 0x00
+  hex (2)
+0000   0x00 0x58                                  .X
+  decimal
+          0   88
+  datetime
+0000   0xee 0x25 0x09 0x05 0x07                   .%...
+  extra(0) None
+
+RECORD 29: 2003-01-08T00:33:54 0x00
+  hex (20)
+0000   0x00 0x00 0x03 0x4e 0x69 0x85 0x6c 0x69    ...Ni.li
+0008   0x85 0x05 0x00 0x64 0x64 0x65 0x04 0x00    ...dde..
+0010   0x00 0x03 0x4e 0x03                        ..N.
+  decimal
+          0    0    3   78  105  133  108  105
+        133    5    0  100  100  101    4    0
+          0    3   78    3
+  datetime
+0000   0x36 0x61 0x00 0x18 0x03                   6a...
+  extra(0) None
+
+RECORD 30: 2005-07-11T20:55:08 0x00
+  hex (66)
+0000   0x00 0x06 0x00 0x18 0x03 0x00 0x18 0x64    .......d
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x03 0x03    ........
+0010   0x00 0x00 0x00 0x07 0x00 0x00 0x03 0x36    .......6
+0018   0x6a 0x85 0x6c 0x6a 0x85 0x05 0x0c 0x00    j.lj....
+0020   0xe8 0x00 0x00 0x00 0x00 0x03 0x36 0x03    ......6.
+0028   0x36 0x64 0x00 0x00 0x00 0x00 0x00 0x00    6d......
+0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0040   0x64 0x01                                  d.
+  decimal
+          0    6    0   24    3    0   24  100
+          0    0    0    0    0    0    3    3
+          0    0    0    7    0    0    3   54
+        106  133  108  106  133    5   12    0
+        232    0    0    0    0    3   54    3
+         54  100    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+        100    1
+  datetime
+0000   0x48 0xf7 0x14 0x0b 0x05                   H....
+  extra(0) None
+
+RECORD 31: 2005-07-11T20:55:34 0x17
+  hex (2)
+0000   0x17 0x00                                  ..
+  decimal
+         23    0
+  datetime
+0000   0x62 0xf7 0x14 0x0b 0x05                   b....
+  extra(0) None
+
+RECORD 32: 2012-08-09T19:55:00 0x18
+  hex (2)
+0000   0x18 0x00                                  ..
+  decimal
+         24    0
+  datetime
+0000   0x80 0x37 0x13 0x09 0x0c                   .7...
+  extra(0) None
+
+RECORD 33: 2002-01-06T01:36:00 0x07
+  hex (44)
+0000   0x07 0x00 0x00 0x03 0x1e 0x6b 0x85 0x6c    .....k.l
+0008   0x6b 0x85 0x05 0x00 0x64 0x64 0x64 0x01    k...ddd.
+0010   0x00 0x00 0x03 0x1e 0x03 0x1e 0x64 0x00    ......d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00                        ....
+  decimal
+          7    0    0    3   30  107  133  108
+        107  133    5    0  100  100  100    1
+          0    0    3   30    3   30  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0
+  datetime
+0000   0x00 0x64 0x01 0xa6 0x02                   .d...
+  extra(0) None
+
+RECORD 34: 2009-02-04T02:50:00 0x14
+  hex (4)
+0000   0x14 0x09 0x0c 0x17                        ....
+  decimal
+         20    9   12   23
+  datetime
+0000   0x00 0xb2 0x02 0x14 0x09                   .....
+  extra(0) None
+
+RECORD 35: 2013-08-01T20:02:00 0x0c
+  hex (3)
+0000   0x0c 0x18 0x00                             ...
+  decimal
+         12   24    0
+  datetime
+0000   0x80 0x02 0x14 0x01 0x0d                   .....
+  extra(0) None
+
+RECORD 36: 2003-01-05T01:36:00 0x07
+  hex (44)
+0000   0x07 0x00 0x00 0x00 0x0a 0x89 0x0c 0x6c    .......l
+0008   0x89 0x0c 0x05 0x0c 0x00 0xe8 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x0a 0x00 0x0a 0x64 0x00    ......d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00                        ....
+  decimal
+          7    0    0    0   10  137   12  108
+        137   12    5   12    0  232    0    0
+          0    0    0   10    0   10  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0
+  datetime
+0000   0x00 0x64 0x01 0x85 0x03                   .d...
+  extra(0) None
+
+RECORD 37: 2013-08-01T20:03:13 0x14
+  hex (5)
+0000   0x14 0x01 0x0d 0x17 0x00                   .....
+  decimal
+         20    1   13   23    0
+  datetime
+0000   0x8d 0x03 0x14 0x01 0x0d                   .....
+  extra(0) None
+
+RECORD 38: 2012-06-05T13:01:44 0x18
+  hex (14)
+0000   0x18 0x00 0x80 0x03 0x14 0x01 0x10 0x07    ........
+0008   0x00 0x00 0x00 0x02 0x81 0x0d              ......
+  decimal
+         24    0  128    3   20    1   16    7
+          0    0    0    2  129   13
+  datetime
+0000   0x6c 0x81 0x0d 0x05 0x0c                   l....
+  extra(0) None
+
+RECORD 39: 2003-01-09T01:36:00 0x00
+  hex (32)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x02    ........
+0008   0x00 0x02 0x64 0x00 0x00 0x00 0x00 0x00    ..d.....
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+  decimal
+          0  232    0    0    0    0    0    2
+          0    2  100    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+  datetime
+0000   0x00 0x64 0x01 0xb9 0x03                   .d...
+  extra(0) None
+
+RECORD 40: 2012-06-05T16:01:44 0x14
+  hex (24)
+0000   0x14 0x01 0x10 0x17 0x00 0xa2 0x04 0x14    ........
+0008   0x01 0x10 0x18 0x00 0x80 0x04 0x14 0x01    ........
+0010   0x12 0x07 0x00 0x00 0x00 0x04 0x81 0x10    ........
+  decimal
+         20    1   16   23    0  162    4   20
+          1   16   24    0  128    4   20    1
+         18    7    0    0    0    4  129   16
+  datetime
+0000   0x6c 0x81 0x10 0x05 0x0c                   l....
+  extra(0) None
+
+RECORD 41: 2004-01-11T01:36:00 0x00
+  hex (32)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x04    ........
+0008   0x00 0x04 0x64 0x00 0x00 0x00 0x00 0x00    ..d.....
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+  decimal
+          0  232    0    0    0    0    0    4
+          0    4  100    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+  datetime
+0000   0x00 0x64 0x01 0xbb 0x04                   .d...
+  extra(0) None
+
+RECORD 42: 2008-01-06T01:36:18 0x14
+  hex (2)
+0000   0x14 0x01                                  ..
+  decimal
+         20    1
+  datetime
+0000   0x12 0x64 0x01 0x96 0x08                   .d...
+  extra(0) None
+
+RECORD 43: 2012-08-01T20:08:00 0x14
+  hex (12)
+0000   0x14 0x01 0x12 0x17 0x00 0x9f 0x08 0x14    ........
+0008   0x01 0x12 0x18 0x00                        ....
+  decimal
+         20    1   18   23    0  159    8   20
+          1   18   24    0
+  datetime
+0000   0x80 0x08 0x14 0x01 0x0c                   .....
+  extra(0) None
+
+RECORD 44: 2012-08-01T20:22:55 0x07
+  hex (47)
+0000   0x07 0x00 0x00 0x00 0x06 0x81 0x12 0x6c    .......l
+0008   0x81 0x12 0x05 0x0c 0x00 0xe8 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x06 0x00 0x06 0x64 0x00    ......d.
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x1a 0x00         .......
+  decimal
+          7    0    0    0    6  129   18  108
+        129   18    5   12    0  232    0    0
+          0    0    0    6    0    6  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0   26    0
+  datetime
+0000   0xb7 0x16 0x14 0x01 0x0c                   .....
+  extra(0) None
+
+RECORD 45: 2012-08-01T20:27:20 0x1a
+  hex (2)
+0000   0x1a 0x01                                  ..
+  decimal
+         26    1
+  datetime
+0000   0x94 0x1b 0x14 0x01 0x0c                   .....
+  extra(0) None
+
+RECORD 46: 2012-08-01T20:27:21 0x1a
+  hex (2)
+0000   0x1a 0x00                                  ..
+  decimal
+         26    0
+  datetime
+0000   0x95 0x1b 0x14 0x01 0x0c                   .....
+  extra(0) None
+
+RECORD 47: 2012-08-01T20:28:24 0x1a
+  hex (2)
+0000   0x1a 0x01                                  ..
+  decimal
+         26    1
+  datetime
+0000   0x98 0x1c 0x14 0x01 0x0c                   .....
+  extra(0) None
+
+RECORD 48: 2012-08-01T20:28:53 0x1a
+  hex (2)
+0000   0x1a 0x00                                  ..
+  decimal
+         26    0
+  datetime
+0000   0xb5 0x1c 0x14 0x01 0x0c                   .....
+  extra(0) None
+
+RECORD 49: 2012-08-01T20:30:00 0x1a
+  hex (2)
+0000   0x1a 0x01                                  ..
+  decimal
+         26    1
+  datetime
+0000   0x80 0x1e 0x14 0x01 0x0c                   .....
+  extra(0) None
+
+RECORD 50: 2012-08-01T20:43:59 0x1a
+  hex (2)
+0000   0x1a 0x00                                  ..
+  decimal
+         26    0
+  datetime
+0000   0xbb 0x2b 0x14 0x01 0x0c                   .+...
+  extra(0) None
+
+RECORD 51: 2012-08-01T20:44:57 0x1a
+  hex (2)
+0000   0x1a 0x01                                  ..
+  decimal
+         26    1
+  datetime
+0000   0xb9 0x2c 0x14 0x01 0x0c                   .,...
+  extra(0) None
+
+RECORD 52: 2012-08-01T21:25:17 0x21
+  hex (2)
+0000   0x21 0x00                                  !.
+  decimal
+         33    0
+  datetime
+0000   0x91 0x19 0x15 0x01 0x0c                   .....
+  extra(0) None
+
+
+```
+
+### logs/ReadHistoryData-page-4.data: 20 records
+```
+RECORD 0: 2012-04-05T00:47:44 0x6c
+  hex (45)
+0000   0x6c 0x2e 0x00 0x05 0x0c 0x00 0xe8 0x00    l.......
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x07 0x00    ........
+0028   0x00 0x00 0x00 0x2f 0x00                   .../.
+  decimal
+        108   46    0    5   12    0  232    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    7    0
+          0    0    0   47    0
+  datetime
+0000   0x6c 0x2f 0x00 0x05 0x0c                   l/...
+  extra(0) None
+
+RECORD 1: 2012-04-05T00:48:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x30 0x00    ......0.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   48    0
+  datetime
+0000   0x6c 0x30 0x00 0x05 0x0c                   l0...
+  extra(0) None
+
+RECORD 2: 2012-04-05T00:49:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x31 0x00    ......1.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   49    0
+  datetime
+0000   0x6c 0x31 0x00 0x05 0x0c                   l1...
+  extra(0) None
+
+RECORD 3: 2012-04-05T00:50:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x32 0x00    ......2.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   50    0
+  datetime
+0000   0x6c 0x32 0x00 0x05 0x0c                   l2...
+  extra(0) None
+
+RECORD 4: 2012-04-05T00:51:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x33 0x00    ......3.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   51    0
+  datetime
+0000   0x6c 0x33 0x00 0x05 0x0c                   l3...
+  extra(0) None
+
+RECORD 5: 2012-04-05T00:52:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x34 0x00    ......4.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   52    0
+  datetime
+0000   0x6c 0x34 0x00 0x05 0x0c                   l4...
+  extra(0) None
+
+RECORD 6: 2012-04-05T00:53:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x35 0x00    ......5.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   53    0
+  datetime
+0000   0x6c 0x35 0x00 0x05 0x0c                   l5...
+  extra(0) None
+
+RECORD 7: 2012-04-05T00:54:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x36 0x00    ......6.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   54    0
+  datetime
+0000   0x6c 0x36 0x00 0x05 0x0c                   l6...
+  extra(0) None
+
+RECORD 8: 2012-04-05T00:55:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x37 0x00    ......7.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   55    0
+  datetime
+0000   0x6c 0x37 0x00 0x05 0x0c                   l7...
+  extra(0) None
+
+RECORD 9: 2012-04-05T00:56:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x38 0x00    ......8.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   56    0
+  datetime
+0000   0x6c 0x38 0x00 0x05 0x0c                   l8...
+  extra(0) None
+
+RECORD 10: 2012-04-05T00:57:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x39 0x00    ......9.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   57    0
+  datetime
+0000   0x6c 0x39 0x00 0x05 0x0c                   l9...
+  extra(0) None
+
+RECORD 11: 2012-04-05T00:58:44 0x00
+  hex (47)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x19 0x00 0x00 0x82 0x0d 0x1a 0x00    ........
+0028   0x07 0x00 0x00 0x00 0x00 0x3a 0x00         .....:.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0   25    0    0  130   13   26    0
+          7    0    0    0    0   58    0
+  datetime
+0000   0x6c 0x3a 0x00 0x05 0x0c                   l:...
+  extra(0) None
+
+RECORD 12: 2012-04-05T00:59:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x3b 0x00    ......;.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   59    0
+  datetime
+0000   0x6c 0x3b 0x00 0x05 0x0c                   l;...
+  extra(0) None
+
+RECORD 13: 2010-04-08T09:01:36 0x00
+  hex (234)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x3c 0x00    ......<.
+0028   0x6c 0x3c 0x00 0x05 0x0c 0x00 0xe8 0x00    l<......
+0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0040   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0048   0x00 0x00 0x00 0x00 0x00 0x00 0x1a 0x00    ........
+0050   0x2a 0x8c 0x17 0x1d 0x00 0x1a 0x01 0x06    *.......
+0058   0x8d 0x17 0x1d 0x00 0x21 0x00 0x07 0x8e    ....!...
+0060   0x17 0x1d 0x00 0x03 0x00 0x00 0x00 0x0f    ........
+0068   0x23 0x8e 0x37 0x1d 0x00 0x03 0x00 0x03    #.7.....
+0070   0x00 0x03 0x32 0x8e 0x17 0x1d 0x00 0x64    ..2....d
+0078   0x01 0x00 0x90 0x17 0x1d 0x00 0x17 0x00    ........
+0080   0x05 0x90 0x17 0x1d 0x00 0x18 0x00 0x00    ........
+0088   0x90 0x17 0x1d 0x00 0x64 0x00 0x03 0x90    ....d...
+0090   0x17 0x1d 0x00 0x17 0x00 0x06 0x90 0x17    ........
+0098   0x1d 0x00 0x18 0x00 0x00 0x90 0x17 0x1d    ........
+00A0   0x00 0x64 0x01 0x03 0x90 0x17 0x1d 0x00    .d......
+00A8   0x64 0x00 0x07 0x90 0x17 0x1d 0x00 0x17    d.......
+00B0   0x00 0x10 0x91 0x17 0x1d 0x00 0x18 0x00    ........
+00B8   0x00 0xa8 0x0a 0x01 0x00 0x07 0x00 0x00    ........
+00C0   0x00 0x00 0x3d 0x00 0x6c 0x3d 0x00 0x05    ..=.l=..
+00C8   0x0c 0x00 0xe8 0x00 0x00 0x00 0x00 0x00    ........
+00D0   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+00D8   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+00E0   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+00E8   0x00 0x00                                  ..
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   60    0
+        108   60    0    5   12    0  232    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0   26    0
+         42  140   23   29    0   26    1    6
+        141   23   29    0   33    0    7  142
+         23   29    0    3    0    0    0   15
+         35  142   55   29    0    3    0    3
+          0    3   50  142   23   29    0  100
+          1    0  144   23   29    0   23    0
+          5  144   23   29    0   24    0    0
+        144   23   29    0  100    0    3  144
+         23   29    0   23    0    6  144   23
+         29    0   24    0    0  144   23   29
+          0  100    1    3  144   23   29    0
+        100    0    7  144   23   29    0   23
+          0   16  145   23   29    0   24    0
+          0  168   10    1    0    7    0    0
+          0    0   61    0  108   61    0    5
+         12    0  232    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0
+  datetime
+0000   0x64 0x01 0x09 0xa8 0x0a                   d....
+  extra(0) None
+
+RECORD 14: 2010-04-08T12:00:36 0x01
+  hex (2)
+0000   0x01 0x00                                  ..
+  decimal
+          1    0
+  datetime
+0000   0x64 0x00 0x0c 0xa8 0x0a                   d....
+  extra(0) None
+
+RECORD 15: 2010-04-08T14:01:36 0x01
+  hex (2)
+0000   0x01 0x00                                  ..
+  decimal
+          1    0
+  datetime
+0000   0x64 0x01 0x0e 0xa8 0x0a                   d....
+  extra(0) None
+
+RECORD 16: 2010-04-08T16:00:36 0x01
+  hex (2)
+0000   0x01 0x00                                  ..
+  decimal
+          1    0
+  datetime
+0000   0x64 0x00 0x10 0xa8 0x0a                   d....
+  extra(0) None
+
+RECORD 17: 2012-04-05T00:33:44 0x01
+  hex (44)
+0000   0x01 0x00 0x1e 0x00 0x36 0x8b 0x0b 0x41    ....6..A
+0008   0x00 0x1f 0x00 0x15 0x8c 0x0b 0x41 0x00    ......A.
+0010   0x64 0x00 0x27 0x9b 0x13 0x01 0x00 0x17    d.'.....
+0018   0x00 0x32 0x9b 0x13 0x01 0x00 0x18 0x00    .2......
+0020   0x00 0x9b 0x13 0x02 0x00 0x07 0x00 0x00    ........
+0028   0x02 0x00 0x21 0x00                        ..!.
+  decimal
+          1    0   30    0   54  139   11   65
+          0   31    0   21  140   11   65    0
+        100    0   39  155   19    1    0   23
+          0   50  155   19    1    0   24    0
+          0  155   19    2    0    7    0    0
+          2    0   33    0
+  datetime
+0000   0x6c 0x21 0x00 0x05 0x0c                   l!...
+  extra(0) None
+
+RECORD 18: 2007-08-01T01:19:28 0x00
+  hex (50)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x02 0x00    ........
+0008   0x02 0x00 0x64 0x00 0x00 0x00 0x00 0x00    ..d.....
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x64 0x00 0x0c 0x9c 0x13 0x02 0x00    .d......
+0028   0x17 0x00 0x13 0x9c 0x13 0x02 0x00 0x18    ........
+0030   0x00 0x00                                  ..
+  decimal
+          0  232    0    0    0    0    2    0
+          2    0  100    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0  100    0   12  156   19    2    0
+         23    0   19  156   19    2    0   24
+          0    0
+  datetime
+0000   0x9c 0x13 0x01 0x01 0x07                   .....
+  extra(0) None
+
+RECORD 19: 2012-04-05T00:34:44 0x00
+  hex (6)
+0000   0x00 0x00 0x00 0x00 0x22 0x00              ....".
+  decimal
+          0    0    0    0   34    0
+  datetime
+0000   0x6c 0x22 0x00 0x05 0x0c                   l"...
+  extra(0) None
+
+
+```
+
+### logs/ReadHistoryData-page-5.data: 13 records
+```
+RECORD 0: 2012-04-05T00:33:44 0x6c
+  hex (405)
+0000   0x6c 0x17 0x80 0x05 0x0c 0x00 0xe8 0x00    l.......
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x07 0x00    ........
+0028   0x00 0x00 0x00 0x18 0x80 0x6c 0x18 0x80    .....l..
+0030   0x05 0x0c 0x00 0xe8 0x00 0x00 0x00 0x00    ........
+0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0040   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0048   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0050   0x00 0x00 0x00 0x07 0x00 0x00 0x00 0x00    ........
+0058   0x19 0x80 0x6c 0x19 0x80 0x05 0x0c 0x00    ..l.....
+0060   0xe8 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0068   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0070   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0078   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0080   0x07 0x00 0x00 0x00 0x00 0x1a 0x80 0x6c    .......l
+0088   0x1a 0x80 0x05 0x0c 0x00 0xe8 0x00 0x00    ........
+0090   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0098   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+00A0   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+00A8   0x00 0x00 0x00 0x00 0x00 0x07 0x00 0x00    ........
+00B0   0x00 0x00 0x1b 0x80 0x6c 0x1b 0x80 0x05    ....l...
+00B8   0x0c 0x00 0xe8 0x00 0x00 0x00 0x00 0x00    ........
+00C0   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+00C8   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+00D0   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+00D8   0x00 0x00 0x07 0x00 0x00 0x00 0x00 0x1c    ........
+00E0   0x80 0x6c 0x1c 0x80 0x05 0x0c 0x00 0xe8    .l......
+00E8   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+00F0   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+00F8   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0100   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x07    ........
+0108   0x00 0x00 0x00 0x00 0x1d 0x80 0x6c 0x1d    ......l.
+0110   0x80 0x05 0x0c 0x00 0xe8 0x00 0x00 0x00    ........
+0118   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0120   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0128   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0130   0x00 0x00 0x00 0x00 0x07 0x00 0x00 0x00    ........
+0138   0x00 0x1e 0x80 0x6c 0x1e 0x80 0x05 0x0c    ...l....
+0140   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0148   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0150   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0158   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0160   0x00 0x07 0x00 0x00 0x00 0x00 0x1f 0x80    ........
+0168   0x6c 0x1f 0x80 0x05 0x0c 0x00 0xe8 0x00    l.......
+0170   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0178   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0180   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0188   0x00 0x00 0x00 0x00 0x00 0x00 0x07 0x00    ........
+0190   0x00 0x00 0x00 0x21 0x00                   ...!.
+  decimal
+        108   23  128    5   12    0  232    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    7    0
+          0    0    0   24  128  108   24  128
+          5   12    0  232    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    7    0    0    0    0
+         25  128  108   25  128    5   12    0
+        232    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          7    0    0    0    0   26  128  108
+         26  128    5   12    0  232    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    7    0    0
+          0    0   27  128  108   27  128    5
+         12    0  232    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    7    0    0    0    0   28
+        128  108   28  128    5   12    0  232
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    7
+          0    0    0    0   29  128  108   29
+        128    5   12    0  232    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    7    0    0    0
+          0   30  128  108   30  128    5   12
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   31  128
+        108   31  128    5   12    0  232    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    7    0
+          0    0    0   33    0
+  datetime
+0000   0x6c 0x21 0x00 0x05 0x0c                   l!...
+  extra(0) None
+
+RECORD 1: 2012-04-05T00:34:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x22 0x00    ......".
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   34    0
+  datetime
+0000   0x6c 0x22 0x00 0x05 0x0c                   l"...
+  extra(0) None
+
+RECORD 2: 2012-04-05T00:35:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x23 0x00    ......#.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   35    0
+  datetime
+0000   0x6c 0x23 0x00 0x05 0x0c                   l#...
+  extra(0) None
+
+RECORD 3: 2012-04-05T00:36:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x24 0x00    ......$.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   36    0
+  datetime
+0000   0x6c 0x24 0x00 0x05 0x0c                   l$...
+  extra(0) None
+
+RECORD 4: 2012-04-05T00:37:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x25 0x00    ......%.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   37    0
+  datetime
+0000   0x6c 0x25 0x00 0x05 0x0c                   l%...
+  extra(0) None
+
+RECORD 5: 2012-04-05T00:38:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x26 0x00    ......&.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   38    0
+  datetime
+0000   0x6c 0x26 0x00 0x05 0x0c                   l&...
+  extra(0) None
+
+RECORD 6: 2012-04-05T00:39:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x27 0x00    ......'.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   39    0
+  datetime
+0000   0x6c 0x27 0x00 0x05 0x0c                   l'...
+  extra(0) None
+
+RECORD 7: 2012-04-05T00:40:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x28 0x00    ......(.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   40    0
+  datetime
+0000   0x6c 0x28 0x00 0x05 0x0c                   l(...
+  extra(0) None
+
+RECORD 8: 2012-04-05T00:41:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x29 0x00    ......).
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   41    0
+  datetime
+0000   0x6c 0x29 0x00 0x05 0x0c                   l)...
+  extra(0) None
+
+RECORD 9: 2012-04-05T00:42:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x2a 0x00    ......*.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   42    0
+  datetime
+0000   0x6c 0x2a 0x00 0x05 0x0c                   l*...
+  extra(0) None
+
+RECORD 10: 2012-04-05T00:43:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x2b 0x00    ......+.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   43    0
+  datetime
+0000   0x6c 0x2b 0x00 0x05 0x0c                   l+...
+  extra(0) None
+
+RECORD 11: 2012-04-05T00:44:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x2c 0x00    ......,.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   44    0
+  datetime
+0000   0x6c 0x2c 0x00 0x05 0x0c                   l,...
+  extra(0) None
+
+RECORD 12: 2012-04-05T00:45:44 0x00
+  hex (40)
+0000   0x00 0xe8 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x07 0x00 0x00 0x00 0x00 0x2d 0x00    ......-.
+  decimal
+          0  232    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    7    0    0    0    0   45    0
+  datetime
+0000   0x6c 0x2d 0x00 0x05 0x0c                   l-...
+  extra(0) None
+
+
+```
+
+### RECORD 0: 2008-03-15T00:08:52 0x6c
+```
+  hex (601)
+0000   0x6c 0x03 0x80 0x05 0x0c 0x00 0xe8 0x00    l.......
+0008   0x00 0x00 0x00 0x03 0x36 0x03 0x36 0x64    ....6.6d
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x07 0x00    ........
+0028   0x00 0x03 0x36 0x04 0x80 0x6c 0x04 0x80    ..6..l..
+0030   0x05 0x0c 0x00 0xe8 0x00 0x00 0x00 0x00    ........
+0038   0x03 0x36 0x03 0x36 0x64 0x00 0x00 0x00    .6.6d...
+0040   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0048   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0050   0x00 0x00 0x00 0x07 0x00 0x00 0x03 0x36    .......6
+0058   0x05 0x80 0x6c 0x05 0x80 0x05 0x0c 0x00    ..l.....
+0060   0xe8 0x00 0x00 0x00 0x00 0x03 0x36 0x03    ......6.
+0068   0x36 0x64 0x00 0x00 0x00 0x00 0x00 0x00    6d......
+0070   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0078   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0080   0x07 0x00 0x00 0x03 0x36 0x06 0x80 0x6c    ....6..l
+0088   0x06 0x80 0x05 0x0c 0x00 0xe8 0x00 0x00    ........
+0090   0x00 0x00 0x03 0x36 0x03 0x36 0x64 0x00    ...6.6d.
+0098   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+00A0   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+00A8   0x00 0x00 0x00 0x00 0x00 0x21 0x00 0x38    .....!.8
+00B0   0x67 0x08 0x07 0x00 0x03 0x00 0x00 0x00    g.......
+00B8   0x12 0x16 0x70 0x28 0x07 0x00 0x34 0x9a    ..p(..4.
+00C0   0x21 0x70 0x08 0x07 0x00 0x03 0x00 0x03    !p......
+00C8   0x00 0x03 0x21 0x70 0x08 0x07 0x00 0x21    ..!p...!
+00D0   0x00 0x2f 0x40 0x09 0x07 0x00 0x07 0x00    ./@.....
+00D8   0x00 0x00 0x8c 0x07 0x80 0x6c 0x07 0x80    .....l..
+00E0   0x05 0x0c 0x00 0xe8 0x00 0x00 0x00 0x00    ........
+00E8   0x00 0x8c 0x00 0x8c 0x64 0x00 0x00 0x00    ....d...
+00F0   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+00F8   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0100   0x00 0x00 0x00 0x21 0x00 0x34 0x6f 0x02    ...!.4o.
+0108   0x08 0x00 0x03 0x00 0x00 0x00 0x0b 0x11    ........
+0110   0x76 0x23 0x08 0x00 0x03 0x00 0x03 0x00    v#......
+0118   0x03 0x1d 0x76 0x03 0x08 0x00 0x07 0x00    ..v.....
+0120   0x00 0x03 0x1e 0x08 0x80 0x6c 0x08 0x80    .....l..
+0128   0x05 0x0c 0x00 0xe8 0x00 0x00 0x00 0x00    ........
+0130   0x03 0x1e 0x03 0x1e 0x64 0x00 0x00 0x00    ....d...
+0138   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0140   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0148   0x00 0x00 0x00 0x07 0x00 0x00 0x03 0x36    .......6
+0150   0x09 0x80 0x6c 0x09 0x80 0x05 0x0c 0x00    ..l.....
+0158   0xe8 0x00 0x00 0x00 0x00 0x03 0x36 0x03    ......6.
+0160   0x36 0x64 0x00 0x00 0x00 0x00 0x00 0x00    6d......
+0168   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0170   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0178   0x07 0x00 0x00 0x03 0x36 0x0a 0x80 0x6c    ....6..l
+0180   0x0a 0x80 0x05 0x0c 0x00 0xe8 0x00 0x00    ........
+0188   0x00 0x00 0x03 0x36 0x03 0x36 0x64 0x00    ...6.6d.
+0190   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0198   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+01A0   0x00 0x00 0x00 0x00 0x00 0x07 0x00 0x00    ........
+01A8   0x03 0x36 0x0b 0x80 0x6c 0x0b 0x80 0x05    .6..l...
+01B0   0x0c 0x00 0xe8 0x00 0x00 0x00 0x00 0x03    ........
+01B8   0x36 0x03 0x36 0x64 0x00 0x00 0x00 0x00    6.6d....
+01C0   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+01C8   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+01D0   0x00 0x00 0x07 0x00 0x00 0x03 0x36 0x0c    ......6.
+01D8   0x80 0x6c 0x0c 0x80 0x05 0x0c 0x00 0xe8    .l......
+01E0   0x00 0x00 0x00 0x00 0x03 0x36 0x03 0x36    .....6.6
+01E8   0x64 0x00 0x00 0x00 0x00 0x00 0x00 0x00    d.......
+01F0   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+01F8   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x07    ........
+0200   0x00 0x00 0x03 0x36 0x0d 0x80 0x6c 0x0d    ...6..l.
+0208   0x80 0x05 0x0c 0x00 0xe8 0x00 0x00 0x00    ........
+0210   0x00 0x03 0x36 0x03 0x36 0x64 0x00 0x00    ..6.6d..
+0218   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0220   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0228   0x00 0x00 0x00 0x00 0x07 0x00 0x00 0x03    ........
+0230   0x36 0x0e 0x80 0x6c 0x0e 0x80 0x05 0x0c    6..l....
+0238   0x00 0xe8 0x00 0x00 0x00 0x00 0x03 0x36    .......6
+0240   0x03 0x36 0x64 0x00 0x00 0x00 0x00 0x00    .6d.....
+0248   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0250   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0258   0x00                                       .
+  decimal
+        108    3  128    5   12    0  232    0
+          0    0    0    3   54    3   54  100
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    7    0
+          0    3   54    4  128  108    4  128
+          5   12    0  232    0    0    0    0
+          3   54    3   54  100    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    7    0    0    3   54
+          5  128  108    5  128    5   12    0
+        232    0    0    0    0    3   54    3
+         54  100    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          7    0    0    3   54    6  128  108
+          6  128    5   12    0  232    0    0
+          0    0    3   54    3   54  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0   33    0   56
+        103    8    7    0    3    0    0    0
+         18   22  112   40    7    0   52  154
+         33  112    8    7    0    3    0    3
+          0    3   33  112    8    7    0   33
+          0   47   64    9    7    0    7    0
+          0    0  140    7  128  108    7  128
+          5   12    0  232    0    0    0    0
+          0  140    0  140  100    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0   33    0   52  111    2
+          8    0    3    0    0    0   11   17
+        118   35    8    0    3    0    3    0
+          3   29  118    3    8    0    7    0
+          0    3   30    8  128  108    8  128
+          5   12    0  232    0    0    0    0
+          3   30    3   30  100    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    7    0    0    3   54
+          9  128  108    9  128    5   12    0
+        232    0    0    0    0    3   54    3
+         54  100    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          7    0    0    3   54   10  128  108
+         10  128    5   12    0  232    0    0
+          0    0    3   54    3   54  100    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    7    0    0
+          3   54   11  128  108   11  128    5
+         12    0  232    0    0    0    0    3
+         54    3   54  100    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    7    0    0    3   54   12
+        128  108   12  128    5   12    0  232
+          0    0    0    0    3   54    3   54
+        100    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    7
+          0    0    3   54   13  128  108   13
+        128    5   12    0  232    0    0    0
+          0    3   54    3   54  100    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    7    0    0    3
+         54   14  128  108   14  128    5   12
+          0  232    0    0    0    0    3   54
+          3   54  100    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0
+  datetime
+0000   0x34 0xc8 0x00 0x4f 0x08                   4..O.
+  extra(0) None
+
+
+```
+
+### logs/ReadHistoryData-page-7.data: 17 records
+```
+RECORD 0: 2003-04-04T13:10:26 0x08
+  hex (334)
+0000   0x08 0x10 0x0a 0x72 0x43 0x01 0x00 0x00    ...rC...
+0008   0x02 0x00 0x02 0x04 0x00 0x04 0x08 0x00    ........
+0010   0x06 0x0c 0x00 0x08 0x10 0x00 0x0a 0x14    ........
+0018   0x00 0x0d 0x1a 0x00 0x0e 0x1c 0x00 0x10    ........
+0020   0x20 0x00 0x12 0x24 0x00 0x14 0x28 0x00     ..$..(.
+0028   0x16 0x2c 0x00 0x18 0x30 0x00 0x1a 0x34    .,..0..4
+0030   0x00 0x1c 0x38 0x00 0x1e 0x40 0x00 0x00    ..8..@..
+0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0040   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0048   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0050   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0058   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0060   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0068   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0070   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0078   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0080   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0088   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0090   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0098   0x09 0x1c 0x0a 0x72 0x43 0x01 0x00 0x00    ...rC...
+00A0   0x00 0x00 0x02 0x04 0x00 0x04 0x08 0x00    ........
+00A8   0x06 0x0c 0x00 0x08 0x10 0x00 0x0a 0x14    ........
+00B0   0x00 0x0d 0x1a 0x00 0x0e 0x1c 0x00 0x10    ........
+00B8   0x20 0x00 0x12 0x24 0x00 0x14 0x28 0x00     ..$..(.
+00C0   0x16 0x2c 0x00 0x18 0x30 0x00 0x1a 0x34    .,..0..4
+00C8   0x00 0x1c 0x38 0x00 0x1e 0x3c 0x00 0x20    ..8..<. 
+00D0   0x40 0x00 0x22 0x44 0x00 0x24 0x48 0x00    @."D.$H.
+00D8   0x26 0x4c 0x00 0x28 0x50 0x00 0x29 0x00    &L.(P.).
+00E0   0x00 0x2a 0x04 0x00 0x2b 0x06 0x00 0x2c    .*..+..,
+00E8   0x08 0x00 0x2d 0x08 0x00 0x2e 0x0a 0x00    ..-.....
+00F0   0x2f 0x0c 0x00 0x00 0x00 0x00 0x00 0x00    /.......
+00F8   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0100   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0108   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0110   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0118   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0120   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0128   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0130   0x1e 0x00 0x18 0x73 0x03 0x01 0x00 0x01    ...s....
+0138   0x14 0x03 0x00 0x0e 0x73 0x23 0x01 0x00    ....s#..
+0140   0x1f 0x00 0x1a 0x73 0x03 0x01 0x00 0x2d    ...s...-
+0148   0x01 0x0d 0x74 0x03 0x01 0x00              ..t...
+  decimal
+          8   16   10  114   67    1    0    0
+          2    0    2    4    0    4    8    0
+          6   12    0    8   16    0   10   20
+          0   13   26    0   14   28    0   16
+         32    0   18   36    0   20   40    0
+         22   44    0   24   48    0   26   52
+          0   28   56    0   30   64    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          9   28   10  114   67    1    0    0
+          0    0    2    4    0    4    8    0
+          6   12    0    8   16    0   10   20
+          0   13   26    0   14   28    0   16
+         32    0   18   36    0   20   40    0
+         22   44    0   24   48    0   26   52
+          0   28   56    0   30   60    0   32
+         64    0   34   68    0   36   72    0
+         38   76    0   40   80    0   41    0
+          0   42    4    0   43    6    0   44
+          8    0   45    8    0   46   10    0
+         47   12    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+         30    0   24  115    3    1    0    1
+         20    3    0   14  115   35    1    0
+         31    0   26  115    3    1    0   45
+          1   13  116    3    1    0
+  datetime
+0000   0x5a 0x0a 0x0d 0x74 0x03                   Z..t.
+  extra(0) None
+
+RECORD 1: 2003-05-10T05:28:36 0x01
+  hex (138)
+0000   0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0038   0x00 0x00 0x00 0x00 0x15 0x11 0x00 0x0a    ........
+0040   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0048   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x32    .......2
+0050   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0058   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x64    .......d
+0060   0x64 0x00 0x00 0x00 0x00 0x00 0x00 0x00    d.......
+0068   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0070   0x00 0x00 0x00 0x00 0x00 0x00 0x5f 0x5b    ......_[
+0078   0x64 0x1b 0x74 0x03 0x01 0x00 0x0a 0x50    d.t....P
+0080   0x0a 0x32 0x64 0x00 0x0a 0x00 0x00 0x03    .2d.....
+0088   0x00 0x0a                                  ..
+  decimal
+          1    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0   21   17    0   10
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0   50
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0  100
+        100    0    0    0    0    0    0    0
+          0    0    0    0    0    0    0    0
+          0    0    0    0    0    0   95   91
+        100   27  116    3    1    0   10   80
+         10   50  100    0   10    0    0    3
+          0   10
+  datetime
+0000   0x64 0x5c 0x05 0x0a 0x03                   d\...
+  extra(0) None
+
+RECORD 2: 2006-05-02T05:28:36 0x84
+  hex (77)
+0000   0x84 0x01 0x0a 0x0a 0x00 0x1b 0x74 0x23    ......t#
+0008   0x01 0x00 0x21 0x00 0x10 0x75 0x03 0x01    ..!..u..
+0010   0x00 0x21 0x00 0x16 0x75 0x03 0x01 0x00    .!..u...
+0018   0x03 0x00 0x00 0x00 0x0b 0x1b 0x75 0x23    ......u#
+0020   0x01 0x00 0x03 0x00 0x03 0x00 0x03 0x25    .......%
+0028   0x75 0x03 0x01 0x00 0x1e 0x00 0x2e 0x76    u......v
+0030   0x03 0x41 0x00 0x1f 0x00 0x07 0x77 0x03    .A....w.
+0038   0x41 0x00 0x5b 0x64 0x37 0x77 0x03 0x01    A.[d7w..
+0040   0x00 0x01 0x50 0x0a 0x32 0x64 0x00 0x01    ..P.2d..
+0048   0x00 0x00 0x0d 0x00 0x01                   .....
+  decimal
+        132    1   10   10    0   27  116   35
+          1    0   33    0   16  117    3    1
+          0   33    0   22  117    3    1    0
+          3    0    0    0   11   27  117   35
+          1    0    3    0    3    0    3   37
+        117    3    1    0   30    0   46  118
+          3   65    0   31    0    7  119    3
+         65    0   91  100   55  119    3    1
+          0    1   80   10   50  100    0    1
+          0    0   13    0    1
+  datetime
+0000   0x64 0x5c 0x05 0x32 0x06                   d\.2.
+  extra(0) None
+
+RECORD 3: 2003-05-08T12:36:27 0x44
+  hex (10)
+0000   0x44 0x01 0x01 0x01 0x00 0x38 0x77 0x23    D....8w#
+0008   0x01 0x00                                  ..
+  decimal
+         68    1    1    1    0   56  119   35
+          1    0
+  datetime
+0000   0x5b 0x64 0x0c 0x78 0x03                   [d.x.
+  extra(0) None
+
+RECORD 4: 2007-05-06T05:28:36 0x01
+  hex (14)
+0000   0x01 0x00 0x02 0x50 0x0a 0x32 0x64 0x00    ...P.2d.
+0008   0x02 0x00 0x00 0x0e 0x00 0x02              ......
+  decimal
+          1    0    2   80   10   50  100    0
+          2    0    0   14    0    2
+  datetime
+0000   0x64 0x5c 0x05 0x36 0x07                   d\.6.
+  extra(0) None
+
+RECORD 5: 2007-05-14T05:28:36 0x44
+  hex (29)
+0000   0x44 0x01 0x02 0x02 0x00 0x0c 0x78 0x23    D.....x#
+0008   0x01 0x00 0x5b 0x64 0x27 0x78 0x03 0x01    ..[d'x..
+0010   0x00 0x03 0x50 0x0a 0x32 0x64 0x00 0x03    ..P.2d..
+0018   0x00 0x00 0x10 0x00 0x03                   .....
+  decimal
+         68    1    2    2    0   12  120   35
+          1    0   91  100   39  120    3    1
+          0    3   80   10   50  100    0    3
+          0    0   16    0    3
+  datetime
+0000   0x64 0x5c 0x05 0x3e 0x07                   d\.>.
+  extra(0) None
+
+RECORD 6: 2003-05-09T05:36:27 0x44
+  hex (10)
+0000   0x44 0x01 0x03 0x03 0x00 0x27 0x78 0x23    D....'x#
+0008   0x01 0x00                                  ..
+  decimal
+         68    1    3    3    0   39  120   35
+          1    0
+  datetime
+0000   0x5b 0x64 0x05 0x79 0x03                   [d.y.
+  extra(0) None
+
+RECORD 7: 2008-05-10T05:28:36 0x01
+  hex (14)
+0000   0x01 0x00 0x04 0x50 0x0a 0x32 0x64 0x00    ...P.2d.
+0008   0x04 0x00 0x00 0x13 0x00 0x04              ......
+  decimal
+          1    0    4   80   10   50  100    0
+          4    0    0   19    0    4
+  datetime
+0000   0x64 0x5c 0x05 0x4a 0x08                   d\.J.
+  extra(0) None
+
+RECORD 8: 2008-05-10T05:28:36 0x44
+  hex (29)
+0000   0x44 0x01 0x04 0x04 0x00 0x05 0x79 0x23    D.....y#
+0008   0x01 0x00 0x5b 0x64 0x20 0x79 0x03 0x01    ..[d y..
+0010   0x00 0x05 0x50 0x0a 0x32 0x64 0x00 0x05    ..P.2d..
+0018   0x00 0x00 0x17 0x00 0x05                   .....
+  decimal
+         68    1    4    4    0    5  121   35
+          1    0   91  100   32  121    3    1
+          0    5   80   10   50  100    0    5
+          0    0   23    0    5
+  datetime
+0000   0x64 0x5c 0x05 0x5a 0x08                   d\.Z.
+  extra(0) None
+
+RECORD 9: 2003-05-10T06:36:27 0x44
+  hex (10)
+0000   0x44 0x01 0x05 0x05 0x00 0x20 0x79 0x23    D.... y#
+0008   0x01 0x00                                  ..
+  decimal
+         68    1    5    5    0   32  121   35
+          1    0
+  datetime
+0000   0x5b 0x64 0x06 0x7a 0x03                   [d.z.
+  extra(0) None
+
+RECORD 10: 2009-05-14T05:28:36 0x01
+  hex (14)
+0000   0x01 0x00 0x06 0x50 0x0a 0x32 0x64 0x00    ...P.2d.
+0008   0x06 0x00 0x00 0x1c 0x00 0x06              ......
+  decimal
+          1    0    6   80   10   50  100    0
+          6    0    0   28    0    6
+  datetime
+0000   0x64 0x5c 0x05 0x6e 0x09                   d\.n.
+  extra(0) None
+
+RECORD 11: 2009-05-06T05:28:36 0x44
+  hex (29)
+0000   0x44 0x01 0x06 0x06 0x00 0x07 0x7a 0x23    D.....z#
+0008   0x01 0x00 0x5b 0x64 0x2b 0x7a 0x03 0x01    ..[d+z..
+0010   0x00 0x07 0x50 0x0a 0x32 0x64 0x00 0x07    ..P.2d..
+0018   0x00 0x00 0x22 0x00 0x07                   .."..
+  decimal
+         68    1    6    6    0    7  122   35
+          1    0   91  100   43  122    3    1
+          0    7   80   10   50  100    0    7
+          0    0   34    0    7
+  datetime
+0000   0x64 0x5c 0x05 0x86 0x09                   d\...
+  extra(0) None
+
+RECORD 12: 2008-01-08T01:04:10 0x44
+  hex (36)
+0000   0x44 0x01 0x07 0x07 0x00 0x2b 0x7a 0x23    D....+z#
+0008   0x01 0x00 0x5b 0x64 0x1f 0x7b 0x03 0x01    ..[d.{..
+0010   0x00 0x08 0x50 0x0a 0x32 0x64 0x00 0x08    ..P.2d..
+0018   0x00 0x00 0x29 0x00 0x08 0x64 0x5c 0x08    ..)..d\.
+0020   0x0a 0x00 0x44 0x98                        ..D.
+  decimal
+         68    1    7    7    0   43  122   35
+          1    0   91  100   31  123    3    1
+          0    8   80   10   50  100    0    8
+          0    0   41    0    8  100   92    8
+         10    0   68  152
+  datetime
+0000   0x0a 0x44 0x01 0x08 0x08                   .D...
+  extra(0) None
+
+RECORD 13: 2009-01-09T01:04:11 0x00
+  hex (32)
+0000   0x00 0x1f 0x7b 0x23 0x01 0x00 0x5b 0x64    ..{#..[d
+0008   0x10 0x40 0x04 0x01 0x00 0x09 0x50 0x0a    .@....P.
+0010   0x32 0x64 0x00 0x09 0x00 0x00 0x31 0x00    2d....1.
+0018   0x09 0x64 0x5c 0x08 0x2a 0x01 0x44 0x98    .d\.*.D.
+  decimal
+          0   31  123   35    1    0   91  100
+         16   64    4    1    0    9   80   10
+         50  100    0    9    0    0   49    0
+          9  100   92    8   42    1   68  152
+  datetime
+0000   0x0b 0x44 0x01 0x09 0x09                   .D...
+  extra(0) None
+
+RECORD 14: 2004-05-01T06:36:27 0x00
+  hex (6)
+0000   0x00 0x10 0x40 0x24 0x01 0x00              ..@$..
+  decimal
+          0   16   64   36    1    0
+  datetime
+0000   0x5b 0x64 0x06 0x41 0x04                   [d.A.
+  extra(0) None
+
+RECORD 15: 2002-05-14T08:28:36 0x01
+  hex (14)
+0000   0x01 0x00 0x0a 0x50 0x0a 0x32 0x64 0x00    ...P.2d.
+0008   0x0a 0x00 0x00 0x3a 0x00 0x0a              ...:..
+  decimal
+          1    0   10   80   10   50  100    0
+         10    0    0   58    0   10
+  datetime
+0000   0x64 0x5c 0x08 0x4e 0x02                   d\.N.
+  extra(0) None
+
+RECORD 16: 2010-01-10T01:04:12 0x44
+  hex (2)
+0000   0x44 0x98                                  D.
+  decimal
+         68  152
+  datetime
+0000   0x0c 0x44 0x01 0x0a 0x0a                   .D...
+  extra(0) None
+
+
+```
+
+### logs/ReadHistoryData-page-8.data: 14 records
+```
+RECORD 0: 2006-05-04T01:32:00 0x06
+  hex (5)
+0000   0x06 0x15 0x05 0x2e 0x00                   .....
+  decimal
+          6   21    5   46    0
+  datetime
+0000   0x40 0x60 0x01 0x04 0x06                   @`...
+  extra(0) None
+
+RECORD 1: 2006-05-04T01:32:00 0x36
+  hex (4)
+0000   0x36 0x05 0x36 0x00                        6.6.
+  decimal
+         54    5   54    0
+  datetime
+0000   0x40 0x60 0x01 0x04 0x06                   @`...
+  extra(0) None
+
+RECORD 2: 2012-12-15T06:04:01 0x2f
+  hex (6)
+0000   0x2f 0x18 0x41 0x00 0x40 0x20              /.A.@ 
+  decimal
+         47   24   65    0   64   32
+  datetime
+0000   0xc1 0x04 0x06 0x2f 0x0c                   .../.
+  extra(0) None
+
+RECORD 3: 2012-12-15T06:04:01 0x5f
+  hex (4)
+0000   0x5f 0x00 0x40 0x20                        _.@ 
+  decimal
+         95    0   64   32
+  datetime
+0000   0xc1 0x04 0x06 0x2f 0x0c                   .../.
+  extra(0) None
+
+RECORD 4: 2012-12-15T06:04:01 0x70
+  hex (4)
+0000   0x70 0x00 0x40 0x20                        p.@ 
+  decimal
+        112    0   64   32
+  datetime
+0000   0xc1 0x04 0x06 0x2f 0x0c                   .../.
+  extra(0) None
+
+RECORD 5: 2012-12-15T06:04:01 0x81
+  hex (4)
+0000   0x81 0x00 0x40 0x20                        ..@ 
+  decimal
+        129    0   64   32
+  datetime
+0000   0xc1 0x04 0x06 0x2f 0x0c                   .../.
+  extra(0) None
+
+RECORD 6: 2012-12-15T06:04:01 0x92
+  hex (4)
+0000   0x92 0x00 0x40 0x20                        ..@ 
+  decimal
+        146    0   64   32
+  datetime
+0000   0xc1 0x04 0x06 0x2f 0x0c                   .../.
+  extra(0) None
+
+RECORD 7: 2012-12-15T06:04:01 0xa3
+  hex (4)
+0000   0xa3 0x00 0x40 0x20                        ..@ 
+  decimal
+        163    0   64   32
+  datetime
+0000   0xc1 0x04 0x06 0x2f 0x0c                   .../.
+  extra(0) None
+
+RECORD 8: 2012-12-15T06:04:01 0xc7
+  hex (4)
+0000   0xc7 0x00 0x40 0x20                        ..@ 
+  decimal
+        199    0   64   32
+  datetime
+0000   0xc1 0x04 0x06 0x2f 0x0c                   .../.
+  extra(0) None
+
+RECORD 9: 2012-12-01T06:04:01 0xd8
+  hex (4)
+0000   0xd8 0x00 0x40 0x20                        ..@ 
+  decimal
+        216    0   64   32
+  datetime
+0000   0xc1 0x04 0x06 0x11 0x0c                   .....
+  extra(0) None
+
+RECORD 10: 2005-12-05T06:04:01 0xe7
+  hex (4)
+0000   0xe7 0x00 0x40 0x20                        ..@ 
+  decimal
+        231    0   64   32
+  datetime
+0000   0xc1 0x04 0x06 0x15 0x05                   .....
+  extra(0) None
+
+RECORD 11: 2004-01-01T00:00:12 0x0c
+  hex (8)
+0000   0x0c 0x00 0x40 0x40 0xa1 0x04 0x64 0x00    ..@@..d.
+  decimal
+         12    0   64   64  161    4  100    0
+  datetime
+0000   0x0c 0x40 0x00 0x01 0x04                   .@...
+  extra(0) None
+
+RECORD 12: 2004-01-01T00:00:21 0x64
+  hex (2)
+0000   0x64 0x00                                  d.
+  decimal
+        100    0
+  datetime
+0000   0x15 0x40 0x00 0x01 0x04                   .@...
+  extra(0) None
+
+RECORD 13: 2004-01-01T00:01:08 0x17
+  hex (2)
+0000   0x17 0x00                                  ..
+  decimal
+         23    0
+  datetime
+0000   0x08 0x41 0x00 0x01 0x04                   .A...
+  extra(0) None
+```
+
+
