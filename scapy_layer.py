@@ -1,3 +1,13 @@
+#!/usr/bin/python
+import argparse
+
+from pprint import pprint, pformat
+from binascii import hexlify
+from datetime import datetime
+from scapy.all import *
+
+from pump import lib
+from pump.lib import Mask
 
 class MMMomentBase(XByteField):
   """
@@ -235,6 +245,17 @@ class MMAction(Packet):
   fields_desc = [
     PacketField('datetime', None, MMDateTime),
   ]
+
+def main( ):
+  print "I do nothing."
+
+if __name__ == '__main__':
+  import doctest
+  failures, tests = doctest.testmod( )
+  if failures > 0:
+    print "REFUSING TO RUN DUE TO FAILED TESTS"
+    sys.exit(1)
+  main( )
 
 #####
 # EOF

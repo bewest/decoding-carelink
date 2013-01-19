@@ -10,13 +10,10 @@ from scapy.all import *
 
 from pump import lib
 
+from pump.lib import Mask
+
 class NotADate(Exception): pass
 
-
-class Mask:
-  time   = 0xC0
-  invert = 0x3F
-  year   = 0x0F
 
 def get_opt_parser( ):
   parser = argparse.ArgumentParser( )
