@@ -135,7 +135,7 @@ class XXXStrStopField(StrField):
 
 class MMMomentField(StrField):
   def __init__(self, name, default, fmt="B", remain=0):
-      StrField.__init__(self, name, default, fmt='B')
+      StrField.__init__(self, name, default, fmt='B', remain=remain)
 
 
 class MaskedMoment(MMMomentField):
@@ -155,21 +155,41 @@ class Year(MaskedMoment):
     candidate = raw[0]
     value = candidate & self.MASK
     result = value + 2000
+    return result
 
-    return str(bytearray(parse_years(raw[0])))
+    return str(bytearray(parse_years(raw)))
 
-  def i2m(self, pkt, pay):
-    return pay - 2000
+  def i2m(self, pkt, x):
+    print "XXX: i2m %r" % repr(x)
+    if x is None or x == "":
+      return ""
+    return str(bytearray( [ x - 2000 ] ))
+
+  def addfield(self, pkt, s, val):
+      print "XXXX: addfield: pkt: %r" % pkt
+      print "XXXX: addfield: s: %r" % s
+      print "XXXX: addfield: val: %r" % val
+      return s+self.i2m(pkt, val)
 
   def getfield(self, pkt, s):
     y = s[0]
-    return s[-1:], self.m2i(pkt,s[:-1])
-    value = parse_years(s[0])
-    # we didn't find anything
-    if value > 2015 or value < 2002:
-      return s, ""
-  pass
+    print "XXX: getfield: s: %r len(%s)" % (s, len(s))
+    val = bytearray( s[0] )
+    print "XXX: getfield: %s" % repr(val)
+    return s[1:], self.m2i(pkt, val)
 
+class TestYearPacket(Packet):
+  """
+    >>> TestYearPacket( ) / str(bytearray( [ 0x06 ] ))
+
+    >>> (TestYearPacket( ) / str(bytearray( [ 0x06 ] ))).show2( )
+
+    >>> TestYearPacket( str(bytearray( [ 0x06 ] )) )
+
+  """
+  fields_desc = [
+    Year('year', '')
+  ]
 
 class Month(MMMomentField):
   def __init__(self, name, default, high=None, low=None):
@@ -198,7 +218,39 @@ class Second(MMMomentField):
   pass
 
 
+class TestSecondPacket(Packet):
+  """
+  >>> TestSecondPacket( ) / str(bytearray( [ 0x6f ] ))
+  """
+  fields_desc = [
+    Second("second", None),
+  ]
 
+class TestMinutePacket(Packet):
+  """
+  >>> TestMinutePacket( ) / str(bytearray( [ 0xd7 ] ))
+  """
+  fields_desc = [
+    Minute("minute", None),
+  ]
+
+class TestMonthPacket(Packet):
+  """
+  >>> TestMonthPacket( ) / str(bytearray( [ 0x6f, 0xd7 ] ))
+  """
+  fields_desc = [
+    Month("month", None),
+  ]
+
+class TestTimeHeadPacket(Packet):
+  """
+  >>> TestTimeHeadPacket( ) / str(bytearray( [ 0x6f, 0xd7 ] ))
+  """
+  fields_desc = [
+    Second("second", None),
+    Minute("minute", None),
+    Month("month", None, high="second", low="minute"),
+  ]
 
 
 class MMDateField(Field):
