@@ -65,3 +65,8 @@ EG:
 We believe the `0x40` and or `0xC0` may be used to indicate the
 **action requestor**, either being the PUMP or RF, or TBD as hinted by
 Carelink CSV exports.
+
+It turns out that the seconds and minutes and hours are the first
+bytes in the in basically every record.  The "midnight" sentinel
+record may be an exception.
+

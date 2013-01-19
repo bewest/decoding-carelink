@@ -1,6 +1,7 @@
 
-# what do priming/bolus records look like
+# what do priming/rewind records look like?
 
+* https://github.com/bewest/decoding-carelink/blob/rewriting/ground-start-0/decoding-prime-events.markdown
 There is a better analysis in `history` or `rosetta` or something.
 This one is done using `list_dates.py`
 
