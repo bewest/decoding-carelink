@@ -197,7 +197,7 @@ def opcode_min_read(opcode):
   return offset
 
 
-def opcode_read_ahead(opcode, fd):
+def opcode_read_ahead(opcode, fd=None):
   TABLE = {
     0x5b: 22,
     #0x64: 4,
@@ -205,10 +205,11 @@ def opcode_read_ahead(opcode, fd):
     #0x6b: 33,
     0x6b: 27,
     0x45: 6,
-    #0x07: 10,
+    0x07: -1,
     #0x1f: 22,
     #0x1f: 8,
   }
+  return TABLE.get(opcode, 0)
   if TABLE.get(opcode) is not None:
     #print "special opcode %#04x, read:%s" % (opcode, TABLE[opcode])
     return bytearray(fd.read(TABLE[opcode]))
@@ -217,6 +218,17 @@ def opcode_read_ahead(opcode, fd):
 def sniff_invalid_opcode(opcode):
   if opcode == 0x00:
     raise NotADate("invalid opcode")
+
+def eat_nulls(fd):
+  nulls = bytearray( )
+  for B in iter(lambda: fd.read(1), ""):
+    if B == 0x00:
+      nulls.append(B)
+    else:
+      fd.seek(fd.tell( ) - 1)
+      break
+  print "found %s nulls" % len(nulls)
+  return nulls
 
 def find_dates(stream):
   records = [ ]
@@ -235,7 +247,9 @@ def find_dates(stream):
       if len(bolus) <= 5:
         raise NotADate('too short of a record')
       #sniff_invalid_opcode( bolus[0] )
-      extra.extend( opcode_read_ahead(bolus[0], stream) )
+      extra_len = opcode_read_ahead(bolus[0])
+      if extra_len > 0:
+        extra.extend( bytearray(stream.read(extra_len)) )
       records.append( (date, bolus[:-5], bolus[-5:], extra) )
       bolus = bytearray(stream.read(4))
       extra = bytearray( )
@@ -280,8 +294,12 @@ def main( ):
     for rec in records:
       date, datum, tail, extra = rec
       opcode = datum[0]
+      stats = "hex({}), extra({})".format(len(datum), len(extra))
+      date_str = str(date)
+      if date is not None:
+        date_str = date.isoformat( )
 
-      print "RECORD %s: %s %#04x" % (i, date.isoformat( ), opcode)
+      print "RECORD %s: %s %#04x %s" % (i, date_str, opcode, stats)
       print "  hex (%s)" % len(datum)
       print lib.hexdump(datum)
       print "  decimal"
@@ -295,6 +313,7 @@ def main( ):
         print "%s" % (None)
       print ""
       i += 1
+    stream.close( )
 
 if __name__ == '__main__':
   import doctest
