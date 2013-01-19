@@ -323,11 +323,6 @@ def decodeDCByte(B):
   # look up in decode table
   return ENCODE_TABLE.index(B)
 
-class Mask:
-  time   = 0xC0
-  invert = 0x3F
-  year   = 0x0F
-
 
 if __name__ == '__main__':
   import doctest

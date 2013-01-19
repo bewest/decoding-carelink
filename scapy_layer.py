@@ -7,7 +7,7 @@ from datetime import datetime
 from scapy.all import *
 
 from pump import lib
-from pump.lib import Mask
+from pump.history import *
 
 class MMMomentBase(XByteField):
   """
@@ -146,32 +146,41 @@ class MaskedMoment(MMMomentField):
     return value & ( ~self.Mask & 0xff )
 
 class Year(MaskedMoment):
+  """
+    # >>> Year( ) / str(bytearray([0x06]))
+  """
   MASK = Mask.year
 
   def m2i(self, pkt, raw):
     candidate = raw[0]
     value = candidate & self.MASK
-    result = value + 2006
+    result = value + 2000
 
     return str(bytearray(parse_years(raw[0])))
 
   def i2m(self, pkt, pay):
-    return pay
+    return pay - 2000
 
   def getfield(self, pkt, s):
     y = s[0]
-    return s[l:], self.m2i(pkt,s[:l])
+    return s[-1:], self.m2i(pkt,s[:-1])
     value = parse_years(s[0])
     # we didn't find anything
     if value > 2015 or value < 2002:
       return s, ""
   pass
 
+
 class Month(MMMomentField):
   def __init__(self, name, default, high=None, low=None):
       MMMomentField.__init__(self, name, default, fmt='BB')
       self.high = high
       self.low = low
+
+  def addfield(self, pkt, s, val):
+    def addfield(self, pkt, s, val):
+        l = self.length_from(pkt)
+        return s+struct.pack("%is"%l,self.i2m(pkt, val))
 
 class Day(MaskedMoment):
   MASK = Mask.year
@@ -193,6 +202,9 @@ class Second(MMMomentField):
 
 
 class MMDateField(Field):
+    """
+    # >>> MMDateField[(str(bytearray([0x06])))
+    """
     def __init__(self, name, default, fmt="H", remain=0):
         Field.__init__(self,name,default,fmt)
         self.remain = remain
@@ -228,6 +240,9 @@ class XXMMDate(Field):
     pass
 
 class MMDateTime(Packet):
+  """
+  >>> MMDateTime( ) / str(bytearray( [ 0x6f, 0xd7, 0x08, 0x01, 0x06 ] ))
+  """
   name = "TIME"
 
   fields_desc = [

@@ -130,5 +130,5 @@ BODY
 ```
 
 The byte for byte approach needs some additional rules.
-
+Try a look up table.
 
