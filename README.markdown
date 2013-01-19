@@ -3,6 +3,9 @@
 
 For an intro, see
 [insulaudit](https://github.com/bewest/insulaudit/tree/master/questions).
+We are hoping to help diabetics independently reproduce therapeutic
+audits of their Medtronic insulin pumps.  This experimental software
+will download pump settings, and the entire log of historical data.
 
 ## Status
 
@@ -20,6 +23,13 @@ your behalf:
 ## Future work
 
 * collect more data
+* finish [analyzing pages of insulin pump history](https://github.com/bewest/decoding-carelink/blob/rewriting/analysis/pages.markdown)
+** [analyze insulin pump bolus records](https://github.com/bewest/decoding-carelink/blob/rewriting/analysis/bolus.markdown)
+** [help analyze prime events](https://github.com/bewest/decoding-carelink/blob/rewriting/ground-start-0/decoding-prime-events.markdown)
+** [help analyze pump midnight events](https://github.com/bewest/decoding-carelink/tree/rewriting/basal-hist-2006)
+
+Once we can decode historical logs, we'll clean up and merge back into
+[insulaudit](https://github.com/bewest/insulaudit/tree/master/hacking)
 
 ### Help needed
 
