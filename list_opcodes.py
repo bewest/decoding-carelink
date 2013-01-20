@@ -33,6 +33,13 @@ def parse_date(date):
   return None
 
 class Record(object):
+  _names = {
+    0x07: 'ResultTotals',
+    0x03: 'Prime',
+    0x27: 'ChangeRemoteID',
+    0x5b: 'BolusWizard',
+
+  }
   _head = {
     0x03: 5,
     # 0x0c: 7,
@@ -40,22 +47,27 @@ class Record(object):
     0x07: 2,
     #0x18: 1,
     #0x06: 3,
-    0x6b: 7,
     0x45: 7,
     # 0x03: 4,
     0x27: 16,
     0x00: 3,
+
+    # hacks
+    0x6b: 7,
   }
   _date = 5
   _body = {
     # 0x5b: 15,
-    0x5b: 22,
+    0x5b: 22 + 0,
     0x6b: 15,
     0x45: 3,
     0x07: 38,
     # 0x18: 6,
     # 0x21: 23,
     0x34: 0,
+
+    # hacks
+    0x0a: 1,
     
   }
   def __init__(self, head=bytearray( ), date=bytearray( ), body=bytearray( ) ):
@@ -88,7 +100,7 @@ class Record(object):
     return cls._body.get(opcode, 0)
 
   def __str__(self):
-    name = self.__class__.__name__
+    name = self._names.get(self.opcode, self.__class__.__name__)
     lengths = 'head[{}], body[{}]'.format(len(self.head), len(self.body))
     # opcodes = ' '.join(['%#04x' % x for x in self.head[:1]])
     opcodes = '%#04x' % self.opcode
