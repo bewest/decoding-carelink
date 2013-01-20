@@ -34,19 +34,26 @@ def parse_date(date):
 
 class Record(object):
   _head = {
-    # 0x03: 5
-    0x0c: 7,
+    0x03: 5,
+    # 0x0c: 7,
     0x28: 7,
     0x07: 2,
-    0x18: 1,
+    #0x18: 1,
+    #0x06: 3,
+    0x6b: 7,
+    0x45: 7,
     # 0x03: 4,
   }
   _date = 5
   _body = {
-    0x5b: 15,
+    # 0x5b: 15,
+    0x5b: 22,
+    0x6b: 15,
+    0x45: 3,
     0x07: 38,
-    0x18: 6,
-    0x21: 23,
+    # 0x18: 6,
+    # 0x21: 23,
+    0x34: 0,
     
   }
   def __init__(self, head=bytearray( ), date=bytearray( ), body=bytearray( ) ):
@@ -80,13 +87,10 @@ class Record(object):
 
   def __str__(self):
     name = self.__class__.__name__
-    date = 'unknown'
-    if self.datetime is not None:
-      date = self.datetime.isoformat( )
     lengths = 'head[{}], body[{}]'.format(len(self.head), len(self.body))
     # opcodes = ' '.join(['%#04x' % x for x in self.head[:1]])
     opcodes = '%#04x' % self.opcode
-    return ' '.join([name, date, lengths, opcodes ])
+    return ' '.join([name, self.date_str( ), lengths, opcodes ])
 
   def date_str(self):
     result = 'unknown'
@@ -113,9 +117,9 @@ class Record(object):
 
 def eat_nulls(fd):
   nulls = bytearray( )
-  for B in iter(lambda: fd.read(1), ""):
-    if B == 0x00:
-      nulls.append(B)
+  for B in iter(lambda: bytearray(fd.read(1)), bytearray("")):
+    if B[0] == 0x00:
+      nulls.extend(B)
     else:
       fd.seek(fd.tell( ) - 1)
       break
@@ -145,8 +149,17 @@ def find_dates(stream):
 
     bolus.extend(bytearray(stream.read(date_length)))
     date = bolus[head_length:head_length+date_length]
+    total = len(bolus)
     # print repr(bolus), date_length, repr(date)
+    if len(date) < 5:
+      records[-1].body.extend(bolus)
+      continue
     datetime = parse_date(date)
+    if bytearray( [0x00] * total ) == bolus:
+      nulls = bytearray(eat_nulls(stream))
+      records[-1].body.extend(nulls)
+      break
+    
     if not Record.is_midnight(head):
       assert datetime is not None, "\n%s" % lib.hexdump(bolus)
     if datetime is not None or Record.is_midnight(head):
@@ -195,27 +208,10 @@ def main( ):
     records = find_dates(stream)
     print "%s: %s records" % (stream.name, len(records))
     i = 0
-    for rec in records:
-      date, datum, tail, extra = rec
-      opcode = datum[0]
-      stats = "hex({}), extra({})".format(len(datum), len(extra))
-      date_str = str(date)
-      if date is not None:
-        date_str = date.isoformat( )
+    for record in records:
 
-      print "RECORD %s: %s %#04x %s" % (i, date_str, opcode, stats)
-      print "  hex (%s)" % len(datum)
-      print lib.hexdump(datum, indent=2)
-      print "  decimal"
-      print int_dump(datum, indent=9)
-      print "  datetime\n%s" % (lib.hexdump(tail, indent=2))
-      print "  extra(%s)" % len(extra),
-      if len(extra) > 0:
-        print "\n%s" % (lib.hexdump(extra, indent=2))
-        print int_dump(extra, indent=9)
-      else:
-        print "%s" % (None)
-      print ""
+      prefix = '#### RECORD {} {}'.format(i, str(record))
+      # record.pformat(prefix)
       i += 1
     stream.close( )
 
