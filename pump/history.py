@@ -63,6 +63,35 @@ def parse_years_lax(year):
   y = (year & Mask.year) + 2000
   return y
 
+def extra_year(year=bytearray([0x86])):
+  """
+  >>> extra_year( )
+  [1, 0, 0, 0]
+
+  >>> extra_year(bytearray([ 0x06 ]) )
+  [0, 0, 0, 0]
+
+  >>> extra_year(bytearray([ 0x86 ]) )
+  [1, 0, 0, 0]
+
+  >>> extra_year(bytearray([ 0x46 ]) )
+  [0, 1, 0, 0]
+
+  >>> extra_year(bytearray([ 0x26 ]) )
+  [0, 0, 1, 0]
+
+  >>> extra_year(bytearray([ 0x16 ]) )
+  [0, 0, 0, 1]
+
+  """
+  year = year[0]
+  masks = [ ( 0x80, 7), (0x40, 6), (0x20, 5), (0x10, 4) ]
+  nibbles = [ ]
+  for mask, shift in masks:
+    nibbles.append( ( (year & mask) >> shift ) )
+  return nibbles
+  
+
 def parse_years(year):
   """
     >>> parse_years(0x06)
@@ -72,7 +101,7 @@ def parse_years(year):
   if year > 0x80:
     year = year - 0x80
   y = (year & Mask.year) + 2000
-  if year > 15 or y < 0 or y < 2002 or y > 2015:
+  if y < 0 or y < 2002 or y > 2015:
     raise ValueError(y)
   return y
 
