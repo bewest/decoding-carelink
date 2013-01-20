@@ -69,6 +69,8 @@ def parse_years(year):
     2006
 
   """
+  if year > 0x80:
+    year = year - 0x80
   y = (year & Mask.year) + 2000
   if year > 15 or y < 0 or y < 2002 or y > 2015:
     raise ValueError(y)
@@ -164,9 +166,12 @@ def parse_date(data):
   >>> parse_date(bytearray( [ 0x6f, 0xd7, 0x08, 0x01, 0x06 ] )).isoformat( )
   '2006-07-01T08:23:47'
   """
+  data = data[:]
   try:
     seconds = parse_seconds(data[0])
     minutes = parse_minutes(data[1])
+    if data[2] > 32:
+      data[2] = data[2] - 32
     hours   = parse_hours(data[2])
     day     = parse_day(data[3])
     year    = parse_years(data[4])
