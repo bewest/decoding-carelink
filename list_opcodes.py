@@ -75,7 +75,7 @@ class Record(object):
 
   @classmethod
   def lookup_body(cls, opcode):
-    print "lookup body for opcode %#04x" % (opcode)
+    # print "lookup body for opcode %#04x" % (opcode)
     return cls._body.get(opcode, 0)
 
   def __str__(self):
@@ -84,18 +84,31 @@ class Record(object):
     if self.datetime is not None:
       date = self.datetime.isoformat( )
     lengths = 'head[{}], body[{}]'.format(len(self.head), len(self.body))
-    opcodes = ' '.join(['%#04x' % x for x in self.head])
-    return '#### ' + ' '.join([name, date, lengths, opcodes ])
+    # opcodes = ' '.join(['%#04x' % x for x in self.head[:1]])
+    opcodes = '%#04x' % self.opcode
+    return ' '.join([name, date, lengths, opcodes ])
 
-  def pformat(self): 
-    head = '\n'.join([ "  hex (%s)" % len(self.head), lib.hexdump(self.head),
-                       "  decimal", int_dump(self.head, indent=7) ])
-    date = '\n'.join([ "  datetime", lib.hexdump(self.date) ])
+  def date_str(self):
+    result = 'unknown'
+    if self.datetime is not None:
+      result = self.datetime.isoformat( )
+    else:
+      if self.is_midnight(self.head):
+        result = "MIDNIGHT!?"
+    return result
+    
+  def pformat(self, prefix=''):
+    head = '\n'.join([ "  hex (%s)" % len(self.head), lib.hexdump(self.head, indent=2),
+                       "  decimal", int_dump(self.head, indent=9) ])
+    date = '\n'.join([ "  datetime (%s)" % self.date_str( ),
+                       lib.hexdump(self.date, indent=2) ])
 
-    body = '\n'.join([ "  body(%s)" % len(self.body),
-                       "  hex", lib.hexdump(self.body),
-                       "  decimal", int_dump(self.body, indent=7) ])
-    return '\n'.join([ str(self), head, date, body ])
+    body = "  body (%s)" % len(self.body)
+    if len(self.body) > 0:
+      body = '\n'.join([ body,
+                         "  hex", lib.hexdump(self.body, indent=2),
+                         "  decimal", int_dump(self.body, indent=9) ])
+    return '\n'.join([ prefix, head, date, body ])
 
 
 def eat_nulls(fd):
@@ -132,7 +145,7 @@ def find_dates(stream):
 
     bolus.extend(bytearray(stream.read(date_length)))
     date = bolus[head_length:head_length+date_length]
-    print repr(bolus), date_length, repr(date)
+    # print repr(bolus), date_length, repr(date)
     datetime = parse_date(date)
     if not Record.is_midnight(head):
       assert datetime is not None, "\n%s" % lib.hexdump(bolus)
@@ -141,7 +154,9 @@ def find_dates(stream):
       body = bytearray(stream.read(body_length))
       bolus.extend(body)
       record = Record(head, date, body)
-      print record.pformat( )
+      prefix = "#### RECORD %s %s" % (len(records), str(record) )
+      print record.pformat(prefix)
+      print ""
       records.append(record)
       bolus = bytearray( )
       opcode = ''
@@ -190,14 +205,14 @@ def main( ):
 
       print "RECORD %s: %s %#04x %s" % (i, date_str, opcode, stats)
       print "  hex (%s)" % len(datum)
-      print lib.hexdump(datum)
+      print lib.hexdump(datum, indent=2)
       print "  decimal"
-      print int_dump(datum, indent=7)
-      print "  datetime\n%s" % (lib.hexdump(tail))
+      print int_dump(datum, indent=9)
+      print "  datetime\n%s" % (lib.hexdump(tail, indent=2))
       print "  extra(%s)" % len(extra),
       if len(extra) > 0:
-        print "\n%s" % (lib.hexdump(extra))
-        print int_dump(extra, indent=7)
+        print "\n%s" % (lib.hexdump(extra, indent=2))
+        print int_dump(extra, indent=9)
       else:
         print "%s" % (None)
       print ""
