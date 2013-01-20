@@ -284,6 +284,7 @@ function filter_log( ) {
 function print_pretty_csv( ) {
   header=( )
   _OLD_IFS=$IFS
+  i=0
   filter_log $* | while read LINE ; do
   WSP_IFS=$'\x20'$'\x09'$'\x0A'$'\x0D'
   # read -a columns<<<$LINE
@@ -310,7 +311,7 @@ function print_pretty_csv( ) {
     if [[ $name = "" ]] ; then
       continue
     fi
-    echo $timestamp $name
+    echo RECORD: $i $timestamp $name
     echo ${descr} | sed -e "s/ && /, /g" | fmt | sed -e "s/^/  /g"
 
     for x in $(seq 0 $(expr ${#header[*]} - 1)) ; do
@@ -318,9 +319,11 @@ function print_pretty_csv( ) {
       echo '    '$x: ${header[$x]}: ${columns[$x]}
       # echo -n $x.
     done
+    i=$(expr $i + 1)
     # echo 'done'
     echo
   fi
+  
 
   done
 

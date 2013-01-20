@@ -43,6 +43,8 @@ class Record(object):
     0x6b: 7,
     0x45: 7,
     # 0x03: 4,
+    0x27: 16,
+    0x00: 3,
   }
   _date = 5
   _body = {
