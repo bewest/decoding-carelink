@@ -137,16 +137,16 @@ def main( ):
       if date is not None:
         date_str = date.isoformat( )
 
-      print "RECORD %s: %s %#04x %s" % (i, date_str, opcode, stats)
-      print "  hex (%s)" % len(datum)
-      print lib.hexdump(datum)
-      print "  decimal"
-      print int_dump(datum, indent=7)
-      print "  datetime\n%s" % (lib.hexdump(tail))
-      print "  extra(%s)" % len(extra),
+      print "#### RECORD %s: %s %#04x %s" % (i, date_str, opcode, stats)
+      print "    hex (%s)" % len(datum)
+      print lib.hexdump(datum, indent=4)
+      print "    decimal"
+      print int_dump(datum, indent=11)
+      print "    datetime\n%s" % (lib.hexdump(tail, indent=4))
+      print "    extra(%s)" % len(extra),
       if len(extra) > 0:
-        print "\n%s" % (lib.hexdump(extra))
-        print int_dump(extra, indent=7)
+        print "\n%s" % (lib.hexdump(extra, indent=4))
+        print int_dump(extra, indent=11)
       else:
         print "%s" % (None)
       print ""

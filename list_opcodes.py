@@ -36,8 +36,10 @@ class Record(object):
   _names = {
     0x07: 'ResultTotals',
     0x03: 'Prime',
+    0x26: 'EnableDisableRemote',
     0x27: 'ChangeRemoteID',
     0x5b: 'BolusWizard',
+    0x33: 'TempBasal',
 
   }
   _head = {
@@ -58,13 +60,14 @@ class Record(object):
   _date = 5
   _body = {
     # 0x5b: 15,
-    0x5b: 22 + 0,
+    0x5b: 22,
     0x6b: 15,
     0x45: 3,
     0x07: 38,
     # 0x18: 6,
     # 0x21: 23,
     0x34: 0,
+    0x33: 0,
 
     # hacks
     0x0a: 1,
@@ -116,16 +119,16 @@ class Record(object):
     return result
     
   def pformat(self, prefix=''):
-    head = '\n'.join([ "  hex (%s)" % len(self.head), lib.hexdump(self.head, indent=2),
-                       "  decimal", int_dump(self.head, indent=9) ])
-    date = '\n'.join([ "  datetime (%s)" % self.date_str( ),
-                       lib.hexdump(self.date, indent=2) ])
+    head = '\n'.join([ "    op hex (%s)" % len(self.head), lib.hexdump(self.head, indent=4),
+                       "    decimal", int_dump(self.head, indent=11) ])
+    date = '\n'.join([ "    datetime (%s)" % self.date_str( ),
+                       lib.hexdump(self.date, indent=4) ])
 
-    body = "  body (%s)" % len(self.body)
+    body = "    body (%s)" % len(self.body)
     if len(self.body) > 0:
       body = '\n'.join([ body,
-                         "  hex", lib.hexdump(self.body, indent=2),
-                         "  decimal", int_dump(self.body, indent=9) ])
+                         "    hex", lib.hexdump(self.body, indent=4),
+                         "    decimal", int_dump(self.body, indent=11) ])
     return '\n'.join([ prefix, head, date, body ])
 
 
