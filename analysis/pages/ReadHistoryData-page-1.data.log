@@ -1,4 +1,5 @@
 WARNING: No route found for IPv6 destination :: (no default route?)
+## START logs/ReadHistoryData-page-1.data
 XXX: 0x01
 #### RECORD 0 BolusWizard 2006-07-01T08:23:47 head[2], body[22] 0x5b
     op hex (2)
@@ -704,4 +705,4 @@ should eat up to null
     0000   0x8d 0x89 0x0d 0x03 0x06                   .....
     body (0)
 
-logs/ReadHistoryData-page-1.data: 57 records
+`end logs/ReadHistoryData-page-1.data: 57 records`

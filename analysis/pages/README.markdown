@@ -1,9 +1,4 @@
-
-# Quick run down
-
-
-## logs/ReadHistoryData-page-0.data: 17 records
-
+## START logs/ReadHistoryData-page-0.data
 #### RECORD 0 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
 #### RECORD 1 Rewind 2006-10-04T08:00:19 head[2], body[0] 0x21
 #### RECORD 2 Prime 2006-10-04T08:11:21 head[5], body[0] 0x03
@@ -21,10 +16,8 @@
 #### RECORD 14 Record 2006-10-11T16:48:45 head[2], body[0] 0x34
 #### RECORD 15 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
 #### RECORD 16 Record 2006-10-12T07:55:42 head[2], body[0] 0x34
-
-
-## logs/ReadHistoryData-page-1.data: 57 records
-
+`end logs/ReadHistoryData-page-0.data: 17 records`
+## START logs/ReadHistoryData-page-1.data
 #### RECORD 0 BolusWizard 2006-07-01T08:23:47 head[2], body[22] 0x5b
 #### RECORD 1 BolusWizard 2006-07-01T08:24:43 head[2], body[22] 0x5b
 #### RECORD 2 BolusWizard 2006-07-01T08:26:55 head[2], body[22] 0x5b
@@ -82,10 +75,8 @@
 #### RECORD 54 Record 2006-10-02T19:45:47 head[2], body[0] 0x34
 #### RECORD 55 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
 #### RECORD 56 Record 2006-10-03T13:09:13 head[2], body[0] 0x34
-
-
-## logs/ReadHistoryData-page-2.data: 53 records
-
+`end logs/ReadHistoryData-page-1.data: 57 records`
+## START logs/ReadHistoryData-page-2.data
 #### RECORD 0 Prime 2012-08-01T21:28:30 head[5], body[0] 0x03
 #### RECORD 1 Prime 2012-08-01T21:28:39 head[5], body[0] 0x03
 #### RECORD 2 EnableDisableRemote 2012-08-01T22:25:13 head[2], body[14] 0x26
@@ -139,10 +130,8 @@
 #### RECORD 50 ChangeTimeDisplay 2006-07-01T08:20:47 head[2], body[0] 0x64
 #### RECORD 51 ChangeTimeDisplay 2006-07-01T08:21:13 head[2], body[0] 0x64
 #### RECORD 52 ChangeTimeDisplay 2006-07-01T08:22:10 head[2], body[0] 0x64
-
-
-## logs/ReadHistoryData-page-3.data: 64 records
-
+`end logs/ReadHistoryData-page-2.data: 53 records`
+## START logs/ReadHistoryData-page-3.data
 #### RECORD 0 NewTimeSet 2002-03-04T07:35:00 head[2], body[0] 0x18
 #### RECORD 1 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
 #### RECORD 2 ChangeTimeDisplay 2002-03-04T07:40:16 head[2], body[0] 0x64
@@ -207,11 +196,120 @@
 #### RECORD 61 Battery 2012-08-01T20:43:59 head[2], body[0] 0x1a
 #### RECORD 62 Battery 2012-08-01T20:44:57 head[2], body[0] 0x1a
 #### RECORD 63 Rewind 2012-08-01T21:25:17 head[2], body[0] 0x21
-
-
-## logs/ReadHistoryData-page-8.data: 37 records
-
+`end logs/ReadHistoryData-page-3.data: 64 records`
+## START logs/ReadHistoryData-page-4.data
+#### RECORD 0 Record 2012-04-05T00:46:44 head[1], body[32] 0x6c
+#### RECORD 1 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 2 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 3 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 4 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 5 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 6 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 7 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 8 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 9 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 10 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 11 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 12 Record 2000-02-10T13:02:00 head[2], body[0] 0x19
+#### RECORD 13 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 14 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 15 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 16 Battery 2000-02-13T23:12:42 head[2], body[0] 0x1a
+#### RECORD 17 Battery 2000-02-13T23:13:06 head[2], body[0] 0x1a
+#### RECORD 18 Rewind 2000-02-13T23:14:07 head[2], body[0] 0x21
+#### RECORD 19 Prime 2000-02-13T23:14:35 head[5], body[0] 0x03
+#### RECORD 20 Prime 2000-02-13T23:14:50 head[5], body[0] 0x03
+#### RECORD 21 ChangeTimeDisplay 2000-02-13T23:16:00 head[2], body[0] 0x64
+#### RECORD 22 ChangeTime 2000-02-13T23:16:05 head[2], body[0] 0x17
+#### RECORD 23 NewTimeSet 2000-02-13T23:16:00 head[2], body[0] 0x18
+#### RECORD 24 ChangeTimeDisplay 2000-02-13T23:16:03 head[2], body[0] 0x64
+#### RECORD 25 ChangeTime 2000-02-13T23:16:06 head[2], body[0] 0x17
+#### RECORD 26 NewTimeSet 2000-02-13T23:16:00 head[2], body[0] 0x18
+#### RECORD 27 ChangeTimeDisplay 2000-02-13T23:16:03 head[2], body[0] 0x64
+#### RECORD 28 ChangeTimeDisplay 2000-02-13T23:16:07 head[2], body[0] 0x64
+#### RECORD 29 ChangeTime 2000-02-13T23:17:16 head[2], body[0] 0x17
+#### RECORD 30 NewTimeSet 2000-02-01T10:40:00 head[2], body[0] 0x18
+#### RECORD 31 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 32 ChangeTimeDisplay 2000-02-01T10:40:09 head[2], body[0] 0x64
+#### RECORD 33 ChangeTimeDisplay 2000-02-01T10:40:12 head[2], body[0] 0x64
+#### RECORD 34 ChangeTimeDisplay 2000-02-01T10:40:14 head[2], body[0] 0x64
+#### RECORD 35 ChangeTimeDisplay 2000-02-01T10:40:16 head[2], body[0] 0x64
+#### RECORD 36 PumpSuspend 2000-02-01T11:11:54 head[2], body[0] 0x1e
+#### RECORD 37 PumpResume 2000-02-01T11:12:21 head[2], body[0] 0x1f
+#### RECORD 38 ChangeTimeDisplay 2000-02-01T19:27:39 head[2], body[0] 0x64
+#### RECORD 39 ChangeTime 2000-02-01T19:27:50 head[2], body[0] 0x17
+#### RECORD 40 NewTimeSet 2000-02-02T19:27:00 head[2], body[0] 0x18
+#### RECORD 41 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 42 ChangeTimeDisplay 2000-02-02T19:28:12 head[2], body[0] 0x64
+#### RECORD 43 ChangeTime 2000-02-02T19:28:19 head[2], body[0] 0x17
+#### RECORD 44 NewTimeSet 2001-02-01T19:28:00 head[2], body[0] 0x18
+#### RECORD 45 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 46 ChangeTimeDisplay 2001-02-01T19:28:21 head[2], body[0] 0x64
+#### RECORD 47 ChangeTime 2001-02-01T19:29:29 head[2], body[0] 0x17
+`end logs/ReadHistoryData-page-4.data: 48 records`
+## START logs/ReadHistoryData-page-5.data
+#### RECORD 0 Record 2012-04-05T00:23:44 head[1], body[32] 0x6c
+#### RECORD 1 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 2 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 3 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 4 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 5 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 6 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 7 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 8 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 9 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 10 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 11 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 12 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 13 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 14 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 15 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 16 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 17 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 18 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 19 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 20 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 21 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 22 ResultTotals MIDNIGHT!? head[2], body[34] 0x07
+`end logs/ReadHistoryData-page-5.data: 23 records`
+## START logs/ReadHistoryData-page-6.data
+#### RECORD 0 Record 2012-04-05T00:03:44 head[1], body[32] 0x6c
+#### RECORD 1 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 2 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 3 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 4 Rewind 2000-01-07T08:39:56 head[2], body[0] 0x21
+#### RECORD 5 Prime 2000-01-07T08:48:22 head[5], body[0] 0x03
+#### RECORD 6 Record 2000-01-07T08:48:33 head[2], body[0] 0x34
+#### RECORD 7 Prime 2000-01-07T08:48:33 head[5], body[0] 0x03
+#### RECORD 8 Rewind 2000-01-07T09:00:47 head[2], body[0] 0x21
+#### RECORD 9 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 10 Rewind 2000-01-08T02:47:52 head[2], body[0] 0x21
+#### RECORD 11 Prime 2000-01-08T03:54:17 head[5], body[0] 0x03
+#### RECORD 12 Prime 2000-01-08T03:54:29 head[5], body[0] 0x03
+#### RECORD 13 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 14 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 15 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 16 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 17 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 18 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 19 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 20 Record 2000-01-15T08:15:00 head[2], body[0] 0x34
+#### RECORD 21 Record 2000-01-15T16:37:30 head[2], body[0] 0x34
+#### RECORD 22 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 23 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 24 Record 2000-01-01T09:46:40 head[4], body[0] 0x06
+#### RECORD 25 Rewind 2000-01-01T10:04:08 head[2], body[0] 0x21
+#### RECORD 26 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 27 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 28 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 29 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 30 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 31 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+#### RECORD 32 ResultTotals MIDNIGHT!? head[2], body[26] 0x07
+`end logs/ReadHistoryData-page-6.data: 33 records`
+## START logs/ReadHistoryData-page-7.data
 #### RECORD 0 ChangeBasalProfile 2000-01-01T03:50:10 head[2], body[42] 0x08
+## START logs/ReadHistoryData-page-8.data
 #### RECORD 0 Record 2004-01-01T00:00:00 head[4], body[0] 0x06
 #### RECORD 1 Record 2004-01-01T00:00:00 head[4], body[0] 0x06
 #### RECORD 2 Record 2004-01-01T00:00:00 head[4], body[0] 0x06
@@ -249,6 +347,4 @@
 #### RECORD 34 Prime 2000-01-01T03:41:44 head[5], body[0] 0x03
 #### RECORD 35 SelectBasalProfile 2000-01-01T03:44:17 head[2], body[0] 0x14
 #### RECORD 36 ChangeBasalProfile 2000-01-01T03:44:17 head[2], body[42] 0x08
-
-
-
+`end logs/ReadHistoryData-page-8.data: 37 records`

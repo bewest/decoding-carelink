@@ -275,14 +275,15 @@ def main( ):
   }
   wrapper = textwrap.TextWrapper(**tw_opts)
   for stream in opts.infile:
+    print "## START %s" % (stream.name)
     records = find_dates(stream)
-    print "%s: %s records" % (stream.name, len(records))
     i = 0
     for record in records:
 
       prefix = '#### RECORD {} {}'.format(i, str(record))
       # record.pformat(prefix)
       i += 1
+    print "`end %s: %s records`" % (stream.name, len(records))
     stream.close( )
 
 if __name__ == '__main__':

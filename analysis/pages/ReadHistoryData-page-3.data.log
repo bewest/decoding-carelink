@@ -1,4 +1,5 @@
 WARNING: No route found for IPv6 destination :: (no default route?)
+## START logs/ReadHistoryData-page-3.data
 #### RECORD 0 NewTimeSet 2002-03-04T07:35:00 head[2], body[0] 0x18
     op hex (2)
     0000   0x18 0x00                                  ..
@@ -760,4 +761,4 @@ should eat up to null
     0000   0x91 0x19 0x15 0x01 0x0c                   .....
     body (0)
 
-logs/ReadHistoryData-page-3.data: 64 records
+`end logs/ReadHistoryData-page-3.data: 64 records`

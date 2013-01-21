@@ -1,4 +1,5 @@
 WARNING: No route found for IPv6 destination :: (no default route?)
+## START logs/ReadHistoryData-page-0.data
 #### RECORD 0 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
@@ -261,4 +262,4 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
 
 found 548 nulls
-logs/ReadHistoryData-page-0.data: 17 records
+`end logs/ReadHistoryData-page-0.data: 17 records`
