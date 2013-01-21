@@ -1,0 +1,28 @@
+Medtronic Diabetes CareLink Personal Data Export File (v1.0.1) 
+PATIENT INFO
+Name,Earle West
+Report Range,12/30/03,to,3/22/04
+DEVICE INFO
+Pump:,Paradigm 515,#208850,Time Changes: 2
+Data Exported on,1/21/13 5:41 AM
+DEVICE DATA (17 records)
+Data Range,1/1/04 00:00:00,to,3/1/04 15:27:49
+Index,Date,Time,Timestamp,New Device Time,BG Reading (mg/dL),Linked BG Meter ID,Temp Basal Amount (U/h),Temp Basal Type,Temp Basal Duration (hh:mm:ss),Bolus Type,Bolus Volume Selected (U),Bolus Volume Delivered (U),Programmed Bolus Duration (hh:mm:ss),Prime Type,Prime Volume Delivered (U),Suspend,Rewind,BWZ Estimate (U),BWZ Target High BG (mg/dL),BWZ Target Low BG (mg/dL),BWZ Carb Ratio (grams),BWZ Insulin Sensitivity (mg/dL),BWZ Carb Input (grams),BWZ BG Input (mg/dL),BWZ Correction Estimate (U),BWZ Food Estimate (U),BWZ Active Insulin (U),Alarm,Sensor Calibration BG (mg/dL),Sensor Glucose (mg/dL),ISIG Value,Daily Insulin Total (U),Raw-Type,Raw-Values,Raw-ID,Raw-Upload ID,Raw-Seq Num,Raw-Device Type
+1,1/1/04,00:00:00,1/1/04 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,Device Alarm (47),,,,,AlarmPump,"RAW_TYPE=47, RAW_MODULE=14, LINE_NUM=3271",9378165895,51746163,70,Paradigm 515
+2,1/1/04,00:00:00,1/1/04 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,Device Alarm (54),,,,,AlarmPump,"RAW_TYPE=54, RAW_MODULE=24, LINE_NUM=1334",9378165902,51746163,77,Paradigm 515
+3,1/1/04,00:00:00,1/1/04 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,Device Alarm (47),,,,,AlarmPump,"RAW_TYPE=47, RAW_MODULE=14, LINE_NUM=6209",9378165901,51746163,76,Paradigm 515
+4,1/1/04,00:00:00,1/1/04 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,Device Alarm (47),,,,,AlarmPump,"RAW_TYPE=47, RAW_MODULE=14, LINE_NUM=3167",9378165900,51746163,75,Paradigm 515
+5,1/1/04,00:00:00,1/1/04 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,Device Alarm (47),,,,,AlarmPump,"RAW_TYPE=47, RAW_MODULE=14, LINE_NUM=3184",9378165899,51746163,74,Paradigm 515
+6,1/1/04,00:00:00,1/1/04 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,Device Alarm (21),,,,,AlarmPump,"RAW_TYPE=21, RAW_MODULE=21, LINE_NUM=1292",9378165892,51746163,67,Paradigm 515
+7,1/1/04,00:00:00,1/1/04 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,Device Alarm (17),,,,,AlarmPump,"RAW_TYPE=17, RAW_MODULE=14, LINE_NUM=3303",9378165893,51746163,68,Paradigm 515
+8,1/1/04,00:00:00,1/1/04 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,Device Alarm (47),,,,,AlarmPump,"RAW_TYPE=47, RAW_MODULE=14, LINE_NUM=3288",9378165894,51746163,69,Paradigm 515
+9,1/1/04,00:00:00,1/1/04 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,Device Alarm (21),,,,,AlarmPump,"RAW_TYPE=21, RAW_MODULE=24, LINE_NUM=1326",9378165903,51746163,78,Paradigm 515
+10,1/1/04,00:00:00,1/1/04 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,Device Alarm (47),,,,,AlarmPump,"RAW_TYPE=47, RAW_MODULE=14, LINE_NUM=3235",9378165896,51746163,71,Paradigm 515
+11,1/1/04,00:00:00,1/1/04 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,Device Alarm (47),,,,,AlarmPump,"RAW_TYPE=47, RAW_MODULE=14, LINE_NUM=3218",9378165897,51746163,72,Paradigm 515
+12,1/1/04,00:00:00,1/1/04 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,Device Alarm (47),,,,,AlarmPump,"RAW_TYPE=47, RAW_MODULE=14, LINE_NUM=3201",9378165898,51746163,73,Paradigm 515
+13,1/1/04,00:00:12,1/1/04 00:00:12,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeTimeDisplayFormat,"FORMAT=d12, ACTION_REQUESTOR=pump",9378165891,51746163,66,Paradigm 515
+14,1/1/04,00:00:21,1/1/04 00:00:21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeTimeDisplayFormat,"FORMAT=d12, ACTION_REQUESTOR=pump",9378165890,51746163,65,Paradigm 515
+15,1/1/04,00:01:08,1/1/04 00:01:08,1/1/00 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeTime,"NEW_TIME=946684800000, ACTION_REQUESTOR=pump",9378165889,51746163,64,Paradigm 515
+16,3/1/04,15:27:33,3/1/04 15:27:33,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeTimeDisplayFormat,"FORMAT=d12, ACTION_REQUESTOR=pump",9773503129,51908420,226,Paradigm 515
+17,3/1/04,15:27:49,3/1/04 15:27:49,4/1/12 15:27:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeTime,"NEW_TIME=1333294020000, ACTION_REQUESTOR=pump",9773503128,51908420,225,Paradigm 515
+

@@ -58,6 +58,7 @@ class Record(object):
     0x03: 5,
 
     # 0x0c: 7,
+    0x06: 4,
     0x07: 2,
 
     0x28: 7,
@@ -65,7 +66,6 @@ class Record(object):
 
 
     0x6c: 79 + 38 + 14,
-    0x06: 4,
     # 0x6c: 3,
 
     # hacks
