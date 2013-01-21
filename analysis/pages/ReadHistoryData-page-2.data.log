@@ -90,7 +90,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     decimal
               0
 
-#### RECORD 7 Record 2012-08-01T22:38:22 head[2], body[0] 0x16
+#### RECORD 7 TempBasal[eof] 2012-08-01T22:38:22 head[2], body[0] 0x16
     op hex (2)
     0000   0x16 0x03                                  ..
     decimal
@@ -112,7 +112,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     decimal
               0
 
-#### RECORD 9 Record 2012-08-01T22:48:39 head[2], body[0] 0x16
+#### RECORD 9 TempBasal[eof] 2012-08-01T22:48:39 head[2], body[0] 0x16
     op hex (2)
     0000   0x16 0x02                                  ..
     decimal
@@ -134,7 +134,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     decimal
               0
 
-#### RECORD 11 Record 2012-08-01T22:51:32 head[2], body[0] 0x16
+#### RECORD 11 TempBasal[eof] 2012-08-01T22:51:32 head[2], body[0] 0x16
     op hex (2)
     0000   0x16 0x00                                  ..
     decimal
@@ -156,7 +156,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     decimal
               0
 
-#### RECORD 13 Record 2012-08-01T22:52:17 head[2], body[0] 0x16
+#### RECORD 13 TempBasal[eof] 2012-08-01T22:52:17 head[2], body[0] 0x16
     op hex (2)
     0000   0x16 0x06                                  ..
     decimal
@@ -178,7 +178,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     decimal
               0
 
-#### RECORD 15 Record 2012-08-01T23:04:54 head[2], body[0] 0x16
+#### RECORD 15 TempBasal[eof] 2012-08-01T23:04:54 head[2], body[0] 0x16
     op hex (2)
     0000   0x16 0x06                                  ..
     decimal
@@ -187,7 +187,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0xb6 0x04 0x17 0x01 0x0c                   .....
     body (0)
 
-#### RECORD 16 Record 2012-08-01T23:35:20 head[2], body[0] 0x63
+#### RECORD 16 ChangeUtility? 2012-08-01T23:35:20 head[2], body[0] 0x63
     op hex (2)
     0000   0x63 0x04                                  c.
     decimal
@@ -196,7 +196,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x94 0x23 0x17 0x01 0x0c                   .#...
     body (0)
 
-#### RECORD 17 Record 2012-08-01T23:38:57 head[2], body[0] 0x63
+#### RECORD 17 ChangeUtility? 2012-08-01T23:38:57 head[2], body[0] 0x63
     op hex (2)
     0000   0x63 0x03                                  c.
     decimal
@@ -659,7 +659,7 @@ found 9 extra
               5   68   16   15   68    4   25   69
              20   35   68    1    1    1    0
 
-#### RECORD 35 Record 2012-08-02T18:59:16 head[2], body[0] 0x1e
+#### RECORD 35 PumpSuspend 2012-08-02T18:59:16 head[2], body[0] 0x1e
     op hex (2)
     0000   0x1e 0x00                                  ..
     decimal
@@ -668,7 +668,7 @@ found 9 extra
     0000   0x90 0x3b 0x12 0x42 0x0c                   .;.B.
     body (0)
 
-#### RECORD 36 Record 2012-08-02T18:59:40 head[2], body[0] 0x1f
+#### RECORD 36 PumpResume 2012-08-02T18:59:40 head[2], body[0] 0x1f
     op hex (2)
     0000   0x1f 0x00                                  ..
     decimal
@@ -677,7 +677,7 @@ found 9 extra
     0000   0xa8 0x3b 0x12 0x42 0x0c                   .;.B.
     body (0)
 
-#### RECORD 37 Record 2012-08-02T20:10:03 head[2], body[0] 0x64
+#### RECORD 37 ChangeTimeDisplay 2012-08-02T20:10:03 head[2], body[0] 0x64
     op hex (2)
     0000   0x64 0x01                                  d.
     decimal
@@ -686,7 +686,7 @@ found 9 extra
     0000   0x83 0x0a 0x14 0x02 0x0c                   .....
     body (0)
 
-#### RECORD 38 Record 2012-08-02T20:10:35 head[2], body[0] 0x17
+#### RECORD 38 ChangeTime 2012-08-02T20:10:35 head[2], body[0] 0x17
     op hex (2)
     0000   0x17 0x00                                  ..
     decimal
@@ -695,7 +695,7 @@ found 9 extra
     0000   0xa3 0x0a 0x14 0x02 0x0c                   .....
     body (0)
 
-#### RECORD 39 Record 2006-07-01T06:10:00 head[2], body[0] 0x18
+#### RECORD 39 NewTimeSet 2006-07-01T06:10:00 head[2], body[0] 0x18
     op hex (2)
     0000   0x18 0x00                                  ..
     decimal
@@ -725,7 +725,7 @@ found 9 extra
               1   60  100    0    0    0    0    0
               0   16   16    0    0    0
 
-#### RECORD 41 Record 2006-07-01T06:10:22 head[2], body[0] 0x64
+#### RECORD 41 ChangeTimeDisplay 2006-07-01T06:10:22 head[2], body[0] 0x64
     op hex (2)
     0000   0x64 0x01                                  d.
     decimal
@@ -734,7 +734,7 @@ found 9 extra
     0000   0x56 0xca 0x06 0x01 0x06                   V....
     body (0)
 
-#### RECORD 42 Record 2006-07-01T06:10:32 head[2], body[0] 0x17
+#### RECORD 42 ChangeTime 2006-07-01T06:10:32 head[2], body[0] 0x17
     op hex (2)
     0000   0x17 0x00                                  ..
     decimal
@@ -743,7 +743,7 @@ found 9 extra
     0000   0x60 0xca 0x06 0x01 0x06                   `....
     body (0)
 
-#### RECORD 43 Record 2006-07-01T08:10:00 head[2], body[0] 0x18
+#### RECORD 43 NewTimeSet 2006-07-01T08:10:00 head[2], body[0] 0x18
     op hex (2)
     0000   0x18 0x00                                  ..
     decimal
@@ -752,7 +752,7 @@ found 9 extra
     0000   0x40 0xca 0x08 0x01 0x06                   @....
     body (0)
 
-#### RECORD 44 Record 2006-07-01T08:12:38 head[2], body[0] 0x1e
+#### RECORD 44 PumpSuspend 2006-07-01T08:12:38 head[2], body[0] 0x1e
     op hex (2)
     0000   0x1e 0x00                                  ..
     decimal
@@ -761,7 +761,7 @@ found 9 extra
     0000   0x66 0xcc 0x08 0x01 0x06                   f....
     body (0)
 
-#### RECORD 45 Record 2006-07-01T08:13:08 head[2], body[0] 0x1f
+#### RECORD 45 PumpResume 2006-07-01T08:13:08 head[2], body[0] 0x1f
     op hex (2)
     0000   0x1f 0x00                                  ..
     decimal
@@ -806,7 +806,7 @@ found 9 extra
     0000   0x48 0xd4 0x48 0x01 0x06                   H.H..
     body (0)
 
-#### RECORD 50 Record 2006-07-01T08:20:47 head[2], body[0] 0x64
+#### RECORD 50 ChangeTimeDisplay 2006-07-01T08:20:47 head[2], body[0] 0x64
     op hex (2)
     0000   0x64 0x00                                  d.
     decimal
@@ -815,7 +815,7 @@ found 9 extra
     0000   0x6f 0xd4 0x08 0x01 0x06                   o....
     body (0)
 
-#### RECORD 51 Record 2006-07-01T08:21:13 head[2], body[0] 0x64
+#### RECORD 51 ChangeTimeDisplay 2006-07-01T08:21:13 head[2], body[0] 0x64
     op hex (2)
     0000   0x64 0x01                                  d.
     decimal
@@ -824,7 +824,7 @@ found 9 extra
     0000   0x4d 0xd5 0x08 0x01 0x06                   M....
     body (0)
 
-#### RECORD 52 Record 2006-07-01T08:22:10 head[2], body[0] 0x64
+#### RECORD 52 ChangeTimeDisplay 2006-07-01T08:22:10 head[2], body[0] 0x64
     op hex (2)
     0000   0x64 0x00                                  d.
     decimal

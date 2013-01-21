@@ -40,6 +40,13 @@ class Record(object):
     0x27: 'ChangeRemoteID',
     0x5b: 'BolusWizard',
     0x33: 'TempBasal',
+    0x16: 'TempBasal[eof]',
+    0x63: 'ChangeUtility?',
+    0x1e: 'PumpSuspend',
+    0x1f: 'PumpResume',
+    0x64: 'ChangeTimeDisplay',
+    0x17: 'ChangeTime',
+    0x18: 'NewTimeSet',
 
   }
   _head = {

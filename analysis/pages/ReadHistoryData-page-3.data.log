@@ -1,5 +1,5 @@
 WARNING: No route found for IPv6 destination :: (no default route?)
-#### RECORD 0 Record 2002-03-04T07:35:00 head[2], body[0] 0x18
+#### RECORD 0 NewTimeSet 2002-03-04T07:35:00 head[2], body[0] 0x18
     op hex (2)
     0000   0x18 0x00                                  ..
     decimal
@@ -29,7 +29,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
 
-#### RECORD 2 Record 2002-03-04T07:40:16 head[2], body[0] 0x64
+#### RECORD 2 ChangeTimeDisplay 2002-03-04T07:40:16 head[2], body[0] 0x64
     op hex (2)
     0000   0x64 0x00                                  d.
     decimal
@@ -38,7 +38,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x10 0xe8 0x07 0x04 0x02                   .....
     body (0)
 
-#### RECORD 3 Record 2002-03-04T07:40:34 head[2], body[0] 0x17
+#### RECORD 3 ChangeTime 2002-03-04T07:40:34 head[2], body[0] 0x17
     op hex (2)
     0000   0x17 0x00                                  ..
     decimal
@@ -47,7 +47,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x22 0xe8 0x07 0x04 0x02                   "....
     body (0)
 
-#### RECORD 4 Record 2002-03-04T08:00:00 head[2], body[0] 0x18
+#### RECORD 4 NewTimeSet 2002-03-04T08:00:00 head[2], body[0] 0x18
     op hex (2)
     0000   0x18 0x00                                  ..
     decimal
@@ -56,7 +56,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x00 0xc0 0x08 0x04 0x02                   .....
     body (0)
 
-#### RECORD 5 Record 2002-03-04T08:02:37 head[2], body[0] 0x64
+#### RECORD 5 ChangeTimeDisplay 2002-03-04T08:02:37 head[2], body[0] 0x64
     op hex (2)
     0000   0x64 0x00                                  d.
     decimal
@@ -65,7 +65,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x25 0xc2 0x08 0x04 0x02                   %....
     body (0)
 
-#### RECORD 6 Record 2002-03-04T08:02:39 head[2], body[0] 0x64
+#### RECORD 6 ChangeTimeDisplay 2002-03-04T08:02:39 head[2], body[0] 0x64
     op hex (2)
     0000   0x64 0x00                                  d.
     decimal
@@ -74,7 +74,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x27 0xc2 0x08 0x04 0x02                   '....
     body (0)
 
-#### RECORD 7 Record 2002-03-04T08:02:41 head[2], body[0] 0x64
+#### RECORD 7 ChangeTimeDisplay 2002-03-04T08:02:41 head[2], body[0] 0x64
     op hex (2)
     0000   0x64 0x00                                  d.
     decimal
@@ -83,7 +83,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x29 0xc2 0x08 0x04 0x02                   )....
     body (0)
 
-#### RECORD 8 Record 2002-03-04T08:02:52 head[2], body[0] 0x17
+#### RECORD 8 ChangeTime 2002-03-04T08:02:52 head[2], body[0] 0x17
     op hex (2)
     0000   0x17 0x00                                  ..
     decimal
@@ -92,7 +92,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x34 0xc2 0x08 0x04 0x02                   4....
     body (0)
 
-#### RECORD 9 Record 2002-03-04T09:19:00 head[2], body[0] 0x18
+#### RECORD 9 NewTimeSet 2002-03-04T09:19:00 head[2], body[0] 0x18
     op hex (2)
     0000   0x18 0x00                                  ..
     decimal
@@ -101,7 +101,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x00 0xd3 0x09 0x04 0x02                   .....
     body (0)
 
-#### RECORD 10 Record 2002-03-04T09:25:14 head[2], body[0] 0x64
+#### RECORD 10 ChangeTimeDisplay 2002-03-04T09:25:14 head[2], body[0] 0x64
     op hex (2)
     0000   0x64 0x00                                  d.
     decimal
@@ -110,7 +110,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x0e 0xd9 0x09 0x04 0x02                   .....
     body (0)
 
-#### RECORD 11 Record 2002-03-04T09:25:25 head[2], body[0] 0x64
+#### RECORD 11 ChangeTimeDisplay 2002-03-04T09:25:25 head[2], body[0] 0x64
     op hex (2)
     0000   0x64 0x00                                  d.
     decimal
@@ -119,7 +119,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x19 0xd9 0x09 0x04 0x02                   .....
     body (0)
 
-#### RECORD 12 Record 2002-03-04T09:25:40 head[2], body[0] 0x17
+#### RECORD 12 ChangeTime 2002-03-04T09:25:40 head[2], body[0] 0x17
     op hex (2)
     0000   0x17 0x00                                  ..
     decimal
@@ -128,7 +128,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x28 0xd9 0x09 0x04 0x02                   (....
     body (0)
 
-#### RECORD 13 Record 2003-03-01T15:25:00 head[2], body[0] 0x18
+#### RECORD 13 NewTimeSet 2003-03-01T15:25:00 head[2], body[0] 0x18
     op hex (2)
     0000   0x18 0x00                                  ..
     decimal
@@ -158,7 +158,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
 
-#### RECORD 15 Record 2003-03-01T15:27:23 head[2], body[0] 0x64
+#### RECORD 15 ChangeTimeDisplay 2003-03-01T15:27:23 head[2], body[0] 0x64
     op hex (2)
     0000   0x64 0x00                                  d.
     decimal
@@ -167,7 +167,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x17 0xdb 0x0f 0x01 0x03                   .....
     body (0)
 
-#### RECORD 16 Record 2003-03-01T15:27:34 head[2], body[0] 0x17
+#### RECORD 16 ChangeTime 2003-03-01T15:27:34 head[2], body[0] 0x17
     op hex (2)
     0000   0x17 0x00                                  ..
     decimal
@@ -176,7 +176,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x22 0xdb 0x0f 0x01 0x03                   "....
     body (0)
 
-#### RECORD 17 Record 2004-03-01T15:27:00 head[2], body[0] 0x18
+#### RECORD 17 NewTimeSet 2004-03-01T15:27:00 head[2], body[0] 0x18
     op hex (2)
     0000   0x18 0x00                                  ..
     decimal
@@ -206,7 +206,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
 
-#### RECORD 19 Record 2004-03-01T15:27:33 head[2], body[0] 0x64
+#### RECORD 19 ChangeTimeDisplay 2004-03-01T15:27:33 head[2], body[0] 0x64
     op hex (2)
     0000   0x64 0x00                                  d.
     decimal
@@ -215,7 +215,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x21 0xdb 0x0f 0x01 0x04                   !....
     body (0)
 
-#### RECORD 20 Record 2004-03-01T15:27:49 head[2], body[0] 0x17
+#### RECORD 20 ChangeTime 2004-03-01T15:27:49 head[2], body[0] 0x17
     op hex (2)
     0000   0x17 0x00                                  ..
     decimal
@@ -224,7 +224,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x31 0xdb 0x0f 0x01 0x04                   1....
     body (0)
 
-#### RECORD 21 Record 2012-04-01T15:27:00 head[2], body[0] 0x18
+#### RECORD 21 NewTimeSet 2012-04-01T15:27:00 head[2], body[0] 0x18
     op hex (2)
     0000   0x18 0x00                                  ..
     decimal
@@ -254,7 +254,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
 
-#### RECORD 23 Record 2012-04-01T15:28:49 head[2], body[0] 0x64
+#### RECORD 23 ChangeTimeDisplay 2012-04-01T15:28:49 head[2], body[0] 0x64
     op hex (2)
     0000   0x64 0x01                                  d.
     decimal
@@ -263,7 +263,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x71 0x1c 0x0f 0x01 0x0c                   q....
     body (0)
 
-#### RECORD 24 Record 2012-04-01T15:29:16 head[2], body[0] 0x17
+#### RECORD 24 ChangeTime 2012-04-01T15:29:16 head[2], body[0] 0x17
     op hex (2)
     0000   0x17 0x00                                  ..
     decimal
@@ -272,7 +272,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x50 0x1d 0x0f 0x01 0x0c                   P....
     body (0)
 
-#### RECORD 25 Record 2005-07-08T06:07:00 head[2], body[0] 0x18
+#### RECORD 25 NewTimeSet 2005-07-08T06:07:00 head[2], body[0] 0x18
     op hex (2)
     0000   0x18 0x00                                  ..
     decimal
@@ -303,11 +303,11 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0
 
 Traceback (most recent call last):
-  File "list_opcodes.py", line 272, in <module>
+  File "list_opcodes.py", line 279, in <module>
     main( )
-  File "list_opcodes.py", line 256, in main
+  File "list_opcodes.py", line 263, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 203, in find_dates
+  File "list_opcodes.py", line 210, in find_dates
     assert datetime is not None, "\n%s" % lib.hexdump(bolus)
 AssertionError: 
 0000   0x01 0x28 0x28 0x00 0x65 0xd7 0x26         .((.e.&
