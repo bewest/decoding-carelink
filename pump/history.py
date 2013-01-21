@@ -67,6 +67,36 @@ def parse_years_lax(year):
   y = (year & Mask.year) + 2000
   return y
 
+
+_remote_ids = [
+  bytearray([ 0x01, 0xe2, 0x40 ]),
+  bytearray([ 0x03, 0x42, 0x2a ]),
+  bytearray([ 0x0c, 0x89, 0x92 ]),
+]
+
+def decode_remote_id(msg):
+  """
+   0x27
+   0x01 0xe2 0x40
+   0x03 0x42 0x2a
+   0x28 0x0c 0x89
+   0x92 0x00 0x00 0x00
+
+  >>> decode_remote_id(_remote_ids[0])
+
+  >>> decode_remote_id(_remote_ids[1])
+
+  >>> decode_remote_id(_remote_ids[2])
+
+
+
+  """
+  high   = msg[ 0 ] * 256 * 256
+  middle = msg[ 1 ] * 256
+  low    = msg[ 2 ]
+  return str(high + middle + low)
+
+
 def extra_year(year=bytearray([0x86])):
   """
   >>> extra_year( )
