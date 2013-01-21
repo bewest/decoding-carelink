@@ -51,11 +51,13 @@ class Record(object):
     #0x06: 3,
     0x45: 7,
     # 0x03: 4,
-    0x27: 16,
+
+
     0x00: 3,
 
     # hacks
     0x6b: 7,
+    # 0x27: 16,
   }
   _date = 5
   _body = {
@@ -67,7 +69,8 @@ class Record(object):
     # 0x18: 6,
     # 0x21: 23,
     0x34: 0,
-    0x33: 0,
+    0x33: 1,
+    0x26: 14,
 
     # hacks
     0x0a: 1,

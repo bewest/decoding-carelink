@@ -40,8 +40,12 @@ def parse_hours(hours):
   """
   >>> parse_hours(0x0b)
   11
+
+  >>> parse_hours(0x28)
+  8
+
   """
-  return int(hours)
+  return int(hours & 0x1f)
 
 def parse_day(day):
   """
@@ -89,6 +93,20 @@ def extra_year(year=bytearray([0x86])):
   nibbles = [ ]
   for mask, shift in masks:
     nibbles.append( ( (year & mask) >> shift ) )
+  return nibbles
+  
+def extra_hour_bits(value):
+  """
+  >>> extra_hour_bits(0x28)
+  [0, 0, 1]
+
+  >>> extra_hour_bits(0x8)
+  [0, 0, 0]
+  """
+  masks = [ ( 0x80, 7), (0x40, 6), (0x20, 5), ]
+  nibbles = [ ]
+  for mask, shift in masks:
+    nibbles.append( ( (value & mask) >> shift ) )
   return nibbles
   
 
@@ -199,8 +217,8 @@ def parse_date(data):
   try:
     seconds = parse_seconds(data[0])
     minutes = parse_minutes(data[1])
-    if data[2] > 32:
-      data[2] = data[2] - 32
+    # if data[2] > 32:
+    #  data[2] = data[2] - 32
     hours   = parse_hours(data[2])
     day     = parse_day(data[3])
     year    = parse_years(data[4])
