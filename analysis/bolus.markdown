@@ -1,6 +1,152 @@
 
 # what do bolus records look like?
 
+## manually deconstruct bolus records
+
+Looks like it's going to be annoying to parse.
+
+### page 2
+
+```
+00 00 00 00 00 00
+
+ROWS: 2
+5b 64
+a9 34 06 02 0c
+0a 50 0a 32 64 00 0a 00
+00 00 00 0a 64 01 0a 0a
+00
+a9 34 26 02 0c
+>>> history.parse_date( bytearray( unhexlify(''.join( 'a9 34 26 02 0c'.split(' ')))) )
+datetime.datetime(2012, 8, 2, 6, 52, 41)
+>>> history.extra_hour_bits(0x26)
+[0, 0, 1]
+
+
+5b 64
+a2 35 06 02 0c
+0a 50 0a 32 64 00 0a 00
+00 0a 00 0a 64 5c 08 14
+00 44 14 0a 44 01 0a 0a
+00
+a2 35 26 02 0c
+>>> history.parse_date( bytearray( unhexlify(''.join( 'a2 35 26 02 0c'.split(' ')))) )
+datetime.datetime(2012, 8, 2, 6, 53, 34)
+
+
+5b 64
+9e 36 06 02 0c
+0a 50 0a 32 64 00 0a 00
+00 14 00 0a 64 5c 08 3c
+01 44 14 0b 44 01 0a 0a
+00
+9e 36 26 02 0c
+
+>>> history.parse_date( bytearray( [ 0x9e, 0x36, 0x26, 0x02, 0x0c,  ] ) )
+datetime.datetime(2012, 8, 2, 6, 54, 30)
+
+
+5b 64
+96 37 06 02 0c
+0a 50 0a 32 64 00 0a 00
+00 1e 00 0a 64 5c 08 64
+02 44 14 0c 44 01 0a 0a
+00
+97 37 26 02 0c
+>>> history.parse_date( bytearray( unhexlify(''.join( '97 37 26 02 0c'.split(' ')))) )
+datetime.datetime(2012, 8, 2, 6, 55, 23)
+
+
+5b 64
+a5 38 06 02 0c
+0a 50 0a 32 64 00 0a 00
+00 28 00 0a 64 5c 08 8c
+03 44 14 0d 44 01 0a 0a
+00
+a5 38 26 02 0c
+>>> history.parse_date( bytearray( unhexlify(''.join( 'a5 38 26 02 0c'.split(' ')))) )
+datetime.datetime(2012, 8, 2, 6, 56, 37)
+>>> history.extra_hour_bits(0x26)
+[0, 0, 1]
+
+
+5b 64
+a1 39 06 02 0c
+0a 50 0a 32 64 00 0a 00
+00 32 00 0a 64 5c 08 b4
+04 44 14 0e 44 01 0a 0a
+00
+a1 39 26 02 0c
+>>> history.parse_date( bytearray( unhexlify(''.join( 'a1 39 26 02 0c'.split(' ')))) )
+datetime.datetime(2012, 8, 2, 6, 57, 33)
+
+
+5b 64
+97 3a 06 02 0c
+0a 50 0a 32 64 00 0a 00
+00 3c 00 0a 64 5c 08 dc
+05 44 14 0f 44 01 0a 0a
+00
+97 3a 26 02 0c
+>>> history.parse_date( bytearray( unhexlify(''.join( '97 3a 26 02 0c'.split(' ')))) )
+datetime.datetime(2012, 8, 2, 6, 58, 23)
+
+
+5b 65 b3 06 07 02 0c
+>>> history.parse_date( bytearray( unhexlify(''.join( 'b3 06 07 02 0c'.split(' ')))) )
+datetime.datetime(2012, 8, 2, 7, 6, 51)
+```
+
+
+### page 1
+```
+
+2 rows
+
+5b 64
+6f d7 08 01 06
+body[16]
+03 50 0a 32 64 00 03 00
+00 00 00 03 64 01 03 03
+00
+6f d7 28 01 06
+>>> history.parse_date( bytearray( unhexlify(''.join( '6f d7 08 01 06'.split(' ')))) )
+datetime.datetime(2006, 7, 1, 8, 23, 47)
+
+
+2 rows
+
+5b 67
+6b d8 08 01 06
+body[21]
+07 50 0a 32 64 00 07 00
+00 03 00 07 64 5c 05 0c
+01 44 01 07 07
+00
+6b d8 28 01 06
+>>> history.parse_date( bytearray( unhexlify(''.join( '6b d8 28 01 06'.split(' ')))) )
+datetime.datetime(2006, 7, 1, 8, 24, 43)
+
+
+2 rows
+
+5b 57
+77 da 08 01 06
+body[21]
+01 52 0a 32 64 63 01 00
+00 0a 00 5a 64 5c 05 28
+03 44 01 5a 5a
+00
+77 da 28 01 06
+>>> history.parse_date( bytearray( unhexlify(''.join( '77 da 28 01 06'.split(' ')))) )
+datetime.datetime(2006, 7, 1, 8, 26, 55)
+
+```
+
+
+
+
+## old
 
 #### export
 ```
@@ -52,6 +198,7 @@
     16: Raw-Values: "BG_INPUT=100 && BG_UNITS=mg dl && CARB_INPUT=3 && CARB_UNITS=grams && CARB_RATIO=10 && INSULIN_SENSITIVITY=50 && BG_TARGET_LOW=100 && BG_TARGET_HIGH=100 && BOLUS_ESTIMATE=0.3 && CORRECTION_ESTIMATE=0 && FOOD_ESTIMATE=0.3 && UNABSORBED_INSULIN_TOTAL=0 && UNABSORBED_INSULIN_COUNT=0 && ACTION_REQUESTOR=pump"
 
 ```
+
 
 #### decoded
 ```
@@ -144,6 +291,8 @@ RECORD 0: 2006-07-01T08:23:47 0x5b
 
 #### decoded
 ```
+
+
 RECORD 1: 2006-07-01T08:24:43 0x5b
   hex (2)
 0000   0x5b 0x67                                  [g
@@ -234,6 +383,8 @@ RECORD 1: 2006-07-01T08:24:43 0x5b
 #### decoded
 pretty sure this one is wrong/ has too much data.
 ```
+
+
 RECORD 2: 2006-07-01T08:26:55 0x6b
   hex (7)
 0000   0x6b 0xd8 0x28 0x01 0x06 0x5b 0x57         k.(..[W
