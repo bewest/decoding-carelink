@@ -302,12 +302,462 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
 
-Traceback (most recent call last):
-  File "list_opcodes.py", line 279, in <module>
-    main( )
-  File "list_opcodes.py", line 263, in main
-    records = find_dates(stream)
-  File "list_opcodes.py", line 210, in find_dates
-    assert datetime is not None, "\n%s" % lib.hexdump(bolus)
-AssertionError: 
-0000   0x01 0x28 0x28 0x00 0x65 0xd7 0x26         .((.e.&
+#### RECORD 27 Record 2005-07-08T06:23:37 head[4], body[0] 0x01
+    op hex (4)
+    0000   0x01 0x28 0x28 0x00                        .((.
+    decimal
+              1   40   40    0
+    datetime (2005-07-08T06:23:37)
+    0000   0x65 0xd7 0x26 0x08 0x05                   e.&..
+    body (0)
+
+#### RECORD 28 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x03 0x96 0x68 0x85                   ...h.
+    body (38)
+    hex
+    0000   0x6c 0x68 0x85 0x05 0x00 0x60 0x60 0x60    lh...```
+    0008   0x01 0x00 0x00 0x03 0x96 0x02 0xf6 0x53    .......S
+    0010   0x00 0xa0 0x11 0x00 0x00 0x00 0xa0 0x11    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0xa0    ........
+    0020   0x64 0x01 0x00 0x00 0x00 0x01              d.....
+    decimal
+            108  104  133    5    0   96   96   96
+              1    0    0    3  150    2  246   83
+              0  160   17    0    0    0  160   17
+              0    0    0    0    0    0    0  160
+            100    1    0    0    0    1
+
+XXX: 0x01
+#### RECORD 29 BolusWizard 2005-07-09T05:45:53 head[2], body[22] 0x5b
+    op hex (2)
+    0000   0x5b 0x64                                  [d
+    decimal
+             91  100
+    datetime (2005-07-09T05:45:53)
+    0000   0x75 0xed 0x05 0x09 0x05                   u....
+    body (22)
+    hex
+    0000   0x01 0x50 0x0a 0x32 0x64 0x00 0x01 0x00    .P.2d...
+    0008   0x00 0x00 0x00 0x01 0x64 0x01 0x01 0x01    ....d...
+    0010   0x00 0x75 0xed 0x25 0x09 0x05              .u.%..
+    decimal
+              1   80   10   50  100    0    1    0
+              0    0    0    1  100    1    1    1
+              0  117  237   37    9    5
+
+XXX: 0x5c
+should eat up to null
+#### RECORD 30 BolusWizard 2005-07-09T05:46:07 head[2], body[22] 0x5b
+    op hex (2)
+    0000   0x5b 0x64                                  [d
+    decimal
+             91  100
+    datetime (2005-07-09T05:46:07)
+    0000   0x47 0xee 0x05 0x09 0x05                   G....
+    body (22)
+    hex
+    0000   0x02 0x50 0x0a 0x32 0x64 0x00 0x02 0x00    .P.2d...
+    0008   0x00 0x01 0x00 0x02 0x64 0x5c 0x05 0x04    ....d\..
+    0010   0x03 0x44 0x01 0x02 0x02 0x00              .D....
+    decimal
+              2   80   10   50  100    0    2    0
+              0    1    0    2  100   92    5    4
+              3   68    1    2    2    0
+
+XXX: 0x5c
+should eat up to null
+#### RECORD 31 BolusWizard 2005-07-09T05:46:24 head[2], body[22] 0x5b
+    op hex (2)
+    0000   0x5b 0x64                                  [d
+    decimal
+             91  100
+    datetime (2005-07-09T05:46:24)
+    0000   0x58 0xee 0x05 0x09 0x05                   X....
+    body (22)
+    hex
+    0000   0x03 0x50 0x0a 0x32 0x64 0x00 0x03 0x00    .P.2d...
+    0008   0x00 0x03 0x00 0x03 0x64 0x5c 0x05 0x0c    ....d\..
+    0010   0x03 0x44 0x01 0x03 0x03 0x00              .D....
+    decimal
+              3   80   10   50  100    0    3    0
+              0    3    0    3  100   92    5   12
+              3   68    1    3    3    0
+
+#### RECORD 32 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x03 0x4e 0x69 0x85                   ..Ni.
+    body (38)
+    hex
+    0000   0x6c 0x69 0x85 0x05 0x00 0x64 0x64 0x65    li...dde
+    0008   0x04 0x00 0x00 0x03 0x4e 0x03 0x36 0x61    ....N.6a
+    0010   0x00 0x18 0x03 0x00 0x06 0x00 0x18 0x03    ........
+    0018   0x00 0x18 0x64 0x00 0x00 0x00 0x00 0x00    ..d.....
+    0020   0x00 0x03 0x03 0x00 0x00 0x00              ......
+    decimal
+            108  105  133    5    0  100  100  101
+              4    0    0    3   78    3   54   97
+              0   24    3    0    6    0   24    3
+              0   24  100    0    0    0    0    0
+              0    3    3    0    0    0
+
+#### RECORD 33 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x03 0x36 0x6a 0x85                   ..6j.
+    body (38)
+    hex
+    0000   0x6c 0x6a 0x85 0x05 0x0c 0x00 0xe8 0x00    lj......
+    0008   0x00 0x00 0x00 0x03 0x36 0x03 0x36 0x64    ....6.6d
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00              ......
+    decimal
+            108  106  133    5   12    0  232    0
+              0    0    0    3   54    3   54  100
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0
+
+#### RECORD 34 ChangeTimeDisplay 2005-07-11T20:55:08 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x01                                  d.
+    decimal
+            100    1
+    datetime (2005-07-11T20:55:08)
+    0000   0x48 0xf7 0x14 0x0b 0x05                   H....
+    body (0)
+
+#### RECORD 35 ChangeTime 2005-07-11T20:55:34 head[2], body[0] 0x17
+    op hex (2)
+    0000   0x17 0x00                                  ..
+    decimal
+             23    0
+    datetime (2005-07-11T20:55:34)
+    0000   0x62 0xf7 0x14 0x0b 0x05                   b....
+    body (0)
+
+#### RECORD 36 NewTimeSet 2012-08-09T19:55:00 head[2], body[0] 0x18
+    op hex (2)
+    0000   0x18 0x00                                  ..
+    decimal
+             24    0
+    datetime (2012-08-09T19:55:00)
+    0000   0x80 0x37 0x13 0x09 0x0c                   .7...
+    body (0)
+
+#### RECORD 37 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x03 0x1e 0x6b 0x85                   ...k.
+    body (38)
+    hex
+    0000   0x6c 0x6b 0x85 0x05 0x00 0x64 0x64 0x64    lk...ddd
+    0008   0x01 0x00 0x00 0x03 0x1e 0x03 0x1e 0x64    .......d
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00              ......
+    decimal
+            108  107  133    5    0  100  100  100
+              1    0    0    3   30    3   30  100
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0
+
+#### RECORD 38 ChangeTimeDisplay 2012-08-09T20:02:38 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x01                                  d.
+    decimal
+            100    1
+    datetime (2012-08-09T20:02:38)
+    0000   0xa6 0x02 0x14 0x09 0x0c                   .....
+    body (0)
+
+#### RECORD 39 ChangeTime 2012-08-09T20:02:50 head[2], body[0] 0x17
+    op hex (2)
+    0000   0x17 0x00                                  ..
+    decimal
+             23    0
+    datetime (2012-08-09T20:02:50)
+    0000   0xb2 0x02 0x14 0x09 0x0c                   .....
+    body (0)
+
+#### RECORD 40 NewTimeSet 2013-08-01T20:02:00 head[2], body[0] 0x18
+    op hex (2)
+    0000   0x18 0x00                                  ..
+    decimal
+             24    0
+    datetime (2013-08-01T20:02:00)
+    0000   0x80 0x02 0x14 0x01 0x0d                   .....
+    body (0)
+
+#### RECORD 41 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x00 0x0a 0x89 0x0c                   .....
+    body (38)
+    hex
+    0000   0x6c 0x89 0x0c 0x05 0x0c 0x00 0xe8 0x00    l.......
+    0008   0x00 0x00 0x00 0x00 0x0a 0x00 0x0a 0x64    .......d
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00              ......
+    decimal
+            108  137   12    5   12    0  232    0
+              0    0    0    0   10    0   10  100
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0
+
+#### RECORD 42 ChangeTimeDisplay 2013-08-01T20:03:05 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x01                                  d.
+    decimal
+            100    1
+    datetime (2013-08-01T20:03:05)
+    0000   0x85 0x03 0x14 0x01 0x0d                   .....
+    body (0)
+
+#### RECORD 43 ChangeTime 2013-08-01T20:03:13 head[2], body[0] 0x17
+    op hex (2)
+    0000   0x17 0x00                                  ..
+    decimal
+             23    0
+    datetime (2013-08-01T20:03:13)
+    0000   0x8d 0x03 0x14 0x01 0x0d                   .....
+    body (0)
+
+#### RECORD 44 NewTimeSet 2000-08-01T20:03:00 head[2], body[0] 0x18
+    op hex (2)
+    0000   0x18 0x00                                  ..
+    decimal
+             24    0
+    datetime (2000-08-01T20:03:00)
+    0000   0x80 0x03 0x14 0x01 0x10                   .....
+    body (0)
+
+#### RECORD 45 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x00 0x02 0x81 0x0d                   .....
+    body (38)
+    hex
+    0000   0x6c 0x81 0x0d 0x05 0x0c 0x00 0xe8 0x00    l.......
+    0008   0x00 0x00 0x00 0x00 0x02 0x00 0x02 0x64    .......d
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00              ......
+    decimal
+            108  129   13    5   12    0  232    0
+              0    0    0    0    2    0    2  100
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0
+
+#### RECORD 46 ChangeTimeDisplay 2000-08-01T20:03:57 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x01                                  d.
+    decimal
+            100    1
+    datetime (2000-08-01T20:03:57)
+    0000   0xb9 0x03 0x14 0x01 0x10                   .....
+    body (0)
+
+#### RECORD 47 ChangeTime 2000-08-01T20:04:34 head[2], body[0] 0x17
+    op hex (2)
+    0000   0x17 0x00                                  ..
+    decimal
+             23    0
+    datetime (2000-08-01T20:04:34)
+    0000   0xa2 0x04 0x14 0x01 0x10                   .....
+    body (0)
+
+#### RECORD 48 NewTimeSet 2002-08-01T20:04:00 head[2], body[0] 0x18
+    op hex (2)
+    0000   0x18 0x00                                  ..
+    decimal
+             24    0
+    datetime (2002-08-01T20:04:00)
+    0000   0x80 0x04 0x14 0x01 0x12                   .....
+    body (0)
+
+#### RECORD 49 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x00 0x04 0x81 0x10                   .....
+    body (38)
+    hex
+    0000   0x6c 0x81 0x10 0x05 0x0c 0x00 0xe8 0x00    l.......
+    0008   0x00 0x00 0x00 0x00 0x04 0x00 0x04 0x64    .......d
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00              ......
+    decimal
+            108  129   16    5   12    0  232    0
+              0    0    0    0    4    0    4  100
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0
+
+#### RECORD 50 ChangeTimeDisplay 2002-08-01T20:04:59 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x01                                  d.
+    decimal
+            100    1
+    datetime (2002-08-01T20:04:59)
+    0000   0xbb 0x04 0x14 0x01 0x12                   .....
+    body (0)
+
+#### RECORD 51 ChangeTimeDisplay 2002-08-01T20:08:22 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x01                                  d.
+    decimal
+            100    1
+    datetime (2002-08-01T20:08:22)
+    0000   0x96 0x08 0x14 0x01 0x12                   .....
+    body (0)
+
+#### RECORD 52 ChangeTime 2002-08-01T20:08:31 head[2], body[0] 0x17
+    op hex (2)
+    0000   0x17 0x00                                  ..
+    decimal
+             23    0
+    datetime (2002-08-01T20:08:31)
+    0000   0x9f 0x08 0x14 0x01 0x12                   .....
+    body (0)
+
+#### RECORD 53 NewTimeSet 2012-08-01T20:08:00 head[2], body[0] 0x18
+    op hex (2)
+    0000   0x18 0x00                                  ..
+    decimal
+             24    0
+    datetime (2012-08-01T20:08:00)
+    0000   0x80 0x08 0x14 0x01 0x0c                   .....
+    body (0)
+
+#### RECORD 54 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x00 0x06 0x81 0x12                   .....
+    body (38)
+    hex
+    0000   0x6c 0x81 0x12 0x05 0x0c 0x00 0xe8 0x00    l.......
+    0008   0x00 0x00 0x00 0x00 0x06 0x00 0x06 0x64    .......d
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00              ......
+    decimal
+            108  129   18    5   12    0  232    0
+              0    0    0    0    6    0    6  100
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0
+
+#### RECORD 55 Record 2012-08-01T20:22:55 head[2], body[0] 0x1a
+    op hex (2)
+    0000   0x1a 0x00                                  ..
+    decimal
+             26    0
+    datetime (2012-08-01T20:22:55)
+    0000   0xb7 0x16 0x14 0x01 0x0c                   .....
+    body (0)
+
+#### RECORD 56 Record 2012-08-01T20:27:20 head[2], body[0] 0x1a
+    op hex (2)
+    0000   0x1a 0x01                                  ..
+    decimal
+             26    1
+    datetime (2012-08-01T20:27:20)
+    0000   0x94 0x1b 0x14 0x01 0x0c                   .....
+    body (0)
+
+#### RECORD 57 Record 2012-08-01T20:27:21 head[2], body[0] 0x1a
+    op hex (2)
+    0000   0x1a 0x00                                  ..
+    decimal
+             26    0
+    datetime (2012-08-01T20:27:21)
+    0000   0x95 0x1b 0x14 0x01 0x0c                   .....
+    body (0)
+
+#### RECORD 58 Record 2012-08-01T20:28:24 head[2], body[0] 0x1a
+    op hex (2)
+    0000   0x1a 0x01                                  ..
+    decimal
+             26    1
+    datetime (2012-08-01T20:28:24)
+    0000   0x98 0x1c 0x14 0x01 0x0c                   .....
+    body (0)
+
+#### RECORD 59 Record 2012-08-01T20:28:53 head[2], body[0] 0x1a
+    op hex (2)
+    0000   0x1a 0x00                                  ..
+    decimal
+             26    0
+    datetime (2012-08-01T20:28:53)
+    0000   0xb5 0x1c 0x14 0x01 0x0c                   .....
+    body (0)
+
+#### RECORD 60 Record 2012-08-01T20:30:00 head[2], body[0] 0x1a
+    op hex (2)
+    0000   0x1a 0x01                                  ..
+    decimal
+             26    1
+    datetime (2012-08-01T20:30:00)
+    0000   0x80 0x1e 0x14 0x01 0x0c                   .....
+    body (0)
+
+#### RECORD 61 Record 2012-08-01T20:43:59 head[2], body[0] 0x1a
+    op hex (2)
+    0000   0x1a 0x00                                  ..
+    decimal
+             26    0
+    datetime (2012-08-01T20:43:59)
+    0000   0xbb 0x2b 0x14 0x01 0x0c                   .+...
+    body (0)
+
+#### RECORD 62 Record 2012-08-01T20:44:57 head[2], body[0] 0x1a
+    op hex (2)
+    0000   0x1a 0x01                                  ..
+    decimal
+             26    1
+    datetime (2012-08-01T20:44:57)
+    0000   0xb9 0x2c 0x14 0x01 0x0c                   .,...
+    body (0)
+
+#### RECORD 63 Record 2012-08-01T21:25:17 head[2], body[0] 0x21
+    op hex (2)
+    0000   0x21 0x00                                  !.
+    decimal
+             33    0
+    datetime (2012-08-01T21:25:17)
+    0000   0x91 0x19 0x15 0x01 0x0c                   .....
+    body (0)
+
+logs/ReadHistoryData-page-3.data: 64 records

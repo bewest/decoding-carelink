@@ -34,23 +34,25 @@ def parse_date(date):
 
 class Record(object):
   _names = {
-    0x07: 'ResultTotals',
     0x03: 'Prime',
+    0x07: 'ResultTotals',
     0x26: 'EnableDisableRemote',
     0x27: 'ChangeRemoteID',
-    0x5b: 'BolusWizard',
     0x33: 'TempBasal',
+    0x5b: 'BolusWizard',
+    0x14: 'ChangeBasalProfile',
     0x16: 'TempBasal[eof]',
-    0x63: 'ChangeUtility?',
-    0x1e: 'PumpSuspend',
-    0x1f: 'PumpResume',
-    0x64: 'ChangeTimeDisplay',
     0x17: 'ChangeTime',
     0x18: 'NewTimeSet',
+    0x1e: 'PumpSuspend',
+    0x1f: 'PumpResume',
+    0x63: 'ChangeUtility?',
+    0x64: 'ChangeTimeDisplay',
 
   }
   _head = {
     0x03: 5,
+    0x01: 4,
     # 0x0c: 7,
     0x28: 7,
     0x07: 2,
@@ -58,7 +60,6 @@ class Record(object):
     #0x06: 3,
     0x45: 7,
     # 0x03: 4,
-    # 0x01: 4,
 
 
     0x00: 3,
@@ -83,8 +84,8 @@ class Record(object):
 
     # hacks
     #0x0a: 0,
-    
   }
+
   def __init__(self, head=bytearray( ), date=bytearray( ), body=bytearray( ) ):
     self.head = head
     self.date = date

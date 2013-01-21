@@ -149,7 +149,7 @@ def parse_years(year):
   if year > 0x80:
     year = year - 0x80
   y = (year & Mask.year) + 2000
-  if y < 0 or y < 2002 or y > 2015:
+  if y < 0 or y < 1999 or y > 2015:
     raise ValueError(y)
   return y
 
@@ -247,13 +247,11 @@ def parse_date(data):
   try:
     seconds = parse_seconds(data[0])
     minutes = parse_minutes(data[1])
-    # if data[2] > 32:
-    #  data[2] = data[2] - 32
+
     hours   = parse_hours(data[2])
     day     = parse_day(data[3])
     year    = parse_years(data[4])
-    if year < 0 or year < 2002 or year > 2015:
-      raise ValueError(year)
+
     month   = parse_months( data[0], data[1] )
     date = datetime(year, month, day, hours, minutes, seconds)
     return date

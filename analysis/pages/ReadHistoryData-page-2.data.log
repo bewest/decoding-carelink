@@ -770,7 +770,7 @@ found 9 extra
     0000   0x48 0xcd 0x08 0x01 0x06                   H....
     body (0)
 
-#### RECORD 46 Record 2006-07-01T08:17:45 head[2], body[0] 0x14
+#### RECORD 46 ChangeBasalProfile 2006-07-01T08:17:45 head[2], body[0] 0x14
     op hex (2)
     0000   0x14 0x02                                  ..
     decimal
@@ -779,7 +779,7 @@ found 9 extra
     0000   0x6d 0xd1 0x28 0x01 0x06                   m.(..
     body (0)
 
-#### RECORD 47 Record 2006-07-01T08:18:05 head[2], body[0] 0x14
+#### RECORD 47 ChangeBasalProfile 2006-07-01T08:18:05 head[2], body[0] 0x14
     op hex (2)
     0000   0x14 0x01                                  ..
     decimal
@@ -788,7 +788,7 @@ found 9 extra
     0000   0x45 0xd2 0x48 0x01 0x06                   E.H..
     body (0)
 
-#### RECORD 48 Record 2006-07-01T08:19:06 head[2], body[0] 0x14
+#### RECORD 48 ChangeBasalProfile 2006-07-01T08:19:06 head[2], body[0] 0x14
     op hex (2)
     0000   0x14 0x02                                  ..
     decimal
@@ -797,7 +797,7 @@ found 9 extra
     0000   0x46 0xd3 0x28 0x01 0x06                   F.(..
     body (0)
 
-#### RECORD 49 Record 2006-07-01T08:20:08 head[2], body[0] 0x14
+#### RECORD 49 ChangeBasalProfile 2006-07-01T08:20:08 head[2], body[0] 0x14
     op hex (2)
     0000   0x14 0x01                                  ..
     decimal
