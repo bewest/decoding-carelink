@@ -1,0 +1,313 @@
+WARNING: No route found for IPv6 destination :: (no default route?)
+#### RECORD 0 Record 2002-03-04T07:35:00 head[2], body[0] 0x18
+    op hex (2)
+    0000   0x18 0x00                                  ..
+    decimal
+             24    0
+    datetime (2002-03-04T07:35:00)
+    0000   0x00 0xe3 0x07 0x04 0x02                   .....
+    body (0)
+
+#### RECORD 1 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x00 0x02 0x21 0x01                   ...!.
+    body (38)
+    hex
+    0000   0x6c 0x21 0x01 0x05 0x0c 0x00 0xe8 0x00    l!......
+    0008   0x00 0x00 0x00 0x00 0x02 0x00 0x02 0x64    .......d
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00              ......
+    decimal
+            108   33    1    5   12    0  232    0
+              0    0    0    0    2    0    2  100
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0
+
+#### RECORD 2 Record 2002-03-04T07:40:16 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x00                                  d.
+    decimal
+            100    0
+    datetime (2002-03-04T07:40:16)
+    0000   0x10 0xe8 0x07 0x04 0x02                   .....
+    body (0)
+
+#### RECORD 3 Record 2002-03-04T07:40:34 head[2], body[0] 0x17
+    op hex (2)
+    0000   0x17 0x00                                  ..
+    decimal
+             23    0
+    datetime (2002-03-04T07:40:34)
+    0000   0x22 0xe8 0x07 0x04 0x02                   "....
+    body (0)
+
+#### RECORD 4 Record 2002-03-04T08:00:00 head[2], body[0] 0x18
+    op hex (2)
+    0000   0x18 0x00                                  ..
+    decimal
+             24    0
+    datetime (2002-03-04T08:00:00)
+    0000   0x00 0xc0 0x08 0x04 0x02                   .....
+    body (0)
+
+#### RECORD 5 Record 2002-03-04T08:02:37 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x00                                  d.
+    decimal
+            100    0
+    datetime (2002-03-04T08:02:37)
+    0000   0x25 0xc2 0x08 0x04 0x02                   %....
+    body (0)
+
+#### RECORD 6 Record 2002-03-04T08:02:39 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x00                                  d.
+    decimal
+            100    0
+    datetime (2002-03-04T08:02:39)
+    0000   0x27 0xc2 0x08 0x04 0x02                   '....
+    body (0)
+
+#### RECORD 7 Record 2002-03-04T08:02:41 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x00                                  d.
+    decimal
+            100    0
+    datetime (2002-03-04T08:02:41)
+    0000   0x29 0xc2 0x08 0x04 0x02                   )....
+    body (0)
+
+#### RECORD 8 Record 2002-03-04T08:02:52 head[2], body[0] 0x17
+    op hex (2)
+    0000   0x17 0x00                                  ..
+    decimal
+             23    0
+    datetime (2002-03-04T08:02:52)
+    0000   0x34 0xc2 0x08 0x04 0x02                   4....
+    body (0)
+
+#### RECORD 9 Record 2002-03-04T09:19:00 head[2], body[0] 0x18
+    op hex (2)
+    0000   0x18 0x00                                  ..
+    decimal
+             24    0
+    datetime (2002-03-04T09:19:00)
+    0000   0x00 0xd3 0x09 0x04 0x02                   .....
+    body (0)
+
+#### RECORD 10 Record 2002-03-04T09:25:14 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x00                                  d.
+    decimal
+            100    0
+    datetime (2002-03-04T09:25:14)
+    0000   0x0e 0xd9 0x09 0x04 0x02                   .....
+    body (0)
+
+#### RECORD 11 Record 2002-03-04T09:25:25 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x00                                  d.
+    decimal
+            100    0
+    datetime (2002-03-04T09:25:25)
+    0000   0x19 0xd9 0x09 0x04 0x02                   .....
+    body (0)
+
+#### RECORD 12 Record 2002-03-04T09:25:40 head[2], body[0] 0x17
+    op hex (2)
+    0000   0x17 0x00                                  ..
+    decimal
+             23    0
+    datetime (2002-03-04T09:25:40)
+    0000   0x28 0xd9 0x09 0x04 0x02                   (....
+    body (0)
+
+#### RECORD 13 Record 2003-03-01T15:25:00 head[2], body[0] 0x18
+    op hex (2)
+    0000   0x18 0x00                                  ..
+    decimal
+             24    0
+    datetime (2003-03-01T15:25:00)
+    0000   0x00 0xd9 0x0f 0x01 0x03                   .....
+    body (0)
+
+#### RECORD 14 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x00 0x08 0x24 0x82                   ...$.
+    body (38)
+    hex
+    0000   0x6c 0x24 0x82 0x05 0x0c 0x00 0xe8 0x00    l$......
+    0008   0x00 0x00 0x00 0x00 0x08 0x00 0x08 0x64    .......d
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00              ......
+    decimal
+            108   36  130    5   12    0  232    0
+              0    0    0    0    8    0    8  100
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0
+
+#### RECORD 15 Record 2003-03-01T15:27:23 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x00                                  d.
+    decimal
+            100    0
+    datetime (2003-03-01T15:27:23)
+    0000   0x17 0xdb 0x0f 0x01 0x03                   .....
+    body (0)
+
+#### RECORD 16 Record 2003-03-01T15:27:34 head[2], body[0] 0x17
+    op hex (2)
+    0000   0x17 0x00                                  ..
+    decimal
+             23    0
+    datetime (2003-03-01T15:27:34)
+    0000   0x22 0xdb 0x0f 0x01 0x03                   "....
+    body (0)
+
+#### RECORD 17 Record 2004-03-01T15:27:00 head[2], body[0] 0x18
+    op hex (2)
+    0000   0x18 0x00                                  ..
+    decimal
+             24    0
+    datetime (2004-03-01T15:27:00)
+    0000   0x00 0xdb 0x0f 0x01 0x04                   .....
+    body (0)
+
+#### RECORD 18 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x00 0x02 0x21 0x83                   ...!.
+    body (38)
+    hex
+    0000   0x6c 0x21 0x83 0x05 0x0c 0x00 0xe8 0x00    l!......
+    0008   0x00 0x00 0x00 0x00 0x02 0x00 0x02 0x64    .......d
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00              ......
+    decimal
+            108   33  131    5   12    0  232    0
+              0    0    0    0    2    0    2  100
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0
+
+#### RECORD 19 Record 2004-03-01T15:27:33 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x00                                  d.
+    decimal
+            100    0
+    datetime (2004-03-01T15:27:33)
+    0000   0x21 0xdb 0x0f 0x01 0x04                   !....
+    body (0)
+
+#### RECORD 20 Record 2004-03-01T15:27:49 head[2], body[0] 0x17
+    op hex (2)
+    0000   0x17 0x00                                  ..
+    decimal
+             23    0
+    datetime (2004-03-01T15:27:49)
+    0000   0x31 0xdb 0x0f 0x01 0x04                   1....
+    body (0)
+
+#### RECORD 21 Record 2012-04-01T15:27:00 head[2], body[0] 0x18
+    op hex (2)
+    0000   0x18 0x00                                  ..
+    decimal
+             24    0
+    datetime (2012-04-01T15:27:00)
+    0000   0x40 0x1b 0x0f 0x01 0x0c                   @....
+    body (0)
+
+#### RECORD 22 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x00 0x00 0x21 0x84                   ...!.
+    body (38)
+    hex
+    0000   0x6c 0x21 0x84 0x05 0x0c 0x00 0xe8 0x00    l!......
+    0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00              ......
+    decimal
+            108   33  132    5   12    0  232    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0
+
+#### RECORD 23 Record 2012-04-01T15:28:49 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x01                                  d.
+    decimal
+            100    1
+    datetime (2012-04-01T15:28:49)
+    0000   0x71 0x1c 0x0f 0x01 0x0c                   q....
+    body (0)
+
+#### RECORD 24 Record 2012-04-01T15:29:16 head[2], body[0] 0x17
+    op hex (2)
+    0000   0x17 0x00                                  ..
+    decimal
+             23    0
+    datetime (2012-04-01T15:29:16)
+    0000   0x50 0x1d 0x0f 0x01 0x0c                   P....
+    body (0)
+
+#### RECORD 25 Record 2005-07-08T06:07:00 head[2], body[0] 0x18
+    op hex (2)
+    0000   0x18 0x00                                  ..
+    decimal
+             24    0
+    datetime (2005-07-08T06:07:00)
+    0000   0x40 0xc7 0x06 0x08 0x05                   @....
+    body (0)
+
+#### RECORD 26 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x00 0x02 0x41 0x0c                   ...A.
+    body (38)
+    hex
+    0000   0x6c 0x41 0x0c 0x05 0x0c 0x00 0xe8 0x00    lA......
+    0008   0x00 0x00 0x00 0x00 0x02 0x00 0x02 0x64    .......d
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00              ......
+    decimal
+            108   65   12    5   12    0  232    0
+              0    0    0    0    2    0    2  100
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0
+
+Traceback (most recent call last):
+  File "list_opcodes.py", line 272, in <module>
+    main( )
+  File "list_opcodes.py", line 256, in main
+    records = find_dates(stream)
+  File "list_opcodes.py", line 203, in find_dates
+    assert datetime is not None, "\n%s" % lib.hexdump(bolus)
+AssertionError: 
+0000   0x01 0x28 0x28 0x00 0x65 0xd7 0x26         .((.e.&

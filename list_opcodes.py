@@ -51,7 +51,7 @@ class Record(object):
     #0x06: 3,
     0x45: 7,
     # 0x03: 4,
-    0x01: 4,
+    # 0x01: 4,
 
 
     0x00: 3,
@@ -64,7 +64,7 @@ class Record(object):
   _body = {
     #0x5b: 15,
     # 0x5b: 22,
-    0x5b: 13,
+    0x5b: 22,
     0x6b: 15,
     0x45: 3,
     0x07: 38,
@@ -75,7 +75,7 @@ class Record(object):
     0x26: 14,
 
     # hacks
-    0x0a: 0,
+    #0x0a: 0,
     
   }
   def __init__(self, head=bytearray( ), date=bytearray( ), body=bytearray( ) ):
@@ -94,6 +94,14 @@ class Record(object):
   @classmethod
   def lookup_date(cls, opcode):
     return cls._date
+
+  @classmethod
+  def seeks_null(cls, opcode, body):
+    if opcode == 0x5b:
+      print 'XXX: %#04x' % body[13]
+      if body[13] ==  0x5c:
+        return True
+    return False
 
   @classmethod
   def is_midnight(cls, head):
@@ -148,6 +156,15 @@ def eat_nulls(fd):
   print "found %s nulls" % len(nulls)
   return nulls
 
+def seek_null(fd):
+  bolus = bytearray( )
+  for B in iter(lambda: fd.read(1), ""):
+    bolus.append(B)
+    print lib.hexdump(bolus)
+    if B == bytearray([ 0x00 ]):
+      return bolus
+  return bolus
+
 def find_dates(stream):
   records = [ ]
   bolus = bytearray( )
@@ -188,6 +205,15 @@ def find_dates(stream):
 
       body = bytearray(stream.read(body_length))
       bolus.extend(body)
+      if Record.seeks_null(opcode, body):
+        print "should eat up to null"
+        if body[-1] != 0x00:
+          extra = seek_null(stream)
+          print "found %s extra" % len(extra)
+          body.extend(extra)
+          bolus.extend(extra)
+        epi = bytearray(stream.read(date_length))
+        finished = parse_date(epi)
       record = Record(head, date, body)
       prefix = "#### RECORD %s %s" % (len(records), str(record) )
       print record.pformat(prefix)
