@@ -146,11 +146,11 @@ def parse_years(year):
     2006
 
   """
-  if year > 0x80:
-    year = year - 0x80
+  # if year > 0x80:
+  #  year = year - 0x80
   y = (year & Mask.year) + 2000
-  if y < 0 or y < 1999 or y > 2015:
-    raise ValueError(y)
+  # if y < 0 or y < 1999 or y > 2015:
+  #   raise ValueError(y)
   return y
 
 def encode_year(year):

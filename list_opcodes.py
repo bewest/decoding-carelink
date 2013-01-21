@@ -61,7 +61,11 @@ class Record(object):
 
     0x28: 7,
     0x45: 7,
-    0x6c: 45,
+
+
+    0x6c: 79 + 38 + 14,
+    0x06: 4,
+    # 0x6c: 3,
 
     # hacks
     #0x18: 1,
@@ -78,6 +82,8 @@ class Record(object):
     0x45: 3,
     0x07: 38,
 
+    0x08: 42,
+
     # 0x6b: 15,
     # 0x18: 6,
     # 0x21: 23,
@@ -85,10 +91,10 @@ class Record(object):
     0x33: 1,
     0x26: 14,
 
-    0x6c: 3,
 
     # hacks
     #0x0a: 0,
+    #0x6c: 3,
   }
 
   def __init__(self, head=bytearray( ), date=bytearray( ), body=bytearray( ) ):

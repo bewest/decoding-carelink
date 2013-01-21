@@ -1,10 +1,362 @@
 WARNING: No route found for IPv6 destination :: (no default route?)
-Traceback (most recent call last):
-  File "list_opcodes.py", line 285, in <module>
-    main( )
-  File "list_opcodes.py", line 269, in main
-    records = find_dates(stream)
-  File "list_opcodes.py", line 216, in find_dates
-    assert datetime is not None, "\n%s" % lib.hexdump(bolus)
-AssertionError: 
-0000   0x06 0x15 0x05 0x2e 0x00 0x40 0x60         .....@`
+#### RECORD 0 Record 2004-01-01T00:00:00 head[4], body[0] 0x06
+    op hex (4)
+    0000   0x06 0x15 0x05 0x2e                        ....
+    decimal
+              6   21    5   46
+    datetime (2004-01-01T00:00:00)
+    0000   0x00 0x40 0x60 0x01 0x04                   .@`..
+    body (0)
+
+#### RECORD 1 Record 2004-01-01T00:00:00 head[4], body[0] 0x06
+    op hex (4)
+    0000   0x06 0x36 0x05 0x36                        .6.6
+    decimal
+              6   54    5   54
+    datetime (2004-01-01T00:00:00)
+    0000   0x00 0x40 0x60 0x01 0x04                   .@`..
+    body (0)
+
+#### RECORD 2 Record 2004-01-01T00:00:00 head[4], body[0] 0x06
+    op hex (4)
+    0000   0x06 0x2f 0x18 0x41                        ./.A
+    decimal
+              6   47   24   65
+    datetime (2004-01-01T00:00:00)
+    0000   0x00 0x40 0x20 0xc1 0x04                   .@ ..
+    body (0)
+
+#### RECORD 3 Record 2004-01-01T00:00:00 head[4], body[0] 0x06
+    op hex (4)
+    0000   0x06 0x2f 0x0c 0x5f                        ./._
+    decimal
+              6   47   12   95
+    datetime (2004-01-01T00:00:00)
+    0000   0x00 0x40 0x20 0xc1 0x04                   .@ ..
+    body (0)
+
+#### RECORD 4 Record 2004-01-01T00:00:00 head[4], body[0] 0x06
+    op hex (4)
+    0000   0x06 0x2f 0x0c 0x70                        ./.p
+    decimal
+              6   47   12  112
+    datetime (2004-01-01T00:00:00)
+    0000   0x00 0x40 0x20 0xc1 0x04                   .@ ..
+    body (0)
+
+#### RECORD 5 Record 2004-01-01T00:00:00 head[4], body[0] 0x06
+    op hex (4)
+    0000   0x06 0x2f 0x0c 0x81                        ./..
+    decimal
+              6   47   12  129
+    datetime (2004-01-01T00:00:00)
+    0000   0x00 0x40 0x20 0xc1 0x04                   .@ ..
+    body (0)
+
+#### RECORD 6 Record 2004-01-01T00:00:00 head[4], body[0] 0x06
+    op hex (4)
+    0000   0x06 0x2f 0x0c 0x92                        ./..
+    decimal
+              6   47   12  146
+    datetime (2004-01-01T00:00:00)
+    0000   0x00 0x40 0x20 0xc1 0x04                   .@ ..
+    body (0)
+
+#### RECORD 7 Record 2004-01-01T00:00:00 head[4], body[0] 0x06
+    op hex (4)
+    0000   0x06 0x2f 0x0c 0xa3                        ./..
+    decimal
+              6   47   12  163
+    datetime (2004-01-01T00:00:00)
+    0000   0x00 0x40 0x20 0xc1 0x04                   .@ ..
+    body (0)
+
+#### RECORD 8 Record 2004-01-01T00:00:00 head[4], body[0] 0x06
+    op hex (4)
+    0000   0x06 0x2f 0x0c 0xc7                        ./..
+    decimal
+              6   47   12  199
+    datetime (2004-01-01T00:00:00)
+    0000   0x00 0x40 0x20 0xc1 0x04                   .@ ..
+    body (0)
+
+#### RECORD 9 Record 2004-01-01T00:00:00 head[4], body[0] 0x06
+    op hex (4)
+    0000   0x06 0x2f 0x0c 0xd8                        ./..
+    decimal
+              6   47   12  216
+    datetime (2004-01-01T00:00:00)
+    0000   0x00 0x40 0x20 0xc1 0x04                   .@ ..
+    body (0)
+
+#### RECORD 10 Record 2004-01-01T00:00:00 head[4], body[0] 0x06
+    op hex (4)
+    0000   0x06 0x11 0x0c 0xe7                        ....
+    decimal
+              6   17   12  231
+    datetime (2004-01-01T00:00:00)
+    0000   0x00 0x40 0x20 0xc1 0x04                   .@ ..
+    body (0)
+
+#### RECORD 11 Record 2004-01-01T00:00:00 head[4], body[0] 0x06
+    op hex (4)
+    0000   0x06 0x15 0x05 0x0c                        ....
+    decimal
+              6   21    5   12
+    datetime (2004-01-01T00:00:00)
+    0000   0x00 0x40 0x40 0xa1 0x04                   .@@..
+    body (0)
+
+#### RECORD 12 ChangeTimeDisplay 2004-01-01T00:00:12 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x00                                  d.
+    decimal
+            100    0
+    datetime (2004-01-01T00:00:12)
+    0000   0x0c 0x40 0x00 0x01 0x04                   .@...
+    body (0)
+
+#### RECORD 13 ChangeTimeDisplay 2004-01-01T00:00:21 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x00                                  d.
+    decimal
+            100    0
+    datetime (2004-01-01T00:00:21)
+    0000   0x15 0x40 0x00 0x01 0x04                   .@...
+    body (0)
+
+#### RECORD 14 ChangeTime 2004-01-01T00:01:08 head[2], body[0] 0x17
+    op hex (2)
+    0000   0x17 0x00                                  ..
+    decimal
+             23    0
+    datetime (2004-01-01T00:01:08)
+    0000   0x08 0x41 0x00 0x01 0x04                   .A...
+    body (0)
+
+#### RECORD 15 NewTimeSet 2000-01-01T00:00:00 head[2], body[0] 0x18
+    op hex (2)
+    0000   0x18 0x00                                  ..
+    decimal
+             24    0
+    datetime (2000-01-01T00:00:00)
+    0000   0x00 0x40 0x00 0x01 0x00                   .@...
+    body (0)
+
+#### RECORD 16 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x00 0x00 0x01 0x84                   .....
+    body (38)
+    hex
+    0000   0x6c 0x01 0x84 0x00 0x0c 0x00 0xe8 0x00    l.......
+    0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00              ......
+    decimal
+            108    1  132    0   12    0  232    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0
+
+#### RECORD 17 Rewind 2000-01-01T00:00:08 head[2], body[0] 0x21
+    op hex (2)
+    0000   0x21 0x00                                  !.
+    decimal
+             33    0
+    datetime (2000-01-01T00:00:08)
+    0000   0x08 0x40 0x00 0x01 0x00                   .@...
+    body (0)
+
+#### RECORD 18 Prime 2000-01-01T00:00:16 head[5], body[0] 0x03
+    op hex (5)
+    0000   0x03 0x00 0x00 0x00 0x15                   .....
+    decimal
+              3    0    0    0   21
+    datetime (2000-01-01T00:00:16)
+    0000   0x10 0x40 0x20 0x01 0x00                   .@ ..
+    body (0)
+
+#### RECORD 19 Prime 2000-01-01T00:00:34 head[5], body[0] 0x03
+    op hex (5)
+    0000   0x03 0x00 0x07 0x00 0x07                   .....
+    decimal
+              3    0    7    0    7
+    datetime (2000-01-01T00:00:34)
+    0000   0x22 0x40 0x00 0x01 0x00                   "@...
+    body (0)
+
+#### RECORD 20 ChangeTimeDisplay 2000-01-01T00:02:03 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x01                                  d.
+    decimal
+            100    1
+    datetime (2000-01-01T00:02:03)
+    0000   0x03 0x42 0x00 0x01 0x00                   .B...
+    body (0)
+
+#### RECORD 21 ChangeTimeDisplay 2000-01-01T00:02:09 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x00                                  d.
+    decimal
+            100    0
+    datetime (2000-01-01T00:02:09)
+    0000   0x09 0x42 0x00 0x01 0x00                   .B...
+    body (0)
+
+#### RECORD 22 ChangeTimeDisplay 2000-01-01T00:02:14 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x01                                  d.
+    decimal
+            100    1
+    datetime (2000-01-01T00:02:14)
+    0000   0x0e 0x42 0x00 0x01 0x00                   .B...
+    body (0)
+
+#### RECORD 23 ChangeTimeDisplay 2000-01-01T00:02:16 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x00                                  d.
+    decimal
+            100    0
+    datetime (2000-01-01T00:02:16)
+    0000   0x10 0x42 0x00 0x01 0x00                   .B...
+    body (0)
+
+#### RECORD 24 ChangeTimeDisplay 2000-01-01T00:02:18 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x01                                  d.
+    decimal
+            100    1
+    datetime (2000-01-01T00:02:18)
+    0000   0x12 0x42 0x00 0x01 0x00                   .B...
+    body (0)
+
+#### RECORD 25 ChangeTimeDisplay 2000-01-01T00:02:19 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x00                                  d.
+    decimal
+            100    0
+    datetime (2000-01-01T00:02:19)
+    0000   0x13 0x42 0x00 0x01 0x00                   .B...
+    body (0)
+
+#### RECORD 26 ChangeTimeDisplay 2000-01-01T00:02:22 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x01                                  d.
+    decimal
+            100    1
+    datetime (2000-01-01T00:02:22)
+    0000   0x16 0x42 0x00 0x01 0x00                   .B...
+    body (0)
+
+#### RECORD 27 ChangeTimeDisplay 2000-01-01T00:02:23 head[2], body[0] 0x64
+    op hex (2)
+    0000   0x64 0x00                                  d.
+    decimal
+            100    0
+    datetime (2000-01-01T00:02:23)
+    0000   0x17 0x42 0x00 0x01 0x00                   .B...
+    body (0)
+
+#### RECORD 28 PumpSuspend 2000-01-01T03:37:18 head[2], body[0] 0x1e
+    op hex (2)
+    0000   0x1e 0x00                                  ..
+    decimal
+             30    0
+    datetime (2000-01-01T03:37:18)
+    0000   0x12 0x65 0x03 0x41 0x00                   .e.A.
+    body (0)
+
+#### RECORD 29 PumpResume 2000-01-01T03:37:36 head[2], body[0] 0x1f
+    op hex (2)
+    0000   0x1f 0x00                                  ..
+    decimal
+             31    0
+    datetime (2000-01-01T03:37:36)
+    0000   0x24 0x65 0x03 0x41 0x00                   $e.A.
+    body (0)
+
+#### RECORD 30 PumpSuspend 2000-01-01T03:40:23 head[2], body[0] 0x1e
+    op hex (2)
+    0000   0x1e 0x00                                  ..
+    decimal
+             30    0
+    datetime (2000-01-01T03:40:23)
+    0000   0x17 0x68 0x03 0x41 0x00                   .h.A.
+    body (0)
+
+#### RECORD 31 PumpResume 2000-01-01T03:40:41 head[2], body[0] 0x1f
+    op hex (2)
+    0000   0x1f 0x00                                  ..
+    decimal
+             31    0
+    datetime (2000-01-01T03:40:41)
+    0000   0x29 0x68 0x03 0x41 0x00                   )h.A.
+    body (0)
+
+#### RECORD 32 Rewind 2000-01-01T03:41:11 head[2], body[0] 0x21
+    op hex (2)
+    0000   0x21 0x00                                  !.
+    decimal
+             33    0
+    datetime (2000-01-01T03:41:11)
+    0000   0x0b 0x69 0x03 0x01 0x00                   .i...
+    body (0)
+
+#### RECORD 33 Prime 2000-01-01T03:41:32 head[5], body[0] 0x03
+    op hex (5)
+    0000   0x03 0x00 0x00 0x00 0x16                   .....
+    decimal
+              3    0    0    0   22
+    datetime (2000-01-01T03:41:32)
+    0000   0x20 0x69 0x23 0x01 0x00                    i#..
+    body (0)
+
+#### RECORD 34 Prime 2000-01-01T03:41:44 head[5], body[0] 0x03
+    op hex (5)
+    0000   0x03 0x00 0x03 0x00 0x03                   .....
+    decimal
+              3    0    3    0    3
+    datetime (2000-01-01T03:41:44)
+    0000   0x2c 0x69 0x03 0x01 0x00                   ,i...
+    body (0)
+
+#### RECORD 35 ChangeBasalProfile 2000-01-01T03:44:17 head[2], body[0] 0x14
+    op hex (2)
+    0000   0x14 0x00                                  ..
+    decimal
+             20    0
+    datetime (2000-01-01T03:44:17)
+    0000   0x11 0x6c 0x23 0x01 0x00                   .l#..
+    body (0)
+
+#### RECORD 36 Record 2000-01-01T03:44:17 head[2], body[42] 0x08
+    op hex (2)
+    0000   0x08 0x00                                  ..
+    decimal
+              8    0
+    datetime (2000-01-01T03:44:17)
+    0000   0x11 0x6c 0x23 0x01 0x00                   .l#..
+    body (42)
+    hex
+    0000   0x3f 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ?.......
+    0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0028   0x00 0x00                                  ..
+    decimal
+             63    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0
+
+found 96 nulls
+logs/ReadHistoryData-page-8.data: 37 records
