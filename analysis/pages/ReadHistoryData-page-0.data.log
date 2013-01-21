@@ -20,7 +20,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
 
-#### RECORD 1 Record 2006-10-04T08:00:19 head[2], body[0] 0x21
+#### RECORD 1 Rewind 2006-10-04T08:00:19 head[2], body[0] 0x21
     op hex (2)
     0000   0x21 0x00                                  !.
     decimal
@@ -140,7 +140,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
 
-#### RECORD 9 Record 2006-10-08T20:31:03 head[2], body[0] 0x1a
+#### RECORD 9 Battery 2006-10-08T20:31:03 head[2], body[0] 0x1a
     op hex (2)
     0000   0x1a 0x00                                  ..
     decimal
@@ -149,7 +149,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x83 0x9f 0x14 0x08 0x06                   .....
     body (0)
 
-#### RECORD 10 Record 2006-10-08T20:31:46 head[2], body[0] 0x1a
+#### RECORD 10 Battery 2006-10-08T20:31:46 head[2], body[0] 0x1a
     op hex (2)
     0000   0x1a 0x01                                  ..
     decimal
@@ -260,5 +260,5 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0xaa 0xb7 0x07 0x0c 0x06                   .....
     body (0)
 
-found 547 nulls
+found 548 nulls
 logs/ReadHistoryData-page-0.data: 17 records

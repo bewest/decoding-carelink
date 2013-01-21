@@ -1,10 +1,26 @@
 WARNING: No route found for IPv6 destination :: (no default route?)
-Traceback (most recent call last):
-  File "list_opcodes.py", line 280, in <module>
-    main( )
-  File "list_opcodes.py", line 264, in main
-    records = find_dates(stream)
-  File "list_opcodes.py", line 211, in find_dates
-    assert datetime is not None, "\n%s" % lib.hexdump(bolus)
-AssertionError: 
-0000   0x6c 0x17 0x80 0x05 0x0c 0x00 0xe8         l......
+#### RECORD 0 Record 2012-04-05T00:24:44 head[45], body[3] 0x6c
+    op hex (45)
+    0000   0x6c 0x17 0x80 0x05 0x0c 0x00 0xe8 0x00    l.......
+    0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x07 0x00    ........
+    0028   0x00 0x00 0x00 0x18 0x80                   .....
+    decimal
+            108   23  128    5   12    0  232    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    7    0
+              0    0    0   24  128
+    datetime (2012-04-05T00:24:44)
+    0000   0x6c 0x18 0x80 0x05 0x0c                   l....
+    body (3)
+    hex
+    0000   0x00 0xe8 0x00                             ...
+    decimal
+              0  232    0
+
+found 23 nulls
+logs/ReadHistoryData-page-5.data: 1 records

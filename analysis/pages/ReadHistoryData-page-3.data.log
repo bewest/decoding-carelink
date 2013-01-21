@@ -679,7 +679,7 @@ should eat up to null
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
 
-#### RECORD 55 Record 2012-08-01T20:22:55 head[2], body[0] 0x1a
+#### RECORD 55 Battery 2012-08-01T20:22:55 head[2], body[0] 0x1a
     op hex (2)
     0000   0x1a 0x00                                  ..
     decimal
@@ -688,7 +688,7 @@ should eat up to null
     0000   0xb7 0x16 0x14 0x01 0x0c                   .....
     body (0)
 
-#### RECORD 56 Record 2012-08-01T20:27:20 head[2], body[0] 0x1a
+#### RECORD 56 Battery 2012-08-01T20:27:20 head[2], body[0] 0x1a
     op hex (2)
     0000   0x1a 0x01                                  ..
     decimal
@@ -697,7 +697,7 @@ should eat up to null
     0000   0x94 0x1b 0x14 0x01 0x0c                   .....
     body (0)
 
-#### RECORD 57 Record 2012-08-01T20:27:21 head[2], body[0] 0x1a
+#### RECORD 57 Battery 2012-08-01T20:27:21 head[2], body[0] 0x1a
     op hex (2)
     0000   0x1a 0x00                                  ..
     decimal
@@ -706,7 +706,7 @@ should eat up to null
     0000   0x95 0x1b 0x14 0x01 0x0c                   .....
     body (0)
 
-#### RECORD 58 Record 2012-08-01T20:28:24 head[2], body[0] 0x1a
+#### RECORD 58 Battery 2012-08-01T20:28:24 head[2], body[0] 0x1a
     op hex (2)
     0000   0x1a 0x01                                  ..
     decimal
@@ -715,7 +715,7 @@ should eat up to null
     0000   0x98 0x1c 0x14 0x01 0x0c                   .....
     body (0)
 
-#### RECORD 59 Record 2012-08-01T20:28:53 head[2], body[0] 0x1a
+#### RECORD 59 Battery 2012-08-01T20:28:53 head[2], body[0] 0x1a
     op hex (2)
     0000   0x1a 0x00                                  ..
     decimal
@@ -724,7 +724,7 @@ should eat up to null
     0000   0xb5 0x1c 0x14 0x01 0x0c                   .....
     body (0)
 
-#### RECORD 60 Record 2012-08-01T20:30:00 head[2], body[0] 0x1a
+#### RECORD 60 Battery 2012-08-01T20:30:00 head[2], body[0] 0x1a
     op hex (2)
     0000   0x1a 0x01                                  ..
     decimal
@@ -733,7 +733,7 @@ should eat up to null
     0000   0x80 0x1e 0x14 0x01 0x0c                   .....
     body (0)
 
-#### RECORD 61 Record 2012-08-01T20:43:59 head[2], body[0] 0x1a
+#### RECORD 61 Battery 2012-08-01T20:43:59 head[2], body[0] 0x1a
     op hex (2)
     0000   0x1a 0x00                                  ..
     decimal
@@ -742,7 +742,7 @@ should eat up to null
     0000   0xbb 0x2b 0x14 0x01 0x0c                   .+...
     body (0)
 
-#### RECORD 62 Record 2012-08-01T20:44:57 head[2], body[0] 0x1a
+#### RECORD 62 Battery 2012-08-01T20:44:57 head[2], body[0] 0x1a
     op hex (2)
     0000   0x1a 0x01                                  ..
     decimal
@@ -751,7 +751,7 @@ should eat up to null
     0000   0xb9 0x2c 0x14 0x01 0x0c                   .,...
     body (0)
 
-#### RECORD 63 Record 2012-08-01T21:25:17 head[2], body[0] 0x21
+#### RECORD 63 Rewind 2012-08-01T21:25:17 head[2], body[0] 0x21
     op hex (2)
     0000   0x21 0x00                                  !.
     decimal

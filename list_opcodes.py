@@ -48,24 +48,26 @@ class Record(object):
     0x1f: 'PumpResume',
     0x63: 'ChangeUtility?',
     0x64: 'ChangeTimeDisplay',
+    0x1a: 'Battery',
+    0x21: 'Rewind',
 
   }
   _head = {
-    0x03: 5,
     0x01: 4,
+    0x03: 5,
+
     # 0x0c: 7,
-    0x28: 7,
     0x07: 2,
-    #0x18: 1,
-    #0x06: 3,
+
+    0x28: 7,
     0x45: 7,
-    # 0x03: 4,
-
-
-    0x00: 3,
+    0x6c: 45,
 
     # hacks
-    0x6b: 7,
+    #0x18: 1,
+    #0x06: 3,
+    # 0x00: 3,
+    # 0x6b: 7,
     # 0x27: 16,
   }
   _date = 5
@@ -73,14 +75,17 @@ class Record(object):
     #0x5b: 15,
     # 0x5b: 22,
     0x5b: 22,
-    0x6b: 15,
     0x45: 3,
     0x07: 38,
+
+    # 0x6b: 15,
     # 0x18: 6,
     # 0x21: 23,
     0x34: 0,
     0x33: 1,
     0x26: 14,
+
+    0x6c: 3,
 
     # hacks
     #0x0a: 0,

@@ -1,10 +1,10 @@
 WARNING: No route found for IPv6 destination :: (no default route?)
 Traceback (most recent call last):
-  File "list_opcodes.py", line 280, in <module>
+  File "list_opcodes.py", line 285, in <module>
     main( )
-  File "list_opcodes.py", line 264, in main
+  File "list_opcodes.py", line 269, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 211, in find_dates
+  File "list_opcodes.py", line 216, in find_dates
     assert datetime is not None, "\n%s" % lib.hexdump(bolus)
 AssertionError: 
 0000   0x06 0x15 0x05 0x2e 0x00 0x40 0x60         .....@`
