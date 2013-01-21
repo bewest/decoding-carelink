@@ -24,6 +24,7 @@ your behalf:
 
 * collect more data
 * finish [analyzing pages of insulin pump history](https://github.com/bewest/decoding-carelink/blob/rewriting/analysis/pages.markdown)
+* https://github.com/bewest/decoding-carelink/tree/rewriting/analysis/pages
 ** [analyze insulin pump bolus records](https://github.com/bewest/decoding-carelink/blob/rewriting/analysis/bolus.markdown)
 ** [help analyze prime events](https://github.com/bewest/decoding-carelink/blob/rewriting/ground-start-0/decoding-prime-events.markdown)
 ** [help analyze pump midnight events](https://github.com/bewest/decoding-carelink/tree/rewriting/basal-hist-2006)
@@ -59,27 +60,14 @@ and as a result we can find and parse most records now.
 And lining this up with the Carelink CSV exports reveals the nature of
 the contents for further analysis.
 
-## Data
-
-* pcaps/
-  * `./CareLink-Export-1350867079937.csv` - One day of "use" manipulating lots of
-    settings.
-  * `./first_run.csv`  - Interogate basic settings
-  * `./second_run.csv` - Add more basals, quick bolus
-  * `./third_run.csv`  - More bolus
-* history/ - some experiments to get any historical data out of a pump 
-* rosetta-july-1-2006 - some initial experiments to perform some
-  activities on the pump and observe changes to the memory dump of the
-  pump
-* basal-hist-2006 - a kind of baseline memory dump the day after
-  rosetta-july-1-2006 activities.
-* ground-start-0 - starting to get pretty rigorous about noticing
-  differences between memory dumps, and isolating various pump
-  activities
-* new-years-day - carefully isolate activities and changes in the
-  memory dump.  See the different stages to watch what happens to the
-  memory as we isolate each activitiy.  Stage-5 results in being able
-  to read the date-times out of the binary logs.
+Once we can decode all records, it should be useful for
+diabetics, to get basic reports, more or less on par with the
+vendor's solution.
+We'll use it to 
+[collect diabetes data](https://github.com/bewest/insulaudit/tree/master/hacking)
+(https://github.com/bewest/decoding-carelink/tree/rewriting/analysis/pages)
+over the internet, allowing anyone to independently audit their
+therapy, and then send the data to their preferred auditing software.
 
 ## Tools
 
@@ -92,6 +80,11 @@ function new_name ( ) { echo $1 | sed -e "s/hex/binary/g" | sed -e "s/log/data/g
 
 bewest:~/src/decoding-carelink/new-years-day/rollover-month/stage-5$ for x in hex-*; do ../../../hexlog2binary.sh  $x $(new_name $x); done
 ```
+
+#### list_opcodes.py
+List records found in binary data by looking for opcodes, and a
+regular data structure associated with that length.  Includes at least
+one variable stop length strength.
 
 #### list_dates.py
 List records found in binary data by looking for dates.
