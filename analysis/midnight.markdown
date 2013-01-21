@@ -55,9 +55,11 @@ I do see this:
     0000   0x9e 0x8b 0x08 0x04 0x06                   .....
     body (0)
 
+```
 date 2006-10-04
 10 = 0x0a
 4  = 0x04
+```
 
 #### RECORD 4 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -140,6 +142,7 @@ body[2] = 0xa5 = ( 0x0a << 4 ) | ( 0x05 )
 
 ```
 date 2006-10-06
+or month = 7?
 month = 10 = 0x0a
 5          = 0x05
 day = 6    = 0x06
@@ -157,5 +160,7 @@ body[2]    = 0xa6 = ( 0x0a << 4 ) | ( 0x06 )
 
 
 
+So something is happening with fourth byte of date, and second byte of
+body.
 
 
