@@ -1,5 +1,5 @@
 WARNING: No route found for IPv6 destination :: (no default route?)
-#### RECORD 0 Record 2000-01-01T03:50:10 head[2], body[42] 0x08
+#### RECORD 0 ChangeBasalProfile 2000-01-01T03:50:10 head[2], body[42] 0x08
     op hex (2)
     0000   0x08 0x10                                  ..
     decimal
@@ -23,11 +23,11 @@ WARNING: No route found for IPv6 destination :: (no default route?)
              52    0
 
 Traceback (most recent call last):
-  File "list_opcodes.py", line 291, in <module>
+  File "list_opcodes.py", line 292, in <module>
     main( )
-  File "list_opcodes.py", line 275, in main
+  File "list_opcodes.py", line 276, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 222, in find_dates
+  File "list_opcodes.py", line 223, in find_dates
     assert datetime is not None, "\n%s" % lib.hexdump(bolus)
 AssertionError: 
 0000   0x1c 0x38 0x00 0x1e 0x40 0x00 0x00         .8..@..

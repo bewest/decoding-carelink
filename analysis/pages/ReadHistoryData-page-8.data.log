@@ -326,7 +326,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x2c 0x69 0x03 0x01 0x00                   ,i...
     body (0)
 
-#### RECORD 35 ChangeBasalProfile 2000-01-01T03:44:17 head[2], body[0] 0x14
+#### RECORD 35 SelectBasalProfile 2000-01-01T03:44:17 head[2], body[0] 0x14
     op hex (2)
     0000   0x14 0x00                                  ..
     decimal
@@ -335,7 +335,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x11 0x6c 0x23 0x01 0x00                   .l#..
     body (0)
 
-#### RECORD 36 Record 2000-01-01T03:44:17 head[2], body[42] 0x08
+#### RECORD 36 ChangeBasalProfile 2000-01-01T03:44:17 head[2], body[42] 0x08
     op hex (2)
     0000   0x08 0x00                                  ..
     decimal
