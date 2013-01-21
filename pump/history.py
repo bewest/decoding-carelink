@@ -83,10 +83,13 @@ def decode_remote_id(msg):
    0x92 0x00 0x00 0x00
 
   >>> decode_remote_id(_remote_ids[0])
+  '123456'
 
   >>> decode_remote_id(_remote_ids[1])
+  '213546'
 
   >>> decode_remote_id(_remote_ids[2])
+  '821650'
 
 
 
@@ -189,6 +192,12 @@ def encode_monthbyte(sec=18, minute=30, month=10):
   True
 
   >>> encode_monthbyte(month=3) ==  bytearray(b'\x12\xde')
+  True
+
+  >>> encode_monthbyte(month=10, minute=0, sec=0) == bytearray(b'\x80\x80')
+  True
+
+  >>> encode_monthbyte(month=10, minute=0, sec=24) == bytearray(b'\x98\x80')
   True
 
   """
