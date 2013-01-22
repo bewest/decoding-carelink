@@ -68,7 +68,13 @@ class Record(object):
     # 0x6c: 79 + 38 + 14,
     0x6c: 0,
 
+
+    # observed on bewest-pump
+    # 0x0c: 6,
+    # 0x2e: 24,
+
     # hacks
+
     #0x18: 1,
     #0x06: 3,
     # 0x00: 3,
