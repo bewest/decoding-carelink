@@ -164,7 +164,15 @@ class Record(object):
       body = '\n'.join([ body,
                          "    hex", lib.hexdump(self.body, indent=4),
                          "    decimal", int_dump(self.body, indent=11) ])
-    return '\n'.join([ prefix, head, date, body ])
+    extra = [ ]
+    hour_bits = history.extra_hour_bits(self.date[1])
+    year_bits = history.extra_year_bits(self.date[4])
+    if 1 in hour_bits:
+      extra.append("HOUR BITS: {}".format(str(hour_bits)).rjust(20))
+    if 1 in year_bits:
+      extra.append("YEAR BITS: {}".format(str(year_bits)).rjust(20))
+    extra = '    ' + ' '.join(extra)
+    return '\n'.join([ prefix, head, date, body, extra ])
 
 
 def eat_nulls(fd):

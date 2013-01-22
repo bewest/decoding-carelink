@@ -18,6 +18,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
+    
 
 #### RECORD 1 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -39,6 +40,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 2 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -60,6 +62,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 3 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -81,6 +84,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 4 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -102,6 +106,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 5 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -123,6 +128,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 6 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -144,6 +150,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 7 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -165,6 +172,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 8 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -186,6 +194,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 9 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -207,6 +216,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 10 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -228,6 +238,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 11 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -249,6 +260,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 12 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -270,6 +282,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 13 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -291,6 +304,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 14 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -312,6 +326,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 15 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -333,6 +348,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 16 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -354,6 +370,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 17 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -375,6 +392,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 18 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -396,6 +414,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 19 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -417,6 +436,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 20 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -438,6 +458,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 21 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -459,6 +480,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 22 ResultTotals MIDNIGHT!? head[2], body[34] 0x07
     op hex (2)
@@ -480,5 +502,6 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
             179  216
+    
 
 `end logs/ReadHistoryData-page-5.data: 23 records`

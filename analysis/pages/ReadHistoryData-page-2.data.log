@@ -8,6 +8,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     datetime (2012-08-01T21:28:30)
     0000   0x9e 0x1c 0x35 0x01 0x0c                   ..5..
     body (0)
+    
 
 #### RECORD 1 Prime 2012-08-01T21:28:39 head[5], body[0] 0x03
     op hex (5)
@@ -17,6 +18,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     datetime (2012-08-01T21:28:39)
     0000   0xa7 0x1c 0x15 0x01 0x0c                   .....
     body (0)
+    
 
 #### RECORD 2 EnableDisableRemote 2012-08-01T22:25:13 head[2], body[14] 0x26
     op hex (2)
@@ -32,6 +34,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     decimal
              39    0    0    0    0    0    0   40
               0    0    0    0    0    0
+    
 
 #### RECORD 3 EnableDisableRemote 2012-08-01T22:25:34 head[2], body[14] 0x26
     op hex (2)
@@ -47,6 +50,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     decimal
              39    1  226   64    0    0    0   40
               0    0    0    0    0    0
+    
 
 #### RECORD 4 EnableDisableRemote 2012-08-01T22:31:47 head[2], body[14] 0x26
     op hex (2)
@@ -62,6 +66,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     decimal
              39    1  226   64    3   66   42   40
               0    0    0    0    0    0
+    
 
 #### RECORD 5 EnableDisableRemote 2012-08-01T22:32:32 head[2], body[14] 0x26
     op hex (2)
@@ -77,6 +82,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     decimal
              39    1  226   64    3   66   42   40
              12  137  146    0    0    0
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 6 TempBasal 2012-08-01T22:38:22 head[2], body[1] 0x33
     op hex (2)
@@ -90,6 +96,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x00                                       .
     decimal
               0
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 7 TempBasal[eof] 2012-08-01T22:38:22 head[2], body[0] 0x16
     op hex (2)
@@ -99,6 +106,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     datetime (2012-08-01T22:38:22)
     0000   0x96 0x26 0x16 0x01 0x0c                   .&...
     body (0)
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 8 TempBasal 2012-08-01T22:48:39 head[2], body[1] 0x33
     op hex (2)
@@ -112,6 +120,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x00                                       .
     decimal
               0
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 9 TempBasal[eof] 2012-08-01T22:48:39 head[2], body[0] 0x16
     op hex (2)
@@ -121,6 +130,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     datetime (2012-08-01T22:48:39)
     0000   0xa7 0x30 0x16 0x01 0x0c                   .0...
     body (0)
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 10 TempBasal 2012-08-01T22:51:32 head[2], body[1] 0x33
     op hex (2)
@@ -134,6 +144,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x00                                       .
     decimal
               0
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 11 TempBasal[eof] 2012-08-01T22:51:32 head[2], body[0] 0x16
     op hex (2)
@@ -143,6 +154,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     datetime (2012-08-01T22:51:32)
     0000   0xa0 0x33 0x16 0x01 0x0c                   .3...
     body (0)
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 12 TempBasal 2012-08-01T22:52:17 head[2], body[1] 0x33
     op hex (2)
@@ -156,6 +168,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x00                                       .
     decimal
               0
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 13 TempBasal[eof] 2012-08-01T22:52:17 head[2], body[0] 0x16
     op hex (2)
@@ -165,6 +178,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     datetime (2012-08-01T22:52:17)
     0000   0x91 0x34 0x16 0x01 0x0c                   .4...
     body (0)
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 14 TempBasal 2012-08-01T23:04:54 head[2], body[1] 0x33
     op hex (2)
@@ -178,6 +192,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x00                                       .
     decimal
               0
+    
 
 #### RECORD 15 TempBasal[eof] 2012-08-01T23:04:54 head[2], body[0] 0x16
     op hex (2)
@@ -187,6 +202,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     datetime (2012-08-01T23:04:54)
     0000   0xb6 0x04 0x17 0x01 0x0c                   .....
     body (0)
+    
 
 #### RECORD 16 ChangeUtility? 2012-08-01T23:35:20 head[2], body[0] 0x63
     op hex (2)
@@ -196,6 +212,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     datetime (2012-08-01T23:35:20)
     0000   0x94 0x23 0x17 0x01 0x0c                   .#...
     body (0)
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 17 ChangeUtility? 2012-08-01T23:38:57 head[2], body[0] 0x63
     op hex (2)
@@ -205,6 +222,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     datetime (2012-08-01T23:38:57)
     0000   0xb9 0x26 0x17 0x01 0x0c                   .&...
     body (0)
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 18 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -226,6 +244,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 XXX: 0x01
 #### RECORD 19 BolusWizard 2012-08-02T06:52:41 head[2], body[22] 0x5b
@@ -244,6 +263,7 @@ XXX: 0x01
              10   80   10   50  100    0   10    0
               0    0    0   10  100    1   10   10
               0  169   52   38    2   12
+    HOUR BITS: [0, 0, 1]
 
 XXX: 0x5c
 should eat up to null
@@ -269,6 +289,7 @@ found 3 extra
               0   10    0   10  100   92    8   20
               0   68   20   10   68    1   10   10
               0
+    HOUR BITS: [0, 0, 1]
 
 XXX: 0x5c
 should eat up to null
@@ -294,6 +315,7 @@ found 3 extra
               0   20    0   10  100   92    8   60
               1   68   20   11   68    1   10   10
               0
+    HOUR BITS: [0, 0, 1]
 
 XXX: 0x5c
 should eat up to null
@@ -319,6 +341,7 @@ found 3 extra
               0   30    0   10  100   92    8  100
               2   68   20   12   68    1   10   10
               0
+    HOUR BITS: [0, 0, 1]
 
 XXX: 0x5c
 should eat up to null
@@ -344,6 +367,7 @@ found 3 extra
               0   40    0   10  100   92    8  140
               3   68   20   13   68    1   10   10
               0
+    HOUR BITS: [0, 0, 1]
 
 XXX: 0x5c
 should eat up to null
@@ -369,6 +393,7 @@ found 3 extra
               0   50    0   10  100   92    8  180
               4   68   20   14   68    1   10   10
               0
+    HOUR BITS: [0, 0, 1]
 
 XXX: 0x5c
 should eat up to null
@@ -394,6 +419,7 @@ found 3 extra
               0   60    0   10  100   92    8  220
               5   68   20   15   68    1   10   10
               0
+    HOUR BITS: [0, 0, 1]
 
 XXX: 0x5c
 should eat up to null
@@ -419,6 +445,7 @@ found 3 extra
               0   70    0    1  100   92    8    4
              13   69   20   23   68    1    1    1
               0
+    
 
 XXX: 0x5c
 should eat up to null
@@ -447,6 +474,7 @@ found 6 extra
               0   71    0    1  100   92   11    4
               4   68    4   14   69   20   24   68
               1    1    1    0
+    
 
 XXX: 0x5c
 should eat up to null
@@ -475,6 +503,7 @@ found 6 extra
               0   72    0    1  100   92   11    8
               4   68    4   14   69   20   24   68
               1    1    1    0
+    
 
 XXX: 0x5c
 should eat up to null
@@ -503,6 +532,7 @@ found 6 extra
               0   73    0    1  100   92   11   12
               5   68    4   15   69   20   25   68
               1    1    1    0
+    
 
 XXX: 0x5c
 should eat up to null
@@ -531,6 +561,7 @@ found 6 extra
               0   73    0    1  100   92   11   16
              14   68    4   24   69   20   34   68
               1    1    1    0
+    
 
 XXX: 0x5c
 should eat up to null
@@ -563,6 +594,7 @@ found 9 extra
               0   74    0    1  100   92   14    4
               5   68   16   15   68    4   25   69
              20   35   68    1    1    1    0
+    
 
 XXX: 0x5c
 should eat up to null
@@ -595,6 +627,7 @@ found 9 extra
               0   75    0    1  100   92   14    8
               5   68   16   15   68    4   25   69
              20   35   68    1    1    1    0
+    
 
 XXX: 0x5c
 should eat up to null
@@ -627,6 +660,7 @@ found 9 extra
               0   76    0    1  100   92   14   12
               5   68   16   15   68    4   25   69
              20   35   68    1    1    1    0
+    
 
 XXX: 0x5c
 should eat up to null
@@ -659,6 +693,7 @@ found 9 extra
               0   77    0    1  100   92   14   16
               5   68   16   15   68    4   25   69
              20   35   68    1    1    1    0
+    
 
 #### RECORD 35 PumpSuspend 2012-08-02T18:59:16 head[2], body[0] 0x1e
     op hex (2)
@@ -668,6 +703,7 @@ found 9 extra
     datetime (2012-08-02T18:59:16)
     0000   0x90 0x3b 0x12 0x42 0x0c                   .;.B.
     body (0)
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 36 PumpResume 2012-08-02T18:59:40 head[2], body[0] 0x1f
     op hex (2)
@@ -677,6 +713,7 @@ found 9 extra
     datetime (2012-08-02T18:59:40)
     0000   0xa8 0x3b 0x12 0x42 0x0c                   .;.B.
     body (0)
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 37 ChangeTimeDisplay 2012-08-02T20:10:03 head[2], body[0] 0x64
     op hex (2)
@@ -686,6 +723,7 @@ found 9 extra
     datetime (2012-08-02T20:10:03)
     0000   0x83 0x0a 0x14 0x02 0x0c                   .....
     body (0)
+    
 
 #### RECORD 38 ChangeTime 2012-08-02T20:10:35 head[2], body[0] 0x17
     op hex (2)
@@ -695,6 +733,7 @@ found 9 extra
     datetime (2012-08-02T20:10:35)
     0000   0xa3 0x0a 0x14 0x02 0x0c                   .....
     body (0)
+    
 
 #### RECORD 39 NewTimeSet 2006-07-01T06:10:00 head[2], body[0] 0x18
     op hex (2)
@@ -704,6 +743,7 @@ found 9 extra
     datetime (2006-07-01T06:10:00)
     0000   0x40 0xca 0x06 0x01 0x06                   @....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 40 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -725,6 +765,7 @@ found 9 extra
               1   60   25    0   79    1   60   25
               1   60  100    0    0    0    0    0
               0   16   16    0    0    0
+    
 
 #### RECORD 41 ChangeTimeDisplay 2006-07-01T06:10:22 head[2], body[0] 0x64
     op hex (2)
@@ -734,6 +775,7 @@ found 9 extra
     datetime (2006-07-01T06:10:22)
     0000   0x56 0xca 0x06 0x01 0x06                   V....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 42 ChangeTime 2006-07-01T06:10:32 head[2], body[0] 0x17
     op hex (2)
@@ -743,6 +785,7 @@ found 9 extra
     datetime (2006-07-01T06:10:32)
     0000   0x60 0xca 0x06 0x01 0x06                   `....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 43 NewTimeSet 2006-07-01T08:10:00 head[2], body[0] 0x18
     op hex (2)
@@ -752,6 +795,7 @@ found 9 extra
     datetime (2006-07-01T08:10:00)
     0000   0x40 0xca 0x08 0x01 0x06                   @....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 44 PumpSuspend 2006-07-01T08:12:38 head[2], body[0] 0x1e
     op hex (2)
@@ -761,6 +805,7 @@ found 9 extra
     datetime (2006-07-01T08:12:38)
     0000   0x66 0xcc 0x08 0x01 0x06                   f....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 45 PumpResume 2006-07-01T08:13:08 head[2], body[0] 0x1f
     op hex (2)
@@ -770,6 +815,7 @@ found 9 extra
     datetime (2006-07-01T08:13:08)
     0000   0x48 0xcd 0x08 0x01 0x06                   H....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 46 SelectBasalProfile 2006-07-01T08:17:45 head[2], body[0] 0x14
     op hex (2)
@@ -779,6 +825,7 @@ found 9 extra
     datetime (2006-07-01T08:17:45)
     0000   0x6d 0xd1 0x28 0x01 0x06                   m.(..
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 47 SelectBasalProfile 2006-07-01T08:18:05 head[2], body[0] 0x14
     op hex (2)
@@ -788,6 +835,7 @@ found 9 extra
     datetime (2006-07-01T08:18:05)
     0000   0x45 0xd2 0x48 0x01 0x06                   E.H..
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 48 SelectBasalProfile 2006-07-01T08:19:06 head[2], body[0] 0x14
     op hex (2)
@@ -797,6 +845,7 @@ found 9 extra
     datetime (2006-07-01T08:19:06)
     0000   0x46 0xd3 0x28 0x01 0x06                   F.(..
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 49 SelectBasalProfile 2006-07-01T08:20:08 head[2], body[0] 0x14
     op hex (2)
@@ -806,6 +855,7 @@ found 9 extra
     datetime (2006-07-01T08:20:08)
     0000   0x48 0xd4 0x48 0x01 0x06                   H.H..
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 50 ChangeTimeDisplay 2006-07-01T08:20:47 head[2], body[0] 0x64
     op hex (2)
@@ -815,6 +865,7 @@ found 9 extra
     datetime (2006-07-01T08:20:47)
     0000   0x6f 0xd4 0x08 0x01 0x06                   o....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 51 ChangeTimeDisplay 2006-07-01T08:21:13 head[2], body[0] 0x64
     op hex (2)
@@ -824,6 +875,7 @@ found 9 extra
     datetime (2006-07-01T08:21:13)
     0000   0x4d 0xd5 0x08 0x01 0x06                   M....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 52 ChangeTimeDisplay 2006-07-01T08:22:10 head[2], body[0] 0x64
     op hex (2)
@@ -833,5 +885,6 @@ found 9 extra
     datetime (2006-07-01T08:22:10)
     0000   0x4a 0xd6 0x08 0x01 0x06                   J....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 `end logs/ReadHistoryData-page-2.data: 53 records`

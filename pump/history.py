@@ -100,28 +100,28 @@ def decode_remote_id(msg):
   return str(high + middle + low)
 
 
-def extra_year(year=bytearray([0x86])):
+def extra_year_bits(year=0x86):
   """
-  >>> extra_year( )
+  >>> extra_year_bits( )
   [1, 0, 0, 0]
 
-  >>> extra_year(bytearray([ 0x06 ]) )
+  >>> extra_year_bits(0x06)
   [0, 0, 0, 0]
 
-  >>> extra_year(bytearray([ 0x86 ]) )
+  >>> extra_year_bits(0x86)
   [1, 0, 0, 0]
 
-  >>> extra_year(bytearray([ 0x46 ]) )
+  >>> extra_year_bits(0x46)
   [0, 1, 0, 0]
 
-  >>> extra_year(bytearray([ 0x26 ]) )
+  >>> extra_year_bits(0x26)
   [0, 0, 1, 0]
 
-  >>> extra_year(bytearray([ 0x16 ]) )
+  >>> extra_year_bits(0x16)
   [0, 0, 0, 1]
 
   """
-  year = year[0]
+  # year = year[0]
   masks = [ ( 0x80, 7), (0x40, 6), (0x20, 5), (0x10, 4) ]
   nibbles = [ ]
   for mask, shift in masks:

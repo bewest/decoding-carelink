@@ -17,6 +17,7 @@ XXX: 0x01
               3   80   10   50  100    0    3    0
               0    0    0    3  100    1    3    3
               0  111  215   40    1    6
+    HOUR BITS: [1, 1, 0]
 
 XXX: 0x5c
 should eat up to null
@@ -36,6 +37,7 @@ should eat up to null
               7   80   10   50  100    0    7    0
               0    3    0    7  100   92    5   12
               1   68    1    7    7    0
+    HOUR BITS: [1, 1, 0]
 
 XXX: 0x5c
 should eat up to null
@@ -55,6 +57,7 @@ should eat up to null
               1   82   10   50  100   99    1    0
               0   10    0   90  100   92    5   40
               3   68    1   90   90    0
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 3 PumpSuspend 2006-07-01T08:36:21 head[2], body[0] 0x1e
     op hex (2)
@@ -64,6 +67,7 @@ should eat up to null
     datetime (2006-07-01T08:36:21)
     0000   0x55 0xe4 0x08 0x41 0x06                   U..A.
     body (0)
+    HOUR BITS: [1, 1, 1]
 
 #### RECORD 4 PumpResume 2006-07-01T08:36:43 head[2], body[0] 0x1f
     op hex (2)
@@ -73,6 +77,7 @@ should eat up to null
     datetime (2006-07-01T08:36:43)
     0000   0x6b 0xe4 0x08 0x41 0x06                   k..A.
     body (0)
+    HOUR BITS: [1, 1, 1]
 
 #### RECORD 5 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -94,6 +99,7 @@ should eat up to null
               1  144   36    0   11    1  144   36
               0   44   11    1  100   89    0    0
               0    3    2    0    1    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 6 PumpSuspend 2006-07-02T18:29:32 head[2], body[0] 0x1e
     op hex (2)
@@ -103,6 +109,7 @@ should eat up to null
     datetime (2006-07-02T18:29:32)
     0000   0x60 0xdd 0x12 0x42 0x06                   `..B.
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 7 PumpResume 2006-07-02T18:30:24 head[2], body[0] 0x1f
     op hex (2)
@@ -112,6 +119,7 @@ should eat up to null
     datetime (2006-07-02T18:30:24)
     0000   0x58 0xde 0x12 0x42 0x06                   X..B.
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 8 PumpSuspend 2006-07-02T18:37:23 head[2], body[0] 0x1e
     op hex (2)
@@ -121,6 +129,7 @@ should eat up to null
     datetime (2006-07-02T18:37:23)
     0000   0x57 0xe5 0x12 0x42 0x06                   W..B.
     body (0)
+    HOUR BITS: [1, 1, 1]
 
 #### RECORD 9 PumpResume 2006-07-02T18:37:41 head[2], body[0] 0x1f
     op hex (2)
@@ -130,6 +139,7 @@ should eat up to null
     datetime (2006-07-02T18:37:41)
     0000   0x69 0xe5 0x12 0x42 0x06                   i..B.
     body (0)
+    HOUR BITS: [1, 1, 1]
 
 #### RECORD 10 PumpSuspend 2006-07-02T18:57:35 head[2], body[0] 0x1e
     op hex (2)
@@ -139,6 +149,7 @@ should eat up to null
     datetime (2006-07-02T18:57:35)
     0000   0x63 0xf9 0x12 0x42 0x06                   c..B.
     body (0)
+    HOUR BITS: [1, 1, 1]
 
 #### RECORD 11 PumpResume 2006-07-02T18:58:58 head[2], body[0] 0x1f
     op hex (2)
@@ -148,6 +159,7 @@ should eat up to null
     datetime (2006-07-02T18:58:58)
     0000   0x7a 0xfa 0x12 0x42 0x06                   z..B.
     body (0)
+    HOUR BITS: [1, 1, 1]
 
 #### RECORD 12 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -169,6 +181,7 @@ should eat up to null
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 13 PumpSuspend 2006-07-03T10:00:14 head[2], body[0] 0x1e
     op hex (2)
@@ -178,6 +191,7 @@ should eat up to null
     datetime (2006-07-03T10:00:14)
     0000   0x4e 0xc0 0x0a 0x43 0x06                   N..C.
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 14 PumpResume 2006-07-03T10:00:32 head[2], body[0] 0x1f
     op hex (2)
@@ -187,6 +201,7 @@ should eat up to null
     datetime (2006-07-03T10:00:32)
     0000   0x60 0xc0 0x0a 0x43 0x06                   `..C.
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 15 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -208,6 +223,7 @@ should eat up to null
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 16 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -229,6 +245,7 @@ should eat up to null
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 17 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -250,6 +267,7 @@ should eat up to null
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 18 Record 2006-07-06T15:12:00 head[2], body[0] 0x34
     op hex (2)
@@ -259,6 +277,7 @@ should eat up to null
     datetime (2006-07-06T15:12:00)
     0000   0x40 0xcc 0x0f 0x06 0x06                   @....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 19 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -280,6 +299,7 @@ should eat up to null
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 20 Record 2006-07-07T02:30:01 head[2], body[0] 0x34
     op hex (2)
@@ -289,6 +309,7 @@ should eat up to null
     datetime (2006-07-07T02:30:01)
     0000   0x41 0xde 0x02 0x07 0x06                   A....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 XXX: 0x01
 #### RECORD 21 BolusWizard 2006-07-07T15:05:03 head[2], body[22] 0x5b
@@ -307,6 +328,7 @@ XXX: 0x01
               3   80   10   50  100    3    3    0
               0    0    0    6  100    1    6    6
               0   67  197   47    7    6
+    HOUR BITS: [1, 1, 0]
 
 XXX: 0x5c
 should eat up to null
@@ -326,6 +348,7 @@ should eat up to null
               6   80   10   50  100    3    6    0
               0    5    0    6  100   92    5   24
              71   68    1    6    6    0
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 23 Rewind 2006-07-07T16:47:57 head[2], body[0] 0x21
     op hex (2)
@@ -335,6 +358,7 @@ should eat up to null
     datetime (2006-07-07T16:47:57)
     0000   0x79 0xef 0x10 0x07 0x06                   y....
     body (0)
+    HOUR BITS: [1, 1, 1]
 
 #### RECORD 24 Prime 2006-07-07T16:48:52 head[5], body[0] 0x03
     op hex (5)
@@ -344,6 +368,7 @@ should eat up to null
     datetime (2006-07-07T16:48:52)
     0000   0x74 0xf0 0x30 0x07 0x06                   t.0..
     body (0)
+    HOUR BITS: [1, 1, 1]
 
 #### RECORD 25 Prime 2006-07-07T16:49:12 head[5], body[0] 0x03
     op hex (5)
@@ -353,6 +378,7 @@ should eat up to null
     datetime (2006-07-07T16:49:12)
     0000   0x4c 0xf1 0x10 0x07 0x06                   L....
     body (0)
+    HOUR BITS: [1, 1, 1]
 
 #### RECORD 26 Prime 2006-07-07T17:10:38 head[5], body[0] 0x03
     op hex (5)
@@ -362,6 +388,7 @@ should eat up to null
     datetime (2006-07-07T17:10:38)
     0000   0x66 0xca 0x11 0x07 0x06                   f....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 27 Prime 2006-07-07T17:28:51 head[5], body[0] 0x03
     op hex (5)
@@ -371,6 +398,7 @@ should eat up to null
     datetime (2006-07-07T17:28:51)
     0000   0x73 0xdc 0x11 0x07 0x06                   s....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 28 Prime 2006-07-07T17:41:14 head[5], body[0] 0x03
     op hex (5)
@@ -380,6 +408,7 @@ should eat up to null
     datetime (2006-07-07T17:41:14)
     0000   0x4e 0xe9 0x11 0x07 0x06                   N....
     body (0)
+    HOUR BITS: [1, 1, 1]
 
 #### RECORD 29 Prime 2006-07-07T17:57:02 head[5], body[0] 0x03
     op hex (5)
@@ -389,6 +418,7 @@ should eat up to null
     datetime (2006-07-07T17:57:02)
     0000   0x42 0xf9 0x11 0x07 0x06                   B....
     body (0)
+    HOUR BITS: [1, 1, 1]
 
 #### RECORD 30 Prime 2006-07-07T18:02:05 head[5], body[0] 0x03
     op hex (5)
@@ -398,6 +428,7 @@ should eat up to null
     datetime (2006-07-07T18:02:05)
     0000   0x45 0xc2 0x12 0x07 0x06                   E....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 31 PumpSuspend 2006-07-07T18:22:32 head[2], body[0] 0x1e
     op hex (2)
@@ -407,6 +438,7 @@ should eat up to null
     datetime (2006-07-07T18:22:32)
     0000   0x60 0xd6 0x12 0x47 0x06                   `..G.
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 32 PumpResume 2006-07-07T18:22:51 head[2], body[0] 0x1f
     op hex (2)
@@ -416,6 +448,7 @@ should eat up to null
     datetime (2006-07-07T18:22:51)
     0000   0x73 0xd6 0x12 0x47 0x06                   s..G.
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 33 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -437,6 +470,7 @@ should eat up to null
               0   48    6    0    9    0   48    6
               0   36   75    0   12   25    0    0
               0    2    1    0    1    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 34 Prime 2006-07-08T05:22:49 head[5], body[0] 0x03
     op hex (5)
@@ -446,6 +480,7 @@ should eat up to null
     datetime (2006-07-08T05:22:49)
     0000   0x71 0xd6 0x05 0x08 0x06                   q....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 35 PumpSuspend 2006-07-08T05:49:07 head[2], body[0] 0x1e
     op hex (2)
@@ -455,6 +490,7 @@ should eat up to null
     datetime (2006-07-08T05:49:07)
     0000   0x47 0xf1 0x05 0x48 0x06                   G..H.
     body (0)
+    HOUR BITS: [1, 1, 1]
 
 #### RECORD 36 PumpResume 2006-07-08T05:49:26 head[2], body[0] 0x1f
     op hex (2)
@@ -464,6 +500,7 @@ should eat up to null
     datetime (2006-07-08T05:49:26)
     0000   0x5a 0xf1 0x05 0x48 0x06                   Z..H.
     body (0)
+    HOUR BITS: [1, 1, 1]
 
 #### RECORD 37 ChangeTimeDisplay 2006-07-08T07:11:37 head[2], body[0] 0x64
     op hex (2)
@@ -473,6 +510,7 @@ should eat up to null
     datetime (2006-07-08T07:11:37)
     0000   0x65 0xcb 0x07 0x08 0x06                   e....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 38 ChangeTime 2006-07-08T07:12:12 head[2], body[0] 0x17
     op hex (2)
@@ -482,6 +520,7 @@ should eat up to null
     datetime (2006-07-08T07:12:12)
     0000   0x4c 0xcc 0x07 0x08 0x06                   L....
     body (0)
+    HOUR BITS: [1, 1, 0]
 
 #### RECORD 39 NewTimeSet 2006-08-15T23:30:00 head[2], body[0] 0x18
     op hex (2)
@@ -491,6 +530,7 @@ should eat up to null
     datetime (2006-08-15T23:30:00)
     0000   0x80 0x1e 0x17 0x1f 0x06                   .....
     body (0)
+    
 
 #### RECORD 40 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -512,6 +552,7 @@ should eat up to null
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 41 Prime 2006-08-15T23:33:28 head[5], body[0] 0x03
     op hex (5)
@@ -521,6 +562,7 @@ should eat up to null
     datetime (2006-08-15T23:33:28)
     0000   0x9c 0x21 0x17 0x1f 0x06                   .!...
     body (0)
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 42 Prime 2006-08-15T23:33:54 head[5], body[0] 0x03
     op hex (5)
@@ -530,6 +572,7 @@ should eat up to null
     datetime (2006-08-15T23:33:54)
     0000   0xb6 0x21 0x17 0x1f 0x06                   .!...
     body (0)
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 43 Prime 2006-08-15T23:34:28 head[5], body[0] 0x03
     op hex (5)
@@ -539,6 +582,7 @@ should eat up to null
     datetime (2006-08-15T23:34:28)
     0000   0x9c 0x22 0x17 0x1f 0x06                   ."...
     body (0)
+    HOUR BITS: [0, 0, 1]
 
 #### RECORD 44 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -560,6 +604,7 @@ should eat up to null
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 45 Prime 2006-09-01T00:12:41 head[5], body[0] 0x03
     op hex (5)
@@ -569,6 +614,7 @@ should eat up to null
     datetime (2006-09-01T00:12:41)
     0000   0xa9 0x4c 0x00 0x01 0x06                   .L...
     body (0)
+    HOUR BITS: [0, 1, 0]
 
 #### RECORD 46 PumpSuspend 2006-09-01T00:44:29 head[2], body[0] 0x1e
     op hex (2)
@@ -578,6 +624,7 @@ should eat up to null
     datetime (2006-09-01T00:44:29)
     0000   0x9d 0x6c 0x00 0x41 0x06                   .l.A.
     body (0)
+    HOUR BITS: [0, 1, 1]
 
 #### RECORD 47 PumpResume 2006-09-01T00:44:48 head[2], body[0] 0x1f
     op hex (2)
@@ -587,6 +634,7 @@ should eat up to null
     datetime (2006-09-01T00:44:48)
     0000   0xb0 0x6c 0x00 0x41 0x06                   .l.A.
     body (0)
+    HOUR BITS: [0, 1, 1]
 
 #### RECORD 48 ChangeTimeDisplay 2006-09-01T01:19:10 head[2], body[0] 0x64
     op hex (2)
@@ -596,6 +644,7 @@ should eat up to null
     datetime (2006-09-01T01:19:10)
     0000   0x8a 0x53 0x01 0x01 0x06                   .S...
     body (0)
+    HOUR BITS: [0, 1, 0]
 
 #### RECORD 49 ChangeTime 2006-09-01T01:19:34 head[2], body[0] 0x17
     op hex (2)
@@ -605,6 +654,7 @@ should eat up to null
     datetime (2006-09-01T01:19:34)
     0000   0xa2 0x53 0x01 0x01 0x06                   .S...
     body (0)
+    HOUR BITS: [0, 1, 0]
 
 #### RECORD 50 NewTimeSet 2006-10-01T11:20:00 head[2], body[0] 0x18
     op hex (2)
@@ -614,6 +664,7 @@ should eat up to null
     datetime (2006-10-01T11:20:00)
     0000   0x80 0x94 0x0b 0x01 0x06                   .....
     body (0)
+    HOUR BITS: [1, 0, 0]
 
 #### RECORD 51 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -635,6 +686,7 @@ should eat up to null
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 52 Prime 2006-10-01T11:30:18 head[5], body[0] 0x03
     op hex (5)
@@ -644,6 +696,7 @@ should eat up to null
     datetime (2006-10-01T11:30:18)
     0000   0x92 0x9e 0x0b 0x01 0x06                   .....
     body (0)
+    HOUR BITS: [1, 0, 0]
 
 #### RECORD 53 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -665,6 +718,7 @@ should eat up to null
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 54 Record 2006-10-02T19:45:47 head[2], body[0] 0x34
     op hex (2)
@@ -674,6 +728,7 @@ should eat up to null
     datetime (2006-10-02T19:45:47)
     0000   0xaf 0xad 0x13 0x02 0x06                   .....
     body (0)
+    HOUR BITS: [1, 0, 1]
 
 #### RECORD 55 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
     op hex (2)
@@ -695,6 +750,7 @@ should eat up to null
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0
+    
 
 #### RECORD 56 Record 2006-10-03T13:09:13 head[2], body[0] 0x34
     op hex (2)
@@ -704,5 +760,6 @@ should eat up to null
     datetime (2006-10-03T13:09:13)
     0000   0x8d 0x89 0x0d 0x03 0x06                   .....
     body (0)
+    HOUR BITS: [1, 0, 0]
 
 `end logs/ReadHistoryData-page-1.data: 57 records`
