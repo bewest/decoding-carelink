@@ -77,9 +77,10 @@ class Pump(Session):
 
   def power_control(self):
     log.info('BEGIN POWER CONTROL')
+    print "PowerControl SERIAL", self.serial
     response = self.query(commands.PowerControl)
     power = self.command
-    log.info('manually download PowerControl')
+    log.info('manually download PowerControl serial' % serial)
     data = self.stick.download( )
     log.info("ENDING manual download:\n%s" % lib.hexdump(data))
     return data
@@ -121,7 +122,7 @@ if __name__ == '__main__':
   log.info("howdy! I'm going to take a look at your pump.")
   stick = stick.Stick(link.Link(port, timeout=.200))
   stick.open( )
-  session = Pump(stick, '208850')
+  session = Pump(stick, serial_num)
   log.info(pformat(stick.interface_stats( )))
   session.power_control( )
   log.info(pformat(stick.interface_stats( )))

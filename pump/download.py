@@ -77,7 +77,7 @@ if __name__ == '__main__':
   log.info("howdy! I'm going to take a look at your pump download something info.")
   stick = stick.Stick(link.Link(port, timeout=.400))
   stick.open( )
-  session = session.Pump(stick, '208850')
+  session = session.Pump(stick, serial_num)
   log.info(pformat(stick.interface_stats( )))
 
   downloader = Downloader(stick, session)
