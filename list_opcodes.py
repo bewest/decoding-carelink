@@ -34,6 +34,7 @@ def parse_date(date):
 
 class Record(object):
   _names = {
+    0x01: 'Bolus',
     0x03: 'Prime',
     0x07: 'ResultTotals',
     0x08: 'ChangeBasalProfile',
@@ -44,6 +45,7 @@ class Record(object):
     0x1a: 'Battery',
     0x1e: 'PumpSuspend',
     0x1f: 'PumpResume',
+    0x0a: 'CalForBG',
     0x21: 'Rewind',
     0x26: 'EnableDisableRemote',
     0x27: 'ChangeRemoteID',
@@ -70,8 +72,9 @@ class Record(object):
 
 
     # observed on bewest-pump
-    # 0x0c: 6,
+    0x0c: 22,
     # 0x2e: 24,
+    0x5c: 9,
 
     # hacks
 
@@ -99,6 +102,8 @@ class Record(object):
     # 0x21: 23,
 
     0x6c: 32,
+
+    # observed on bewest-pump
 
 
     # hacks

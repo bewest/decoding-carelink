@@ -314,9 +314,23 @@ function print_pretty_csv( ) {
     echo RECORD: $i $timestamp $name
     echo ${descr} | sed -e "s/ && /, /g" | fmt | sed -e "s/^/  /g"
 
+    _clean=1
     for x in $(seq 0 $(expr ${#header[*]} - 1)) ; do
       # echo $col
-      echo '    '$x: ${header[$x]}: ${columns[$x]}
+      key="${header[$x]}"
+      value="${columns[$x]}"
+
+      if [[ -n "$value"  ]] ; then
+        if [[ $_clean = 0 ]] ; then
+          echo
+        fi
+        echo -n '    '"$x: "
+        echo ${key}: ${value}
+        _clean=1
+      else
+        echo -n .
+        _clean=0
+      fi
       # echo -n $x.
     done
     i=$(expr $i + 1)
