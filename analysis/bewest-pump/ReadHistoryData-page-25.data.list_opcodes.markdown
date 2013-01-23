@@ -835,12 +835,19 @@ found 3 extra
               0
     HOUR BITS: [1, 0, 0]
 
+#### MISSING DATETIME, reading more to debug
+##### DEBUG HEX
+    0000   0x00 0x00 0x00 0x00 0x00 0x38 0xa2         .....8.
+##### DEBUG DECIMAL
+              0    0    0    0    0   56  162
+XXX:???:XXX
 Traceback (most recent call last):
-  File "list_opcodes.py", line 317, in <module>
+  File "list_opcodes.py", line 327, in <module>
     main( )
-  File "list_opcodes.py", line 301, in main
+  File "list_opcodes.py", line 311, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 247, in find_dates
-    assert datetime is not None, "\n%s" % lib.hexdump(bolus)
-AssertionError: 
-0000   0x00 0x00 0x00 0x00 0x00 0x38 0xa2         .....8.
+  File "list_opcodes.py", line 255, in find_dates
+    print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
+  File "/home/bewest/src/decoding-carelink/pump/history.py", line 268, in parse_date
+    raise NotADate(e)
+pump.history.NotADate: month must be in 1..12

@@ -496,12 +496,16 @@ found 3 extra
              43   43    0  250
     HOUR BITS: [0, 0, 1]
 
-Traceback (most recent call last):
-  File "list_opcodes.py", line 317, in <module>
-    main( )
-  File "list_opcodes.py", line 301, in main
-    records = find_dates(stream)
-  File "list_opcodes.py", line 247, in find_dates
-    assert datetime is not None, "\n%s" % lib.hexdump(bolus)
-AssertionError: 
-0000   0x21 0x95 0x01 0x0c 0x07 0x00 0x00         !......
+#### MISSING DATETIME, reading more to debug
+##### DEBUG HEX
+    0000   0x21 0x95 0x01 0x0c 0x07 0x00 0x00 0x04    !.......
+    0008   0xd8 0xc1 0x0c 0x6d 0xc1 0x0c 0x05 0x00    ...m....
+    0010   0x72 0x72 0x72 0x02 0x00 0x00 0x04 0xd8    rrr.....
+    0018   0x03 0x84 0x49 0x01 0x54 0x1b 0x00         ..I.T..
+##### DEBUG DECIMAL
+             33  149    1   12    7    0    0    4
+            216  193   12  109  193   12    5    0
+            114  114  114    2    0    0    4  216
+              3  132   73    1   84   27    0
+XXX:???:XXX 2007-02-12T01:21:33
+`end logs/ReadHistoryData-page-15.data: 33 records`

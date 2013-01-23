@@ -211,6 +211,7 @@ def seek_null(fd):
 
 def find_dates(stream):
   records = [ ]
+  errors  = [ ]
   bolus = bytearray( )
   extra = bytearray( )
   opcode = ''
@@ -244,7 +245,16 @@ def find_dates(stream):
       break
     
     if not Record.is_midnight(head):
-      assert datetime is not None, "\n%s" % lib.hexdump(bolus)
+      if datetime is None:
+        print "#### MISSING DATETIME, reading more to debug"
+        bolus.extend(bytearray(stream.read(24)))
+        print "##### DEBUG HEX"
+        print lib.hexdump(bolus, indent=4)
+        print "##### DEBUG DECIMAL"
+        print int_dump(bolus, indent=11)
+        print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
+        break
+
     if datetime is not None or Record.is_midnight(head):
 
       body = bytearray(stream.read(body_length))

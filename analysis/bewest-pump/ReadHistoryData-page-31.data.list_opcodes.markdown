@@ -705,11 +705,11 @@ found 12 extra
 should eat up to null
 found 13 extra
 Traceback (most recent call last):
-  File "list_opcodes.py", line 317, in <module>
+  File "list_opcodes.py", line 327, in <module>
     main( )
-  File "list_opcodes.py", line 301, in main
+  File "list_opcodes.py", line 311, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 260, in find_dates
+  File "list_opcodes.py", line 270, in find_dates
     finished = parse_date(epi)
   File "list_opcodes.py", line 30, in parse_date
     return history.parse_date(date)
