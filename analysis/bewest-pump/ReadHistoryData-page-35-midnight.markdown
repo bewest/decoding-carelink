@@ -170,12 +170,20 @@ WARNING: No route found for IPv6 destination :: (no default route?)
             232    0    0    0
     YEAR BITS: [1, 0, 0, 0]
 
+#### MISSING DATETIME, reading more to debug
+##### DEBUG HEX
+    0000   0x1e 0x00 0xbb 0x4c 0x08 0x10 0x0c 0x1f    ...L....
+    0008   0x00 0xba 0x60 0x08 0x10 0x0c 0x0a 0xaa    ..`.....
+    0010   0xab 0x60 0x2a 0x10 0x0c 0x5b 0xaa 0xaf    .`*..[..
+    0018   0x60 0x0a 0x10 0x0c 0x00 0x50 0x0d         `....P.
+##### DEBUG DECIMAL
+             30    0  187   76    8   16   12   31
+              0  186   96    8   16   12   10  170
+            171   96   42   16   12   91  170  175
+             96   10   16   12    0   80   13
+XXX:???:XXX
 Traceback (most recent call last):
-  File "list_opcodes.py", line 317, in <module>
+  File "list_opcodes.py", line 327, in <module>
     main( )
-  File "list_opcodes.py", line 301, in main
+  File "list_opcodes.py", line 311, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 247, in find_dates
-    assert datetime is not None, "\n%s" % lib.hexdump(bolus)
-AssertionError: 
-0000   0x1e 0x00 0xbb 0x4c 0x08 0x10 0x0c         ...L...

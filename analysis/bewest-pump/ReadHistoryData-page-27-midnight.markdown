@@ -85,12 +85,16 @@ WARNING: No route found for IPv6 destination :: (no default route?)
             232    0    0    0
     
 
-Traceback (most recent call last):
-  File "list_opcodes.py", line 317, in <module>
-    main( )
-  File "list_opcodes.py", line 301, in main
-    records = find_dates(stream)
-  File "list_opcodes.py", line 247, in find_dates
-    assert datetime is not None, "\n%s" % lib.hexdump(bolus)
-AssertionError: 
-0000   0x0a 0x4d 0x97 0x8c 0x21 0x10 0x0c         .M..!..
+#### MISSING DATETIME, reading more to debug
+##### DEBUG HEX
+    0000   0x0a 0x4d 0x97 0x8c 0x21 0x10 0x0c 0x5b    .M..!..[
+    0008   0x00 0xa7 0x8a 0x0e 0x10 0x0c 0x09 0x50    .......P
+    0010   0x0d 0x2d 0x6a 0x00 0x06 0x00 0x00 0x00    .-j.....
+    0018   0x00 0x06 0x7d 0x01 0x06 0x06 0x00         ..}....
+##### DEBUG DECIMAL
+             10   77  151  140   33   16   12   91
+              0  167  138   14   16   12    9   80
+             13   45  106    0    6    0    0    0
+              0    6  125    1    6    6    0
+XXX:???:XXX 2001-01-12T23:13:10
+`end logs/ReadHistoryData-page-27.data: 20 records`

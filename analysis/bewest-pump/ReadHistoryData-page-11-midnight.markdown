@@ -209,12 +209,20 @@ found 12 extra
             232    0    0    0
     
 
+#### MISSING DATETIME, reading more to debug
+##### DEBUG HEX
+    0000   0x1e 0x00 0xd5 0x2f 0x09 0x10 0x0c 0x1f    .../....
+    0008   0x00 0xdd 0x04 0x0a 0x10 0x0c 0x0a 0x8f    ........
+    0010   0xf9 0x39 0x2a 0x10 0x0c 0x5b 0x8f 0xfb    .9*..[..
+    0018   0x3a 0x0a 0x10 0x0c 0x39 0x50 0x0d         :...9P.
+##### DEBUG DECIMAL
+             30    0  213   47    9   16   12   31
+              0  221    4   10   16   12   10  143
+            249   57   42   16   12   91  143  251
+             58   10   16   12   57   80   13
+XXX:???:XXX
 Traceback (most recent call last):
-  File "list_opcodes.py", line 317, in <module>
+  File "list_opcodes.py", line 327, in <module>
     main( )
-  File "list_opcodes.py", line 301, in main
+  File "list_opcodes.py", line 311, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 247, in find_dates
-    assert datetime is not None, "\n%s" % lib.hexdump(bolus)
-AssertionError: 
-0000   0x1e 0x00 0xd5 0x2f 0x09 0x10 0x0c         .../...
