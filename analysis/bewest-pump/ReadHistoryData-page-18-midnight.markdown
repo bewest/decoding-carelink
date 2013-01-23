@@ -1,0 +1,96 @@
+WARNING: No route found for IPv6 destination :: (no default route?)
+## START logs/ReadHistoryData-page-18.data
+#### RECORD 0 Bolus 2012-11-15T19:43:57 head[4], body[0] 0x01
+    op hex (4)
+    0000   0x01 0x22 0x22 0x00                        ."".
+    decimal
+              1   34   34    0
+    datetime (2012-11-15T19:43:57)
+    0000   0xb9 0xeb 0x53 0x0f 0x0c                   ..S..
+    body (0)
+    HOUR BITS: [1, 1, 1]
+
+should eat up to null
+found 12 extra
+#### RECORD 1 BolusWizard 2012-11-15T19:55:50 head[2], body[34] 0x5b
+    op hex (2)
+    0000   0x5b 0x00                                  [.
+    decimal
+             91    0
+    datetime (2012-11-15T19:55:50)
+    0000   0xb2 0xf7 0x13 0x0f 0x0c                   .....
+    body (34)
+    hex
+    0000   0x1f 0x50 0x0d 0x2d 0x6a 0x00 0x17 0x00    .P.-j...
+    0008   0x00 0x00 0x00 0x17 0x7d 0x5c 0x11 0x84    ....}\..
+    0010   0x0b 0x04 0x04 0x15 0x04 0x64 0x5f 0x14    .....d_.
+    0018   0x1c 0xa5 0x14 0x8c 0xcd 0x14 0x01 0x0a    ........
+    0020   0x0a 0x00                                  ..
+    decimal
+             31   80   13   45  106    0   23    0
+              0    0    0   23  125   92   17  132
+             11    4    4   21    4  100   95   20
+             28  165   20  140  205   20    1   10
+             10    0
+    HOUR BITS: [1, 1, 1]
+
+#### RECORD 2 Bolus 2012-11-15T19:56:29 head[4], body[0] 0x01
+    op hex (4)
+    0000   0x01 0x0d 0x0d 0x01                        ....
+    decimal
+              1   13   13    1
+    datetime (2012-11-15T19:56:29)
+--
+#### RECORD 3 CalForBG 2012-11-15T21:02:01 head[2], body[0] 0x0a
+    op hex (2)
+    0000   0x0a 0x79                                  .y
+    decimal
+             10  121
+    datetime (2012-11-15T21:02:01)
+    0000   0x81 0xc2 0x35 0x0f 0x0c                   ..5..
+    body (0)
+    HOUR BITS: [1, 1, 0]
+
+#### RECORD 4 CalForBG 2012-11-15T23:07:56 head[2], body[0] 0x0a
+    op hex (2)
+    0000   0x0a 0x4a                                  .J
+    decimal
+             10   74
+    datetime (2012-11-15T23:07:56)
+    0000   0xb8 0xc7 0x37 0x0f 0x0c                   ..7..
+    body (0)
+    HOUR BITS: [1, 1, 0]
+
+#### RECORD 5 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x05 0x68 0xaf 0x8c                   ..h..
+    body (44)
+    hex
+    0000   0x6d 0xaf 0x8c 0x05 0x00 0x5d 0x4a 0x79    m....]Jy
+    0008   0x05 0x00 0x00 0x05 0x68 0x03 0x78 0x40    ....h.x@
+    0010   0x01 0xf0 0x24 0x00 0xb4 0x01 0xf0 0x24    ..$....$
+    0018   0x01 0xf0 0x64 0x00 0x00 0x00 0x00 0x00    ..d.....
+    0020   0x00 0x05 0x05 0x00 0x00 0x00 0x0c 0x00    ........
+    0028   0xe8 0x00 0x00 0x00                        ....
+    decimal
+            109  175  140    5    0   93   74  121
+              5    0    0    5  104    3  120   64
+              1  240   36    0  180    1  240   36
+              1  240  100    0    0    0    0    0
+              0    5    5    0    0    0   12    0
+            232    0    0    0
+    YEAR BITS: [1, 0, 0, 0]
+
+Traceback (most recent call last):
+  File "list_opcodes.py", line 317, in <module>
+    main( )
+  File "list_opcodes.py", line 301, in main
+    records = find_dates(stream)
+  File "list_opcodes.py", line 247, in find_dates
+    assert datetime is not None, "\n%s" % lib.hexdump(bolus)
+AssertionError: 
+0000   0x34 0xc8 0xa6 0xeb 0x0b 0x10 0x0c         4......
