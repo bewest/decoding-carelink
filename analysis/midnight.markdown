@@ -2,6 +2,186 @@
 # what do midnight records look like?
 
 
+## bewest-pump
+
+##### csv export
+```
+RECORD: 6 9/13/12 18:51:05 BolusNormal
+  "AMOUNT=2.6, CONCENTRATION=null, PROGRAMMED_AMOUNT=2.6,
+  ACTION_REQUESTOR=pump, ENABLE=true, IS_DUAL_COMPONENT=false,
+  UNABSORBED_INSULIN_TOTAL=null"
+    0: Timestamp: 9/13/12 18:51:05
+    1: Bolus Type: Normal
+    2: Bolus Volume Selected (U): 2.6
+    3: Bolus Volume Delivered (U): 2.6
+...........
+    15: Raw-Type: BolusNormal
+    16: Raw-Values: "AMOUNT=2.6 && CONCENTRATION=null && PROGRAMMED_AMOUNT=2.6 && ACTIO
+N_REQUESTOR=pump && ENABLE=true && IS_DUAL_COMPONENT=false && UNABSORBED_INSULIN_TOTAL=
+null"
+
+RECORD: 7 9/14/12 00:00:00 ResultDailyTotal
+  "AMOUNT=31.2, CONCENTRATION=null"
+    0: Timestamp: 9/14/12 00:00:00
+..............
+    15: Raw-Type: ResultDailyTotal
+    16: Raw-Values: "AMOUNT=31.2 && CONCENTRATION=null"
+
+RECORD: 8 9/14/12 11:21:30 ChangeSuspendEnable
+  "ENABLE=user_suspend, ACTION_REQUESTOR=pump, PRE_ENABLE=null"
+    0: Timestamp: 9/14/12 11:21:30
+..............
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=user_suspend && ACTION_REQUESTOR=pump && PRE_ENABLE=null"
+
+RECORD: 9 9/14/12 11:41:33 ChangeSuspendEnable
+  "ENABLE=normal_pumping, ACTION_REQUESTOR=pump, PRE_ENABLE=null"
+    0: Timestamp: 9/14/12 11:41:33
+..............
+    15: Raw-Type: ChangeSuspendEnable
+    16: Raw-Values: "ENABLE=normal_pumping && ACTION_REQUESTOR=pump && PRE_ENABLE=null"
+
+RECORD: 10 9/14/12 12:41:24 CalBGForPH
+  "AMOUNT=128, ACTION_REQUESTOR=pump"
+    0: Timestamp: 9/14/12 12:41:24
+..............
+    15: Raw-Type: CalBGForPH
+    16: Raw-Values: "AMOUNT=128 && ACTION_REQUESTOR=pump"
+
+RECORD: 11 9/14/12 12:41:36 BolusNormal
+  "AMOUNT=3.1, CONCENTRATION=null, PROGRAMMED_AMOUNT=3.1,
+  ACTION_REQUESTOR=pump, ENABLE=true, IS_DUAL_COMPONENT=false,
+  UNABSORBED_INSULIN_TOTAL=null"
+    0: Timestamp: 9/14/12 12:41:36
+
+```
+
+
+### decoded
+
+#### RECORD 1 Bolus 2012-09-13T18:51:05 head[4], body[0] 0x01
+    op hex (4)
+    0000   0x01 0x1a 0x1a 0x00                        ....
+    decimal
+              1   26   26    0
+    datetime (2012-09-13T18:51:05)
+    0000   0x85 0x73 0x52 0x0d 0x0c                   .sR..
+    body (0)
+    HOUR BITS: [0, 1, 1]
+
+#### RECORD 2 ResultTotals MIDNIGHT!? head[2], body[38] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?)
+    0000   0x00 0x04 0x96 0x8d 0x8c                   .....
+    body (38)
+    hex
+    0000   0x6d 0x8d 0x8c 0x05 0x00 0x80 0x68 0x97    m.....h.
+    0008   0x02 0x00 0x00 0x04 0x96 0x03 0x42 0x47    ......BG
+    0010   0x01 0x54 0x1d 0x00 0x6d 0x01 0x54 0x1d    .T..m.T.
+    0018   0x01 0x40 0x5e 0x00 0x14 0x06 0x00 0x00    .@^.....
+    0020   0x00 0x05 0x04 0x01 0x00 0x00              ......
+    decimal
+            109  141  140    5    0  128  104  151
+              2    0    0    4  150    3   66   71
+              1   84   29    0  109    1   84   29
+              1   64   94    0   20    6    0    0
+              0    5    4    1    0    0
+    YEAR BITS: [1, 0, 0, 0]
+
+#### RECORD 3 Record 2012-09-14T12:41:24 head[22], body[0] 0x0c
+    op hex (22)
+    0000   0x0c 0x00 0xe8 0x00 0x00 0x00 0x1e 0x00    ........
+    0008   0x9e 0x55 0x0b 0x0e 0x0c 0x1f 0x00 0xa1    .U......
+    0010   0x69 0x0b 0x0e 0x0c 0x0a 0x80              i.....
+    decimal
+             12    0  232    0    0    0   30    0
+            158   85   11   14   12   31    0  161
+            105   11   14   12   10  128
+    datetime (2012-09-14T12:41:24)
+    0000   0x98 0x69 0x2c 0x0e 0x0c                   .i,..
+    body (0)
+    HOUR BITS: [0, 1, 1]
+
+XXX: 0x01
+#### RECORD 4 BolusWizard 2012-09-14T12:41:36 head[2], body[22] 0x5b
+    op hex (2)
+    0000   0x5b 0x80                                  [.
+    decimal
+             91  128
+    datetime (2012-09-14T12:41:36)
+    0000   0xa4 0x69 0x0c 0x0e 0x0c                   .i...
+    body (22)
+    hex
+    0000   0x29 0x50 0x0d 0x2d 0x6a 0x00 0x1f 0x00    )P.-j...
+    0008   0x00 0x00 0x00 0x1f 0x7d 0x01 0x1f 0x1f    ....}...
+    0010   0x00 0xa4 0x69 0x4c 0x0e 0x0c              ..iL..
+    decimal
+             41   80   13   45  106    0   31    0
+              0    0    0   31  125    1   31   31
+              0  164  105   76   14   12
+    HOUR BITS: [0, 1, 1]
+
+### reformatted
+
+Let's reformat that midnight record:
+
+```
+07 00
+
+00 04 96 8d 8c
+    body (38)
+    hex
+6d 8d 8c 05 00 80 68 97
+02 00 00 04 96 03 42 47
+01 54 1d 00 6d 01 54 1d
+01 40 5e 00 14 06 00 00
+00 05 04 01 00 00
+
+So am  just short 6 bytes?
+
+0c 00 e8 00 00 00
+
+
+
+1e 00
+9e 55 0b 0e 0c
+>>> history.parse_date( bytearray( unhexlify( '9e 55 0b 0e 0c'.replace(' ', '') ) ) )
+datetime.datetime(2012, 9, 14, 11, 21, 30)
+So there's the suspend record.
+
+
+1f 00
+a1 69 0b 0e 0c
+
+0a 80
+
+RECORD: 7 9/14/12 00:00:00 ResultDailyTotal
+  "AMOUNT=31.2, CONCENTRATION=null"
+    0: Timestamp: 9/14/12 00:00:00
+..............
+    15: Raw-Type: ResultDailyTotal
+    16: Raw-Values: "AMOUNT=31.2 && CONCENTRATION=null"
+
+RECORD: 8 9/14/12 11:21:30 ChangeSuspendEnable
+  "ENABLE=user_suspend, ACTION_REQUESTOR=pump, PRE_ENABLE=null"
+    0: Timestamp: 9/14/12 11:21:30
+
+This datetime parsed OK.
+    datetime (2012-09-14T12:41:24)
+    0000   0x98 0x69 0x2c 0x0e 0x0c
+```
+
+## tester
+
+
+
+### decoded
+
+
+
 #### RECORD 2 Prime 2006-10-04T08:11:21 head[5], body[0] 0x03
     op hex (5)
     0000   0x03 0x00 0x00 0x00 0x0d                   .....

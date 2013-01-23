@@ -72,9 +72,12 @@ class Record(object):
 
 
     # observed on bewest-pump
-    0x0c: 22,
     # 0x2e: 24,
     0x5c: 9,
+
+    # 0x0c: 22,
+    0x0c: 19,
+    0x6d: 46,
 
     # hacks
 
@@ -90,7 +93,7 @@ class Record(object):
     # 0x5b: 22,
     0x5b: 22,
     0x45: 3,
-    0x07: 38,
+    0x07: 38 + 6,
 
     0x08: 42,
     0x34: 0,
