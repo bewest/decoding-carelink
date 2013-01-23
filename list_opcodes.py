@@ -134,7 +134,7 @@ class Record(object):
   @classmethod
   def seeks_null(cls, opcode, body):
     if opcode == 0x5b:
-      print 'XXX: %#04x' % body[13]
+      # print 'XXX: %#04x' % body[13]
       if body[13] ==  0x5c:
         return True
     return False
@@ -204,7 +204,7 @@ def seek_null(fd):
   bolus = bytearray( )
   for B in iter(lambda: fd.read(1), ""):
     bolus.append(B)
-    print lib.hexdump(bolus)
+    # print lib.hexdump(bolus)
     if B == bytearray([ 0x00 ]):
       return bolus
   return bolus

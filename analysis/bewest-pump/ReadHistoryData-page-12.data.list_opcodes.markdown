@@ -1,3 +1,4 @@
+WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-12.data
 #### RECORD 0 Record 2010-12-10T01:20:30 head[9], body[0] 0x5c
     op hex (9)
@@ -21,3 +22,12 @@
     body (0)
     HOUR BITS: [0, 1, 0] YEAR BITS: [0, 0, 0, 1]
 
+Traceback (most recent call last):
+  File "list_opcodes.py", line 317, in <module>
+    main( )
+  File "list_opcodes.py", line 301, in main
+    records = find_dates(stream)
+  File "list_opcodes.py", line 247, in find_dates
+    assert datetime is not None, "\n%s" % lib.hexdump(bolus)
+AssertionError: 
+0000   0x00 0xec 0x08 0x0d 0x0a 0x0c 0x1f         .......

@@ -1,3 +1,4 @@
+WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-31.data
 #### RECORD 0 Record 2012-09-12T07:49:10 head[46], body[0] 0x6d
     op hex (46)
@@ -63,7 +64,6 @@
     body (0)
     HOUR BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 0]
 
-XXX: 0x01
 #### RECORD 5 BolusWizard 2012-09-12T11:53:55 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0x61                                  [a
@@ -92,11 +92,7 @@ XXX: 0x01
     body (0)
     HOUR BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
 
-XXX: 0x5c
 should eat up to null
-0000   0x0b                                       .
-0000   0x0b 0x0b                                  ..
-0000   0x0b 0x0b 0x00                             ...
 found 3 extra
 #### RECORD 7 BolusWizard 2012-09-12T13:10:28 head[2], body[25] 0x5b
     op hex (2)
@@ -118,14 +114,7 @@ found 3 extra
               0
     HOUR BITS: [0, 1, 0]
 
-XXX: 0x5c
 should eat up to null
-0000   0x57                                       W
-0000   0x57 0x04                                  W.
-0000   0x57 0x04 0x01                             W..
-0000   0x57 0x04 0x01 0x2a                        W..*
-0000   0x57 0x04 0x01 0x2a 0x2a                   W..**
-0000   0x57 0x04 0x01 0x2a 0x2a 0x00              W..**.
 found 6 extra
 #### RECORD 8 BolusWizard 2012-09-12T13:11:38 head[2], body[28] 0x5b
     op hex (2)
@@ -167,18 +156,7 @@ found 6 extra
     body (0)
     HOUR BITS: [0, 1, 1]
 
-XXX: 0x5c
 should eat up to null
-0000   0x92                                       .
-0000   0x92 0x14                                  ..
-0000   0x92 0x14 0x06                             ...
-0000   0x92 0x14 0x06 0x9c                        ....
-0000   0x92 0x14 0x06 0x9c 0x14                   .....
-0000   0x92 0x14 0x06 0x9c 0x14 0x01              ......
-0000   0x92 0x14 0x06 0x9c 0x14 0x01 0x1e         .......
-0000   0x92 0x14 0x06 0x9c 0x14 0x01 0x1e 0x1e    ........
-0000   0x92 0x14 0x06 0x9c 0x14 0x01 0x1e 0x1e    ........
-0008   0x00                                       .
 found 9 extra
 #### RECORD 11 BolusWizard 2012-09-12T18:36:54 head[2], body[31] 0x5b
     op hex (2)
@@ -234,7 +212,6 @@ found 9 extra
     body (0)
     HOUR BITS: [0, 1, 0]
 
-XXX: 0x5c
 should eat up to null
 #### RECORD 14 BolusWizard 2012-09-13T01:11:10 head[2], body[22] 0x5b
     op hex (2)
@@ -284,7 +261,6 @@ should eat up to null
     body (0)
     HOUR BITS: [0, 1, 0]
 
-XXX: 0x01
 #### RECORD 18 BolusWizard 2012-09-13T21:04:30 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0x64                                  [d
@@ -303,7 +279,6 @@ XXX: 0x01
               0  158   68   85   29   12
     HOUR BITS: [0, 1, 0]
 
-XXX: 0x5c
 should eat up to null
 #### RECORD 19 BolusWizard 2012-09-13T21:22:09 head[2], body[22] 0x5b
     op hex (2)
@@ -357,11 +332,7 @@ should eat up to null
     body (0)
     HOUR BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
 
-XXX: 0x5c
 should eat up to null
-0000   0x2a                                       *
-0000   0x2a 0x2a                                  **
-0000   0x2a 0x2a 0x00                             **.
 found 3 extra
 #### RECORD 22 BolusWizard 2012-09-14T02:04:02 head[2], body[25] 0x5b
     op hex (2)
@@ -433,7 +404,6 @@ found 3 extra
     body (0)
     HOUR BITS: [0, 1, 0]
 
-XXX: 0x01
 #### RECORD 28 BolusWizard 2012-09-14T20:02:25 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0x9a                                  [.
@@ -452,7 +422,6 @@ XXX: 0x01
               0  153   66   84   30   12
     HOUR BITS: [0, 1, 0]
 
-XXX: 0x5c
 should eat up to null
 #### RECORD 29 BolusWizard 2012-09-14T20:29:35 head[2], body[22] 0x5b
     op hex (2)
@@ -556,7 +525,6 @@ should eat up to null
     body (0)
     HOUR BITS: [1, 0, 1]
 
-XXX: 0x01
 #### RECORD 37 BolusWizard 2012-10-01T15:59:28 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0x50                                  [P
@@ -575,7 +543,6 @@ XXX: 0x01
               0  156  187   79    1   12
     HOUR BITS: [1, 0, 1]
 
-XXX: 0x5c
 should eat up to null
 #### RECORD 38 BolusWizard 2012-10-01T16:03:32 head[2], body[22] 0x5b
     op hex (2)
@@ -595,11 +562,7 @@ should eat up to null
               9    4    1   12   12    0
     HOUR BITS: [1, 0, 0]
 
-XXX: 0x5c
 should eat up to null
-0000   0x0a                                       .
-0000   0x0a 0x0a                                  ..
-0000   0x0a 0x0a 0x00                             ...
 found 3 extra
 #### RECORD 39 BolusWizard 2012-10-01T16:39:57 head[2], body[25] 0x5b
     op hex (2)
@@ -631,14 +594,7 @@ found 3 extra
     body (0)
     HOUR BITS: [1, 0, 0]
 
-XXX: 0x5c
 should eat up to null
-0000   0x86                                       .
-0000   0x86 0x04                                  ..
-0000   0x86 0x04 0x01                             ...
-0000   0x86 0x04 0x01 0x0a                        ....
-0000   0x86 0x04 0x01 0x0a 0x0a                   .....
-0000   0x86 0x04 0x01 0x0a 0x0a 0x00              ......
 found 6 extra
 #### RECORD 41 BolusWizard 2012-10-01T18:08:29 head[2], body[28] 0x5b
     op hex (2)
@@ -670,18 +626,7 @@ found 6 extra
     body (0)
     HOUR BITS: [1, 0, 0]
 
-XXX: 0x5c
 should eat up to null
-0000   0xf0                                       .
-0000   0xf0 0x04                                  ..
-0000   0xf0 0x04 0xa8                             ...
-0000   0xf0 0x04 0xa8 0xfa                        ....
-0000   0xf0 0x04 0xa8 0xfa 0x04                   .....
-0000   0xf0 0x04 0xa8 0xfa 0x04 0x01              ......
-0000   0xf0 0x04 0xa8 0xfa 0x04 0x01 0x0f         .......
-0000   0xf0 0x04 0xa8 0xfa 0x04 0x01 0x0f 0x0f    ........
-0000   0xf0 0x04 0xa8 0xfa 0x04 0x01 0x0f 0x0f    ........
-0008   0x00                                       .
 found 9 extra
 #### RECORD 43 BolusWizard 2012-10-01T20:04:25 head[2], body[31] 0x5b
     op hex (2)
@@ -713,24 +658,7 @@ found 9 extra
     body (0)
     HOUR BITS: [1, 0, 1]
 
-XXX: 0x5c
 should eat up to null
-0000   0xf0                                       .
-0000   0xf0 0x04                                  ..
-0000   0xf0 0x04 0x14                             ...
-0000   0xf0 0x04 0x14 0x0e                        ....
-0000   0xf0 0x04 0x14 0x0e 0x14                   .....
-0000   0xf0 0x04 0x14 0x0e 0x14 0xa8              ......
-0000   0xf0 0x04 0x14 0x0e 0x14 0xa8 0x18         .......
-0000   0xf0 0x04 0x14 0x0e 0x14 0xa8 0x18 0x14    ........
-0000   0xf0 0x04 0x14 0x0e 0x14 0xa8 0x18 0x14    ........
-0008   0x01                                       .
-0000   0xf0 0x04 0x14 0x0e 0x14 0xa8 0x18 0x14    ........
-0008   0x01 0x20                                  . 
-0000   0xf0 0x04 0x14 0x0e 0x14 0xa8 0x18 0x14    ........
-0008   0x01 0x20 0x20                             .  
-0000   0xf0 0x04 0x14 0x0e 0x14 0xa8 0x18 0x14    ........
-0008   0x01 0x20 0x20 0x00                        .  .
 found 12 extra
 #### RECORD 45 BolusWizard 2012-10-01T20:34:40 head[2], body[34] 0x5b
     op hex (2)
@@ -774,24 +702,17 @@ found 12 extra
     body (0)
     HOUR BITS: [1, 0, 1]
 
-XXX: 0x5c
 should eat up to null
-0000   0x54                                       T
-0000   0x54 0x14                                  T.
-0000   0x54 0x14 0x28                             T.(
-0000   0x54 0x14 0x28 0xae                        T.(.
-0000   0x54 0x14 0x28 0xae 0x14                   T.(..
-0000   0x54 0x14 0x28 0xae 0x14 0x14              T.(...
-0000   0x54 0x14 0x28 0xae 0x14 0x14 0xcc         T.(....
-0000   0x54 0x14 0x28 0xae 0x14 0x14 0xcc 0x14    T.(.....
-0000   0x54 0x14 0x28 0xae 0x14 0x14 0xcc 0x14    T.(.....
-0008   0xa8                                       .
-0000   0x54 0x14 0x28 0xae 0x14 0x14 0xcc 0x14    T.(.....
-0008   0xa8 0xd6                                  ..
-0000   0x54 0x14 0x28 0xae 0x14 0x14 0xcc 0x14    T.(.....
-0008   0xa8 0xd6 0x14                             ...
-0000   0x54 0x14 0x28 0xae 0x14 0x14 0xcc 0x14    T.(.....
-0008   0xa8 0xd6 0x14 0xba                        ....
-0000   0x54 0x14 0x28 0xae 0x14 0x14 0xcc 0x14    T.(.....
-0008   0xa8 0xd6 0x14 0xba 0xf8                   .....
 found 13 extra
+Traceback (most recent call last):
+  File "list_opcodes.py", line 317, in <module>
+    main( )
+  File "list_opcodes.py", line 301, in main
+    records = find_dates(stream)
+  File "list_opcodes.py", line 260, in find_dates
+    finished = parse_date(epi)
+  File "list_opcodes.py", line 30, in parse_date
+    return history.parse_date(date)
+  File "/home/bewest/src/decoding-carelink/pump/history.py", line 257, in parse_date
+    seconds = parse_seconds(data[0])
+IndexError: bytearray index out of range

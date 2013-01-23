@@ -1,3 +1,4 @@
+WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-18.data
 #### RECORD 0 Bolus 2012-11-15T19:43:57 head[4], body[0] 0x01
     op hex (4)
@@ -9,24 +10,7 @@
     body (0)
     HOUR BITS: [1, 1, 1]
 
-XXX: 0x5c
 should eat up to null
-0000   0x5f                                       _
-0000   0x5f 0x14                                  _.
-0000   0x5f 0x14 0x1c                             _..
-0000   0x5f 0x14 0x1c 0xa5                        _...
-0000   0x5f 0x14 0x1c 0xa5 0x14                   _....
-0000   0x5f 0x14 0x1c 0xa5 0x14 0x8c              _.....
-0000   0x5f 0x14 0x1c 0xa5 0x14 0x8c 0xcd         _......
-0000   0x5f 0x14 0x1c 0xa5 0x14 0x8c 0xcd 0x14    _.......
-0000   0x5f 0x14 0x1c 0xa5 0x14 0x8c 0xcd 0x14    _.......
-0008   0x01                                       .
-0000   0x5f 0x14 0x1c 0xa5 0x14 0x8c 0xcd 0x14    _.......
-0008   0x01 0x0a                                  ..
-0000   0x5f 0x14 0x1c 0xa5 0x14 0x8c 0xcd 0x14    _.......
-0008   0x01 0x0a 0x0a                             ...
-0000   0x5f 0x14 0x1c 0xa5 0x14 0x8c 0xcd 0x14    _.......
-0008   0x01 0x0a 0x0a 0x00                        ....
 found 12 extra
 #### RECORD 1 BolusWizard 2012-11-15T19:55:50 head[2], body[34] 0x5b
     op hex (2)
@@ -104,3 +88,12 @@ found 12 extra
             232    0    0    0
     YEAR BITS: [1, 0, 0, 0]
 
+Traceback (most recent call last):
+  File "list_opcodes.py", line 317, in <module>
+    main( )
+  File "list_opcodes.py", line 301, in main
+    records = find_dates(stream)
+  File "list_opcodes.py", line 247, in find_dates
+    assert datetime is not None, "\n%s" % lib.hexdump(bolus)
+AssertionError: 
+0000   0x34 0xc8 0xa6 0xeb 0x0b 0x10 0x0c         4......

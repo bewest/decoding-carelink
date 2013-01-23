@@ -1,3 +1,4 @@
+WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-35.data
 #### RECORD 0 Record 2004-12-05T20:04:35 head[9], body[0] 0x5c
     op hex (9)
@@ -75,7 +76,6 @@
     body (0)
     HOUR BITS: [0, 1, 1]
 
-XXX: 0x01
 #### RECORD 6 BolusWizard 2012-09-14T12:41:36 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0x80                                  [.
@@ -104,7 +104,6 @@ XXX: 0x01
     body (0)
     HOUR BITS: [0, 1, 0]
 
-XXX: 0x5c
 should eat up to null
 #### RECORD 8 BolusWizard 2012-09-14T14:28:35 head[2], body[22] 0x5b
     op hex (2)
@@ -124,11 +123,7 @@ should eat up to null
             114    4    1   31   31    0
     HOUR BITS: [0, 1, 0]
 
-XXX: 0x5c
 should eat up to null
-0000   0x05                                       .
-0000   0x05 0x05                                  ..
-0000   0x05 0x05 0x00                             ...
 found 3 extra
 #### RECORD 9 BolusWizard 2012-09-14T14:43:10 head[2], body[25] 0x5b
     op hex (2)
@@ -190,11 +185,7 @@ found 3 extra
     body (0)
     HOUR BITS: [0, 1, 0]
 
-XXX: 0x5c
 should eat up to null
-0000   0x04                                       .
-0000   0x04 0x04                                  ..
-0000   0x04 0x04 0x00                             ...
 found 3 extra
 #### RECORD 14 BolusWizard 2012-09-14T21:29:50 head[2], body[25] 0x5b
     op hex (2)
@@ -236,14 +227,7 @@ found 3 extra
     body (0)
     HOUR BITS: [0, 1, 0]
 
-XXX: 0x5c
 should eat up to null
-0000   0xd7                                       .
-0000   0xd7 0x14                                  ..
-0000   0xd7 0x14 0x01                             ...
-0000   0xd7 0x14 0x01 0x14                        ....
-0000   0xd7 0x14 0x01 0x14 0x14                   .....
-0000   0xd7 0x14 0x01 0x14 0x14 0x00              ......
 found 6 extra
 #### RECORD 17 BolusWizard 2012-09-14T22:15:38 head[2], body[28] 0x5b
     op hex (2)
@@ -349,7 +333,6 @@ found 6 extra
     body (0)
     HOUR BITS: [0, 1, 0]
 
-XXX: 0x01
 #### RECORD 25 BolusWizard 2012-09-15T14:05:23 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0x66                                  [f
@@ -388,7 +371,6 @@ XXX: 0x01
     body (0)
     HOUR BITS: [0, 1, 1]
 
-XXX: 0x5c
 should eat up to null
 #### RECORD 28 BolusWizard 2012-09-15T19:13:59 head[2], body[22] 0x5b
     op hex (2)
@@ -442,3 +424,12 @@ should eat up to null
             232    0    0    0
     YEAR BITS: [1, 0, 0, 0]
 
+Traceback (most recent call last):
+  File "list_opcodes.py", line 317, in <module>
+    main( )
+  File "list_opcodes.py", line 301, in main
+    records = find_dates(stream)
+  File "list_opcodes.py", line 247, in find_dates
+    assert datetime is not None, "\n%s" % lib.hexdump(bolus)
+AssertionError: 
+0000   0x1e 0x00 0xbb 0x4c 0x08 0x10 0x0c         ...L...

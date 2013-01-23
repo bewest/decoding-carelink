@@ -1,3 +1,4 @@
+WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-29.data
 #### RECORD 0 Record 2012-10-08T09:15:28 head[46], body[0] 0x6d
     op hex (46)
@@ -19,7 +20,6 @@
     body (0)
     HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
-XXX: 0x01
 #### RECORD 1 BolusWizard 2012-10-08T09:15:30 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0x1a                                  [.
@@ -68,7 +68,6 @@ XXX: 0x01
     body (0)
     HOUR BITS: [1, 0, 1]
 
-XXX: 0x5c
 should eat up to null
 #### RECORD 5 BolusWizard 2012-10-08T15:53:15 head[2], body[22] 0x5b
     op hex (2)
@@ -98,11 +97,7 @@ should eat up to null
     body (0)
     HOUR BITS: [1, 0, 0]
 
-XXX: 0x5c
 should eat up to null
-0000   0x27                                       '
-0000   0x27 0x27                                  ''
-0000   0x27 0x27 0x00                             ''.
 found 3 extra
 #### RECORD 7 BolusWizard 2012-10-08T20:51:37 head[2], body[25] 0x5b
     op hex (2)
@@ -124,18 +119,7 @@ found 3 extra
               0
     HOUR BITS: [1, 0, 1]
 
-XXX: 0x5c
 should eat up to null
-0000   0x31                                       1
-0000   0x31 0x14                                  1.
-0000   0x31 0x14 0x2a                             1.*
-0000   0x31 0x14 0x2a 0x3b                        1.*;
-0000   0x31 0x14 0x2a 0x3b 0x14                   1.*;.
-0000   0x31 0x14 0x2a 0x3b 0x14 0x01              1.*;..
-0000   0x31 0x14 0x2a 0x3b 0x14 0x01 0x17         1.*;...
-0000   0x31 0x14 0x2a 0x3b 0x14 0x01 0x17 0x17    1.*;....
-0000   0x31 0x14 0x2a 0x3b 0x14 0x01 0x17 0x17    1.*;....
-0008   0x00                                       .
 found 9 extra
 #### RECORD 8 BolusWizard 2012-10-08T20:59:16 head[2], body[31] 0x5b
     op hex (2)
@@ -191,11 +175,7 @@ found 9 extra
     body (0)
     HOUR BITS: [1, 0, 1]
 
-XXX: 0x5c
 should eat up to null
-0000   0x0c                                       .
-0000   0x0c 0x0c                                  ..
-0000   0x0c 0x0c 0x00                             ...
 found 3 extra
 #### RECORD 11 BolusWizard 2012-10-09T00:59:36 head[2], body[25] 0x5b
     op hex (2)
@@ -267,7 +247,6 @@ found 3 extra
     body (0)
     HOUR BITS: [1, 0, 0]
 
-XXX: 0x01
 #### RECORD 17 BolusWizard 2012-10-09T14:17:15 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0x99                                  [.
@@ -286,15 +265,7 @@ XXX: 0x01
               0  143  145   78    9   12
     HOUR BITS: [1, 0, 0]
 
-XXX: 0x5c
 should eat up to null
-0000   0x0e                                       .
-0000   0x0e 0x09                                  ..
-0000   0x0e 0x09 0x0c                             ...
-0000   0x0e 0x09 0x0c 0x01                        ....
-0000   0x0e 0x09 0x0c 0x01 0x14                   .....
-0000   0x0e 0x09 0x0c 0x01 0x14 0x14              ......
-0000   0x0e 0x09 0x0c 0x01 0x14 0x14 0x00         .......
 found 7 extra
 #### RECORD 18 BolusWizard 2012-10-09T14:25:14 head[2], body[29] 0x5b
     op hex (2)
@@ -316,11 +287,7 @@ found 7 extra
              12    1   20   20    0
     HOUR BITS: [1, 0, 0]
 
-XXX: 0x5c
 should eat up to null
-0000   0x13                                       .
-0000   0x13 0x13                                  ..
-0000   0x13 0x13 0x00                             ...
 found 3 extra
 #### RECORD 19 BolusWizard 2012-10-09T14:41:02 head[2], body[25] 0x5b
     op hex (2)
@@ -342,14 +309,7 @@ found 3 extra
               0
     HOUR BITS: [1, 0, 1]
 
-XXX: 0x5c
 should eat up to null
-0000   0x3c                                       <
-0000   0x3c 0x04                                  <.
-0000   0x3c 0x04 0x01                             <..
-0000   0x3c 0x04 0x01 0x08                        <...
-0000   0x3c 0x04 0x01 0x08 0x08                   <....
-0000   0x3c 0x04 0x01 0x08 0x08 0x00              <.....
 found 6 extra
 #### RECORD 20 BolusWizard 2012-10-09T15:14:10 head[2], body[28] 0x5b
     op hex (2)
@@ -381,18 +341,7 @@ found 6 extra
     body (0)
     HOUR BITS: [1, 0, 0]
 
-XXX: 0x5c
 should eat up to null
-0000   0xec                                       .
-0000   0xec 0x04                                  ..
-0000   0xec 0x04 0x18                             ...
-0000   0xec 0x04 0x18 0xf6                        ....
-0000   0xec 0x04 0x18 0xf6 0x04                   .....
-0000   0xec 0x04 0x18 0xf6 0x04 0x01              ......
-0000   0xec 0x04 0x18 0xf6 0x04 0x01 0x1c         .......
-0000   0xec 0x04 0x18 0xf6 0x04 0x01 0x1c 0x1c    ........
-0000   0xec 0x04 0x18 0xf6 0x04 0x01 0x1c 0x1c    ........
-0008   0x00                                       .
 found 9 extra
 #### RECORD 22 BolusWizard 2012-10-09T18:20:32 head[2], body[31] 0x5b
     op hex (2)
@@ -414,41 +363,7 @@ found 9 extra
              24  246    4    1   28   28    0
     HOUR BITS: [1, 0, 0]
 
-XXX: 0x5c
 should eat up to null
-0000   0xe8                                       .
-0000   0xe8 0x04                                  ..
-0000   0xe8 0x04 0x50                             ..P
-0000   0xe8 0x04 0x50 0xf2                        ..P.
-0000   0xe8 0x04 0x50 0xf2 0x04                   ..P..
-0000   0xe8 0x04 0x50 0xf2 0x04 0x18              ..P...
-0000   0xe8 0x04 0x50 0xf2 0x04 0x18 0xfc         ..P....
-0000   0xe8 0x04 0x50 0xf2 0x04 0x18 0xfc 0x04    ..P.....
-0000   0xe8 0x04 0x50 0xf2 0x04 0x18 0xfc 0x04    ..P.....
-0008   0x34                                       4
-0000   0xe8 0x04 0x50 0xf2 0x04 0x18 0xfc 0x04    ..P.....
-0008   0x34 0x64                                  4d
-0000   0xe8 0x04 0x50 0xf2 0x04 0x18 0xfc 0x04    ..P.....
-0008   0x34 0x64 0xbb                             4d.
-0000   0xe8 0x04 0x50 0xf2 0x04 0x18 0xfc 0x04    ..P.....
-0008   0x34 0x64 0xbb 0x9a                        4d..
-0000   0xe8 0x04 0x50 0xf2 0x04 0x18 0xfc 0x04    ..P.....
-0008   0x34 0x64 0xbb 0x9a 0x12                   4d...
-0000   0xe8 0x04 0x50 0xf2 0x04 0x18 0xfc 0x04    ..P.....
-0008   0x34 0x64 0xbb 0x9a 0x12 0x09              4d....
-0000   0xe8 0x04 0x50 0xf2 0x04 0x18 0xfc 0x04    ..P.....
-0008   0x34 0x64 0xbb 0x9a 0x12 0x09 0x0c         4d.....
-0000   0xe8 0x04 0x50 0xf2 0x04 0x18 0xfc 0x04    ..P.....
-0008   0x34 0x64 0xbb 0x9a 0x12 0x09 0x0c 0x01    4d......
-0000   0xe8 0x04 0x50 0xf2 0x04 0x18 0xfc 0x04    ..P.....
-0008   0x34 0x64 0xbb 0x9a 0x12 0x09 0x0c 0x01    4d......
-0010   0x22                                       "
-0000   0xe8 0x04 0x50 0xf2 0x04 0x18 0xfc 0x04    ..P.....
-0008   0x34 0x64 0xbb 0x9a 0x12 0x09 0x0c 0x01    4d......
-0010   0x22 0x22                                  ""
-0000   0xe8 0x04 0x50 0xf2 0x04 0x18 0xfc 0x04    ..P.....
-0008   0x34 0x64 0xbb 0x9a 0x12 0x09 0x0c 0x01    4d......
-0010   0x22 0x22 0x00                             "".
 found 19 extra
 #### RECORD 23 BolusWizard 2012-10-09T18:26:45 head[2], body[41] 0x5b
     op hex (2)
@@ -508,11 +423,7 @@ found 19 extra
     body (0)
     HOUR BITS: [1, 0, 1]
 
-XXX: 0x5c
 should eat up to null
-0000   0x0c                                       .
-0000   0x0c 0x0c                                  ..
-0000   0x0c 0x0c 0x00                             ...
 found 3 extra
 #### RECORD 26 BolusWizard 2012-10-10T01:48:16 head[2], body[25] 0x5b
     op hex (2)
@@ -574,7 +485,6 @@ found 3 extra
     body (0)
     HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
-XXX: 0x5c
 should eat up to null
 #### RECORD 31 BolusWizard 2012-10-10T09:17:12 head[2], body[22] 0x5b
     op hex (2)
@@ -614,7 +524,6 @@ should eat up to null
     body (0)
     HOUR BITS: [1, 0, 1]
 
-XXX: 0x5c
 should eat up to null
 #### RECORD 34 BolusWizard 2012-10-10T13:14:47 head[2], body[22] 0x5b
     op hex (2)
@@ -634,11 +543,7 @@ should eat up to null
             240    4    1   27   27    0
     HOUR BITS: [1, 0, 0]
 
-XXX: 0x5c
 should eat up to null
-0000   0x0d                                       .
-0000   0x0d 0x0d                                  ..
-0000   0x0d 0x0d 0x00                             ...
 found 3 extra
 #### RECORD 35 BolusWizard 2012-10-10T13:32:00 head[2], body[25] 0x5b
     op hex (2)
@@ -734,7 +639,6 @@ found 3 extra
     body (0)
     HOUR BITS: [1, 0, 0]
 
-XXX: 0x01
 #### RECORD 42 BolusWizard 2012-10-11T12:36:45 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0x00                                  [.
@@ -773,7 +677,6 @@ XXX: 0x01
     body (0)
     HOUR BITS: [1, 0, 1]
 
-XXX: 0x01
 #### RECORD 45 BolusWizard 2012-10-11T21:37:04 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0xd1                                  [.

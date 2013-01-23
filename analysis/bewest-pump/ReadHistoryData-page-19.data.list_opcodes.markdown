@@ -1,10 +1,6 @@
+WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-19.data
-XXX: 0x5c
 should eat up to null
-0000   0xc8                                       .
-0000   0xc8 0x91                                  ..
-0000   0xc8 0x91 0xf8                             ...
-0000   0xc8 0x91 0xf8 0x00                        ....
 found 4 extra
 #### RECORD 0 BolusWizard 2012-11-12T00:55:42 head[2], body[26] 0x5b
     op hex (2)
@@ -26,3 +22,12 @@ found 4 extra
             248    0
     HOUR BITS: [1, 1, 1]
 
+Traceback (most recent call last):
+  File "list_opcodes.py", line 317, in <module>
+    main( )
+  File "list_opcodes.py", line 301, in main
+    records = find_dates(stream)
+  File "list_opcodes.py", line 247, in find_dates
+    assert datetime is not None, "\n%s" % lib.hexdump(bolus)
+AssertionError: 
+0000   0x00 0xaa 0xf7 0x40 0x0c 0x0c 0x0a         ...@...
