@@ -345,7 +345,7 @@ def _test_decode_bolus( ):
   0x0f 0x50 0x0d 0x2d 0x6a 0x00 0x0b 0x00
   0x00 0x07 0x00 0x0b 0x7d 0x5c 0x08 0x58
   0x97 0x04 0x30 0x05 0x14 0x34 0xc8
-  0x91 0xf8 0x00 0x00     # 0x91, 0xf8 = month=11, minute=56, seconds=17!
+  0x91 0xf8      # 0x91, 0xf8 = month=11, minute=56, seconds=17!
   0x00           # general parsing fails here
   0x00
   0xaa 0xf7 0x40 0x0c 0x0c # expected  - page-19[6]
@@ -413,6 +413,60 @@ def parse_date(data):
     return date
   except ValueError, e:
     raise NotADate(e)
+
+
+_bad_days = [
+    bytearray([ 0xa9, 0xf5, 0x15, 0x14, 0x0c, ]),
+    bytearray([ 0xa6, 0xc7, 0x36, 0x14, 0x8c, ]),
+    bytearray([ 0xa9, 0xf5, 0x15, 0x14, 0x0c, ]),
+    bytearray([ 0xa6, 0xc7, 0x36, 0x14, 0x8c, ]),
+
+    bytearray([ 0xa2, 0xe9, 0x10, 0x19, 0x0c, ]),
+    bytearray([ 0xa0, 0xf6, 0x0d, 0x19, 0x0c, ]),
+    bytearray([ 0xa5, 0xd9, 0x34, 0x1d, 0x0c, ]),
+
+    bytearray([ 0xc2, 0x3b, 0x0e, 0x14, 0x0c, ]),
+    bytearray([ 0xd9, 0x1c, 0x0f, 0x14, 0x0c, ]),
+  ]
+
+# don't think we have days incorrect. observe:
+def bad_days(x=0):
+  """
+    # page 17, RECORD 11
+    >>> parse_date( bad_days(0) ).isoformat( )
+    '2012-11-20T21:53:41'
+
+    # page 17, ~ RECORD 12
+    >>> parse_date( bad_days(1) ).isoformat( )
+    '2012-11-20T22:07:38'
+
+    >>> parse_date( bad_days(2) ).isoformat( )
+    '2012-11-20T21:53:41'
+
+    >>> parse_date( bad_days(3) ).isoformat( )
+    '2012-11-20T22:07:38'
+
+    # page 16, RECORD ~15
+    >>> parse_date( bad_days(4) ).isoformat( )
+    '2012-11-25T16:41:34'
+
+    >>> parse_date( bad_days(5) ).isoformat( )
+    '2012-11-25T13:54:32'
+
+    # page 15
+    >>> parse_date( bad_days(6) ).isoformat( )
+    '2012-11-29T20:25:37'
+
+    # page 0
+    >>> parse_date( bad_days(7) ).isoformat( )
+    '2012-12-20T14:59:02'
+
+    >>> parse_date( bad_days(8) ).isoformat( )
+    '2012-12-20T15:28:25'
+
+  """
+  return _bad_days[x]
+
 
 
 if __name__ == '__main__':
