@@ -50,11 +50,13 @@ class Record(object):
     0x26: 'EnableDisableRemote',
     0x27: 'ChangeRemoteID',
     0x33: 'TempBasal',
+    0x34: 'LowReservoir',
     0x5b: 'BolusWizard',
     0x63: 'ChangeUtility?',
     0x64: 'ChangeTimeDisplay',
 
   }
+
   _head = {
     0x01: 4,
     0x03: 5,

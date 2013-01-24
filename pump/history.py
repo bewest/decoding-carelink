@@ -58,6 +58,7 @@ def parse_months(seconds, minutes):
   """
   >>> parse_months( 0x92, 0x9e )
   10
+
   """
   high = (seconds & Mask.time) >> 4
   low  = (minutes & Mask.time) >> 6
@@ -247,21 +248,167 @@ def test_time_encoders( ):
   two = encode_monthbyte( )
   return one == two
 
-def parse_date(data):
+def unmask_date(data):
   """
-  >>> parse_date(bytearray( [ 0x6f, 0xd7, 0x08, 0x01, 0x06 ] )).isoformat( )
-  '2006-07-01T08:23:47'
+  Extract date values from a series of bytes.
+
+  Returns 6-tuple of scalar values year, month, day, hours, minutes,
+  seconds.
+  >>> unmask_date(bytearray( [ 0x6f, 0xd7, 0x08, 0x01, 0x06 ] ))
+  (2006, 7, 1, 8, 23, 47)
+
+  >>> unmask_date( bytearray( [ 0x00 ] * 5 ))
+  (2000, 0, 0, 0, 0, 0)
+
+
+  These examples are invalid dates/not found in CSV, here just for
+  testing purposes.
+  >>> unmask_date( bytearray( [ 0x93, 0xd4, 0x0e, 0x10, 0x0c ] ))
+  (2012, 11, 0, 14, 20, 19)
+
+  >>> unmask_date( bytearray( [ 0xa6, 0xeb, 0x0b, 0x10, 0x0c, ] ))
+  (2012, 11, 0, 11, 43, 38)
+
+  >>> unmask_date( bytearray( [ 0x95, 0xe8, 0x0e, 0x10, 0x0c ] ))
+  (2012, 11, 0, 14, 40, 21)
+
+  >>> unmask_date( bytearray( [ 0x80, 0xcf, 0x30, 0x10, 0x0c, ] ))
+  (2012, 11, 0, 16, 15, 0)
+
+  >>> unmask_date( bytearray( [ 0xa3, 0xcf, 0x30, 0x10, 0x0c, ] ))
+  (2012, 11, 0, 16, 15, 35)
+
+
   """
   data = data[:]
+  seconds = parse_seconds(data[0])
+  minutes = parse_minutes(data[1])
+
+  hours   = parse_hours(data[2])
+  day     = parse_day(data[3])
+  year    = parse_years(data[4])
+
+  month   = parse_months( data[0], data[1] )
+  return (year, month, day, hours, minutes, seconds)
+
+_bewest_dates = {
+  # from https://github.com/bewest/decoding-carelink/blob/rewriting/analysis/bewest-pump/ReadHistoryData-page-19.data.list_opcodes.markdown
+  'page-19': {
+    0:  [ 0xaa, 0xf7, 0x40, 0x0c, 0x0c, ],
+    1:  [ 0x40, 0x0c, 0x0c, 0x0a, 0x0c, ],
+    2:  [ 0x0c, 0x8b, 0xc3, 0x28, 0x0c, ],
+    3:  [ 0x8b, 0xc3, 0x28, 0x0c, 0x8c, ],
+    4:  [ 0x28, 0x0c, 0x8c, 0x5b, 0x0c, ],
+    5:  [ 0x8d, 0xc3, 0x08, 0x0c, 0x0c, ],
+    6:  [ 0xaa, 0xf7, 0x00, 0x0c, 0x0c, ],
+  }
+}
+
+def _test_decode_bolus( ):
+  """
+  ## correct
+  >>> parse_date( bytearray( _bewest_dates['page-19'][6] ) ).isoformat( )
+  '2012-11-12T00:55:42'
+
+  ## correct
+  >>> parse_date( bytearray( _bewest_dates['page-19'][0] ) ).isoformat( )
+  '2012-11-12T00:55:42'
+
+  ## this is wrong
+  >>> parse_date( bytearray( _bewest_dates['page-19'][1] ) ).isoformat( )
+  '2012-04-10T12:12:00'
+
+  ## day,month is wrong, time H:M:S is correct
+  # expected: 
+  >>> parse_date( bytearray( _bewest_dates['page-19'][2] ) ).isoformat( )
+  '2012-02-08T03:11:12'
+
+  ## correct
+  >>> parse_date( bytearray( _bewest_dates['page-19'][3] ) ).isoformat( )
+  '2012-11-12T08:03:11'
+
+
+  #### not a valid date
+  # >>> parse_date( bytearray( _bewest_dates['page-19'][4] ) ).isoformat( )
+
+  ## correct
+  >>> parse_date( bytearray( _bewest_dates['page-19'][5] ) ).isoformat( )
+  '2012-11-12T08:03:13'
+
+
+  """
+  """
+
+  0x5b 0x7e # bolus wizard,
+  0xaa 0xf7 0x00 0x0c 0x0c # page-19[0]
+
+  0x0f 0x50 0x0d 0x2d 0x6a 0x00 0x0b 0x00
+  0x00 0x07 0x00 0x0b 0x7d 0x5c 0x08 0x58
+  0x97 0x04 0x30 0x05 0x14 0x34 0xc8
+  0x91 0xf8 0x00 0x00     # 0x91, 0xf8 = month=11, minute=56, seconds=17!
+  0x00           # general parsing fails here
+  0x00
+  0xaa 0xf7 0x40 0x0c 0x0c # expected  - page-19[6]
+
+  0x0a 0x0c 
+  0x8b 0xc3 0x28 0x0c 0x8c # page-19[3]
+
+
+  0x5b 0x0c
+
+  0x8d 0xc3 0x08 0x0c 0x0c # page-19[5]
+  0x00 0x51 0x0d 0x2d 0x6a 0x1f 0x00 0x00 0x00 0x00 0x00
+  """
+
+### csv deconstructed
+"""
+395,11/12/12,00:55:42,11/12/12 00:55:42,Normal 1.1,1.1,BolusNormal
+  "AMOUNT=1.1, CONCENTRATION=null, PROGRAMMED_AMOUNT=1.1,
+  ACTION_REQUESTOR=pump, ENABLE=true, IS_DUAL_COMPONENT=false,
+  UNABSORBED_INSULIN_TOTAL=null",9942920032,51974238,2086,Paradigm 522
+
+396,11/12/12,00:56:17,11/12/12 00:56:17 JournalEntryPumpLowReservoir
+  "AMOUNT=20, ACTION_REQUESTOR=pump",9942920033,51974238,2087,Paradigm 522
+
+
+397,11/12/12,08:03:11,11/12/12 08:03:11 268 CalBGForPH
+  "AMOUNT=268, ACTION_REQUESTOR=pump",9942920031,51974238,2085,Paradigm 522
+
+398,11/12/12,08:03:13,11/12/12 08:03:13 UnabsorbedInsulin
+  "BOLUS_ESTIMATE_DATUM=9942920029, INDEX=0, AMOUNT=1.1, RECORD_AGE=429,
+  INSULIN_TYPE=null,
+  INSULIN_ACTION_CURVE=240",9942920030,51974238,2084,Paradigm 522
+
+399,11/12/12,08:03:13,11/12/12 08:03:13
+  3.1,125,106,13,45,0,268,3.1,0,0.0
+  BolusWizardBolusEstimate,"BG_INPUT=268, BG_UNITS=mg dl,
+  CARB_INPUT=0, CARB_UNITS=grams, CARB_RATIO=13,
+  INSULIN_SENSITIVITY=45, BG_TARGET_LOW=106, BG_TARGET_HIGH=125,
+  BOLUS_ESTIMATE=3.1, CORRECTION_ESTIMATE=3.1, FOOD_ESTIMATE=0,
+  UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=1,
+  ACTION_REQUESTOR=pump",9942920029,51974238,2083,Paradigm 522
+
+400,11/12/12,08:03:13,11/12/12 08:03:13 Normal
+  3.1,3.1 BolusNormal "AMOUNT=3.1, CONCENTRATION=null,
+  PROGRAMMED_AMOUNT=3.1, ACTION_REQUESTOR=pump, ENABLE=true,
+  IS_DUAL_COMPONENT=false,
+  UNABSORBED_INSULIN_TOTAL=null",9942920028,51974238,2082,Paradigm 522
+
+401,11/12/12,08:50:31,11/12/12 08:50:31 JournalEntryPumpLowReservoir
+  "AMOUNT=10, ACTION_REQUESTOR=pump",9942920027,51974238,2081,Paradigm 522
+
+"""
+def parse_date(data):
+  """
+  Apply strict datetime validation to extract a datetime from a series
+  of bytes.
+  >>> parse_date(bytearray( [ 0x6f, 0xd7, 0x08, 0x01, 0x06 ] )).isoformat( )
+  '2006-07-01T08:23:47'
+
+
+  """
+  (year, month, day, hours, minutes, seconds) = unmask_date(data)
   try:
-    seconds = parse_seconds(data[0])
-    minutes = parse_minutes(data[1])
-
-    hours   = parse_hours(data[2])
-    day     = parse_day(data[3])
-    year    = parse_years(data[4])
-
-    month   = parse_months( data[0], data[1] )
     date = datetime(year, month, day, hours, minutes, seconds)
     return date
   except ValueError, e:
