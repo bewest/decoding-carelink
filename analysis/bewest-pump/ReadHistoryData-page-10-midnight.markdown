@@ -261,7 +261,7 @@ should eat up to null
             232    0    0    0
     
 
-#### RECORD 46 Record 2012-12-05T04:18:45 head[2], body[0] 0x34
+#### RECORD 46 LowReservoir 2012-12-05T04:18:45 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal

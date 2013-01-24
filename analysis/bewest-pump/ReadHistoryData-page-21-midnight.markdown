@@ -237,7 +237,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [1, 1, 1]
 
-#### RECORD 58 Record 2012-11-08T23:15:47 head[2], body[0] 0x34
+#### RECORD 58 LowReservoir 2012-11-08T23:15:47 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal

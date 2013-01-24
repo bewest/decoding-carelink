@@ -140,7 +140,7 @@ found 3 extra
             232    0    0    0
     YEAR BITS: [1, 0, 0, 0]
 
-#### RECORD 15 Record 2012-11-05T07:28:25 head[2], body[0] 0x34
+#### RECORD 15 LowReservoir 2012-11-05T07:28:25 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal

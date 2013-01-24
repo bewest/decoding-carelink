@@ -10,7 +10,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [1, 0, 0]
 
-#### RECORD 1 Record 2012-10-07T20:50:31 head[2], body[0] 0x34
+#### RECORD 1 LowReservoir 2012-10-07T20:50:31 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal

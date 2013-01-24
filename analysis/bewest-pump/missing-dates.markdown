@@ -76,13 +76,13 @@ found 3 extra
              58   10   16   12   57   80   13
 XXX:???:XXX
 Traceback (most recent call last):
-  File "list_opcodes.py", line 327, in <module>
+  File "list_opcodes.py", line 329, in <module>
     main( )
-  File "list_opcodes.py", line 311, in main
+  File "list_opcodes.py", line 313, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 255, in find_dates
+  File "list_opcodes.py", line 257, in find_dates
     print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
-  File "/home/bewest/src/decoding-carelink/pump/history.py", line 268, in parse_date
+  File "/home/bewest/src/decoding-carelink/pump/history.py", line 415, in parse_date
     raise NotADate(e)
 pump.history.NotADate: month must be in 1..12
 
@@ -338,13 +338,13 @@ found 4 extra
             106   31    0    0    0    0    0
 XXX:???:XXX
 Traceback (most recent call last):
-  File "list_opcodes.py", line 327, in <module>
+  File "list_opcodes.py", line 329, in <module>
     main( )
-  File "list_opcodes.py", line 311, in main
+  File "list_opcodes.py", line 313, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 255, in find_dates
+  File "list_opcodes.py", line 257, in find_dates
     print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
-  File "/home/bewest/src/decoding-carelink/pump/history.py", line 268, in parse_date
+  File "/home/bewest/src/decoding-carelink/pump/history.py", line 415, in parse_date
     raise NotADate(e)
 pump.history.NotADate: day is out of range for month
 
@@ -518,13 +518,13 @@ found 3 extra
               0    0    0    0    0   56  162
 XXX:???:XXX
 Traceback (most recent call last):
-  File "list_opcodes.py", line 327, in <module>
+  File "list_opcodes.py", line 329, in <module>
     main( )
-  File "list_opcodes.py", line 311, in main
+  File "list_opcodes.py", line 313, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 255, in find_dates
+  File "list_opcodes.py", line 257, in find_dates
     print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
-  File "/home/bewest/src/decoding-carelink/pump/history.py", line 268, in parse_date
+  File "/home/bewest/src/decoding-carelink/pump/history.py", line 415, in parse_date
     raise NotADate(e)
 pump.history.NotADate: month must be in 1..12
 
@@ -687,13 +687,13 @@ found 9 extra
               0    0    0    0    0    0   31  242
 XXX:???:XXX
 Traceback (most recent call last):
-  File "list_opcodes.py", line 327, in <module>
+  File "list_opcodes.py", line 329, in <module>
     main( )
-  File "list_opcodes.py", line 311, in main
+  File "list_opcodes.py", line 313, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 255, in find_dates
+  File "list_opcodes.py", line 257, in find_dates
     print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
-  File "/home/bewest/src/decoding-carelink/pump/history.py", line 268, in parse_date
+  File "/home/bewest/src/decoding-carelink/pump/history.py", line 415, in parse_date
     raise NotADate(e)
 pump.history.NotADate: month must be in 1..12
 
@@ -771,13 +771,13 @@ should eat up to null
              96   10   16   12    0   80   13
 XXX:???:XXX
 Traceback (most recent call last):
-  File "list_opcodes.py", line 327, in <module>
+  File "list_opcodes.py", line 329, in <module>
     main( )
-  File "list_opcodes.py", line 311, in main
+  File "list_opcodes.py", line 313, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 255, in find_dates
+  File "list_opcodes.py", line 257, in find_dates
     print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
-  File "/home/bewest/src/decoding-carelink/pump/history.py", line 268, in parse_date
+  File "/home/bewest/src/decoding-carelink/pump/history.py", line 415, in parse_date
     raise NotADate(e)
 pump.history.NotADate: month must be in 1..12
 

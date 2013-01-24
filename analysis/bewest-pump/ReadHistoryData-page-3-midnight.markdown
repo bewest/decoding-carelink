@@ -51,7 +51,7 @@ found 3 extra
               0
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 18 Record 2013-01-12T21:28:25 head[2], body[0] 0x34
+#### RECORD 18 LowReservoir 2013-01-12T21:28:25 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal

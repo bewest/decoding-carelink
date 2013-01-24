@@ -222,7 +222,7 @@ found 12 extra
              58   10   16   12   57   80   13
 XXX:???:XXX
 Traceback (most recent call last):
-  File "list_opcodes.py", line 327, in <module>
+  File "list_opcodes.py", line 329, in <module>
     main( )
-  File "list_opcodes.py", line 311, in main
+  File "list_opcodes.py", line 313, in main
     records = find_dates(stream)

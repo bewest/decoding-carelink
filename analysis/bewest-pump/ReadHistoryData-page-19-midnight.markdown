@@ -35,8 +35,8 @@ found 4 extra
             106   31    0    0    0    0    0
 XXX:???:XXX
 Traceback (most recent call last):
-  File "list_opcodes.py", line 327, in <module>
+  File "list_opcodes.py", line 329, in <module>
     main( )
-  File "list_opcodes.py", line 311, in main
+  File "list_opcodes.py", line 313, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 255, in find_dates
+  File "list_opcodes.py", line 257, in find_dates
