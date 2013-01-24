@@ -598,7 +598,7 @@ found 3 extra
               0
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 40 Record 2012-12-04T15:28:25 head[2], body[0] 0x34
+#### RECORD 40 LowReservoir 2012-12-04T15:28:25 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal
@@ -681,7 +681,7 @@ should eat up to null
             232    0    0    0
     
 
-#### RECORD 46 Record 2012-12-05T04:18:45 head[2], body[0] 0x34
+#### RECORD 46 LowReservoir 2012-12-05T04:18:45 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal

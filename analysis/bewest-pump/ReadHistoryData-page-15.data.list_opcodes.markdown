@@ -122,7 +122,7 @@ should eat up to null
             232    0    0    0
     YEAR BITS: [1, 0, 0, 0]
 
-#### RECORD 7 Record 2012-11-13T10:49:05 head[2], body[0] 0x34
+#### RECORD 7 LowReservoir 2012-11-13T10:49:05 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal
@@ -199,7 +199,7 @@ should eat up to null
              14    4    1   30   30    0
     HOUR BITS: [1, 1, 1]
 
-#### RECORD 13 Record 2012-11-13T15:41:03 head[2], body[0] 0x34
+#### RECORD 13 LowReservoir 2012-11-13T15:41:03 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal

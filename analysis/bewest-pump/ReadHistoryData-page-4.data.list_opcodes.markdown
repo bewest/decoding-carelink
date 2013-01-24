@@ -253,7 +253,7 @@ should eat up to null
             200   20    1   60   60    0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 17 Record 2013-01-08T05:22:30 head[2], body[0] 0x34
+#### RECORD 17 LowReservoir 2013-01-08T05:22:30 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal

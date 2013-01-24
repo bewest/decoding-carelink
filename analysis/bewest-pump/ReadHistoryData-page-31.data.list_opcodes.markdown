@@ -354,7 +354,7 @@ found 3 extra
               0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 23 Record 2012-09-14T04:07:30 head[2], body[0] 0x34
+#### RECORD 23 LowReservoir 2012-09-14T04:07:30 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal
@@ -364,7 +364,7 @@ found 3 extra
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 24 Record 2012-09-14T14:18:56 head[2], body[0] 0x34
+#### RECORD 24 LowReservoir 2012-09-14T14:18:56 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal
@@ -705,14 +705,16 @@ found 12 extra
 should eat up to null
 found 13 extra
 Traceback (most recent call last):
-  File "list_opcodes.py", line 327, in <module>
+  File "list_opcodes.py", line 329, in <module>
     main( )
-  File "list_opcodes.py", line 311, in main
+  File "list_opcodes.py", line 313, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 270, in find_dates
+  File "list_opcodes.py", line 272, in find_dates
     finished = parse_date(epi)
   File "list_opcodes.py", line 30, in parse_date
     return history.parse_date(date)
-  File "/home/bewest/src/decoding-carelink/pump/history.py", line 257, in parse_date
+  File "/home/bewest/src/decoding-carelink/pump/history.py", line 410, in parse_date
+    (year, month, day, hours, minutes, seconds) = unmask_date(data)
+  File "/home/bewest/src/decoding-carelink/pump/history.py", line 284, in unmask_date
     seconds = parse_seconds(data[0])
 IndexError: bytearray index out of range

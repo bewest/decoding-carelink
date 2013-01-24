@@ -10,7 +10,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [1, 0, 0]
 
-#### RECORD 1 Record 2012-10-07T20:50:31 head[2], body[0] 0x34
+#### RECORD 1 LowReservoir 2012-10-07T20:50:31 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal
@@ -128,7 +128,7 @@ found 9 extra
              78   41   20    1    6    6    0
     HOUR BITS: [1, 0, 1]
 
-#### RECORD 9 Record 2012-10-08T04:00:00 head[2], body[0] 0x34
+#### RECORD 9 LowReservoir 2012-10-08T04:00:00 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal
@@ -842,12 +842,12 @@ found 3 extra
               0    0    0    0    0   56  162
 XXX:???:XXX
 Traceback (most recent call last):
-  File "list_opcodes.py", line 327, in <module>
+  File "list_opcodes.py", line 329, in <module>
     main( )
-  File "list_opcodes.py", line 311, in main
+  File "list_opcodes.py", line 313, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 255, in find_dates
+  File "list_opcodes.py", line 257, in find_dates
     print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
-  File "/home/bewest/src/decoding-carelink/pump/history.py", line 268, in parse_date
+  File "/home/bewest/src/decoding-carelink/pump/history.py", line 415, in parse_date
     raise NotADate(e)
 pump.history.NotADate: month must be in 1..12

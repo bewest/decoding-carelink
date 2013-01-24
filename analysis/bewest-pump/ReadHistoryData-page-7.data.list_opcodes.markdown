@@ -48,7 +48,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 4 Record 2012-12-12T13:08:10 head[2], body[0] 0x34
+#### RECORD 4 LowReservoir 2012-12-12T13:08:10 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal

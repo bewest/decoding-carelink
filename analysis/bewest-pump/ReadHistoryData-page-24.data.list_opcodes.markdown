@@ -274,7 +274,7 @@ found 3 extra
     body (0)
     HOUR BITS: [1, 0, 1]
 
-#### RECORD 21 Record 2012-10-11T21:25:15 head[2], body[0] 0x34
+#### RECORD 21 LowReservoir 2012-10-11T21:25:15 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal

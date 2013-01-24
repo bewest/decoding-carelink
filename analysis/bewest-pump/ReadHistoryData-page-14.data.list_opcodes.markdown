@@ -230,7 +230,7 @@ found 3 extra
               2  211   41  109    3   12
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 16 Record 2012-12-03T15:41:03 head[2], body[0] 0x34
+#### RECORD 16 LowReservoir 2012-12-03T15:41:03 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal

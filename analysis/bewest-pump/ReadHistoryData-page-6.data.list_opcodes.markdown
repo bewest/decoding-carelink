@@ -319,7 +319,7 @@ found 9 extra
              24  208   20    1   36   36    0
     
 
-#### RECORD 23 Record 2012-12-15T19:31:27 head[2], body[0] 0x34
+#### RECORD 23 LowReservoir 2012-12-15T19:31:27 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal
@@ -405,7 +405,7 @@ found 3 extra
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 29 Record 2013-01-01T03:52:30 head[2], body[0] 0x34
+#### RECORD 29 LowReservoir 2013-01-01T03:52:30 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal

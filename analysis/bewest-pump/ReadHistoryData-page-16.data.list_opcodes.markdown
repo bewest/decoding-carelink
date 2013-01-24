@@ -201,7 +201,7 @@ should eat up to null
              20   20    1   48   48    0
     HOUR BITS: [1, 1, 1]
 
-#### RECORD 13 Record 2012-11-09T03:37:30 head[2], body[0] 0x34
+#### RECORD 13 LowReservoir 2012-11-09T03:37:30 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal
@@ -211,7 +211,7 @@ should eat up to null
     body (0)
     HOUR BITS: [1, 1, 1]
 
-#### RECORD 14 Record 2012-11-09T13:54:32 head[2], body[0] 0x34
+#### RECORD 14 LowReservoir 2012-11-09T13:54:32 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal

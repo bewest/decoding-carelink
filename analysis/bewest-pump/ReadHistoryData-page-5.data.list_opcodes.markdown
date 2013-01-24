@@ -294,7 +294,7 @@ should eat up to null
     body (0)
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 22 Record 2013-01-04T13:51:49 head[2], body[0] 0x34
+#### RECORD 22 LowReservoir 2013-01-04T13:51:49 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal
@@ -361,7 +361,7 @@ should eat up to null
              32    4    1   49   49    0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 27 Record 2013-01-04T17:25:15 head[2], body[0] 0x34
+#### RECORD 27 LowReservoir 2013-01-04T17:25:15 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal

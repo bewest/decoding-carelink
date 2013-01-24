@@ -52,7 +52,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0  132   68   81   21   12
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 3 Record 2012-09-05T18:22:06 head[2], body[0] 0x34
+#### RECORD 3 LowReservoir 2012-09-05T18:22:06 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal
@@ -177,7 +177,7 @@ found 9 extra
             148  118   20    1    9    9    0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 11 Record 2012-09-05T23:31:34 head[2], body[0] 0x34
+#### RECORD 11 LowReservoir 2012-09-05T23:31:34 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal

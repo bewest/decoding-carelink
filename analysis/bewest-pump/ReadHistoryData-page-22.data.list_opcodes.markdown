@@ -672,7 +672,7 @@ found 3 extra
               0
     HOUR BITS: [1, 1, 1]
 
-#### RECORD 47 Record 2012-11-04T17:44:12 head[2], body[0] 0x34
+#### RECORD 47 LowReservoir 2012-11-04T17:44:12 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal
@@ -782,7 +782,7 @@ found 6 extra
               1   10   10    0
     HOUR BITS: [1, 1, 1]
 
-#### RECORD 55 Record 2012-11-04T23:53:41 head[2], body[0] 0x34
+#### RECORD 55 LowReservoir 2012-11-04T23:53:41 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal
