@@ -53,6 +53,7 @@ class Record(object):
     0x33: 'TempBasal',
     0x34: 'LowReservoir',
     0x5b: 'BolusWizard',
+    0x5c: 'BolusGiven?',
     0x63: 'ChangeUtility?',
     0x64: 'ChangeTimeDisplay',
 
@@ -71,7 +72,7 @@ class Record(object):
 
 
     # 0x6c: 79 + 38 + 14,
-    0x6c: 0,
+    # 0x6c: 0,
 
 
     # observed on bewest-pump
