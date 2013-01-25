@@ -32,29 +32,29 @@ found 3 extra
               0
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 2 ResultTotals MIDNIGHT!?: (2012, 0, 24, 0, 5, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 2 ResultTotals 2012-10-24T13:12:24 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x60                   ....`
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 24, 0, 5, 0))
-    0000   0x00 0x05 0x60 0x98 0x8c                   ..`..
-    body (44)
+              7    0    0    5   96
+    datetime (2012-10-24T13:12:24)
+    0000   0x98 0x8c 0x6d 0x98 0x8c                   ..m..
+    body (41)
     hex
-    0000   0x6d 0x98 0x8c 0x05 0x00 0x8d 0x46 0xae    m.....F.
-    0008   0x04 0x00 0x00 0x05 0x60 0x03 0x78 0x41    ....`.xA
-    0010   0x01 0xe8 0x23 0x00 0x86 0x01 0xe8 0x23    ..#....#
-    0018   0x01 0x9c 0x54 0x00 0x4c 0x10 0x00 0x00    ..T.L...
-    0020   0x00 0x03 0x01 0x00 0x02 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x00 0x8d 0x46 0xae 0x04 0x00 0x00    ...F....
+    0008   0x05 0x60 0x03 0x78 0x41 0x01 0xe8 0x23    .`.xA..#
+    0010   0x00 0x86 0x01 0xe8 0x23 0x01 0x9c 0x54    ....#..T
+    0018   0x00 0x4c 0x10 0x00 0x00 0x00 0x03 0x01    .L......
+    0020   0x00 0x02 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109  152  140    5    0  141   70  174
-              4    0    0    5   96    3  120   65
-              1  232   35    0  134    1  232   35
-              1  156   84    0   76   16    0    0
-              0    3    1    0    2    0   12    0
-            232    0    0    0
-    DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
+              5    0  141   70  174    4    0    0
+              5   96    3  120   65    1  232   35
+              0  134    1  232   35    1  156   84
+              0   76   16    0    0    0    3    1
+              0    2    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 3 PumpSuspend 2012-09-25T09:55:38 head[2], body[0] 0x1e
     op hex (2)
@@ -301,29 +301,29 @@ found 6 extra
               1   26   26    0
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 19 ResultTotals MIDNIGHT!?: (2012, 0, 25, 30, 5, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 19 ResultTotals 2012-10-25T13:12:25 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x7e                   ....~
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 25, 30, 5, 0))
-    0000   0x00 0x05 0x7e 0x99 0x8c                   ..~..
-    body (44)
+              7    0    0    5  126
+    datetime (2012-10-25T13:12:25)
+    0000   0x99 0x8c 0x6d 0x99 0x8c                   ..m..
+    body (41)
     hex
-    0000   0x6d 0x99 0x8c 0x05 0x10 0xca 0x8d 0x21    m......!
-    0008   0x06 0x00 0x00 0x05 0x7e 0x03 0x56 0x3d    ....~.V=
-    0010   0x02 0x28 0x27 0x00 0x75 0x02 0x28 0x27    .('.u.('
-    0018   0x01 0x5c 0x3f 0x00 0xcc 0x25 0x00 0x00    .\?..%..
-    0020   0x00 0x08 0x05 0x01 0x02 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x10 0xca 0x8d 0x21 0x06 0x00 0x00    ....!...
+    0008   0x05 0x7e 0x03 0x56 0x3d 0x02 0x28 0x27    .~.V=.('
+    0010   0x00 0x75 0x02 0x28 0x27 0x01 0x5c 0x3f    .u.('.\?
+    0018   0x00 0xcc 0x25 0x00 0x00 0x00 0x08 0x05    ..%.....
+    0020   0x01 0x02 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109  153  140    5   16  202  141   33
-              6    0    0    5  126    3   86   61
-              2   40   39    0  117    2   40   39
-              1   92   63    0  204   37    0    0
-              0    8    5    1    2    0   12    0
-            232    0    0    0
-    DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
+              5   16  202  141   33    6    0    0
+              5  126    3   86   61    2   40   39
+              0  117    2   40   39    1   92   63
+              0  204   37    0    0    0    8    5
+              1    2    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 20 CalForBG 2012-09-26T01:21:23 head[2], body[0] 0x0a
     op hex (2)
@@ -536,29 +536,29 @@ found 6 extra
               1   36   36    0
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 37 ResultTotals MIDNIGHT!?: (2012, 0, 26, 12, 5, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 37 ResultTotals 2012-10-26T13:12:26 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x0c                   .....
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 26, 12, 5, 0))
-    0000   0x00 0x05 0x0c 0x9a 0x8c                   .....
-    body (44)
+              7    0    0    5   12
+    datetime (2012-10-26T13:12:26)
+    0000   0x9a 0x8c 0x6d 0x9a 0x8c                   ..m..
+    body (41)
     hex
-    0000   0x6d 0x9a 0x8c 0x05 0x10 0xbd 0x5b 0x20    m.....[ 
-    0008   0x06 0x00 0x00 0x05 0x0c 0x03 0x74 0x44    ......tD
-    0010   0x01 0x98 0x20 0x00 0x5d 0x01 0x98 0x20    .. .].. 
-    0018   0x01 0x08 0x41 0x00 0x90 0x23 0x00 0x00    ..A..#..
-    0020   0x00 0x04 0x03 0x01 0x00 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x10 0xbd 0x5b 0x20 0x06 0x00 0x00    ...[ ...
+    0008   0x05 0x0c 0x03 0x74 0x44 0x01 0x98 0x20    ...tD.. 
+    0010   0x00 0x5d 0x01 0x98 0x20 0x01 0x08 0x41    .].. ..A
+    0018   0x00 0x90 0x23 0x00 0x00 0x00 0x04 0x03    ..#.....
+    0020   0x01 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109  154  140    5   16  189   91   32
-              6    0    0    5   12    3  116   68
-              1  152   32    0   93    1  152   32
-              1    8   65    0  144   35    0    0
-              0    4    3    1    0    0   12    0
-            232    0    0    0
-    DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
+              5   16  189   91   32    6    0    0
+              5   12    3  116   68    1  152   32
+              0   93    1  152   32    1    8   65
+              0  144   35    0    0    0    4    3
+              1    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 38 PumpSuspend 2012-09-27T14:09:20 head[2], body[0] 0x1e
     op hex (2)
@@ -716,22 +716,20 @@ found 9 extra
              46  246    4    1   17   17    0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 48 ResultTotals MIDNIGHT!?: (2012, 0, 27, 16, 5, 0) head[2], body[17] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 48 ResultTotals MIDNIGHT!?: (2000, 10, 0, 0, 12, 27) head[5], body[14] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x10                   .....
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 27, 16, 5, 0))
-    0000   0x00 0x05 0x10 0x9b 0x8c                   .....
-    body (17)
+              7    0    0    5   16
+    datetime (MIDNIGHT!?: (2000, 10, 0, 0, 12, 27))
+    0000   0x9b 0x8c 0x00 0x00 0x00                   .....
+    body (14)
     hex
     0000   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x85    ........
-    0010   0xc9                                       .
+    0008   0x00 0x00 0x00 0x00 0x85 0xc9              ......
     decimal
               0    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0  133
-            201
-    DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
+              0    0    0    0  133  201
+    HOUR BITS: [1, 0, 0]
 
 `end logs/ReadHistoryData-page-32.data: 49 records`

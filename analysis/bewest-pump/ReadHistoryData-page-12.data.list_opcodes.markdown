@@ -1,6 +1,6 @@
 WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-12.data
-#### RECORD 0 Record 2010-12-26T01:20:30 head[9], body[0] 0x5c
+#### RECORD 0 BolusGiven? 2010-12-26T01:20:30 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x0b 0x14 0x08 0x04 0x06 0xd4 0x14    \.......
     0008   0x92                                       .

@@ -260,29 +260,29 @@ should eat up to null
             176   20    1   38   38    0
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 20 ResultTotals MIDNIGHT!?: (2013, 0, 3, 12, 6, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 20 ResultTotals 2013-02-03T13:13:03 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x06 0xcc                   .....
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2013, 0, 3, 12, 6, 0))
-    0000   0x00 0x06 0xcc 0x03 0x8d                   .....
-    body (44)
+              7    0    0    6  204
+    datetime (2013-02-03T13:13:03)
+    0000   0x03 0x8d 0x6d 0x03 0x8d                   ..m..
+    body (41)
     hex
-    0000   0x6d 0x03 0x8d 0x05 0x00 0x61 0x42 0xd3    m....aB.
-    0008   0x0a 0x00 0x00 0x06 0xcc 0x03 0xe8 0x39    .......9
-    0010   0x02 0xe4 0x2b 0x00 0xf8 0x02 0xe4 0x2b    ..+....+
-    0018   0x02 0xbc 0x5f 0x00 0x28 0x05 0x00 0x00    .._.(...
-    0020   0x00 0x05 0x04 0x00 0x01 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x00 0x61 0x42 0xd3 0x0a 0x00 0x00    ..aB....
+    0008   0x06 0xcc 0x03 0xe8 0x39 0x02 0xe4 0x2b    ....9..+
+    0010   0x00 0xf8 0x02 0xe4 0x2b 0x02 0xbc 0x5f    ....+.._
+    0018   0x00 0x28 0x05 0x00 0x00 0x00 0x05 0x04    .(......
+    0020   0x00 0x01 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109    3  141    5    0   97   66  211
-             10    0    0    6  204    3  232   57
-              2  228   43    0  248    2  228   43
-              2  188   95    0   40    5    0    0
-              0    5    4    0    1    0   12    0
-            232    0    0    0
-    YEAR BITS: [1, 0, 0, 0]
+              5    0   97   66  211   10    0    0
+              6  204    3  232   57    2  228   43
+              0  248    2  228   43    2  188   95
+              0   40    5    0    0    0    5    4
+              0    1    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 21 CalForBG 2013-01-04T03:40:08 head[2], body[0] 0x0a
     op hex (2)
@@ -627,29 +627,29 @@ found 3 extra
               0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 44 ResultTotals MIDNIGHT!?: (2013, 0, 5, 4, 6, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 44 ResultTotals 2013-02-05T13:13:05 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x06 0xc4                   .....
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2013, 0, 5, 4, 6, 0))
-    0000   0x00 0x06 0xc4 0x05 0x8d                   .....
-    body (44)
+              7    0    0    6  196
+    datetime (2013-02-05T13:13:05)
+    0000   0x05 0x8d 0x6d 0x05 0x8d                   ..m..
+    body (41)
     hex
-    0000   0x6d 0x05 0x8d 0x05 0x10 0xfb 0x6a 0x47    m.....jG
-    0008   0x05 0x00 0x00 0x06 0xc4 0x03 0x84 0x34    .......4
-    0010   0x03 0x40 0x30 0x00 0x77 0x03 0x40 0x30    .@0.w.@0
-    0018   0x01 0x68 0x2b 0x01 0xd8 0x39 0x00 0x00    .h+..9..
-    0020   0x00 0x05 0x01 0x02 0x02 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x10 0xfb 0x6a 0x47 0x05 0x00 0x00    ...jG...
+    0008   0x06 0xc4 0x03 0x84 0x34 0x03 0x40 0x30    ....4.@0
+    0010   0x00 0x77 0x03 0x40 0x30 0x01 0x68 0x2b    .w.@0.h+
+    0018   0x01 0xd8 0x39 0x00 0x00 0x00 0x05 0x01    ..9.....
+    0020   0x02 0x02 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109    5  141    5   16  251  106   71
-              5    0    0    6  196    3  132   52
-              3   64   48    0  119    3   64   48
-              1  104   43    1  216   57    0    0
-              0    5    1    2    2    0   12    0
-            232    0    0    0
-    YEAR BITS: [1, 0, 0, 0]
+              5   16  251  106   71    5    0    0
+              6  196    3  132   52    3   64   48
+              0  119    3   64   48    1  104   43
+              1  216   57    0    0    0    5    1
+              2    2    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 45 CalForBG 2013-01-06T01:12:30 head[2], body[0] 0x0a
     op hex (2)
@@ -699,22 +699,22 @@ found 3 extra
               0   16  111   83    6   13
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 49 ResultTotals MIDNIGHT!?: (2013, 0, 6, 12, 4, 0) head[2], body[20] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 49 ResultTotals MIDNIGHT!?: (2000, 2, 0, 0, 13, 6) head[5], body[17] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0x0c                   .....
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2013, 0, 6, 12, 4, 0))
-    0000   0x00 0x04 0x0c 0x06 0x8d                   .....
-    body (20)
+              7    0    0    4   12
+    datetime (MIDNIGHT!?: (2000, 2, 0, 0, 13, 6))
+    0000   0x06 0x8d 0x00 0x00 0x00                   .....
+    body (17)
     hex
     0000   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0010   0x00 0x00 0x98 0xed                        ....
+    0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x98    ........
+    0010   0xed                                       .
     decimal
               0    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0    0
-              0    0  152  237
-    YEAR BITS: [1, 0, 0, 0]
+              0    0    0    0    0    0    0  152
+            237
+    HOUR BITS: [1, 0, 0]
 
 `end logs/ReadHistoryData-page-5.data: 50 records`

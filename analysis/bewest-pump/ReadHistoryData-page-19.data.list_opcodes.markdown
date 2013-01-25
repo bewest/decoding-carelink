@@ -35,12 +35,12 @@ found 4 extra
             106   31    0    0    0    0    0
 XXX:???:XXX
 Traceback (most recent call last):
-  File "list_opcodes.py", line 333, in <module>
+  File "list_opcodes.py", line 334, in <module>
     main( )
-  File "list_opcodes.py", line 317, in main
+  File "list_opcodes.py", line 318, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 261, in find_dates
+  File "list_opcodes.py", line 262, in find_dates
     print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
-  File "/home/bewest/src/decoding-carelink/pump/history.py", line 415, in parse_date
+  File "/home/bewest/src/decoding-carelink/pump/history.py", line 590, in parse_date
     raise NotADate(e)
 pump.history.NotADate: day is out of range for month
