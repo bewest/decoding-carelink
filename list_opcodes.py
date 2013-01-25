@@ -77,7 +77,8 @@ class Record(object):
 
     # observed on bewest-pump
     # 0x2e: 24,
-    0x5c: 12,
+    # 0x5c: 12,
+    0x5c: 9,
 
     # 0x0c: 22,
     0x0c: 19,
@@ -95,8 +96,7 @@ class Record(object):
   _body = {
     #0x5b: 15,
     # 0x5b: 22,
-    # 0x5b: 22,
-    0x5b: 22,
+    0x5b: 13,
     0x45: 3,
     0x07: 38 + 3,
 
@@ -140,7 +140,7 @@ class Record(object):
   def seeks_null(cls, opcode, body):
     if opcode ==  0x5c:
       return True
-    if opcode == 0x5b:
+    if False and opcode == 0x5b:
       # print 'XXX: %#04x' % body[13]
       if body[13:] and body[13] ==  0x5c:
         return True
@@ -240,14 +240,23 @@ def find_dates(stream):
       bolus.extend(bytearray(stream.read(head_length-total)))
 
     if Record.seeks_null(opcode, bolus):
-      print "should eat up to null %#04x" %  opcode
+      print "should eat up to null first: %#04x" %  opcode
       print lib.hexdump(bolus)
-      if bolus[-1] != 0x00:
+      if bolus[-1] == 0x34:
+        print "super super special"
+        bolus.extend(bytearray(stream.read(2)))
+        head_length = head_length + 2
+      if bolus[-1] == 0x64:
+        print "super special"
+        bolus.extend(bytearray(stream.read(6)))
+        head_length = head_length + 6
+      if bolus[-1] != 0x00 and bolus[-1] != 0x34:
         extra = seek_null(stream)
         head_length = head_length + len(extra)
         print "special found"
         print lib.hexdump(extra)
         bolus.extend(extra)
+
 
     head = bolus[:max(head_length, 1)]
 
@@ -259,7 +268,7 @@ def find_dates(stream):
       records[-1].body.extend(bolus)
       continue
     datetime = parse_date(date)
-    if bytearray( [0x00] * total ) == bolus:
+    if bytearray( [0x00] * min(total, 5) ) in bolus:
       nulls = bytearray(eat_nulls(stream))
       records[-1].body.extend(nulls)
       break
@@ -281,7 +290,7 @@ def find_dates(stream):
       body = bytearray(stream.read(body_length))
       bolus.extend(body)
       if Record.seeks_null(opcode, body):
-        print "should eat up to null"
+        print "should eat up to null, second %s" % repr(body[1:])
         if body[1:]:
           if body[-1] != 0x00:
             extra = seek_null(stream)
