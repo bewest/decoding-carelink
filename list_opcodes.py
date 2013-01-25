@@ -77,7 +77,7 @@ class Record(object):
 
     # observed on bewest-pump
     # 0x2e: 24,
-    0x5c: 9,
+    0x5c: 12,
 
     # 0x0c: 22,
     0x0c: 19,
@@ -94,6 +94,7 @@ class Record(object):
   _date = 5
   _body = {
     #0x5b: 15,
+    # 0x5b: 22,
     # 0x5b: 22,
     0x5b: 22,
     0x45: 3,
@@ -137,9 +138,11 @@ class Record(object):
 
   @classmethod
   def seeks_null(cls, opcode, body):
+    if opcode ==  0x5c:
+      return True
     if opcode == 0x5b:
       # print 'XXX: %#04x' % body[13]
-      if body[13] ==  0x5c:
+      if body[13:] and body[13] ==  0x5c:
         return True
     return False
 
@@ -236,6 +239,16 @@ def find_dates(stream):
     if total < head_length:
       bolus.extend(bytearray(stream.read(head_length-total)))
 
+    if Record.seeks_null(opcode, bolus):
+      print "should eat up to null %#04x" %  opcode
+      print lib.hexdump(bolus)
+      if bolus[-1] != 0x00:
+        extra = seek_null(stream)
+        head_length = head_length + len(extra)
+        print "special found"
+        print lib.hexdump(extra)
+        bolus.extend(extra)
+
     head = bolus[:max(head_length, 1)]
 
     bolus.extend(bytearray(stream.read(date_length)))
@@ -250,6 +263,7 @@ def find_dates(stream):
       nulls = bytearray(eat_nulls(stream))
       records[-1].body.extend(nulls)
       break
+
     
     if not Record.is_midnight(head):
       if datetime is None:
@@ -268,13 +282,14 @@ def find_dates(stream):
       bolus.extend(body)
       if Record.seeks_null(opcode, body):
         print "should eat up to null"
-        if body[-1] != 0x00:
-          extra = seek_null(stream)
-          print "found %s extra" % len(extra)
-          body.extend(extra)
-          bolus.extend(extra)
-        epi = bytearray(stream.read(date_length))
-        finished = parse_date(epi)
+        if body[1:]:
+          if body[-1] != 0x00:
+            extra = seek_null(stream)
+            print "found %s extra" % len(extra)
+            body.extend(extra)
+            bolus.extend(extra)
+          epi = bytearray(stream.read(date_length))
+          finished = parse_date(epi)
       record = Record(head, date, body)
       prefix = "#### RECORD %s %s" % (len(records), str(record) )
       print record.pformat(prefix)
