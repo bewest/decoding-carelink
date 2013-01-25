@@ -1,52 +1,52 @@
 WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-9.data
-#### RECORD 0 Rewind 2012-12-05T14:41:41 head[2], body[0] 0x21
+#### RECORD 0 Rewind 2012-12-21T14:41:41 head[2], body[0] 0x21
     op hex (2)
     0000   0x21 0x00                                  !.
     decimal
              33    0
-    datetime (2012-12-05T14:41:41)
+    datetime (2012-12-21T14:41:41)
     0000   0xe9 0x29 0x0e 0x15 0x0c                   .)...
     body (0)
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 1 Prime 2012-12-05T14:43:52 head[5], body[0] 0x03
+#### RECORD 1 Prime 2012-12-21T14:43:52 head[5], body[0] 0x03
     op hex (5)
     0000   0x03 0x00 0x00 0x00 0x2c                   ....,
     decimal
               3    0    0    0   44
-    datetime (2012-12-05T14:43:52)
+    datetime (2012-12-21T14:43:52)
     0000   0xf4 0x2b 0x2e 0x15 0x0c                   .+...
     body (0)
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 2 Prime 2012-12-05T14:44:18 head[5], body[0] 0x03
+#### RECORD 2 Prime 2012-12-21T14:44:18 head[5], body[0] 0x03
     op hex (5)
     0000   0x03 0x00 0x05 0x00 0x05                   .....
     decimal
               3    0    5    0    5
-    datetime (2012-12-05T14:44:18)
+    datetime (2012-12-21T14:44:18)
     0000   0xd2 0x2c 0x0e 0x15 0x0c                   .,...
     body (0)
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 3 CalForBG 2012-12-05T18:18:19 head[2], body[0] 0x0a
+#### RECORD 3 CalForBG 2012-12-21T18:18:19 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0xba                                  ..
     decimal
              10  186
-    datetime (2012-12-05T18:18:19)
+    datetime (2012-12-21T18:18:19)
     0000   0xd3 0x12 0x32 0x15 0x0c                   ..2..
     body (0)
     
 
 --
-#### RECORD 22 BolusWizard 2012-12-06T18:42:27 head[2], body[25] 0x5b
+#### RECORD 22 BolusWizard 2012-12-22T18:42:27 head[2], body[25] 0x5b
     op hex (2)
     0000   0x5b 0x9b                                  [.
     decimal
              91  155
-    datetime (2012-12-06T18:42:27)
+    datetime (2012-12-22T18:42:27)
     0000   0xdb 0x2a 0x12 0x16 0x0c                   .*...
     body (25)
     hex
@@ -61,12 +61,12 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 23 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 23 ResultTotals MIDNIGHT!?: (2012, 0, 22, 4, 6, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 22, 4, 6, 0))
     0000   0x00 0x06 0x04 0xd6 0x0c                   .....
     body (44)
     hex
@@ -83,28 +83,28 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               1  216   72    0  180   28    0    0
               0    5    3    0    2    0   12    0
             232    0    0    0
-    
+    DAY BITS: [1, 1, 0]
 
-#### RECORD 24 PumpSuspend 2012-12-07T08:24:49 head[2], body[0] 0x1e
+#### RECORD 24 PumpSuspend 2012-12-23T08:24:49 head[2], body[0] 0x1e
     op hex (2)
     0000   0x1e 0x00                                  ..
     decimal
              30    0
-    datetime (2012-12-07T08:24:49)
+    datetime (2012-12-23T08:24:49)
     0000   0xf1 0x18 0x08 0x17 0x0c                   .....
     body (0)
     
 
-#### RECORD 25 PumpResume 2012-12-07T08:39:30 head[2], body[0] 0x1f
+#### RECORD 25 PumpResume 2012-12-23T08:39:30 head[2], body[0] 0x1f
     op hex (2)
     0000   0x1f 0x00                                  ..
     decimal
              31    0
-    datetime (2012-12-07T08:39:30)
+    datetime (2012-12-23T08:39:30)
     0000   0xde 0x27 0x08 0x17 0x0c                   .'...
 --
              91  132
-    datetime (2012-12-07T20:08:53)
+    datetime (2012-12-23T20:08:53)
     0000   0xf5 0x08 0x14 0x17 0x0c                   .....
     body (43)
     hex
@@ -123,12 +123,12 @@ WARNING: No route found for IPv6 destination :: (no default route?)
              45   45    0
     
 
-#### RECORD 39 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 39 ResultTotals MIDNIGHT!?: (2012, 0, 23, 14, 6, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 23, 14, 6, 0))
     0000   0x00 0x06 0x0e 0xd7 0x0c                   .....
     body (44)
     hex
@@ -145,24 +145,24 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               2   58   87    0   82   13    0    0
               0    4    2    1    1    0   12    0
             232    0    0    0
-    
+    DAY BITS: [1, 1, 0]
 
-#### RECORD 40 CalForBG 2012-12-08T00:24:01 head[2], body[0] 0x0a
+#### RECORD 40 CalForBG 2012-12-24T00:24:01 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x44                                  .D
     decimal
              10   68
-    datetime (2012-12-08T00:24:01)
+    datetime (2012-12-24T00:24:01)
     0000   0xc1 0x18 0x20 0x18 0x0c                   .. ..
     body (0)
     
 
-#### RECORD 41 CalForBG 2012-12-08T10:07:02 head[2], body[0] 0x0a
+#### RECORD 41 CalForBG 2012-12-24T10:07:02 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x55                                  .U
     decimal
              10   85
-    datetime (2012-12-08T10:07:02)
+    datetime (2012-12-24T10:07:02)
     0000   0xc2 0x07 0x2a 0x18 0x0c                   ..*..
 --
     0008   0x00 0x00 0x00 0x0c 0x7d 0x5c 0x0b 0x8c    ....}\..
@@ -175,22 +175,22 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               1   12   12    0
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 51 CalForBG 2012-12-08T22:21:41 head[2], body[0] 0x0a
+#### RECORD 51 CalForBG 2012-12-24T22:21:41 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x4f                                  .O
     decimal
              10   79
-    datetime (2012-12-08T22:21:41)
+    datetime (2012-12-24T22:21:41)
     0000   0xe9 0x15 0x36 0x18 0x0c                   ..6..
     body (0)
     
 
-#### RECORD 52 ResultTotals MIDNIGHT!? head[2], body[28] 0x07
+#### RECORD 52 ResultTotals MIDNIGHT!?: (2012, 0, 24, 2, 5, 0) head[2], body[28] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 24, 2, 5, 0))
     0000   0x00 0x05 0x82 0xd8 0x0c                   .....
     body (28)
     hex
@@ -203,6 +203,6 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0  172  246
-    
+    DAY BITS: [1, 1, 0]
 
 `end logs/ReadHistoryData-page-9.data: 53 records`

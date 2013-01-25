@@ -1,11 +1,11 @@
 WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-7.data
-#### RECORD 0 BolusWizard 2012-12-12T07:48:24 head[2], body[22] 0x5b
+#### RECORD 0 BolusWizard 2012-12-28T07:48:24 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0xa7                                  [.
     decimal
              91  167
-    datetime (2012-12-12T07:48:24)
+    datetime (2012-12-28T07:48:24)
     0000   0xd8 0x30 0x07 0x1c 0x0c                   .0...
     body (22)
     hex
@@ -18,35 +18,35 @@ WARNING: No route found for IPv6 destination :: (no default route?)
              49    7   28   12    1   55
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 1 Record 2012-12-12T07:48:24 head[2], body[0] 0x37
+#### RECORD 1 Record 2012-12-28T07:48:24 head[2], body[0] 0x37
     op hex (2)
     0000   0x37 0x00                                  7.
     decimal
              55    0
-    datetime (2012-12-12T07:48:24)
+    datetime (2012-12-28T07:48:24)
     0000   0xd8 0x30 0x47 0x1c 0x0c                   .0G..
     body (0)
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 2 CalForBG 2012-12-12T09:43:32 head[2], body[0] 0x0a
+#### RECORD 2 CalForBG 2012-12-28T09:43:32 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x9d                                  ..
     decimal
              10  157
-    datetime (2012-12-12T09:43:32)
+    datetime (2012-12-28T09:43:32)
     0000   0xe0 0x2b 0x29 0x1c 0x0c                   .+)..
     body (0)
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 3 CalForBG 2012-12-12T12:52:29 head[2], body[0] 0x0a
+#### RECORD 3 CalForBG 2012-12-28T12:52:29 head[2], body[0] 0x0a
     op hex (2)
 --
-#### RECORD 16 BolusWizard 2012-12-12T19:31:07 head[2], body[31] 0x5b
+#### RECORD 16 BolusWizard 2012-12-28T19:31:07 head[2], body[31] 0x5b
     op hex (2)
     0000   0x5b 0x00                                  [.
     decimal
              91    0
-    datetime (2012-12-12T19:31:07)
+    datetime (2012-12-28T19:31:07)
     0000   0xc7 0x1f 0x13 0x1c 0x0c                   .....
     body (31)
     hex
@@ -61,12 +61,12 @@ WARNING: No route found for IPv6 destination :: (no default route?)
             128  111   20    1   18   18    0
     
 
-#### RECORD 17 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 17 ResultTotals MIDNIGHT!?: (2012, 0, 28, 12, 6, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 28, 12, 6, 0))
     0000   0x00 0x06 0x6c 0xdc 0x0c                   ..l..
     body (44)
     hex
@@ -83,21 +83,21 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               2   48   75    0  184   25    0    0
               0    6    2    2    2    0   12    0
             232    0    0    0
-    
+    DAY BITS: [1, 1, 0]
 
-#### RECORD 18 CalForBG 2012-12-13T01:45:15 head[2], body[0] 0x0a
+#### RECORD 18 CalForBG 2012-12-29T01:45:15 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x6c                                  .l
     decimal
              10  108
-    datetime (2012-12-13T01:45:15)
+    datetime (2012-12-29T01:45:15)
     0000   0xcf 0x2d 0x21 0x1d 0x0c                   .-!..
     body (0)
     HOUR BITS: [0, 0, 1]
 
 should eat up to null
 found 6 extra
-#### RECORD 19 BolusWizard 2012-12-13T01:45:24 head[2], body[28] 0x5b
+#### RECORD 19 BolusWizard 2012-12-29T01:45:24 head[2], body[28] 0x5b
     op hex (2)
     0000   0x5b 0x6c                                  [l
     decimal
@@ -106,7 +106,7 @@ found 6 extra
     0000   0x5b 0x00                                  [.
     decimal
              91    0
-    datetime (2012-12-13T21:23:46)
+    datetime (2012-12-29T21:23:46)
     0000   0xee 0x17 0x15 0x1d 0x0c                   .....
     body (34)
     hex
@@ -123,12 +123,12 @@ found 6 extra
              15    0
     
 
-#### RECORD 32 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 32 ResultTotals MIDNIGHT!?: (2012, 0, 29, 8, 5, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 29, 8, 5, 0))
     0000   0x00 0x05 0xe8 0xdd 0x0c                   .....
     body (44)
     hex
@@ -145,24 +145,24 @@ found 6 extra
               2   52   88    0   76   12    0    0
               0    7    4    2    1    0   12    0
             232    0    0    0
-    
+    DAY BITS: [1, 1, 0]
 
-#### RECORD 33 CalForBG 2012-12-14T11:31:25 head[2], body[0] 0x0a
+#### RECORD 33 CalForBG 2012-12-30T11:31:25 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0xbb                                  ..
     decimal
              10  187
-    datetime (2012-12-14T11:31:25)
+    datetime (2012-12-30T11:31:25)
     0000   0xd9 0x1f 0x2b 0x1e 0x0c                   ..+..
     body (0)
     
 
-#### RECORD 34 BolusWizard 2012-12-14T11:32:00 head[2], body[22] 0x5b
+#### RECORD 34 BolusWizard 2012-12-30T11:32:00 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0xbb                                  [.
     decimal
              91  187
-    datetime (2012-12-14T11:32:00)
+    datetime (2012-12-30T11:32:00)
     0000   0xc0 0x20 0x0b 0x1e 0x0c                   . ...
 --
     0000   0xf6 0x2c 0x15 0x1e 0x0c                   .,...

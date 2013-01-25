@@ -61,12 +61,12 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [1, 1, 1]
 
-#### RECORD 15 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 15 ResultTotals MIDNIGHT!?: (2012, 0, 9, 24, 5, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 9, 24, 5, 0))
     0000   0x00 0x05 0xb8 0xa9 0x8c                   .....
     body (44)
     hex
@@ -83,7 +83,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               1  216   84    0   92   16    0    0
               0    5    3    1    1    0   12    0
             232    0    0    0
-    YEAR BITS: [1, 0, 0, 0]
+    DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 16 CalForBG 2012-11-10T00:50:24 head[2], body[0] 0x0a
     op hex (2)
@@ -123,12 +123,12 @@ found 18 extra
               0
     HOUR BITS: [1, 1, 1]
 
-#### RECORD 29 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 29 ResultTotals MIDNIGHT!?: (2012, 0, 10, 0, 6, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 10, 0, 6, 0))
     0000   0x00 0x06 0x60 0xaa 0x8c                   ..`..
     body (44)
     hex
@@ -145,7 +145,7 @@ found 18 extra
               1  196   61    1   28   39    0    0
               0    5    3    2    0    0   12    0
             232    0    0    0
-    YEAR BITS: [1, 0, 0, 0]
+    DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 30 CalForBG 2012-11-11T01:59:01 head[2], body[0] 0x0a
     op hex (2)
@@ -185,12 +185,12 @@ should eat up to null
             117    4    1   22   22    0
     HOUR BITS: [1, 1, 0]
 
-#### RECORD 45 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 45 ResultTotals MIDNIGHT!?: (2012, 0, 11, 26, 6, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 11, 26, 6, 0))
     0000   0x00 0x06 0x3a 0xab 0x8c                   ..:..
     body (44)
     hex
@@ -207,7 +207,7 @@ should eat up to null
               1   80   47    1  120   53    0    0
               0    7    3    3    1    0   12    0
             232    0    0    0
-    YEAR BITS: [1, 0, 0, 0]
+    DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 46 CalForBG 2012-11-12T00:55:31 head[2], body[0] 0x0a
     op hex (2)

@@ -141,12 +141,12 @@ found 9 extra
              42   59   20    1   23   23    0
     HOUR BITS: [1, 0, 1]
 
-#### RECORD 9 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 9 ResultTotals MIDNIGHT!?: (2012, 0, 8, 28, 5, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 8, 28, 5, 0))
     0000   0x00 0x05 0x9c 0xa8 0x0c                   .....
     body (44)
     hex
@@ -163,7 +163,7 @@ found 9 extra
               1  156   75    0  136   25    0    0
               0    4    3    1    0    0   12    0
             232    0    0    0
-    
+    DAY BITS: [1, 0, 1]
 
 #### RECORD 10 CalForBG 2012-10-09T00:59:34 head[2], body[0] 0x0a
     op hex (2)
@@ -389,12 +389,12 @@ found 19 extra
               0
     HOUR BITS: [1, 0, 0]
 
-#### RECORD 24 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 24 ResultTotals MIDNIGHT!?: (2012, 0, 9, 18, 5, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 9, 18, 5, 0))
     0000   0x00 0x05 0x72 0xa9 0x0c                   ..r..
     body (44)
     hex
@@ -411,7 +411,7 @@ found 19 extra
               1  180   86    0   72   14    0    0
               0    7    5    2    0    0   12    0
             232    0    0    0
-    
+    DAY BITS: [1, 0, 1]
 
 #### RECORD 25 CalForBG 2012-10-10T01:48:14 head[2], body[0] 0x0a
     op hex (2)
@@ -595,12 +595,12 @@ found 3 extra
     body (0)
     HOUR BITS: [1, 0, 0]
 
-#### RECORD 39 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 39 ResultTotals MIDNIGHT!?: (2012, 0, 10, 18, 4, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 10, 18, 4, 0))
     0000   0x00 0x04 0xd2 0xaa 0x0c                   .....
     body (44)
     hex
@@ -617,7 +617,7 @@ found 3 extra
               0  160   45    0  192   55    0    0
               0    4    2    2    0    0   12    0
             232    0    0    0
-    
+    DAY BITS: [1, 0, 1]
 
 #### RECORD 40 PumpSuspend 2012-10-11T10:51:33 head[2], body[0] 0x1e
     op hex (2)

@@ -61,12 +61,12 @@ found 3 extra
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 19 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 19 ResultTotals MIDNIGHT!?: (2013, 0, 12, 0, 6, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2013, 0, 12, 0, 6, 0))
     0000   0x00 0x06 0x80 0x0c 0x8d                   .....
     body (44)
     hex
@@ -123,12 +123,12 @@ should eat up to null
               0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 38 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 38 ResultTotals MIDNIGHT!?: (2013, 0, 13, 0, 6, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2013, 0, 13, 0, 6, 0))
     0000   0x00 0x06 0x40 0x0d 0x8d                   ..@..
     body (44)
     hex

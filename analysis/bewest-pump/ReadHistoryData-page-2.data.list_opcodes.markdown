@@ -418,7 +418,7 @@ found 27 extra
     datetime (2013-01-14T11:27:29)
     0000   0x1d 0x5b 0x4b 0x4e 0x0d                   .[KN.
     body (0)
-    HOUR BITS: [0, 1, 0]
+    HOUR BITS: [0, 1, 0] DAY BITS: [0, 1, 0]
 
 #### RECORD 28 Record 2013-01-14T15:47:00 head[19], body[0] 0x0c
     op hex (19)

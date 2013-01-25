@@ -1,16 +1,16 @@
 WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-12.data
-#### RECORD 0 Record 2010-12-10T01:20:30 head[9], body[0] 0x5c
+#### RECORD 0 Record 2010-12-26T01:20:30 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x0b 0x14 0x08 0x04 0x06 0xd4 0x14    \.......
     0008   0x92                                       .
     decimal
              92   11   20    8    4    6  212   20
             146
-    datetime (2010-12-10T01:20:30)
+    datetime (2010-12-26T01:20:30)
     0000   0xde 0x14 0x01 0x3a 0x3a                   ...::
     body (0)
-    YEAR BITS: [0, 0, 1, 1]
+    DAY BITS: [0, 0, 1] YEAR BITS: [0, 0, 1, 1]
 
 #### RECORD 1 Record 2014-01-12T10:03:52 head[2], body[0] 0x00
     op hex (2)

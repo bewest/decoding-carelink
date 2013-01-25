@@ -42,6 +42,7 @@ class Record(object):
     0x16: 'TempBasal[eof]',
     0x17: 'ChangeTime',
     0x18: 'NewTimeSet',
+    0x19: 'LowBattery',
     0x1a: 'Battery',
     0x1e: 'PumpSuspend',
     0x1f: 'PumpResume',
@@ -166,7 +167,7 @@ class Record(object):
       result = self.datetime.isoformat( )
     else:
       if self.is_midnight(self.head):
-        result = "MIDNIGHT!?"
+        result = "MIDNIGHT!?: {}".format(history.unmask_date(self.date))
     return result
     
   def pformat(self, prefix=''):
@@ -183,8 +184,11 @@ class Record(object):
     extra = [ ]
     hour_bits = history.extra_hour_bits(self.date[1])
     year_bits = history.extra_year_bits(self.date[4])
+    day_bits  = history.extra_hour_bits(self.date[3])
     if 1 in hour_bits:
       extra.append("HOUR BITS: {}".format(str(hour_bits)))
+    if 1 in day_bits:
+      extra.append("DAY BITS: {}".format(str(day_bits)))
     if 1 in year_bits:
       extra.append("YEAR BITS: {}".format(str(year_bits)))
     extra = '    ' + ' '.join(extra)

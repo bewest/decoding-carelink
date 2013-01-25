@@ -231,12 +231,12 @@ found 6 extra
               1   21   21    0
     HOUR BITS: [1, 1, 1]
 
-#### RECORD 18 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 18 ResultTotals MIDNIGHT!?: (2012, 0, 5, 14, 5, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 5, 14, 5, 0))
     0000   0x00 0x05 0x2e 0xa5 0x8c                   .....
     body (44)
     hex
@@ -253,7 +253,7 @@ found 6 extra
               1   40   74    0  104   26    0    0
               0    4    2    1    1    0   12    0
             232    0    0    0
-    YEAR BITS: [1, 0, 0, 0]
+    DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 19 CalForBG 2012-11-06T01:05:40 head[2], body[0] 0x0a
     op hex (2)
@@ -404,12 +404,12 @@ found 3 extra
               0
     HOUR BITS: [1, 1, 0]
 
-#### RECORD 31 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 31 ResultTotals MIDNIGHT!?: (2012, 0, 6, 0, 4, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 6, 0, 4, 0))
     0000   0x00 0x04 0xa0 0xa6 0x8c                   .....
     body (44)
     hex
@@ -426,7 +426,7 @@ found 3 extra
               0  192   66    0  100   34    0    0
               0    3    2    1    0    0   12    0
             232    0    0    0
-    YEAR BITS: [1, 0, 0, 0]
+    DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 32 CalForBG 2012-11-07T06:45:31 head[2], body[0] 0x0a
     op hex (2)
@@ -620,12 +620,12 @@ found 9 extra
              34   91   20    1    4    4    0
     HOUR BITS: [1, 1, 1]
 
-#### RECORD 46 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 46 ResultTotals MIDNIGHT!?: (2012, 0, 7, 18, 4, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 7, 18, 4, 0))
     0000   0x00 0x04 0x72 0xa7 0x8c                   ..r..
     body (44)
     hex
@@ -642,7 +642,7 @@ found 9 extra
               0  188   76    0   60   24    0    0
               0    5    3    2    0    0   12    0
             232    0    0    0
-    YEAR BITS: [1, 0, 0, 0]
+    DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 47 PumpSuspend 2012-11-08T10:27:56 head[2], body[0] 0x1e
     op hex (2)
@@ -790,12 +790,12 @@ should eat up to null
     body (0)
     HOUR BITS: [1, 1, 0]
 
-#### RECORD 59 ResultTotals MIDNIGHT!? head[2], body[12] 0x07
+#### RECORD 59 ResultTotals MIDNIGHT!?: (2012, 0, 8, 20, 5, 0) head[2], body[12] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 8, 20, 5, 0))
     0000   0x00 0x05 0x34 0xa8 0x8c                   ..4..
     body (12)
     hex
@@ -804,6 +804,6 @@ should eat up to null
     decimal
               0    0    0    0    0    0    0    0
               0    0    2   14
-    YEAR BITS: [1, 0, 0, 0]
+    DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
 
 `end logs/ReadHistoryData-page-21.data: 60 records`

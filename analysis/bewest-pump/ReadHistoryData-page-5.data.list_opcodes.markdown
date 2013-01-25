@@ -260,12 +260,12 @@ should eat up to null
             176   20    1   38   38    0
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 20 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 20 ResultTotals MIDNIGHT!?: (2013, 0, 3, 12, 6, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2013, 0, 3, 12, 6, 0))
     0000   0x00 0x06 0xcc 0x03 0x8d                   .....
     body (44)
     hex
@@ -627,12 +627,12 @@ found 3 extra
               0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 44 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 44 ResultTotals MIDNIGHT!?: (2013, 0, 5, 4, 6, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2013, 0, 5, 4, 6, 0))
     0000   0x00 0x06 0xc4 0x05 0x8d                   .....
     body (44)
     hex
@@ -699,12 +699,12 @@ found 3 extra
               0   16  111   83    6   13
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 49 ResultTotals MIDNIGHT!? head[2], body[20] 0x07
+#### RECORD 49 ResultTotals MIDNIGHT!?: (2013, 0, 6, 12, 4, 0) head[2], body[20] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2013, 0, 6, 12, 4, 0))
     0000   0x00 0x04 0x0c 0x06 0x8d                   .....
     body (20)
     hex

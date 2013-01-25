@@ -200,12 +200,12 @@ found 6 extra
     body (0)
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 14 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 14 ResultTotals MIDNIGHT!?: (2013, 0, 7, 6, 5, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2013, 0, 7, 6, 5, 0))
     0000   0x00 0x05 0x26 0x07 0x8d                   ..&..
     body (44)
     hex
@@ -416,12 +416,12 @@ found 3 extra
               0
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 30 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 30 ResultTotals MIDNIGHT!?: (2013, 0, 8, 20, 5, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2013, 0, 8, 20, 5, 0))
     0000   0x00 0x05 0x74 0x08 0x8d                   ..t..
     body (44)
     hex
@@ -557,12 +557,12 @@ should eat up to null
             109    4    1   21   21    0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 41 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 41 ResultTotals MIDNIGHT!?: (2013, 0, 9, 6, 4, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2013, 0, 9, 6, 4, 0))
     0000   0x00 0x04 0x46 0x09 0x8d                   ..F..
     body (44)
     hex
@@ -693,12 +693,12 @@ found 6 extra
               1   15   15    0
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 50 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 50 ResultTotals MIDNIGHT!?: (2013, 0, 10, 14, 5, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2013, 0, 10, 14, 5, 0))
     0000   0x00 0x05 0x2e 0x0a 0x8d                   .....
     body (44)
     hex

@@ -1,13 +1,13 @@
 WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-35.data
-#### RECORD 0 Record 2004-12-05T20:04:35 head[9], body[0] 0x5c
+#### RECORD 0 Record 2004-12-21T20:04:35 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x0e 0x0c 0x7f 0x04 0x18 0x9d 0x04    \.......
     0008   0xb4                                       .
     decimal
              92   14   12  127    4   24  157    4
             180
-    datetime (2004-12-05T20:04:35)
+    datetime (2004-12-21T20:04:35)
     0000   0xe3 0x04 0x14 0x15 0x14                   .....
     body (0)
     YEAR BITS: [0, 0, 0, 1]
@@ -22,12 +22,12 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 2 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 2 ResultTotals MIDNIGHT!?: (2012, 0, 13, 22, 4, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 13, 22, 4, 0))
     0000   0x00 0x04 0x96 0x8d 0x8c                   .....
     body (44)
     hex
@@ -44,7 +44,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               1   64   94    0   20    6    0    0
               0    5    4    1    0    0   12    0
             232    0    0    0
-    YEAR BITS: [1, 0, 0, 0]
+    DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 3 PumpSuspend 2012-09-14T11:21:30 head[2], body[0] 0x1e
     op hex (2)
@@ -84,12 +84,12 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               1   20   20    0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 18 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 18 ResultTotals MIDNIGHT!?: (2012, 0, 14, 0, 4, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 14, 0, 4, 0))
     0000   0x00 0x04 0xe0 0x8e 0x8c                   .....
     body (44)
     hex
@@ -106,7 +106,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               1  108  100    0    0    0    0    0
               0    5    5    0    0    0   12    0
             232    0    0    0
-    YEAR BITS: [1, 0, 0, 0]
+    DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 19 Battery 2012-09-15T10:08:35 head[2], body[0] 0x1a
     op hex (2)
@@ -146,12 +146,12 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 30 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 30 ResultTotals MIDNIGHT!?: (2012, 0, 15, 6, 4, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 15, 6, 4, 0))
     0000   0x00 0x04 0x66 0x8f 0x8c                   ..f..
     body (44)
     hex
@@ -168,22 +168,106 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               1   16  100    0    0    0    0    0
               0    2    2    0    0    0   12    0
             232    0    0    0
-    YEAR BITS: [1, 0, 0, 0]
+    DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
-#### MISSING DATETIME, reading more to debug
-##### DEBUG HEX
-    0000   0x1e 0x00 0xbb 0x4c 0x08 0x10 0x0c 0x1f    ...L....
-    0008   0x00 0xba 0x60 0x08 0x10 0x0c 0x0a 0xaa    ..`.....
-    0010   0xab 0x60 0x2a 0x10 0x0c 0x5b 0xaa 0xaf    .`*..[..
-    0018   0x60 0x0a 0x10 0x0c 0x00 0x50 0x0d         `....P.
-##### DEBUG DECIMAL
-             30    0  187   76    8   16   12   31
-              0  186   96    8   16   12   10  170
-            171   96   42   16   12   91  170  175
-             96   10   16   12    0   80   13
-XXX:???:XXX
-Traceback (most recent call last):
-  File "list_opcodes.py", line 329, in <module>
-    main( )
-  File "list_opcodes.py", line 313, in main
-    records = find_dates(stream)
+#### RECORD 31 PumpSuspend 2012-09-16T08:12:59 head[2], body[0] 0x1e
+    op hex (2)
+    0000   0x1e 0x00                                  ..
+    decimal
+             30    0
+    datetime (2012-09-16T08:12:59)
+    0000   0xbb 0x4c 0x08 0x10 0x0c                   .L...
+    body (0)
+    HOUR BITS: [0, 1, 0]
+
+#### RECORD 32 PumpResume 2012-09-16T08:32:58 head[2], body[0] 0x1f
+    op hex (2)
+    0000   0x1f 0x00                                  ..
+    decimal
+             31    0
+    datetime (2012-09-16T08:32:58)
+    0000   0xba 0x60 0x08 0x10 0x0c                   .`...
+--
+    HOUR BITS: [0, 1, 0]
+
+#### RECORD 40 BolusWizard 2012-09-16T22:16:58 head[2], body[22] 0x5b
+    op hex (2)
+    0000   0x5b 0x84                                  [.
+    decimal
+             91  132
+    datetime (2012-09-16T22:16:58)
+    0000   0xba 0x50 0x16 0x10 0x0c                   .P...
+    body (22)
+    hex
+    0000   0x41 0x50 0x0d 0x2d 0x6a 0x01 0x32 0x00    AP.-j.2.
+    0008   0x00 0x00 0x00 0x33 0x7d 0x01 0x33 0x33    ...3}.33
+    0010   0x00 0xba 0x50 0x56 0x10 0x0c              ..PV..
+    decimal
+             65   80   13   45  106    1   50    0
+              0    0    0   51  125    1   51   51
+              0  186   80   86   16   12
+    HOUR BITS: [0, 1, 0]
+
+#### RECORD 41 ResultTotals MIDNIGHT!?: (2012, 0, 16, 0, 5, 0) head[2], body[44] 0x07
+    op hex (2)
+    0000   0x07 0x00                                  ..
+    decimal
+              7    0
+    datetime (MIDNIGHT!?: (2012, 0, 16, 0, 5, 0))
+    0000   0x00 0x05 0x20 0x90 0x8c                   .. ..
+    body (44)
+    hex
+    0000   0x6d 0x90 0x8c 0x05 0x00 0x89 0x6c 0xaa    m.....l.
+    0008   0x03 0x00 0x00 0x05 0x20 0x03 0x78 0x44    .... .xD
+    0010   0x01 0xa8 0x20 0x00 0x7e 0x01 0xa8 0x20    .. .~.. 
+    0018   0x01 0x80 0x5b 0x00 0x28 0x09 0x00 0x00    ..[.(...
+    0020   0x00 0x05 0x03 0x01 0x01 0x00 0x0c 0x00    ........
+    0028   0xe8 0x00 0x00 0x00                        ....
+    decimal
+            109  144  140    5    0  137  108  170
+              3    0    0    5   32    3  120   68
+              1  168   32    0  126    1  168   32
+              1  128   91    0   40    9    0    0
+              0    5    3    1    1    0   12    0
+            232    0    0    0
+    DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
+
+#### RECORD 42 CalForBG 2012-09-17T00:03:52 head[2], body[0] 0x0a
+    op hex (2)
+    0000   0x0a 0x8f                                  ..
+    decimal
+             10  143
+    datetime (2012-09-17T00:03:52)
+    0000   0xb4 0x43 0x20 0x11 0x0c                   .C ..
+    body (0)
+    HOUR BITS: [0, 1, 0]
+
+should eat up to null
+#### RECORD 43 BolusWizard 2012-09-17T00:04:45 head[2], body[22] 0x5b
+    op hex (2)
+    0000   0x5b 0x8f                                  [.
+    decimal
+             91  143
+    datetime (2012-09-17T00:04:45)
+--
+    0010   0x8a 0x04 0x12 0xb2 0x04 0x62 0xbc 0x04    .....b..
+    0018   0x01 0x06 0x06 0x00                        ....
+    decimal
+              9   80   13   45  106    0    6    0
+              0    0    0    6  125   92   11   92
+            138    4   18  178    4   98  188    4
+              1    6    6    0
+    HOUR BITS: [0, 1, 1]
+
+#### RECORD 54 CalForBG 2012-09-17T18:55:56 head[2], body[0] 0x0a
+    op hex (2)
+    0000   0x0a 0xbc                                  ..
+    decimal
+             10  188
+    datetime (2012-09-17T18:55:56)
+    0000   0xb8 0x77 0x32 0x11 0x0c                   .w2..
+    body (0)
+    HOUR BITS: [0, 1, 1]
+
+found 8 nulls
+`end logs/ReadHistoryData-page-35.data: 55 records`

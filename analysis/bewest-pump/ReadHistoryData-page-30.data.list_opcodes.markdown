@@ -10,12 +10,12 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [1, 0, 1]
 
-#### RECORD 1 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 1 ResultTotals MIDNIGHT!?: (2012, 0, 1, 2, 5, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 1, 2, 5, 0))
     0000   0x00 0x05 0x62 0xa1 0x0c                   ..b..
     body (44)
     hex
@@ -32,7 +32,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               1  140   79    0  104   21    0    0
               0    7    5    2    0    0   12    0
             232    0    0    0
-    
+    DAY BITS: [1, 0, 1]
 
 #### RECORD 2 CalForBG 2012-10-02T07:30:41 head[2], body[0] 0x0a
     op hex (2)
@@ -153,12 +153,12 @@ found 3 extra
               0
     HOUR BITS: [1, 0, 1]
 
-#### RECORD 10 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 10 ResultTotals MIDNIGHT!?: (2012, 0, 2, 12, 5, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 2, 12, 5, 0))
     0000   0x00 0x05 0xac 0xa2 0x0c                   .....
     body (44)
     hex
@@ -175,7 +175,7 @@ found 3 extra
               1  108   63    0  212   37    0    0
               0    4    2    1    1    0   12    0
             232    0    0    0
-    
+    DAY BITS: [1, 0, 1]
 
 #### RECORD 11 PumpSuspend 2012-10-03T21:05:18 head[2], body[0] 0x1e
     op hex (2)
@@ -225,12 +225,12 @@ found 3 extra
               0  155  172   85    3   12
     HOUR BITS: [1, 0, 1]
 
-#### RECORD 15 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 15 ResultTotals MIDNIGHT!?: (2012, 0, 3, 16, 3, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 3, 16, 3, 0))
     0000   0x00 0x03 0xb0 0xa3 0x0c                   .....
     body (44)
     hex
@@ -247,7 +247,7 @@ found 3 extra
               0   68  100    0    0    0    0    0
               0    1    1    0    0    0   12    0
             232    0    0    0
-    
+    DAY BITS: [1, 0, 1]
 
 #### RECORD 16 PumpSuspend 2012-10-04T10:38:38 head[2], body[0] 0x1e
     op hex (2)
@@ -306,12 +306,12 @@ should eat up to null
              69    4    1   36   36    0
     HOUR BITS: [1, 0, 1]
 
-#### RECORD 20 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 20 ResultTotals MIDNIGHT!?: (2012, 0, 4, 4, 4, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 4, 4, 4, 0))
     0000   0x00 0x04 0x44 0xa4 0x0c                   ..D..
     body (44)
     hex
@@ -328,7 +328,7 @@ should eat up to null
               0  204  100    0    0    0    0    0
               0    2    2    0    0    0   12    0
             232    0    0    0
-    
+    DAY BITS: [1, 0, 1]
 
 #### RECORD 21 LowReservoir 2012-10-05T00:18:45 head[2], body[0] 0x34
     op hex (2)
@@ -469,12 +469,12 @@ found 3 extra
               0
     HOUR BITS: [1, 0, 1]
 
-#### RECORD 32 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 32 ResultTotals MIDNIGHT!?: (2012, 0, 5, 12, 4, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 5, 12, 4, 0))
     0000   0x00 0x04 0xec 0xa5 0x0c                   .....
     body (44)
     hex
@@ -491,7 +491,7 @@ found 3 extra
               1    0   69    0  116   31    0    0
               0    3    2    1    0    0   12    0
             232    0    0    0
-    
+    DAY BITS: [1, 0, 1]
 
 #### RECORD 33 PumpSuspend 2012-10-06T21:24:08 head[2], body[0] 0x1e
     op hex (2)
@@ -541,12 +541,12 @@ found 3 extra
     body (0)
     HOUR BITS: [1, 0, 1]
 
-#### RECORD 37 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 37 ResultTotals MIDNIGHT!?: (2012, 0, 6, 28, 4, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 6, 28, 4, 0))
     0000   0x00 0x04 0x1c 0xa6 0x0c                   .....
     body (44)
     hex
@@ -563,7 +563,7 @@ found 3 extra
               0  164  100    0    0    0    0    0
               0    1    1    0    0    0   12    0
             232    0    0    0
-    
+    DAY BITS: [1, 0, 1]
 
 #### RECORD 38 CalForBG 2012-10-07T08:04:00 head[2], body[0] 0x0a
     op hex (2)
@@ -712,12 +712,12 @@ found 3 extra
     body (0)
     HOUR BITS: [1, 0, 0]
 
-#### RECORD 49 ResultTotals MIDNIGHT!? head[2], body[18] 0x07
+#### RECORD 49 ResultTotals MIDNIGHT!?: (2012, 0, 7, 18, 4, 0) head[2], body[18] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 7, 18, 4, 0))
     0000   0x00 0x04 0x52 0xa7 0x0c                   ..R..
     body (18)
     hex
@@ -728,6 +728,6 @@ found 3 extra
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
             249  196
-    
+    DAY BITS: [1, 0, 1]
 
 `end logs/ReadHistoryData-page-30.data: 50 records`

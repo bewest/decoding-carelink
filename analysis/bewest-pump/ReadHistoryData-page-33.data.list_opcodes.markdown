@@ -1,11 +1,11 @@
 WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-33.data
-#### RECORD 0 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 0 ResultTotals MIDNIGHT!?: (2012, 0, 20, 8, 5, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 20, 8, 5, 0))
     0000   0x00 0x05 0x08 0x94 0x8c                   .....
     body (44)
     hex
@@ -22,24 +22,24 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0  228   57    0  170   43    0    0
               0    7    3    4    0    0   12    0
             232    0    0    0
-    YEAR BITS: [1, 0, 0, 0]
+    DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
-#### RECORD 1 CalForBG 2012-09-05T17:03:36 head[2], body[0] 0x0a
+#### RECORD 1 CalForBG 2012-09-21T17:03:36 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x46                                  .F
     decimal
              10   70
-    datetime (2012-09-05T17:03:36)
+    datetime (2012-09-21T17:03:36)
     0000   0xa4 0x43 0x31 0x15 0x0c                   .C1..
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 2 BolusWizard 2012-09-05T17:04:04 head[2], body[22] 0x5b
+#### RECORD 2 BolusWizard 2012-09-21T17:04:04 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0x46                                  [F
     decimal
              91   70
-    datetime (2012-09-05T17:04:04)
+    datetime (2012-09-21T17:04:04)
     0000   0x84 0x44 0x11 0x15 0x0c                   .D...
     body (22)
     hex
@@ -52,43 +52,43 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0  132   68   81   21   12
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 3 LowReservoir 2012-09-05T18:22:06 head[2], body[0] 0x34
+#### RECORD 3 LowReservoir 2012-09-21T18:22:06 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal
              52  200
-    datetime (2012-09-05T18:22:06)
+    datetime (2012-09-21T18:22:06)
     0000   0x86 0x56 0x12 0x15 0x0c                   .V...
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 4 CalForBG 2012-09-05T18:36:07 head[2], body[0] 0x0a
+#### RECORD 4 CalForBG 2012-09-21T18:36:07 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x7e                                  .~
     decimal
              10  126
-    datetime (2012-09-05T18:36:07)
+    datetime (2012-09-21T18:36:07)
     0000   0x87 0x64 0x32 0x15 0x0c                   .d2..
     body (0)
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 5 CalForBG 2012-09-05T18:45:22 head[2], body[0] 0x0a
+#### RECORD 5 CalForBG 2012-09-21T18:45:22 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x79                                  .y
     decimal
              10  121
-    datetime (2012-09-05T18:45:22)
+    datetime (2012-09-21T18:45:22)
     0000   0x96 0x6d 0x32 0x15 0x0c                   .m2..
     body (0)
     HOUR BITS: [0, 1, 1]
 
 should eat up to null
-#### RECORD 6 BolusWizard 2012-09-05T18:45:30 head[2], body[22] 0x5b
+#### RECORD 6 BolusWizard 2012-09-21T18:45:30 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0x79                                  [y
     decimal
              91  121
-    datetime (2012-09-05T18:45:30)
+    datetime (2012-09-21T18:45:30)
     0000   0x9e 0x6d 0x12 0x15 0x0c                   .m...
     body (22)
     hex
@@ -101,24 +101,24 @@ should eat up to null
             101    4    1   18   18    0
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 7 CalForBG 2012-09-05T22:36:03 head[2], body[0] 0x0a
+#### RECORD 7 CalForBG 2012-09-21T22:36:03 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0xce                                  ..
     decimal
              10  206
-    datetime (2012-09-05T22:36:03)
+    datetime (2012-09-21T22:36:03)
     0000   0x83 0x64 0x36 0x15 0x0c                   .d6..
     body (0)
     HOUR BITS: [0, 1, 1]
 
 should eat up to null
 found 3 extra
-#### RECORD 8 BolusWizard 2012-09-05T22:36:06 head[2], body[25] 0x5b
+#### RECORD 8 BolusWizard 2012-09-21T22:36:06 head[2], body[25] 0x5b
     op hex (2)
     0000   0x5b 0xce                                  [.
     decimal
              91  206
-    datetime (2012-09-05T22:36:06)
+    datetime (2012-09-21T22:36:06)
     0000   0x86 0x64 0x16 0x15 0x0c                   .d...
     body (25)
     hex
@@ -135,12 +135,12 @@ found 3 extra
 
 should eat up to null
 found 6 extra
-#### RECORD 9 BolusWizard 2012-09-05T23:03:22 head[2], body[28] 0x5b
+#### RECORD 9 BolusWizard 2012-09-21T23:03:22 head[2], body[28] 0x5b
     op hex (2)
     0000   0x5b 0x00                                  [.
     decimal
              91    0
-    datetime (2012-09-05T23:03:22)
+    datetime (2012-09-21T23:03:22)
     0000   0x96 0x43 0x17 0x15 0x0c                   .C...
     body (28)
     hex
@@ -157,12 +157,12 @@ found 6 extra
 
 should eat up to null
 found 9 extra
-#### RECORD 10 BolusWizard 2012-09-05T23:18:04 head[2], body[31] 0x5b
+#### RECORD 10 BolusWizard 2012-09-21T23:18:04 head[2], body[31] 0x5b
     op hex (2)
     0000   0x5b 0x00                                  [.
     decimal
              91    0
-    datetime (2012-09-05T23:18:04)
+    datetime (2012-09-21T23:18:04)
     0000   0x84 0x52 0x17 0x15 0x0c                   .R...
     body (31)
     hex
@@ -177,22 +177,22 @@ found 9 extra
             148  118   20    1    9    9    0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 11 LowReservoir 2012-09-05T23:31:34 head[2], body[0] 0x34
+#### RECORD 11 LowReservoir 2012-09-21T23:31:34 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal
              52  100
-    datetime (2012-09-05T23:31:34)
+    datetime (2012-09-21T23:31:34)
     0000   0xa2 0x5f 0x17 0x15 0x0c                   ._...
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 12 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 12 ResultTotals MIDNIGHT!?: (2012, 0, 21, 4, 4, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 21, 4, 4, 0))
     0000   0x00 0x04 0xe4 0x95 0x8c                   .....
     body (44)
     hex
@@ -209,44 +209,44 @@ found 9 extra
               1   28   81    0   68   19    0    0
               0    5    4    1    0    0   12    0
             232    0    0    0
-    YEAR BITS: [1, 0, 0, 0]
+    DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
-#### RECORD 13 Rewind 2012-09-06T23:11:17 head[2], body[0] 0x21
+#### RECORD 13 Rewind 2012-09-22T23:11:17 head[2], body[0] 0x21
     op hex (2)
     0000   0x21 0x00                                  !.
     decimal
              33    0
-    datetime (2012-09-06T23:11:17)
+    datetime (2012-09-22T23:11:17)
     0000   0x91 0x4b 0x17 0x16 0x0c                   .K...
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 14 Prime 2012-09-06T23:13:38 head[5], body[0] 0x03
+#### RECORD 14 Prime 2012-09-22T23:13:38 head[5], body[0] 0x03
     op hex (5)
     0000   0x03 0x00 0x00 0x00 0x38                   ....8
     decimal
               3    0    0    0   56
-    datetime (2012-09-06T23:13:38)
+    datetime (2012-09-22T23:13:38)
     0000   0xa6 0x4d 0x37 0x16 0x0c                   .M7..
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 15 Prime 2012-09-06T23:14:01 head[5], body[0] 0x03
+#### RECORD 15 Prime 2012-09-22T23:14:01 head[5], body[0] 0x03
     op hex (5)
     0000   0x03 0x00 0x05 0x00 0x05                   .....
     decimal
               3    0    5    0    5
-    datetime (2012-09-06T23:14:01)
+    datetime (2012-09-22T23:14:01)
     0000   0x81 0x4e 0x17 0x16 0x0c                   .N...
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 16 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 16 ResultTotals MIDNIGHT!?: (2012, 0, 22, 2, 3, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 22, 2, 3, 0))
     0000   0x00 0x03 0x82 0x96 0x8c                   .....
     body (44)
     hex
@@ -263,24 +263,24 @@ found 9 extra
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0   12    0
             232    0    0    0
-    YEAR BITS: [1, 0, 0, 0]
+    DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
-#### RECORD 17 CalForBG 2012-09-07T00:08:00 head[2], body[0] 0x0a
+#### RECORD 17 CalForBG 2012-09-23T00:08:00 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x55                                  .U
     decimal
              10   85
-    datetime (2012-09-07T00:08:00)
+    datetime (2012-09-23T00:08:00)
     0000   0x80 0x48 0x20 0x17 0x0c                   .H ..
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 18 BolusWizard 2012-09-07T00:08:50 head[2], body[22] 0x5b
+#### RECORD 18 BolusWizard 2012-09-23T00:08:50 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0x55                                  [U
     decimal
              91   85
-    datetime (2012-09-07T00:08:50)
+    datetime (2012-09-23T00:08:50)
     0000   0xb2 0x48 0x00 0x17 0x0c                   .H...
     body (22)
     hex
@@ -293,43 +293,43 @@ found 9 extra
               0  178   72   64   23   12
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 19 PumpSuspend 2012-09-07T03:08:37 head[2], body[0] 0x1e
+#### RECORD 19 PumpSuspend 2012-09-23T03:08:37 head[2], body[0] 0x1e
     op hex (2)
     0000   0x1e 0x00                                  ..
     decimal
              30    0
-    datetime (2012-09-07T03:08:37)
+    datetime (2012-09-23T03:08:37)
     0000   0xa5 0x48 0x03 0x17 0x0c                   .H...
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 20 PumpResume 2012-09-07T03:08:49 head[2], body[0] 0x1f
+#### RECORD 20 PumpResume 2012-09-23T03:08:49 head[2], body[0] 0x1f
     op hex (2)
     0000   0x1f 0x00                                  ..
     decimal
              31    0
-    datetime (2012-09-07T03:08:49)
+    datetime (2012-09-23T03:08:49)
     0000   0xb1 0x48 0x03 0x17 0x0c                   .H...
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 21 CalForBG 2012-09-07T07:47:11 head[2], body[0] 0x0a
+#### RECORD 21 CalForBG 2012-09-23T07:47:11 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x8e                                  ..
     decimal
              10  142
-    datetime (2012-09-07T07:47:11)
+    datetime (2012-09-23T07:47:11)
     0000   0x8b 0x6f 0x27 0x17 0x8c                   .o'..
     body (0)
     HOUR BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 0]
 
 should eat up to null
-#### RECORD 22 BolusWizard 2012-09-07T07:47:13 head[2], body[22] 0x5b
+#### RECORD 22 BolusWizard 2012-09-23T07:47:13 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0x8e                                  [.
     decimal
              91  142
-    datetime (2012-09-07T07:47:13)
+    datetime (2012-09-23T07:47:13)
     0000   0x8d 0x6f 0x07 0x17 0x0c                   .o...
     body (22)
     hex
@@ -342,43 +342,43 @@ should eat up to null
             207   20    1   60   60    0
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 23 PumpSuspend 2012-09-07T08:27:42 head[2], body[0] 0x1e
+#### RECORD 23 PumpSuspend 2012-09-23T08:27:42 head[2], body[0] 0x1e
     op hex (2)
     0000   0x1e 0x00                                  ..
     decimal
              30    0
-    datetime (2012-09-07T08:27:42)
+    datetime (2012-09-23T08:27:42)
     0000   0xaa 0x5b 0x08 0x17 0x0c                   .[...
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 24 PumpResume 2012-09-07T09:00:21 head[2], body[0] 0x1f
+#### RECORD 24 PumpResume 2012-09-23T09:00:21 head[2], body[0] 0x1f
     op hex (2)
     0000   0x1f 0x00                                  ..
     decimal
              31    0
-    datetime (2012-09-07T09:00:21)
+    datetime (2012-09-23T09:00:21)
     0000   0x95 0x40 0x09 0x17 0x0c                   .@...
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 25 CalForBG 2012-09-07T10:55:06 head[2], body[0] 0x0a
+#### RECORD 25 CalForBG 2012-09-23T10:55:06 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x40                                  .@
     decimal
              10   64
-    datetime (2012-09-07T10:55:06)
+    datetime (2012-09-23T10:55:06)
     0000   0x86 0x77 0x2a 0x17 0x8c                   .w*..
     body (0)
     HOUR BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 0]
 
 should eat up to null
-#### RECORD 26 BolusWizard 2012-09-07T10:55:14 head[2], body[22] 0x5b
+#### RECORD 26 BolusWizard 2012-09-23T10:55:14 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0x40                                  [@
     decimal
              91   64
-    datetime (2012-09-07T10:55:14)
+    datetime (2012-09-23T10:55:14)
     0000   0x8e 0x77 0x0a 0x17 0x0c                   .w...
     body (22)
     hex
@@ -391,24 +391,24 @@ should eat up to null
             191    4    1   36   36    0
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 27 CalForBG 2012-09-07T11:48:04 head[2], body[0] 0x0a
+#### RECORD 27 CalForBG 2012-09-23T11:48:04 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x2f                                  ./
     decimal
              10   47
-    datetime (2012-09-07T11:48:04)
+    datetime (2012-09-23T11:48:04)
     0000   0x84 0x70 0x2b 0x17 0x8c                   .p+..
     body (0)
     HOUR BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 0]
 
 should eat up to null
 found 3 extra
-#### RECORD 28 BolusWizard 2012-09-07T11:48:21 head[2], body[25] 0x5b
+#### RECORD 28 BolusWizard 2012-09-23T11:48:21 head[2], body[25] 0x5b
     op hex (2)
     0000   0x5b 0x2f                                  [/
     decimal
              91   47
-    datetime (2012-09-07T11:48:21)
+    datetime (2012-09-23T11:48:21)
     0000   0x95 0x70 0x0b 0x17 0x0c                   .p...
     body (25)
     hex
@@ -423,12 +423,12 @@ found 3 extra
               0
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 29 TempBasal 2012-09-07T11:51:46 head[2], body[1] 0x33
+#### RECORD 29 TempBasal 2012-09-23T11:51:46 head[2], body[1] 0x33
     op hex (2)
     0000   0x33 0x2e                                  3.
     decimal
              51   46
-    datetime (2012-09-07T11:51:46)
+    datetime (2012-09-23T11:51:46)
     0000   0xae 0x73 0x0b 0x17 0x0c                   .s...
     body (1)
     hex
@@ -437,22 +437,22 @@ found 3 extra
               0
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 30 TempBasal[eof] 2012-09-07T11:51:46 head[2], body[0] 0x16
+#### RECORD 30 TempBasal[eof] 2012-09-23T11:51:46 head[2], body[0] 0x16
     op hex (2)
     0000   0x16 0x03                                  ..
     decimal
              22    3
-    datetime (2012-09-07T11:51:46)
+    datetime (2012-09-23T11:51:46)
     0000   0xae 0x73 0x0b 0x17 0x0c                   .s...
     body (0)
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 31 TempBasal 2012-09-07T11:51:51 head[2], body[1] 0x33
+#### RECORD 31 TempBasal 2012-09-23T11:51:51 head[2], body[1] 0x33
     op hex (2)
     0000   0x33 0x2e                                  3.
     decimal
              51   46
-    datetime (2012-09-07T11:51:51)
+    datetime (2012-09-23T11:51:51)
     0000   0xb3 0x73 0x0b 0x17 0x0c                   .s...
     body (1)
     hex
@@ -461,22 +461,22 @@ found 3 extra
               0
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 32 TempBasal[eof] 2012-09-07T11:51:51 head[2], body[0] 0x16
+#### RECORD 32 TempBasal[eof] 2012-09-23T11:51:51 head[2], body[0] 0x16
     op hex (2)
     0000   0x16 0x03                                  ..
     decimal
              22    3
-    datetime (2012-09-07T11:51:51)
+    datetime (2012-09-23T11:51:51)
     0000   0xb3 0x73 0x0b 0x17 0x0c                   .s...
     body (0)
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 33 TempBasal 2012-09-07T12:25:26 head[2], body[1] 0x33
+#### RECORD 33 TempBasal 2012-09-23T12:25:26 head[2], body[1] 0x33
     op hex (2)
     0000   0x33 0x00                                  3.
     decimal
              51    0
-    datetime (2012-09-07T12:25:26)
+    datetime (2012-09-23T12:25:26)
     0000   0x9a 0x59 0x0c 0x17 0x0c                   .Y...
     body (1)
     hex
@@ -485,34 +485,34 @@ found 3 extra
               0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 34 TempBasal[eof] 2012-09-07T12:25:26 head[2], body[0] 0x16
+#### RECORD 34 TempBasal[eof] 2012-09-23T12:25:26 head[2], body[0] 0x16
     op hex (2)
     0000   0x16 0x00                                  ..
     decimal
              22    0
-    datetime (2012-09-07T12:25:26)
+    datetime (2012-09-23T12:25:26)
     0000   0x9a 0x59 0x0c 0x17 0x0c                   .Y...
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 35 CalForBG 2012-09-07T13:04:18 head[2], body[0] 0x0a
+#### RECORD 35 CalForBG 2012-09-23T13:04:18 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x76                                  .v
     decimal
              10  118
-    datetime (2012-09-07T13:04:18)
+    datetime (2012-09-23T13:04:18)
     0000   0x92 0x44 0x2d 0x17 0x0c                   .D-..
     body (0)
     HOUR BITS: [0, 1, 0]
 
 should eat up to null
 found 6 extra
-#### RECORD 36 BolusWizard 2012-09-07T13:29:19 head[2], body[28] 0x5b
+#### RECORD 36 BolusWizard 2012-09-23T13:29:19 head[2], body[28] 0x5b
     op hex (2)
     0000   0x5b 0x00                                  [.
     decimal
              91    0
-    datetime (2012-09-07T13:29:19)
+    datetime (2012-09-23T13:29:19)
     0000   0x93 0x5d 0x0d 0x17 0x0c                   .]...
     body (28)
     hex
@@ -527,24 +527,24 @@ found 6 extra
               1    8    8    0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 37 CalForBG 2012-09-07T17:23:01 head[2], body[0] 0x0a
+#### RECORD 37 CalForBG 2012-09-23T17:23:01 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0xc7                                  ..
     decimal
              10  199
-    datetime (2012-09-07T17:23:01)
+    datetime (2012-09-23T17:23:01)
     0000   0x81 0x57 0x31 0x17 0x0c                   .W1..
     body (0)
     HOUR BITS: [0, 1, 0]
 
 should eat up to null
 found 6 extra
-#### RECORD 38 BolusWizard 2012-09-07T17:23:07 head[2], body[28] 0x5b
+#### RECORD 38 BolusWizard 2012-09-23T17:23:07 head[2], body[28] 0x5b
     op hex (2)
     0000   0x5b 0xc7                                  [.
     decimal
              91  199
-    datetime (2012-09-07T17:23:07)
+    datetime (2012-09-23T17:23:07)
     0000   0x87 0x57 0x11 0x17 0x0c                   .W...
     body (28)
     hex
@@ -559,34 +559,34 @@ found 6 extra
               1    9    9    0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 39 CalForBG 2012-09-07T18:54:10 head[2], body[0] 0x0a
+#### RECORD 39 CalForBG 2012-09-23T18:54:10 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x4e                                  .N
     decimal
              10   78
-    datetime (2012-09-07T18:54:10)
+    datetime (2012-09-23T18:54:10)
     0000   0x8a 0x76 0x32 0x17 0x0c                   .v2..
     body (0)
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 40 CalForBG 2012-09-07T19:06:34 head[2], body[0] 0x0a
+#### RECORD 40 CalForBG 2012-09-23T19:06:34 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x4e                                  .N
     decimal
              10   78
-    datetime (2012-09-07T19:06:34)
+    datetime (2012-09-23T19:06:34)
     0000   0xa2 0x46 0x33 0x17 0x0c                   .F3..
     body (0)
     HOUR BITS: [0, 1, 0]
 
 should eat up to null
 found 6 extra
-#### RECORD 41 BolusWizard 2012-09-07T19:06:41 head[2], body[28] 0x5b
+#### RECORD 41 BolusWizard 2012-09-23T19:06:41 head[2], body[28] 0x5b
     op hex (2)
     0000   0x5b 0x4e                                  [N
     decimal
              91   78
-    datetime (2012-09-07T19:06:41)
+    datetime (2012-09-23T19:06:41)
     0000   0xa9 0x46 0x13 0x17 0x0c                   .F...
     body (28)
     hex
@@ -603,12 +603,12 @@ found 6 extra
 
 should eat up to null
 found 9 extra
-#### RECORD 42 BolusWizard 2012-09-07T19:25:40 head[2], body[31] 0x5b
+#### RECORD 42 BolusWizard 2012-09-23T19:25:40 head[2], body[31] 0x5b
     op hex (2)
     0000   0x5b 0x00                                  [.
     decimal
              91    0
-    datetime (2012-09-07T19:25:40)
+    datetime (2012-09-23T19:25:40)
     0000   0xa8 0x59 0x13 0x17 0x0c                   .Y...
     body (31)
     hex
@@ -625,12 +625,12 @@ found 9 extra
 
 should eat up to null
 found 6 extra
-#### RECORD 43 BolusWizard 2012-09-07T22:26:12 head[2], body[28] 0x5b
+#### RECORD 43 BolusWizard 2012-09-23T22:26:12 head[2], body[28] 0x5b
     op hex (2)
     0000   0x5b 0x00                                  [.
     decimal
              91    0
-    datetime (2012-09-07T22:26:12)
+    datetime (2012-09-23T22:26:12)
     0000   0x8c 0x5a 0x16 0x17 0x0c                   .Z...
     body (28)
     hex
@@ -645,12 +645,12 @@ found 6 extra
               1   10   10    0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 44 ResultTotals MIDNIGHT!? head[2], body[44] 0x07
+#### RECORD 44 ResultTotals MIDNIGHT!?: (2012, 0, 23, 18, 6, 0) head[2], body[44] 0x07
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime (MIDNIGHT!?)
+    datetime (MIDNIGHT!?: (2012, 0, 23, 18, 6, 0))
     0000   0x00 0x06 0x72 0x97 0x8c                   ..r..
     body (44)
     hex
@@ -667,44 +667,44 @@ found 6 extra
               1   48   39    1  212   61    0    0
               0    9    5    4    0    0   12    0
             232    0    0    0
-    YEAR BITS: [1, 0, 0, 0]
+    DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
-#### RECORD 45 PumpSuspend 2012-09-08T12:34:30 head[2], body[0] 0x1e
+#### RECORD 45 PumpSuspend 2012-09-24T12:34:30 head[2], body[0] 0x1e
     op hex (2)
     0000   0x1e 0x00                                  ..
     decimal
              30    0
-    datetime (2012-09-08T12:34:30)
+    datetime (2012-09-24T12:34:30)
     0000   0x9e 0x62 0x0c 0x18 0x0c                   .b...
     body (0)
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 46 PumpResume 2012-09-08T12:51:34 head[2], body[0] 0x1f
+#### RECORD 46 PumpResume 2012-09-24T12:51:34 head[2], body[0] 0x1f
     op hex (2)
     0000   0x1f 0x00                                  ..
     decimal
              31    0
-    datetime (2012-09-08T12:51:34)
+    datetime (2012-09-24T12:51:34)
     0000   0xa2 0x73 0x0c 0x18 0x0c                   .s...
     body (0)
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 47 CalForBG 2012-09-08T13:25:34 head[2], body[0] 0x0a
+#### RECORD 47 CalForBG 2012-09-24T13:25:34 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0xae                                  ..
     decimal
              10  174
-    datetime (2012-09-08T13:25:34)
+    datetime (2012-09-24T13:25:34)
     0000   0xa2 0x59 0x2d 0x18 0x0c                   .Y-..
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 48 BolusWizard 2012-09-08T13:26:18 head[2], body[22] 0x5b
+#### RECORD 48 BolusWizard 2012-09-24T13:26:18 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0xae                                  [.
     decimal
              91  174
-    datetime (2012-09-08T13:26:18)
+    datetime (2012-09-24T13:26:18)
     0000   0x92 0x5a 0x0d 0x18 0x0c                   .Z...
     body (22)
     hex
@@ -717,23 +717,23 @@ found 6 extra
               0  146   90   77   24   12
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 49 CalForBG 2012-09-08T16:23:41 head[2], body[0] 0x0a
+#### RECORD 49 CalForBG 2012-09-24T16:23:41 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x46                                  .F
     decimal
              10   70
-    datetime (2012-09-08T16:23:41)
+    datetime (2012-09-24T16:23:41)
     0000   0xa9 0x57 0x30 0x18 0x0c                   .W0..
     body (0)
     HOUR BITS: [0, 1, 0]
 
 should eat up to null
-#### RECORD 50 BolusWizard 2012-09-08T17:04:10 head[2], body[22] 0x5b
+#### RECORD 50 BolusWizard 2012-09-24T17:04:10 head[2], body[22] 0x5b
     op hex (2)
     0000   0x5b 0x00                                  [.
     decimal
              91    0
-    datetime (2012-09-08T17:04:10)
+    datetime (2012-09-24T17:04:10)
     0000   0x8a 0x44 0x11 0x18 0x0c                   .D...
     body (22)
     hex
@@ -746,12 +746,12 @@ should eat up to null
             220    4    1   10   10    0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 51 CalForBG 2012-09-08T19:10:00 head[2], body[0] 0x0a
+#### RECORD 51 CalForBG 2012-09-24T19:10:00 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x94                                  ..
     decimal
              10  148
-    datetime (2012-09-08T19:10:00)
+    datetime (2012-09-24T19:10:00)
     0000   0x80 0x4a 0x33 0x18 0x0c                   .J3..
     body (0)
     HOUR BITS: [0, 1, 0]

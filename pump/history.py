@@ -16,6 +16,7 @@ class Mask:
   time   = 0xC0
   invert = 0x3F
   year   = 0x0F
+  day    = 0x1F
 
 
 def quick_hex(bb):
@@ -52,7 +53,7 @@ def parse_day(day):
   >>> parse_day( 0x01 )
   1
   """
-  return day & Mask.year
+  return day & Mask.day
 
 def parse_months(seconds, minutes):
   """
@@ -143,7 +144,6 @@ def extra_hour_bits(value):
     nibbles.append( ( (value & mask) >> shift ) )
   return nibbles
   
-
 def parse_years(year):
   """
     >>> parse_years(0x06)
