@@ -61,29 +61,29 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               6  156   20    1   30   30    0
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 12 ResultTotals MIDNIGHT!?: (2012, 0, 28, 12, 5, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 12 ResultTotals 2012-10-28T13:12:28 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x0c                   .....
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 28, 12, 5, 0))
-    0000   0x00 0x05 0x0c 0x9c 0x8c                   .....
-    body (44)
+              7    0    0    5   12
+    datetime (2012-10-28T13:12:28)
+    0000   0x9c 0x8c 0x6d 0x9c 0x8c                   ..m..
+    body (41)
     hex
-    0000   0x6d 0x9c 0x8c 0x05 0x10 0xdc 0x4d 0x61    m.....Ma
-    0008   0x04 0x00 0x00 0x05 0x0c 0x02 0xf8 0x3b    .......;
-    0010   0x02 0x14 0x29 0x00 0x68 0x02 0x14 0x29    ..).h..)
-    0018   0x01 0x20 0x36 0x00 0xf4 0x2e 0x00 0x00    . 6.....
-    0020   0x00 0x04 0x02 0x02 0x00 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x10 0xdc 0x4d 0x61 0x04 0x00 0x00    ...Ma...
+    0008   0x05 0x0c 0x02 0xf8 0x3b 0x02 0x14 0x29    ....;..)
+    0010   0x00 0x68 0x02 0x14 0x29 0x01 0x20 0x36    .h..). 6
+    0018   0x00 0xf4 0x2e 0x00 0x00 0x00 0x04 0x02    ........
+    0020   0x02 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109  156  140    5   16  220   77   97
-              4    0    0    5   12    2  248   59
-              2   20   41    0  104    2   20   41
-              1   32   54    0  244   46    0    0
-              0    4    2    2    0    0   12    0
-            232    0    0    0
-    DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
+              5   16  220   77   97    4    0    0
+              5   12    2  248   59    2   20   41
+              0  104    2   20   41    1   32   54
+              0  244   46    0    0    0    4    2
+              2    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 13 CalForBG 2012-09-29T01:11:09 head[2], body[0] 0x0a
     op hex (2)
@@ -123,29 +123,29 @@ should eat up to null
              18    4    1   18   18    0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 20 ResultTotals MIDNIGHT!?: (2012, 0, 29, 30, 4, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 20 ResultTotals 2012-10-29T13:12:29 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0x5e                   ....^
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 29, 30, 4, 0))
-    0000   0x00 0x04 0x5e 0x9d 0x8c                   ..^..
-    body (44)
+              7    0    0    4   94
+    datetime (2012-10-29T13:12:29)
+    0000   0x9d 0x8c 0x6d 0x9d 0x8c                   ..m..
+    body (41)
     hex
-    0000   0x6d 0x9d 0x8c 0x05 0x00 0xae 0x64 0xf8    m.....d.
-    0008   0x02 0x00 0x00 0x04 0x5e 0x03 0x5a 0x4d    ....^.ZM
-    0010   0x01 0x04 0x17 0x00 0x35 0x01 0x04 0x17    ....5...
-    0018   0x00 0x98 0x3a 0x00 0x6c 0x2a 0x00 0x00    ..:.l*..
-    0020   0x00 0x03 0x02 0x01 0x00 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x00 0xae 0x64 0xf8 0x02 0x00 0x00    ...d....
+    0008   0x04 0x5e 0x03 0x5a 0x4d 0x01 0x04 0x17    .^.ZM...
+    0010   0x00 0x35 0x01 0x04 0x17 0x00 0x98 0x3a    .5.....:
+    0018   0x00 0x6c 0x2a 0x00 0x00 0x00 0x03 0x02    .l*.....
+    0020   0x01 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109  157  140    5    0  174  100  248
-              2    0    0    4   94    3   90   77
-              1    4   23    0   53    1    4   23
-              0  152   58    0  108   42    0    0
-              0    3    2    1    0    0   12    0
-            232    0    0    0
-    DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
+              5    0  174  100  248    2    0    0
+              4   94    3   90   77    1    4   23
+              0   53    1    4   23    0  152   58
+              0  108   42    0    0    0    3    2
+              1    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 21 CalForBG 2012-09-30T02:03:54 head[2], body[0] 0x0a
     op hex (2)
@@ -185,29 +185,29 @@ should eat up to null
              35    4    1   35   35    0
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 30 ResultTotals MIDNIGHT!?: (2012, 0, 30, 30, 4, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 30 ResultTotals 2012-10-30T13:12:30 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0xbe                   .....
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 30, 30, 4, 0))
-    0000   0x00 0x04 0xbe 0x9e 0x8c                   .....
-    body (44)
+              7    0    0    4  190
+    datetime (2012-10-30T13:12:30)
+    0000   0x9e 0x8c 0x6d 0x9e 0x8c                   ..m..
+    body (41)
     hex
-    0000   0x6d 0x9e 0x8c 0x05 0x10 0xe6 0x9a 0x31    m......1
-    0008   0x02 0x00 0x00 0x04 0xbe 0x03 0x72 0x49    ......rI
-    0010   0x01 0x4c 0x1b 0x00 0x2e 0x01 0x4c 0x1b    .L....L.
-    0018   0x00 0x8c 0x2a 0x00 0xc0 0x3a 0x00 0x00    ..*..:..
-    0020   0x00 0x03 0x01 0x02 0x00 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x10 0xe6 0x9a 0x31 0x02 0x00 0x00    ....1...
+    0008   0x04 0xbe 0x03 0x72 0x49 0x01 0x4c 0x1b    ...rI.L.
+    0010   0x00 0x2e 0x01 0x4c 0x1b 0x00 0x8c 0x2a    ...L...*
+    0018   0x00 0xc0 0x3a 0x00 0x00 0x00 0x03 0x01    ..:.....
+    0020   0x02 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109  158  140    5   16  230  154   49
-              2    0    0    4  190    3  114   73
-              1   76   27    0   46    1   76   27
-              0  140   42    0  192   58    0    0
-              0    3    1    2    0    0   12    0
-            232    0    0    0
-    DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
+              5   16  230  154   49    2    0    0
+              4  190    3  114   73    1   76   27
+              0   46    1   76   27    0  140   42
+              0  192   58    0    0    0    3    1
+              2    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 31 PumpSuspend 2012-10-01T14:42:35 head[2], body[0] 0x1e
     op hex (2)

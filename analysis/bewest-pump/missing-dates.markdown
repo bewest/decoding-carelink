@@ -7,7 +7,7 @@
 ### analysis/bewest-pump/ReadHistoryData-page-12.data.list_opcodes.markdown
 WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-12.data
-#### RECORD 0 Record 2010-12-26T01:20:30 head[9], body[0] 0x5c
+#### RECORD 0 BolusGiven? 2010-12-26T01:20:30 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x0b 0x14 0x08 0x04 0x06 0xd4 0x14    \.......
     0008   0x92                                       .
@@ -65,13 +65,13 @@ XXX:???:XXX 2004-04-02T16:08:28
 ### analysis/bewest-pump/ReadHistoryData-page-14.data.list_opcodes.markdown
 
 ### analysis/bewest-pump/ReadHistoryData-page-15.data.list_opcodes.markdown
-            109  190  140    5    0  118   95  141
-              3    0    0    4  172    3   88   72
-              1   84   28    0  116    1   84   28
-              1   84  100    0    0    0    0    0
-              0    3    3    0    0    0   12    0
-            232    0    0    0
-    DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
+              5    0  118   95  141    3    0    0
+              4  172    3   88   72    1   84   28
+              0  116    1   84   28    1   84  100
+              0    0    0    0    0    0    3    3
+              0    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 30 CalForBG 2012-12-01T21:31:52 head[2], body[0] 0x0a
     op hex (2)
@@ -101,29 +101,29 @@ XXX:???:XXX 2004-04-02T16:08:28
              32   21    1   12    1   54
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 32 ResultTotals 2012-12-01T21:32:04 head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 32 ResultTotals MIDNIGHT!?: (2015, 0, 0, 31, 12, 1) head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0xc4 0x20 0x55                   ... U
     decimal
-              7    0
-    datetime (2012-12-01T21:32:04)
-    0000   0xc4 0x20 0x55 0x01 0x0c                   . U..
-    body (44)
+              7    0  196   32   85
+    datetime (MIDNIGHT!?: (2015, 0, 0, 31, 12, 1))
+    0000   0x01 0x0c 0x1f 0x00 0xdf                   .....
+    body (41)
     hex
-    0000   0x1f 0x00 0xdf 0x20 0x15 0x01 0x0c 0x0a    ... ....
-    0008   0x72 0xe8 0x20 0x35 0x01 0x0c 0x5b 0x72    r. 5..[r
-    0010   0xfa 0x21 0x15 0x01 0x0c 0x64 0x50 0x0d    .!...dP.
-    0018   0x2d 0x6a 0x00 0x4c 0x00 0x00 0x07 0x00    -j.L....
-    0020   0x4c 0x7d 0x5c 0x05 0x1a 0x09 0x04 0x01    L}\.....
-    0028   0x2b 0x2b 0x00 0xfa                        ++..
+    0000   0x20 0x15 0x01 0x0c 0x0a 0x72 0xe8 0x20     ....r. 
+    0008   0x35 0x01 0x0c 0x5b 0x72 0xfa 0x21 0x15    5..[r.!.
+    0010   0x01 0x0c 0x64 0x50 0x0d 0x2d 0x6a 0x00    ..dP.-j.
+    0018   0x4c 0x00 0x00 0x07 0x00 0x4c 0x7d 0x5c    L....L}\
+    0020   0x05 0x1a 0x09 0x04 0x01 0x2b 0x2b 0x00    .....++.
+    0028   0xfa                                       .
     decimal
-             31    0  223   32   21    1   12   10
-            114  232   32   53    1   12   91  114
-            250   33   21    1   12  100   80   13
-             45  106    0   76    0    0    7    0
-             76  125   92    5   26    9    4    1
-             43   43    0  250
-    HOUR BITS: [0, 0, 1]
+             32   21    1   12   10  114  232   32
+             53    1   12   91  114  250   33   21
+              1   12  100   80   13   45  106    0
+             76    0    0    7    0   76  125   92
+              5   26    9    4    1   43   43    0
+            250
+    YEAR BITS: [1, 1, 0, 1]
 
 #### MISSING DATETIME, reading more to debug
 ##### DEBUG HEX
@@ -183,13 +183,13 @@ found 4 extra
             106   31    0    0    0    0    0
 XXX:???:XXX
 Traceback (most recent call last):
-  File "list_opcodes.py", line 333, in <module>
+  File "list_opcodes.py", line 334, in <module>
     main( )
-  File "list_opcodes.py", line 317, in main
+  File "list_opcodes.py", line 318, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 261, in find_dates
+  File "list_opcodes.py", line 262, in find_dates
     print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
-  File "/home/bewest/src/decoding-carelink/pump/history.py", line 415, in parse_date
+  File "/home/bewest/src/decoding-carelink/pump/history.py", line 590, in parse_date
     raise NotADate(e)
 pump.history.NotADate: day is out of range for month
 
@@ -290,13 +290,13 @@ found 3 extra
               0    0    0    0    0   56  162
 XXX:???:XXX
 Traceback (most recent call last):
-  File "list_opcodes.py", line 333, in <module>
+  File "list_opcodes.py", line 334, in <module>
     main( )
-  File "list_opcodes.py", line 317, in main
+  File "list_opcodes.py", line 318, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 261, in find_dates
+  File "list_opcodes.py", line 262, in find_dates
     print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
-  File "/home/bewest/src/decoding-carelink/pump/history.py", line 415, in parse_date
+  File "/home/bewest/src/decoding-carelink/pump/history.py", line 590, in parse_date
     raise NotADate(e)
 pump.history.NotADate: month must be in 1..12
 
@@ -386,13 +386,13 @@ found 9 extra
               0    0    0    0    0    0   31  242
 XXX:???:XXX
 Traceback (most recent call last):
-  File "list_opcodes.py", line 333, in <module>
+  File "list_opcodes.py", line 334, in <module>
     main( )
-  File "list_opcodes.py", line 317, in main
+  File "list_opcodes.py", line 318, in main
     records = find_dates(stream)
-  File "list_opcodes.py", line 261, in find_dates
+  File "list_opcodes.py", line 262, in find_dates
     print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
-  File "/home/bewest/src/decoding-carelink/pump/history.py", line 415, in parse_date
+  File "/home/bewest/src/decoding-carelink/pump/history.py", line 590, in parse_date
     raise NotADate(e)
 pump.history.NotADate: month must be in 1..12
 

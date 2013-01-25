@@ -61,29 +61,29 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               1   21   21    0
     HOUR BITS: [1, 1, 1]
 
-#### RECORD 18 ResultTotals MIDNIGHT!?: (2012, 0, 5, 14, 5, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 18 ResultTotals 2012-10-05T13:12:37 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x2e                   .....
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 5, 14, 5, 0))
-    0000   0x00 0x05 0x2e 0xa5 0x8c                   .....
-    body (44)
+              7    0    0    5   46
+    datetime (2012-10-05T13:12:37)
+    0000   0xa5 0x8c 0x6d 0xa5 0x8c                   ..m..
+    body (41)
     hex
-    0000   0x6d 0xa5 0x8c 0x05 0x00 0x89 0x49 0xde    m.....I.
-    0008   0x06 0x00 0x00 0x05 0x2e 0x03 0x9e 0x46    .......F
-    0010   0x01 0x90 0x1e 0x00 0x62 0x01 0x90 0x1e    ....b...
-    0018   0x01 0x28 0x4a 0x00 0x68 0x1a 0x00 0x00    .(J.h...
-    0020   0x00 0x04 0x02 0x01 0x01 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x00 0x89 0x49 0xde 0x06 0x00 0x00    ...I....
+    0008   0x05 0x2e 0x03 0x9e 0x46 0x01 0x90 0x1e    ....F...
+    0010   0x00 0x62 0x01 0x90 0x1e 0x01 0x28 0x4a    .b....(J
+    0018   0x00 0x68 0x1a 0x00 0x00 0x00 0x04 0x02    .h......
+    0020   0x01 0x01 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109  165  140    5    0  137   73  222
-              6    0    0    5   46    3  158   70
-              1  144   30    0   98    1  144   30
-              1   40   74    0  104   26    0    0
-              0    4    2    1    1    0   12    0
-            232    0    0    0
-    DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
+              5    0  137   73  222    6    0    0
+              5   46    3  158   70    1  144   30
+              0   98    1  144   30    1   40   74
+              0  104   26    0    0    0    4    2
+              1    1    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 19 CalForBG 2012-11-06T01:05:40 head[2], body[0] 0x0a
     op hex (2)
@@ -123,29 +123,29 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0
     HOUR BITS: [1, 1, 0]
 
-#### RECORD 31 ResultTotals MIDNIGHT!?: (2012, 0, 6, 0, 4, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 31 ResultTotals 2012-10-06T13:12:38 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0xa0                   .....
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 6, 0, 4, 0))
-    0000   0x00 0x04 0xa0 0xa6 0x8c                   .....
-    body (44)
+              7    0    0    4  160
+    datetime (2012-10-06T13:12:38)
+    0000   0xa6 0x8c 0x6d 0xa6 0x8c                   ..m..
+    body (41)
     hex
-    0000   0x6d 0xa6 0x8c 0x05 0x10 0x76 0x4e 0x02    m....vN.
-    0008   0x07 0x00 0x00 0x04 0xa0 0x03 0x7c 0x4b    ......|K
-    0010   0x01 0x24 0x19 0x00 0x48 0x01 0x24 0x19    .$..H.$.
-    0018   0x00 0xc0 0x42 0x00 0x64 0x22 0x00 0x00    ..B.d"..
-    0020   0x00 0x03 0x02 0x01 0x00 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x10 0x76 0x4e 0x02 0x07 0x00 0x00    ..vN....
+    0008   0x04 0xa0 0x03 0x7c 0x4b 0x01 0x24 0x19    ...|K.$.
+    0010   0x00 0x48 0x01 0x24 0x19 0x00 0xc0 0x42    .H.$...B
+    0018   0x00 0x64 0x22 0x00 0x00 0x00 0x03 0x02    .d".....
+    0020   0x01 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109  166  140    5   16  118   78    2
-              7    0    0    4  160    3  124   75
-              1   36   25    0   72    1   36   25
-              0  192   66    0  100   34    0    0
-              0    3    2    1    0    0   12    0
-            232    0    0    0
-    DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
+              5   16  118   78    2    7    0    0
+              4  160    3  124   75    1   36   25
+              0   72    1   36   25    0  192   66
+              0  100   34    0    0    0    3    2
+              1    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 32 CalForBG 2012-11-07T06:45:31 head[2], body[0] 0x0a
     op hex (2)
@@ -185,29 +185,29 @@ WARNING: No route found for IPv6 destination :: (no default route?)
              34   91   20    1    4    4    0
     HOUR BITS: [1, 1, 1]
 
-#### RECORD 46 ResultTotals MIDNIGHT!?: (2012, 0, 7, 18, 4, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 46 ResultTotals 2012-10-07T13:12:39 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0x72                   ....r
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 7, 18, 4, 0))
-    0000   0x00 0x04 0x72 0xa7 0x8c                   ..r..
-    body (44)
+              7    0    0    4  114
+    datetime (2012-10-07T13:12:39)
+    0000   0xa7 0x8c 0x6d 0xa7 0x8c                   ..m..
+    body (41)
     hex
-    0000   0x6d 0xa7 0x8c 0x05 0x00 0x7f 0x4e 0xb4    m.....N.
-    0008   0x07 0x00 0x00 0x04 0x72 0x03 0x7a 0x4e    ....r.zN
-    0010   0x00 0xf8 0x16 0x00 0x46 0x00 0xf8 0x16    ....F...
-    0018   0x00 0xbc 0x4c 0x00 0x3c 0x18 0x00 0x00    ..L.<...
-    0020   0x00 0x05 0x03 0x02 0x00 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x00 0x7f 0x4e 0xb4 0x07 0x00 0x00    ...N....
+    0008   0x04 0x72 0x03 0x7a 0x4e 0x00 0xf8 0x16    .r.zN...
+    0010   0x00 0x46 0x00 0xf8 0x16 0x00 0xbc 0x4c    .F.....L
+    0018   0x00 0x3c 0x18 0x00 0x00 0x00 0x05 0x03    .<......
+    0020   0x02 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109  167  140    5    0  127   78  180
-              7    0    0    4  114    3  122   78
-              0  248   22    0   70    0  248   22
-              0  188   76    0   60   24    0    0
-              0    5    3    2    0    0   12    0
-            232    0    0    0
-    DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
+              5    0  127   78  180    7    0    0
+              4  114    3  122   78    0  248   22
+              0   70    0  248   22    0  188   76
+              0   60   24    0    0    0    5    3
+              2    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
 
 #### RECORD 47 PumpSuspend 2012-11-08T10:27:56 head[2], body[0] 0x1e
     op hex (2)
@@ -247,20 +247,20 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [1, 1, 0]
 
-#### RECORD 59 ResultTotals MIDNIGHT!?: (2012, 0, 8, 20, 5, 0) head[2], body[12] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 59 ResultTotals MIDNIGHT!?: (2000, 10, 0, 0, 12, 40) head[5], body[9] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x34                   ....4
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 8, 20, 5, 0))
-    0000   0x00 0x05 0x34 0xa8 0x8c                   ..4..
-    body (12)
+              7    0    0    5   52
+    datetime (MIDNIGHT!?: (2000, 10, 0, 0, 12, 40))
+    0000   0xa8 0x8c 0x00 0x00 0x00                   .....
+    body (9)
     hex
-    0000   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0008   0x00 0x00 0x02 0x0e                        ....
+    0000   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02    ........
+    0008   0x0e                                       .
     decimal
-              0    0    0    0    0    0    0    0
-              0    0    2   14
-    DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
+              0    0    0    0    0    0    0    2
+             14
+    HOUR BITS: [1, 0, 0]
 
 `end logs/ReadHistoryData-page-21.data: 60 records`

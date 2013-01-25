@@ -10,28 +10,28 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [1, 0, 1]
 
-#### RECORD 1 ResultTotals MIDNIGHT!?: (2012, 0, 1, 2, 5, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 1 ResultTotals 2012-08-01T13:12:33 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x62                   ....b
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 1, 2, 5, 0))
-    0000   0x00 0x05 0x62 0xa1 0x0c                   ..b..
-    body (44)
+              7    0    0    5   98
+    datetime (2012-08-01T13:12:33)
+    0000   0xa1 0x0c 0x6d 0xa1 0x0c                   ..m..
+    body (41)
     hex
-    0000   0x6d 0xa1 0x0c 0x05 0x00 0xaa 0x50 0xff    m.....P.
-    0008   0x06 0x00 0x00 0x05 0x62 0x03 0x6e 0x40    ....b.n@
-    0010   0x01 0xf4 0x24 0x00 0x8b 0x01 0xf4 0x24    ..$....$
-    0018   0x01 0x8c 0x4f 0x00 0x68 0x15 0x00 0x00    ..O.h...
-    0020   0x00 0x07 0x05 0x02 0x00 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x00 0xaa 0x50 0xff 0x06 0x00 0x00    ...P....
+    0008   0x05 0x62 0x03 0x6e 0x40 0x01 0xf4 0x24    .b.n@..$
+    0010   0x00 0x8b 0x01 0xf4 0x24 0x01 0x8c 0x4f    ....$..O
+    0018   0x00 0x68 0x15 0x00 0x00 0x00 0x07 0x05    .h......
+    0020   0x02 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109  161   12    5    0  170   80  255
-              6    0    0    5   98    3  110   64
-              1  244   36    0  139    1  244   36
-              1  140   79    0  104   21    0    0
-              0    7    5    2    0    0   12    0
-            232    0    0    0
+              5    0  170   80  255    6    0    0
+              5   98    3  110   64    1  244   36
+              0  139    1  244   36    1  140   79
+              0  104   21    0    0    0    7    5
+              2    0    0   12    0  232    0    0
+              0
     DAY BITS: [1, 0, 1]
 
 #### RECORD 2 CalForBG 2012-10-02T07:30:41 head[2], body[0] 0x0a
@@ -72,28 +72,28 @@ should eat up to null
               0
     HOUR BITS: [1, 0, 1]
 
-#### RECORD 10 ResultTotals MIDNIGHT!?: (2012, 0, 2, 12, 5, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 10 ResultTotals 2012-08-02T13:12:34 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0xac                   .....
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 2, 12, 5, 0))
-    0000   0x00 0x05 0xac 0xa2 0x0c                   .....
-    body (44)
+              7    0    0    5  172
+    datetime (2012-08-02T13:12:34)
+    0000   0xa2 0x0c 0x6d 0xa2 0x0c                   ..m..
+    body (41)
     hex
-    0000   0x6d 0xa2 0x0c 0x05 0x10 0xf6 0x9d 0x4e    m......N
-    0008   0x02 0x00 0x00 0x05 0xac 0x03 0x6c 0x3c    ......l<
-    0010   0x02 0x40 0x28 0x00 0x77 0x02 0x40 0x28    .@(.w.@(
-    0018   0x01 0x6c 0x3f 0x00 0xd4 0x25 0x00 0x00    .l?..%..
-    0020   0x00 0x04 0x02 0x01 0x01 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x10 0xf6 0x9d 0x4e 0x02 0x00 0x00    ....N...
+    0008   0x05 0xac 0x03 0x6c 0x3c 0x02 0x40 0x28    ...l<.@(
+    0010   0x00 0x77 0x02 0x40 0x28 0x01 0x6c 0x3f    .w.@(.l?
+    0018   0x00 0xd4 0x25 0x00 0x00 0x00 0x04 0x02    ..%.....
+    0020   0x01 0x01 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109  162   12    5   16  246  157   78
-              2    0    0    5  172    3  108   60
-              2   64   40    0  119    2   64   40
-              1  108   63    0  212   37    0    0
-              0    4    2    1    1    0   12    0
-            232    0    0    0
+              5   16  246  157   78    2    0    0
+              5  172    3  108   60    2   64   40
+              0  119    2   64   40    1  108   63
+              0  212   37    0    0    0    4    2
+              1    1    0   12    0  232    0    0
+              0
     DAY BITS: [1, 0, 1]
 
 #### RECORD 11 PumpSuspend 2012-10-03T21:05:18 head[2], body[0] 0x1e
@@ -134,28 +134,28 @@ should eat up to null
               0  155  172   85    3   12
     HOUR BITS: [1, 0, 1]
 
-#### RECORD 15 ResultTotals MIDNIGHT!?: (2012, 0, 3, 16, 3, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 15 ResultTotals 2012-08-03T13:12:35 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x03 0xb0                   .....
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 3, 16, 3, 0))
-    0000   0x00 0x03 0xb0 0xa3 0x0c                   .....
-    body (44)
+              7    0    0    3  176
+    datetime (2012-08-03T13:12:35)
+    0000   0xa3 0x0c 0x6d 0xa3 0x0c                   ..m..
+    body (41)
     hex
-    0000   0x6d 0xa3 0x0c 0x05 0x00 0x4c 0x4c 0x4c    m....LLL
-    0008   0x01 0x00 0x00 0x03 0xb0 0x03 0x6c 0x5d    ......l]
-    0010   0x00 0x44 0x07 0x00 0x20 0x00 0x44 0x07    .D.. .D.
-    0018   0x00 0x44 0x64 0x00 0x00 0x00 0x00 0x00    .Dd.....
-    0020   0x00 0x01 0x01 0x00 0x00 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x00 0x4c 0x4c 0x4c 0x01 0x00 0x00    ..LLL...
+    0008   0x03 0xb0 0x03 0x6c 0x5d 0x00 0x44 0x07    ...l].D.
+    0010   0x00 0x20 0x00 0x44 0x07 0x00 0x44 0x64    . .D..Dd
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x01 0x01    ........
+    0020   0x00 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109  163   12    5    0   76   76   76
-              1    0    0    3  176    3  108   93
-              0   68    7    0   32    0   68    7
-              0   68  100    0    0    0    0    0
-              0    1    1    0    0    0   12    0
-            232    0    0    0
+              5    0   76   76   76    1    0    0
+              3  176    3  108   93    0   68    7
+              0   32    0   68    7    0   68  100
+              0    0    0    0    0    0    1    1
+              0    0    0   12    0  232    0    0
+              0
     DAY BITS: [1, 0, 1]
 
 #### RECORD 16 PumpSuspend 2012-10-04T10:38:38 head[2], body[0] 0x1e
@@ -196,28 +196,28 @@ should eat up to null
              69    4    1   36   36    0
     HOUR BITS: [1, 0, 1]
 
-#### RECORD 20 ResultTotals MIDNIGHT!?: (2012, 0, 4, 4, 4, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 20 ResultTotals 2012-08-04T13:12:36 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0x44                   ....D
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 4, 4, 4, 0))
-    0000   0x00 0x04 0x44 0xa4 0x0c                   ..D..
-    body (44)
+              7    0    0    4   68
+    datetime (2012-08-04T13:12:36)
+    0000   0xa4 0x0c 0x6d 0xa4 0x0c                   ..m..
+    body (41)
     hex
-    0000   0x6d 0xa4 0x0c 0x05 0x0c 0x00 0xe8 0x00    m.......
-    0008   0x00 0x00 0x00 0x04 0x44 0x03 0x78 0x51    ....D.xQ
-    0010   0x00 0xcc 0x13 0x00 0x43 0x00 0xcc 0x13    ....C...
-    0018   0x00 0xcc 0x64 0x00 0x00 0x00 0x00 0x00    ..d.....
-    0020   0x00 0x02 0x02 0x00 0x00 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x0c 0x00 0xe8 0x00 0x00 0x00 0x00    ........
+    0008   0x04 0x44 0x03 0x78 0x51 0x00 0xcc 0x13    .D.xQ...
+    0010   0x00 0x43 0x00 0xcc 0x13 0x00 0xcc 0x64    .C.....d
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x02    ........
+    0020   0x00 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109  164   12    5   12    0  232    0
-              0    0    0    4   68    3  120   81
-              0  204   19    0   67    0  204   19
-              0  204  100    0    0    0    0    0
-              0    2    2    0    0    0   12    0
-            232    0    0    0
+              5   12    0  232    0    0    0    0
+              4   68    3  120   81    0  204   19
+              0   67    0  204   19    0  204  100
+              0    0    0    0    0    0    2    2
+              0    0    0   12    0  232    0    0
+              0
     DAY BITS: [1, 0, 1]
 
 #### RECORD 21 LowReservoir 2012-10-05T00:18:45 head[2], body[0] 0x34
@@ -258,28 +258,28 @@ should eat up to null
               0
     HOUR BITS: [1, 0, 1]
 
-#### RECORD 32 ResultTotals MIDNIGHT!?: (2012, 0, 5, 12, 4, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 32 ResultTotals 2012-08-05T13:12:37 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0xec                   .....
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 5, 12, 4, 0))
-    0000   0x00 0x04 0xec 0xa5 0x0c                   .....
-    body (44)
+              7    0    0    4  236
+    datetime (2012-08-05T13:12:37)
+    0000   0xa5 0x0c 0x6d 0xa5 0x0c                   ..m..
+    body (41)
     hex
-    0000   0x6d 0xa5 0x0c 0x05 0x15 0x0c 0x0c 0x0c    m.......
-    0008   0x01 0x00 0x00 0x04 0xec 0x03 0x78 0x46    ......xF
-    0010   0x01 0x74 0x1e 0x00 0x54 0x01 0x74 0x1e    .t..T.t.
-    0018   0x01 0x00 0x45 0x00 0x74 0x1f 0x00 0x00    ..E.t...
-    0020   0x00 0x03 0x02 0x01 0x00 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x15 0x0c 0x0c 0x0c 0x01 0x00 0x00    ........
+    0008   0x04 0xec 0x03 0x78 0x46 0x01 0x74 0x1e    ...xF.t.
+    0010   0x00 0x54 0x01 0x74 0x1e 0x01 0x00 0x45    .T.t...E
+    0018   0x00 0x74 0x1f 0x00 0x00 0x00 0x03 0x02    .t......
+    0020   0x01 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109  165   12    5   21   12   12   12
-              1    0    0    4  236    3  120   70
-              1  116   30    0   84    1  116   30
-              1    0   69    0  116   31    0    0
-              0    3    2    1    0    0   12    0
-            232    0    0    0
+              5   21   12   12   12    1    0    0
+              4  236    3  120   70    1  116   30
+              0   84    1  116   30    1    0   69
+              0  116   31    0    0    0    3    2
+              1    0    0   12    0  232    0    0
+              0
     DAY BITS: [1, 0, 1]
 
 #### RECORD 33 PumpSuspend 2012-10-06T21:24:08 head[2], body[0] 0x1e
@@ -320,28 +320,28 @@ should eat up to null
     body (0)
     HOUR BITS: [1, 0, 1]
 
-#### RECORD 37 ResultTotals MIDNIGHT!?: (2012, 0, 6, 28, 4, 0) head[2], body[44] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 37 ResultTotals 2012-08-06T13:12:38 head[5], body[41] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0x1c                   .....
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 6, 28, 4, 0))
-    0000   0x00 0x04 0x1c 0xa6 0x0c                   .....
-    body (44)
+              7    0    0    4   28
+    datetime (2012-08-06T13:12:38)
+    0000   0xa6 0x0c 0x6d 0xa6 0x0c                   ..m..
+    body (41)
     hex
-    0000   0x6d 0xa6 0x0c 0x05 0x00 0xfa 0xfa 0xfa    m.......
-    0008   0x01 0x00 0x00 0x04 0x1c 0x03 0x78 0x54    ......xT
-    0010   0x00 0xa4 0x10 0x00 0x36 0x00 0xa4 0x10    ....6...
-    0018   0x00 0xa4 0x64 0x00 0x00 0x00 0x00 0x00    ..d.....
-    0020   0x00 0x01 0x01 0x00 0x00 0x00 0x0c 0x00    ........
-    0028   0xe8 0x00 0x00 0x00                        ....
+    0000   0x05 0x00 0xfa 0xfa 0xfa 0x01 0x00 0x00    ........
+    0008   0x04 0x1c 0x03 0x78 0x54 0x00 0xa4 0x10    ...xT...
+    0010   0x00 0x36 0x00 0xa4 0x10 0x00 0xa4 0x64    .6.....d
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x01 0x01    ........
+    0020   0x00 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            109  166   12    5    0  250  250  250
-              1    0    0    4   28    3  120   84
-              0  164   16    0   54    0  164   16
-              0  164  100    0    0    0    0    0
-              0    1    1    0    0    0   12    0
-            232    0    0    0
+              5    0  250  250  250    1    0    0
+              4   28    3  120   84    0  164   16
+              0   54    0  164   16    0  164  100
+              0    0    0    0    0    0    1    1
+              0    0    0   12    0  232    0    0
+              0
     DAY BITS: [1, 0, 1]
 
 #### RECORD 38 CalForBG 2012-10-07T08:04:00 head[2], body[0] 0x0a
@@ -382,22 +382,20 @@ should eat up to null
     body (0)
     HOUR BITS: [1, 0, 0]
 
-#### RECORD 49 ResultTotals MIDNIGHT!?: (2012, 0, 7, 18, 4, 0) head[2], body[18] 0x07
-    op hex (2)
-    0000   0x07 0x00                                  ..
+#### RECORD 49 ResultTotals MIDNIGHT!?: (2000, 8, 0, 0, 12, 39) head[5], body[15] 0x07
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0x52                   ....R
     decimal
-              7    0
-    datetime (MIDNIGHT!?: (2012, 0, 7, 18, 4, 0))
-    0000   0x00 0x04 0x52 0xa7 0x0c                   ..R..
-    body (18)
+              7    0    0    4   82
+    datetime (MIDNIGHT!?: (2000, 8, 0, 0, 12, 39))
+    0000   0xa7 0x0c 0x00 0x00 0x00                   .....
+    body (15)
     hex
     0000   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0010   0xf9 0xc4                                  ..
+    0008   0x00 0x00 0x00 0x00 0x00 0xf9 0xc4         .......
     decimal
               0    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0    0
-            249  196
-    DAY BITS: [1, 0, 1]
+              0    0    0    0    0  249  196
+    
 
 `end logs/ReadHistoryData-page-30.data: 50 records`
