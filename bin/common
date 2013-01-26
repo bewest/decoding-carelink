@@ -345,5 +345,73 @@ function print_pretty_csv( ) {
 
 }
 
+function opcodes ( ) {
+  x=${1}
+  python list_opcodes.py $x 2>&1
+
+}
+
+function run_regress ( ) {
+  for x in logs/ReadHistoryData-page-*.data ; do
+    echo $x
+    opcodes $x | tee analysis/bewest-pump/$(basename $x).list_opcodes.markdown
+  done
+
+}
+
+function find_missing_for ( ) {
+  x=${1}
+  echo "### $x"
+  grep -B 60 -A 70 MISSING -E $x
+
+}
+
+function find_missing_records ( ) {
+  for x in analysis/bewest-pump/*list_opcodes.markdown ; do
+    find_missing_for $x
+    echo
+  done 
+}
+
+function update_missing_analysis ( ) {
+  find_missing_records > analysis/bewest-pump/missing-dates.markdown
+}
+
+function find_midnights_page ( ) {
+  x=${1}
+  echo $x
+  grep -B 20 -A 40 -E --color "page|START|Result" $x 
+}
+
+function analyze_midnights ( ) {
+  for x in analysis/bewest-pump/*list_opcodes.markdown ; do
+    find_midnights_page $x
+  done
+}
+
+function update_midnights_analysis ( ) {
+  for x in analysis/bewest-pump/*list_opcodes.markdown ; do
+    find_midnights_page $x > ${x%.data.list_opcodes.markdown}-midnight.markdown
+  done
+}
+
+function find_special_bolus_page ( ) {
+  x=${1}
+  echo "### $x"
+  grep -B 15 -A 30 -E "(RECORD|MISSING).* 0x5c" $x
+
+}
+
+function analyze_special_bolus ( ) {
+  for x in analysis/bewest-pump/*list_opcodes.markdown ; do
+    find_special_bolus_page $x
+    echo
+  done
+}
+
+function update_special_bolus_analysis ( ) {
+  analyze_special_bolus > analysis/bewest-pump/special-bolus.markdown
+}
+
 #####
 # EOF
