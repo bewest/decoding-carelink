@@ -488,7 +488,7 @@ super special
     body (0)
     HOUR BITS: [0, 1, 0] DAY BITS: [0, 1, 0]
 
-#### RECORD 36 Record 2013-01-14T11:32:07 head[2], body[0] 0x0c
+#### RECORD 36 ClearAlarm 2013-01-14T11:32:07 head[2], body[0] 0x0c
     op hex (2)
     0000   0x0c 0x04                                  ..
     decimal

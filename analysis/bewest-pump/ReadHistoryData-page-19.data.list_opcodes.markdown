@@ -312,7 +312,7 @@ super special
     body (0)
     HOUR BITS: [1, 1, 0] DAY BITS: [0, 1, 0]
 
-#### RECORD 25 Record 2012-11-12T21:19:16 head[2], body[0] 0x0c
+#### RECORD 25 ClearAlarm 2012-11-12T21:19:16 head[2], body[0] 0x0c
     op hex (2)
     0000   0x0c 0x04                                  ..
     decimal
@@ -374,7 +374,7 @@ super special
     body (0)
     HOUR BITS: [1, 1, 0] DAY BITS: [0, 1, 0]
 
-#### RECORD 30 Record 2012-11-12T21:21:56 head[2], body[0] 0x0c
+#### RECORD 30 ClearAlarm 2012-11-12T21:21:56 head[2], body[0] 0x0c
     op hex (2)
     0000   0x0c 0x04                                  ..
     decimal

@@ -39,6 +39,7 @@ class Record(object):
     0x06: 'NoDelivery',
     0x07: 'ResultTotals',
     0x08: 'ChangeBasalProfile',
+    0x0C: 'ClearAlarm',
     0x14: 'SelectBasalProfile',
     0x16: 'TempBasal[eof]',
     0x17: 'ChangeTime',
@@ -64,17 +65,11 @@ class Record(object):
     0x01: 4,
     0x03: 5,
 
-    # 0x0c: 7,
     0x06: 4,
     0x07: 5,
 
     0x28: 7,
     0x45: 7,
-
-
-    # 0x6c: 79 + 38 + 14,
-    # 0x6c: 0,
-
 
     # observed on bewest-pump
     # 0x2e: 24,
@@ -88,12 +83,6 @@ class Record(object):
 
     # hacks
 
-    #0x0c: 19,
-    #0x18: 1,
-    #0x06: 3,
-    # 0x00: 3,
-    # 0x6b: 7,
-    # 0x27: 16,
   }
   _date = 5
   _body = {
@@ -103,11 +92,11 @@ class Record(object):
     0x45: 3,
     #0x06: 7,
     0x07: 38 + 3,
-
     0x08: 42,
-    0x34: 0,
-    0x33: 1,
+
     0x26: 14,
+    0x33: 1,
+    0x34: 0,
 
     # 0x6b: 15,
     # 0x18: 6,
