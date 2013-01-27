@@ -290,15 +290,6 @@ super special
     datetime (2012-10-23T08:47:36)
     0000   0xa4 0xaf 0x08 0x17 0x0c                   .....
 --
-    op hex (2)
-    0000   0x5b 0x00                                  [.
-    decimal
-             91    0
-    datetime (2012-10-23T20:03:54)
-    0000   0xb6 0x83 0x14 0x17 0x0c                   .....
-    body (13)
-    hex
-    0000   0x0c 0x50 0x0d 0x2d 0x6a 0x00 0x09 0x00    .P.-j...
     0008   0x00 0x00 0x00 0x09 0x7d                   ....}
     decimal
              12   80   13   45  106    0    9    0
@@ -307,7 +298,16 @@ super special
 
 XXX: VARIABLE READ: 0x0e
 super special
-found 0 nulls
-EOF 20 nulls, CRC:
-0000   0xf7 0x12                                  ..
+#### MISSING DATETIME @ 1023, reading more to debug 0x00
+    0000   0x5c 0x0e 0x48 0x09 0x04 0x48 0xef 0x04    \.H..H..
+    0008   0x72 0xad 0x14 0x3e 0xb7 0x14 0x00 0x00    r..>....
+    0010   0x00 0x00 0x00 0x00 0xf7                   .....
+             92   14   72    9    4   72  239    4
+            114  173   20   62  183   20    0    0
+              0    0    0    0  247
+##### DEBUG HEX
+    0000   0x12                                       .
+##### DEBUG DECIMAL
+             18
+XXX:???:XXX 2004-04-09T08:14:28
 `end logs/ReadHistoryData-page-26.data: 73 records`

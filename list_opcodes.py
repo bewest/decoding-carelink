@@ -84,6 +84,7 @@ class Record(object):
 
     # 0x0c: 22,
     0x6d: 46,
+    # 0x6d: 46 - 5,
 
     # hacks
 
@@ -292,7 +293,7 @@ def find_dates(stream):
       break
       records[-1].body.extend(bolus)
     datetime = parse_date(date)
-    if bytearray( [0x00] * min(total, 5) ) in bolus:
+    if bytearray( [0x00] * max(total-2, 5) ) in bolus:
       nulls = bytearray(eat_nulls(stream))
       pos = stream.tell( )
       if pos > 1021:
@@ -302,8 +303,13 @@ def find_dates(stream):
         print "EOF {} nulls, CRC:".format(len(nulls))
         print lib.hexdump(crc)
       else:
+        print total, '   ', max(total-2, 5)
+        print lib.hexdump( [0x00] * min(total, 5) )
+        print 
         print "TOO MANY NULLS, BAILING ON STREAM at %s " % stream.tell( )
+        print "bolus"
         print lib.hexdump(bolus)
+        print "nulls"
         print lib.hexdump(nulls)
         print "MISSING: ARE THERE 32 more bytes?"
         print lib.hexdump(bytearray(stream.read(32)))
@@ -313,12 +319,16 @@ def find_dates(stream):
     
     if not Record.is_midnight(head):
       if datetime is None:
-        print "#### MISSING DATETIME, reading more to debug %#04x" % opcode
-        bolus.extend(bytearray(stream.read(24)))
-        print "##### DEBUG HEX"
+        print ("#### MISSING DATETIME @ %s," % stream.tell( )),
+        print "reading more to debug %#04x" % opcode
         print lib.hexdump(bolus, indent=4)
-        print "##### DEBUG DECIMAL"
         print int_dump(bolus, indent=11)
+
+        extra = bytearray(stream.read(32))
+        print "##### DEBUG HEX"
+        print lib.hexdump(extra, indent=4)
+        print "##### DEBUG DECIMAL"
+        print int_dump(extra, indent=11)
         print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
         break
 

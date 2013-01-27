@@ -922,7 +922,16 @@ super special
 
 XXX: VARIABLE READ: 0x0e
 super special
-found 0 nulls
-EOF 20 nulls, CRC:
-0000   0xf7 0x12                                  ..
+#### MISSING DATETIME @ 1023, reading more to debug 0x00
+    0000   0x5c 0x0e 0x48 0x09 0x04 0x48 0xef 0x04    \.H..H..
+    0008   0x72 0xad 0x14 0x3e 0xb7 0x14 0x00 0x00    r..>....
+    0010   0x00 0x00 0x00 0x00 0xf7                   .....
+             92   14   72    9    4   72  239    4
+            114  173   20   62  183   20    0    0
+              0    0    0    0  247
+##### DEBUG HEX
+    0000   0x12                                       .
+##### DEBUG DECIMAL
+             18
+XXX:???:XXX 2004-04-09T08:14:28
 `end logs/ReadHistoryData-page-26.data: 73 records`
