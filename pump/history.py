@@ -186,21 +186,6 @@ def encode_monthbyte(sec=18, minute=30, month=10):
   >>> encode_monthbyte(minute=50) == bytearray(b'\x92\xb2')
   True
 
-  >>> encode_monthbyte(month=1) == bytearray(b'\x12^')
-  True
-
-  >>> encode_monthbyte(month=2) == bytearray(b'\x12\x9e')
-  True
-
-  >>> encode_monthbyte(month=3) ==  bytearray(b'\x12\xde')
-  True
-
-  >>> encode_monthbyte(month=10, minute=0, sec=0) == bytearray(b'\x80\x80')
-  True
-
-  >>> encode_monthbyte(month=10, minute=0, sec=24) == bytearray(b'\x98\x80')
-  True
-
   """
 
   encoded = [ 0x00, 0x00 ]

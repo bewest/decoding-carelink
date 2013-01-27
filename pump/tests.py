@@ -312,6 +312,23 @@ __test__ = {
 
 ''',
 
+  'encode_monthbyte': '''
+  >>> encode_monthbyte(month=1) == bytearray(b'\x12^')
+  True
+
+  >>> encode_monthbyte(month=2) == bytearray(b'\x12\x9e')
+  True
+
+  >>> encode_monthbyte(month=3) ==  bytearray(b'\x12\xde')
+  True
+
+  >>> encode_monthbyte(month=10, minute=0, sec=0) == bytearray(b'\x80\x80')
+  True
+
+  >>> encode_monthbyte(month=10, minute=0, sec=24) == bytearray(b'\x98\x80')
+  True
+''',
+
 }
 
 
