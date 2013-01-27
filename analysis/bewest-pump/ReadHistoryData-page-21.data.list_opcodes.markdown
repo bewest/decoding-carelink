@@ -162,10 +162,8 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0   13    0    3  125
     HOUR BITS: [1, 1, 1]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x05 0xe0 0xa7 0x04 0x01 0x03 0x03    \.......
-0008   0x00                                       .
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x05
+super special
 #### RECORD 14 BolusGiven? 2012-11-05T15:41:10 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x05 0xe0 0xa7 0x04 0x01 0x03 0x03    \.......
@@ -204,12 +202,8 @@ should eat up to null, second bytearray(b'')
               0    1    0   20  125
     HOUR BITS: [1, 1, 0]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x08 0x0c 0xd8 0x04 0xe0 0x78 0x14    \.....x.
-0008   0x01                                       .
-special found
-0000   0x14 0x14 0x00                             ...
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x08
+super special
 #### RECORD 17 BolusGiven? 2012-11-05T19:10:12 head[12], body[0] 0x5c
     op hex (12)
     0000   0x5c 0x08 0x0c 0xd8 0x04 0xe0 0x78 0x14    \.....x.
@@ -258,12 +252,8 @@ should eat up to null, second bytearray(b'')
               0   12    0   21  125
     HOUR BITS: [1, 1, 1]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x0b 0x50 0x63 0x04 0x0c 0x35 0x14    \.Pc..5.
-0008   0xe0                                       .
-special found
-0000   0xd5 0x14 0x01 0x15 0x15 0x00              ......
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x0b
+super special
 #### RECORD 21 BolusGiven? 2012-11-05T20:43:34 head[15], body[0] 0x5c
     op hex (15)
     0000   0x5c 0x0b 0x50 0x63 0x04 0x0c 0x35 0x14    \.Pc..5.
@@ -412,10 +402,8 @@ should eat up to null, second bytearray(b'')
               0    0    0   10  125
     HOUR BITS: [1, 1, 1]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x05 0x98 0xb4 0x04 0x01 0x0a 0x0a    \.......
-0008   0x00                                       .
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x05
+super special
 #### RECORD 33 BolusGiven? 2012-11-06T17:34:21 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x05 0x98 0xb4 0x04 0x01 0x0a 0x0a    \.......
@@ -464,12 +452,8 @@ should eat up to null, second bytearray(b'')
               0    4    0   25  125
     HOUR BITS: [1, 1, 0]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x08 0x28 0x92 0x04 0x98 0x46 0x14    \.(...F.
-0008   0x01                                       .
-special found
-0000   0x19 0x19 0x00                             ...
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x08
+super special
 #### RECORD 37 BolusGiven? 2012-11-06T20:00:17 head[12], body[0] 0x5c
     op hex (12)
     0000   0x5c 0x08 0x28 0x92 0x04 0x98 0x46 0x14    \.(...F.
@@ -614,12 +598,8 @@ should eat up to null, second bytearray(b'')
               0    0    0    9  125
     HOUR BITS: [1, 1, 0]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x08 0x62 0x0a 0x04 0x22 0x14 0x04    \.b.."..
-0008   0x01                                       .
-special found
-0000   0x09 0x09 0x00                             ...
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x08
+super special
 #### RECORD 48 BolusGiven? 2012-11-07T15:24:32 head[12], body[0] 0x5c
     op hex (12)
     0000   0x5c 0x08 0x62 0x0a 0x04 0x22 0x14 0x04    \.b.."..
@@ -668,12 +648,8 @@ should eat up to null, second bytearray(b'')
               0    0    0    5  125
     HOUR BITS: [1, 1, 0]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x0b 0x24 0x6d 0x04 0x62 0x77 0x04    \.$m.bw.
-0008   0x22                                       "
-special found
-0000   0x81 0x04 0x01 0x05 0x05 0x00              ......
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x0b
+super special
 #### RECORD 52 BolusGiven? 2012-11-07T17:13:03 head[15], body[0] 0x5c
     op hex (15)
     0000   0x5c 0x0b 0x24 0x6d 0x04 0x62 0x77 0x04    \.$m.bw.
@@ -732,13 +708,8 @@ should eat up to null, second bytearray(b'')
               0    1    0   11  125
     HOUR BITS: [1, 1, 1]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x0e 0x14 0xe3 0x04 0x24 0x47 0x14    \....$G.
-0008   0x62                                       b
-special found
-0000   0x51 0x14 0x22 0x5b 0x14 0x01 0x04 0x04    Q."[....
-0008   0x00                                       .
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x0e
+super special
 #### RECORD 57 BolusGiven? 2012-11-07T20:51:10 head[18], body[0] 0x5c
     op hex (18)
     0000   0x5c 0x0e 0x14 0xe3 0x04 0x24 0x47 0x14    \....$G.
@@ -869,10 +840,8 @@ should eat up to null, second bytearray(b'')
               0   25    0   24  125
     HOUR BITS: [1, 1, 0]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x05 0x94 0x57 0x04 0x01 0x18 0x18    \..W....
-0008   0x00                                       .
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x05
+super special
 #### RECORD 67 BolusGiven? 2012-11-08T13:01:32 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x05 0x94 0x57 0x04 0x01 0x18 0x18    \..W....
@@ -921,10 +890,8 @@ should eat up to null, second bytearray(b'')
               0    0    0   53  125
     HOUR BITS: [1, 1, 0]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x05 0x60 0xb4 0x14 0x01 0x35 0x35    \.`...55
-0008   0x00                                       .
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x05
+super special
 #### RECORD 71 BolusGiven? 2012-11-08T20:10:11 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x05 0x60 0xb4 0x14 0x01 0x35 0x35    \.`...55

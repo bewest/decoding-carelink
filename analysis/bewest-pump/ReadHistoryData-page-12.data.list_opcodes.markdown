@@ -1,11 +1,7 @@
 WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-12.data
-should eat up to null first: 0x5c
-0000   0x5c 0x0b 0x14 0x08 0x04 0x06 0xd4 0x14    \.......
-0008   0x92                                       .
-special found
-0000   0xde 0x14 0x01 0x3a 0x3a 0x00              ...::.
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x0b
+super special
 #### RECORD 0 BolusGiven? 2012-12-10T03:52:35 head[15], body[0] 0x5c
     op hex (15)
     0000   0x5c 0x0b 0x14 0x08 0x04 0x06 0xd4 0x14    \.......
@@ -100,10 +96,8 @@ should eat up to null, second bytearray(b'')
               0    4    0   23  125
     
 
-should eat up to null first: 0x5c
-0000   0x5c 0x05 0x10 0x1c 0x04 0x01 0x17 0x17    \.......
-0008   0x00                                       .
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x05
+super special
 #### RECORD 8 BolusGiven? 2012-12-10T14:02:03 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x05 0x10 0x1c 0x04 0x01 0x17 0x17    \.......
@@ -132,12 +126,8 @@ should eat up to null, second bytearray(b'')
               0    0    0   34  125
     
 
-should eat up to null first: 0x5c
-0000   0x5c 0x08 0x5c 0x4a 0x04 0x10 0x5e 0x04    \.\J..^.
-0008   0x01                                       .
-special found
-0000   0x22 0x22 0x00                             "".
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x08
+super special
 #### RECORD 10 BolusGiven? 2012-12-10T15:08:25 head[12], body[0] 0x5c
     op hex (12)
     0000   0x5c 0x08 0x5c 0x4a 0x04 0x10 0x5e 0x04    \.\J..^.
@@ -176,12 +166,8 @@ should eat up to null, second bytearray(b'')
               0    0    0   44  125
     
 
-should eat up to null first: 0x5c
-0000   0x5c 0x0b 0x88 0x68 0x14 0x5c 0xae 0x14    \..h.\..
-0008   0x10                                       .
-special found
-0000   0xc2 0x14 0x01 0x2c 0x2c 0x00              ...,,.
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x0b
+super special
 #### RECORD 13 BolusGiven? 2012-12-10T21:04:55 head[15], body[0] 0x5c
     op hex (15)
     0000   0x5c 0x0b 0x88 0x68 0x14 0x5c 0xae 0x14    \..h.\..
@@ -320,10 +306,8 @@ should eat up to null, second bytearray(b'')
               0   22    0    0  125
     
 
-should eat up to null first: 0x5c
-0000   0x5c 0x05 0x68 0x3a 0x04 0x01 0x02 0x02    \.h:....
-0008   0x00                                       .
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x05
+super special
 #### RECORD 24 BolusGiven? 2012-12-11T14:22:28 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x05 0x68 0x3a 0x04 0x01 0x02 0x02    \.h:....
@@ -352,28 +336,31 @@ should eat up to null, second bytearray(b'')
               0    0    0   28  125
     
 
-should eat up to null first: 0x5c
-0000   0x5c 0x08 0x08 0x0e 0x04 0x68 0x40 0x04    \....h@.
-0008   0x34                                       4
-super super special
-special found
-0000   0x1d 0x0e 0x0b 0x0c 0x01 0x1c 0x1c 0x00    ........
-should eat up to null, second bytearray(b'')
-#### RECORD 26 BolusGiven? 2012-12-11T14:28:21 head[19], body[0] 0x5c
-    op hex (19)
+XXX: VARIABLE READ: 0x08
+super special
+#### RECORD 26 BolusGiven? 2012-12-11T14:29:13 head[10], body[0] 0x5c
+    op hex (10)
     0000   0x5c 0x08 0x08 0x0e 0x04 0x68 0x40 0x04    \....h@.
-    0008   0x34 0xc8 0xcd 0x1d 0x0e 0x0b 0x0c 0x01    4.......
-    0010   0x1c 0x1c 0x00                             ...
+    0008   0x34 0xc8                                  4.
     decimal
              92    8    8   14    4  104   64    4
-             52  200  205   29   14   11   12    1
-             28   28    0
+             52  200
+    datetime (2012-12-11T14:29:13)
+    0000   0xcd 0x1d 0x0e 0x0b 0x0c                   .....
+    body (0)
+    
+
+#### RECORD 27 Bolus 2012-12-11T14:28:21 head[4], body[0] 0x01
+    op hex (4)
+    0000   0x01 0x1c 0x1c 0x00                        ....
+    decimal
+              1   28   28    0
     datetime (2012-12-11T14:28:21)
     0000   0xd5 0x1c 0x4e 0x0b 0x0c                   ..N..
     body (0)
     
 
-#### RECORD 27 CalForBG 2012-12-11T16:01:46 head[2], body[0] 0x0a
+#### RECORD 28 CalForBG 2012-12-11T16:01:46 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0xdb                                  ..
     decimal
@@ -383,7 +370,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 28 TempBasal 2012-12-11T16:02:23 head[2], body[1] 0x33
+#### RECORD 29 TempBasal 2012-12-11T16:02:23 head[2], body[1] 0x33
     op hex (2)
     0000   0x33 0x28                                  3(
     decimal
@@ -397,7 +384,7 @@ should eat up to null, second bytearray(b'')
               0
     
 
-#### RECORD 29 TempBasal[eof] 2012-12-11T16:02:23 head[2], body[0] 0x16
+#### RECORD 30 TempBasal[eof] 2012-12-11T16:02:23 head[2], body[0] 0x16
     op hex (2)
     0000   0x16 0x02                                  ..
     decimal
@@ -407,7 +394,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 30 CalForBG 2012-12-11T16:02:51 head[2], body[0] 0x0a
+#### RECORD 31 CalForBG 2012-12-11T16:02:51 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0xd9                                  ..
     decimal
@@ -417,7 +404,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 31 CalForBG 2012-12-11T16:06:22 head[2], body[0] 0x0a
+#### RECORD 32 CalForBG 2012-12-11T16:06:22 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0xdb                                  ..
     decimal
@@ -427,7 +414,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 32 BolusWizard 2012-12-11T16:06:32 head[2], body[13] 0x5b
+#### RECORD 33 BolusWizard 2012-12-11T16:06:32 head[2], body[13] 0x5b
     op hex (2)
     0000   0x5b 0xdb                                  [.
     decimal
@@ -443,13 +430,9 @@ should eat up to null, second bytearray(b'')
               0   24    0   19  125
     
 
-should eat up to null first: 0x5c
-0000   0x5c 0x0b 0x70 0x66 0x04 0x08 0x70 0x04    \.pf..p.
-0008   0x68                                       h
-special found
-0000   0xa2 0x04 0x01 0x13 0x13 0x00              ......
-should eat up to null, second bytearray(b'')
-#### RECORD 33 BolusGiven? 2012-12-11T16:06:32 head[15], body[0] 0x5c
+XXX: VARIABLE READ: 0x0b
+super special
+#### RECORD 34 BolusGiven? 2012-12-11T16:06:32 head[15], body[0] 0x5c
     op hex (15)
     0000   0x5c 0x0b 0x70 0x66 0x04 0x08 0x70 0x04    \.pf..p.
     0008   0x68 0xa2 0x04 0x01 0x13 0x13 0x00         h......
@@ -461,7 +444,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 34 CalForBG 2012-12-11T17:05:19 head[2], body[0] 0x0a
+#### RECORD 35 CalForBG 2012-12-11T17:05:19 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x9c                                  ..
     decimal
@@ -471,7 +454,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 35 CalForBG 2012-12-11T17:07:21 head[2], body[0] 0x0a
+#### RECORD 36 CalForBG 2012-12-11T17:07:21 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x9c                                  ..
     decimal
@@ -481,7 +464,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 36 BolusWizard 2012-12-11T17:07:40 head[2], body[13] 0x5b
+#### RECORD 37 BolusWizard 2012-12-11T17:07:40 head[2], body[13] 0x5b
     op hex (2)
     0000   0x5b 0x9c                                  [.
     decimal
@@ -497,14 +480,9 @@ should eat up to null, second bytearray(b'')
               0   25    0   12  125
     
 
-should eat up to null first: 0x5c
-0000   0x5c 0x0e 0x4c 0x3f 0x04 0x70 0xa3 0x04    \.L?.p..
-0008   0x08                                       .
-special found
-0000   0xad 0x04 0x68 0xdf 0x04 0x01 0x0c 0x0c    ..h.....
-0008   0x00                                       .
-should eat up to null, second bytearray(b'')
-#### RECORD 37 BolusGiven? 2012-12-11T17:07:41 head[18], body[0] 0x5c
+XXX: VARIABLE READ: 0x0e
+super special
+#### RECORD 38 BolusGiven? 2012-12-11T17:07:41 head[18], body[0] 0x5c
     op hex (18)
     0000   0x5c 0x0e 0x4c 0x3f 0x04 0x70 0xa3 0x04    \.L?.p..
     0008   0x08 0xad 0x04 0x68 0xdf 0x04 0x01 0x0c    ...h....
@@ -518,7 +496,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 38 CalForBG 2012-12-11T19:18:24 head[2], body[0] 0x0a
+#### RECORD 39 CalForBG 2012-12-11T19:18:24 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x6c                                  .l
     decimal
@@ -528,7 +506,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 39 BolusWizard 2012-12-11T19:18:34 head[2], body[13] 0x5b
+#### RECORD 40 BolusWizard 2012-12-11T19:18:34 head[2], body[13] 0x5b
     op hex (2)
     0000   0x5b 0x6c                                  [l
     decimal
@@ -544,31 +522,33 @@ should eat up to null, second bytearray(b'')
               0    7    0   52  125
     
 
-should eat up to null first: 0x5c
-0000   0x5c 0x11 0x30 0x86 0x04 0x4c 0xc2 0x04    \.0..L..
-0008   0x70                                       p
-special found
-0000   0x26 0x14 0x08 0x30 0x14 0x68 0x62 0x14    &..0.hb.
-0008   0x34 0x64 0xc4 0x13 0x13 0x0b 0x0c 0x01    4d......
-0010   0x34 0x34 0x00                             44.
-should eat up to null, second bytearray(b'')
-#### RECORD 40 BolusGiven? 2012-12-11T19:18:34 head[28], body[0] 0x5c
-    op hex (28)
+XXX: VARIABLE READ: 0x11
+super special
+#### RECORD 41 BolusGiven? 2012-12-11T19:19:04 head[19], body[0] 0x5c
+    op hex (19)
     0000   0x5c 0x11 0x30 0x86 0x04 0x4c 0xc2 0x04    \.0..L..
     0008   0x70 0x26 0x14 0x08 0x30 0x14 0x68 0x62    p&..0.hb
-    0010   0x14 0x34 0x64 0xc4 0x13 0x13 0x0b 0x0c    .4d.....
-    0018   0x01 0x34 0x34 0x00                        .44.
+    0010   0x14 0x34 0x64                             .4d
     decimal
              92   17   48  134    4   76  194    4
             112   38   20    8   48   20  104   98
-             20   52  100  196   19   19   11   12
+             20   52  100
+    datetime (2012-12-11T19:19:04)
+    0000   0xc4 0x13 0x13 0x0b 0x0c                   .....
+    body (0)
+    
+
+#### RECORD 42 Bolus 2012-12-11T19:18:34 head[4], body[0] 0x01
+    op hex (4)
+    0000   0x01 0x34 0x34 0x00                        .44.
+    decimal
               1   52   52    0
     datetime (2012-12-11T19:18:34)
     0000   0xe2 0x12 0x53 0x0b 0x0c                   ..S..
     body (0)
     
 
-#### RECORD 41 BolusWizard 2012-12-11T19:56:16 head[2], body[13] 0x5b
+#### RECORD 43 BolusWizard 2012-12-11T19:56:16 head[2], body[13] 0x5b
     op hex (2)
     0000   0x5b 0x00                                  [.
     decimal
@@ -584,14 +564,9 @@ should eat up to null, second bytearray(b'')
               0    0    0   16  125
     HOUR BITS: [0, 0, 1]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x14 0xd0 0x2a 0x04 0x30 0xac 0x04    \..*.0..
-0008   0x4c                                       L
-special found
-0000   0xe8 0x04 0x70 0x4c 0x14 0x08 0x56 0x14    ..pL..V.
-0008   0x68 0x88 0x14 0x01 0x10 0x10 0x00         h......
-should eat up to null, second bytearray(b'')
-#### RECORD 42 BolusGiven? 2012-12-11T19:56:16 head[24], body[0] 0x5c
+XXX: VARIABLE READ: 0x14
+super special
+#### RECORD 44 BolusGiven? 2012-12-11T19:56:16 head[24], body[0] 0x5c
     op hex (24)
     0000   0x5c 0x14 0xd0 0x2a 0x04 0x30 0xac 0x04    \..*.0..
     0008   0x4c 0xe8 0x04 0x70 0x4c 0x14 0x08 0x56    L..pL..V
@@ -605,7 +580,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 43 CalForBG 2012-12-11T20:10:13 head[2], body[0] 0x0a
+#### RECORD 45 CalForBG 2012-12-11T20:10:13 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x8a                                  ..
     decimal
@@ -615,7 +590,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 44 ResultTotals 2012-12-11T13:12:11 head[5], body[41] 0x07
+#### RECORD 46 ResultTotals 2012-12-11T13:12:11 head[5], body[41] 0x07
     op hex (5)
     0000   0x07 0x00 0x00 0x05 0x20                   .... 
     decimal
@@ -639,7 +614,7 @@ should eat up to null, second bytearray(b'')
               0
     DAY BITS: [1, 1, 0]
 
-#### RECORD 45 PumpSuspend 2012-12-12T15:42:30 head[2], body[0] 0x1e
+#### RECORD 47 PumpSuspend 2012-12-12T15:42:30 head[2], body[0] 0x1e
     op hex (2)
     0000   0x1e 0x00                                  ..
     decimal
@@ -649,7 +624,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 46 PumpResume 2012-12-12T16:06:03 head[2], body[0] 0x1f
+#### RECORD 48 PumpResume 2012-12-12T16:06:03 head[2], body[0] 0x1f
     op hex (2)
     0000   0x1f 0x00                                  ..
     decimal
@@ -659,7 +634,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 47 Rewind 2012-12-12T16:12:34 head[2], body[0] 0x21
+#### RECORD 49 Rewind 2012-12-12T16:12:34 head[2], body[0] 0x21
     op hex (2)
     0000   0x21 0x00                                  !.
     decimal
@@ -669,7 +644,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 48 Prime 2012-12-12T16:14:00 head[5], body[0] 0x03
+#### RECORD 50 Prime 2012-12-12T16:14:00 head[5], body[0] 0x03
     op hex (5)
     0000   0x03 0x00 0x00 0x00 0x2a                   ....*
     decimal
@@ -679,7 +654,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 49 Prime 2012-12-12T16:14:23 head[5], body[0] 0x03
+#### RECORD 51 Prime 2012-12-12T16:14:23 head[5], body[0] 0x03
     op hex (5)
     0000   0x03 0x00 0x05 0x00 0x05                   .....
     decimal
@@ -689,7 +664,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 50 CalForBG 2012-12-12T17:07:04 head[2], body[0] 0x0a
+#### RECORD 52 CalForBG 2012-12-12T17:07:04 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x46                                  .F
     decimal
@@ -699,7 +674,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 51 BolusWizard 2012-12-12T17:07:46 head[2], body[13] 0x5b
+#### RECORD 53 BolusWizard 2012-12-12T17:07:46 head[2], body[13] 0x5b
     op hex (2)
     0000   0x5b 0x46                                  [F
     decimal
@@ -715,7 +690,7 @@ should eat up to null, second bytearray(b'')
               0    0    0   23  125
     
 
-#### RECORD 52 Bolus 2012-12-12T17:07:47 head[4], body[0] 0x01
+#### RECORD 54 Bolus 2012-12-12T17:07:47 head[4], body[0] 0x01
     op hex (4)
     0000   0x01 0x17 0x17 0x00                        ....
     decimal
@@ -725,7 +700,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 53 CalForBG 2012-12-12T17:32:33 head[2], body[0] 0x0a
+#### RECORD 55 CalForBG 2012-12-12T17:32:33 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x6c                                  .l
     decimal
@@ -735,7 +710,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 54 CalForBG 2012-12-12T19:51:33 head[2], body[0] 0x0a
+#### RECORD 56 CalForBG 2012-12-12T19:51:33 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x63                                  .c
     decimal
@@ -745,7 +720,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 55 CalForBG 2012-12-12T20:55:45 head[2], body[0] 0x0a
+#### RECORD 57 CalForBG 2012-12-12T20:55:45 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0xab                                  ..
     decimal
@@ -755,7 +730,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 56 BolusWizard 2012-12-12T20:55:56 head[2], body[13] 0x5b
+#### RECORD 58 BolusWizard 2012-12-12T20:55:56 head[2], body[13] 0x5b
     op hex (2)
     0000   0x5b 0xab                                  [.
     decimal
@@ -771,11 +746,9 @@ should eat up to null, second bytearray(b'')
               0    2    0   42  125
     HOUR BITS: [0, 0, 1]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x05 0x5c 0xe7 0x04 0x01 0x2a 0x2a    \.\...**
-0008   0x00                                       .
-should eat up to null, second bytearray(b'')
-#### RECORD 57 BolusGiven? 2012-12-12T20:55:56 head[9], body[0] 0x5c
+XXX: VARIABLE READ: 0x05
+super special
+#### RECORD 59 BolusGiven? 2012-12-12T20:55:56 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x05 0x5c 0xe7 0x04 0x01 0x2a 0x2a    \.\...**
     0008   0x00                                       .
@@ -787,7 +760,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 58 ResultTotals 2012-12-12T13:12:12 head[5], body[41] 0x07
+#### RECORD 60 ResultTotals 2012-12-12T13:12:12 head[5], body[41] 0x07
     op hex (5)
     0000   0x07 0x00 0x00 0x04 0x78                   ....x
     decimal
@@ -811,7 +784,7 @@ should eat up to null, second bytearray(b'')
               0
     DAY BITS: [1, 1, 0]
 
-#### RECORD 59 PumpSuspend 2012-12-13T11:03:12 head[2], body[0] 0x1e
+#### RECORD 61 PumpSuspend 2012-12-13T11:03:12 head[2], body[0] 0x1e
     op hex (2)
     0000   0x1e 0x00                                  ..
     decimal
@@ -821,7 +794,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 60 PumpResume 2012-12-13T11:23:22 head[2], body[0] 0x1f
+#### RECORD 62 PumpResume 2012-12-13T11:23:22 head[2], body[0] 0x1f
     op hex (2)
     0000   0x1f 0x00                                  ..
     decimal
@@ -831,7 +804,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 61 CalForBG 2012-12-13T12:57:59 head[2], body[0] 0x0a
+#### RECORD 63 CalForBG 2012-12-13T12:57:59 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x54                                  .T
     decimal
@@ -841,7 +814,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 62 BolusWizard 2012-12-13T12:58:07 head[2], body[13] 0x5b
+#### RECORD 64 BolusWizard 2012-12-13T12:58:07 head[2], body[13] 0x5b
     op hex (2)
     0000   0x5b 0x54                                  [T
     decimal
@@ -857,7 +830,7 @@ should eat up to null, second bytearray(b'')
               0    0    0   21  125
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 63 Bolus 2012-12-13T12:58:07 head[4], body[0] 0x01
+#### RECORD 65 Bolus 2012-12-13T12:58:07 head[4], body[0] 0x01
     op hex (4)
     0000   0x01 0x15 0x15 0x00                        ....
     decimal
@@ -867,7 +840,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 64 BolusWizard 2012-12-13T13:32:52 head[2], body[13] 0x5b
+#### RECORD 66 BolusWizard 2012-12-13T13:32:52 head[2], body[13] 0x5b
     op hex (2)
     0000   0x5b 0x00                                  [.
     decimal
@@ -883,11 +856,9 @@ should eat up to null, second bytearray(b'')
               0    0    0   38  125
     HOUR BITS: [0, 0, 1]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x05 0x54 0x26 0x04 0x01 0x26 0x26    \.T&..&&
-0008   0x00                                       .
-should eat up to null, second bytearray(b'')
-#### RECORD 65 BolusGiven? 2012-12-13T13:32:53 head[9], body[0] 0x5c
+XXX: VARIABLE READ: 0x05
+super special
+#### RECORD 67 BolusGiven? 2012-12-13T13:32:53 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x05 0x54 0x26 0x04 0x01 0x26 0x26    \.T&..&&
     0008   0x00                                       .
@@ -899,7 +870,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     HOUR BITS: [0, 0, 1]
 
-#### RECORD 66 BolusWizard 2012-12-13T14:14:34 head[2], body[13] 0x5b
+#### RECORD 68 BolusWizard 2012-12-13T14:14:34 head[2], body[13] 0x5b
     op hex (2)
     0000   0x5b 0x00                                  [.
     decimal
@@ -915,13 +886,9 @@ should eat up to null, second bytearray(b'')
               0    0    0   20  125
     
 
-should eat up to null first: 0x5c
-0000   0x5c 0x0b 0x54 0x28 0x04 0x44 0x32 0x04    \.T(.D2.
-0008   0x54                                       T
-special found
-0000   0x50 0x04 0x01 0x14 0x14 0x00              P.....
-should eat up to null, second bytearray(b'')
-#### RECORD 67 BolusGiven? 2012-12-13T14:14:34 head[15], body[0] 0x5c
+XXX: VARIABLE READ: 0x0b
+super special
+#### RECORD 69 BolusGiven? 2012-12-13T14:14:34 head[15], body[0] 0x5c
     op hex (15)
     0000   0x5c 0x0b 0x54 0x28 0x04 0x44 0x32 0x04    \.T(.D2.
     0008   0x54 0x50 0x04 0x01 0x14 0x14 0x00         TP.....
@@ -933,7 +900,7 @@ should eat up to null, second bytearray(b'')
     body (0)
     
 
-#### RECORD 68 CalForBG 2012-12-13T18:36:00 head[2], body[0] 0x0a
+#### RECORD 70 CalForBG 2012-12-13T18:36:00 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x85                                  ..
     decimal
@@ -944,4 +911,6 @@ should eat up to null, second bytearray(b'')
     HOUR BITS: [0, 0, 1]
 
 found 6 nulls
-`end logs/ReadHistoryData-page-12.data: 69 records`
+EOF 13 nulls, CRC:
+0000   0x6c 0xe7                                  l.
+`end logs/ReadHistoryData-page-12.data: 71 records`

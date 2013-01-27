@@ -162,12 +162,8 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0   16    0    7  125
     HOUR BITS: [0, 1, 1]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x08 0x32 0x4e 0x04 0x26 0x58 0x04    \.2N.&X.
-0008   0x01                                       .
-special found
-0000   0x07 0x07 0x00                             ...
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x08
+super special
 #### RECORD 12 BolusGiven? 2013-01-20T11:52:20 head[12], body[0] 0x5c
     op hex (12)
     0000   0x5c 0x08 0x32 0x4e 0x04 0x26 0x58 0x04    \.2N.&X.
@@ -206,12 +202,8 @@ should eat up to null, second bytearray(b'')
               0   14    0   38  125
     HOUR BITS: [0, 1, 1]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x0b 0x1c 0x42 0x04 0x32 0x88 0x04    \..B.2..
-0008   0x26                                       &
-special found
-0000   0x92 0x04 0x01 0x26 0x26 0x00              ...&&.
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x0b
+super special
 #### RECORD 15 BolusGiven? 2013-01-20T12:50:15 head[15], body[0] 0x5c
     op hex (15)
     0000   0x5c 0x0b 0x1c 0x42 0x04 0x32 0x88 0x04    \..B.2..
@@ -250,13 +242,8 @@ should eat up to null, second bytearray(b'')
               0   48    0   11  125
     HOUR BITS: [0, 1, 0]
 
-should eat up to null first: 0x5c
-0000   0x5c 0x0e 0x98 0x17 0x04 0x1c 0x53 0x04    \.....S.
-0008   0x32                                       2
-special found
-0000   0x99 0x04 0x26 0xa3 0x04 0x01 0x0b 0x0b    ..&.....
-0008   0x00                                       .
-should eat up to null, second bytearray(b'')
+XXX: VARIABLE READ: 0x0e
+super special
 #### RECORD 18 BolusGiven? 2013-01-20T13:07:45 head[18], body[0] 0x5c
     op hex (18)
     0000   0x5c 0x0e 0x98 0x17 0x04 0x1c 0x53 0x04    \.....S.
@@ -364,4 +351,6 @@ should eat up to null, second bytearray(b'')
     HOUR BITS: [0, 1, 1]
 
 found 555 nulls
+EOF 562 nulls, CRC:
+0000   0x38 0x72                                  8r
 `end logs/ReadHistoryData-page-0.data: 25 records`

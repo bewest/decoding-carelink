@@ -1,3 +1,4 @@
+### MIDNIGHTS analysis/bewest-pump/ReadHistoryData-page-33.data.list_opcodes.markdown: 4
 WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-33.data
 #### RECORD 0 ResultTotals 2012-10-20T13:12:20 head[5], body[41] 0x07
@@ -34,7 +35,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 2 BolusWizard 2012-09-21T17:04:04 head[2], body[22] 0x5b
+#### RECORD 2 BolusWizard 2012-09-21T17:04:04 head[2], body[13] 0x5b
     op hex (2)
     0000   0x5b 0x46                                  [F
     decimal
@@ -42,17 +43,17 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     datetime (2012-09-21T17:04:04)
     0000   0x84 0x44 0x11 0x15 0x0c                   .D...
 --
-    0008   0x00 0x00 0x00 0x09 0x7d 0x5c 0x0e 0x1c    ....}\..
-    0010   0x18 0x04 0x44 0x2c 0x04 0x48 0x12 0x14    ..D,.H..
-    0018   0x94 0x76 0x14 0x01 0x09 0x09 0x00         .v.....
+    0010   0x09 0x00                                  ..
     decimal
-             12   80   13   45  106    0    9    0
-              0    0    0    9  125   92   14   28
-             24    4   68   44    4   72   18   20
-            148  118   20    1    9    9    0
+             92   14   28   24    4   68   44    4
+             72   18   20  148  118   20    1    9
+              9    0
+    datetime (2012-09-21T23:18:04)
+    0000   0x84 0x52 0x57 0x15 0x0c                   .RW..
+    body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 11 LowReservoir 2012-09-21T23:31:34 head[2], body[0] 0x34
+#### RECORD 16 LowReservoir 2012-09-21T23:31:34 head[2], body[0] 0x34
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal
@@ -62,7 +63,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 12 ResultTotals 2012-10-21T13:12:21 head[5], body[41] 0x07
+#### RECORD 17 ResultTotals 2012-10-21T13:12:21 head[5], body[41] 0x07
     op hex (5)
     0000   0x07 0x00 0x00 0x04 0xe4                   .....
     decimal
@@ -86,7 +87,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
-#### RECORD 13 Rewind 2012-09-22T23:11:17 head[2], body[0] 0x21
+#### RECORD 18 Rewind 2012-09-22T23:11:17 head[2], body[0] 0x21
     op hex (2)
     0000   0x21 0x00                                  !.
     decimal
@@ -96,7 +97,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 14 Prime 2012-09-22T23:13:38 head[5], body[0] 0x03
+#### RECORD 19 Prime 2012-09-22T23:13:38 head[5], body[0] 0x03
     op hex (5)
     0000   0x03 0x00 0x00 0x00 0x38                   ....8
     decimal
@@ -106,7 +107,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 15 Prime 2012-09-22T23:14:01 head[5], body[0] 0x03
+#### RECORD 20 Prime 2012-09-22T23:14:01 head[5], body[0] 0x03
     op hex (5)
     0000   0x03 0x00 0x05 0x00 0x05                   .....
     decimal
@@ -116,7 +117,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 16 ResultTotals 2012-10-22T13:12:22 head[5], body[41] 0x07
+#### RECORD 21 ResultTotals 2012-10-22T13:12:22 head[5], body[41] 0x07
     op hex (5)
     0000   0x07 0x00 0x00 0x03 0x82                   .....
     decimal
@@ -140,7 +141,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
-#### RECORD 17 CalForBG 2012-09-23T00:08:00 head[2], body[0] 0x0a
+#### RECORD 22 CalForBG 2012-09-23T00:08:00 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x55                                  .U
     decimal
@@ -150,7 +151,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 18 BolusWizard 2012-09-23T00:08:50 head[2], body[22] 0x5b
+#### RECORD 23 BolusWizard 2012-09-23T00:08:50 head[2], body[13] 0x5b
     op hex (2)
     0000   0x5b 0x55                                  [U
     decimal
@@ -158,27 +159,27 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     datetime (2012-09-23T00:08:50)
     0000   0xb2 0x48 0x00 0x17 0x0c                   .H...
 --
-#### RECORD 43 BolusWizard 2012-09-23T22:26:12 head[2], body[28] 0x5b
-    op hex (2)
-    0000   0x5b 0x00                                  [.
-    decimal
-             91    0
-    datetime (2012-09-23T22:26:12)
-    0000   0x8c 0x5a 0x16 0x17 0x0c                   .Z...
-    body (28)
-    hex
-    0000   0x0d 0x50 0x0d 0x2d 0x6a 0x00 0x0a 0x00    .P.-j...
-    0008   0x00 0x00 0x00 0x0a 0x7d 0x5c 0x0b 0x40    ....}\.@
-    0010   0xb6 0x04 0x44 0xca 0x04 0x24 0x38 0x14    ..D..$8.
-    0018   0x01 0x0a 0x0a 0x00                        ....
+    0008   0x00 0x00 0x00 0x0a 0x7d                   ....}
     decimal
              13   80   13   45  106    0   10    0
-              0    0    0   10  125   92   11   64
-            182    4   68  202    4   36   56   20
-              1   10   10    0
+              0    0    0   10  125
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 44 ResultTotals 2012-10-23T13:12:23 head[5], body[41] 0x07
+XXX: VARIABLE READ: 0x0b
+super special
+#### RECORD 57 BolusGiven? 2012-09-23T22:26:12 head[15], body[0] 0x5c
+    op hex (15)
+    0000   0x5c 0x0b 0x40 0xb6 0x04 0x44 0xca 0x04    \.@..D..
+    0008   0x24 0x38 0x14 0x01 0x0a 0x0a 0x00         $8.....
+    decimal
+             92   11   64  182    4   68  202    4
+             36   56   20    1   10   10    0
+    datetime (2012-09-23T22:26:12)
+    0000   0x8c 0x5a 0x56 0x17 0x0c                   .ZV..
+    body (0)
+    HOUR BITS: [0, 1, 0]
+
+#### RECORD 58 ResultTotals 2012-10-23T13:12:23 head[5], body[41] 0x07
     op hex (5)
     0000   0x07 0x00 0x00 0x06 0x72                   ....r
     decimal
@@ -202,7 +203,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
 
-#### RECORD 45 PumpSuspend 2012-09-24T12:34:30 head[2], body[0] 0x1e
+#### RECORD 59 PumpSuspend 2012-09-24T12:34:30 head[2], body[0] 0x1e
     op hex (2)
     0000   0x1e 0x00                                  ..
     decimal
@@ -212,7 +213,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [0, 1, 1]
 
-#### RECORD 46 PumpResume 2012-09-24T12:51:34 head[2], body[0] 0x1f
+#### RECORD 60 PumpResume 2012-09-24T12:51:34 head[2], body[0] 0x1f
     op hex (2)
     0000   0x1f 0x00                                  ..
     decimal
@@ -220,17 +221,15 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     datetime (2012-09-24T12:51:34)
     0000   0xa2 0x73 0x0c 0x18 0x0c                   .s...
 --
-    hex
-    0000   0x0d 0x50 0x0d 0x2d 0x6a 0x00 0x0a 0x00    .P.-j...
-    0008   0x00 0x00 0x00 0x0a 0x7d 0x5c 0x05 0xf0    ....}\..
-    0010   0xdc 0x04 0x01 0x0a 0x0a 0x00              ......
     decimal
-             13   80   13   45  106    0   10    0
-              0    0    0   10  125   92    5  240
-            220    4    1   10   10    0
+             92    5  240  220    4    1   10   10
+              0
+    datetime (2012-09-24T17:04:10)
+    0000   0x8a 0x44 0x51 0x18 0x0c                   .DQ..
+    body (0)
     HOUR BITS: [0, 1, 0]
 
-#### RECORD 51 CalForBG 2012-09-24T19:10:00 head[2], body[0] 0x0a
+#### RECORD 67 CalForBG 2012-09-24T19:10:00 head[2], body[0] 0x0a
     op hex (2)
     0000   0x0a 0x94                                  ..
     decimal
@@ -240,4 +239,6 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     body (0)
     HOUR BITS: [0, 1, 0]
 
-`end logs/ReadHistoryData-page-33.data: 52 records`
+DATE LESS THAN 5! 1024
+0000   0x00 0x00 0xb0 0x99                        ....
+`end logs/ReadHistoryData-page-33.data: 68 records`

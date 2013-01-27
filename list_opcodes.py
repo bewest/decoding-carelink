@@ -36,6 +36,7 @@ class Record(object):
   _names = {
     0x01: 'Bolus',
     0x03: 'Prime',
+    0x06: 'NoDelivery',
     0x07: 'ResultTotals',
     0x08: 'ChangeBasalProfile',
     0x14: 'SelectBasalProfile',
@@ -78,14 +79,15 @@ class Record(object):
     # observed on bewest-pump
     # 0x2e: 24,
     # 0x5c: 12,
-    0x5c: 9,
+    0x5b: 2,
+    0x5c: 2,
 
     # 0x0c: 22,
-    0x0c: 19,
     0x6d: 46,
 
     # hacks
 
+    #0x0c: 19,
     #0x18: 1,
     #0x06: 3,
     # 0x00: 3,
@@ -98,6 +100,7 @@ class Record(object):
     # 0x5b: 22,
     0x5b: 13,
     0x45: 3,
+    #0x06: 7,
     0x07: 38 + 3,
 
     0x08: 42,
@@ -109,7 +112,7 @@ class Record(object):
     # 0x18: 6,
     # 0x21: 23,
 
-    0x6c: 32,
+    #0x6c: 32,
 
     # observed on bewest-pump
 
@@ -137,7 +140,20 @@ class Record(object):
     return cls._date
 
   @classmethod
+  def has_variable_head(cls, opcode):
+    if opcode == 0x5c:
+      return True
+    return False
+
+  @classmethod
+  def variable_read(cls, opcode, body):
+    if opcode == 0x5c and body[1:]:
+      print "XXX: VARIABLE READ: %#04x" % body[1]
+      return body[1]
+    return 0
+  @classmethod
   def seeks_null(cls, opcode, body):
+    return False
     if opcode ==  0x5c:
       return True
     if False and opcode == 0x5b:
@@ -225,58 +241,79 @@ def find_dates(stream):
   bolus = bytearray( )
   extra = bytearray( )
   opcode = ''
-  for B in iter(lambda: stream.read(1), ""):
+  for B in iter(lambda: bytearray(stream.read(2)), bytearray("")):
 
-    if len(bolus) == 0:
-      opcode = bytearray(B)[0]
-    bolus.append(B)
+    opcode = B[0]
+    #bolus.append(B)
+    bolus.extend(B)
 
     head_length = Record.lookup_head(opcode)
     body_length = Record.lookup_body(opcode)
     date_length = Record.lookup_date(opcode)
     total = len(bolus)
 
+
     if total < head_length:
       bolus.extend(bytearray(stream.read(head_length-total)))
+    variable_read = Record.variable_read(opcode, bolus)
 
-    if Record.seeks_null(opcode, bolus):
-      print "should eat up to null first: %#04x" %  opcode
-      print lib.hexdump(bolus)
-      if bolus[-1] == 0x34:
-        print "super super special"
-        bolus.extend(bytearray(stream.read(2)))
-        head_length = head_length + 2
-      if bolus[-1] == 0x64:
-        print "super special"
-        bolus.extend(bytearray(stream.read(6)))
-        head_length = head_length + 6
-      if bolus[-1] != 0x00 and bolus[-1] != 0x34:
-        extra = seek_null(stream)
-        head_length = head_length + len(extra)
-        print "special found"
-        print lib.hexdump(extra)
-        bolus.extend(extra)
+    if variable_read > 2:
 
+      print "super special"
+      bolus.extend(bytearray(stream.read(variable_read)))
+      #print lib.hexdump( bolus )
+      opcode = bolus[variable_read]
+      #print "NEW OPCODE %#04x" % opcode
+      head_length = Record.lookup_head(opcode)
+      body_length = Record.lookup_body(opcode)
+      total = len(bolus) - variable_read
 
-    head = bolus[:max(head_length, 1)]
+      if total < head_length:
+        bolus.extend( stream.read(head_length-total) )
+      total = len(bolus)
+
+      #body_length = Record.lookup_body(opcode)
+      #date_length = Record.lookup_date(opcode)
+      #total = len(bolus)
+
+    total = len(bolus)
+    head_length = total
+      
+
+    head = bolus[:max(total, 1)]
 
     bolus.extend(bytearray(stream.read(date_length)))
     date = bolus[head_length:head_length+date_length]
     total = len(bolus)
     # print repr(bolus), date_length, repr(date)
     if len(date) < 5:
+      print "DATE LESS THAN 5!", stream.tell( )
+      print lib.hexdump(bolus)
+      break
       records[-1].body.extend(bolus)
-      continue
     datetime = parse_date(date)
     if bytearray( [0x00] * min(total, 5) ) in bolus:
       nulls = bytearray(eat_nulls(stream))
-      records[-1].body.extend(nulls)
+      pos = stream.tell( )
+      if pos > 1021:
+        bolus = bolus + nulls + bytearray(stream.read(-1))
+        crc = bolus[-2:]
+        nulls = bolus[:-2]
+        print "EOF {} nulls, CRC:".format(len(nulls))
+        print lib.hexdump(crc)
+      else:
+        print "TOO MANY NULLS, BAILING ON STREAM at %s " % stream.tell( )
+        print lib.hexdump(bolus)
+        print lib.hexdump(nulls)
+        print "MISSING: ARE THERE 32 more bytes?"
+        print lib.hexdump(bytearray(stream.read(32)))
+      # records[-1].body.extend(nulls)
       break
 
     
     if not Record.is_midnight(head):
       if datetime is None:
-        print "#### MISSING DATETIME, reading more to debug"
+        print "#### MISSING DATETIME, reading more to debug %#04x" % opcode
         bolus.extend(bytearray(stream.read(24)))
         print "##### DEBUG HEX"
         print lib.hexdump(bolus, indent=4)
@@ -289,7 +326,7 @@ def find_dates(stream):
 
       body = bytearray(stream.read(body_length))
       bolus.extend(body)
-      if Record.seeks_null(opcode, body):
+      if False or Record.seeks_null(opcode, body):
         print "should eat up to null, second %s" % repr(body[1:])
         if body[1:]:
           if body[-1] != 0x00:

@@ -361,7 +361,8 @@ function run_regress ( ) {
 
 function find_missing_for ( ) {
   x=${1}
-  echo "### $x"
+  echo -n "### $x: "
+  grep -B 60 -A 70 MISSING -E $x | grep MISSING | wc -l
   grep -B 60 -A 70 MISSING -E $x
 
 }
@@ -379,7 +380,8 @@ function update_missing_analysis ( ) {
 
 function find_midnights_page ( ) {
   x=${1}
-  echo $x
+  echo -n "### MIDNIGHTS $x: "
+  grep -B 20 -A 40 -E --color "page|START|Result" $x | grep "RECORD.*ResultTotals" | wc -l
   grep -B 20 -A 40 -E --color "page|START|Result" $x 
 }
 
@@ -397,8 +399,9 @@ function update_midnights_analysis ( ) {
 
 function find_special_bolus_page ( ) {
   x=${1}
-  echo "### $x"
-  grep -B 15 -A 30 -E "(RECORD|MISSING).* 0x5c" $x
+  echo -n "### $x: "
+  grep -B 15 -A 30 -E "(RECORD|MISSING|null first).* 0x5c" $x | grep RECORD | grep Bolus | wc -l
+  grep -B 15 -A 30 -E "(RECORD|MISSING|null first).* 0x5c" $x
 
 }
 
