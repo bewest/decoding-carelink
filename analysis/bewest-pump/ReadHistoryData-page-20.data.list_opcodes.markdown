@@ -1,4 +1,3 @@
-WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-20.data
 #### RECORD 0 Record 2012-11-09T10:14:03 head[46], body[0] 0x6d
     op hex (46)
@@ -92,8 +91,6 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0    0    0   11  125
     HOUR BITS: [1, 1, 0]
 
-XXX: VARIABLE READ: 0x05
-super special
 #### RECORD 7 BolusGiven? 2012-11-09T11:01:47 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x05 0x58 0x07 0x04 0x01 0x0b 0x0b    \.X.....
@@ -132,8 +129,6 @@ super special
               0   28    0   47  125
     HOUR BITS: [1, 1, 1]
 
-XXX: VARIABLE READ: 0x05
-super special
 #### RECORD 10 BolusGiven? 2012-11-09T11:50:43 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x05 0x84 0x38 0x04 0x01 0x2f 0x2f    \..8..//
@@ -172,8 +167,6 @@ super special
               0    0    0   53  125
     HOUR BITS: [1, 1, 1]
 
-XXX: VARIABLE READ: 0x05
-super special
 #### RECORD 13 BolusGiven? 2012-11-09T19:39:23 head[7], body[0] 0x5c
     op hex (7)
     0000   0x5c 0x05 0xbc 0xdb 0x14 0x1e 0x00         \......
@@ -240,8 +233,6 @@ super special
               0    1    0   60  125
     HOUR BITS: [1, 1, 1]
 
-XXX: VARIABLE READ: 0x08
-super special
 #### RECORD 19 BolusGiven? 2012-11-09T19:41:14 head[12], body[0] 0x5c
     op hex (12)
     0000   0x5c 0x08 0x04 0x07 0x04 0xbc 0xdd 0x14    \.......
@@ -314,8 +305,6 @@ super special
               0    0    0   34  125
     HOUR BITS: [1, 1, 1]
 
-XXX: VARIABLE READ: 0x17
-super special
 #### RECORD 24 BolusGiven? 2012-11-10T00:50:39 head[27], body[0] 0x5c
     op hex (27)
     0000   0x5c 0x17 0x12 0x00 0x14 0x14 0x0a 0x14    \.......
@@ -358,8 +347,6 @@ super special
               0    0    0   33  125
     HOUR BITS: [1, 1, 0]
 
-XXX: VARIABLE READ: 0x05
-super special
 #### RECORD 27 BolusGiven? 2012-11-10T07:12:31 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x05 0x90 0x84 0x14 0x01 0x23 0x23    \.....##
@@ -474,8 +461,6 @@ super special
               0   32    0   50  125
     HOUR BITS: [1, 1, 1]
 
-XXX: VARIABLE READ: 0x05
-super special
 #### RECORD 37 BolusGiven? 2012-11-10T19:49:31 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x05 0xa0 0x41 0x04 0x01 0x32 0x32    \..A..22
@@ -504,8 +489,6 @@ super special
               0    0    0   23  125
     HOUR BITS: [1, 1, 1]
 
-XXX: VARIABLE READ: 0x08
-super special
 #### RECORD 39 BolusGiven? 2012-11-10T20:49:10 head[12], body[0] 0x5c
     op hex (12)
     0000   0x5c 0x08 0xc8 0x41 0x04 0xa0 0x7d 0x04    \..A..}.
@@ -568,8 +551,6 @@ super special
               0    0    0   22  125
     HOUR BITS: [1, 1, 1]
 
-XXX: VARIABLE READ: 0x0b
-super special
 #### RECORD 43 BolusGiven? 2012-11-11T01:59:17 head[15], body[0] 0x5c
     op hex (15)
     0000   0x5c 0x0b 0x5c 0x3b 0x14 0xc8 0x77 0x14    \.\;..w.
@@ -608,8 +589,6 @@ super special
               0    0    0   47  125
     HOUR BITS: [1, 1, 0]
 
-XXX: VARIABLE READ: 0x05
-super special
 #### RECORD 46 BolusGiven? 2012-11-11T07:03:57 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x05 0x6c 0x35 0x14 0x01 0x32 0x32    \.l5..22
@@ -668,8 +647,6 @@ super special
               0    0    0    8  125
     HOUR BITS: [1, 1, 1]
 
-XXX: VARIABLE READ: 0x08
-super special
 #### RECORD 51 BolusGiven? 2012-11-11T11:50:12 head[12], body[0] 0x5c
     op hex (12)
     0000   0x5c 0x08 0xc4 0x1e 0x14 0x04 0x28 0x14    \.....(.
@@ -708,8 +685,6 @@ super special
               0   10    0   38  125
     HOUR BITS: [1, 1, 1]
 
-XXX: VARIABLE READ: 0x0b
-super special
 #### RECORD 54 BolusGiven? 2012-11-11T11:55:23 head[15], body[0] 0x5c
     op hex (15)
     0000   0x5c 0x0b 0x28 0x0b 0x04 0xc4 0x23 0x14    \.(...#.
@@ -738,8 +713,6 @@ super special
               0    0    0   19  125
     HOUR BITS: [1, 1, 0]
 
-XXX: VARIABLE READ: 0x0e
-super special
 #### RECORD 56 BolusGiven? 2012-11-11T13:13:59 head[18], body[0] 0x5c
     op hex (18)
     0000   0x5c 0x0e 0x98 0x4f 0x04 0x28 0x59 0x04    \..O.(Y.
@@ -780,8 +753,6 @@ super special
               0    0    0   12  125
     HOUR BITS: [1, 1, 1]
 
-XXX: VARIABLE READ: 0x08
-super special
 #### RECORD 59 BolusGiven? 2012-11-11T20:39:34 head[12], body[0] 0x5c
     op hex (12)
     0000   0x5c 0x08 0x4a 0xbd 0x14 0x02 0xc7 0x14    \.J.....
@@ -820,8 +791,6 @@ super special
               0    6    0   22  125
     HOUR BITS: [1, 1, 0]
 
-XXX: VARIABLE READ: 0x05
-super special
 #### RECORD 62 BolusGiven? 2012-11-11T22:31:44 head[9], body[0] 0x5c
     op hex (9)
     0000   0x5c 0x05 0x30 0x75 0x04 0x01 0x16 0x16    \.0u....

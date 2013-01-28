@@ -6,7 +6,7 @@ import textwrap
 from pprint import pprint, pformat
 from binascii import hexlify
 # from datetime import datetime
-from scapy.all import *
+# from scapy.all import *
 
 from pump import lib, history
 
@@ -138,7 +138,7 @@ class Record(object):
   @classmethod
   def variable_read(cls, opcode, body):
     if opcode == 0x5c and body[1:]:
-      print "XXX: VARIABLE READ: %#04x" % body[1]
+      #print "XXX: VARIABLE READ: %#04x" % body[1]
       return body[1]
     return 0
   @classmethod
@@ -249,7 +249,7 @@ def find_dates(stream):
 
     if variable_read > 2:
 
-      print "super special"
+      #print "super special"
       bolus.extend(bytearray(stream.read(variable_read)))
       #print lib.hexdump( bolus )
       opcode = bolus[variable_read]

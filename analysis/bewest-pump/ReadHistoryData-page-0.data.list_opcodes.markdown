@@ -1,4 +1,3 @@
-WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-0.data
 #### RECORD 0 Record 2013-01-19T21:49:27 head[46], body[0] 0x6d
     op hex (46)
@@ -162,8 +161,6 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0   16    0    7  125
     HOUR BITS: [0, 1, 1]
 
-XXX: VARIABLE READ: 0x08
-super special
 #### RECORD 12 BolusGiven? 2013-01-20T11:52:20 head[12], body[0] 0x5c
     op hex (12)
     0000   0x5c 0x08 0x32 0x4e 0x04 0x26 0x58 0x04    \.2N.&X.
@@ -202,8 +199,6 @@ super special
               0   14    0   38  125
     HOUR BITS: [0, 1, 1]
 
-XXX: VARIABLE READ: 0x0b
-super special
 #### RECORD 15 BolusGiven? 2013-01-20T12:50:15 head[15], body[0] 0x5c
     op hex (15)
     0000   0x5c 0x0b 0x1c 0x42 0x04 0x32 0x88 0x04    \..B.2..
@@ -242,8 +237,6 @@ super special
               0   48    0   11  125
     HOUR BITS: [0, 1, 0]
 
-XXX: VARIABLE READ: 0x0e
-super special
 #### RECORD 18 BolusGiven? 2013-01-20T13:07:45 head[18], body[0] 0x5c
     op hex (18)
     0000   0x5c 0x0e 0x98 0x17 0x04 0x1c 0x53 0x04    \.....S.
