@@ -345,9 +345,11 @@ function print_pretty_csv( ) {
 
 }
 
+TOOL=list_history.py
+
 function opcodes ( ) {
   x=${1}
-  python list_opcodes.py $x 2>&1
+  python $TOOL $x 2>&1
 
 }
 

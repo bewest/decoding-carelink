@@ -1,7 +1,26 @@
 ### MIDNIGHTS analysis/bewest-pump/ReadHistoryData-page-34.data.list_opcodes.markdown: 3
-WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-34.data
-#### RECORD 0 BolusWizard 2012-09-17T18:56:02 head[2], body[13] 0x5b
+#### STOPPING DOUBLE NULLS @ 1018, found 4 nulls
+reading more to debug 0x00
+    0000   0x00 0x00                                  ..
+              0    0
+##### DEBUG HEX
+    0000   0x1f 0xf2                                  ..
+##### DEBUG DECIMAL
+             31  242
+#### RECORD 0 BolusWizard 2012-09-17T18:56:02 head[2], body[13] op[0x5b]
+###### DECODED
+```python
+{'bg': 188,
+ 'bg_target_high': 125,
+ 'bg_target_low': 106,
+ 'bolus_estimate': 0.6,
+ 'carb_input': 0,
+ 'carb_ratio': 13,
+ 'correction_estimate': 0.0,
+ 'sensitivity': 45,
+ 'unabsorbed_insulin_total': 0.8}
+```
     op hex (2)
     0000   0x5b 0xbc                                  [.
     decimal
@@ -16,53 +35,34 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               0   80   13   45  106   14    0    0
               0    8    0    6  125
     HOUR BITS: [0, 1, 1]
-
-XXX: VARIABLE READ: 0x0e
-super special
-#### RECORD 1 BolusGiven? 2012-09-17T18:56:02 head[18], body[0] 0x5c
-    op hex (18)
-    0000   0x5c 0x0e 0x18 0x48 0x04 0x5c 0xca 0x04    \..H.\..
-    0008   0x12 0xf2 0x04 0x62 0xfc 0x04 0x01 0x06    ...b....
-    0010   0x06 0x00                                  ..
-    decimal
-             92   14   24   72    4   92  202    4
-             18  242    4   98  252    4    1    6
-              6    0
-    datetime (2012-09-17T18:56:02)
-    0000   0x82 0x78 0x52 0x11 0x0c                   .xR..
-    body (0)
-    HOUR BITS: [0, 1, 1]
-
-#### RECORD 2 CalForBG 2012-09-17T18:58:45 head[2], body[0] 0x0a
-    op hex (2)
-    0000   0x0a 0xb6                                  ..
-    decimal
-             10  182
-    datetime (2012-09-17T18:58:45)
-    0000   0xad 0x7a 0x32 0x11 0x0c                   .z2..
-    body (0)
+#### RECORD 1 BolusGiven unknown head[14], body[0] op[0x5c]
+###### DECODED
+```python
+[{'age': 72, 'amount': 0.6, 'curve': 4},
+ {'age': 202, 'amount': 2.3, 'curve': 4},
 --
-             40   80   13   45  106   14   30    0
-              0   13    0   31  125
-    HOUR BITS: [0, 1, 1]
-
-XXX: VARIABLE READ: 0x11
-super special
-#### RECORD 5 BolusGiven? 2012-09-17T18:59:07 head[21], body[0] 0x5c
-    op hex (21)
-    0000   0x5c 0x11 0x18 0x05 0x04 0x18 0x4b 0x04    \.....K.
-    0008   0x5c 0xcd 0x04 0x12 0xf5 0x04 0x62 0xff    \.....b.
-    0010   0x04 0x01 0x20 0x20 0x00                   ..  .
-    decimal
              92   17   24    5    4   24   75    4
              92  205    4   18  245    4   98  255
-              4    1   32   32    0
+              4
+    datetime (unknown)
+
+    body (0)
+
+#### RECORD 7 Bolus 2012-09-17T18:59:07 head[4], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 3.2, 'programmed': 3.2}
+```
+    op hex (4)
+    0000   0x01 0x20 0x20 0x00                        .  .
+    decimal
+              1   32   32    0
     datetime (2012-09-17T18:59:07)
     0000   0x87 0x7b 0x52 0x11 0x0c                   .{R..
     body (0)
     HOUR BITS: [0, 1, 1]
+#### RECORD 8 ResultTotals 2012-10-17T13:12:17 head[5], body[41] op[0x07]
 
-#### RECORD 6 ResultTotals 2012-10-17T13:12:17 head[5], body[41] 0x07
     op hex (5)
     0000   0x07 0x00 0x00 0x05 0x08                   .....
     decimal
@@ -85,8 +85,8 @@ super special
               1    1    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
+#### RECORD 9 Rewind 2012-09-18T04:36:42 head[2], body[0] op[0x21]
 
-#### RECORD 7 Rewind 2012-09-18T04:36:42 head[2], body[0] 0x21
     op hex (2)
     0000   0x21 0x00                                  !.
     decimal
@@ -95,17 +95,14 @@ super special
     0000   0xaa 0x64 0x04 0x12 0x0c                   .d...
     body (0)
     HOUR BITS: [0, 1, 1]
+#### RECORD 10 Prime 2012-09-18T04:38:09 head[5], body[0] op[0x03]
 
-#### RECORD 8 Prime 2012-09-18T04:38:09 head[5], body[0] 0x03
     op hex (5)
     0000   0x03 0x00 0x00 0x00 0x28                   ....(
     decimal
               3    0    0    0   40
     datetime (2012-09-18T04:38:09)
-    0000   0x89 0x66 0x24 0x12 0x0c                   .f$..
 --
-    0000   0xb0 0x73 0x17 0x12 0x0c                   .s...
-    body (13)
     hex
     0000   0x2c 0x50 0x0d 0x2d 0x6a 0x03 0x21 0x00    ,P.-j.!.
     0008   0x00 0x00 0x00 0x24 0x7d                   ...$}
@@ -113,8 +110,11 @@ super special
              44   80   13   45  106    3   33    0
               0    0    0   36  125
     HOUR BITS: [0, 1, 1]
-
-#### RECORD 24 Bolus 2012-09-18T23:51:48 head[4], body[0] 0x01
+#### RECORD 28 Bolus 2012-09-18T23:51:48 head[4], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 3.6, 'programmed': 3.6}
+```
     op hex (4)
     0000   0x01 0x24 0x24 0x00                        .$$.
     decimal
@@ -123,8 +123,8 @@ super special
     0000   0xb0 0x73 0x57 0x12 0x0c                   .sW..
     body (0)
     HOUR BITS: [0, 1, 1]
+#### RECORD 29 ResultTotals 2012-10-18T13:12:18 head[5], body[41] op[0x07]
 
-#### RECORD 25 ResultTotals 2012-10-18T13:12:18 head[5], body[41] 0x07
     op hex (5)
     0000   0x07 0x00 0x00 0x05 0xb6                   .....
     decimal
@@ -147,8 +147,8 @@ super special
               1    2    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
+#### RECORD 30 PumpSuspend 2012-09-19T14:12:51 head[2], body[0] op[0x1e]
 
-#### RECORD 26 PumpSuspend 2012-09-19T14:12:51 head[2], body[0] 0x1e
     op hex (2)
     0000   0x1e 0x00                                  ..
     decimal
@@ -157,36 +157,36 @@ super special
     0000   0xb3 0x4c 0x0e 0x13 0x0c                   .L...
     body (0)
     HOUR BITS: [0, 1, 0]
+#### RECORD 31 PumpResume 2012-09-19T14:45:08 head[2], body[0] op[0x1f]
 
-#### RECORD 27 PumpResume 2012-09-19T14:45:08 head[2], body[0] 0x1f
     op hex (2)
     0000   0x1f 0x00                                  ..
     decimal
              31    0
     datetime (2012-09-19T14:45:08)
-    0000   0x88 0x6d 0x0e 0x13 0x0c                   .m...
 --
-    0008   0x00 0x00 0x00 0x25 0x7d                   ...%}
-    decimal
-              0   81   13   45  106   37    0    0
-              0    0    0   37  125
-    HOUR BITS: [0, 1, 1]
-
-XXX: VARIABLE READ: 0x0b
-super special
-#### RECORD 38 BolusGiven? 2012-09-19T21:46:35 head[15], body[0] 0x5c
-    op hex (15)
-    0000   0x5c 0x0b 0x0c 0x38 0x14 0x20 0x4c 0x14    \..8. L.
-    0008   0xd0 0x88 0x14 0x01 0x16 0x16 0x00         .......
     decimal
              92   11   12   56   20   32   76   20
-            208  136   20    1   22   22    0
+            208  136   20
+    datetime (unknown)
+
+    body (0)
+
+#### RECORD 45 Bolus 2012-09-19T21:46:35 head[4], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 2.2, 'programmed': 2.2}
+```
+    op hex (4)
+    0000   0x01 0x16 0x16 0x00                        ....
+    decimal
+              1   22   22    0
     datetime (2012-09-19T21:46:35)
     0000   0xa3 0x6e 0x55 0x13 0x0c                   .nU..
     body (0)
     HOUR BITS: [0, 1, 1]
+#### RECORD 46 ResultTotals 2012-10-19T13:12:19 head[5], body[41] op[0x07]
 
-#### RECORD 39 ResultTotals 2012-10-19T13:12:19 head[5], body[41] 0x07
     op hex (5)
     0000   0x07 0x00 0x00 0x04 0xc4                   .....
     decimal
@@ -209,8 +209,11 @@ super special
               1    0    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
-
-#### RECORD 40 CalForBG 2012-09-20T08:52:14 head[2], body[0] 0x0a
+#### RECORD 47 CalForBG 2012-09-20T08:52:14 head[2], body[0] op[0x0a]
+###### DECODED
+```python
+{'amount': 28}
+```
     op hex (2)
     0000   0x0a 0x1c                                  ..
     decimal
@@ -219,33 +222,29 @@ super special
     0000   0x8e 0x74 0x28 0x14 0x8c                   .t(..
     body (0)
     HOUR BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 0]
-
-#### RECORD 41 BolusWizard 2012-09-20T08:52:16 head[2], body[13] 0x5b
-    op hex (2)
-    0000   0x5b 0x1c                                  [.
-    decimal
-             91   28
-    datetime (2012-09-20T08:52:16)
-    0000   0x90 0x74 0x08 0x14 0x0c                   .t...
+#### RECORD 48 BolusWizard 2012-09-20T08:52:16 head[2], body[13] op[0x5b]
+###### DECODED
+```python
+{'bg': 284,
 --
-
-XXX: VARIABLE READ: 0x0e
-super special
-#### RECORD 65 BolusGiven? 2012-09-20T19:02:06 head[18], body[0] 0x5c
-    op hex (18)
-    0000   0x5c 0x0e 0x1a 0x34 0x14 0x4e 0x3e 0x14    \..4.N>.
-    0008   0x08 0x70 0x14 0x16 0xac 0x14 0x01 0x1f    .p......
-    0010   0x1f 0x00                                  ..
     decimal
              92   14   26   52   20   78   62   20
-              8  112   20   22  172   20    1   31
-             31    0
+              8  112   20   22  172   20
+    datetime (unknown)
+
+    body (0)
+
+#### RECORD 78 Bolus 2012-09-20T19:02:06 head[4], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 3.1, 'programmed': 3.1}
+```
+    op hex (4)
+    0000   0x01 0x1f 0x1f 0x00                        ....
+    decimal
+              1   31   31    0
     datetime (2012-09-20T19:02:06)
     0000   0x86 0x42 0x53 0x14 0x0c                   .BS..
     body (0)
     HOUR BITS: [0, 1, 0]
-
-found 0 nulls
-EOF 6 nulls, CRC:
-0000   0x1f 0xf2                                  ..
-`end logs/ReadHistoryData-page-34.data: 66 records`
+`end logs/ReadHistoryData-page-34.data: 79 records`

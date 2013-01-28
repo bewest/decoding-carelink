@@ -1,7 +1,15 @@
 ### MIDNIGHTS analysis/bewest-pump/ReadHistoryData-page-20.data.list_opcodes.markdown: 3
-WARNING: No route found for IPv6 destination :: (no default route?)
 ## START logs/ReadHistoryData-page-20.data
-#### RECORD 0 Record 2012-11-09T10:14:03 head[46], body[0] 0x6d
+#### STOPPING DOUBLE NULLS @ 1022, found 0 nulls
+reading more to debug 0x00
+    0000   0x00 0x00                                  ..
+              0    0
+##### DEBUG HEX
+    0000   0x6c 0xde                                  l.
+##### DEBUG DECIMAL
+            108  222
+#### RECORD 0 hack1 2012-11-09T10:14:03 head[46], body[0] op[0x6d]
+
     op hex (46)
     0000   0x6d 0xa8 0x8c 0x05 0x00 0x75 0x4d 0x8d    m....uM.
     0008   0x05 0x00 0x00 0x05 0x34 0x03 0x6c 0x42    ....4.lB
@@ -20,8 +28,8 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x83 0xce 0x0a 0x09 0x0c                   .....
     body (0)
     HOUR BITS: [1, 1, 0]
+#### RECORD 1 Prime 2012-11-09T10:15:03 head[5], body[0] op[0x03]
 
-#### RECORD 1 Prime 2012-11-09T10:15:03 head[5], body[0] 0x03
     op hex (5)
     0000   0x03 0x00 0x00 0x00 0x40                   ....@
     decimal
@@ -30,29 +38,21 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x83 0xcf 0x2a 0x09 0x0c                   ..*..
     body (0)
     HOUR BITS: [1, 1, 0]
-
-#### RECORD 2 Prime 2012-11-09T10:15:35 head[5], body[0] 0x03
-    op hex (5)
-    0000   0x03 0x00 0x05 0x00 0x05                   .....
-    decimal
-              3    0    5    0    5
-    datetime (2012-11-09T10:15:35)
-    0000   0xa3 0xcf 0x0a 0x09 0x0c                   .....
-    body (0)
-    HOUR BITS: [1, 1, 0]
+#### RECORD 2 Prime 2012-11-09T10:15:35 head[5], body[0] op[0x03]
 
 --
-    0000   0x5c 0x08 0x04 0x07 0x04 0xbc 0xdd 0x14    \.......
-    0008   0x01 0x1f 0x1f 0x00                        ....
+    0000   0x01 0x1f 0x1f 0x00                        ....
     decimal
-             92    8    4    7    4  188  221   20
               1   31   31    0
     datetime (2012-11-09T19:41:14)
     0000   0x8e 0xe9 0x93 0x09 0x0c                   .....
     body (0)
     HOUR BITS: [1, 1, 1]
-
-#### RECORD 20 Bolus 2012-11-09T19:43:16 head[4], body[0] 0x01
+#### RECORD 24 Bolus 2012-11-09T19:43:16 head[4], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 2.9, 'programmed': 2.9}
+```
     op hex (4)
     0000   0x01 0x1d 0x1d 0x02                        ....
     decimal
@@ -61,8 +61,8 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x90 0xeb 0xb3 0x09 0x0c                   .....
     body (0)
     HOUR BITS: [1, 1, 1]
+#### RECORD 25 ResultTotals 2012-10-09T13:12:41 head[5], body[41] op[0x07]
 
-#### RECORD 21 ResultTotals 2012-10-09T13:12:41 head[5], body[41] 0x07
     op hex (5)
     0000   0x07 0x00 0x00 0x05 0xb8                   .....
     decimal
@@ -85,8 +85,11 @@ WARNING: No route found for IPv6 destination :: (no default route?)
               1    1    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
-
-#### RECORD 22 CalForBG 2012-11-10T00:50:24 head[2], body[0] 0x0a
+#### RECORD 26 CalForBG 2012-11-10T00:50:24 head[2], body[0] op[0x0a]
+###### DECODED
+```python
+{'amount': 22}
+```
     op hex (2)
     0000   0x0a 0x16                                  ..
     decimal
@@ -95,36 +98,33 @@ WARNING: No route found for IPv6 destination :: (no default route?)
     0000   0x98 0xf2 0x20 0x0a 0x8c                   .. ..
     body (0)
     HOUR BITS: [1, 1, 1] YEAR BITS: [1, 0, 0, 0]
-
-#### RECORD 23 BolusWizard 2012-11-10T00:50:39 head[2], body[13] 0x5b
-    op hex (2)
-    0000   0x5b 0x16                                  [.
-    decimal
-             91   22
-    datetime (2012-11-10T00:50:39)
-    0000   0xa7 0xf2 0x00 0x0a 0x0c                   .....
+#### RECORD 27 BolusWizard 2012-11-10T00:50:39 head[2], body[13] op[0x5b]
+###### DECODED
+```python
+{'bg': 278,
 --
-    0008   0x00 0x00 0x00 0x17 0x7d                   ....}
-    decimal
-             31   80   13   45  106    0   23    0
-              0    0    0   23  125
-    HOUR BITS: [1, 1, 1]
-
-XXX: VARIABLE READ: 0x08
-super special
-#### RECORD 39 BolusGiven? 2012-11-10T20:49:10 head[12], body[0] 0x5c
-    op hex (12)
     0000   0x5c 0x08 0xc8 0x41 0x04 0xa0 0x7d 0x04    \..A..}.
-    0008   0x01 0x17 0x17 0x00                        ....
     decimal
              92    8  200   65    4  160  125    4
+    datetime (unknown)
+
+    body (0)
+
+#### RECORD 47 Bolus 2012-11-10T20:49:10 head[4], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 2.3, 'programmed': 2.3}
+```
+    op hex (4)
+    0000   0x01 0x17 0x17 0x00                        ....
+    decimal
               1   23   23    0
     datetime (2012-11-10T20:49:10)
     0000   0x8a 0xf1 0x54 0x0a 0x0c                   ..T..
     body (0)
     HOUR BITS: [1, 1, 1]
+#### RECORD 48 ResultTotals 2012-10-10T13:12:42 head[5], body[41] op[0x07]
 
-#### RECORD 40 ResultTotals 2012-10-10T13:12:42 head[5], body[41] 0x07
     op hex (5)
     0000   0x07 0x00 0x00 0x06 0x60                   ....`
     decimal
@@ -147,8 +147,11 @@ super special
               2    0    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
-
-#### RECORD 41 CalForBG 2012-11-11T01:59:01 head[2], body[0] 0x0a
+#### RECORD 49 CalForBG 2012-11-11T01:59:01 head[2], body[0] op[0x0a]
+###### DECODED
+```python
+{'amount': 224}
+```
     op hex (2)
     0000   0x0a 0xe0                                  ..
     decimal
@@ -157,36 +160,33 @@ super special
     0000   0x81 0xfb 0x21 0x0b 0x0c                   ..!..
     body (0)
     HOUR BITS: [1, 1, 1]
-
-#### RECORD 42 BolusWizard 2012-11-11T01:59:17 head[2], body[13] 0x5b
-    op hex (2)
-    0000   0x5b 0xe0                                  [.
-    decimal
-             91  224
-    datetime (2012-11-11T01:59:17)
-    0000   0x91 0xfb 0x01 0x0b 0x0c                   .....
+#### RECORD 50 BolusWizard 2012-11-11T01:59:17 head[2], body[13] op[0x5b]
+###### DECODED
+```python
+{'bg': 224,
 --
-    0008   0x00 0x06 0x00 0x16 0x7d                   ....}
+    0000   0x5c 0x05 0x30 0x75 0x04                   \.0u.
     decimal
-             39   80   13   45  106  248   30  240
-              0    6    0   22  125
-    HOUR BITS: [1, 1, 0]
+             92    5   48  117    4
+    datetime (unknown)
 
-XXX: VARIABLE READ: 0x05
-super special
-#### RECORD 62 BolusGiven? 2012-11-11T22:31:44 head[9], body[0] 0x5c
-    op hex (9)
-    0000   0x5c 0x05 0x30 0x75 0x04 0x01 0x16 0x16    \.0u....
-    0008   0x00                                       .
+    body (0)
+
+#### RECORD 77 Bolus 2012-11-11T22:31:44 head[4], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 2.2, 'programmed': 2.2}
+```
+    op hex (4)
+    0000   0x01 0x16 0x16 0x00                        ....
     decimal
-             92    5   48  117    4    1   22   22
-              0
+              1   22   22    0
     datetime (2012-11-11T22:31:44)
     0000   0xac 0xdf 0x56 0x0b 0x0c                   ..V..
     body (0)
     HOUR BITS: [1, 1, 0]
+#### RECORD 78 ResultTotals 2012-10-11T13:12:43 head[5], body[41] op[0x07]
 
-#### RECORD 63 ResultTotals 2012-10-11T13:12:43 head[5], body[41] 0x07
     op hex (5)
     0000   0x07 0x00 0x00 0x06 0x3a                   ....:
     decimal
@@ -209,8 +209,11 @@ super special
               3    1    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
-
-#### RECORD 64 CalForBG 2012-11-12T00:55:31 head[2], body[0] 0x0a
+#### RECORD 79 CalForBG 2012-11-12T00:55:31 head[2], body[0] op[0x0a]
+###### DECODED
+```python
+{'amount': 126}
+```
     op hex (2)
     0000   0x0a 0x7e                                  .~
     decimal
@@ -219,7 +222,4 @@ super special
     0000   0x9f 0xf7 0x20 0x0c 0x0c                   .. ..
     body (0)
     HOUR BITS: [1, 1, 1]
-
-DATE LESS THAN 5! 1024
-0000   0x00 0x00 0x6c 0xde                        ..l.
-`end logs/ReadHistoryData-page-20.data: 65 records`
+`end logs/ReadHistoryData-page-20.data: 80 records`
