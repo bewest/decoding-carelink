@@ -27,7 +27,7 @@
              69   80   13   45  106   13   53    0
               0    1    0   65  125
 
-#### RECORD 1 BolusGiven unknown head[8], body[0] op[0x5c]
+#### RECORD 1 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 240, 'amount': 1.05, 'curve': 4},

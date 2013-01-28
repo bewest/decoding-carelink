@@ -276,21 +276,21 @@ def decode_unabsorbed(amount, age, curve,strokes=40.0):
                  'curve': curve, }
   return unabsorbed
 
-class BolusGiven(VariableHead):
+class UnabsorbedInsulinBolus(VariableHead):
   """
-  >>> rec = BolusGiven( BolusGiven._test_1[:2] )
+  >>> rec = UnabsorbedInsulinBolus( UnabsorbedInsulinBolus._test_1[:2] )
   >>> print str(rec)
-  BolusGiven unknown head[2], body[0] op[0x5c]
+  UnabsorbedInsulinBolus unknown head[2], body[0] op[0x5c]
 
-  >>> print pformat(rec.parse( BolusGiven._test_1 ))
+  >>> print pformat(rec.parse( UnabsorbedInsulinBolus._test_1 ))
   [{'age': 78, 'amount': 1.25, 'curve': 4},
    {'age': 88, 'amount': 0.95, 'curve': 4}]
 
-  >>> rec = BolusGiven( BolusGiven._test_2[:2] )
+  >>> rec = UnabsorbedInsulinBolus( UnabsorbedInsulinBolus._test_2[:2] )
   >>> print str(rec)
-  BolusGiven unknown head[2], body[0] op[0x5c]
+  UnabsorbedInsulinBolus unknown head[2], body[0] op[0x5c]
 
-  >>> print pformat(rec.parse( BolusGiven._test_2 ))
+  >>> print pformat(rec.parse( UnabsorbedInsulinBolus._test_2 ))
   [{'age': 60, 'amount': 2.6, 'curve': 4},
    {'age': 160, 'amount': 2.5, 'curve': 4}]
 
@@ -321,7 +321,7 @@ _confirmed = [ Bolus, Prime, NoDelivery, ResultTotals, ChangeBasalProfile,
                ClearAlarm, SelectBasalProfile, EndTempBasal, ChangeTime,
                NewTimeSet, LowBattery, Battery, PumpSuspend, PumpResume,
                CalForBG, Rewind, EnableDisableRemote, ChangeRemoteID,
-               TempBasal, LowReservoir, BolusWizard, BolusGiven, ChangeUtility,
+               TempBasal, LowReservoir, BolusWizard, UnabsorbedInsulinBolus, ChangeUtility,
                ChangeTimeDisplay ]
 
 class hack1(InvalidRecord):

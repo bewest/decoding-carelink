@@ -8,7 +8,7 @@ reading more to debug 0x00
     0000   0x6c 0xe7                                  l.
 ##### DEBUG DECIMAL
             108  231
-#### RECORD 0 BolusGiven unknown head[11], body[0] op[0x5c]
+#### RECORD 0 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 8, 'amount': 0.5, 'curve': 4},

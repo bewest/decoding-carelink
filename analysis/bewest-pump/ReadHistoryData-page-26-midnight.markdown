@@ -291,7 +291,7 @@ reading more to debug 0x00
 --
               0    0    0    9  125
     HOUR BITS: [1, 0, 0]
-#### RECORD 84 BolusGiven unknown head[14], body[0] op[0x5c]
+#### RECORD 84 UnabsorbedInsulinBolus unknown head[14], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 9, 'amount': 1.8, 'curve': 4},

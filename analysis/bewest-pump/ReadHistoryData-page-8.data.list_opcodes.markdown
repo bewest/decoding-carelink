@@ -168,7 +168,7 @@
              57   80   13   45  106  248   43  240
               0    0    0   35  125
 
-#### RECORD 11 BolusGiven unknown head[8], body[0] op[0x5c]
+#### RECORD 11 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 66, 'amount': 2.3, 'curve': 20},
@@ -255,7 +255,7 @@
               0   81   13   45  106   37    0    0
               0   11    0   26  125
     HOUR BITS: [0, 0, 1]
-#### RECORD 17 BolusGiven unknown head[8], body[0] op[0x5c]
+#### RECORD 17 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 151, 'amount': 3.5, 'curve': 4},
@@ -359,7 +359,7 @@
               0   81   13   45  106   39    0    0
               0   20    0   19  125
 
-#### RECORD 24 BolusGiven unknown head[8], body[0] op[0x5c]
+#### RECORD 24 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 87, 'amount': 2.6, 'curve': 4},
@@ -413,7 +413,7 @@
              28   80   13   45  106    0   21    0
               0    0    0   21  125
 
-#### RECORD 27 BolusGiven unknown head[11], body[0] op[0x5c]
+#### RECORD 27 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 33, 'amount': 2.0, 'curve': 4},
@@ -496,7 +496,7 @@
              27   80   13   45  106    9   20    0
               0   26    0   20  125
     HOUR BITS: [0, 0, 1]
-#### RECORD 32 BolusGiven unknown head[14], body[0] op[0x5c]
+#### RECORD 32 UnabsorbedInsulinBolus unknown head[14], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 92, 'amount': 2.1, 'curve': 4},
@@ -567,7 +567,7 @@
               5   80   13   45  106    0    3    0
               0    0    0    3  125
 
-#### RECORD 36 BolusGiven unknown head[17], body[0] op[0x5c]
+#### RECORD 36 UnabsorbedInsulinBolus unknown head[17], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 86, 'amount': 2.0, 'curve': 4},
@@ -665,7 +665,7 @@
               0   80   13   45  106   22    0    0
               0    1    0   21  125
     HOUR BITS: [0, 0, 1]
-#### RECORD 41 BolusGiven unknown head[17], body[0] op[0x5c]
+#### RECORD 41 UnabsorbedInsulinBolus unknown head[17], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 161, 'amount': 0.3, 'curve': 4},
@@ -825,7 +825,7 @@
              46   80   13   45  106  252   35  240
               0    0    0   31  125
 
-#### RECORD 51 BolusGiven unknown head[5], body[0] op[0x5c]
+#### RECORD 51 UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 95, 'amount': 1.0, 'curve': 21}]
@@ -891,7 +891,7 @@
              65   80   13   45  106  254   50  240
               0    0    0   48  125
     HOUR BITS: [0, 0, 1]
-#### RECORD 55 BolusGiven unknown head[5], body[0] op[0x5c]
+#### RECORD 55 UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 9, 'amount': 3.1, 'curve': 20}]
@@ -994,7 +994,7 @@
               0   80   13   45  106   14    0    0
               0    0    0   14  125
 
-#### RECORD 61 BolusGiven unknown head[5], body[0] op[0x5c]
+#### RECORD 61 UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 40, 'amount': 4.8, 'curve': 20}]
@@ -1146,7 +1146,7 @@
              45   80   13   45  106  248   34  240
               0    0    0   26  125
     HOUR BITS: [0, 0, 1]
-#### RECORD 71 BolusGiven unknown head[8], body[0] op[0x5c]
+#### RECORD 71 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 158, 'amount': 1.55, 'curve': 20},
@@ -1213,7 +1213,7 @@
              17   80   13   45  106    0   13    0
               0   25    0   13  125
 
-#### RECORD 75 BolusGiven unknown head[11], body[0] op[0x5c]
+#### RECORD 75 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 32, 'amount': 2.6, 'curve': 4},
