@@ -345,6 +345,7 @@ class BolusWizard(KnownRecord):
     return wizard
 
 def twos_comp(val, bits):
+    # http://stackoverflow.com/a/9147327
     """compute the 2's compliment of int value val"""
     if( (val&(1<<(bits-1))) != 0 ):
         val = val - (1<<bits)
