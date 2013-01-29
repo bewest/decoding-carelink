@@ -106,17 +106,15 @@ class Base(object):
     decode_msg = ''
     if decoded is not None:
       decode_msg = '\n'.join([ '###### DECODED',
-                                '```python',
-                                '{}'.format(pformat(self.decode( ))),
-                                '```', ])
+                               '```python',
+                               '{}'.format(pformat(self.decode( ))),
+                               '```', ])
     if extra:
       extra = '    ' + ' '.join(extra)
     else:
       extra = ''
     return '\n'.join([ prefix, decode_msg, head, date, body, extra ])
 
-class Record(Base):
-  pass
 
 class VariableHead(Base):
   def __init__(self, head):
@@ -161,8 +159,6 @@ class ClearAlarm(KnownRecord):
   opcode = 0x0C
 class SelectBasalProfile(KnownRecord):
   opcode = 0x14
-class EndTempBasal(KnownRecord):
-  opcode = 0x16
 class ChangeTime(KnownRecord):
   opcode = 0x17
 class NewTimeSet(KnownRecord):
@@ -176,15 +172,37 @@ class PumpSuspend(KnownRecord):
 class PumpResume(KnownRecord):
   opcode = 0x1f
 
-class CalForBG(KnownRecord):
+class CalBGForPH(KnownRecord):
   """
+    >>> rec = CalBGForPH( CalBGForPH._test_1[:2] )
+    >>> rec.parse( CalBGForPH._test_1 )
+    {'amount': 139}
+    >>> print str(rec)
+    CalBGForPH 2012-12-18T15:04:46 head[2], body[0] op[0x0a]
+
   """
   _test_1 = bytearray([ 0x0a, 0x8b,
                         0xee, 0x04, 0x2f, 0x12, 0x0c, ])
+
+  _test_2 = bytearray([ 0x0a, 0xa7,
+                        0x22, 0x53, 0x30, 0x0e, 0x0d, ])
+
+  _test_3 = bytearray([ 0x0a, 0xb0,
+                        0x00, 0x6f, 0x2f, 0x0e, 0x0d, ])
+
+  _test_4 = bytearray([ 0x0a, 0x42,
+                        0x0c, 0x6c, 0x31, 0x0e, 0x8d, ])
+
+  _test_5 = bytearray([ 0x0a, 0x60,
+                        0x04, 0x59, 0x2b, 0x0e, 0x8d, ])
+  _test_6 = bytearray([ 0x0a, 0x5b,
+                        0x16, 0x52, 0x2a, 0x0e, 0x8d, ])
   opcode = 0x0a
   def decode(self):
     self.parse_time( )
-    return { 'amount': int(self.head[1]) }
+    year_bits = history.extra_year_bits(self.date[4])
+
+    return { 'amount': int(lib.BangInt([ year_bits[0], self.head[1] ])) }
     pass
 
 class Rewind(KnownRecord):
@@ -194,11 +212,40 @@ class EnableDisableRemote(KnownRecord):
   body_length = 14
 class ChangeRemoteID(KnownRecord):
   opcode = 0x27
+
+class TempBasalDuration(KnownRecord):
+  opcode = 0x16
+  _test_1 = bytearray([ ])
+  def decode(self):
+    self.parse_time( )
+    basal = { 'duration (min)': self.head[1] * 30, }
+    return basal
 class TempBasal(KnownRecord):
   opcode = 0x33
   body_length = 1
+  _test_1 = bytearray([ ])
+  def decode(self):
+    self.parse_time( )
+    basal = { 'rate': self.head[1] / 40.0, }
+    return basal
+
 class LowReservoir(KnownRecord):
+  """
+  >>> rec = LowReservoir( LowReservoir._test_1[:2] )
+  >>> decoded = rec.parse(LowReservoir._test_1)
+  >>> print str(rec)
+  LowReservoir 2012-12-07T11:02:43 head[2], body[0] op[0x34]
+
+  >>> print pformat(decoded)
+  {'amount': 20.0}
+  """
   opcode = 0x34
+  _test_1 = bytearray([ 0x34, 0xc8,
+                        0xeb, 0x02, 0x0b, 0x07, 0x0c, ])
+  def decode(self):
+    self.parse_time( )
+    reservoir = {'amount' : int(self.head[1]) / 10.0 }
+    return reservoir
 class Bolus(KnownRecord):
   """
   >>> rec = Bolus(Bolus._test_1[:4])
@@ -318,11 +365,11 @@ class ChangeTimeDisplay(KnownRecord):
   opcode = 0x64
 
 _confirmed = [ Bolus, Prime, NoDelivery, ResultTotals, ChangeBasalProfile,
-               ClearAlarm, SelectBasalProfile, EndTempBasal, ChangeTime,
-               NewTimeSet, LowBattery, Battery, PumpSuspend, PumpResume,
-               CalForBG, Rewind, EnableDisableRemote, ChangeRemoteID,
-               TempBasal, LowReservoir, BolusWizard, UnabsorbedInsulinBolus, ChangeUtility,
-               ChangeTimeDisplay ]
+               ClearAlarm, SelectBasalProfile, TempBasalDuration, ChangeTime,
+               NewTimeSet, LowBattery, Battery, PumpSuspend,
+               PumpResume, CalBGForPH, Rewind, EnableDisableRemote,
+               ChangeRemoteID, TempBasal, LowReservoir, BolusWizard,
+               UnabsorbedInsulinBolus, ChangeUtility, ChangeTimeDisplay ]
 
 class hack1(InvalidRecord):
   opcode = 0x6d

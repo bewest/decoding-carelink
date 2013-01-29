@@ -418,5 +418,17 @@ function update_special_bolus_analysis ( ) {
   analyze_special_bolus > analysis/bewest-pump/special-bolus.markdown
 }
 
+function find_csv_time ( ) {
+  SEARCH=$1
+  #csv=$( find . -type f -name "*.csv" -print )
+  for csv in $( find . -type f -name "*.csv" ) ; do
+    echo '###' $csv
+    grep -C 2 --color="always" "$SEARCH" -- $csv | tr -s ','
+  done
+
+  #echo git grep  -C 2 "$SEARCH" -- "$csv"
+    # | grep --color -C 2 "SEARCH" | less
+}
+
 #####
 # EOF
