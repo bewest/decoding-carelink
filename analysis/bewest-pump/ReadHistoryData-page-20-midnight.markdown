@@ -29,7 +29,10 @@ reading more to debug 0x00
     body (0)
     HOUR BITS: [1, 1, 0]
 #### RECORD 1 Prime 2012-11-09T10:15:03 head[5], body[0] op[0x03]
-
+###### DECODED
+```python
+{'amount': 6.4, 'fixed': 0.0, 'type': 'manual'}
+```
     op hex (5)
     0000   0x03 0x00 0x00 0x00 0x40                   ....@
     decimal
@@ -37,9 +40,6 @@ reading more to debug 0x00
     datetime (2012-11-09T10:15:03)
     0000   0x83 0xcf 0x2a 0x09 0x0c                   ..*..
     body (0)
-    HOUR BITS: [1, 1, 0]
-#### RECORD 2 Prime 2012-11-09T10:15:35 head[5], body[0] op[0x03]
-
 --
     0000   0x01 0x1f 0x1f 0x00                        ....
     decimal

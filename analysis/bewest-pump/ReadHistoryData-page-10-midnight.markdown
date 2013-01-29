@@ -9,7 +9,7 @@
  'bolus_estimate': 6.5,
  'carb_input': 69,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.1}
 ```
@@ -156,7 +156,7 @@
  'bolus_estimate': 1.2,
  'carb_input': 16,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```

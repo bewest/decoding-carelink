@@ -31,15 +31,15 @@
     body (0)
 
 #### RECORD 2 Prime 2012-12-25T09:31:18 head[5], body[0] op[0x03]
-
+###### DECODED
+```python
+{'amount': 3.6, 'fixed': 0.0, 'type': 'manual'}
+```
     op hex (5)
     0000   0x03 0x00 0x00 0x00 0x24                   ....$
     decimal
               3    0    0    0   36
     datetime (2012-12-25T09:31:18)
-    0000   0xd2 0x1f 0x29 0x19 0x0c                   ..)..
-    body (0)
-
 --
              92   17   80   86    4   84  176    4
              80  206    4  104   30   20  140  180

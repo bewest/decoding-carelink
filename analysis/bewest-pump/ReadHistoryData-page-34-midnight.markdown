@@ -17,7 +17,7 @@ reading more to debug 0x00
  'bolus_estimate': 0.6,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.8}
 ```
@@ -96,12 +96,12 @@ reading more to debug 0x00
     body (0)
     HOUR BITS: [0, 1, 1]
 #### RECORD 10 Prime 2012-09-18T04:38:09 head[5], body[0] op[0x03]
-
+###### DECODED
+```python
+{'amount': 4.0, 'fixed': 0.0, 'type': 'manual'}
+```
     op hex (5)
     0000   0x03 0x00 0x00 0x00 0x28                   ....(
-    decimal
-              3    0    0    0   40
-    datetime (2012-09-18T04:38:09)
 --
     hex
     0000   0x2c 0x50 0x0d 0x2d 0x6a 0x03 0x21 0x00    ,P.-j.!.

@@ -81,7 +81,7 @@
  'bolus_estimate': 5.0,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -134,7 +134,7 @@
  'bolus_estimate': 0.8,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 3.7}
 ```
@@ -188,7 +188,7 @@
  'bolus_estimate': 4.2,
  'carb_input': 55,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -271,7 +271,7 @@
  'bolus_estimate': 3.0,
  'carb_input': 49,
  'carb_ratio': 13,
- 'correction_estimate': 24.0,
+ 'correction_estimate?': 24.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -366,7 +366,7 @@
  'bolus_estimate': 2.7,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -452,7 +452,7 @@
  'bolus_estimate': 2.0,
  'carb_input': 29,
  'carb_ratio': 13,
- 'correction_estimate': 24.0,
+ 'correction_estimate?': 24.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -492,7 +492,7 @@
  'bolus_estimate': 1.8,
  'carb_input': 24,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -582,7 +582,7 @@
  'bolus_estimate': 4.0,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -695,7 +695,7 @@
  'bolus_estimate': 0.6,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -735,7 +735,7 @@
  'bolus_estimate': 3.5,
  'carb_input': 46,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -834,7 +834,10 @@
     body (0)
     HOUR BITS: [1, 0, 0]
 #### RECORD 51 Prime 2012-10-01T15:16:42 head[5], body[0] op[0x03]
-
+###### DECODED
+```python
+{'amount': 4.5, 'fixed': 0.0, 'type': 'manual'}
+```
     op hex (5)
     0000   0x03 0x00 0x00 0x00 0x2d                   ....-
     decimal
@@ -844,7 +847,10 @@
     body (0)
     HOUR BITS: [1, 0, 0]
 #### RECORD 52 Prime 2012-10-01T15:17:01 head[5], body[0] op[0x03]
-
+###### DECODED
+```python
+{'amount': 0.5, 'fixed': 0.5, 'type': 'fixed'}
+```
     op hex (5)
     0000   0x03 0x00 0x05 0x00 0x05                   .....
     decimal
@@ -875,7 +881,7 @@
  'bolus_estimate': 3.5,
  'carb_input': 54,
  'carb_ratio': 13,
- 'correction_estimate': 24.0,
+ 'correction_estimate?': 24.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -915,7 +921,7 @@
  'bolus_estimate': 1.2,
  'carb_input': 16,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -968,7 +974,7 @@
  'bolus_estimate': 1.0,
  'carb_input': 14,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -1035,7 +1041,7 @@
  'bolus_estimate': 1.0,
  'carb_input': 13,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 2.5}
 ```
@@ -1105,7 +1111,7 @@
  'bolus_estimate': 1.1,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.6}
 ```
@@ -1176,7 +1182,7 @@
  'bolus_estimate': 3.2,
  'carb_input': 42,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -1263,7 +1269,7 @@
  'bolus_estimate': 1.1,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.6}
 ```

@@ -16,7 +16,7 @@ reading more to debug 0x00
  'bolus_estimate': 2.5,
  'carb_input': 36,
  'carb_ratio': 13,
- 'correction_estimate': 24.0,
+ 'correction_estimate?': 24.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -69,7 +69,7 @@ reading more to debug 0x00
  'bolus_estimate': 0.5,
  'carb_input': 7,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -159,7 +159,7 @@ reading more to debug 0x00
  'bolus_estimate': 2.9,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -245,7 +245,7 @@ reading more to debug 0x00
  'bolus_estimate': 4.7,
  'carb_input': 62,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -322,7 +322,7 @@ reading more to debug 0x00
  'bolus_estimate': 4.8,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -464,7 +464,7 @@ reading more to debug 0x00
  'bolus_estimate': 4.9,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -526,7 +526,10 @@ reading more to debug 0x00
     body (0)
     HOUR BITS: [1, 1, 1]
 #### RECORD 33 Prime 2012-11-25T19:58:14 head[5], body[0] op[0x03]
-
+###### DECODED
+```python
+{'amount': 4.5, 'fixed': 0.0, 'type': 'manual'}
+```
     op hex (5)
     0000   0x03 0x00 0x00 0x00 0x2d                   ....-
     decimal
@@ -536,7 +539,10 @@ reading more to debug 0x00
     body (0)
     HOUR BITS: [1, 1, 1]
 #### RECORD 34 Prime 2012-11-25T19:58:33 head[5], body[0] op[0x03]
-
+###### DECODED
+```python
+{'amount': 0.5, 'fixed': 0.5, 'type': 'fixed'}
+```
     op hex (5)
     0000   0x03 0x00 0x05 0x00 0x05                   .....
     decimal
@@ -567,7 +573,7 @@ reading more to debug 0x00
  'bolus_estimate': 6.2,
  'carb_input': 81,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 3.9}
 ```
@@ -671,7 +677,7 @@ reading more to debug 0x00
  'bolus_estimate': 0.8,
  'carb_input': 15,
  'carb_ratio': 13,
- 'correction_estimate': 24.0,
+ 'correction_estimate?': 24.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.6}
 ```
@@ -761,7 +767,7 @@ reading more to debug 0x00
  'bolus_estimate': 2.3,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -814,7 +820,7 @@ reading more to debug 0x00
  'bolus_estimate': 2.8,
  'carb_input': 37,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -880,7 +886,7 @@ reading more to debug 0x00
  'bolus_estimate': 3.3,
  'carb_input': 43,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 1.1}
 ```
@@ -947,7 +953,7 @@ reading more to debug 0x00
  'bolus_estimate': 1.8,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 1.0}
 ```
@@ -1004,7 +1010,7 @@ reading more to debug 0x00
  'bolus_estimate': 2.8,
  'carb_input': 37,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -1132,7 +1138,7 @@ reading more to debug 0x00
  'bolus_estimate': 1.6,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -1185,7 +1191,7 @@ reading more to debug 0x00
  'bolus_estimate': 3.2,
  'carb_input': 47,
  'carb_ratio': 13,
- 'correction_estimate': 24.0,
+ 'correction_estimate?': 24.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```

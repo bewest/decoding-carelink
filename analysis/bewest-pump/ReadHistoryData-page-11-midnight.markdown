@@ -17,7 +17,7 @@ reading more to debug 0x00
  'bolus_estimate': 0.1,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -282,12 +282,12 @@ reading more to debug 0x00
     body (0)
 
 #### RECORD 69 Prime 2012-12-17T09:10:40 head[5], body[0] op[0x03]
-
+###### DECODED
+```python
+{'amount': 3.4, 'fixed': 0.0, 'type': 'manual'}
+```
     op hex (5)
     0000   0x03 0x00 0x00 0x00 0x22                   ...."
-    decimal
-              3    0    0    0   34
-    datetime (2012-12-17T09:10:40)
 --
     0000   0x1f 0x00                                  ..
     decimal

@@ -30,7 +30,7 @@ reading more to debug 0x00
  'bolus_estimate': 2.3,
  'carb_input': 31,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -158,12 +158,12 @@ reading more to debug 0x00
     body (0)
     HOUR BITS: [1, 1, 0]
 #### RECORD 22 Prime 2012-11-17T17:20:22 head[5], body[0] op[0x03]
-
+###### DECODED
+```python
+{'amount': 1.3, 'fixed': 0.0, 'type': 'manual'}
+```
     op hex (5)
     0000   0x03 0x00 0x00 0x00 0x0d                   .....
-    decimal
-              3    0    0    0   13
-    datetime (2012-11-17T17:20:22)
 --
     0000   0x5c 0x08 0xc0 0x3c 0x04 0x38 0x64 0x04    \..<.8d.
     decimal

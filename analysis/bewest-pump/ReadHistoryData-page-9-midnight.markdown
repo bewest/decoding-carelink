@@ -11,7 +11,10 @@
     body (0)
     HOUR BITS: [0, 0, 1]
 #### RECORD 1 Prime 2012-12-21T14:43:52 head[5], body[0] op[0x03]
-
+###### DECODED
+```python
+{'amount': 4.4, 'fixed': 0.0, 'type': 'manual'}
+```
     op hex (5)
     0000   0x03 0x00 0x00 0x00 0x2c                   ....,
     decimal
@@ -21,7 +24,10 @@
     body (0)
     HOUR BITS: [0, 0, 1]
 #### RECORD 2 Prime 2012-12-21T14:44:18 head[5], body[0] op[0x03]
-
+###### DECODED
+```python
+{'amount': 0.5, 'fixed': 0.5, 'type': 'fixed'}
+```
     op hex (5)
     0000   0x03 0x00 0x05 0x00 0x05                   .....
     decimal
@@ -34,12 +40,6 @@
 ###### DECODED
 ```python
 {'amount': 186}
-```
-    op hex (2)
-    0000   0x0a 0xba                                  ..
-    decimal
-             10  186
-    datetime (2012-12-21T18:18:19)
 --
     0000   0x5c 0x08 0x88 0xbe 0x04 0x5c 0xa4 0x14    \....\..
     decimal

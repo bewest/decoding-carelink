@@ -41,9 +41,6 @@ reading more to debug 0x00
  'bg_target_high': 125,
  'bg_target_low': 106,
 --
-#### RECORD 6 Prime 2012-10-19T23:34:54 head[5], body[0] op[0x03]
-
-    op hex (5)
     0000   0x03 0x00 0x00 0x00 0x2c                   ....,
     decimal
               3    0    0    0   44
@@ -52,7 +49,10 @@ reading more to debug 0x00
     body (0)
     HOUR BITS: [1, 0, 1]
 #### RECORD 7 Prime 2012-10-19T23:35:23 head[5], body[0] op[0x03]
-
+###### DECODED
+```python
+{'amount': 0.5, 'fixed': 0.5, 'type': 'fixed'}
+```
     op hex (5)
     0000   0x03 0x00 0x05 0x00 0x05                   .....
     decimal

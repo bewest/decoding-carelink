@@ -229,7 +229,7 @@ reading more to debug 0x00
 --
  'carb_input': 50,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.3}
 ```

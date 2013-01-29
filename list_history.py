@@ -144,6 +144,16 @@ class InvalidRecord(KnownRecord):
 class Prime(KnownRecord):
   opcode = 0x03
   head_length = 5
+  def decode(self):
+    self.parse_time( )
+    amount = self.head[4] / 10.0
+    fixed  = self.head[2] / 10.0
+    t = {0:'manual'}.get(fixed, 'fixed')
+    prime = { 'type': t,
+              'amount': amount,
+              'fixed': fixed, }
+    return prime
+
 class NoDelivery(KnownRecord):
   opcode = 0x06
   head_length = 4
@@ -282,7 +292,7 @@ class BolusWizard(KnownRecord):
    'bolus_estimate': 1.1,
    'carb_input': 15,
    'carb_ratio': 13,
-   'correction_estimate': 0.0,
+   'correction_estimate?': 0.0,
    'sensitivity': 45,
    'unabsorbed_insulin_total': 4.8}
 
@@ -309,7 +319,7 @@ class BolusWizard(KnownRecord):
                'bg_target_low': int(self.body[4]),
                'bg_target_high': int(self.body[12]),
                'bolus_estimate': int(self.body[11])/10.0,
-               'correction_estimate': int(self.body[7])/10.0,
+               'correction_estimate?': int(self.body[7])/10.0,
                'unabsorbed_insulin_total': int(self.body[9])/10.0,
                # 'unabsorbed_insulin_total': int(self.body[9])/10.0,
                'carb_input': int(self.body[0]),

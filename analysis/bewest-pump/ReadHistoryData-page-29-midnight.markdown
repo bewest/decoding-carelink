@@ -37,7 +37,7 @@ reading more to debug 0x00
  'bolus_estimate': 3.4,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate': 0.0,
+ 'correction_estimate?': 0.0,
  'sensitivity': 45,
  'unabsorbed_insulin_total': 0.0}
 --
