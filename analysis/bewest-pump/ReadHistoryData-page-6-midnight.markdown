@@ -1,7 +1,10 @@
 ### MIDNIGHTS analysis/bewest-pump/ReadHistoryData-page-6.data.list_opcodes.markdown: 4
 ## START logs/ReadHistoryData-page-6.data
 #### RECORD 0 TempBasal 2012-12-30T21:45:37 head[2], body[1] op[0x33]
-
+###### DECODED
+```python
+{'rate': 1.05}
+```
     op hex (2)
     0000   0x33 0x2a                                  3*
     decimal
@@ -14,8 +17,11 @@
     decimal
               0
     HOUR BITS: [0, 0, 1]
-#### RECORD 1 EndTempBasal 2012-12-30T21:45:37 head[2], body[0] op[0x16]
-
+#### RECORD 1 TempBasalDuration 2012-12-30T21:45:37 head[2], body[0] op[0x16]
+###### DECODED
+```python
+{'duration (min)': 120}
+```
     op hex (2)
     0000   0x16 0x04                                  ..
     decimal
@@ -24,7 +30,7 @@
     0000   0xe5 0x2d 0x15 0x1e 0x0c                   .-...
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 2 CalForBG 2012-12-30T21:45:54 head[2], body[0] op[0x0a]
+#### RECORD 2 CalBGForPH 2012-12-30T21:45:54 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 180}
@@ -34,12 +40,6 @@
     decimal
              10  180
     datetime (2012-12-30T21:45:54)
-    0000   0xf6 0x2d 0x35 0x1e 0x0c                   .-5..
-    body (0)
-    HOUR BITS: [0, 0, 1]
-#### RECORD 3 CalForBG 2012-12-30T21:47:53 head[2], body[0] op[0x0a]
-###### DECODED
-```python
 --
              20    8  128   20    8  138   20   10
             148   20    8  158   20   10  168   20
@@ -85,7 +85,7 @@
               3    0    0   12    0  232    0    0
               0
     DAY BITS: [1, 1, 0]
-#### RECORD 8 CalForBG 2012-12-31T00:06:37 head[2], body[0] op[0x0a]
+#### RECORD 8 CalBGForPH 2012-12-31T00:06:37 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 95}
@@ -98,7 +98,7 @@
     0000   0xe5 0x06 0x20 0x1f 0x0c                   .. ..
     body (0)
 
-#### RECORD 9 CalForBG 2012-12-31T00:57:33 head[2], body[0] op[0x0a]
+#### RECORD 9 CalBGForPH 2012-12-31T00:57:33 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 79}
@@ -147,7 +147,7 @@
               1    1    0   12    0  232    0    0
               0
     DAY BITS: [1, 1, 0]
-#### RECORD 41 CalForBG 2013-01-01T00:14:46 head[2], body[0] op[0x0a]
+#### RECORD 41 CalBGForPH 2013-01-01T00:14:46 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 69}
@@ -161,9 +161,9 @@
     body (0)
     HOUR BITS: [0, 1, 0]
 #### RECORD 42 LowReservoir 2013-01-01T03:52:30 head[2], body[0] op[0x34]
-
-    op hex (2)
-    0000   0x34 0x64                                  4d
+###### DECODED
+```python
+{'amount': 10.0}
 --
     decimal
              92   11   12   91    4  136  101    4
@@ -209,7 +209,7 @@
               0    0    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 60 CalForBG 2013-01-02T01:25:50 head[2], body[0] op[0x0a]
+#### RECORD 60 CalBGForPH 2013-01-02T01:25:50 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 85}
@@ -222,7 +222,7 @@
     0000   0x32 0x59 0x21 0x02 0x0d                   2Y!..
     body (0)
     HOUR BITS: [0, 1, 0]
-#### RECORD 61 CalForBG 2013-01-02T09:26:31 head[2], body[0] op[0x0a]
+#### RECORD 61 CalBGForPH 2013-01-02T09:26:31 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 73}

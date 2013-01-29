@@ -209,10 +209,10 @@ reading more to debug 0x00
               1    0    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 47 CalForBG 2012-09-20T08:52:14 head[2], body[0] op[0x0a]
+#### RECORD 47 CalBGForPH 2012-09-20T08:52:14 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
-{'amount': 28}
+{'amount': 284}
 ```
     op hex (2)
     0000   0x0a 0x1c                                  ..

@@ -36,10 +36,10 @@ reading more to debug 0x00
               0    0    0   55  125
     HOUR BITS: [0, 0, 1]
 #### RECORD 1 LowReservoir 2012-12-28T07:49:08 head[2], body[0] op[0x34]
-
-    op hex (2)
-    0000   0x34 0xc8                                  4.
-    decimal
+###### DECODED
+```python
+{'amount': 20.0}
+```
 --
     decimal
              92   14  180   67    4   12   77    4
@@ -85,7 +85,7 @@ reading more to debug 0x00
               2    2    0   12    0  232    0    0
               0
     DAY BITS: [1, 1, 0]
-#### RECORD 29 CalForBG 2012-12-29T01:45:15 head[2], body[0] op[0x0a]
+#### RECORD 29 CalBGForPH 2012-12-29T01:45:15 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 108}
@@ -147,7 +147,7 @@ reading more to debug 0x00
               2    1    0   12    0  232    0    0
               0
     DAY BITS: [1, 1, 0]
-#### RECORD 57 CalForBG 2012-12-30T11:31:25 head[2], body[0] op[0x0a]
+#### RECORD 57 CalBGForPH 2012-12-30T11:31:25 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 187}

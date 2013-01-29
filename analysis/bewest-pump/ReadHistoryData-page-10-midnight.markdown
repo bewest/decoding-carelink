@@ -110,7 +110,7 @@
     0000   0xd3 0x05 0x56 0x12 0x0c                   ..V..
     body (0)
 
-#### RECORD 32 CalForBG 2012-12-18T22:11:12 head[2], body[0] op[0x0a]
+#### RECORD 32 CalBGForPH 2012-12-18T22:11:12 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 59}
@@ -209,7 +209,7 @@
               2    0    0   12    0  232    0    0
               0
     DAY BITS: [1, 1, 0]
-#### RECORD 59 CalForBG 2012-12-20T04:04:49 head[2], body[0] op[0x0a]
+#### RECORD 59 CalBGForPH 2012-12-20T04:04:49 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 76}
@@ -222,7 +222,7 @@
     0000   0xf1 0x04 0x24 0x14 0x0c                   ..$..
     body (0)
 
-#### RECORD 60 CalForBG 2012-12-20T07:52:41 head[2], body[0] op[0x0a]
+#### RECORD 60 CalBGForPH 2012-12-20T07:52:41 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 94}
@@ -272,7 +272,10 @@
               0
     DAY BITS: [1, 1, 0]
 #### RECORD 76 LowReservoir 2012-12-21T04:18:45 head[2], body[0] op[0x34]
-
+###### DECODED
+```python
+{'amount': 10.0}
+```
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal
@@ -285,9 +288,6 @@
 
     op hex (2)
     0000   0x1e 0x00                                  ..
-    decimal
-             30    0
-    datetime (2012-12-21T12:56:50)
 --
 {'amount': 2.3, 'programmed': 2.3}
 ```

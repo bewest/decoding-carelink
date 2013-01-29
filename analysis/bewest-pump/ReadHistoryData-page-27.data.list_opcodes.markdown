@@ -27,7 +27,7 @@ reading more to debug 0x00
     0000   0x87 0x9f 0x12 0x0f 0x0c                   .....
     body (0)
     HOUR BITS: [1, 0, 0]
-#### RECORD 2 CalForBG 2012-10-15T18:36:06 head[2], body[0] op[0x0a]
+#### RECORD 2 CalBGForPH 2012-10-15T18:36:06 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 154}
@@ -133,7 +133,7 @@ reading more to debug 0x00
     0000   0xa9 0x8a 0x53 0x0f 0x0c                   ..S..
     body (0)
     HOUR BITS: [1, 0, 0]
-#### RECORD 8 CalForBG 2012-10-15T20:00:15 head[2], body[0] op[0x0a]
+#### RECORD 8 CalBGForPH 2012-10-15T20:00:15 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 239}
@@ -200,7 +200,7 @@ reading more to debug 0x00
     0000   0xba 0x80 0x54 0x0f 0x0c                   ..T..
     body (0)
     HOUR BITS: [1, 0, 0]
-#### RECORD 12 CalForBG 2012-10-15T20:32:04 head[2], body[0] op[0x0a]
+#### RECORD 12 CalBGForPH 2012-10-15T20:32:04 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 255}
@@ -213,7 +213,7 @@ reading more to debug 0x00
     0000   0x84 0xa0 0x34 0x0f 0x0c                   ..4..
     body (0)
     HOUR BITS: [1, 0, 1]
-#### RECORD 13 CalForBG 2012-10-15T20:33:01 head[2], body[0] op[0x0a]
+#### RECORD 13 CalBGForPH 2012-10-15T20:33:01 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 255}
@@ -226,7 +226,7 @@ reading more to debug 0x00
     0000   0x81 0xa1 0x34 0x0f 0x0c                   ..4..
     body (0)
     HOUR BITS: [1, 0, 1]
-#### RECORD 14 CalForBG 2012-10-15T20:36:49 head[2], body[0] op[0x0a]
+#### RECORD 14 CalBGForPH 2012-10-15T20:36:49 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 244}
@@ -240,7 +240,10 @@ reading more to debug 0x00
     body (0)
     HOUR BITS: [1, 0, 1]
 #### RECORD 15 TempBasal 2012-10-15T20:37:54 head[2], body[1] op[0x33]
-
+###### DECODED
+```python
+{'rate': 1.1}
+```
     op hex (2)
     0000   0x33 0x2c                                  3,
     decimal
@@ -253,8 +256,11 @@ reading more to debug 0x00
     decimal
               0
     HOUR BITS: [1, 0, 1]
-#### RECORD 16 EndTempBasal 2012-10-15T20:37:54 head[2], body[0] op[0x16]
-
+#### RECORD 16 TempBasalDuration 2012-10-15T20:37:54 head[2], body[0] op[0x16]
+###### DECODED
+```python
+{'duration (min)': 90}
+```
     op hex (2)
     0000   0x16 0x03                                  ..
     decimal
@@ -263,7 +269,7 @@ reading more to debug 0x00
     0000   0xb6 0xa5 0x14 0x0f 0x0c                   .....
     body (0)
     HOUR BITS: [1, 0, 1]
-#### RECORD 17 CalForBG 2012-10-15T20:38:11 head[2], body[0] op[0x0a]
+#### RECORD 17 CalBGForPH 2012-10-15T20:38:11 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 243}
@@ -392,7 +398,10 @@ reading more to debug 0x00
     body (0)
     HOUR BITS: [1, 0, 1]
 #### RECORD 24 TempBasal 2012-10-15T21:14:43 head[2], body[1] op[0x33]
-
+###### DECODED
+```python
+{'rate': 1.15}
+```
     op hex (2)
     0000   0x33 0x2e                                  3.
     decimal
@@ -405,8 +414,11 @@ reading more to debug 0x00
     decimal
               0
     HOUR BITS: [1, 0, 0]
-#### RECORD 25 EndTempBasal 2012-10-15T21:14:43 head[2], body[0] op[0x16]
-
+#### RECORD 25 TempBasalDuration 2012-10-15T21:14:43 head[2], body[0] op[0x16]
+###### DECODED
+```python
+{'duration (min)': 120}
+```
     op hex (2)
     0000   0x16 0x04                                  ..
     decimal
@@ -415,10 +427,10 @@ reading more to debug 0x00
     0000   0xab 0x8e 0x15 0x0f 0x0c                   .....
     body (0)
     HOUR BITS: [1, 0, 0]
-#### RECORD 26 CalForBG 2012-10-15T21:33:41 head[2], body[0] op[0x0a]
+#### RECORD 26 CalBGForPH 2012-10-15T21:33:41 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
-{'amount': 8}
+{'amount': 264}
 ```
     op hex (2)
     0000   0x0a 0x08                                  ..
@@ -428,7 +440,7 @@ reading more to debug 0x00
     0000   0xa9 0xa1 0x35 0x0f 0x8c                   ..5..
     body (0)
     HOUR BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 27 CalForBG 2012-10-15T22:12:34 head[2], body[0] op[0x0a]
+#### RECORD 27 CalBGForPH 2012-10-15T22:12:34 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 227}
@@ -465,7 +477,7 @@ reading more to debug 0x00
               4    1    0   12    0  232    0    0
               0
     DAY BITS: [1, 0, 1]
-#### RECORD 29 CalForBG 2012-10-16T01:12:23 head[2], body[0] op[0x0a]
+#### RECORD 29 CalBGForPH 2012-10-16T01:12:23 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 77}
@@ -750,7 +762,7 @@ reading more to debug 0x00
               0    0    0   12    0  232    0    0
               0
     DAY BITS: [1, 0, 1]
-#### RECORD 45 CalForBG 2012-10-18T02:34:42 head[2], body[0] op[0x0a]
+#### RECORD 45 CalBGForPH 2012-10-18T02:34:42 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 168}
@@ -823,7 +835,7 @@ reading more to debug 0x00
     0000   0x9c 0x84 0x0b 0x12 0x0c                   .....
     body (0)
     HOUR BITS: [1, 0, 0]
-#### RECORD 50 CalForBG 2012-10-18T11:54:55 head[2], body[0] op[0x0a]
+#### RECORD 50 CalBGForPH 2012-10-18T11:54:55 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 133}
@@ -876,7 +888,7 @@ reading more to debug 0x00
     0000   0xb0 0xb7 0x4b 0x12 0x0c                   ..K..
     body (0)
     HOUR BITS: [1, 0, 1]
-#### RECORD 53 CalForBG 2012-10-18T13:04:00 head[2], body[0] op[0x0a]
+#### RECORD 53 CalBGForPH 2012-10-18T13:04:00 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 118}
@@ -996,7 +1008,7 @@ reading more to debug 0x00
     0000   0x8e 0xa0 0x4d 0x12 0x0c                   ..M..
     body (0)
     HOUR BITS: [1, 0, 1]
-#### RECORD 60 CalForBG 2012-10-18T15:31:37 head[2], body[0] op[0x0a]
+#### RECORD 60 CalBGForPH 2012-10-18T15:31:37 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 84}
@@ -1066,7 +1078,7 @@ reading more to debug 0x00
     0000   0x95 0xb1 0x50 0x12 0x0c                   ..P..
     body (0)
     HOUR BITS: [1, 0, 1]
-#### RECORD 64 CalForBG 2012-10-18T18:26:03 head[2], body[0] op[0x0a]
+#### RECORD 64 CalBGForPH 2012-10-18T18:26:03 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 120}
@@ -1079,7 +1091,7 @@ reading more to debug 0x00
     0000   0x83 0x9a 0x32 0x12 0x0c                   ..2..
     body (0)
     HOUR BITS: [1, 0, 0]
-#### RECORD 65 CalForBG 2012-10-18T18:35:36 head[2], body[0] op[0x0a]
+#### RECORD 65 CalBGForPH 2012-10-18T18:35:36 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 121}
@@ -1175,7 +1187,10 @@ reading more to debug 0x00
               0
     DAY BITS: [1, 0, 1]
 #### RECORD 70 LowReservoir 2012-10-19T08:28:25 head[2], body[0] op[0x34]
-
+###### DECODED
+```python
+{'amount': 20.0}
+```
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal
@@ -1204,7 +1219,7 @@ reading more to debug 0x00
     0000   0xb4 0xb2 0x0d 0x13 0x0c                   .....
     body (0)
     HOUR BITS: [1, 0, 1]
-#### RECORD 73 CalForBG 2012-10-19T15:03:12 head[2], body[0] op[0x0a]
+#### RECORD 73 CalBGForPH 2012-10-19T15:03:12 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 75}
@@ -1258,7 +1273,10 @@ reading more to debug 0x00
     body (0)
     HOUR BITS: [1, 0, 0]
 #### RECORD 76 LowReservoir 2012-10-19T16:37:53 head[2], body[0] op[0x34]
-
+###### DECODED
+```python
+{'amount': 10.0}
+```
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal
@@ -1267,7 +1285,7 @@ reading more to debug 0x00
     0000   0xb5 0xa5 0x10 0x13 0x0c                   .....
     body (0)
     HOUR BITS: [1, 0, 1]
-#### RECORD 77 CalForBG 2012-10-19T19:47:31 head[2], body[0] op[0x0a]
+#### RECORD 77 CalBGForPH 2012-10-19T19:47:31 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 222}

@@ -20,7 +20,7 @@
     0000   0x27 0x45 0x22 0x03 0x0d                   'E"..
     body (0)
     HOUR BITS: [0, 1, 0]
-#### RECORD 1 CalForBG 2013-01-03T09:59:29 head[2], body[0] op[0x0a]
+#### RECORD 1 CalBGForPH 2013-01-03T09:59:29 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 78}
@@ -85,7 +85,7 @@
               0    1    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 30 CalForBG 2013-01-04T03:40:08 head[2], body[0] op[0x0a]
+#### RECORD 30 CalBGForPH 2013-01-04T03:40:08 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 117}
@@ -99,9 +99,9 @@
     body (0)
     HOUR BITS: [0, 1, 1]
 #### RECORD 31 LowReservoir 2013-01-04T13:51:49 head[2], body[0] op[0x34]
-
-    op hex (2)
-    0000   0x34 0xc8                                  4.
+###### DECODED
+```python
+{'amount': 20.0}
 --
     0000   0x5c 0x08 0xc4 0x43 0x14 0x44 0x61 0x14    \..C.Da.
     decimal
@@ -147,7 +147,7 @@
               0    0    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 48 CalForBG 2013-01-05T01:01:10 head[2], body[0] op[0x0a]
+#### RECORD 48 CalBGForPH 2013-01-05T01:01:10 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 222}
@@ -209,7 +209,7 @@
               2    2    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 69 CalForBG 2013-01-06T01:12:30 head[2], body[0] op[0x0a]
+#### RECORD 69 CalBGForPH 2013-01-06T01:12:30 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 172}
@@ -222,7 +222,7 @@
     0000   0x1e 0x4c 0x21 0x06 0x0d                   .L!..
     body (0)
     HOUR BITS: [0, 1, 0]
-#### RECORD 70 CalForBG 2013-01-06T04:56:07 head[2], body[0] op[0x0a]
+#### RECORD 70 CalBGForPH 2013-01-06T04:56:07 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 67}

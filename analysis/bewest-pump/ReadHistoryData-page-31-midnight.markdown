@@ -31,15 +31,15 @@
     body (0)
     HOUR BITS: [0, 1, 0]
 #### RECORD 2 TempBasal 2012-09-28T11:53:29 head[2], body[1] op[0x33]
-
+###### DECODED
+```python
+{'rate': 1.15}
+```
     op hex (2)
     0000   0x33 0x2e                                  3.
     decimal
              51   46
     datetime (2012-09-28T11:53:29)
-    0000   0x9d 0x75 0x0b 0x1c 0x0c                   .u...
-    body (1)
-    hex
 --
     decimal
              92   14   26   66   20  186   76   20
@@ -85,7 +85,7 @@
               2    0    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 20 CalForBG 2012-09-29T01:11:09 head[2], body[0] op[0x0a]
+#### RECORD 20 CalBGForPH 2012-09-29T01:11:09 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 248}
@@ -147,10 +147,10 @@
               1    0    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 33 CalForBG 2012-09-30T02:03:54 head[2], body[0] op[0x0a]
+#### RECORD 33 CalBGForPH 2012-09-30T02:03:54 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
-{'amount': 49}
+{'amount': 305}
 ```
     op hex (2)
     0000   0x0a 0x31                                  .1

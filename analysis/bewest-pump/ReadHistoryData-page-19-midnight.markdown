@@ -85,10 +85,10 @@ reading more to debug 0x00
               3    1    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 43 CalForBG 2012-11-13T05:21:45 head[2], body[0] op[0x0a]
+#### RECORD 43 CalBGForPH 2012-11-13T05:21:45 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
-{'amount': 100}
+{'amount': 356}
 ```
     op hex (2)
     0000   0x0a 0x64                                  .d

@@ -1,6 +1,6 @@
 ### MIDNIGHTS analysis/bewest-pump/ReadHistoryData-page-32.data.list_opcodes.markdown: 4
 ## START logs/ReadHistoryData-page-32.data
-#### RECORD 0 CalForBG 2012-09-24T20:34:48 head[2], body[0] op[0x0a]
+#### RECORD 0 CalBGForPH 2012-09-24T20:34:48 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 171}
@@ -147,7 +147,7 @@
               1    2    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 36 CalForBG 2012-09-26T01:21:23 head[2], body[0] op[0x0a]
+#### RECORD 36 CalBGForPH 2012-09-26T01:21:23 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 107}
@@ -161,9 +161,9 @@
     body (0)
     HOUR BITS: [0, 1, 0]
 #### RECORD 37 LowReservoir 2012-09-26T03:26:15 head[2], body[0] op[0x34]
-
-    op hex (2)
-    0000   0x34 0xc8                                  4.
+###### DECODED
+```python
+{'amount': 20.0}
 --
     decimal
              92   11   96   74   20   52  124   20

@@ -85,7 +85,7 @@
               1    1    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 26 CalForBG 2012-11-06T01:05:40 head[2], body[0] op[0x0a]
+#### RECORD 26 CalBGForPH 2012-11-06T01:05:40 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 121}
@@ -147,7 +147,7 @@
               1    0    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 44 CalForBG 2012-11-07T06:45:31 head[2], body[0] op[0x0a]
+#### RECORD 44 CalBGForPH 2012-11-07T06:45:31 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 177}
@@ -227,9 +227,6 @@
              31    0
     datetime (2012-11-08T11:00:04)
 --
-{'amount': 77}
-```
-    op hex (2)
     0000   0x0a 0x4d                                  .M
     decimal
              10   77
@@ -238,7 +235,10 @@
     body (0)
     HOUR BITS: [1, 1, 1]
 #### RECORD 83 LowReservoir 2012-11-08T23:15:47 head[2], body[0] op[0x34]
-
+###### DECODED
+```python
+{'amount': 10.0}
+```
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal

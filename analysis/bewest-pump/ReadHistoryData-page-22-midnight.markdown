@@ -1,6 +1,6 @@
 ### MIDNIGHTS analysis/bewest-pump/ReadHistoryData-page-22.data.list_opcodes.markdown: 4
 ## START logs/ReadHistoryData-page-22.data
-#### RECORD 0 CalForBG 2012-11-01T15:43:51 head[2], body[0] op[0x0a]
+#### RECORD 0 CalBGForPH 2012-11-01T15:43:51 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 54}
@@ -13,7 +13,7 @@
     0000   0xb3 0xeb 0x2f 0x01 0x0c                   ../..
     body (0)
     HOUR BITS: [1, 1, 1]
-#### RECORD 1 CalForBG 2012-11-01T16:54:55 head[2], body[0] op[0x0a]
+#### RECORD 1 CalBGForPH 2012-11-01T16:54:55 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 60}
@@ -26,7 +26,7 @@
     0000   0xb7 0xf6 0x30 0x01 0x0c                   ..0..
     body (0)
     HOUR BITS: [1, 1, 1]
-#### RECORD 2 CalForBG 2012-11-01T18:23:40 head[2], body[0] op[0x0a]
+#### RECORD 2 CalBGForPH 2012-11-01T18:23:40 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 136}
@@ -147,7 +147,7 @@
               0    0    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 29 CalForBG 2012-11-03T03:52:28 head[2], body[0] op[0x0a]
+#### RECORD 29 CalBGForPH 2012-11-03T03:52:28 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 80}
@@ -160,7 +160,7 @@
     0000   0x9c 0xf4 0x23 0x03 0x0c                   ..#..
     body (0)
     HOUR BITS: [1, 1, 1]
-#### RECORD 30 CalForBG 2012-11-03T03:53:47 head[2], body[0] op[0x0a]
+#### RECORD 30 CalBGForPH 2012-11-03T03:53:47 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 80}
@@ -209,7 +209,7 @@
               3    1    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] DAY BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 54 CalForBG 2012-11-04T01:25:52 head[2], body[0] op[0x0a]
+#### RECORD 54 CalBGForPH 2012-11-04T01:25:52 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 214}
@@ -227,9 +227,6 @@
 ```python
 {'bg': 214,
 --
-{'amount': 1.0, 'programmed': 1.0}
-```
-    op hex (4)
     0000   0x01 0x0a 0x0a 0x00                        ....
     decimal
               1   10   10    0
@@ -238,7 +235,10 @@
     body (0)
     HOUR BITS: [1, 1, 1]
 #### RECORD 86 LowReservoir 2012-11-04T23:53:41 head[2], body[0] op[0x34]
-
+###### DECODED
+```python
+{'amount': 10.0}
+```
     op hex (2)
     0000   0x34 0x64                                  4d
     decimal

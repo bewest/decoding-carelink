@@ -28,7 +28,7 @@ reading more to debug 0x00
     0000   0x87 0x9f 0x12 0x0f 0x0c                   .....
     body (0)
     HOUR BITS: [1, 0, 0]
-#### RECORD 2 CalForBG 2012-10-15T18:36:06 head[2], body[0] op[0x0a]
+#### RECORD 2 CalBGForPH 2012-10-15T18:36:06 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 154}
@@ -48,7 +48,7 @@ reading more to debug 0x00
     0000   0xa9 0xa1 0x35 0x0f 0x8c                   ..5..
     body (0)
     HOUR BITS: [1, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 27 CalForBG 2012-10-15T22:12:34 head[2], body[0] op[0x0a]
+#### RECORD 27 CalBGForPH 2012-10-15T22:12:34 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 227}
@@ -85,7 +85,7 @@ reading more to debug 0x00
               4    1    0   12    0  232    0    0
               0
     DAY BITS: [1, 0, 1]
-#### RECORD 29 CalForBG 2012-10-16T01:12:23 head[2], body[0] op[0x0a]
+#### RECORD 29 CalBGForPH 2012-10-16T01:12:23 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 77}
@@ -171,7 +171,7 @@ reading more to debug 0x00
               0    0    0   12    0  232    0    0
               0
     DAY BITS: [1, 0, 1]
-#### RECORD 45 CalForBG 2012-10-18T02:34:42 head[2], body[0] op[0x0a]
+#### RECORD 45 CalBGForPH 2012-10-18T02:34:42 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 168}
@@ -234,7 +234,10 @@ reading more to debug 0x00
               0
     DAY BITS: [1, 0, 1]
 #### RECORD 70 LowReservoir 2012-10-19T08:28:25 head[2], body[0] op[0x34]
-
+###### DECODED
+```python
+{'amount': 20.0}
+```
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal
@@ -247,9 +250,6 @@ reading more to debug 0x00
 
     op hex (2)
     0000   0x1e 0x00                                  ..
-    decimal
-             30    0
-    datetime (2012-10-19T13:31:17)
 --
     0000   0x08 0x50 0x0d 0x2d 0x6a 0x15 0x06 0x00    .P.-j...
     0008   0x00 0x00 0x00 0x1b 0x7d                   ....}

@@ -1,6 +1,6 @@
 ### MIDNIGHTS analysis/bewest-pump/ReadHistoryData-page-1.data.list_opcodes.markdown: 5
 ## START logs/ReadHistoryData-page-1.data
-#### RECORD 0 CalForBG 2013-01-14T22:11:48 head[2], body[0] op[0x0a]
+#### RECORD 0 CalBGForPH 2013-01-14T22:11:48 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 70}
@@ -13,7 +13,7 @@
     0000   0x30 0x4b 0x36 0x0e 0x0d                   0K6..
     body (0)
     HOUR BITS: [0, 1, 0]
-#### RECORD 1 CalForBG 2013-01-14T22:35:17 head[2], body[0] op[0x0a]
+#### RECORD 1 CalBGForPH 2013-01-14T22:35:17 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 82}
@@ -26,7 +26,7 @@
     0000   0x11 0x63 0x36 0x0e 0x0d                   .c6..
     body (0)
     HOUR BITS: [0, 1, 1]
-#### RECORD 2 CalForBG 2013-01-14T22:35:46 head[2], body[0] op[0x0a]
+#### RECORD 2 CalBGForPH 2013-01-14T22:35:46 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 83}
@@ -48,7 +48,7 @@
     0000   0x00 0x64 0x56 0x0e 0x0d                   .dV..
     body (0)
     HOUR BITS: [0, 1, 1]
-#### RECORD 6 CalForBG 2013-01-14T23:48:39 head[2], body[0] op[0x0a]
+#### RECORD 6 CalBGForPH 2013-01-14T23:48:39 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 150}
@@ -85,7 +85,7 @@
              16    0    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 8 CalForBG 2013-01-15T01:20:10 head[2], body[0] op[0x0a]
+#### RECORD 8 CalBGForPH 2013-01-15T01:20:10 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 76}
@@ -147,7 +147,7 @@
               1    0    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 28 CalForBG 2013-01-16T06:19:00 head[2], body[0] op[0x0a]
+#### RECORD 28 CalBGForPH 2013-01-16T06:19:00 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 245}

@@ -147,7 +147,7 @@ reading more to debug 0x00
               1    0    0   12    0  232    0    0
               0
     HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 25 CalForBG 2013-01-21T08:53:57 head[2], body[0] op[0x0a]
+#### RECORD 25 CalBGForPH 2013-01-21T08:53:57 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 212}

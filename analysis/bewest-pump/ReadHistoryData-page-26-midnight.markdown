@@ -21,7 +21,7 @@ reading more to debug 0x00
     0000   0xa8 0xaf 0x53 0x13 0x0c                   ..S..
     body (0)
     HOUR BITS: [1, 0, 1]
-#### RECORD 1 CalForBG 2012-10-19T20:52:14 head[2], body[0] op[0x0a]
+#### RECORD 1 CalBGForPH 2012-10-19T20:52:14 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 197}
@@ -147,7 +147,7 @@ reading more to debug 0x00
               0    1    0   12    0  232    0    0
               0
     DAY BITS: [1, 0, 1]
-#### RECORD 22 CalForBG 2012-10-21T02:04:12 head[2], body[0] op[0x0a]
+#### RECORD 22 CalBGForPH 2012-10-21T02:04:12 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 202}
@@ -209,7 +209,7 @@ reading more to debug 0x00
               3    0    0   12    0  232    0    0
               0
     DAY BITS: [1, 0, 1]
-#### RECORD 50 CalForBG 2012-10-22T00:17:12 head[2], body[0] op[0x0a]
+#### RECORD 50 CalBGForPH 2012-10-22T00:17:12 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 105}
