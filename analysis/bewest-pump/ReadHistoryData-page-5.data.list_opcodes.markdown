@@ -68,7 +68,7 @@
 #### RECORD 3 Bolus 2013-01-03T09:59:42 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 4.4, 'programmed': 4.4}
+{'amount': 4.4, 'dual_component': '??', 'programmed': 4.4, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x2c 0x2c 0x00                        .,,.
@@ -173,7 +173,7 @@
 #### RECORD 10 Bolus 2013-01-03T13:59:34 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 4.3, 'programmed': 4.3}
+{'amount': 4.3, 'dual_component': '??', 'programmed': 4.3, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x2b 0x2b 0x00                        .++.
@@ -233,7 +233,7 @@
 #### RECORD 13 Bolus 2013-01-03T14:30:30 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 3.0, 'programmed': 3.0}
+{'amount': 3.0, 'dual_component': '??', 'programmed': 3.0, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x1e 0x1e 0x00                        ....
@@ -322,7 +322,7 @@
 #### RECORD 18 Bolus 2013-01-03T17:30:43 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 3.0, 'programmed': 3.0}
+{'amount': 3.0, 'dual_component': '??', 'programmed': 3.0, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x1e 0x1e 0x00                        ....
@@ -463,7 +463,7 @@
 #### RECORD 28 Bolus 2013-01-03T21:36:09 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 3.8, 'programmed': 3.8}
+{'amount': 3.8, 'dual_component': '??', 'programmed': 3.8, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x26 0x26 0x00                        .&&.
@@ -572,7 +572,7 @@
 #### RECORD 34 Bolus 2013-01-04T15:44:52 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 1.7, 'programmed': 1.7}
+{'amount': 1.7, 'dual_component': '??', 'programmed': 1.7, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x11 0x11 0x00                        ....
@@ -644,7 +644,7 @@
 #### RECORD 38 Bolus 2013-01-04T16:16:10 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 4.9, 'programmed': 4.9}
+{'amount': 4.9, 'dual_component': '??', 'programmed': 4.9, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x31 0x31 0x00                        .11.
@@ -766,7 +766,7 @@
 #### RECORD 46 Bolus 2013-01-04T21:37:22 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 5.6, 'programmed': 5.6}
+{'amount': 5.6, 'dual_component': '??', 'programmed': 5.6, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x38 0x38 0x03                        .88.
@@ -877,7 +877,7 @@
 #### RECORD 51 Bolus 2013-01-05T01:01:57 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 2.3, 'programmed': 2.3}
+{'amount': 2.3, 'dual_component': '??', 'programmed': 2.3, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x17 0x17 0x00                        ....
@@ -890,7 +890,7 @@
 #### RECORD 52 Bolus 2013-01-05T01:03:27 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 1.7, 'programmed': 1.7}
+{'amount': 1.7, 'dual_component': '??', 'programmed': 1.7, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x11 0x11 0x02                        ....
@@ -990,7 +990,7 @@
 #### RECORD 56 Bolus 2013-01-05T04:26:26 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 3.1, 'programmed': 3.1}
+{'amount': 3.1, 'dual_component': '??', 'programmed': 3.1, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x1f 0x1f 0x00                        ....
@@ -1071,7 +1071,7 @@
 #### RECORD 60 Bolus 2013-01-05T09:05:29 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 4.2, 'programmed': 4.2}
+{'amount': 4.2, 'dual_component': '??', 'programmed': 4.2, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x2a 0x2a 0x00                        .**.
@@ -1130,7 +1130,7 @@
 #### RECORD 63 Bolus 2013-01-05T20:22:13 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 2.8, 'programmed': 2.8}
+{'amount': 2.8, 'dual_component': '??', 'programmed': 2.8, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x1c 0x1c 0x00                        ....
@@ -1203,7 +1203,7 @@
 #### RECORD 67 Bolus 2013-01-05T23:21:11 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 6.7, 'programmed': 6.7}
+{'amount': 6.7, 'dual_component': '??', 'programmed': 6.7, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x43 0x43 0x00                        .CC.
@@ -1312,7 +1312,7 @@
 #### RECORD 73 Bolus 2013-01-06T19:47:16 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 3.4, 'programmed': 3.4}
+{'amount': 3.4, 'dual_component': '??', 'programmed': 3.4, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x22 0x22 0x00                        ."".

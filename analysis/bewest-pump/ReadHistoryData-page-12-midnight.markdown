@@ -28,7 +28,7 @@ reading more to debug 0x00
 #### RECORD 1 Bolus 2012-12-10T03:52:35 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 5.8, 'programmed': 5.8}
+{'amount': 5.8, 'dual_component': '??', 'programmed': 5.8, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x3a 0x3a 0x00                        .::.
@@ -51,7 +51,7 @@ reading more to debug 0x00
 #### RECORD 17 Bolus 2012-12-10T21:04:55 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 4.4, 'programmed': 4.4}
+{'amount': 4.4, 'dual_component': '??', 'programmed': 4.4, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x2c 0x2c 0x00                        .,,.
@@ -175,7 +175,7 @@ reading more to debug 0x00
 #### RECORD 70 Bolus 2012-12-12T20:55:56 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 4.2, 'programmed': 4.2}
+{'amount': 4.2, 'dual_component': '??', 'programmed': 4.2, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x2a 0x2a 0x00                        .**.

@@ -113,7 +113,7 @@ reading more to debug 0x00
 #### RECORD 45 Bolus 2013-01-08T18:56:05 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 0.3, 'programmed': 0.3}
+{'amount': 0.3, 'dual_component': '??', 'programmed': 0.3, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x03 0x03 0x00                        ....
@@ -175,7 +175,7 @@ reading more to debug 0x00
 #### RECORD 59 Bolus 2013-01-09T17:23:17 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 2.1, 'programmed': 2.1}
+{'amount': 2.1, 'dual_component': '??', 'programmed': 2.1, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x15 0x15 0x00                        ....
@@ -237,7 +237,7 @@ reading more to debug 0x00
 #### RECORD 73 Bolus 2013-01-10T12:58:56 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 1.5, 'programmed': 1.5}
+{'amount': 1.5, 'dual_component': '??', 'programmed': 1.5, 'type': '??'}
 ```
     op hex (4)
     0000   0x01 0x0f 0x0f 0x00                        ....
