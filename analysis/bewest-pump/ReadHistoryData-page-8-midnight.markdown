@@ -101,7 +101,7 @@
 #### RECORD 40 BolusWizard 2012-12-26T00:55:53 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 224,
+{'_byte[5]': 22,
 --
     0000   0x01 0x30 0x30 0x00                        .00.
     decimal
@@ -163,7 +163,7 @@
 #### RECORD 60 BolusWizard 2012-12-27T00:30:41 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 188,
+{'_byte[5]': 14,
 --
     0000   0x01 0x0d 0x0d 0x00                        ....
     decimal

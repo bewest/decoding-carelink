@@ -16,15 +16,21 @@
 #### RECORD 1 BolusWizard 2012-09-24T20:35:31 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 171,
+{'_byte[5]': 10,
+ '_byte[7]': 0,
+ 'bg': 171,
  'bg_target_high': 125,
  'bg_target_low': 106,
  'bolus_estimate': 5.2,
  'carb_input': 56,
  'carb_ratio': 13,
- 'correction_estimate?': 0.0,
+ 'correction_estimate': 1.0,
+ 'food_estimate': 4.3,
  'sensitivity': 45,
- 'unabsorbed_insulin_total': 0.1}
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.1,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 0}
 ```
     op hex (2)
     0000   0x5b 0xab                                  [.
@@ -34,12 +40,6 @@
     0000   0x9f 0x63 0x14 0x18 0x0c                   .c...
     body (13)
     hex
-    0000   0x38 0x50 0x0d 0x2d 0x6a 0x0a 0x2b 0x00    8P.-j.+.
-    0008   0x00 0x01 0x00 0x34 0x7d                   ...4}
-    decimal
-             56   80   13   45  106   10   43    0
-              0    1    0   52  125
-    HOUR BITS: [0, 1, 1]
 --
     0000   0x5c 0x08 0x28 0xd3 0x04 0xf0 0xaf 0x14    \.(.....
     decimal

@@ -11,15 +11,21 @@ reading more to debug 0x00
 #### RECORD 0 BolusWizard 2012-10-11T22:45:49 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 0,
+{'_byte[5]': 0,
+ '_byte[7]': 0,
+ 'bg': 0,
  'bg_target_high': 125,
  'bg_target_low': 106,
  'bolus_estimate': 0.6,
  'carb_input': 8,
  'carb_ratio': 13,
- 'correction_estimate?': 0.0,
+ 'correction_estimate': 0.0,
+ 'food_estimate': 0.6,
  'sensitivity': 45,
- 'unabsorbed_insulin_total': 0.0}
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 0}
 ```
     op hex (2)
     0000   0x5b 0x00                                  [.
@@ -34,12 +40,6 @@ reading more to debug 0x00
     decimal
               8   80   13   45  106    0    6    0
               0    0    0    6  125
-    HOUR BITS: [1, 0, 1]
-#### RECORD 1 UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]
-###### DECODED
-```python
-[{'age': 71, 'amount': 1.4, 'curve': 4}]
-```
 --
     0000   0x5c 0x08 0x18 0x3a 0x04 0x38 0x80 0x04    \..:.8..
     decimal
@@ -163,7 +163,7 @@ reading more to debug 0x00
 #### RECORD 24 BolusWizard 2012-10-13T01:15:34 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 134,
+{'_byte[5]': 2,
 --
     0000   0x34 0xc8                                  4.
     decimal

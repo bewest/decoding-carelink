@@ -30,15 +30,21 @@ reading more to debug 0x00
 #### RECORD 1 BolusWizard 2013-01-19T21:50:15 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 75,
+{'_byte[5]': 249,
+ '_byte[7]': 240,
+ 'bg': 75,
  'bg_target_high': 125,
  'bg_target_low': 106,
  'bolus_estimate': 5.9,
  'carb_input': 87,
  'carb_ratio': 13,
- 'correction_estimate?': 24.0,
+ 'correction_estimate': -0.7,
+ 'food_estimate': 6.6,
  'sensitivity': 45,
- 'unabsorbed_insulin_total': 0.0}
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 0}
 ```
     op hex (2)
     0000   0x5b 0x4b                                  [K
@@ -140,15 +146,21 @@ reading more to debug 0x00
 #### RECORD 8 BolusWizard 2013-01-20T10:33:22 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 224,
+{'_byte[5]': 22,
+ '_byte[7]': 0,
+ 'bg': 224,
  'bg_target_high': 125,
  'bg_target_low': 106,
  'bolus_estimate': 2.2,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate?': 0.0,
+ 'correction_estimate': 0.6,
+ 'food_estimate': 0.0,
  'sensitivity': 45,
- 'unabsorbed_insulin_total': 0.0}
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 0}
 ```
     op hex (2)
     0000   0x5b 0xe0                                  [.
@@ -193,15 +205,21 @@ reading more to debug 0x00
 #### RECORD 11 BolusWizard 2013-01-20T11:52:20 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 177,
+{'_byte[5]': 11,
+ '_byte[7]': 0,
+ 'bg': 177,
  'bg_target_high': 125,
  'bg_target_low': 106,
  'bolus_estimate': 0.7,
  'carb_input': 10,
  'carb_ratio': 13,
- 'correction_estimate?': 0.0,
+ 'correction_estimate': 1.1,
+ 'food_estimate': 0.7,
  'sensitivity': 45,
- 'unabsorbed_insulin_total': 1.6}
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 1.6,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 0}
 ```
     op hex (2)
     0000   0x5b 0xb1                                  [.
@@ -260,15 +278,21 @@ reading more to debug 0x00
 #### RECORD 15 BolusWizard 2013-01-20T12:50:15 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 107,
+{'_byte[5]': 0,
+ '_byte[7]': 0,
+ 'bg': 107,
  'bg_target_high': 125,
  'bg_target_low': 106,
  'bolus_estimate': 3.8,
  'carb_input': 50,
  'carb_ratio': 13,
- 'correction_estimate?': 0.0,
+ 'correction_estimate': 0.0,
+ 'food_estimate': 3.8,
  'sensitivity': 45,
- 'unabsorbed_insulin_total': 1.4}
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 1.4,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 0}
 ```
     op hex (2)
     0000   0x5b 0x6b                                  [k
@@ -330,15 +354,21 @@ reading more to debug 0x00
 #### RECORD 19 BolusWizard 2013-01-20T13:07:45 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 108,
+{'_byte[5]': 0,
+ '_byte[7]': 0,
+ 'bg': 108,
  'bg_target_high': 125,
  'bg_target_low': 106,
  'bolus_estimate': 1.1,
  'carb_input': 15,
  'carb_ratio': 13,
- 'correction_estimate?': 0.0,
+ 'correction_estimate': 0.0,
+ 'food_estimate': 1.1,
  'sensitivity': 45,
- 'unabsorbed_insulin_total': 4.8}
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 4.8,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 0}
 ```
     op hex (2)
     0000   0x5b 0x6c                                  [l
@@ -457,15 +487,21 @@ reading more to debug 0x00
 #### RECORD 26 BolusWizard 2013-01-21T08:54:05 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 212,
+{'_byte[5]': 19,
+ '_byte[7]': 0,
+ 'bg': 212,
  'bg_target_high': 125,
  'bg_target_low': 106,
  'bolus_estimate': 1.9,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate?': 0.0,
+ 'correction_estimate': 0.3,
+ 'food_estimate': 0.0,
  'sensitivity': 45,
- 'unabsorbed_insulin_total': 0.0}
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 0}
 ```
     op hex (2)
     0000   0x5b 0xd4                                  [.

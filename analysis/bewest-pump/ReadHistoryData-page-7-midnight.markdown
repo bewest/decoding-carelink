@@ -11,15 +11,21 @@ reading more to debug 0x00
 #### RECORD 0 BolusWizard 2012-12-28T07:48:24 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 167,
+{'_byte[5]': 9,
+ '_byte[7]': 0,
+ 'bg': 167,
  'bg_target_high': 125,
  'bg_target_low': 106,
  'bolus_estimate': 5.5,
  'carb_input': 60,
  'carb_ratio': 13,
- 'correction_estimate?': 0.0,
+ 'correction_estimate': 0.9,
+ 'food_estimate': 4.6,
  'sensitivity': 45,
- 'unabsorbed_insulin_total': 0.0}
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 0}
 ```
     op hex (2)
     0000   0x5b 0xa7                                  [.
@@ -34,12 +40,6 @@ reading more to debug 0x00
     decimal
              60   80   13   45  106    9   46    0
               0    0    0   55  125
-    HOUR BITS: [0, 0, 1]
-#### RECORD 1 LowReservoir 2012-12-28T07:49:08 head[2], body[0] op[0x34]
-###### DECODED
-```python
-{'amount': 20.0}
-```
 --
     decimal
              92   14  180   67    4   12   77    4
@@ -101,7 +101,7 @@ reading more to debug 0x00
 #### RECORD 30 BolusWizard 2012-12-29T01:45:24 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 108,
+{'_byte[5]': 0,
 --
              92   17   60  109    4  150  129    4
              86  139    4   12  189    4  116  143
@@ -163,7 +163,7 @@ reading more to debug 0x00
 #### RECORD 58 BolusWizard 2012-12-30T11:32:00 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 187,
+{'_byte[5]': 13,
 --
              20    8  134   20   10  144   20    8
             154   20   10  164   20    8  174   20

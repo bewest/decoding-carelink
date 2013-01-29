@@ -225,7 +225,7 @@
 #### RECORD 55 BolusWizard 2012-11-04T01:25:59 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 214,
+{'_byte[5]': 19,
 --
     0000   0x01 0x0a 0x0a 0x00                        ....
     decimal

@@ -3,15 +3,21 @@
 #### RECORD 0 BolusWizard 2013-01-11T17:19:20 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 286,
+{'_byte[5]': 35,
+ '_byte[7]': 0,
+ 'bg': 286,
  'bg_target_high': 125,
  'bg_target_low': 106,
  'bolus_estimate': 2.1,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate?': 0.0,
+ 'correction_estimate': 0.3,
+ 'food_estimate': 0.0,
  'sensitivity': 45,
- 'unabsorbed_insulin_total': 1.4}
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 1.4,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 0}
 ```
     op hex (2)
     0000   0x5b 0x1e                                  [.
@@ -34,12 +40,6 @@
 ```
     op hex (5)
     0000   0x5c 0x05 0x64 0x69 0x04                   \.di.
-    decimal
-             92    5  100  105    4
-    datetime (unknown)
-
-    body (0)
-
 --
     decimal
              92   11   96  106    4  104  166    4
@@ -101,7 +101,7 @@
 #### RECORD 16 BolusWizard 2013-01-12T02:13:13 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 379,
+{'_byte[5]': 56,
 --
     0000   0x01 0x2d 0x2d 0x00                        .--.
     decimal
@@ -163,7 +163,7 @@
 #### RECORD 38 BolusWizard 2013-01-13T00:27:40 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 123,
+{'_byte[5]': 0,
 --
     0000   0x5c 0x08 0x54 0x0f 0x04 0x80 0x23 0x04    \.T...#.
     decimal
@@ -225,7 +225,7 @@
 #### RECORD 70 BolusWizard 2013-01-14T02:19:31 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 428,
+{'_byte[5]': 67,
 --
 {'amount': 372}
 ```

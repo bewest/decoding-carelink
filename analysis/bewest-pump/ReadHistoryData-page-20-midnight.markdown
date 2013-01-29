@@ -101,7 +101,7 @@ reading more to debug 0x00
 #### RECORD 27 BolusWizard 2012-11-10T00:50:39 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 278,
+{'_byte[5]': 34,
 --
     0000   0x5c 0x08 0xc8 0x41 0x04 0xa0 0x7d 0x04    \..A..}.
     decimal
@@ -163,7 +163,7 @@ reading more to debug 0x00
 #### RECORD 50 BolusWizard 2012-11-11T01:59:17 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 224,
+{'_byte[5]': 22,
 --
     0000   0x5c 0x05 0x30 0x75 0x04                   \.0u.
     decimal

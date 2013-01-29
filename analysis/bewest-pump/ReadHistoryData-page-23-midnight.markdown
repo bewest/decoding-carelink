@@ -96,7 +96,7 @@ reading more to debug 0x00
 #### RECORD 5 BolusWizard 2012-10-30T11:11:42 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 192,
+{'_byte[5]': 14,
 --
              92   17   16   21    4  152   41    4
             116  111    4   32  171    4   16   35

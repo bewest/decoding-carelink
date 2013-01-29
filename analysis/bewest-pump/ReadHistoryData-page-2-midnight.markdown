@@ -3,15 +3,21 @@
 #### RECORD 0 BolusWizard 2013-01-14T05:44:31 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 372,
+{'_byte[5]': 54,
+ '_byte[7]': 0,
+ 'bg': 372,
  'bg_target_high': 125,
  'bg_target_low': 106,
  'bolus_estimate': 2.8,
  'carb_input': 0,
  'carb_ratio': 13,
- 'correction_estimate?': 0.0,
+ 'correction_estimate': 0.6,
+ 'food_estimate': 0.0,
  'sensitivity': 45,
- 'unabsorbed_insulin_total': 2.6}
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 2.6,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 0}
 ```
     op hex (2)
     0000   0x5b 0x74                                  [t
@@ -34,12 +40,6 @@
  {'age': 200, 'amount': 0.3, 'curve': 4},
  {'age': 210, 'amount': 0.3, 'curve': 5},
  {'age': 204, 'amount': 1.9, 'curve': 20},
- {'age': 214, 'amount': 2.1, 'curve': 20}]
-```
-    op hex (17)
-    0000   0x5c 0x11 0x90 0x6e 0x04 0x0c 0xc8 0x04    \..n....
-    0008   0x0c 0xd2 0x05 0x4c 0xcc 0x14 0x54 0xd6    ...L..T.
-    0010   0x14                                       .
 --
 {'amount': 184}
 ```

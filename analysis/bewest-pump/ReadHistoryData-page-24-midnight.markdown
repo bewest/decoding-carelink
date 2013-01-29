@@ -37,9 +37,9 @@ reading more to debug 0x00
 #### RECORD 2 BolusWizard 2012-10-26T22:09:58 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 111,
- 'bg_target_high': 125,
- 'bg_target_low': 106,
+{'_byte[5]': 0,
+ '_byte[7]': 0,
+ 'bg': 111,
 --
     0000   0x0a 0x62                                  .b
     decimal
@@ -225,13 +225,13 @@ reading more to debug 0x00
 #### RECORD 65 BolusWizard 2012-10-29T02:55:15 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
-{'bg': 175,
+{'_byte[5]': 11,
 --
- 'carb_input': 50,
- 'carb_ratio': 13,
- 'correction_estimate?': 0.0,
  'sensitivity': 45,
- 'unabsorbed_insulin_total': 0.3}
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.3,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 0}
 ```
     op hex (2)
     0000   0x5b 0xad                                  [.

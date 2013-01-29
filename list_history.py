@@ -286,15 +286,21 @@ class BolusWizard(KnownRecord):
   >>> print str(rec)
   BolusWizard 2013-01-20T13:07:45 head[2], body[13] op[0x5b]
   >>> print pformat(decoded)
-  {'bg': 108,
+  {'_byte[5]': 0,
+   '_byte[7]': 0,
+   'bg': 108,
    'bg_target_high': 125,
    'bg_target_low': 106,
    'bolus_estimate': 1.1,
    'carb_input': 15,
    'carb_ratio': 13,
-   'correction_estimate?': 0.0,
+   'correction_estimate': 0.0,
+   'food_estimate': 1.1,
    'sensitivity': 45,
-   'unabsorbed_insulin_total': 4.8}
+   'unabsorbed_insulin_count': '??',
+   'unabsorbed_insulin_total': 4.8,
+   'unknown_byte[10]': 0,
+   'unknown_byte[8]': 0}
 
   """
   # missing unabsorbed_insulin_count = 4
@@ -313,19 +319,33 @@ class BolusWizard(KnownRecord):
     self.parse_time( )
     bg = lib.BangInt([ self.body[1] & 0x0f, self.head[1] ])
     carb_input = int(self.body[0])
+    correction = ( twos_comp( self.body[7], 8 )
+                 + twos_comp( self.body[5] & 0x0f, 8 ) ) / 10.0
     wizard = { 'bg': bg, 'carb_input': carb_input,
                'carb_ratio': int(self.body[2]),
                'sensitivity': int(self.body[3]),
                'bg_target_low': int(self.body[4]),
                'bg_target_high': int(self.body[12]),
                'bolus_estimate': int(self.body[11])/10.0,
-               'correction_estimate?': int(self.body[7])/10.0,
+               'food_estimate': int(self.body[6])/10.0,
                'unabsorbed_insulin_total': int(self.body[9])/10.0,
+               'unabsorbed_insulin_count': '??',
+               'correction_estimate': correction,
+               '_byte[5]': self.body[5],
+               '_byte[7]': int(self.body[7]), #
+               'unknown_byte[8]': self.body[8],
+               'unknown_byte[10]': self.body[10],
+               # '??': '??',
                # 'unabsorbed_insulin_total': int(self.body[9])/10.0,
-               'carb_input': int(self.body[0]),
                # 'food_estimate': int(self.body[0]),
              }
     return wizard
+
+def twos_comp(val, bits):
+    """compute the 2's compliment of int value val"""
+    if( (val&(1<<(bits-1))) != 0 ):
+        val = val - (1<<bits)
+    return val
 
 def decode_unabsorbed(amount, age, curve,strokes=40.0):
   unabsorbed = { 'amount': amount/strokes,
