@@ -264,7 +264,7 @@ class Bolus(KnownRecord):
   Bolus 2012-12-18T15:05:28 head[4], body[0] op[0x01]
 
   >>> print pformat(decoded)
-  {'amount': 5.6, 'programmed': 5.6}
+  {'amount': 5.6, 'dual_component': '??', 'programmed': 5.6, 'type': '??'}
 
   """
   _test_1 = bytearray([ 0x01, 0x38, 0x38, 0x00,
@@ -275,6 +275,8 @@ class Bolus(KnownRecord):
     self.parse_time( )
     dose = { 'amount': self.head[1]/10.0,
              'programmed': self.head[2]/10.0,
+             'type': '??',
+             'dual_component': '??',
            }
     return dose
 
