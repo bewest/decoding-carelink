@@ -321,6 +321,7 @@ class BolusWizard(KnownRecord):
     self.parse_time( )
     bg = lib.BangInt([ self.body[1] & 0x0f, self.head[1] ])
     carb_input = int(self.body[0])
+    # XXX: I have no idea if this is correct; it seems to produce correct results.
     correction = ( twos_comp( self.body[7], 8 )
                  + twos_comp( self.body[5] & 0x0f, 8 ) ) / 10.0
     wizard = { 'bg': bg, 'carb_input': carb_input,
