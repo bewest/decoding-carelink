@@ -2,6 +2,7 @@
 
 from binascii import hexlify
 from datetime import datetime
+from pprint import pformat
 
 import lib
 from history import *
@@ -384,6 +385,120 @@ def big_days(x=0):
   """
   return _bad_days[x]
 
+
+_wizards = [
+  # 2382,1/19/13,21:50:15,1/19/13
+  # 21:50:15,5.9,125,106,13,45,87,75,-0.7,6.6,0.0,BolusWizardBolusEstimate,"BG_INPUT=75,
+  # BG_UNITS=mg dl, CARB_INPUT=87, CARB_UNITS=grams, CARB_RATIO=13,
+  # INSULIN_SENSITIVITY=45, BG_TARGET_LOW=106, BG_TARGET_HIGH=125,
+  # BOLUS_ESTIMATE=5.9, CORRECTION_ESTIMATE=-0.7, FOOD_ESTIMATE=6.6,
+  # UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=0,
+  # ACTION_REQUESTOR=pump",9942918055,51974238,109,Paradigm 522
+  bytearray([ 0x5b, 0x4b,
+              0x0f, 0x72, 0x15, 0x13, 0x0d,
+              0x57, 0x50, 0x0d, 0x2d, 0x6a, 0xf9, 0x42, 0xf0,
+              0x00, 0x00, 0x00, 0x3b, 0x7d, ]),
+
+  # 2295,1/14/13,22:36:00,1/14/13
+  # 22:36:00,6.7,125,106,13,45,94,83,-0.5,7.2,1.0,BolusWizardBolusEstimate,"BG_INPUT=83,
+  # BG_UNITS=mg dl, CARB_INPUT=94, CARB_UNITS=grams, CARB_RATIO=13,
+  # INSULIN_SENSITIVITY=45, BG_TARGET_LOW=106, BG_TARGET_HIGH=125,
+  # BOLUS_ESTIMATE=6.7, CORRECTION_ESTIMATE=-0.5, FOOD_ESTIMATE=7.2,
+  # UNABSORBED_INSULIN_TOTAL=1, UNABSORBED_INSULIN_COUNT=8,
+  # ACTION_REQUESTOR=pump",9942918140,51974238,194,Paradigm 522
+  bytearray([ 0x5b, 0x53,
+              0x00, 0x64, 0x16, 0x0e, 0x0d,
+              0x5e, 0x50, 0x0d, 0x2d, 0x6a, 0xfb, 0x48, 0xf0,
+              0x00, 0x0a, 0x00, 0x43, 0x7d, ]),
+  # bytearray([ ]),
+]
+
+_bolus = [
+
+  # 2381,1/19/13,21:50:15,1/19/13
+  # 21:50:15,Dual/Normal,2.6,2.6,BolusNormal,"AMOUNT=2.6,
+  # CONCENTRATION=null, PROGRAMMED_AMOUNT=2.6, ACTION_REQUESTOR=pump,
+  # ENABLE=true, IS_DUAL_COMPONENT=true,
+  # UNABSORBED_INSULIN_TOTAL=null",9942918054,51974238,108,Paradigm
+  # 522
+  bytearray([ 0x01, 0x1a, 0x1a, 0x00,
+              0x0f, 0x72, 0x95, 0x13, 0x0d, ]),
+
+  # 2305,1/15/13,15:57:16,1/15/13
+  # 15:57:16,Normal,1.7,1.7,BolusNormal,"AMOUNT=1.7,
+  # CONCENTRATION=null, PROGRAMMED_AMOUNT=1.7, ACTION_REQUESTOR=pump,
+  # ENABLE=true, IS_DUAL_COMPONENT=false,
+  # UNABSORBED_INSULIN_TOTAL=null",9942918131,51974238,185,Paradigm
+  # 522
+  bytearray([ 0x01, 0x11, 0x11, 0x00,
+              0x10, 0x79, 0x4f, 0x0f, 0x0d, ]),
+  # bytearray([ ]),
+
+]
+
+def _test_bolus( ):
+  """
+  >>> rec = Bolus( _bolus[0][:2] )
+  >>> print pformat(rec.parse( _bolus[0] ))
+  {'amount': 2.6, 'dual_component': '??', 'programmed': 2.6, 'type': '??'}
+
+  >>> print str(rec)
+  Bolus 2013-01-19T21:50:15 head[4], body[0] op[0x01]
+
+  >>> rec = Bolus( _bolus[1][:2] )
+  >>> print pformat(rec.parse( _bolus[1] ))
+  {'amount': 1.7, 'dual_component': '??', 'programmed': 1.7, 'type': '??'}
+  >>> print str(rec)
+  Bolus 2013-01-15T15:57:16 head[4], body[0] op[0x01]
+
+  """
+
+def _test_bolus_wizards( ):
+  """
+  >>> rec = BolusWizard( _wizards[0][:2] )
+  >>> print pformat(rec.parse( _wizards[0] ))
+  {'_byte[5]': 249,
+   '_byte[7]': 240,
+   'bg': 75,
+   'bg_target_high': 125,
+   'bg_target_low': 106,
+   'bolus_estimate': 5.9,
+   'carb_input': 87,
+   'carb_ratio': 13,
+   'correction_estimate': -0.7,
+   'food_estimate': 6.6,
+   'sensitivity': 45,
+   'unabsorbed_insulin_count': '??',
+   'unabsorbed_insulin_total': 0.0,
+   'unknown_byte[10]': 0,
+   'unknown_byte[8]': 0}
+  >>> print str(rec)
+  BolusWizard 2013-01-19T21:50:15 head[2], body[13] op[0x5b]
+
+
+  >>> rec = BolusWizard( _wizards[1][:2] )
+  >>> print pformat(rec.parse( _wizards[1] ))
+  {'_byte[5]': 251,
+   '_byte[7]': 240,
+   'bg': 83,
+   'bg_target_high': 125,
+   'bg_target_low': 106,
+   'bolus_estimate': 6.7,
+   'carb_input': 94,
+   'carb_ratio': 13,
+   'correction_estimate': -0.5,
+   'food_estimate': 7.2,
+   'sensitivity': 45,
+   'unabsorbed_insulin_count': '??',
+   'unabsorbed_insulin_total': 1.0,
+   'unknown_byte[10]': 0,
+   'unknown_byte[8]': 0}
+
+  >>> print str(rec)
+  BolusWizard 2013-01-14T22:36:00 head[2], body[13] op[0x5b]
+
+  """
+  pass
 
 if __name__ == '__main__':
   import doctest

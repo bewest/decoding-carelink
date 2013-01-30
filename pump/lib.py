@@ -93,6 +93,25 @@ def hexdump( src, length=8, indent=0 ):
   return '\n'.join(result)
 
 
+def int_dump(stream, indent=0):
+  """
+  >>> int_dump(bytearray([0x01, 0x02]))
+  '   1    2'
+
+
+  """
+  cells = [ '%#04s' % (x) for x in stream ]
+  lines = [ ]
+  indent = ''.join( [ ' ' ] * indent )
+  while cells:
+    octet = cells[:8]
+    line  = ' '.join(octet)
+    lines.append(indent + line)
+    cells = cells[8:]
+
+  out = ('\n').join([ line for line in lines ])
+  return out
+
 
 
 def HighByte( arg ):
