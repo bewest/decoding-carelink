@@ -13,3 +13,8 @@
 
 In the `*.data.list_opcodes.markdown` files.
 
+## Is it correct?
+
+The decoding is mostly correct, but needs verification.
+Help match the records and find places that are incorrect.
+
