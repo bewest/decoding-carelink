@@ -413,46 +413,6 @@ _wizards = [
   # bytearray([ ]),
 ]
 
-_bolus = [
-
-  # 2381,1/19/13,21:50:15,1/19/13
-  # 21:50:15,Dual/Normal,2.6,2.6,BolusNormal,"AMOUNT=2.6,
-  # CONCENTRATION=null, PROGRAMMED_AMOUNT=2.6, ACTION_REQUESTOR=pump,
-  # ENABLE=true, IS_DUAL_COMPONENT=true,
-  # UNABSORBED_INSULIN_TOTAL=null",9942918054,51974238,108,Paradigm
-  # 522
-  bytearray([ 0x01, 0x1a, 0x1a, 0x00,
-              0x0f, 0x72, 0x95, 0x13, 0x0d, ]),
-
-  # 2305,1/15/13,15:57:16,1/15/13
-  # 15:57:16,Normal,1.7,1.7,BolusNormal,"AMOUNT=1.7,
-  # CONCENTRATION=null, PROGRAMMED_AMOUNT=1.7, ACTION_REQUESTOR=pump,
-  # ENABLE=true, IS_DUAL_COMPONENT=false,
-  # UNABSORBED_INSULIN_TOTAL=null",9942918131,51974238,185,Paradigm
-  # 522
-  bytearray([ 0x01, 0x11, 0x11, 0x00,
-              0x10, 0x79, 0x4f, 0x0f, 0x0d, ]),
-  # bytearray([ ]),
-
-]
-
-def _test_bolus( ):
-  """
-  >>> rec = Bolus( _bolus[0][:2] )
-  >>> print pformat(rec.parse( _bolus[0] ))
-  {'amount': 2.6, 'dual_component': '??', 'programmed': 2.6, 'type': '??'}
-
-  >>> print str(rec)
-  Bolus 2013-01-19T21:50:15 head[4], body[0] op[0x01]
-
-  >>> rec = Bolus( _bolus[1][:2] )
-  >>> print pformat(rec.parse( _bolus[1] ))
-  {'amount': 1.7, 'dual_component': '??', 'programmed': 1.7, 'type': '??'}
-  >>> print str(rec)
-  Bolus 2013-01-15T15:57:16 head[4], body[0] op[0x01]
-
-  """
-
 def _test_bolus_wizards( ):
   """
   >>> rec = BolusWizard( _wizards[0][:2] )
@@ -500,6 +460,46 @@ def _test_bolus_wizards( ):
   """
   pass
 
+
+_bolus = [
+
+  # 2381,1/19/13,21:50:15,1/19/13
+  # 21:50:15,Dual/Normal,2.6,2.6,BolusNormal,"AMOUNT=2.6,
+  # CONCENTRATION=null, PROGRAMMED_AMOUNT=2.6, ACTION_REQUESTOR=pump,
+  # ENABLE=true, IS_DUAL_COMPONENT=true,
+  # UNABSORBED_INSULIN_TOTAL=null",9942918054,51974238,108,Paradigm
+  # 522
+  bytearray([ 0x01, 0x1a, 0x1a, 0x00,
+              0x0f, 0x72, 0x95, 0x13, 0x0d, ]),
+
+  # 2305,1/15/13,15:57:16,1/15/13
+  # 15:57:16,Normal,1.7,1.7,BolusNormal,"AMOUNT=1.7,
+  # CONCENTRATION=null, PROGRAMMED_AMOUNT=1.7, ACTION_REQUESTOR=pump,
+  # ENABLE=true, IS_DUAL_COMPONENT=false,
+  # UNABSORBED_INSULIN_TOTAL=null",9942918131,51974238,185,Paradigm
+  # 522
+  bytearray([ 0x01, 0x11, 0x11, 0x00,
+              0x10, 0x79, 0x4f, 0x0f, 0x0d, ]),
+  # bytearray([ ]),
+
+]
+
+def _test_bolus( ):
+  """
+  >>> rec = Bolus( _bolus[0][:2] )
+  >>> print pformat(rec.parse( _bolus[0] ))
+  {'amount': 2.6, 'dual_component': '??', 'programmed': 2.6, 'type': '??'}
+
+  >>> print str(rec)
+  Bolus 2013-01-19T21:50:15 head[4], body[0] op[0x01]
+
+  >>> rec = Bolus( _bolus[1][:2] )
+  >>> print pformat(rec.parse( _bolus[1] ))
+  {'amount': 1.7, 'dual_component': '??', 'programmed': 1.7, 'type': '??'}
+  >>> print str(rec)
+  Bolus 2013-01-15T15:57:16 head[4], body[0] op[0x01]
+
+  """
 if __name__ == '__main__':
   import doctest
   doctest.testmod( )
