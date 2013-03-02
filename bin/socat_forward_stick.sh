@@ -22,15 +22,15 @@ echo ""
 SOCAT=$(which socat)
 # BLOCK_SIZE="-b 64"
 BLOCK_SIZE=""
-ADDR1="FILE:/dev/ttyUSB0,nonblock,b9600,raw"
-ADDR2="tcp:localhost:4161"
+ADDR1="tcp-l:9001,reuseaddr"
+ADDR2="FILE:/dev/ttyUSB0,nonblock,b9600,raw"
 # ADDR2="FILE:carelink.ttyUSB0,b9600,raw"
 # $ socat pty,link=$HOME/dev/vmodem0,waitslave tcp:modem-server:54321
-SOCAT_ARGS="${BLOCK_SIZE} ${ADDR1} ${ADDR2}"
+SOCAT_ARGS="-d -d ${BLOCK_SIZE} ${ADDR1} ${ADDR2}"
 
 echo "$SOCAT $SOCAT_ARGS"
-echo "now run "ssh -L4161:localhost:4161 bewest.io"
-$SOCAT $SOCAT_ARGS
+$SOCAT $SOCAT_ARGS &
+ssh -R localhost:9001:localhost:9001 insulaudit
 
 #####
 # EOF
