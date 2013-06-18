@@ -3,6 +3,15 @@ import lib
 import logging
 import time
 
+"""
+stick - implement a naive open source driver for Medtronic's
+Carelink USB stick.
+
+Please ask Medtronic for additional information on how to use the usb
+stick.
+
+"""
+
 log = logging.getLogger( ).getChild(__name__)
 
 from errors import StickError, AckError, BadDeviceCommError
@@ -14,6 +23,16 @@ def CRC8(data):
 
 class StickCommand(object):
   """Basic stick command
+
+  Each command is used to talk to the usb stick.
+  The usb stick interprets the opcode, and then performs the function
+  associated with the opcode.
+  Altogether, the suite of opcodes that the stick responds to allows
+  you to debug and track all packets you are sending/receiving plus
+  allows you to send recieve commands to the pump, by formatting your
+  message into payloads with opcodes, and then letting the stick work
+  on what you've given it.  It's kind of like a modem with this funky
+  binary interface.
   """
   code = [ 0x00 ]
   label = __doc__
@@ -52,7 +71,8 @@ class StickCommand(object):
     
 
 class ProductInfo(StickCommand):
-  """Get product info from the usb device."""
+  """Get product info from the usb device.  Useful for identifying
+  what kind of usb stick you've got; there are a few different kinds."""
   code   = [ 4 ]
   SW_VER = 16
   label  = 'usb.productInfo'
@@ -92,6 +112,8 @@ class ProductInfo(StickCommand):
     return self.decode(data)
 
 class InterfaceStats(StickCommand):
+  """Abstract stats decoder.
+  """
   code          = [ 5 ]
   INTERFACE_IDX = 19
   label         = 'usb.interfaceStats'
@@ -113,12 +135,18 @@ class InterfaceStats(StickCommand):
 
 
 class UsbStats(InterfaceStats):
+  """Count of packets and stats on the usb side of the stick."""
   code = [ 5, 1 ]
 
 class RadioStats(InterfaceStats):
+  """Count of packets and stats on the radio side of the stick."""
   code = [ 5, 0 ]
 
 class SignalStrength(StickCommand):
+  """This seems to be required to initialize communications with the
+  usb stick.  Also, you should wait until a minimum threshold is
+  reached.
+  """
   code = [ 6, 0 ]
   def parse(self, data):
     """
@@ -130,6 +158,12 @@ class SignalStrength(StickCommand):
     return int(data[0])
 
 class LinkStatus(StickCommand):
+  """Basic ACK type of command.
+  Used to poll the modem's radio buffer.  When the radio buffer is
+  full, we can download a packet from the buffer.  Otherwise, we need
+  to be mindful of the state the radio is in.  This opcode tells you
+  the current state of the radio/stick.
+  """
   code = [ 0x03 ]
   reason = ''
 
@@ -186,6 +220,8 @@ class LinkStatus(StickCommand):
     return 0
 
 class ReadRadio(StickCommand):
+  """Read buffer from the radio.  Downloads a packet from the radio
+  buffer."""
   code = [ 0x0C, 0x00 ]
   dl_size = 0
   size = 64
@@ -269,6 +305,16 @@ class ReadRadio(StickCommand):
     return data
 
 class TransmitPacket(StickCommand):
+  """Format a packet to send on the radio.
+
+  This commands formats a packet from usb, and shoves it into the
+  radio buffer.
+  The radio buffer is broadcast "over the air" so that any device
+  sensitive to the packets you sent will respond accordingly
+  (probably sending data back).
+  For this reason, the serial number of the device you'd like to talk
+  to is formatted into the packet.
+  """
   code = [ 1, 0, 167, 1 ]
   head = [ 1, 0, 167, 1 ]
   # wraps pump commands
@@ -358,7 +404,12 @@ class Stick(object):
 
     Each command is usually only 3 bytes.
 
-    A special command is 
+    The protocol offers some facility for detecting and recovering
+    from inconsistencies in the underlying transport of data, however,
+    we are somwhat ignorant of them.  The tricky bits are exactly how
+    to recover from, eg CRC, errors that can occur.
+    The "shape" and timing of these loops seem to mostly get the job
+    done.
   """
   link = None
   def __init__(self, link):
