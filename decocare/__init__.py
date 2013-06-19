@@ -8,7 +8,6 @@ or command MM insulin pumps.  Tested with 515, and 522.
 See:
 
 .. hlist::
-
   * https://github.com/bewest/decoding-carelink
   * https://github.com/bewest/insulaudit
   * https://github.com/bewest/insulaudit-ssh-tools
