@@ -10,3 +10,5 @@
 .DS_*/
 node_modules/
 
+*.egg-info/
+doc/_build/
