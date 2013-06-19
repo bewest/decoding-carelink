@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>decocare.session &mdash; insulaudit:decoding-carelink 0.0.3 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="insulaudit:decoding-carelink 0.0.3 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li>
+          <li><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for decocare.session</h1><div class="highlight"><pre>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span> <span class="p">)</span><span class="o">.</span><span class="n">getChild</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">commands</span>
+<span class="kn">import</span> <span class="nn">lib</span>
+<span class="kn">import</span> <span class="nn">stick</span>
+<span class="kn">from</span> <span class="nn">errors</span> <span class="kn">import</span> <span class="n">StickError</span><span class="p">,</span> <span class="n">AckError</span><span class="p">,</span> <span class="n">BadDeviceCommError</span>
+
+
+<div class="viewcode-block" id="Session"><a class="viewcode-back" href="../../api/decocare.html#decocare.session.Session">[docs]</a><span class="k">class</span> <span class="nc">Session</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stick</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">stick</span> <span class="o">=</span> <span class="n">stick</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">should_download</span> <span class="o">=</span> <span class="bp">True</span>
+<div class="viewcode-block" id="Session.init"><a class="viewcode-back" href="../../api/decocare.html#decocare.session.Session.init">[docs]</a>  <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">skip_power_control</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="n">stick</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stick</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;test fetching product info </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">stick</span><span class="p">)</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">pformat</span><span class="p">(</span><span class="n">stick</span><span class="o">.</span><span class="n">product_info</span><span class="p">(</span> <span class="p">)))</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;get signal strength of </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">stick</span><span class="p">)</span>
+    <span class="n">signal</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">signal</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">:</span>
+      <span class="n">signal</span> <span class="o">=</span> <span class="n">stick</span><span class="o">.</span><span class="n">signal_strength</span><span class="p">(</span> <span class="p">)</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;we seem to have found a nice signal strength of: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">signal</span><span class="p">)</span></div>
+<div class="viewcode-block" id="Session.end"><a class="viewcode-back" href="../../api/decocare.html#decocare.session.Session.end">[docs]</a>  <span class="k">def</span> <span class="nf">end</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">stick</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stick</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">pformat</span><span class="p">(</span><span class="n">stick</span><span class="o">.</span><span class="n">usb_stats</span><span class="p">(</span> <span class="p">)))</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">pformat</span><span class="p">(</span><span class="n">stick</span><span class="o">.</span><span class="n">radio_stats</span><span class="p">(</span> <span class="p">)))</span>
+</div>
+<div class="viewcode-block" id="Session.execute"><a class="viewcode-back" href="../../api/decocare.html#decocare.session.Session.execute">[docs]</a>  <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">command</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">retries</span><span class="p">)):</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;execute attempt: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+      <span class="k">try</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">expectedLength</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">bytesPerRecord</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">maxRecords</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">transfer</span><span class="p">(</span> <span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">should_download</span><span class="p">:</span>
+          <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;sleeping </span><span class="si">%s</span><span class="s"> before download&#39;</span> <span class="o">%</span> <span class="n">command</span><span class="o">.</span><span class="n">effectTime</span><span class="p">)</span>
+          <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">command</span><span class="o">.</span><span class="n">effectTime</span><span class="p">)</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">download</span><span class="p">(</span> <span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;finished executing:</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">command</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">command</span><span class="o">.</span><span class="n">done</span><span class="p">(</span> <span class="p">):</span>
+          <span class="k">return</span> <span class="n">command</span>
+      <span class="k">except</span> <span class="n">BadDeviceCommError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s">&quot;ERROR: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span>
+        <span class="c"># self.clearBuffers( )</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s">&#39;this seems like a problem&#39;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Session.download"><a class="viewcode-back" href="../../api/decocare.html#decocare.session.Session.download">[docs]</a>  <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">expectedLength</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;proceeding with download&#39;</span><span class="p">)</span>
+      <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stick</span><span class="o">.</span><span class="n">download</span><span class="p">(</span> <span class="p">)</span>
+      <span class="c">#self.command.data = data</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">data</span>
+      <span class="c"># remove</span>
+      <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="k">pass</span>
+        <span class="k">try</span><span class="p">:</span>
+          <span class="k">pass</span>
+        <span class="k">except</span> <span class="n">AckError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+          <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mo">010</span><span class="p">)</span>
+          <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+          <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;no download required&#39;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">errors</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;with errors:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">errors</span><span class="p">)</span> <span class="p">))</span></div>
+<div class="viewcode-block" id="Session.transfer"><a class="viewcode-back" href="../../api/decocare.html#decocare.session.Session.transfer">[docs]</a>  <span class="k">def</span> <span class="nf">transfer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;session transferring packet&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stick</span><span class="o">.</span><span class="n">transmit_packet</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="p">)</span>
+</div></div>
+<div class="viewcode-block" id="Pump"><a class="viewcode-back" href="../../api/decocare.html#decocare.session.Pump">[docs]</a><span class="k">class</span> <span class="nc">Pump</span><span class="p">(</span><span class="n">Session</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stick</span><span class="p">,</span> <span class="n">serial</span><span class="o">=</span><span class="s">&#39;208850&#39;</span><span class="p">):</span>
+    <span class="nb">super</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">stick</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">serial</span> <span class="o">=</span> <span class="n">serial</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;setting up to talk with </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">serial</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Pump.power_control"><a class="viewcode-back" href="../../api/decocare.html#decocare.session.Pump.power_control">[docs]</a>  <span class="k">def</span> <span class="nf">power_control</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;BEGIN POWER CONTROL&#39;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s">&quot;PowerControl SERIAL&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">serial</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">PowerControl</span><span class="p">)</span>
+    <span class="n">power</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;manually download PowerControl serial&#39;</span> <span class="o">%</span> <span class="n">serial</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stick</span><span class="o">.</span><span class="n">download</span><span class="p">(</span> <span class="p">)</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;ENDING manual download:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">data</span>
+</div>
+<div class="viewcode-block" id="Pump.read_model"><a class="viewcode-back" href="../../api/decocare.html#decocare.session.Pump.read_model">[docs]</a>  <span class="k">def</span> <span class="nf">read_model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">ReadPumpModel</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
+    <span class="k">return</span> <span class="n">model</span>
+</div>
+<div class="viewcode-block" id="Pump.read_history_0"><a class="viewcode-back" href="../../api/decocare.html#decocare.session.Pump.read_history_0">[docs]</a>  <span class="k">def</span> <span class="nf">read_history_0</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;read HISTORY DATA&quot;</span><span class="p">)</span>
+    <span class="n">comm</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">ReadHistoryData</span><span class="p">(</span><span class="n">serial</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">serial</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">comm</span><span class="p">)</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;comm:READ history data page!!!:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">comm</span><span class="o">.</span><span class="n">getData</span><span class="p">(</span> <span class="p">))))</span>
+</div>
+<div class="viewcode-block" id="Pump.execute"><a class="viewcode-back" href="../../api/decocare.html#decocare.session.Pump.execute">[docs]</a>  <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">):</span>
+    <span class="n">command</span><span class="o">.</span><span class="n">serial</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">serial</span>
+    <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">command</span><span class="p">)</span></div>
+<div class="viewcode-block" id="Pump.query"><a class="viewcode-back" href="../../api/decocare.html#decocare.session.Pump.query">[docs]</a>  <span class="k">def</span> <span class="nf">query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Command</span><span class="p">):</span>
+    <span class="n">command</span> <span class="o">=</span> <span class="n">Command</span><span class="p">(</span><span class="n">serial</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">serial</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">command</span>
+</div></div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+  <span class="kn">import</span> <span class="nn">doctest</span>
+  <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span> <span class="p">)</span>
+
+  <span class="kn">import</span> <span class="nn">sys</span>
+  <span class="n">port</span> <span class="o">=</span> <span class="bp">None</span>
+  <span class="n">port</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="ow">and</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span> <span class="bp">False</span>
+  <span class="n">serial_num</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="ow">and</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="ow">or</span> <span class="bp">False</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">port</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">serial_num</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;usage:</span><span class="se">\n</span><span class="si">%s</span><span class="s"> &lt;port&gt; &lt;serial&gt;, eg /dev/ttyUSB0 208850&quot;</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+  <span class="kn">import</span> <span class="nn">link</span>
+  <span class="kn">import</span> <span class="nn">stick</span>
+  <span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pformat</span>
+  <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;howdy! I&#39;m going to take a look at your pump.&quot;</span><span class="p">)</span>
+  <span class="n">stick</span> <span class="o">=</span> <span class="n">stick</span><span class="o">.</span><span class="n">Stick</span><span class="p">(</span><span class="n">link</span><span class="o">.</span><span class="n">Link</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=.</span><span class="mi">200</span><span class="p">))</span>
+  <span class="n">stick</span><span class="o">.</span><span class="n">open</span><span class="p">(</span> <span class="p">)</span>
+  <span class="n">session</span> <span class="o">=</span> <span class="n">Pump</span><span class="p">(</span><span class="n">stick</span><span class="p">,</span> <span class="n">serial_num</span><span class="p">)</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">pformat</span><span class="p">(</span><span class="n">stick</span><span class="o">.</span><span class="n">interface_stats</span><span class="p">(</span> <span class="p">)))</span>
+  <span class="n">session</span><span class="o">.</span><span class="n">power_control</span><span class="p">(</span> <span class="p">)</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">pformat</span><span class="p">(</span><span class="n">stick</span><span class="o">.</span><span class="n">interface_stats</span><span class="p">(</span> <span class="p">)))</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;PUMP MODEL: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">session</span><span class="o">.</span><span class="n">read_model</span><span class="p">(</span> <span class="p">))</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">pformat</span><span class="p">(</span><span class="n">stick</span><span class="o">.</span><span class="n">interface_stats</span><span class="p">(</span> <span class="p">)))</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;PUMP READ PAGE 0: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">session</span><span class="o">.</span><span class="n">read_history_0</span><span class="p">(</span> <span class="p">))</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">pformat</span><span class="p">(</span><span class="n">stick</span><span class="o">.</span><span class="n">interface_stats</span><span class="p">(</span> <span class="p">)))</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;howdy! all done looking at pump&quot;</span><span class="p">)</span>
+  <span class="c"># stick.open( )</span>
+  
+<span class="c">#####</span>
+<span class="c"># EOF</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Insulaudit contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

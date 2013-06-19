@@ -1,0 +1,890 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>decocare.stick &mdash; insulaudit:decoding-carelink 0.0.3 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="insulaudit:decoding-carelink 0.0.3 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li>
+          <li><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for decocare.stick</h1><div class="highlight"><pre>
+<span class="kn">import</span> <span class="nn">lib</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">stick - implement a naive open source driver for Medtronic&#39;s</span>
+<span class="sd">Carelink USB stick.</span>
+
+<span class="sd">Please ask Medtronic for additional information on how to use the usb</span>
+<span class="sd">stick.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span> <span class="p">)</span><span class="o">.</span><span class="n">getChild</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">errors</span> <span class="kn">import</span> <span class="n">StickError</span><span class="p">,</span> <span class="n">AckError</span><span class="p">,</span> <span class="n">BadDeviceCommError</span>
+
+<span class="k">class</span> <span class="nc">BadCRC</span><span class="p">(</span><span class="n">StickError</span><span class="p">):</span> <span class="k">pass</span>
+<div class="viewcode-block" id="BadCRC"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.BadCRC">[docs]</a>
+<span class="k">def</span> <span class="nf">CRC8</span><span class="p">(</span><span class="n">data</span><span class="p">):</span></div>
+<div class="viewcode-block" id="CRC8"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.CRC8">[docs]</a>  <span class="k">return</span> <span class="n">lib</span><span class="o">.</span><span class="n">CRC8</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">StickCommand</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span></div>
+<div class="viewcode-block" id="StickCommand"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.StickCommand">[docs]</a>  <span class="sd">&quot;&quot;&quot;Basic stick command</span>
+
+<span class="sd">  Each command is used to talk to the usb stick.</span>
+<span class="sd">  The usb stick interprets the opcode, and then performs the function</span>
+<span class="sd">  associated with the opcode.</span>
+<span class="sd">  Altogether, the suite of opcodes that the stick responds to allows</span>
+<span class="sd">  you to debug and track all packets you are sending/receiving plus</span>
+<span class="sd">  allows you to send recieve commands to the pump, by formatting your</span>
+<span class="sd">  message into payloads with opcodes, and then letting the stick work</span>
+<span class="sd">  on what you&#39;ve given it.  It&#39;s kind of like a modem with this funky</span>
+<span class="sd">  binary interface.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">code</span> <span class="o">=</span> <span class="p">[</span> <span class="mh">0x00</span> <span class="p">]</span>
+  <span class="n">label</span> <span class="o">=</span> <span class="n">__doc__</span>
+  <span class="n">delay</span> <span class="o">=</span> <span class="o">.</span><span class="mo">001</span>
+  <span class="n">size</span> <span class="o">=</span> <span class="mi">64</span>
+
+  <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">code</span> <span class="o">=</span> <span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span> <span class="s">&#39;</span><span class="si">%#04x</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">op</span> <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">code</span> <span class="p">])</span>
+    <span class="k">return</span> <span class="s">&#39;{0}:{1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="n">code</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">&#39;&lt;{0:s}:size({1})&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StickCommand.format"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.StickCommand.format">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_cl2</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">format_cl2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">a2</span><span class="o">=</span><span class="mh">0x00</span><span class="p">,</span> <span class="n">a3</span><span class="o">=</span><span class="mh">0x00</span><span class="p">):</span></div>
+<div class="viewcode-block" id="StickCommand.format_cl2"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.StickCommand.format_cl2">[docs]</a>    <span class="c"># generally commands are 3 bytes, most often CMD, 0x00, 0x00</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="n">msg</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">a3</span> <span class="p">])</span>
+    <span class="k">return</span> <span class="n">msg</span>
+
+  <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span></div>
+<div class="viewcode-block" id="StickCommand.parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.StickCommand.parse">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+
+  <span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw</span><span class="p">):</span></div>
+<div class="viewcode-block" id="StickCommand.respond"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.StickCommand.respond">[docs]</a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&quot;ACK is zero bytes!&quot;</span><span class="p">)</span>
+      <span class="c"># return False</span>
+      <span class="k">raise</span> <span class="n">AckError</span><span class="p">(</span><span class="s">&quot;ACK is 0 bytes:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">raw</span><span class="p">))</span>
+    <span class="n">commStatus</span> <span class="o">=</span> <span class="n">raw</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c"># usable response</span>
+    <span class="k">assert</span> <span class="n">commStatus</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;commStatus: </span><span class="si">%02x</span><span class="s"> expected 0x1&#39;</span> <span class="o">%</span> <span class="n">commStatus</span><span class="p">)</span>
+    <span class="n">status</span>     <span class="o">=</span> <span class="n">raw</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="c"># status == 102 &#39;f&#39; NAK, look up NAK</span>
+    <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="mi">85</span><span class="p">:</span> <span class="c"># &#39;U&#39;</span>
+      <span class="k">return</span> <span class="n">raw</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="n">raw</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+    <span class="k">assert</span> <span class="bp">False</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;NAK!!</span><span class="se">\n</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">raw</span><span class="p">[:</span><span class="mi">3</span><span class="p">]))</span>
+    
+
+<span class="k">class</span> <span class="nc">ProductInfo</span><span class="p">(</span><span class="n">StickCommand</span><span class="p">):</span></div></div>
+<div class="viewcode-block" id="ProductInfo"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ProductInfo">[docs]</a>  <span class="sd">&quot;&quot;&quot;Get product info from the usb device.  Useful for identifying</span>
+<span class="sd">  what kind of usb stick you&#39;ve got; there are a few different kinds.&quot;&quot;&quot;</span>
+  <span class="n">code</span>   <span class="o">=</span> <span class="p">[</span> <span class="mi">4</span> <span class="p">]</span>
+  <span class="n">SW_VER</span> <span class="o">=</span> <span class="mi">16</span>
+  <span class="n">label</span>  <span class="o">=</span> <span class="s">&#39;usb.productInfo&#39;</span>
+  <span class="n">rf_table</span>  <span class="o">=</span> <span class="p">{</span> <span class="mo">001</span><span class="p">:</span> <span class="s">&#39;868.35Mhz&#39;</span> <span class="p">,</span>
+                <span class="mo">000</span><span class="p">:</span> <span class="s">&#39;916.5Mhz&#39;</span>  <span class="p">,</span>
+                <span class="mi">255</span><span class="p">:</span> <span class="s">&#39;916.5Mhz&#39;</span>  <span class="p">}</span>
+  <span class="n">iface_key</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">3</span><span class="p">:</span> <span class="s">&#39;USB&#39;</span><span class="p">,</span>
+                <span class="mi">1</span><span class="p">:</span> <span class="s">&#39;Paradigm RF&#39;</span> <span class="p">}</span>
+
+  <span class="nd">@classmethod</span>
+  <span class="k">def</span> <span class="nf">decodeInterfaces</span><span class="p">(</span> <span class="n">klass</span><span class="p">,</span> <span class="n">L</span> <span class="p">):</span>
+<div class="viewcode-block" id="ProductInfo.decodeInterfaces"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ProductInfo.decodeInterfaces">[docs]</a>    <span class="n">n</span><span class="p">,</span> <span class="n">tail</span>    <span class="o">=</span> <span class="n">L</span><span class="p">[</span> <span class="mi">0</span> <span class="p">],</span> <span class="n">L</span><span class="p">[</span> <span class="mi">1</span><span class="p">:</span> <span class="p">]</span>
+    <span class="n">interfaces</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span> <span class="n">n</span> <span class="p">):</span>
+      <span class="n">i</span>    <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="mi">2</span>
+      <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">tail</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tail</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+      <span class="n">interfaces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span> <span class="n">k</span><span class="p">,</span> <span class="n">klass</span><span class="o">.</span><span class="n">iface_key</span><span class="o">.</span><span class="n">get</span><span class="p">(</span> <span class="n">v</span><span class="p">,</span> <span class="s">&#39;UNKNOWN&#39;</span>  <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="n">interfaces</span>
+
+  <span class="nd">@classmethod</span></div>
+  <span class="k">def</span> <span class="nf">decode</span><span class="p">(</span> <span class="n">klass</span><span class="p">,</span>  <span class="n">data</span> <span class="p">):</span>
+<div class="viewcode-block" id="ProductInfo.decode"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ProductInfo.decode">[docs]</a>    <span class="k">return</span> <span class="p">{</span>
+      <span class="s">&#39;rf.freq&#39;</span>          <span class="p">:</span> <span class="n">klass</span><span class="o">.</span><span class="n">rf_table</span><span class="o">.</span><span class="n">get</span><span class="p">(</span> <span class="n">data</span><span class="p">[</span> <span class="mi">5</span> <span class="p">],</span> <span class="s">&#39;UNKNOWN&#39;</span> <span class="p">)</span>
+    <span class="p">,</span> <span class="s">&#39;serial&#39;</span>           <span class="p">:</span> <span class="nb">str</span><span class="p">(</span> <span class="n">data</span><span class="p">[</span> <span class="mi">0</span><span class="p">:</span><span class="mi">3</span> <span class="p">])</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span> <span class="s">&#39;hex&#39;</span>  <span class="p">)</span>
+    <span class="p">,</span> <span class="s">&#39;product.version&#39;</span>  <span class="p">:</span> <span class="s">&#39;{0}.{1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="o">*</span><span class="n">data</span><span class="p">[</span> <span class="mi">3</span><span class="p">:</span><span class="mi">5</span> <span class="p">]</span> <span class="p">)</span>
+    <span class="p">,</span> <span class="s">&#39;description&#39;</span>      <span class="p">:</span> <span class="nb">str</span><span class="p">(</span> <span class="n">data</span><span class="p">[</span> <span class="mo">06</span><span class="p">:</span><span class="mi">16</span> <span class="p">]</span> <span class="p">)</span>
+    <span class="p">,</span> <span class="s">&#39;software.version&#39;</span> <span class="p">:</span> <span class="s">&#39;{0}.{1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="o">*</span><span class="n">data</span><span class="p">[</span> <span class="mi">16</span><span class="p">:</span><span class="mi">18</span> <span class="p">]</span> <span class="p">)</span>
+    <span class="p">,</span> <span class="s">&#39;interfaces&#39;</span>       <span class="p">:</span> <span class="n">klass</span><span class="o">.</span><span class="n">decodeInterfaces</span><span class="p">(</span> <span class="n">data</span><span class="p">[</span> <span class="mi">18</span><span class="p">:</span> <span class="p">]</span> <span class="p">)</span>
+    <span class="p">}</span>
+
+  <span class="n">_test_ok</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">[</span></div>
+  <span class="p">]</span> <span class="p">)</span>
+  <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<div class="viewcode-block" id="ProductInfo.parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ProductInfo.parse">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">      #&gt;&gt;&gt;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">InterfaceStats</span><span class="p">(</span><span class="n">StickCommand</span><span class="p">):</span></div></div>
+<div class="viewcode-block" id="InterfaceStats"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.InterfaceStats">[docs]</a>  <span class="sd">&quot;&quot;&quot;Abstract stats decoder.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">code</span>          <span class="o">=</span> <span class="p">[</span> <span class="mi">5</span> <span class="p">]</span>
+  <span class="n">INTERFACE_IDX</span> <span class="o">=</span> <span class="mi">19</span>
+  <span class="n">label</span>         <span class="o">=</span> <span class="s">&#39;usb.interfaceStats&#39;</span>
+  <span class="nd">@classmethod</span>
+  <span class="k">def</span> <span class="nf">decode</span><span class="p">(</span> <span class="n">klass</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<div class="viewcode-block" id="InterfaceStats.decode"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.InterfaceStats.decode">[docs]</a>    <span class="k">return</span> <span class="p">{</span>
+      <span class="s">&#39;errors.crc&#39;</span>      <span class="p">:</span> <span class="n">data</span><span class="p">[</span> <span class="mi">0</span> <span class="p">]</span>
+    <span class="p">,</span> <span class="s">&#39;errors.sequence&#39;</span> <span class="p">:</span> <span class="n">data</span><span class="p">[</span> <span class="mi">1</span> <span class="p">]</span>
+    <span class="p">,</span> <span class="s">&#39;errors.naks&#39;</span>     <span class="p">:</span> <span class="n">data</span><span class="p">[</span> <span class="mi">2</span> <span class="p">]</span>
+    <span class="p">,</span> <span class="s">&#39;errors.timeouts&#39;</span> <span class="p">:</span> <span class="n">data</span><span class="p">[</span> <span class="mi">3</span> <span class="p">]</span>
+    <span class="p">,</span> <span class="s">&#39;packets.received&#39;</span><span class="p">:</span> <span class="n">lib</span><span class="o">.</span><span class="n">BangLong</span><span class="p">(</span> <span class="n">data</span><span class="p">[</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">8</span> <span class="p">]</span> <span class="p">)</span>
+    <span class="p">,</span> <span class="s">&#39;packets.transmit&#39;</span><span class="p">:</span> <span class="n">lib</span><span class="o">.</span><span class="n">BangLong</span><span class="p">(</span> <span class="n">data</span><span class="p">[</span> <span class="mi">8</span><span class="p">:</span><span class="mi">12</span> <span class="p">]</span> <span class="p">)</span>
+    <span class="p">}</span>
+  <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span></div>
+<div class="viewcode-block" id="InterfaceStats.parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.InterfaceStats.parse">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">      #&gt;&gt;&gt;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">UsbStats</span><span class="p">(</span><span class="n">InterfaceStats</span><span class="p">):</span></div></div>
+<div class="viewcode-block" id="UsbStats"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.UsbStats">[docs]</a>  <span class="sd">&quot;&quot;&quot;Count of packets and stats on the usb side of the stick.&quot;&quot;&quot;</span>
+  <span class="n">code</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span> <span class="p">]</span>
+
+<span class="k">class</span> <span class="nc">RadioStats</span><span class="p">(</span><span class="n">InterfaceStats</span><span class="p">):</span></div>
+<div class="viewcode-block" id="RadioStats"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.RadioStats">[docs]</a>  <span class="sd">&quot;&quot;&quot;Count of packets and stats on the radio side of the stick.&quot;&quot;&quot;</span>
+  <span class="n">code</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span> <span class="p">]</span>
+
+<span class="k">class</span> <span class="nc">SignalStrength</span><span class="p">(</span><span class="n">StickCommand</span><span class="p">):</span></div>
+<div class="viewcode-block" id="SignalStrength"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.SignalStrength">[docs]</a>  <span class="sd">&quot;&quot;&quot;This seems to be required to initialize communications with the</span>
+<span class="sd">  usb stick.  Also, you should wait until a minimum threshold is</span>
+<span class="sd">  reached.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">code</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span> <span class="p">]</span>
+  <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<div class="viewcode-block" id="SignalStrength.parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.SignalStrength.parse">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">      #&gt;&gt;&gt;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c"># result[0] is signal strength</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%r</span><span class="s">:readSignalStrength:</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="k">class</span> <span class="nc">LinkStatus</span><span class="p">(</span><span class="n">StickCommand</span><span class="p">):</span></div></div>
+<div class="viewcode-block" id="LinkStatus"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.LinkStatus">[docs]</a>  <span class="sd">&quot;&quot;&quot;Basic ACK type of command.</span>
+<span class="sd">  Used to poll the modem&#39;s radio buffer.  When the radio buffer is</span>
+<span class="sd">  full, we can download a packet from the buffer.  Otherwise, we need</span>
+<span class="sd">  to be mindful of the state the radio is in.  This opcode tells you</span>
+<span class="sd">  the current state of the radio/stick.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">code</span> <span class="o">=</span> <span class="p">[</span> <span class="mh">0x03</span> <span class="p">]</span>
+  <span class="n">reason</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+
+  <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">extra</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+    <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&#39;error&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">):</span>
+      <span class="n">extra</span> <span class="o">=</span> <span class="s">&#39;{0}:error:{1}:reason:{2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">reason</span><span class="p">)</span>
+    <span class="n">base</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__str__</span><span class="p">(</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="s">&#39;{0}:error:{1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">extra</span><span class="p">)</span>
+      
+  <span class="k">def</span> <span class="nf">record_error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+<div class="viewcode-block" id="LinkStatus.record_error"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.LinkStatus.record_error">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">error</span>  <span class="o">=</span> <span class="bp">True</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">ack</span>    <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c"># 0 indicates success</span>
+    <span class="c"># believe success = result[1] # &#39;U&#39; or &#39;f&#39;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">lb</span><span class="p">,</span> <span class="n">hb</span>      <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">result</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">size</span>   <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">BangInt</span><span class="p">((</span><span class="n">lb</span><span class="p">,</span> <span class="n">hb</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ack</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">&amp;</span> <span class="mh">0x1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">error</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">set_reason</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">set_reason</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">):</span></div>
+<div class="viewcode-block" id="LinkStatus.set_reason"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.LinkStatus.set_reason">[docs]</a>    <span class="n">reasons</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">&amp;</span> <span class="mh">0x2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">reasons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;STATUS: receive in progress!&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">&amp;</span> <span class="mh">0x4</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">reasons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;STATUS: transmit in progress!&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">&amp;</span> <span class="mh">0x8</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">reasons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;STATUS: interface error!&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">&amp;</span> <span class="mh">0x10</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">reasons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;STATUS: recieve overflow!&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">&amp;</span> <span class="mh">0x20</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">reasons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;STATUS: transmit overflow!&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">&amp;</span> <span class="mh">0x1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">reasons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;STATUS: OK&#39;</span><span class="p">)</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="p">[</span> <span class="bp">self</span><span class="p">,</span> <span class="s">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">reasons</span><span class="p">)</span> <span class="p">]))</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">reasons</span> <span class="o">=</span> <span class="n">reasons</span>
+
+  <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span></div>
+<div class="viewcode-block" id="LinkStatus.parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.LinkStatus.parse">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">      #&gt;&gt;&gt;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">record_error</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ack</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&quot;readStatus: non-zero status: </span><span class="si">%02x</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">ack</span><span class="p">)</span>
+      <span class="c"># should this trigger a retry, and if so where?</span>
+      <span class="c"># should the other usb commands also trigger these retries? and at the</span>
+      <span class="c"># same points?</span>
+      <span class="k">raise</span> <span class="n">AckError</span><span class="p">(</span><span class="s">&quot;readStatus: non-zero status: </span><span class="si">%02x</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">ack</span><span class="p">)</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">error</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">True</span><span class="p">:</span>
+      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span>
+    <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">class</span> <span class="nc">ReadRadio</span><span class="p">(</span><span class="n">StickCommand</span><span class="p">):</span></div></div>
+<div class="viewcode-block" id="ReadRadio"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ReadRadio">[docs]</a>  <span class="sd">&quot;&quot;&quot;Read buffer from the radio.  Downloads a packet from the radio</span>
+<span class="sd">  buffer.&quot;&quot;&quot;</span>
+  <span class="n">code</span> <span class="o">=</span> <span class="p">[</span> <span class="mh">0x0C</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">]</span>
+  <span class="n">dl_size</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="n">size</span> <span class="o">=</span> <span class="mi">64</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">dl_size</span> <span class="o">=</span> <span class="n">size</span>
+    <span class="n">packet</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">lib</span><span class="o">.</span><span class="n">HighByte</span><span class="p">(</span><span class="n">size</span><span class="p">),</span> <span class="n">lib</span><span class="o">.</span><span class="n">LowByte</span><span class="p">(</span><span class="n">size</span><span class="p">)]</span>
+    <span class="k">if</span> <span class="n">size</span> <span class="o">&lt;</span> <span class="mi">64</span><span class="p">:</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&#39;size is less than 64, which will cause an error. trying 64 instead&#39;</span><span class="p">)</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="mi">64</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">code</span> <span class="o">=</span> <span class="n">packet</span> <span class="o">+</span> <span class="p">[</span> <span class="n">CRC8</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span> <span class="p">]</span>
+
+  <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">&#39;{0}:size:{1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dl_size</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">&#39;&lt;{0:s}&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ReadRadio.format"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ReadRadio.format">[docs]</a>    <span class="n">msg</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">msg</span>
+
+  <span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw</span><span class="p">):</span></div>
+<div class="viewcode-block" id="ReadRadio.respond"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ReadRadio.respond">[docs]</a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&quot;ReadRadio ACK is zero bytes!&quot;</span><span class="p">)</span>
+      <span class="c"># return False</span>
+      <span class="k">raise</span> <span class="n">AckError</span><span class="p">(</span><span class="s">&quot;ACK is 0 bytes: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">raw</span><span class="p">))</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;readData validating remote raw[ack]: </span><span class="si">%02x</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">raw</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;readData; foreign raw should be at least 14 bytes? </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">14</span><span class="p">))</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;readData; raw[retries] </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+    <span class="n">dl_status</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">dl_status</span> <span class="o">!=</span> <span class="mh">0x02</span><span class="p">:</span> <span class="c"># this differs from the others?</span>
+      <span class="k">raise</span> <span class="n">BadDeviceCommError</span><span class="p">(</span><span class="s">&quot;bad dl raw! </span><span class="si">%r</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">raw</span><span class="p">)</span>
+      <span class="k">assert</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="mi">2</span><span class="p">),</span> <span class="nb">repr</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">raw</span><span class="p">[:</span><span class="mi">1</span><span class="p">],</span> <span class="n">raw</span>
+    
+  <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw</span><span class="p">):</span></div>
+<div class="viewcode-block" id="ReadRadio.parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ReadRadio.parse">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    log.info(&#39;readData validating remote raw[ack]: %02x&#39; % raw[0])</span>
+<span class="sd">    log.info(&#39;readData; foreign raw should be at least 14 bytes? %s %s&#39; % (len(raw), len(raw) &gt; 14))</span>
+<span class="sd">    log.info(&#39;readData; raw[retries] %s&#39; % int(raw[3]))</span>
+<span class="sd">    dl_status = int(raw[0])</span>
+<span class="sd">    if dl_status != 0x02: # this differs from the others?</span>
+<span class="sd">      raise BadDeviceCommError(&quot;bad dl raw! %r&quot; % raw)</span>
+<span class="sd">      assert (int(raw[0]) == 2), repr(raw)</span>
+<span class="sd">    # raw[1] != 0 # interface number !=0</span>
+<span class="sd">    # raw[2] == 5 # timeout occurred</span>
+<span class="sd">    # raw[2] == 2 # NAK</span>
+<span class="sd">    # raw[2] # should be within 0..4</span>
+<span class="sd">    log.info(&quot;readData ACK&quot;)</span>
+<span class="sd">    lb, hb    = raw[5] &amp; 0x7F, raw[6]</span>
+<span class="sd">    self.eod  = (raw[5] &amp; 0x80) &gt; 0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">lb</span><span class="p">,</span> <span class="n">hb</span>    <span class="o">=</span> <span class="n">raw</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0x7F</span><span class="p">,</span> <span class="n">raw</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">eod</span>  <span class="o">=</span> <span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0x80</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="n">resLength</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">BangInt</span><span class="p">((</span><span class="n">lb</span><span class="p">,</span> <span class="n">hb</span><span class="p">))</span>
+    <span class="c"># we don&#39;t really care about the length</span>
+    <span class="c">#assert resLength &lt; 64, (&quot;cmd low byte count:\n%s&quot; % lib.hexdump(raw))</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="n">raw</span><span class="p">[</span><span class="mi">13</span><span class="p">:</span><span class="mi">13</span><span class="o">+</span><span class="n">resLength</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">packet</span> <span class="o">=</span> <span class="n">data</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s">:eod:found eod (</span><span class="si">%s</span><span class="s">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">eod</span><span class="p">))</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;found packet len(</span><span class="si">%s</span><span class="s">), link expects(</span><span class="si">%s</span><span class="s">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">packet</span><span class="p">),</span> <span class="n">resLength</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="n">resLength</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="n">raw</span><span class="p">[</span><span class="mi">13</span><span class="p">:]</span>
+    <span class="n">crc</span> <span class="o">=</span> <span class="n">raw</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="c"># crc check</span>
+    <span class="k">if</span> <span class="n">crc</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s">&#39;bad zero CRC?&#39;</span><span class="p">)</span>
+    <span class="n">expected_crc</span> <span class="o">=</span> <span class="n">CRC8</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">crc</span> <span class="o">!=</span> <span class="n">expected_crc</span><span class="p">:</span>
+      <span class="n">msg</span> <span class="o">=</span> <span class="s">&#39;:&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="p">[</span> <span class="s">&#39;ReadRadio:BAD ACK:found raw[crc]: </span><span class="si">%#04x</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">crc</span><span class="p">),</span>
+                          <span class="s">&#39;expected_crc(data): </span><span class="si">%#04x</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">expected_crc</span><span class="p">),</span>
+                          <span class="s">&#39;raw:</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">raw</span><span class="p">)),</span>
+                          <span class="s">&#39;head:</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">head</span><span class="p">)),</span>
+                          <span class="s">&#39;data:</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="p">]</span> <span class="p">)</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.&quot;</span><span class="p">)</span>
+      <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">100</span><span class="p">)</span>
+      <span class="k">return</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">)</span>
+      <span class="k">raise</span> <span class="n">BadCRC</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">crc</span> <span class="o">==</span> <span class="n">expected_crc</span>
+    <span class="k">return</span> <span class="n">data</span>
+
+<span class="k">class</span> <span class="nc">TransmitPacket</span><span class="p">(</span><span class="n">StickCommand</span><span class="p">):</span></div></div>
+<div class="viewcode-block" id="TransmitPacket"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.TransmitPacket">[docs]</a>  <span class="sd">&quot;&quot;&quot;Format a packet to send on the radio.</span>
+
+<span class="sd">  This commands formats a packet from usb, and shoves it into the</span>
+<span class="sd">  radio buffer.</span>
+<span class="sd">  The radio buffer is broadcast &quot;over the air&quot; so that any device</span>
+<span class="sd">  sensitive to the packets you sent will respond accordingly</span>
+<span class="sd">  (probably sending data back).</span>
+<span class="sd">  For this reason, the serial number of the device you&#39;d like to talk</span>
+<span class="sd">  to is formatted into the packet.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">code</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="mi">1</span> <span class="p">]</span>
+  <span class="n">head</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="mi">1</span> <span class="p">]</span>
+  <span class="c"># wraps pump commands</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">command</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">params</span>  <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">params</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">code</span>    <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">code</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">retries</span> <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">retries</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">serial</span>  <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">serial</span>
+    <span class="c"># self.delay = command.effectTime</span>
+
+  <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&#39;command&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">):</span>
+      <span class="k">return</span> <span class="s">&#39;{0}:{1:s}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="p">)</span>
+    <span class="n">code</span> <span class="o">=</span> <span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span> <span class="s">&#39;</span><span class="si">%#04x</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">op</span> <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="p">])</span>
+    <span class="k">return</span> <span class="s">&#39;{0}:{1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="n">code</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">&#39;&lt;{0:s}&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+  
+
+  <span class="k">def</span> <span class="nf">calcRecordsRequired</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TransmitPacket.calcRecordsRequired"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.TransmitPacket.calcRecordsRequired">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">calcRecordsRequired</span><span class="p">(</span> <span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="TransmitPacket.format"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.TransmitPacket.format">[docs]</a>    <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span>
+    <span class="n">code</span>   <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">code</span>
+    <span class="n">maxRetries</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">retries</span>
+    <span class="n">serial</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">bytearray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serial</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;hex&#39;</span><span class="p">)))</span>
+    <span class="n">paramsCount</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+    <span class="n">head</span>   <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="mi">1</span> <span class="p">]</span>
+    <span class="c"># serial</span>
+    <span class="n">packet</span> <span class="o">=</span> <span class="n">head</span> <span class="o">+</span> <span class="n">serial</span>
+    <span class="c"># paramCount 2 bytes</span>
+    <span class="n">packet</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span> <span class="p">[</span> <span class="p">(</span><span class="mh">0x80</span> <span class="o">|</span> <span class="n">lib</span><span class="o">.</span><span class="n">HighByte</span><span class="p">(</span><span class="n">paramsCount</span><span class="p">)),</span>
+                             <span class="n">lib</span><span class="o">.</span><span class="n">LowByte</span><span class="p">(</span><span class="n">paramsCount</span><span class="p">)</span> <span class="p">]</span> <span class="p">)</span>
+    <span class="c"># not sure what this byte means</span>
+    <span class="n">button</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c"># special case command 93</span>
+    <span class="k">if</span> <span class="n">code</span> <span class="o">==</span> <span class="mi">93</span><span class="p">:</span>
+      <span class="n">button</span> <span class="o">=</span> <span class="mi">85</span>
+    <span class="n">packet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+    <span class="n">packet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">maxRetries</span><span class="p">)</span>
+    <span class="c"># how many packets/frames/pages/flows will this take?</span>
+    <span class="n">responseSize</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calcRecordsRequired</span><span class="p">()</span>
+    <span class="c"># really only 1 or 2?</span>
+    <span class="n">pages</span> <span class="o">=</span> <span class="n">responseSize</span>
+    <span class="k">if</span> <span class="n">responseSize</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+      <span class="n">pages</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">packet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pages</span><span class="p">)</span>
+    <span class="n">packet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="c"># command code goes here</span>
+    <span class="n">packet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+    <span class="n">packet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">CRC8</span><span class="p">(</span><span class="n">packet</span><span class="p">))</span>
+    <span class="n">packet</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+    <span class="n">packet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">CRC8</span><span class="p">(</span><span class="n">params</span><span class="p">))</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw</span><span class="p">):</span></div>
+<div class="viewcode-block" id="TransmitPacket.respond"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.TransmitPacket.respond">[docs]</a>    <span class="n">code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">code</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span>
+    <span class="k">if</span> <span class="n">code</span> <span class="o">!=</span> <span class="mi">93</span> <span class="ow">or</span> <span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">ack</span><span class="p">,</span> <span class="n">body</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">ack</span><span class="p">,</span> <span class="n">body</span>
+      
+    <span class="k">return</span> <span class="p">(</span><span class="nb">bytearray</span><span class="p">(</span><span class="n">raw</span><span class="p">),</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">raw</span><span class="p">))</span>
+  <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">results</span><span class="p">):</span></div>
+<div class="viewcode-block" id="TransmitPacket.parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.TransmitPacket.parse">[docs]</a>    <span class="k">return</span> <span class="n">results</span>
+    <span class="c">#self.checkAck(results)</span>
+
+
+<span class="k">class</span> <span class="nc">Stick</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span></div></div>
+<div class="viewcode-block" id="Stick"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The carelink usb stick acts like a buffer.</span>
+
+<span class="sd">    It has a variety of commands providing synchronous IO, eg, you may</span>
+<span class="sd">    generally perform a read immediately after writing to it, and expect a</span>
+<span class="sd">    response.</span>
+
+<span class="sd">    The commands operate on a local buffer used to facilitate exchanging</span>
+<span class="sd">    messages over RF with the pump. RF communication with the pump</span>
+<span class="sd">    happens asynchronously, requiring us to go through 3 separate</span>
+<span class="sd">    phases for each message we&#39;d like to exchange with the pumps:</span>
+<span class="sd">      * transmit - send commmand</span>
+<span class="sd">      * poll_size - loop</span>
+<span class="sd">      * download - loop</span>
+
+<span class="sd">    Each command is usually only 3 bytes.</span>
+
+<span class="sd">    The protocol offers some facility for detecting and recovering</span>
+<span class="sd">    from inconsistencies in the underlying transport of data, however,</span>
+<span class="sd">    we are somwhat ignorant of them.  The tricky bits are exactly how</span>
+<span class="sd">    to recover from, eg CRC, errors that can occur.</span>
+<span class="sd">    The &quot;shape&quot; and timing of these loops seem to mostly get the job</span>
+<span class="sd">    done.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">link</span> <span class="o">=</span> <span class="bp">None</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">link</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">link</span> <span class="o">=</span> <span class="n">link</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_download_i</span> <span class="o">=</span> <span class="bp">False</span>
+
+  <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="p">[</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span>
+          <span class="s">&#39;transmit[{}]&#39;</span>  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&#39;transmit&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">))),</span>
+          <span class="s">&#39;reader[{}]&#39;</span>    <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&#39;reader&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">))),</span>
+          <span class="s">&#39;download_i[{}]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&#39;_download_i&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">))),</span>
+          <span class="s">&#39;status[{}]&#39;</span>    <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&#39;last_status&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">))),</span>
+          <span class="s">&#39;poll_size[{}]&#39;</span> <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&#39;_poll_size&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">))),</span>
+          <span class="s">&#39;poll_i[{}]&#39;</span>    <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&#39;_poll_i&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">))),</span>
+          <span class="s">&#39;command[{}]&#39;</span>   <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&#39;command&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">))),</span>
+        <span class="p">]</span>
+    <span class="k">return</span> <span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">&#39;&lt;{0}&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
+  <span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Stick.process"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.process">[docs]</a>    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;link </span><span class="si">%s</span><span class="s"> processing </span><span class="si">%s</span><span class="s">)&#39;</span> <span class="o">%</span> <span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="p">))</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    self.link.write(self.command.format( ))</span>
+<span class="sd">    log.debug(&#39;sleeping %s&#39; % self.command.delay)</span>
+<span class="sd">    time.sleep(self.command.delay)</span>
+<span class="sd">    size = max(64, self.command.size)</span>
+<span class="sd">    raw = bytearray(self.link.read(size))</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">raw</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_force_read</span><span class="p">(</span> <span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;process zero length READ, try once more sleep .010&#39;</span><span class="p">)</span>
+      <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mo">010</span><span class="p">)</span>
+      <span class="n">raw</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+
+    <span class="n">ack</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+    <span class="n">info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;finished processing {0}, {1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">info</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">info</span>
+    
+  <span class="k">def</span> <span class="nf">query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Command</span><span class="p">):</span></div>
+<div class="viewcode-block" id="Stick.query"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.query">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">command</span> <span class="o">=</span> <span class="n">Command</span><span class="p">(</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">process</span><span class="p">(</span> <span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">product_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="Stick.product_info"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.product_info">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">ProductInfo</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">interface_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="Stick.interface_stats"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.interface_stats">[docs]</a>    <span class="k">return</span> <span class="p">{</span><span class="s">&#39;usb&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">usb_stats</span><span class="p">(</span> <span class="p">),</span> <span class="s">&#39;radio&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">radio_stats</span><span class="p">(</span> <span class="p">)</span> <span class="p">}</span>
+    
+  <span class="k">def</span> <span class="nf">usb_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="Stick.usb_stats"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.usb_stats">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">UsbStats</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">radio_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="Stick.radio_stats"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.radio_stats">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">RadioStats</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">signal_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="Stick.signal_strength"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.signal_strength">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">SignalStrength</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">poll_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="Stick.poll_size"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.poll_size">[docs]</a>    <span class="n">size</span>  <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">i</span>     <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%r</span><span class="s">:STARTING POLL PHASE:attempt:</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+    <span class="c">#while size == 0 and size &lt; 64 and time.time() - start &lt; 1:</span>
+    <span class="k">while</span> <span class="n">size</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">_poll_i</span> <span class="o">=</span> <span class="n">i</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">_poll_size</span> <span class="o">=</span> <span class="n">size</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%r</span><span class="s">:poll:attempt:</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+      <span class="n">size</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_status</span><span class="p">(</span> <span class="p">)</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">_poll_size</span> <span class="o">=</span> <span class="n">size</span>
+      <span class="k">if</span> <span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;poll zero, sleeping in POLL, .100&#39;</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">100</span><span class="p">)</span>
+      <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s">:STOP POLL after </span><span class="si">%s</span><span class="s"> attempts:size:</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_poll_size</span> <span class="o">=</span> <span class="n">size</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_poll_i</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">return</span> <span class="n">size</span>
+    
+  <span class="k">def</span> <span class="nf">read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="Stick.read_status"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.read_status">[docs]</a>    <span class="c"># log.debug(&#39;read_status&#39;)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">LinkStatus</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">last_status</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+  <span class="k">def</span> <span class="nf">old_download_packet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span></div>
+<div class="viewcode-block" id="Stick.old_download_packet"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.old_download_packet">[docs]</a>    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;download_packet:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">size</span><span class="p">))</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">ReadRadio</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">packet</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">process</span><span class="p">(</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="n">packet</span>
+
+  <span class="k">def</span> <span class="nf">send_force_read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">retries</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span></div>
+<div class="viewcode-block" id="Stick.send_force_read"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.send_force_read">[docs]</a>    <span class="c"># </span>
+    <span class="c"># so the behavior of a read_radio should probably be similar to</span>
+    <span class="c"># poll_size??</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span>
+    <span class="n">read_size</span> <span class="o">=</span> <span class="mi">64</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">size</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">(</span> <span class="p">)</span>
+    <span class="n">raw</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">)</span>
+    <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">retries</span><span class="p">):</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span>
+        <span class="s">&#39;send_force_read: attempt {0}/{1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">attempt</span><span class="p">,</span> <span class="n">retries</span><span class="p">),</span>
+        <span class="s">&#39;send command,&#39;</span><span class="p">,</span>
+        <span class="s">&#39;read until we get something within some timeout&#39;</span><span class="p">]))</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;link </span><span class="si">%s</span><span class="s"> sending </span><span class="si">%s</span><span class="s">)&#39;</span> <span class="o">%</span> <span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">reader</span> <span class="p">))</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="p">))</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;sleeping </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">reader</span><span class="o">.</span><span class="n">delay</span><span class="p">)</span>
+      <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">delay</span><span class="p">)</span>
+      <span class="n">raw</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">size</span><span class="p">))</span>
+      <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;zero length READ, try once more sleep .250&#39;</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">250</span><span class="p">)</span>
+        <span class="n">raw</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+
+      <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">&#39;quit send_force_read,&#39;</span><span class="p">,</span>
+                           <span class="s">&#39;found len:&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)),</span>
+                           <span class="s">&#39;expected&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">size</span><span class="p">),</span>
+                           <span class="s">&#39;after&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">attempt</span><span class="p">),</span> <span class="s">&#39;attempts&#39;</span><span class="p">]))</span>
+        <span class="k">return</span> <span class="n">raw</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span> <span class="s">&quot;FAILED TO DOWNLOAD ANYTHING,&quot;</span><span class="p">,</span>
+                            <span class="s">&quot;after </span><span class="si">%s</span><span class="s"> &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">attempt</span><span class="p">),</span>
+                            <span class="s">&quot;expected:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">size</span><span class="p">)</span> <span class="p">]))</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">raw</span>
+    
+  <span class="k">def</span> <span class="nf">download_packet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span></div>
+<div class="viewcode-block" id="Stick.download_packet"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.download_packet">[docs]</a>    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:download_packet:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span>
+    <span class="c"># XXX: this is the tricky bit</span>
+    <span class="n">original_size</span> <span class="o">=</span> <span class="n">size</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">ReadRadio</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">reader</span> <span class="o">=</span> <span class="n">reader</span>
+    <span class="n">raw</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_force_read</span><span class="p">(</span> <span class="p">)</span>
+    <span class="c"># return</span>
+    <span class="c"># packet = self.process( )</span>
+    <span class="c"># return packet</span>
+
+    <span class="c"># copy pasted from process</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    log.info(&#39;link %s processing %s)&#39; % ( self, self.command ))</span>
+<span class="sd">    # self.link.process(command)</span>
+<span class="sd">    self.link.write(self.command.format( ))</span>
+<span class="sd">    log.debug(&#39;sleeping %s&#39; % self.command.delay)</span>
+<span class="sd">    time.sleep(self.command.delay)</span>
+<span class="sd">    size = max(64, self.command.size)</span>
+<span class="sd">    raw = bytearray(self.link.read(size))</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c"># if len(raw) == 0:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">raw</span><span class="p">:</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;zero length READ, try once more sleep .500&#39;</span><span class="p">)</span>
+      <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">500</span><span class="p">)</span>
+      <span class="n">raw</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+
+    <span class="k">try</span><span class="p">:</span>
+      <span class="n">ack</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+      <span class="n">info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">info</span>
+    <span class="k">except</span> <span class="n">BadDeviceCommError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s">&quot;download_packet:</span><span class="si">%s</span><span class="s">:ERROR:</span><span class="si">%s</span><span class="s">:ACK!?&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">))</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;we failed to pass </span><span class="si">%s</span><span class="s"> ACK!?&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="p">))</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;expected size was: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">original_size</span><span class="p">)</span>
+      <span class="n">status</span> <span class="o">=</span> <span class="n">LinkStatus</span><span class="p">(</span> <span class="p">)</span>
+      <span class="k">if</span> <span class="n">original_size</span> <span class="o">&lt;</span> <span class="mi">64</span><span class="p">:</span>
+        <span class="c">#size = self.read_status( )</span>
+        <span class="c">#size = self.poll_size( )</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;XXX:JUST a bit more READ new size: </span><span class="si">%s</span><span class="s">, sleep .100&#39;</span> <span class="o">%</span> <span class="n">original_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">status</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="p">))</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">100</span><span class="p">)</span>
+        <span class="n">raw</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">64</span><span class="p">))</span>
+        <span class="n">ack</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">info</span>
+
+      <span class="n">ack</span><span class="p">,</span> <span class="n">body</span> <span class="o">=</span> <span class="n">status</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+      <span class="n">size</span> <span class="o">=</span> <span class="n">status</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">body</span><span class="p">)</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;attempt another read&#39;</span><span class="p">)</span>
+      <span class="n">info</span> <span class="o">=</span> <span class="bp">None</span>
+
+      <span class="n">raw</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">size</span><span class="p">))</span>
+      <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;NESTED zero length READ, try once more sleep .100&#39;</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">100</span><span class="p">)</span>
+        <span class="n">raw</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+
+        <span class="n">ack</span><span class="p">,</span> <span class="n">body</span> <span class="o">=</span> <span class="n">status</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">body</span><span class="p">)</span>
+
+
+
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;finished processing {0}, {1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">info</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">info</span>
+    
+  <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span></div>
+<div class="viewcode-block" id="Stick.download"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.download">[docs]</a>    <span class="n">eod</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">log_head</span> <span class="o">=</span> <span class="s">&#39;download(attempts[{}])&#39;</span>
+    <span class="n">expecting</span> <span class="o">=</span> <span class="s">&#39;download(attempts[{}],expect[{}])&#39;</span>
+    <span class="n">stats</span> <span class="o">=</span> <span class="s">&#39;{}:download(attempts[{}],expect[{}],results[{}]:data[{}])&#39;</span>
+    <span class="n">expect_eod</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;download:start:</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">)</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">eod</span><span class="p">:</span>
+      <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">_download_i</span> <span class="o">=</span> <span class="n">i</span>
+      <span class="n">data</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">)</span>
+      <span class="k">if</span> <span class="n">size</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:begin first poll first sleep .250&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+                                          <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))))</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">250</span><span class="p">)</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">poll_size</span><span class="p">(</span> <span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:end first poll&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span>
+                                        <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))))</span>
+      <span class="k">if</span> <span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:zero poll size, sleep .500 try again&quot;</span> <span class="o">%</span> <span class="p">(</span> \
+                  <span class="n">stats</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))))</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">500</span><span class="p">)</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">poll_size</span><span class="p">(</span> <span class="p">)</span>
+        <span class="k">if</span> <span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+          <span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:BAD AILING&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span>
+                                          <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))))</span>
+          <span class="k">break</span>
+
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:proceed to download packet&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span>
+                                                  <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))))</span>
+      <span class="c">#time.sleep(.100)</span>
+      <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">download_packet</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+      <span class="n">expect_eod</span> <span class="o">=</span> <span class="bp">False</span>
+      <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">expect_eod</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">eod</span> 
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:adding segment&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span>
+                                        <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))))</span>
+      <span class="k">else</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:no data, try again sleep .400&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span>
+                                            <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))))</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">400</span><span class="p">)</span>
+      <span class="c"># eod = expect_eod and size &lt; 15</span>
+      <span class="n">eod</span> <span class="o">=</span> <span class="n">expect_eod</span>
+      <span class="c"># or size &lt; 15</span>
+      <span class="k">if</span> <span class="ow">not</span> <span class="n">eod</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:no eod, sleep .200 try again&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span>
+                                            <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))))</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">200</span><span class="p">)</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">poll_size</span><span class="p">(</span> <span class="p">)</span>
+
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:DONE&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span>
+                          <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))))</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_download_i</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="c"># self.reader = None</span>
+    <span class="k">return</span> <span class="n">results</span>
+
+  <span class="k">def</span> <span class="nf">clear_buffer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="Stick.clear_buffer"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.clear_buffer">[docs]</a>    <span class="n">bad</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">)</span>
+    <span class="n">raw</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">)</span>
+    <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span> <span class="mi">3</span> <span class="p">):</span>
+      <span class="n">segments</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+      <span class="n">segs_vs_raw</span> <span class="o">=</span> <span class="s">&#39;segments[{0}],total_segments[{1}]:raw[{2}]&#39;</span>
+      <span class="n">seg_stats</span> <span class="o">=</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">segments</span><span class="p">),</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">segments</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="p">)</span>
+      <span class="n">log_detail</span> <span class="o">=</span> <span class="n">segs_vs_raw</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">seg_stats</span><span class="p">)</span>
+      <span class="n">log_head</span> <span class="o">=</span> <span class="s">&quot;XXX:clear_buffer[attempt][</span><span class="si">%s</span><span class="s">]&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">attempt</span><span class="p">)</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;INTERFACE STATS:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">interface_stats</span><span class="p">(</span> <span class="p">)))</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;:&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span> <span class="n">log_head</span><span class="p">,</span> <span class="n">log_detail</span><span class="p">,</span> <span class="s">&quot;BEGIN &quot;</span><span class="p">,</span> <span class="s">&quot;first poll&quot;</span> <span class="p">]))</span>
+      <span class="n">size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">poll_size</span><span class="p">(</span> <span class="p">)</span>
+      <span class="n">end_poll</span> <span class="o">=</span> <span class="s">&#39;:&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="p">[</span> <span class="n">log_head</span><span class="p">,</span> <span class="n">log_detail</span><span class="p">,</span>
+                             <span class="s">&quot;END first poll </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">size</span><span class="p">),</span>
+                             <span class="s">&quot;SHOULD DOWNLOAD &quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">size</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">]</span> <span class="p">)</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">end_poll</span><span class="p">)</span>
+      <span class="k">if</span> <span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">break</span>
+      
+      <span class="n">seg_stats</span> <span class="o">=</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">segments</span><span class="p">),</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">segments</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="p">)</span>
+      <span class="n">log_detail</span> <span class="o">=</span> <span class="n">segs_vs_raw</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">seg_stats</span><span class="p">)</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:download the size? </span><span class="si">%s</span><span class="s">:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">log_head</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">log_detail</span><span class="p">))</span>
+          
+      <span class="k">while</span> <span class="n">size</span> <span class="o">&gt;</span> <span class="mi">14</span><span class="p">:</span>
+        <span class="n">seg_stats</span> <span class="o">=</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">segments</span><span class="p">),</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">segments</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="p">)</span>
+        <span class="n">log_detail</span> <span class="o">=</span> <span class="n">segs_vs_raw</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">seg_stats</span><span class="p">)</span>
+        <span class="n">log_head</span> <span class="o">=</span> <span class="s">&quot;XXX:clear_buffer[attempt][</span><span class="si">%s</span><span class="s">]&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">attempt</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span> <span class="s">&#39;:&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span> <span class="s">&quot;</span><span class="si">%s</span><span class="s"> size:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">log_head</span><span class="p">,</span> <span class="n">size</span><span class="p">),</span>
+                             <span class="n">log_detail</span><span class="p">,</span>
+                             <span class="s">&quot;clear_buffer BUFFER self.download( )&quot;</span> <span class="p">]))</span>
+        <span class="k">try</span><span class="p">:</span>
+          <span class="n">segment</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">download</span><span class="p">(</span> <span class="p">)</span>
+          <span class="n">raw</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">segment</span><span class="p">)</span>
+          <span class="n">segments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">segment</span><span class="p">)</span>
+          <span class="n">seg_stats</span> <span class="o">=</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">segments</span><span class="p">),</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">segments</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="p">)</span>
+          <span class="n">log_detail</span> <span class="o">=</span> <span class="n">segs_vs_raw</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">seg_stats</span><span class="p">)</span>
+          <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;:&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span> <span class="s">&quot;</span><span class="si">%s</span><span class="s">:tx:found&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">log_head</span><span class="p">),</span>
+                              <span class="n">log_detail</span><span class="p">,</span>
+                              <span class="s">&#39;len(raw)&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)),</span>
+                              <span class="s">&#39;expected&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">size</span><span class="p">),</span>
+                              <span class="s">&#39;len(segment)&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">segment</span><span class="p">))</span> <span class="p">]))</span>
+        <span class="k">except</span> <span class="n">BadCRC</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+          <span class="n">seg_stats</span> <span class="o">=</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">segments</span><span class="p">),</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">segments</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="p">)</span>
+          <span class="n">log_detail</span> <span class="o">=</span> <span class="n">segs_vs_raw</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">seg_stats</span><span class="p">)</span>
+          <span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s">:IGNORING:</span><span class="si">%s</span><span class="s">:</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">log_head</span><span class="p">,</span> <span class="n">log_detail</span><span class="p">,</span> <span class="n">e</span><span class="p">))</span>
+
+        <span class="n">seg_stats</span> <span class="o">=</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">segments</span><span class="p">),</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">segments</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="p">)</span>
+        <span class="n">log_detail</span> <span class="o">=</span> <span class="n">segs_vs_raw</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">seg_stats</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;:&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span> <span class="s">&quot;</span><span class="si">%s</span><span class="s"> downloaded </span><span class="si">%s</span><span class="s"> segment&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">log_head</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)),</span>
+                            <span class="n">log_detail</span><span class="p">,</span>
+                            <span class="s">&quot;RAW:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="p">]))</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">poll_size</span><span class="p">(</span> <span class="p">)</span>
+
+      <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;INTERFACE STATS:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">interface_stats</span><span class="p">(</span> <span class="p">)))</span>
+      <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">raw</span>
+    <span class="k">if</span> <span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span> <span class="s">&quot;</span><span class="si">%s</span><span class="s">:END:no data:INTERFACE STATS&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">log_head</span><span class="p">),</span>
+                           <span class="n">lib</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">interface_stats</span><span class="p">(</span> <span class="p">))</span> <span class="p">]))</span>
+
+  <span class="k">def</span> <span class="nf">transmit_packet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">):</span></div>
+<div class="viewcode-block" id="Stick.transmit_packet"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.transmit_packet">[docs]</a>    <span class="n">packet</span> <span class="o">=</span> <span class="n">TransmitPacket</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">packet</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">transmit</span> <span class="o">=</span> <span class="n">packet</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;transmit_packet:write:</span><span class="si">%r</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="p">))</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">process</span><span class="p">(</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+  <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="Stick.open"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.open">[docs]</a>    <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span> <span class="mi">3</span> <span class="p">):</span>
+      <span class="k">try</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_info</span><span class="p">(</span> <span class="p">))</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;get signal strength of </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="n">signal</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">signal</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">:</span>
+          <span class="n">signal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">signal_strength</span><span class="p">(</span> <span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;we seem to have found a nice signal strength of: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">signal</span><span class="p">)</span>
+      <span class="k">except</span> <span class="n">AckError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;failed:(</span><span class="si">%s</span><span class="s">):</span><span class="se">\n</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">attempt</span><span class="p">,</span> <span class="n">e</span><span class="p">))</span>
+    
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span></div></div>
+  <span class="kn">import</span> <span class="nn">doctest</span>
+  <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span> <span class="p">)</span>
+
+  <span class="kn">import</span> <span class="nn">sys</span>
+  <span class="n">port</span> <span class="o">=</span> <span class="bp">None</span>
+  <span class="n">port</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="ow">and</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span> <span class="bp">False</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">port</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;usage:</span><span class="se">\n</span><span class="si">%s</span><span class="s"> /dev/ttyUSB0&quot;</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+  <span class="kn">import</span> <span class="nn">link</span>
+  <span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pformat</span>
+  <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;howdy! I&#39;m going to take a look at your carelink usb stick.&quot;</span><span class="p">)</span>
+  <span class="n">stick</span> <span class="o">=</span> <span class="n">Stick</span><span class="p">(</span><span class="n">link</span><span class="o">.</span><span class="n">Link</span><span class="p">(</span><span class="n">port</span><span class="p">))</span>
+  <span class="n">stick</span><span class="o">.</span><span class="n">open</span><span class="p">(</span> <span class="p">)</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;test fetching product info </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">stick</span><span class="p">)</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">pformat</span><span class="p">(</span><span class="n">stick</span><span class="o">.</span><span class="n">product_info</span><span class="p">(</span> <span class="p">)))</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;get signal strength of </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">stick</span><span class="p">)</span>
+  <span class="n">signal</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">while</span> <span class="n">signal</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">:</span>
+    <span class="n">signal</span> <span class="o">=</span> <span class="n">stick</span><span class="o">.</span><span class="n">signal_strength</span><span class="p">(</span> <span class="p">)</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;we seem to have found a nice signal strength of: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">signal</span><span class="p">)</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">    at this point, we could issue remote commands to a medical</span>
+<span class="s">    device, let&#39;s inspect the interfaces&quot;&quot;&quot;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span> <span class="p">))</span>
+  <span class="c">#log.info(pformat(stick.usb_stats( )))</span>
+  <span class="c">#log.info(pformat(stick.radio_stats( )))</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">pformat</span><span class="p">(</span><span class="n">stick</span><span class="o">.</span><span class="n">interface_stats</span><span class="p">(</span> <span class="p">)))</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  size = stick.poll_size( )</span>
+<span class="sd">  log.info(&quot;can we poll the size? %s&quot; % (size))</span>
+<span class="sd">  if size &gt; 14:</span>
+<span class="sd">    log.info(&quot;DOWNLOADING %s TO CLEAR BUFFER&quot; % size)</span>
+<span class="sd">    log.info(&#39;\n&#39;.join([&quot;can we download ?&quot;, lib.hexdump(stick.download( ))]))</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;CLEAR BUFFERS&quot;</span><span class="p">)</span>
+  <span class="n">extra</span> <span class="o">=</span> <span class="n">stick</span><span class="o">.</span><span class="n">clear_buffer</span><span class="p">(</span> <span class="p">)</span>
+  <span class="k">if</span> <span class="n">extra</span><span class="p">:</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">extra</span><span class="p">))</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;NO PENDING BUFFER&quot;</span><span class="p">)</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;DONE CLEARING BUFFERS&quot;</span><span class="p">)</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;INTERFACE STATS:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">pformat</span><span class="p">(</span><span class="n">stick</span><span class="o">.</span><span class="n">interface_stats</span><span class="p">(</span> <span class="p">)))</span>
+  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;howdy! all done looking at the stick&quot;</span><span class="p">)</span>
+
+<span class="c">#####</span>
+<span class="c"># EOF</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Insulaudit contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

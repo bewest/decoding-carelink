@@ -1,0 +1,447 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>decocare.lib &mdash; insulaudit:decoding-carelink 0.0.3 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="insulaudit:decoding-carelink 0.0.3 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li>
+          <li><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for decocare.lib</h1><div class="highlight"><pre>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module provides some basic helper/formatting utilities.</span>
+
+
+<span class="sd">&gt;&gt;&gt; hexdump( bytearray( [0x00] ) )</span>
+<span class="sd">&#39;0000   0x00                       .&#39;</span>
+
+<span class="sd">&gt;&gt;&gt; 0x00 == HighByte( 0x0F )</span>
+<span class="sd">True</span>
+
+<span class="sd">&gt;&gt;&gt; 0x0F == LowByte( 0x0F )</span>
+<span class="sd">True</span>
+
+<span class="sd">&gt;&gt;&gt; CRC16CCITT.compute( bytearray( [ 2, 6, 6, 3 ] ) )</span>
+<span class="sd">16845</span>
+
+<span class="sd">&gt;&gt;&gt; CRC16CCITT.compute( bytearray( [ 0x02, 0x09, 0x00,</span>
+<span class="sd">...                                  0x05, 0x0D, 0x02, 0x03 ] ) )</span>
+<span class="sd">29146</span>
+
+<span class="sd">&gt;&gt;&gt; BangInt( bytearray( [  0x71, 0xDA ] ) )</span>
+<span class="sd">29146</span>
+
+<span class="sd">&gt;&gt;&gt; BangInt( bytearray( [ 0x62, 0xC2 ] ) ) == CRC16CCITT.compute( bytearray( [ 2, 0x06, 0x08, 3 ] ) )</span>
+<span class="sd">True</span>
+
+
+<span class="sd">&gt;&gt;&gt; CRC8.compute( bytearray( [ 0x00, 0xFF, 0x00 ] ) )</span>
+<span class="sd">177</span>
+
+<span class="sd">&gt;&gt;&gt; BangInt( bytearray( [ 0x02, 0X02 ] ) )</span>
+<span class="sd">514</span>
+
+<span class="sd">&gt;&gt;&gt; BangLong( bytearray( [ 0x0, 0X0, 0x02, 0x02 ] ) )</span>
+<span class="sd">514L</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pformat</span>
+
+<span class="kn">import</span> <span class="nn">dateutil.parser</span>
+
+<span class="k">def</span> <span class="nf">_fmt_hex</span><span class="p">(</span> <span class="n">bytez</span> <span class="p">):</span>
+  <span class="k">return</span> <span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="p">[</span> <span class="s">&#39;</span><span class="si">%#04x</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span> <span class="n">bytez</span> <span class="p">)</span> <span class="p">]</span> <span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">_fmt_txt</span><span class="p">(</span> <span class="n">bytez</span> <span class="p">):</span>
+  <span class="k">return</span> <span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="p">[</span> <span class="nb">chr</span><span class="p">(</span> <span class="n">x</span> <span class="p">)</span> <span class="k">if</span> <span class="mh">0x20</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mh">0x7F</span> <span class="k">else</span> <span class="s">&#39;.&#39;</span> \
+                    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bytez</span> <span class="p">]</span> <span class="p">)</span>
+
+
+<div class="viewcode-block" id="parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.parse">[docs]</a><span class="k">class</span> <span class="nc">parse</span><span class="p">:</span>
+  <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="parse.date"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.parse.date">[docs]</a>  <span class="k">def</span> <span class="nf">date</span><span class="p">(</span> <span class="n">data</span> <span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    &gt;&gt;&gt; parse.date( &#39;2010-11-10T01:46:00&#39; ).isoformat( )</span>
+<span class="sd">    &#39;2010-11-10T01:46:00&#39;</span>
+
+<span class="sd">    &gt;&gt;&gt; parse.date( &#39;2010-11-10 01:46:00&#39; ).isoformat( )</span>
+<span class="sd">    &#39;2010-11-10T01:46:00&#39;</span>
+
+<span class="sd">    &gt;&gt;&gt; parse.date( &#39;2010-11-10 01:46PM&#39; ).isoformat( )</span>
+<span class="sd">    &#39;2010-11-10T13:46:00&#39;</span>
+
+<span class="sd">    &gt;&gt;&gt; parse.date( &#39;2010-11-10 13:46&#39; ).isoformat( )</span>
+<span class="sd">    &#39;2010-11-10T13:46:00&#39;</span>
+
+<span class="sd">    &gt;&gt;&gt; parse.date( &#39;2010-11-10 1:46AM&#39; ).isoformat( )</span>
+<span class="sd">    &#39;2010-11-10T01:46:00&#39;</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span> <span class="n">data</span> <span class="p">)</span>
+</div></div>
+<div class="viewcode-block" id="hexdump"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.hexdump">[docs]</a><span class="k">def</span> <span class="nf">hexdump</span><span class="p">(</span> <span class="n">src</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">0</span> <span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Return a string representing the bytes in src, length bytes per</span>
+<span class="sd">  line.</span>
+
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span> <span class="n">src</span> <span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s">&#39;&#39;</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+  <span class="n">indent</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="p">[</span> <span class="s">&#39; &#39;</span> <span class="p">]</span> <span class="o">*</span> <span class="n">indent</span> <span class="p">)</span>
+  <span class="n">digits</span> <span class="o">=</span> <span class="mi">4</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span> <span class="n">src</span><span class="p">,</span> <span class="nb">unicode</span> <span class="p">)</span> <span class="k">else</span> <span class="mi">2</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span> <span class="n">src</span> <span class="p">),</span> <span class="n">length</span> <span class="p">):</span>
+    <span class="n">s</span>    <span class="o">=</span> <span class="n">src</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">length</span><span class="p">]</span>
+    <span class="n">hexa</span> <span class="o">=</span> <span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="p">[</span> <span class="s">&#39;</span><span class="si">%#04x</span><span class="s">&#39;</span> <span class="o">%</span>  <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span> <span class="n">s</span> <span class="p">)</span> <span class="p">]</span> <span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="p">[</span> <span class="nb">chr</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">if</span> <span class="mh">0x20</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mh">0x7F</span> <span class="k">else</span> <span class="s">&#39;.&#39;</span> \
+                    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">s</span> <span class="p">]</span> <span class="p">)</span>
+    <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">indent</span> <span class="o">+</span> <span class="s">&quot;</span><span class="si">%04X</span><span class="s">   </span><span class="si">%-*s</span><span class="s">   </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> \
+                 <span class="p">(</span> <span class="n">i</span><span class="p">,</span> <span class="n">length</span> <span class="o">*</span> <span class="mi">5</span>
+                 <span class="p">,</span> <span class="n">hexa</span><span class="p">,</span> <span class="n">text</span> <span class="p">)</span> <span class="p">)</span>
+  <span class="k">return</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="int_dump"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.int_dump">[docs]</a><span class="k">def</span> <span class="nf">int_dump</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  &gt;&gt;&gt; int_dump(bytearray([0x01, 0x02]))</span>
+<span class="sd">  &#39;   1    2&#39;</span>
+
+
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">cells</span> <span class="o">=</span> <span class="p">[</span> <span class="s">&#39;</span><span class="si">%#04s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">stream</span> <span class="p">]</span>
+  <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+  <span class="n">indent</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="p">[</span> <span class="s">&#39; &#39;</span> <span class="p">]</span> <span class="o">*</span> <span class="n">indent</span> <span class="p">)</span>
+  <span class="k">while</span> <span class="n">cells</span><span class="p">:</span>
+    <span class="n">octet</span> <span class="o">=</span> <span class="n">cells</span><span class="p">[:</span><span class="mi">8</span><span class="p">]</span>
+    <span class="n">line</span>  <span class="o">=</span> <span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">octet</span><span class="p">)</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">indent</span> <span class="o">+</span> <span class="n">line</span><span class="p">)</span>
+    <span class="n">cells</span> <span class="o">=</span> <span class="n">cells</span><span class="p">[</span><span class="mi">8</span><span class="p">:]</span>
+
+  <span class="n">out</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">([</span> <span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span> <span class="p">])</span>
+  <span class="k">return</span> <span class="n">out</span>
+
+
+</div>
+<div class="viewcode-block" id="HighByte"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.HighByte">[docs]</a><span class="k">def</span> <span class="nf">HighByte</span><span class="p">(</span> <span class="n">arg</span> <span class="p">):</span>
+  <span class="k">return</span> <span class="n">arg</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span> <span class="o">&amp;</span> <span class="mh">0xFF</span>
+
+</div>
+<div class="viewcode-block" id="LowByte"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.LowByte">[docs]</a><span class="k">def</span> <span class="nf">LowByte</span><span class="p">(</span> <span class="n">arg</span> <span class="p">):</span>
+  <span class="k">return</span> <span class="n">arg</span> <span class="o">&amp;</span> <span class="mh">0xFF</span>
+
+
+</div>
+<div class="viewcode-block" id="CRC16CCITT"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.CRC16CCITT">[docs]</a><span class="k">class</span> <span class="nc">CRC16CCITT</span><span class="p">:</span>
+  <span class="n">lookup</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4129</span><span class="p">,</span> <span class="mi">8258</span><span class="p">,</span> <span class="mi">12387</span><span class="p">,</span> <span class="mi">16516</span><span class="p">,</span> <span class="mi">20645</span><span class="p">,</span> <span class="mi">24774</span><span class="p">,</span>
+    <span class="mi">28903</span><span class="p">,</span> <span class="mi">33032</span><span class="p">,</span> <span class="mi">37161</span><span class="p">,</span> <span class="mi">41290</span><span class="p">,</span> <span class="mi">45419</span><span class="p">,</span> <span class="mi">49548</span><span class="p">,</span> <span class="mi">53677</span><span class="p">,</span> <span class="mi">57806</span><span class="p">,</span>
+    <span class="mi">61935</span><span class="p">,</span> <span class="mi">4657</span><span class="p">,</span> <span class="mi">528</span><span class="p">,</span> <span class="mi">12915</span><span class="p">,</span> <span class="mi">8786</span><span class="p">,</span> <span class="mi">21173</span><span class="p">,</span> <span class="mi">17044</span><span class="p">,</span> <span class="mi">29431</span><span class="p">,</span> <span class="mi">25302</span><span class="p">,</span>
+    <span class="mi">37689</span><span class="p">,</span> <span class="mi">33560</span><span class="p">,</span> <span class="mi">45947</span><span class="p">,</span> <span class="mi">41818</span><span class="p">,</span> <span class="mi">54205</span><span class="p">,</span> <span class="mi">50076</span><span class="p">,</span> <span class="mi">62463</span><span class="p">,</span> <span class="mi">58334</span><span class="p">,</span>
+    <span class="mi">9314</span><span class="p">,</span> <span class="mi">13379</span><span class="p">,</span> <span class="mi">1056</span><span class="p">,</span> <span class="mi">5121</span><span class="p">,</span> <span class="mi">25830</span><span class="p">,</span> <span class="mi">29895</span><span class="p">,</span> <span class="mi">17572</span><span class="p">,</span> <span class="mi">21637</span><span class="p">,</span>
+    <span class="mi">42346</span><span class="p">,</span> <span class="mi">46411</span><span class="p">,</span> <span class="mi">34088</span><span class="p">,</span> <span class="mi">38153</span><span class="p">,</span> <span class="mi">58862</span><span class="p">,</span> <span class="mi">62927</span><span class="p">,</span> <span class="mi">50604</span><span class="p">,</span> <span class="mi">54669</span><span class="p">,</span>
+    <span class="mi">13907</span><span class="p">,</span> <span class="mi">9842</span><span class="p">,</span> <span class="mi">5649</span><span class="p">,</span> <span class="mi">1584</span><span class="p">,</span> <span class="mi">30423</span><span class="p">,</span> <span class="mi">26358</span><span class="p">,</span> <span class="mi">22165</span><span class="p">,</span> <span class="mi">18100</span><span class="p">,</span>
+    <span class="mi">46939</span><span class="p">,</span> <span class="mi">42874</span><span class="p">,</span> <span class="mi">38681</span><span class="p">,</span> <span class="mi">34616</span><span class="p">,</span> <span class="mi">63455</span><span class="p">,</span> <span class="mi">59390</span><span class="p">,</span> <span class="mi">55197</span><span class="p">,</span> <span class="mi">51132</span><span class="p">,</span>
+    <span class="mi">18628</span><span class="p">,</span> <span class="mi">22757</span><span class="p">,</span> <span class="mi">26758</span><span class="p">,</span> <span class="mi">30887</span><span class="p">,</span> <span class="mi">2112</span><span class="p">,</span> <span class="mi">6241</span><span class="p">,</span> <span class="mi">10242</span><span class="p">,</span> <span class="mi">14371</span><span class="p">,</span>
+    <span class="mi">51660</span><span class="p">,</span> <span class="mi">55789</span><span class="p">,</span> <span class="mi">59790</span><span class="p">,</span> <span class="mi">63919</span><span class="p">,</span> <span class="mi">35144</span><span class="p">,</span> <span class="mi">39273</span><span class="p">,</span> <span class="mi">43274</span><span class="p">,</span> <span class="mi">47403</span><span class="p">,</span>
+    <span class="mi">23285</span><span class="p">,</span> <span class="mi">19156</span><span class="p">,</span> <span class="mi">31415</span><span class="p">,</span> <span class="mi">27286</span><span class="p">,</span> <span class="mi">6769</span><span class="p">,</span> <span class="mi">2640</span><span class="p">,</span> <span class="mi">14899</span><span class="p">,</span> <span class="mi">10770</span><span class="p">,</span>
+    <span class="mi">56317</span><span class="p">,</span> <span class="mi">52188</span><span class="p">,</span> <span class="mi">64447</span><span class="p">,</span> <span class="mi">60318</span><span class="p">,</span> <span class="mi">39801</span><span class="p">,</span> <span class="mi">35672</span><span class="p">,</span> <span class="mi">47931</span><span class="p">,</span> <span class="mi">43802</span><span class="p">,</span>
+    <span class="mi">27814</span><span class="p">,</span> <span class="mi">31879</span><span class="p">,</span> <span class="mi">19684</span><span class="p">,</span> <span class="mi">23749</span><span class="p">,</span> <span class="mi">11298</span><span class="p">,</span> <span class="mi">15363</span><span class="p">,</span> <span class="mi">3168</span><span class="p">,</span> <span class="mi">7233</span><span class="p">,</span>
+    <span class="mi">60846</span><span class="p">,</span> <span class="mi">64911</span><span class="p">,</span> <span class="mi">52716</span><span class="p">,</span> <span class="mi">56781</span><span class="p">,</span> <span class="mi">44330</span><span class="p">,</span> <span class="mi">48395</span><span class="p">,</span> <span class="mi">36200</span><span class="p">,</span> <span class="mi">40265</span><span class="p">,</span>
+    <span class="mi">32407</span><span class="p">,</span> <span class="mi">28342</span><span class="p">,</span> <span class="mi">24277</span><span class="p">,</span> <span class="mi">20212</span><span class="p">,</span> <span class="mi">15891</span><span class="p">,</span> <span class="mi">11826</span><span class="p">,</span> <span class="mi">7761</span><span class="p">,</span> <span class="mi">3696</span><span class="p">,</span>
+    <span class="mi">65439</span><span class="p">,</span> <span class="mi">61374</span><span class="p">,</span> <span class="mi">57309</span><span class="p">,</span> <span class="mi">53244</span><span class="p">,</span> <span class="mi">48923</span><span class="p">,</span> <span class="mi">44858</span><span class="p">,</span> <span class="mi">40793</span><span class="p">,</span> <span class="mi">36728</span><span class="p">,</span>
+    <span class="mi">37256</span><span class="p">,</span> <span class="mi">33193</span><span class="p">,</span> <span class="mi">45514</span><span class="p">,</span> <span class="mi">41451</span><span class="p">,</span> <span class="mi">53516</span><span class="p">,</span> <span class="mi">49453</span><span class="p">,</span> <span class="mi">61774</span><span class="p">,</span> <span class="mi">57711</span><span class="p">,</span>
+    <span class="mi">4224</span><span class="p">,</span> <span class="mi">161</span><span class="p">,</span> <span class="mi">12482</span><span class="p">,</span> <span class="mi">8419</span><span class="p">,</span> <span class="mi">20484</span><span class="p">,</span> <span class="mi">16421</span><span class="p">,</span> <span class="mi">28742</span><span class="p">,</span> <span class="mi">24679</span><span class="p">,</span> <span class="mi">33721</span><span class="p">,</span>
+    <span class="mi">37784</span><span class="p">,</span> <span class="mi">41979</span><span class="p">,</span> <span class="mi">46042</span><span class="p">,</span> <span class="mi">49981</span><span class="p">,</span> <span class="mi">54044</span><span class="p">,</span> <span class="mi">58239</span><span class="p">,</span> <span class="mi">62302</span><span class="p">,</span> <span class="mi">689</span><span class="p">,</span>
+    <span class="mi">4752</span><span class="p">,</span> <span class="mi">8947</span><span class="p">,</span> <span class="mi">13010</span><span class="p">,</span> <span class="mi">16949</span><span class="p">,</span> <span class="mi">21012</span><span class="p">,</span> <span class="mi">25207</span><span class="p">,</span> <span class="mi">29270</span><span class="p">,</span> <span class="mi">46570</span><span class="p">,</span>
+    <span class="mi">42443</span><span class="p">,</span> <span class="mi">38312</span><span class="p">,</span> <span class="mi">34185</span><span class="p">,</span> <span class="mi">62830</span><span class="p">,</span> <span class="mi">58703</span><span class="p">,</span> <span class="mi">54572</span><span class="p">,</span> <span class="mi">50445</span><span class="p">,</span> <span class="mi">13538</span><span class="p">,</span>
+    <span class="mi">9411</span><span class="p">,</span> <span class="mi">5280</span><span class="p">,</span> <span class="mi">1153</span><span class="p">,</span> <span class="mi">29798</span><span class="p">,</span> <span class="mi">25671</span><span class="p">,</span> <span class="mi">21540</span><span class="p">,</span> <span class="mi">17413</span><span class="p">,</span> <span class="mi">42971</span><span class="p">,</span>
+    <span class="mi">47098</span><span class="p">,</span> <span class="mi">34713</span><span class="p">,</span> <span class="mi">38840</span><span class="p">,</span> <span class="mi">59231</span><span class="p">,</span> <span class="mi">63358</span><span class="p">,</span> <span class="mi">50973</span><span class="p">,</span> <span class="mi">55100</span><span class="p">,</span> <span class="mi">9939</span><span class="p">,</span>
+    <span class="mi">14066</span><span class="p">,</span> <span class="mi">1681</span><span class="p">,</span> <span class="mi">5808</span><span class="p">,</span> <span class="mi">26199</span><span class="p">,</span> <span class="mi">30326</span><span class="p">,</span> <span class="mi">17941</span><span class="p">,</span> <span class="mi">22068</span><span class="p">,</span> <span class="mi">55628</span><span class="p">,</span>
+    <span class="mi">51565</span><span class="p">,</span> <span class="mi">63758</span><span class="p">,</span> <span class="mi">59695</span><span class="p">,</span> <span class="mi">39368</span><span class="p">,</span> <span class="mi">35305</span><span class="p">,</span> <span class="mi">47498</span><span class="p">,</span> <span class="mi">43435</span><span class="p">,</span> <span class="mi">22596</span><span class="p">,</span>
+    <span class="mi">18533</span><span class="p">,</span> <span class="mi">30726</span><span class="p">,</span> <span class="mi">26663</span><span class="p">,</span> <span class="mi">6336</span><span class="p">,</span> <span class="mi">2273</span><span class="p">,</span> <span class="mi">14466</span><span class="p">,</span> <span class="mi">10403</span><span class="p">,</span> <span class="mi">52093</span><span class="p">,</span>
+    <span class="mi">56156</span><span class="p">,</span> <span class="mi">60223</span><span class="p">,</span> <span class="mi">64286</span><span class="p">,</span> <span class="mi">35833</span><span class="p">,</span> <span class="mi">39896</span><span class="p">,</span> <span class="mi">43963</span><span class="p">,</span> <span class="mi">48026</span><span class="p">,</span> <span class="mi">19061</span><span class="p">,</span>
+    <span class="mi">23124</span><span class="p">,</span> <span class="mi">27191</span><span class="p">,</span> <span class="mi">31254</span><span class="p">,</span> <span class="mi">2801</span><span class="p">,</span> <span class="mi">6864</span><span class="p">,</span> <span class="mi">10931</span><span class="p">,</span> <span class="mi">14994</span><span class="p">,</span> <span class="mi">64814</span><span class="p">,</span>
+    <span class="mi">60687</span><span class="p">,</span> <span class="mi">56684</span><span class="p">,</span> <span class="mi">52557</span><span class="p">,</span> <span class="mi">48554</span><span class="p">,</span> <span class="mi">44427</span><span class="p">,</span> <span class="mi">40424</span><span class="p">,</span> <span class="mi">36297</span><span class="p">,</span> <span class="mi">31782</span><span class="p">,</span>
+    <span class="mi">27655</span><span class="p">,</span> <span class="mi">23652</span><span class="p">,</span> <span class="mi">19525</span><span class="p">,</span> <span class="mi">15522</span><span class="p">,</span> <span class="mi">11395</span><span class="p">,</span> <span class="mi">7392</span><span class="p">,</span> <span class="mi">3265</span><span class="p">,</span> <span class="mi">61215</span><span class="p">,</span>
+    <span class="mi">65342</span><span class="p">,</span> <span class="mi">53085</span><span class="p">,</span> <span class="mi">57212</span><span class="p">,</span> <span class="mi">44955</span><span class="p">,</span> <span class="mi">49082</span><span class="p">,</span> <span class="mi">36825</span><span class="p">,</span> <span class="mi">40952</span><span class="p">,</span> <span class="mi">28183</span><span class="p">,</span>
+    <span class="mi">32310</span><span class="p">,</span> <span class="mi">20053</span><span class="p">,</span> <span class="mi">24180</span><span class="p">,</span> <span class="mi">11923</span><span class="p">,</span> <span class="mi">16050</span><span class="p">,</span> <span class="mi">3793</span><span class="p">,</span> <span class="mi">7920</span> <span class="p">]</span>
+  <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="CRC16CCITT.compute"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.CRC16CCITT.compute">[docs]</a>  <span class="k">def</span> <span class="nf">compute</span><span class="p">(</span> <span class="n">klass</span><span class="p">,</span> <span class="n">block</span> <span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">65535</span>
+    <span class="c">#result = 0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span> <span class="n">block</span> <span class="p">)</span> <span class="p">):</span>
+      <span class="n">tmp</span> <span class="o">=</span> <span class="n">block</span><span class="p">[</span> <span class="n">i</span> <span class="p">]</span> <span class="o">^</span> <span class="n">result</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span> 
+      <span class="n">result</span> <span class="o">=</span> <span class="p">(</span> <span class="n">klass</span><span class="o">.</span><span class="n">lookup</span><span class="p">[</span> <span class="n">tmp</span> <span class="p">]</span> <span class="o">^</span> <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span> <span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFFFF</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+</div></div>
+<div class="viewcode-block" id="CRC8"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.CRC8">[docs]</a><span class="k">class</span> <span class="nc">CRC8</span><span class="p">:</span>
+  <span class="n">lookup</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">155</span><span class="p">,</span> <span class="mi">173</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">193</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">247</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span>
+    <span class="mi">216</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">238</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">169</span><span class="p">,</span> <span class="mi">159</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">243</span><span class="p">,</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">197</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span>
+    <span class="mi">134</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">201</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">147</span><span class="p">,</span>
+    <span class="mi">125</span><span class="p">,</span> <span class="mi">230</span><span class="p">,</span> <span class="mi">208</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">188</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">138</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">205</span><span class="p">,</span> <span class="mi">251</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">151</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span>
+    <span class="mi">58</span><span class="p">,</span> <span class="mi">161</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">212</span><span class="p">,</span> <span class="mi">226</span><span class="p">,</span> <span class="mi">121</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">184</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">254</span><span class="p">,</span>
+    <span class="mi">9</span><span class="p">,</span> <span class="mi">146</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">209</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">124</span><span class="p">,</span> <span class="mi">231</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">139</span><span class="p">,</span> <span class="mi">189</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span>
+    <span class="mi">87</span><span class="p">,</span> <span class="mi">204</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">227</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">213</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">143</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="mi">172</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">154</span><span class="p">,</span> <span class="mi">109</span><span class="p">,</span> <span class="mi">246</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">131</span><span class="p">,</span> <span class="mi">116</span><span class="p">,</span> <span class="mi">239</span><span class="p">,</span>
+    <span class="mi">217</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">158</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">168</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">196</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">177</span><span class="p">,</span>
+    <span class="mi">70</span><span class="p">,</span> <span class="mi">221</span><span class="p">,</span> <span class="mi">235</span><span class="p">,</span> <span class="mi">112</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">144</span><span class="p">,</span> <span class="mi">166</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">252</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span>
+    <span class="mi">191</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">211</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">126</span><span class="p">,</span> <span class="mi">229</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">162</span><span class="p">,</span> <span class="mi">148</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">206</span><span class="p">,</span>
+    <span class="mi">32</span><span class="p">,</span> <span class="mi">187</span><span class="p">,</span> <span class="mi">141</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">122</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">244</span><span class="p">,</span> <span class="mi">194</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">174</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">,</span> <span class="mi">152</span><span class="p">,</span> <span class="mi">118</span><span class="p">,</span> <span class="mi">237</span><span class="p">,</span> <span class="mi">219</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">183</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">129</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">198</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mi">107</span><span class="p">,</span>
+    <span class="mi">156</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">223</span><span class="p">,</span> <span class="mi">233</span><span class="p">,</span> <span class="mi">114</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">179</span><span class="p">,</span> <span class="mi">195</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span>
+    <span class="mi">110</span><span class="p">,</span> <span class="mi">245</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">218</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">236</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">182</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span>
+    <span class="mi">241</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">199</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">171</span><span class="p">,</span> <span class="mi">157</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">222</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">178</span><span class="p">,</span>
+    <span class="mi">132</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">253</span><span class="p">,</span> <span class="mi">203</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">136</span><span class="p">,</span>
+    <span class="mi">127</span><span class="p">,</span> <span class="mi">228</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">149</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">207</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span>
+    <span class="mi">33</span><span class="p">,</span> <span class="mi">186</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">214</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">123</span> <span class="p">]</span>
+
+  <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="CRC8.compute"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.CRC8.compute">[docs]</a>  <span class="k">def</span> <span class="nf">compute</span><span class="p">(</span> <span class="n">klass</span><span class="p">,</span> <span class="n">block</span> <span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span> <span class="n">block</span> <span class="p">)</span> <span class="p">):</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="n">klass</span><span class="o">.</span><span class="n">lookup</span><span class="p">[</span> <span class="p">(</span> <span class="n">result</span> <span class="o">^</span> <span class="n">block</span><span class="p">[</span> <span class="n">i</span> <span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0xFF</span> <span class="p">)</span> <span class="p">]</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+</div></div>
+<div class="viewcode-block" id="BangLong"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.BangLong">[docs]</a><span class="k">def</span> <span class="nf">BangLong</span><span class="p">(</span> <span class="n">bytez</span> <span class="p">):</span>
+  <span class="p">(</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="p">)</span> <span class="o">=</span> <span class="n">bytez</span>
+  <span class="n">l</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="mi">24</span> <span class="o">|</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span> <span class="o">|</span> <span class="n">c</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span> <span class="o">|</span> <span class="n">d</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nb">long</span><span class="p">(</span> <span class="n">l</span> <span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="BangInt"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.BangInt">[docs]</a><span class="k">def</span> <span class="nf">BangInt</span><span class="p">(</span> <span class="n">ints</span> <span class="p">):</span>
+  <span class="p">(</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">)</span> <span class="o">=</span> <span class="n">ints</span>
+  <span class="k">return</span> <span class="p">(</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="mh">0xFF</span> <span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span> <span class="o">|</span> <span class="n">y</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">;</span>
+</div>
+<div class="viewcode-block" id="makeByte"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.makeByte">[docs]</a><span class="k">def</span> <span class="nf">makeByte</span><span class="p">(</span><span class="n">highNibble</span><span class="p">,</span> <span class="n">lowNibble</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    0 &lt;= highNibble &lt;= 15</span>
+<span class="sd">    0 &lt;= lowNibble  &lt;= 15</span>
+<span class="sd">    0 &lt;= result     &lt;= 255</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">highNibble</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span> <span class="o">|</span> <span class="n">lowNibble</span> <span class="o">&amp;</span> <span class="mh">0xF</span>
+  <span class="k">return</span> <span class="n">result</span>
+</div>
+<span class="n">ENCODE_TABLE</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span>
+                 <span class="mi">26</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">28</span> <span class="p">]</span>
+
+<span class="n">_enc_test_1</span> <span class="o">=</span> <span class="p">[</span> <span class="mh">0xA7</span><span class="p">,</span> <span class="mh">0x47</span><span class="p">,</span> <span class="mh">0x33</span><span class="p">,</span> <span class="mh">0x62</span><span class="p">,</span> <span class="mh">0x5D</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                <span class="mh">0x0C</span> <span class="p">]</span>
+<span class="n">_enc_result_1</span> <span class="o">=</span> <span class="p">[</span> <span class="mh">0xA9</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">,</span> <span class="mh">0x16</span><span class="p">,</span> <span class="mh">0x8E</span><span class="p">,</span> <span class="mh">0x39</span><span class="p">,</span> <span class="mh">0xB2</span><span class="p">,</span> <span class="mh">0x94</span><span class="p">,</span> <span class="mh">0xD5</span><span class="p">,</span> <span class="mh">0x72</span><span class="p">,</span> <span class="mh">0x57</span><span class="p">,</span>
+                  <span class="mh">0x15</span><span class="p">,</span> <span class="mh">0x71</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x56</span><span class="p">,</span> <span class="mh">0xC5</span> <span class="p">]</span>
+
+<span class="n">_enc_test_2</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0xA7</span><span class="p">,</span> <span class="mh">0x47</span><span class="p">,</span> <span class="mh">0x33</span><span class="p">,</span> <span class="mh">0x62</span><span class="p">,</span> <span class="mh">0x8D</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0xA6</span><span class="p">]</span>
+<span class="n">_enc_result_2</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0xA9</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">,</span> <span class="mh">0x16</span><span class="p">,</span> <span class="mh">0x8E</span><span class="p">,</span> <span class="mh">0x39</span><span class="p">,</span> <span class="mh">0xB2</span><span class="p">,</span> <span class="mh">0x68</span><span class="p">,</span> <span class="mh">0xD5</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0xAA</span><span class="p">,</span>
+                 <span class="mh">0x65</span><span class="p">]</span>
+
+<div class="viewcode-block" id="encodeDC"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.encodeDC">[docs]</a><span class="k">def</span> <span class="nf">encodeDC</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; encodeDC(_enc_test_1) == bytearray(_enc_result_1)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; encodeDC(_enc_test_2) == bytearray(_enc_result_2)</span>
+<span class="sd">    True</span>
+
+
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">msg</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+  <span class="c"># realign bytes</span>
+  <span class="n">nibbles</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+  <span class="c"># collect nibbles</span>
+  <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">msg</span><span class="p">:</span>
+    <span class="n">highNibble</span> <span class="o">=</span> <span class="n">b</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span> <span class="o">&amp;</span> <span class="mh">0xF</span>
+    <span class="n">lowNibble</span>  <span class="o">=</span> <span class="n">b</span> <span class="o">&amp;</span> <span class="mh">0xF</span>
+    <span class="n">dcValue1</span>   <span class="o">=</span> <span class="n">ENCODE_TABLE</span><span class="p">[</span><span class="n">highNibble</span><span class="p">]</span>
+    <span class="n">dcValue2</span>   <span class="o">=</span> <span class="n">ENCODE_TABLE</span><span class="p">[</span><span class="n">lowNibble</span><span class="p">]</span>
+    <span class="n">nibbles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dcValue1</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">high2Bits</span> <span class="o">=</span> <span class="n">dcValue1</span> <span class="o">&amp;</span> <span class="mh">0x3</span>
+    <span class="n">low2Bits</span>  <span class="o">=</span> <span class="n">dcValue2</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span> <span class="o">&amp;</span> <span class="mh">0x3</span>
+    <span class="n">nibbles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">high2Bits</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span> <span class="o">|</span> <span class="n">low2Bits</span> <span class="p">)</span>
+    <span class="n">nibbles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">dcValue2</span> <span class="o">&amp;</span> <span class="mh">0xF</span> <span class="p">)</span>
+  
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nibbles</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="c"># last item gets a padding terminator</span>
+    <span class="n">high</span><span class="p">,</span> <span class="n">low</span> <span class="o">=</span> <span class="n">nibbles</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mi">5</span>
+    <span class="c"># most elide the next item</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">nibbles</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+      <span class="n">low</span> <span class="o">=</span> <span class="n">nibbles</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">makeByte</span><span class="p">(</span><span class="n">high</span><span class="p">,</span> <span class="n">low</span><span class="p">))</span>
+  <span class="k">return</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+</div>
+<span class="n">_decode_test_1</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0xA9</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">,</span> <span class="mh">0x16</span><span class="p">,</span> <span class="mh">0x8E</span><span class="p">,</span> <span class="mh">0x39</span><span class="p">,</span> <span class="mh">0xB2</span><span class="p">,</span> <span class="mh">0x68</span><span class="p">,</span> <span class="mh">0xD5</span><span class="p">,</span> <span class="mh">0x59</span><span class="p">,</span> <span class="mh">0x56</span><span class="p">,</span>
+                  <span class="mh">0x38</span><span class="p">,</span> <span class="mh">0xD6</span><span class="p">,</span> <span class="mh">0x8F</span><span class="p">,</span> <span class="mh">0x28</span><span class="p">,</span> <span class="mh">0xF2</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span>
+                  <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0xB3</span><span class="p">,</span> <span class="mh">0x25</span><span class="p">]</span>
+<span class="n">_decode_result_1</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0xA7</span><span class="p">,</span> <span class="mh">0x47</span><span class="p">,</span> <span class="mh">0x33</span><span class="p">,</span> <span class="mh">0x62</span><span class="p">,</span> <span class="mh">0x8D</span><span class="p">,</span> <span class="mh">0x09</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x37</span><span class="p">,</span> <span class="mh">0x32</span><span class="p">,</span> <span class="mh">0x32</span><span class="p">,</span>
+                    <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                    <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                    <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                    <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                    <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                    <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                    <span class="mh">0xC2</span><span class="p">]</span>
+<span class="n">_decode_test_2</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0xA9</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">,</span> <span class="mh">0x16</span><span class="p">,</span> <span class="mh">0x8E</span><span class="p">,</span> <span class="mh">0x39</span><span class="p">,</span> <span class="mh">0xB2</span><span class="p">,</span> <span class="mh">0x56</span><span class="p">,</span> <span class="mh">0x65</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x56</span><span class="p">,</span>
+                  <span class="mh">0x35</span><span class="p">]</span>
+<span class="n">_decode_result_2</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0xA7</span><span class="p">,</span> <span class="mh">0x47</span><span class="p">,</span> <span class="mh">0x33</span><span class="p">,</span> <span class="mh">0x62</span><span class="p">,</span> <span class="mh">0x06</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">]</span>
+<div class="viewcode-block" id="decodeDC"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.decodeDC">[docs]</a><span class="k">def</span> <span class="nf">decodeDC</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; decodeDC(_decode_test_1) == bytearray(_decode_result_1)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; decodeDC(_decode_test_2) == bytearray(_decode_result_2)</span>
+<span class="sd">    True</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">msg</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+  <span class="n">result</span>      <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+  <span class="n">nibbleCount</span> <span class="o">=</span>  <span class="mi">0</span>
+  <span class="n">bitCount</span>    <span class="o">=</span>  <span class="mi">0</span>
+  <span class="n">sixBitValue</span> <span class="o">=</span>  <span class="mi">0</span>
+  <span class="n">highValue</span>   <span class="o">=</span>  <span class="mi">0</span>
+  <span class="n">highNibble</span>  <span class="o">=</span>  <span class="mi">0</span>
+  <span class="c"># </span>
+  <span class="k">for</span> <span class="n">B</span> <span class="ow">in</span> <span class="n">msg</span><span class="p">:</span>
+    <span class="n">bP</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="k">while</span> <span class="n">bP</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">bitValue</span> <span class="o">=</span> <span class="n">B</span> <span class="o">&gt;&gt;</span> <span class="n">bP</span> <span class="o">&amp;</span> <span class="mh">0x1</span>
+      <span class="n">sixBitValue</span> <span class="o">=</span> <span class="n">sixBitValue</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="o">|</span> <span class="n">bitValue</span>
+      <span class="n">bitCount</span> <span class="o">+=</span> <span class="mi">1</span>
+      <span class="k">if</span> <span class="n">bitCount</span> <span class="o">!=</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="n">bP</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">continue</span><span class="p">;</span> <span class="c"># next</span>
+      <span class="n">nibbleCount</span> <span class="o">+=</span> <span class="mi">1</span>
+      <span class="k">if</span> <span class="n">nibbleCount</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">highNibble</span> <span class="o">=</span> <span class="n">decodeDCByte</span><span class="p">(</span><span class="n">sixBitValue</span><span class="p">)</span>
+      <span class="k">else</span><span class="p">:</span>
+        <span class="n">lowNibble</span> <span class="o">=</span> <span class="n">decodeDCByte</span><span class="p">(</span><span class="n">sixBitValue</span><span class="p">)</span>
+        <span class="n">byteValue</span> <span class="o">=</span> <span class="n">makeByte</span><span class="p">(</span><span class="n">highNibble</span><span class="p">,</span> <span class="n">lowNibble</span><span class="p">)</span>
+        <span class="c"># append to result</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">byteValue</span><span class="p">)</span>
+        <span class="n">nibbleCount</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="n">sixBitValue</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="n">bitCount</span>    <span class="o">=</span> <span class="mi">0</span>
+      <span class="n">bP</span> <span class="o">-=</span> <span class="mi">1</span>
+
+  <span class="k">return</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="decodeDCByte"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.decodeDCByte">[docs]</a><span class="k">def</span> <span class="nf">decodeDCByte</span><span class="p">(</span><span class="n">B</span><span class="p">):</span>
+  <span class="c"># B should be 0 &lt; B &amp;&amp; B &lt; 63</span>
+  <span class="c"># look up in decode table</span>
+  <span class="k">return</span> <span class="n">ENCODE_TABLE</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+
+</div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+  <span class="kn">import</span> <span class="nn">doctest</span>
+  <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span> <span class="p">)</span>
+
+<span class="c">#####</span>
+<span class="c"># EOF</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Insulaudit contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

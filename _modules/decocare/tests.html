@@ -1,0 +1,603 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>decocare.tests &mdash; insulaudit:decoding-carelink 0.0.3 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="insulaudit:decoding-carelink 0.0.3 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li>
+          <li><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for decocare.tests</h1><div class="highlight"><pre>
+<span class="c">#!/usr/bin/python</span>
+
+<span class="kn">from</span> <span class="nn">binascii</span> <span class="kn">import</span> <span class="n">hexlify</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pformat</span>
+
+<span class="kn">import</span> <span class="nn">lib</span>
+<span class="kn">from</span> <span class="nn">history</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c"># I don&#39;t know where else to put this.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    # </span>
+<span class="sd">    ( bytearray([ 0x07, 0x00 ])</span>
+<span class="sd">    + bytearray([ ])</span>
+<span class="sd">    + bytearray([ ])),</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">_midnights</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">&#39;page_4&#39;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="c"># record 14 (2013, 0, 7, 6, 5, 0)</span>
+    <span class="c"># 1/8/13 00:00:00,34.9,ResultDailyTotal,&quot;AMOUNT=34.9,</span>
+    <span class="c"># CONCENTRATION=null&quot;</span>
+    <span class="p">(</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x26</span><span class="p">,</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x8d</span><span class="p">,</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x8d</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x94</span><span class="p">,</span> <span class="mh">0x58</span><span class="p">,</span> <span class="mh">0xd8</span><span class="p">,</span>
+                  <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x26</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x72</span><span class="p">,</span> <span class="mh">0x43</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0xb4</span><span class="p">,</span> <span class="mh">0x21</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x79</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0xb4</span><span class="p">,</span> <span class="mh">0x21</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x64</span><span class="p">,</span> <span class="mh">0x52</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x50</span><span class="p">,</span> <span class="mh">0x12</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0xe8</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="p">])),</span>
+
+    <span class="c"># record 30 (2013, 0, 8, 20, 5, 0)</span>
+    <span class="c"># 1/9/13 00:00:00,27.4,ResultDailyTotal,&quot;AMOUNT=27.35,</span>
+    <span class="c"># CONCENTRATION=null&quot;</span>
+    <span class="p">(</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">,</span> <span class="mh">0x08</span><span class="p">,</span> <span class="mh">0x8d</span><span class="p">,</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0x08</span><span class="p">,</span> <span class="mh">0x8d</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0xf6</span><span class="p">,</span> <span class="mh">0x8e</span><span class="p">,</span> <span class="mh">0x8f</span><span class="p">,</span>
+                  <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">,</span> <span class="mh">0x3f</span><span class="p">,</span>
+                  <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x25</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x35</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x25</span><span class="p">,</span>
+                  <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0xa0</span><span class="p">,</span> <span class="mh">0x1f</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x60</span><span class="p">,</span> <span class="mh">0x45</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0xe8</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="p">])),</span>
+
+    <span class="c"># record (2013, 0, 9, 6, 4, 0)</span>
+    <span class="c"># 1/10/13 00:00:00,33.2,ResultDailyTotal,&quot;AMOUNT=33.15,</span>
+    <span class="c"># CONCENTRATION=null&quot;</span>
+    <span class="p">(</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0x46</span><span class="p">,</span> <span class="mh">0x09</span><span class="p">,</span> <span class="mh">0x8d</span><span class="p">,</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0x09</span><span class="p">,</span> <span class="mh">0x8d</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0xd3</span><span class="p">,</span> <span class="mh">0x62</span><span class="p">,</span> <span class="mh">0x29</span><span class="p">,</span>
+                  <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0x46</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x76</span><span class="p">,</span> <span class="mh">0x51</span><span class="p">,</span>
+                  <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0xd0</span><span class="p">,</span> <span class="mh">0x13</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x2c</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0xd0</span><span class="p">,</span> <span class="mh">0x13</span><span class="p">,</span>
+                  <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x7c</span><span class="p">,</span> <span class="mh">0x3c</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x54</span><span class="p">,</span> <span class="mh">0x28</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0xe8</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="p">])),</span>
+  <span class="p">],</span>
+
+  <span class="s">&#39;page_14&#39;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="c"># record 8 (2012, 0, 2, 6, 6, 0)</span>
+    <span class="c"># 12/3/12 00:00:00,32.3,ResultDailyTotal,&quot;AMOUNT=32.3,</span>
+    <span class="c"># CONCENTRATION=null&quot;</span>
+    <span class="p">(</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x06</span><span class="p">,</span> <span class="mh">0x06</span><span class="p">,</span> <span class="mh">0xc2</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0xc2</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0xb1</span><span class="p">,</span> <span class="mh">0x60</span><span class="p">,</span> <span class="mh">0x8b</span><span class="p">,</span>
+    <span class="mh">0x09</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x06</span><span class="p">,</span> <span class="mh">0x06</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x7c</span><span class="p">,</span> <span class="mh">0x3a</span><span class="p">,</span>
+    <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x8a</span><span class="p">,</span> <span class="mh">0x2a</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x64</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x8a</span><span class="p">,</span> <span class="mh">0x2a</span><span class="p">,</span>
+    <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x2e</span><span class="p">,</span> <span class="mh">0x2e</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x5c</span><span class="p">,</span> <span class="mh">0x36</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+    <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+    <span class="mh">0xe8</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="p">])),</span>
+
+    <span class="c"># record 22 (2012, 0, 3, 12, 5, 0)</span>
+    <span class="c"># 12/4/12 00:00:00,36.0,ResultDailyTotal,&quot;AMOUNT=35.95,</span>
+    <span class="c"># CONCENTRATION=null&quot;</span>
+    <span class="p">(</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0xc3</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0xc3</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0xb7</span><span class="p">,</span> <span class="mh">0x4d</span><span class="p">,</span> <span class="mh">0x14</span><span class="p">,</span>
+                  <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x7c</span><span class="p">,</span> <span class="mh">0x45</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x90</span><span class="p">,</span> <span class="mh">0x1f</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x5f</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x90</span><span class="p">,</span> <span class="mh">0x1f</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0x41</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x8c</span><span class="p">,</span> <span class="mh">0x23</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0xe8</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="p">])),</span>
+
+    <span class="c"># record 35 (2012, 0, 4, 30, 5, 0)</span>
+    <span class="c"># 12/5/12 00:00:00,25.9,ResultDailyTotal,&quot;AMOUNT=25.9,</span>
+    <span class="c"># CONCENTRATION=null&quot;</span>
+    <span class="p">(</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x9e</span><span class="p">,</span> <span class="mh">0xc4</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0xc4</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0xaa</span><span class="p">,</span> <span class="mh">0x89</span><span class="p">,</span> <span class="mh">0xc6</span><span class="p">,</span>
+    <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x9e</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x76</span><span class="p">,</span> <span class="mh">0x3e</span><span class="p">,</span>
+    <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x28</span><span class="p">,</span> <span class="mh">0x26</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x8f</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x28</span><span class="p">,</span> <span class="mh">0x26</span><span class="p">,</span>
+    <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0xb0</span><span class="p">,</span> <span class="mh">0x4e</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x78</span><span class="p">,</span> <span class="mh">0x16</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+    <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+    <span class="mh">0xe8</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="p">])),</span>
+
+  <span class="p">],</span>
+
+  <span class="s">&#39;page_29&#39;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="c"># record 9 (2012, 0, 8, 28, 5, 0)</span>
+    <span class="c"># 10/9/12 00:00:00,34.8,ResultDailyTotal,&quot;AMOUNT=34.85,</span>
+    <span class="c"># CONCENTRATION=null&quot;</span>
+    <span class="p">(</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x9c</span><span class="p">,</span> <span class="mh">0xa8</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0xa8</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0xab</span><span class="p">,</span> <span class="mh">0x61</span><span class="p">,</span> <span class="mh">0x1a</span><span class="p">,</span>
+                  <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x9c</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x78</span><span class="p">,</span> <span class="mh">0x3e</span><span class="p">,</span>
+                  <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x24</span><span class="p">,</span> <span class="mh">0x26</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x8b</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x24</span><span class="p">,</span> <span class="mh">0x26</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x9c</span><span class="p">,</span> <span class="mh">0x4b</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x88</span><span class="p">,</span> <span class="mh">0x19</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0xe8</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="p">])),</span>
+
+    <span class="c"># record 24 (2012, 0, 9, 18, 5, 0)</span>
+    <span class="c"># 10/10/12 00:00:00,30.8,ResultDailyTotal,&quot;AMOUNT=30.85,</span>
+    <span class="c"># CONCENTRATION=null&quot;</span>
+    <span class="p">(</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x72</span><span class="p">,</span> <span class="mh">0xa9</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0xa9</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x96</span><span class="p">,</span> <span class="mh">0x73</span><span class="p">,</span> <span class="mh">0xb6</span><span class="p">,</span>
+                  <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x72</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x76</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0xfc</span><span class="p">,</span> <span class="mh">0x24</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x91</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0xfc</span><span class="p">,</span> <span class="mh">0x24</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0xb4</span><span class="p">,</span> <span class="mh">0x56</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x48</span><span class="p">,</span> <span class="mh">0x0e</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0xe8</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="p">])),</span>
+
+    <span class="c"># record 39  (2012, 0, 10, 18, 4, 0)</span>
+    <span class="c"># 10/11/12 00:00:00,30.2,ResultDailyTotal,&quot;AMOUNT=30.2,</span>
+    <span class="c"># CONCENTRATION=null&quot;</span>
+    <span class="p">(</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0xd2</span><span class="p">,</span> <span class="mh">0xaa</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0xaa</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0xb6</span><span class="p">,</span> <span class="mh">0x8d</span><span class="p">,</span> <span class="mh">0x23</span><span class="p">,</span>
+                  <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0xd2</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x72</span><span class="p">,</span> <span class="mh">0x47</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x60</span><span class="p">,</span> <span class="mh">0x1d</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x36</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x60</span><span class="p">,</span> <span class="mh">0x1d</span><span class="p">,</span>
+                  <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0xa0</span><span class="p">,</span> <span class="mh">0x2d</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0xc0</span><span class="p">,</span> <span class="mh">0x37</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0xe8</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="p">])),</span>
+  <span class="p">],</span>
+  <span class="s">&#39;page_35&#39;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="c"># record 2 (2012, 0, 13, 22, 4, 0)</span>
+    <span class="c"># 9/14/12 00:00:00,31.2,ResultDailyTotal,&quot;AMOUNT=31.2,</span>
+    <span class="c"># CONCENTRATION=null&quot;</span>
+    <span class="c"># </span>
+    <span class="p">(</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0x96</span><span class="p">,</span> <span class="mh">0x8d</span><span class="p">,</span> <span class="mh">0x8c</span><span class="p">,</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0x8d</span><span class="p">,</span> <span class="mh">0x8c</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x80</span><span class="p">,</span> <span class="mh">0x68</span><span class="p">,</span> <span class="mh">0x97</span><span class="p">,</span>
+                  <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0x96</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">,</span> <span class="mh">0x47</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x54</span><span class="p">,</span> <span class="mh">0x1d</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x54</span><span class="p">,</span> <span class="mh">0x1d</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">,</span> <span class="mh">0x5e</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x14</span><span class="p">,</span> <span class="mh">0x06</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0xe8</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="p">])),</span>
+
+    <span class="c"># record 18  (2012, 0, 14, 0, 4, 0)</span>
+    <span class="c"># correct is 9/15/12 00:00:00,28.2,ResultDailyTotal,&quot;AMOUNT=28.15,</span>
+    <span class="c"># CONCENTRATION=null&quot;</span>
+    <span class="p">(</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0xe0</span><span class="p">,</span> <span class="mh">0x8e</span><span class="p">,</span> <span class="mh">0x8c</span><span class="p">,</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0x8e</span><span class="p">,</span> <span class="mh">0x8c</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">,</span> <span class="mh">0x66</span><span class="p">,</span> <span class="mh">0x8e</span><span class="p">,</span>
+                  <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0xe0</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">,</span> <span class="mh">0x47</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x6c</span><span class="p">,</span> <span class="mh">0x1d</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x7b</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x6c</span><span class="p">,</span> <span class="mh">0x1d</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x6c</span><span class="p">,</span> <span class="mh">0x64</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0xe8</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="p">])),</span>
+
+    <span class="c"># correct is something like: (2012, 0, 15, 6, 4, 0)</span>
+    <span class="c"># 2012-09:15T00:00:00 or</span>
+    <span class="c"># 2012-09-16T24:00:00</span>
+    <span class="c"># 32.8,ResultDailyTotal,&quot;AMOUNT=32.8, CONCENTRATION=null&quot;</span>
+    <span class="p">(</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0x66</span><span class="p">,</span> <span class="mh">0x8f</span><span class="p">,</span> <span class="mh">0x8c</span><span class="p">,</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0x8f</span><span class="p">,</span> <span class="mh">0x8c</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x80</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">,</span> <span class="mh">0xf2</span><span class="p">,</span>
+                  <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0x66</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x56</span><span class="p">,</span> <span class="mh">0x4c</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x18</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x5b</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x18</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x64</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0xe8</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="p">])),</span>
+
+    <span class="c"># correct is something like: (2012, 0, 16, 0, 5, 0))</span>
+    <span class="c"># 2012-09-16T24:00:00 or</span>
+    <span class="c"># 2012-09:17T00:00:00</span>
+    <span class="c"># 32.2,ResultDailyTotal,&quot;AMOUNT=32.2, CONCENTRATION=null&quot;</span>
+    <span class="p">(</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">,</span> <span class="mh">0x90</span><span class="p">,</span> <span class="mh">0x8c</span> <span class="p">])</span>
+    <span class="o">+</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0x90</span><span class="p">,</span> <span class="mh">0x8c</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x89</span><span class="p">,</span> <span class="mh">0x6c</span><span class="p">,</span> <span class="mh">0xaa</span><span class="p">,</span>
+                  <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x78</span><span class="p">,</span> <span class="mh">0x44</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0xa8</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x7e</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0xa8</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">,</span>
+                  <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x80</span><span class="p">,</span> <span class="mh">0x5b</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x28</span><span class="p">,</span> <span class="mh">0x09</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+                  <span class="mh">0xe8</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="p">]))</span>
+  <span class="p">],</span>
+<span class="p">}</span>
+
+<span class="n">_bewest_dates</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="c"># from https://github.com/bewest/decoding-carelink/blob/rewriting/analysis/bewest-pump/ReadHistoryData-page-19.data.list_opcodes.markdown</span>
+  <span class="s">&#39;page-19&#39;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="mi">0</span><span class="p">:</span>  <span class="p">[</span> <span class="mh">0xaa</span><span class="p">,</span> <span class="mh">0xf7</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">],</span>
+    <span class="mi">1</span><span class="p">:</span>  <span class="p">[</span> <span class="mh">0x40</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x0a</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">],</span>
+    <span class="mi">2</span><span class="p">:</span>  <span class="p">[</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x8b</span><span class="p">,</span> <span class="mh">0xc3</span><span class="p">,</span> <span class="mh">0x28</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">],</span>
+    <span class="mi">3</span><span class="p">:</span>  <span class="p">[</span> <span class="mh">0x8b</span><span class="p">,</span> <span class="mh">0xc3</span><span class="p">,</span> <span class="mh">0x28</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x8c</span><span class="p">,</span> <span class="p">],</span>
+    <span class="mi">4</span><span class="p">:</span>  <span class="p">[</span> <span class="mh">0x28</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x8c</span><span class="p">,</span> <span class="mh">0x5b</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">],</span>
+    <span class="mi">5</span><span class="p">:</span>  <span class="p">[</span> <span class="mh">0x8d</span><span class="p">,</span> <span class="mh">0xc3</span><span class="p">,</span> <span class="mh">0x08</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">],</span>
+    <span class="mi">6</span><span class="p">:</span>  <span class="p">[</span> <span class="mh">0xaa</span><span class="p">,</span> <span class="mh">0xf7</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">],</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">_test_decode_bolus</span><span class="p">(</span> <span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  ## correct</span>
+<span class="sd">  &gt;&gt;&gt; parse_date( bytearray( _bewest_dates[&#39;page-19&#39;][6] ) ).isoformat( )</span>
+<span class="sd">  &#39;2012-11-12T00:55:42&#39;</span>
+
+<span class="sd">  ## correct</span>
+<span class="sd">  &gt;&gt;&gt; parse_date( bytearray( _bewest_dates[&#39;page-19&#39;][0] ) ).isoformat( )</span>
+<span class="sd">  &#39;2012-11-12T00:55:42&#39;</span>
+
+<span class="sd">  ## this is wrong</span>
+<span class="sd">  &gt;&gt;&gt; parse_date( bytearray( _bewest_dates[&#39;page-19&#39;][1] ) ).isoformat( )</span>
+<span class="sd">  &#39;2012-04-10T12:12:00&#39;</span>
+
+<span class="sd">  ## day,month is wrong, time H:M:S is correct</span>
+<span class="sd">  # expected: </span>
+<span class="sd">  &gt;&gt;&gt; parse_date( bytearray( _bewest_dates[&#39;page-19&#39;][2] ) ).isoformat( )</span>
+<span class="sd">  &#39;2012-02-08T03:11:12&#39;</span>
+
+<span class="sd">  ## correct</span>
+<span class="sd">  &gt;&gt;&gt; parse_date( bytearray( _bewest_dates[&#39;page-19&#39;][3] ) ).isoformat( )</span>
+<span class="sd">  &#39;2012-11-12T08:03:11&#39;</span>
+
+<span class="sd">  #### not a valid date</span>
+<span class="sd">  # &gt;&gt;&gt; parse_date( bytearray( _bewest_dates[&#39;page-19&#39;][4] ) ).isoformat( )</span>
+
+<span class="sd">  ## correct</span>
+<span class="sd">  &gt;&gt;&gt; parse_date( bytearray( _bewest_dates[&#39;page-19&#39;][5] ) ).isoformat( )</span>
+<span class="sd">  &#39;2012-11-12T08:03:13&#39;</span>
+
+
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">  0x5b 0x7e # bolus wizard,</span>
+<span class="sd">  0xaa 0xf7 0x00 0x0c 0x0c # page-19[0]</span>
+
+<span class="sd">  0x0f 0x50 0x0d 0x2d 0x6a 0x00 0x0b 0x00</span>
+<span class="sd">  0x00 0x07 0x00 0x0b 0x7d 0x5c 0x08 0x58</span>
+<span class="sd">  0x97 0x04 0x30 0x05 0x14 0x34 0xc8</span>
+<span class="sd">  0x91 0xf8      # 0x91, 0xf8 = month=11, minute=56, seconds=17!</span>
+<span class="sd">  0x00           # general parsing fails here</span>
+<span class="sd">  0x00</span>
+<span class="sd">  0xaa 0xf7 0x40 0x0c 0x0c # expected  - page-19[6]</span>
+
+<span class="sd">  0x0a 0x0c </span>
+<span class="sd">  0x8b 0xc3 0x28 0x0c 0x8c # page-19[3]</span>
+
+
+<span class="sd">  0x5b 0x0c</span>
+
+<span class="sd">  0x8d 0xc3 0x08 0x0c 0x0c # page-19[5]</span>
+<span class="sd">  0x00 0x51 0x0d 0x2d 0x6a 0x1f 0x00 0x00 0x00 0x00 0x00</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+
+<span class="c">### csv deconstructed</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">395,11/12/12,00:55:42,11/12/12 00:55:42,Normal 1.1,1.1,BolusNormal</span>
+<span class="sd">  &quot;AMOUNT=1.1, CONCENTRATION=null, PROGRAMMED_AMOUNT=1.1,</span>
+<span class="sd">  ACTION_REQUESTOR=pump, ENABLE=true, IS_DUAL_COMPONENT=false,</span>
+<span class="sd">  UNABSORBED_INSULIN_TOTAL=null&quot;,9942920032,51974238,2086,Paradigm 522</span>
+
+<span class="sd">396,11/12/12,00:56:17,11/12/12 00:56:17 JournalEntryPumpLowReservoir</span>
+<span class="sd">  &quot;AMOUNT=20, ACTION_REQUESTOR=pump&quot;,9942920033,51974238,2087,Paradigm 522</span>
+
+
+<span class="sd">397,11/12/12,08:03:11,11/12/12 08:03:11 268 CalBGForPH</span>
+<span class="sd">  &quot;AMOUNT=268, ACTION_REQUESTOR=pump&quot;,9942920031,51974238,2085,Paradigm 522</span>
+
+<span class="sd">398,11/12/12,08:03:13,11/12/12 08:03:13 UnabsorbedInsulin</span>
+<span class="sd">  &quot;BOLUS_ESTIMATE_DATUM=9942920029, INDEX=0, AMOUNT=1.1, RECORD_AGE=429,</span>
+<span class="sd">  INSULIN_TYPE=null,</span>
+<span class="sd">  INSULIN_ACTION_CURVE=240&quot;,9942920030,51974238,2084,Paradigm 522</span>
+
+<span class="sd">399,11/12/12,08:03:13,11/12/12 08:03:13</span>
+<span class="sd">  3.1,125,106,13,45,0,268,3.1,0,0.0</span>
+<span class="sd">  BolusWizardBolusEstimate,&quot;BG_INPUT=268, BG_UNITS=mg dl,</span>
+<span class="sd">  CARB_INPUT=0, CARB_UNITS=grams, CARB_RATIO=13,</span>
+<span class="sd">  INSULIN_SENSITIVITY=45, BG_TARGET_LOW=106, BG_TARGET_HIGH=125,</span>
+<span class="sd">  BOLUS_ESTIMATE=3.1, CORRECTION_ESTIMATE=3.1, FOOD_ESTIMATE=0,</span>
+<span class="sd">  UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=1,</span>
+<span class="sd">  ACTION_REQUESTOR=pump&quot;,9942920029,51974238,2083,Paradigm 522</span>
+
+<span class="sd">400,11/12/12,08:03:13,11/12/12 08:03:13 Normal</span>
+<span class="sd">  3.1,3.1 BolusNormal &quot;AMOUNT=3.1, CONCENTRATION=null,</span>
+<span class="sd">  PROGRAMMED_AMOUNT=3.1, ACTION_REQUESTOR=pump, ENABLE=true,</span>
+<span class="sd">  IS_DUAL_COMPONENT=false,</span>
+<span class="sd">  UNABSORBED_INSULIN_TOTAL=null&quot;,9942920028,51974238,2082,Paradigm 522</span>
+
+<span class="sd">401,11/12/12,08:50:31,11/12/12 08:50:31 JournalEntryPumpLowReservoir</span>
+<span class="sd">  &quot;AMOUNT=10, ACTION_REQUESTOR=pump&quot;,9942920027,51974238,2081,Paradigm 522</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">__test__</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">&#39;unmask&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;&#39;</span>
+<span class="s">  These examples are fixed! Thanks ehwest, robg.</span>
+<span class="s">  &gt;&gt;&gt; unmask_date( bytearray( [ 0x93, 0xd4, 0x0e, 0x10, 0x0c ] ))</span>
+<span class="s">  (2012, 11, 16, 14, 20, 19)</span>
+
+<span class="s">  &gt;&gt;&gt; unmask_date( bytearray( [ 0xa6, 0xeb, 0x0b, 0x10, 0x0c, ] ))</span>
+<span class="s">  (2012, 11, 16, 11, 43, 38)</span>
+
+<span class="s">  &gt;&gt;&gt; unmask_date( bytearray( [ 0x95, 0xe8, 0x0e, 0x10, 0x0c ] ))</span>
+<span class="s">  (2012, 11, 16, 14, 40, 21)</span>
+
+
+<span class="s">  &gt;&gt;&gt; unmask_date( bytearray( [ 0x80, 0xcf, 0x30, 0x10, 0x0c, ] ))</span>
+<span class="s">  (2012, 11, 16, 16, 15, 0)</span>
+
+
+<span class="s">  &gt;&gt;&gt; unmask_date( bytearray( [ 0xa3, 0xcf, 0x30, 0x10, 0x0c, ] ))</span>
+<span class="s">  (2012, 11, 16, 16, 15, 35)</span>
+
+<span class="s">&#39;&#39;&#39;</span><span class="p">,</span>
+
+  <span class="s">&#39;encode_monthbyte&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;&#39;</span>
+<span class="s">  &gt;&gt;&gt; encode_monthbyte(month=1) == bytearray(b&#39;</span><span class="se">\x12</span><span class="s">^&#39;)</span>
+<span class="s">  True</span>
+
+<span class="s">  &gt;&gt;&gt; encode_monthbyte(month=2) == bytearray(b&#39;</span><span class="se">\x12\x9e</span><span class="s">&#39;)</span>
+<span class="s">  True</span>
+
+<span class="s">  &gt;&gt;&gt; encode_monthbyte(month=3) ==  bytearray(b&#39;</span><span class="se">\x12\xde</span><span class="s">&#39;)</span>
+<span class="s">  True</span>
+
+<span class="s">  &gt;&gt;&gt; encode_monthbyte(month=10, minute=0, sec=0) == bytearray(b&#39;</span><span class="se">\x80\x80</span><span class="s">&#39;)</span>
+<span class="s">  True</span>
+
+<span class="s">  &gt;&gt;&gt; encode_monthbyte(month=10, minute=0, sec=24) == bytearray(b&#39;</span><span class="se">\x98\x80</span><span class="s">&#39;)</span>
+<span class="s">  True</span>
+<span class="s">&#39;&#39;&#39;</span><span class="p">,</span>
+
+<span class="p">}</span>
+
+
+<span class="n">_bad_days</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0xa9</span><span class="p">,</span> <span class="mh">0xf5</span><span class="p">,</span> <span class="mh">0x15</span><span class="p">,</span> <span class="mh">0x14</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">]),</span>
+    <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0xa6</span><span class="p">,</span> <span class="mh">0xc7</span><span class="p">,</span> <span class="mh">0x36</span><span class="p">,</span> <span class="mh">0x14</span><span class="p">,</span> <span class="mh">0x8c</span><span class="p">,</span> <span class="p">]),</span>
+    <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0xa9</span><span class="p">,</span> <span class="mh">0xf5</span><span class="p">,</span> <span class="mh">0x15</span><span class="p">,</span> <span class="mh">0x14</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">]),</span>
+    <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0xa6</span><span class="p">,</span> <span class="mh">0xc7</span><span class="p">,</span> <span class="mh">0x36</span><span class="p">,</span> <span class="mh">0x14</span><span class="p">,</span> <span class="mh">0x8c</span><span class="p">,</span> <span class="p">]),</span>
+
+    <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0xa2</span><span class="p">,</span> <span class="mh">0xe9</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x19</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">]),</span>
+    <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0xa0</span><span class="p">,</span> <span class="mh">0xf6</span><span class="p">,</span> <span class="mh">0x0d</span><span class="p">,</span> <span class="mh">0x19</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">]),</span>
+    <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0xa5</span><span class="p">,</span> <span class="mh">0xd9</span><span class="p">,</span> <span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x1d</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">]),</span>
+
+    <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0xc2</span><span class="p">,</span> <span class="mh">0x3b</span><span class="p">,</span> <span class="mh">0x0e</span><span class="p">,</span> <span class="mh">0x14</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">]),</span>
+    <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0xd9</span><span class="p">,</span> <span class="mh">0x1c</span><span class="p">,</span> <span class="mh">0x0f</span><span class="p">,</span> <span class="mh">0x14</span><span class="p">,</span> <span class="mh">0x0c</span><span class="p">,</span> <span class="p">]),</span>
+  <span class="p">]</span>
+
+<span class="c"># days need 5 bits</span>
+<div class="viewcode-block" id="big_days"><a class="viewcode-back" href="../../api/decocare.html#decocare.tests.big_days">[docs]</a><span class="k">def</span> <span class="nf">big_days</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    # page 17, RECORD 11</span>
+<span class="sd">    &gt;&gt;&gt; parse_date( big_days(0) ).isoformat( )</span>
+<span class="sd">    &#39;2012-11-20T21:53:41&#39;</span>
+
+<span class="sd">    # page 17, ~ RECORD 12</span>
+<span class="sd">    &gt;&gt;&gt; parse_date( big_days(1) ).isoformat( )</span>
+<span class="sd">    &#39;2012-11-20T22:07:38&#39;</span>
+
+<span class="sd">    &gt;&gt;&gt; parse_date( big_days(2) ).isoformat( )</span>
+<span class="sd">    &#39;2012-11-20T21:53:41&#39;</span>
+
+<span class="sd">    &gt;&gt;&gt; parse_date( big_days(3) ).isoformat( )</span>
+<span class="sd">    &#39;2012-11-20T22:07:38&#39;</span>
+
+<span class="sd">    # page 16, RECORD ~15</span>
+<span class="sd">    &gt;&gt;&gt; parse_date( big_days(4) ).isoformat( )</span>
+<span class="sd">    &#39;2012-11-25T16:41:34&#39;</span>
+
+<span class="sd">    &gt;&gt;&gt; parse_date( big_days(5) ).isoformat( )</span>
+<span class="sd">    &#39;2012-11-25T13:54:32&#39;</span>
+
+<span class="sd">    # page 15</span>
+<span class="sd">    &gt;&gt;&gt; parse_date( big_days(6) ).isoformat( )</span>
+<span class="sd">    &#39;2012-11-29T20:25:37&#39;</span>
+
+<span class="sd">    # page 0</span>
+<span class="sd">    &gt;&gt;&gt; parse_date( big_days(7) ).isoformat( )</span>
+<span class="sd">    &#39;2012-12-20T14:59:02&#39;</span>
+
+<span class="sd">    &gt;&gt;&gt; parse_date( big_days(8) ).isoformat( )</span>
+<span class="sd">    &#39;2012-12-20T15:28:25&#39;</span>
+
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="k">return</span> <span class="n">_bad_days</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+
+</div>
+<span class="n">_wizards</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="c"># 2382,1/19/13,21:50:15,1/19/13</span>
+  <span class="c"># 21:50:15,5.9,125,106,13,45,87,75,-0.7,6.6,0.0,BolusWizardBolusEstimate,&quot;BG_INPUT=75,</span>
+  <span class="c"># BG_UNITS=mg dl, CARB_INPUT=87, CARB_UNITS=grams, CARB_RATIO=13,</span>
+  <span class="c"># INSULIN_SENSITIVITY=45, BG_TARGET_LOW=106, BG_TARGET_HIGH=125,</span>
+  <span class="c"># BOLUS_ESTIMATE=5.9, CORRECTION_ESTIMATE=-0.7, FOOD_ESTIMATE=6.6,</span>
+  <span class="c"># UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=0,</span>
+  <span class="c"># ACTION_REQUESTOR=pump&quot;,9942918055,51974238,109,Paradigm 522</span>
+  <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x5b</span><span class="p">,</span> <span class="mh">0x4b</span><span class="p">,</span>
+              <span class="mh">0x0f</span><span class="p">,</span> <span class="mh">0x72</span><span class="p">,</span> <span class="mh">0x15</span><span class="p">,</span> <span class="mh">0x13</span><span class="p">,</span> <span class="mh">0x0d</span><span class="p">,</span>
+              <span class="mh">0x57</span><span class="p">,</span> <span class="mh">0x50</span><span class="p">,</span> <span class="mh">0x0d</span><span class="p">,</span> <span class="mh">0x2d</span><span class="p">,</span> <span class="mh">0x6a</span><span class="p">,</span> <span class="mh">0xf9</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">,</span> <span class="mh">0xf0</span><span class="p">,</span>
+              <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x3b</span><span class="p">,</span> <span class="mh">0x7d</span><span class="p">,</span> <span class="p">]),</span>
+
+  <span class="c"># 2295,1/14/13,22:36:00,1/14/13</span>
+  <span class="c"># 22:36:00,6.7,125,106,13,45,94,83,-0.5,7.2,1.0,BolusWizardBolusEstimate,&quot;BG_INPUT=83,</span>
+  <span class="c"># BG_UNITS=mg dl, CARB_INPUT=94, CARB_UNITS=grams, CARB_RATIO=13,</span>
+  <span class="c"># INSULIN_SENSITIVITY=45, BG_TARGET_LOW=106, BG_TARGET_HIGH=125,</span>
+  <span class="c"># BOLUS_ESTIMATE=6.7, CORRECTION_ESTIMATE=-0.5, FOOD_ESTIMATE=7.2,</span>
+  <span class="c"># UNABSORBED_INSULIN_TOTAL=1, UNABSORBED_INSULIN_COUNT=8,</span>
+  <span class="c"># ACTION_REQUESTOR=pump&quot;,9942918140,51974238,194,Paradigm 522</span>
+  <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x5b</span><span class="p">,</span> <span class="mh">0x53</span><span class="p">,</span>
+              <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x64</span><span class="p">,</span> <span class="mh">0x16</span><span class="p">,</span> <span class="mh">0x0e</span><span class="p">,</span> <span class="mh">0x0d</span><span class="p">,</span>
+              <span class="mh">0x5e</span><span class="p">,</span> <span class="mh">0x50</span><span class="p">,</span> <span class="mh">0x0d</span><span class="p">,</span> <span class="mh">0x2d</span><span class="p">,</span> <span class="mh">0x6a</span><span class="p">,</span> <span class="mh">0xfb</span><span class="p">,</span> <span class="mh">0x48</span><span class="p">,</span> <span class="mh">0xf0</span><span class="p">,</span>
+              <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0a</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x43</span><span class="p">,</span> <span class="mh">0x7d</span><span class="p">,</span> <span class="p">]),</span>
+  <span class="c"># bytearray([ ]),</span>
+<span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">_test_bolus_wizards</span><span class="p">(</span> <span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  &gt;&gt;&gt; rec = BolusWizard( _wizards[0][:2] )</span>
+<span class="sd">  &gt;&gt;&gt; print pformat(rec.parse( _wizards[0] ))</span>
+<span class="sd">  {&#39;_byte[5]&#39;: 249,</span>
+<span class="sd">   &#39;_byte[7]&#39;: 240,</span>
+<span class="sd">   &#39;bg&#39;: 75,</span>
+<span class="sd">   &#39;bg_target_high&#39;: 125,</span>
+<span class="sd">   &#39;bg_target_low&#39;: 106,</span>
+<span class="sd">   &#39;bolus_estimate&#39;: 5.9,</span>
+<span class="sd">   &#39;carb_input&#39;: 87,</span>
+<span class="sd">   &#39;carb_ratio&#39;: 13,</span>
+<span class="sd">   &#39;correction_estimate&#39;: -0.7,</span>
+<span class="sd">   &#39;food_estimate&#39;: 6.6,</span>
+<span class="sd">   &#39;sensitivity&#39;: 45,</span>
+<span class="sd">   &#39;unabsorbed_insulin_count&#39;: &#39;??&#39;,</span>
+<span class="sd">   &#39;unabsorbed_insulin_total&#39;: 0.0,</span>
+<span class="sd">   &#39;unknown_byte[10]&#39;: 0,</span>
+<span class="sd">   &#39;unknown_byte[8]&#39;: 0}</span>
+<span class="sd">  &gt;&gt;&gt; print str(rec)</span>
+<span class="sd">  BolusWizard 2013-01-19T21:50:15 head[2], body[13] op[0x5b]</span>
+
+
+<span class="sd">  &gt;&gt;&gt; rec = BolusWizard( _wizards[1][:2] )</span>
+<span class="sd">  &gt;&gt;&gt; print pformat(rec.parse( _wizards[1] ))</span>
+<span class="sd">  {&#39;_byte[5]&#39;: 251,</span>
+<span class="sd">   &#39;_byte[7]&#39;: 240,</span>
+<span class="sd">   &#39;bg&#39;: 83,</span>
+<span class="sd">   &#39;bg_target_high&#39;: 125,</span>
+<span class="sd">   &#39;bg_target_low&#39;: 106,</span>
+<span class="sd">   &#39;bolus_estimate&#39;: 6.7,</span>
+<span class="sd">   &#39;carb_input&#39;: 94,</span>
+<span class="sd">   &#39;carb_ratio&#39;: 13,</span>
+<span class="sd">   &#39;correction_estimate&#39;: -0.5,</span>
+<span class="sd">   &#39;food_estimate&#39;: 7.2,</span>
+<span class="sd">   &#39;sensitivity&#39;: 45,</span>
+<span class="sd">   &#39;unabsorbed_insulin_count&#39;: &#39;??&#39;,</span>
+<span class="sd">   &#39;unabsorbed_insulin_total&#39;: 1.0,</span>
+<span class="sd">   &#39;unknown_byte[10]&#39;: 0,</span>
+<span class="sd">   &#39;unknown_byte[8]&#39;: 0}</span>
+
+<span class="sd">  &gt;&gt;&gt; print str(rec)</span>
+<span class="sd">  BolusWizard 2013-01-14T22:36:00 head[2], body[13] op[0x5b]</span>
+
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="k">pass</span>
+
+
+<span class="n">_bolus</span> <span class="o">=</span> <span class="p">[</span>
+
+  <span class="c"># 2381,1/19/13,21:50:15,1/19/13</span>
+  <span class="c"># 21:50:15,Dual/Normal,2.6,2.6,BolusNormal,&quot;AMOUNT=2.6,</span>
+  <span class="c"># CONCENTRATION=null, PROGRAMMED_AMOUNT=2.6, ACTION_REQUESTOR=pump,</span>
+  <span class="c"># ENABLE=true, IS_DUAL_COMPONENT=true,</span>
+  <span class="c"># UNABSORBED_INSULIN_TOTAL=null&quot;,9942918054,51974238,108,Paradigm</span>
+  <span class="c"># 522</span>
+  <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x1a</span><span class="p">,</span> <span class="mh">0x1a</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+              <span class="mh">0x0f</span><span class="p">,</span> <span class="mh">0x72</span><span class="p">,</span> <span class="mh">0x95</span><span class="p">,</span> <span class="mh">0x13</span><span class="p">,</span> <span class="mh">0x0d</span><span class="p">,</span> <span class="p">]),</span>
+
+  <span class="c"># 2305,1/15/13,15:57:16,1/15/13</span>
+  <span class="c"># 15:57:16,Normal,1.7,1.7,BolusNormal,&quot;AMOUNT=1.7,</span>
+  <span class="c"># CONCENTRATION=null, PROGRAMMED_AMOUNT=1.7, ACTION_REQUESTOR=pump,</span>
+  <span class="c"># ENABLE=true, IS_DUAL_COMPONENT=false,</span>
+  <span class="c"># UNABSORBED_INSULIN_TOTAL=null&quot;,9942918131,51974238,185,Paradigm</span>
+  <span class="c"># 522</span>
+  <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x11</span><span class="p">,</span> <span class="mh">0x11</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+              <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x79</span><span class="p">,</span> <span class="mh">0x4f</span><span class="p">,</span> <span class="mh">0x0f</span><span class="p">,</span> <span class="mh">0x0d</span><span class="p">,</span> <span class="p">]),</span>
+  <span class="c"># bytearray([ ]),</span>
+
+<span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">_test_bolus</span><span class="p">(</span> <span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  &gt;&gt;&gt; rec = Bolus( _bolus[0][:2] )</span>
+<span class="sd">  &gt;&gt;&gt; print pformat(rec.parse( _bolus[0] ))</span>
+<span class="sd">  {&#39;amount&#39;: 2.6, &#39;dual_component&#39;: &#39;??&#39;, &#39;programmed&#39;: 2.6, &#39;type&#39;: &#39;??&#39;}</span>
+
+<span class="sd">  &gt;&gt;&gt; print str(rec)</span>
+<span class="sd">  Bolus 2013-01-19T21:50:15 head[4], body[0] op[0x01]</span>
+
+<span class="sd">  &gt;&gt;&gt; rec = Bolus( _bolus[1][:2] )</span>
+<span class="sd">  &gt;&gt;&gt; print pformat(rec.parse( _bolus[1] ))</span>
+<span class="sd">  {&#39;amount&#39;: 1.7, &#39;dual_component&#39;: &#39;??&#39;, &#39;programmed&#39;: 1.7, &#39;type&#39;: &#39;??&#39;}</span>
+<span class="sd">  &gt;&gt;&gt; print str(rec)</span>
+<span class="sd">  Bolus 2013-01-15T15:57:16 head[4], body[0] op[0x01]</span>
+
+<span class="sd">  &quot;&quot;&quot;</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+  <span class="kn">import</span> <span class="nn">doctest</span>
+  <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span> <span class="p">)</span>
+
+<span class="c">#####</span>
+<span class="c"># EOF</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Insulaudit contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
