@@ -68,12 +68,12 @@
 <span class="kn">from</span> <span class="nn">errors</span> <span class="kn">import</span> <span class="n">StickError</span><span class="p">,</span> <span class="n">AckError</span><span class="p">,</span> <span class="n">BadDeviceCommError</span>
 
 <span class="k">class</span> <span class="nc">BadCRC</span><span class="p">(</span><span class="n">StickError</span><span class="p">):</span> <span class="k">pass</span>
-<div class="viewcode-block" id="BadCRC"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.BadCRC">[docs]</a>
+<div class="viewcode-block" id="BadCRC"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.BadCRC">[docs]</a>
 <span class="k">def</span> <span class="nf">CRC8</span><span class="p">(</span><span class="n">data</span><span class="p">):</span></div>
-<div class="viewcode-block" id="CRC8"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.CRC8">[docs]</a>  <span class="k">return</span> <span class="n">lib</span><span class="o">.</span><span class="n">CRC8</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class="viewcode-block" id="CRC8"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.CRC8">[docs]</a>  <span class="k">return</span> <span class="n">lib</span><span class="o">.</span><span class="n">CRC8</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">StickCommand</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span></div>
-<div class="viewcode-block" id="StickCommand"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.StickCommand">[docs]</a>  <span class="sd">&quot;&quot;&quot;Basic stick command</span>
+<div class="viewcode-block" id="StickCommand"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.StickCommand">[docs]</a>  <span class="sd">&quot;&quot;&quot;Basic stick command</span>
 
 <span class="sd">  Each command is used to talk to the usb stick.</span>
 <span class="sd">  The usb stick interprets the opcode, and then performs the function</span>
@@ -96,18 +96,18 @@
   <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="s">&#39;&lt;{0:s}:size({1})&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
   <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="StickCommand.format"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.StickCommand.format">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_cl2</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="p">)</span>
+<div class="viewcode-block" id="StickCommand.format"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.StickCommand.format">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_cl2</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">format_cl2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">a2</span><span class="o">=</span><span class="mh">0x00</span><span class="p">,</span> <span class="n">a3</span><span class="o">=</span><span class="mh">0x00</span><span class="p">):</span></div>
-<div class="viewcode-block" id="StickCommand.format_cl2"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.StickCommand.format_cl2">[docs]</a>    <span class="c"># generally commands are 3 bytes, most often CMD, 0x00, 0x00</span>
+<div class="viewcode-block" id="StickCommand.format_cl2"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.StickCommand.format_cl2">[docs]</a>    <span class="c"># generally commands are 3 bytes, most often CMD, 0x00, 0x00</span>
     <span class="n">msg</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="n">msg</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">a3</span> <span class="p">])</span>
     <span class="k">return</span> <span class="n">msg</span>
 
   <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span></div>
-<div class="viewcode-block" id="StickCommand.parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.StickCommand.parse">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+<div class="viewcode-block" id="StickCommand.parse"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.StickCommand.parse">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
 
   <span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw</span><span class="p">):</span></div>
-<div class="viewcode-block" id="StickCommand.respond"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.StickCommand.respond">[docs]</a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<div class="viewcode-block" id="StickCommand.respond"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.StickCommand.respond">[docs]</a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
       <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&quot;ACK is zero bytes!&quot;</span><span class="p">)</span>
       <span class="c"># return False</span>
       <span class="k">raise</span> <span class="n">AckError</span><span class="p">(</span><span class="s">&quot;ACK is 0 bytes:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">raw</span><span class="p">))</span>
@@ -122,7 +122,7 @@
     
 
 <span class="k">class</span> <span class="nc">ProductInfo</span><span class="p">(</span><span class="n">StickCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="ProductInfo"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ProductInfo">[docs]</a>  <span class="sd">&quot;&quot;&quot;Get product info from the usb device.  Useful for identifying</span>
+<div class="viewcode-block" id="ProductInfo"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.ProductInfo">[docs]</a>  <span class="sd">&quot;&quot;&quot;Get product info from the usb device.  Useful for identifying</span>
 <span class="sd">  what kind of usb stick you&#39;ve got; there are a few different kinds.&quot;&quot;&quot;</span>
   <span class="n">code</span>   <span class="o">=</span> <span class="p">[</span> <span class="mi">4</span> <span class="p">]</span>
   <span class="n">SW_VER</span> <span class="o">=</span> <span class="mi">16</span>
@@ -135,7 +135,7 @@
 
   <span class="nd">@classmethod</span>
   <span class="k">def</span> <span class="nf">decodeInterfaces</span><span class="p">(</span> <span class="n">klass</span><span class="p">,</span> <span class="n">L</span> <span class="p">):</span>
-<div class="viewcode-block" id="ProductInfo.decodeInterfaces"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ProductInfo.decodeInterfaces">[docs]</a>    <span class="n">n</span><span class="p">,</span> <span class="n">tail</span>    <span class="o">=</span> <span class="n">L</span><span class="p">[</span> <span class="mi">0</span> <span class="p">],</span> <span class="n">L</span><span class="p">[</span> <span class="mi">1</span><span class="p">:</span> <span class="p">]</span>
+<div class="viewcode-block" id="ProductInfo.decodeInterfaces"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.ProductInfo.decodeInterfaces">[docs]</a>    <span class="n">n</span><span class="p">,</span> <span class="n">tail</span>    <span class="o">=</span> <span class="n">L</span><span class="p">[</span> <span class="mi">0</span> <span class="p">],</span> <span class="n">L</span><span class="p">[</span> <span class="mi">1</span><span class="p">:</span> <span class="p">]</span>
     <span class="n">interfaces</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span> <span class="n">n</span> <span class="p">):</span>
       <span class="n">i</span>    <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="mi">2</span>
@@ -145,7 +145,7 @@
 
   <span class="nd">@classmethod</span></div>
   <span class="k">def</span> <span class="nf">decode</span><span class="p">(</span> <span class="n">klass</span><span class="p">,</span>  <span class="n">data</span> <span class="p">):</span>
-<div class="viewcode-block" id="ProductInfo.decode"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ProductInfo.decode">[docs]</a>    <span class="k">return</span> <span class="p">{</span>
+<div class="viewcode-block" id="ProductInfo.decode"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.ProductInfo.decode">[docs]</a>    <span class="k">return</span> <span class="p">{</span>
       <span class="s">&#39;rf.freq&#39;</span>          <span class="p">:</span> <span class="n">klass</span><span class="o">.</span><span class="n">rf_table</span><span class="o">.</span><span class="n">get</span><span class="p">(</span> <span class="n">data</span><span class="p">[</span> <span class="mi">5</span> <span class="p">],</span> <span class="s">&#39;UNKNOWN&#39;</span> <span class="p">)</span>
     <span class="p">,</span> <span class="s">&#39;serial&#39;</span>           <span class="p">:</span> <span class="nb">str</span><span class="p">(</span> <span class="n">data</span><span class="p">[</span> <span class="mi">0</span><span class="p">:</span><span class="mi">3</span> <span class="p">])</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span> <span class="s">&#39;hex&#39;</span>  <span class="p">)</span>
     <span class="p">,</span> <span class="s">&#39;product.version&#39;</span>  <span class="p">:</span> <span class="s">&#39;{0}.{1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="o">*</span><span class="n">data</span><span class="p">[</span> <span class="mi">3</span><span class="p">:</span><span class="mi">5</span> <span class="p">]</span> <span class="p">)</span>
@@ -157,20 +157,20 @@
   <span class="n">_test_ok</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">[</span></div>
   <span class="p">]</span> <span class="p">)</span>
   <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-<div class="viewcode-block" id="ProductInfo.parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ProductInfo.parse">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ProductInfo.parse"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.ProductInfo.parse">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">      #&gt;&gt;&gt;</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">InterfaceStats</span><span class="p">(</span><span class="n">StickCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="InterfaceStats"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.InterfaceStats">[docs]</a>  <span class="sd">&quot;&quot;&quot;Abstract stats decoder.</span>
+<div class="viewcode-block" id="InterfaceStats"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.InterfaceStats">[docs]</a>  <span class="sd">&quot;&quot;&quot;Abstract stats decoder.</span>
 <span class="sd">  &quot;&quot;&quot;</span>
   <span class="n">code</span>          <span class="o">=</span> <span class="p">[</span> <span class="mi">5</span> <span class="p">]</span>
   <span class="n">INTERFACE_IDX</span> <span class="o">=</span> <span class="mi">19</span>
   <span class="n">label</span>         <span class="o">=</span> <span class="s">&#39;usb.interfaceStats&#39;</span>
   <span class="nd">@classmethod</span>
   <span class="k">def</span> <span class="nf">decode</span><span class="p">(</span> <span class="n">klass</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-<div class="viewcode-block" id="InterfaceStats.decode"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.InterfaceStats.decode">[docs]</a>    <span class="k">return</span> <span class="p">{</span>
+<div class="viewcode-block" id="InterfaceStats.decode"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.InterfaceStats.decode">[docs]</a>    <span class="k">return</span> <span class="p">{</span>
       <span class="s">&#39;errors.crc&#39;</span>      <span class="p">:</span> <span class="n">data</span><span class="p">[</span> <span class="mi">0</span> <span class="p">]</span>
     <span class="p">,</span> <span class="s">&#39;errors.sequence&#39;</span> <span class="p">:</span> <span class="n">data</span><span class="p">[</span> <span class="mi">1</span> <span class="p">]</span>
     <span class="p">,</span> <span class="s">&#39;errors.naks&#39;</span>     <span class="p">:</span> <span class="n">data</span><span class="p">[</span> <span class="mi">2</span> <span class="p">]</span>
@@ -179,28 +179,28 @@
     <span class="p">,</span> <span class="s">&#39;packets.transmit&#39;</span><span class="p">:</span> <span class="n">lib</span><span class="o">.</span><span class="n">BangLong</span><span class="p">(</span> <span class="n">data</span><span class="p">[</span> <span class="mi">8</span><span class="p">:</span><span class="mi">12</span> <span class="p">]</span> <span class="p">)</span>
     <span class="p">}</span>
   <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span></div>
-<div class="viewcode-block" id="InterfaceStats.parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.InterfaceStats.parse">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="InterfaceStats.parse"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.InterfaceStats.parse">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">      #&gt;&gt;&gt;</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">UsbStats</span><span class="p">(</span><span class="n">InterfaceStats</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="UsbStats"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.UsbStats">[docs]</a>  <span class="sd">&quot;&quot;&quot;Count of packets and stats on the usb side of the stick.&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="UsbStats"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.UsbStats">[docs]</a>  <span class="sd">&quot;&quot;&quot;Count of packets and stats on the usb side of the stick.&quot;&quot;&quot;</span>
   <span class="n">code</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span> <span class="p">]</span>
 
 <span class="k">class</span> <span class="nc">RadioStats</span><span class="p">(</span><span class="n">InterfaceStats</span><span class="p">):</span></div>
-<div class="viewcode-block" id="RadioStats"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.RadioStats">[docs]</a>  <span class="sd">&quot;&quot;&quot;Count of packets and stats on the radio side of the stick.&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="RadioStats"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.RadioStats">[docs]</a>  <span class="sd">&quot;&quot;&quot;Count of packets and stats on the radio side of the stick.&quot;&quot;&quot;</span>
   <span class="n">code</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span> <span class="p">]</span>
 
 <span class="k">class</span> <span class="nc">SignalStrength</span><span class="p">(</span><span class="n">StickCommand</span><span class="p">):</span></div>
-<div class="viewcode-block" id="SignalStrength"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.SignalStrength">[docs]</a>  <span class="sd">&quot;&quot;&quot;This seems to be required to initialize communications with the</span>
+<div class="viewcode-block" id="SignalStrength"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.SignalStrength">[docs]</a>  <span class="sd">&quot;&quot;&quot;This seems to be required to initialize communications with the</span>
 <span class="sd">  usb stick.  Also, you should wait until a minimum threshold is</span>
 <span class="sd">  reached.</span>
 <span class="sd">  &quot;&quot;&quot;</span>
   <span class="n">code</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span> <span class="p">]</span>
   <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-<div class="viewcode-block" id="SignalStrength.parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.SignalStrength.parse">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="SignalStrength.parse"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.SignalStrength.parse">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">      #&gt;&gt;&gt;</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c"># result[0] is signal strength</span>
@@ -209,7 +209,7 @@
     <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
 <span class="k">class</span> <span class="nc">LinkStatus</span><span class="p">(</span><span class="n">StickCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="LinkStatus"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.LinkStatus">[docs]</a>  <span class="sd">&quot;&quot;&quot;Basic ACK type of command.</span>
+<div class="viewcode-block" id="LinkStatus"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.LinkStatus">[docs]</a>  <span class="sd">&quot;&quot;&quot;Basic ACK type of command.</span>
 <span class="sd">  Used to poll the modem&#39;s radio buffer.  When the radio buffer is</span>
 <span class="sd">  full, we can download a packet from the buffer.  Otherwise, we need</span>
 <span class="sd">  to be mindful of the state the radio is in.  This opcode tells you</span>
@@ -226,7 +226,7 @@
     <span class="k">return</span> <span class="s">&#39;{0}:error:{1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">extra</span><span class="p">)</span>
       
   <span class="k">def</span> <span class="nf">record_error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
-<div class="viewcode-block" id="LinkStatus.record_error"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.LinkStatus.record_error">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">error</span>  <span class="o">=</span> <span class="bp">True</span>
+<div class="viewcode-block" id="LinkStatus.record_error"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.LinkStatus.record_error">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">error</span>  <span class="o">=</span> <span class="bp">True</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">ack</span>    <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c"># 0 indicates success</span>
     <span class="c"># believe success = result[1] # &#39;U&#39; or &#39;f&#39;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
@@ -238,7 +238,7 @@
     <span class="bp">self</span><span class="o">.</span><span class="n">set_reason</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">set_reason</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">):</span></div>
-<div class="viewcode-block" id="LinkStatus.set_reason"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.LinkStatus.set_reason">[docs]</a>    <span class="n">reasons</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+<div class="viewcode-block" id="LinkStatus.set_reason"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.LinkStatus.set_reason">[docs]</a>    <span class="n">reasons</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">&amp;</span> <span class="mh">0x2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
       <span class="n">reasons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;STATUS: receive in progress!&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">&amp;</span> <span class="mh">0x4</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -256,7 +256,7 @@
     <span class="bp">self</span><span class="o">.</span><span class="n">reasons</span> <span class="o">=</span> <span class="n">reasons</span>
 
   <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span></div>
-<div class="viewcode-block" id="LinkStatus.parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.LinkStatus.parse">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="LinkStatus.parse"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.LinkStatus.parse">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">      #&gt;&gt;&gt;</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">record_error</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
@@ -271,7 +271,7 @@
     <span class="k">return</span> <span class="mi">0</span>
 
 <span class="k">class</span> <span class="nc">ReadRadio</span><span class="p">(</span><span class="n">StickCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="ReadRadio"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ReadRadio">[docs]</a>  <span class="sd">&quot;&quot;&quot;Read buffer from the radio.  Downloads a packet from the radio</span>
+<div class="viewcode-block" id="ReadRadio"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.ReadRadio">[docs]</a>  <span class="sd">&quot;&quot;&quot;Read buffer from the radio.  Downloads a packet from the radio</span>
 <span class="sd">  buffer.&quot;&quot;&quot;</span>
   <span class="n">code</span> <span class="o">=</span> <span class="p">[</span> <span class="mh">0x0C</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">]</span>
   <span class="n">dl_size</span> <span class="o">=</span> <span class="mi">0</span>
@@ -290,11 +290,11 @@
   <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="s">&#39;&lt;{0:s}&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
   <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadRadio.format"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ReadRadio.format">[docs]</a>    <span class="n">msg</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="p">)</span>
+<div class="viewcode-block" id="ReadRadio.format"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.ReadRadio.format">[docs]</a>    <span class="n">msg</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">msg</span>
 
   <span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw</span><span class="p">):</span></div>
-<div class="viewcode-block" id="ReadRadio.respond"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ReadRadio.respond">[docs]</a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<div class="viewcode-block" id="ReadRadio.respond"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.ReadRadio.respond">[docs]</a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
       <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&quot;ReadRadio ACK is zero bytes!&quot;</span><span class="p">)</span>
       <span class="c"># return False</span>
       <span class="k">raise</span> <span class="n">AckError</span><span class="p">(</span><span class="s">&quot;ACK is 0 bytes: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">raw</span><span class="p">))</span>
@@ -308,7 +308,7 @@
     <span class="k">return</span> <span class="n">raw</span><span class="p">[:</span><span class="mi">1</span><span class="p">],</span> <span class="n">raw</span>
     
   <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw</span><span class="p">):</span></div>
-<div class="viewcode-block" id="ReadRadio.parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.ReadRadio.parse">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadRadio.parse"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.ReadRadio.parse">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    log.info(&#39;readData validating remote raw[ack]: %02x&#39; % raw[0])</span>
 <span class="sd">    log.info(&#39;readData; foreign raw should be at least 14 bytes? %s %s&#39; % (len(raw), len(raw) &gt; 14))</span>
 <span class="sd">    log.info(&#39;readData; raw[retries] %s&#39; % int(raw[3]))</span>
@@ -356,7 +356,7 @@
     <span class="k">return</span> <span class="n">data</span>
 
 <span class="k">class</span> <span class="nc">TransmitPacket</span><span class="p">(</span><span class="n">StickCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="TransmitPacket"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.TransmitPacket">[docs]</a>  <span class="sd">&quot;&quot;&quot;Format a packet to send on the radio.</span>
+<div class="viewcode-block" id="TransmitPacket"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.TransmitPacket">[docs]</a>  <span class="sd">&quot;&quot;&quot;Format a packet to send on the radio.</span>
 
 <span class="sd">  This commands formats a packet from usb, and shoves it into the</span>
 <span class="sd">  radio buffer.</span>
@@ -387,10 +387,10 @@
   
 
   <span class="k">def</span> <span class="nf">calcRecordsRequired</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="TransmitPacket.calcRecordsRequired"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.TransmitPacket.calcRecordsRequired">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">calcRecordsRequired</span><span class="p">(</span> <span class="p">)</span>
+<div class="viewcode-block" id="TransmitPacket.calcRecordsRequired"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.TransmitPacket.calcRecordsRequired">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">calcRecordsRequired</span><span class="p">(</span> <span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="TransmitPacket.format"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.TransmitPacket.format">[docs]</a>    <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span>
+<div class="viewcode-block" id="TransmitPacket.format"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.TransmitPacket.format">[docs]</a>    <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span>
     <span class="n">code</span>   <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">code</span>
     <span class="n">maxRetries</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">retries</span>
     <span class="n">serial</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">bytearray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serial</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;hex&#39;</span><span class="p">)))</span>
@@ -425,7 +425,7 @@
     <span class="k">return</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw</span><span class="p">):</span></div>
-<div class="viewcode-block" id="TransmitPacket.respond"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.TransmitPacket.respond">[docs]</a>    <span class="n">code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">code</span>
+<div class="viewcode-block" id="TransmitPacket.respond"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.TransmitPacket.respond">[docs]</a>    <span class="n">code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">code</span>
     <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span>
     <span class="k">if</span> <span class="n">code</span> <span class="o">!=</span> <span class="mi">93</span> <span class="ow">or</span> <span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
       <span class="n">ack</span><span class="p">,</span> <span class="n">body</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
@@ -433,12 +433,12 @@
       
     <span class="k">return</span> <span class="p">(</span><span class="nb">bytearray</span><span class="p">(</span><span class="n">raw</span><span class="p">),</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">raw</span><span class="p">))</span>
   <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">results</span><span class="p">):</span></div>
-<div class="viewcode-block" id="TransmitPacket.parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.TransmitPacket.parse">[docs]</a>    <span class="k">return</span> <span class="n">results</span>
+<div class="viewcode-block" id="TransmitPacket.parse"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.TransmitPacket.parse">[docs]</a>    <span class="k">return</span> <span class="n">results</span>
     <span class="c">#self.checkAck(results)</span>
 
 
 <span class="k">class</span> <span class="nc">Stick</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="Stick"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Stick"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    The carelink usb stick acts like a buffer.</span>
 
 <span class="sd">    It has a variety of commands providing synchronous IO, eg, you may</span>
@@ -482,7 +482,7 @@
   <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="s">&#39;&lt;{0}&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
   <span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="Stick.process"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.process">[docs]</a>    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;link </span><span class="si">%s</span><span class="s"> processing </span><span class="si">%s</span><span class="s">)&#39;</span> <span class="o">%</span> <span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="p">))</span>
+<div class="viewcode-block" id="Stick.process"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.process">[docs]</a>    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;link </span><span class="si">%s</span><span class="s"> processing </span><span class="si">%s</span><span class="s">)&#39;</span> <span class="o">%</span> <span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="p">))</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    self.link.write(self.command.format( ))</span>
 <span class="sd">    log.debug(&#39;sleeping %s&#39; % self.command.delay)</span>
@@ -503,26 +503,26 @@
     <span class="k">return</span> <span class="n">info</span>
     
   <span class="k">def</span> <span class="nf">query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Command</span><span class="p">):</span></div>
-<div class="viewcode-block" id="Stick.query"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.query">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">command</span> <span class="o">=</span> <span class="n">Command</span><span class="p">(</span> <span class="p">)</span>
+<div class="viewcode-block" id="Stick.query"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.query">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">command</span> <span class="o">=</span> <span class="n">Command</span><span class="p">(</span> <span class="p">)</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">process</span><span class="p">(</span> <span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">product_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="Stick.product_info"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.product_info">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">ProductInfo</span><span class="p">)</span>
+<div class="viewcode-block" id="Stick.product_info"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.product_info">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">ProductInfo</span><span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">interface_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="Stick.interface_stats"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.interface_stats">[docs]</a>    <span class="k">return</span> <span class="p">{</span><span class="s">&#39;usb&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">usb_stats</span><span class="p">(</span> <span class="p">),</span> <span class="s">&#39;radio&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">radio_stats</span><span class="p">(</span> <span class="p">)</span> <span class="p">}</span>
+<div class="viewcode-block" id="Stick.interface_stats"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.interface_stats">[docs]</a>    <span class="k">return</span> <span class="p">{</span><span class="s">&#39;usb&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">usb_stats</span><span class="p">(</span> <span class="p">),</span> <span class="s">&#39;radio&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">radio_stats</span><span class="p">(</span> <span class="p">)</span> <span class="p">}</span>
     
   <span class="k">def</span> <span class="nf">usb_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="Stick.usb_stats"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.usb_stats">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">UsbStats</span><span class="p">)</span>
+<div class="viewcode-block" id="Stick.usb_stats"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.usb_stats">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">UsbStats</span><span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">radio_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="Stick.radio_stats"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.radio_stats">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">RadioStats</span><span class="p">)</span>
+<div class="viewcode-block" id="Stick.radio_stats"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.radio_stats">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">RadioStats</span><span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">signal_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="Stick.signal_strength"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.signal_strength">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">SignalStrength</span><span class="p">)</span>
+<div class="viewcode-block" id="Stick.signal_strength"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.signal_strength">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">SignalStrength</span><span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">poll_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="Stick.poll_size"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.poll_size">[docs]</a>    <span class="n">size</span>  <span class="o">=</span> <span class="mi">0</span>
+<div class="viewcode-block" id="Stick.poll_size"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.poll_size">[docs]</a>    <span class="n">size</span>  <span class="o">=</span> <span class="mi">0</span>
     <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">i</span>     <span class="o">=</span> <span class="mi">0</span>
     <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%r</span><span class="s">:STARTING POLL PHASE:attempt:</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
@@ -543,19 +543,19 @@
     <span class="k">return</span> <span class="n">size</span>
     
   <span class="k">def</span> <span class="nf">read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="Stick.read_status"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.read_status">[docs]</a>    <span class="c"># log.debug(&#39;read_status&#39;)</span>
+<div class="viewcode-block" id="Stick.read_status"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.read_status">[docs]</a>    <span class="c"># log.debug(&#39;read_status&#39;)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">LinkStatus</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">last_status</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span>
     <span class="k">return</span> <span class="n">result</span>
 
   <span class="k">def</span> <span class="nf">old_download_packet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span></div>
-<div class="viewcode-block" id="Stick.old_download_packet"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.old_download_packet">[docs]</a>    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;download_packet:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">size</span><span class="p">))</span>
+<div class="viewcode-block" id="Stick.old_download_packet"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.old_download_packet">[docs]</a>    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;download_packet:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">size</span><span class="p">))</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">ReadRadio</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
     <span class="n">packet</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">process</span><span class="p">(</span> <span class="p">)</span>
     <span class="k">return</span> <span class="n">packet</span>
 
   <span class="k">def</span> <span class="nf">send_force_read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">retries</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span></div>
-<div class="viewcode-block" id="Stick.send_force_read"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.send_force_read">[docs]</a>    <span class="c"># </span>
+<div class="viewcode-block" id="Stick.send_force_read"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.send_force_read">[docs]</a>    <span class="c"># </span>
     <span class="c"># so the behavior of a read_radio should probably be similar to</span>
     <span class="c"># poll_size??</span>
     <span class="n">reader</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span>
@@ -590,7 +590,7 @@
     <span class="k">assert</span> <span class="ow">not</span> <span class="n">raw</span>
     
   <span class="k">def</span> <span class="nf">download_packet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span></div>
-<div class="viewcode-block" id="Stick.download_packet"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.download_packet">[docs]</a>    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:download_packet:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span>
+<div class="viewcode-block" id="Stick.download_packet"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.download_packet">[docs]</a>    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:download_packet:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span>
     <span class="c"># XXX: this is the tricky bit</span>
     <span class="n">original_size</span> <span class="o">=</span> <span class="n">size</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">ReadRadio</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
@@ -657,7 +657,7 @@
     <span class="k">return</span> <span class="n">info</span>
     
   <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span></div>
-<div class="viewcode-block" id="Stick.download"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.download">[docs]</a>    <span class="n">eod</span> <span class="o">=</span> <span class="bp">False</span>
+<div class="viewcode-block" id="Stick.download"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.download">[docs]</a>    <span class="n">eod</span> <span class="o">=</span> <span class="bp">False</span>
     <span class="n">results</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">)</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">log_head</span> <span class="o">=</span> <span class="s">&#39;download(attempts[{}])&#39;</span>
@@ -717,7 +717,7 @@
     <span class="k">return</span> <span class="n">results</span>
 
   <span class="k">def</span> <span class="nf">clear_buffer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="Stick.clear_buffer"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.clear_buffer">[docs]</a>    <span class="n">bad</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">)</span>
+<div class="viewcode-block" id="Stick.clear_buffer"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.clear_buffer">[docs]</a>    <span class="n">bad</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">)</span>
     <span class="n">raw</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">)</span>
     <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span> <span class="mi">3</span> <span class="p">):</span>
       <span class="n">segments</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
@@ -777,7 +777,7 @@
                            <span class="n">lib</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">interface_stats</span><span class="p">(</span> <span class="p">))</span> <span class="p">]))</span>
 
   <span class="k">def</span> <span class="nf">transmit_packet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">):</span></div>
-<div class="viewcode-block" id="Stick.transmit_packet"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.transmit_packet">[docs]</a>    <span class="n">packet</span> <span class="o">=</span> <span class="n">TransmitPacket</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+<div class="viewcode-block" id="Stick.transmit_packet"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.transmit_packet">[docs]</a>    <span class="n">packet</span> <span class="o">=</span> <span class="n">TransmitPacket</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">packet</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">transmit</span> <span class="o">=</span> <span class="n">packet</span>
     <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;transmit_packet:write:</span><span class="si">%r</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="p">))</span>
@@ -785,7 +785,7 @@
     <span class="k">return</span> <span class="n">result</span>
 
   <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="Stick.open"><a class="viewcode-back" href="../../api/decocare.html#decocare.stick.Stick.open">[docs]</a>    <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span> <span class="mi">3</span> <span class="p">):</span>
+<div class="viewcode-block" id="Stick.open"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.open">[docs]</a>    <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span> <span class="mi">3</span> <span class="p">):</span>
       <span class="k">try</span><span class="p">:</span>
         <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_info</span><span class="p">(</span> <span class="p">))</span>
         <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;get signal strength of </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="p">)</span>

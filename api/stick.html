@@ -1,0 +1,589 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>decocare &mdash; insulaudit:decoding-carelink 0.0.3 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="insulaudit:decoding-carelink 0.0.3 documentation" href="../index.html" />
+    <link rel="next" title="decocare" href="modules.html" />
+    <link rel="prev" title="Welcome to insulaudit:decoding-carelink’s documentation!" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="decocare"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to insulaudit:decoding-carelink’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="decocare">
+<h1>decocare<a class="headerlink" href="#decocare" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-decocare.stick">
+<span id="stick-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">stick</span></tt> Module<a class="headerlink" href="#module-decocare.stick" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="decocare.stick.BadCRC">
+<em class="property">exception </em><tt class="descclassname">decocare.stick.</tt><tt class="descname">BadCRC</tt><a class="reference internal" href="../_modules/decocare/stick.html#BadCRC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.BadCRC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="decocare.html#decocare.errors.StickError" title="decocare.errors.StickError"><tt class="xref py py-class docutils literal"><span class="pre">decocare.errors.StickError</span></tt></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="decocare.stick.CRC8">
+<tt class="descclassname">decocare.stick.</tt><tt class="descname">CRC8</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#CRC8"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.CRC8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="decocare.stick.InterfaceStats">
+<em class="property">class </em><tt class="descclassname">decocare.stick.</tt><tt class="descname">InterfaceStats</tt><a class="reference internal" href="../_modules/decocare/stick.html#InterfaceStats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.InterfaceStats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.stick.StickCommand" title="decocare.stick.StickCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.stick.StickCommand</span></tt></a></p>
+<p>Abstract stats decoder.</p>
+<dl class="attribute">
+<dt id="decocare.stick.InterfaceStats.INTERFACE_IDX">
+<tt class="descname">INTERFACE_IDX</tt><em class="property"> = 19</em><a class="headerlink" href="#decocare.stick.InterfaceStats.INTERFACE_IDX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.stick.InterfaceStats.code">
+<tt class="descname">code</tt><em class="property"> = [5]</em><a class="headerlink" href="#decocare.stick.InterfaceStats.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="decocare.stick.InterfaceStats.decode">
+<em class="property">classmethod </em><tt class="descname">decode</tt><big>(</big><em>klass</em>, <em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#InterfaceStats.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.InterfaceStats.decode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.stick.InterfaceStats.label">
+<tt class="descname">label</tt><em class="property"> = 'usb.interfaceStats'</em><a class="headerlink" href="#decocare.stick.InterfaceStats.label" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.InterfaceStats.parse">
+<tt class="descname">parse</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#InterfaceStats.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.InterfaceStats.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>#&gt;&gt;&gt;</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.stick.LinkStatus">
+<em class="property">class </em><tt class="descclassname">decocare.stick.</tt><tt class="descname">LinkStatus</tt><a class="reference internal" href="../_modules/decocare/stick.html#LinkStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.LinkStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.stick.StickCommand" title="decocare.stick.StickCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.stick.StickCommand</span></tt></a></p>
+<p>Basic ACK type of command.
+Used to poll the modem&#8217;s radio buffer.  When the radio buffer is
+full, we can download a packet from the buffer.  Otherwise, we need
+to be mindful of the state the radio is in.  This opcode tells you
+the current state of the radio/stick.</p>
+<dl class="attribute">
+<dt id="decocare.stick.LinkStatus.code">
+<tt class="descname">code</tt><em class="property"> = [3]</em><a class="headerlink" href="#decocare.stick.LinkStatus.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.LinkStatus.parse">
+<tt class="descname">parse</tt><big>(</big><em>result</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#LinkStatus.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.LinkStatus.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>#&gt;&gt;&gt;</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.stick.LinkStatus.reason">
+<tt class="descname">reason</tt><em class="property"> = ''</em><a class="headerlink" href="#decocare.stick.LinkStatus.reason" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.LinkStatus.record_error">
+<tt class="descname">record_error</tt><big>(</big><em>result</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#LinkStatus.record_error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.LinkStatus.record_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.LinkStatus.set_reason">
+<tt class="descname">set_reason</tt><big>(</big><em>status</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#LinkStatus.set_reason"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.LinkStatus.set_reason" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.stick.ProductInfo">
+<em class="property">class </em><tt class="descclassname">decocare.stick.</tt><tt class="descname">ProductInfo</tt><a class="reference internal" href="../_modules/decocare/stick.html#ProductInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.ProductInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.stick.StickCommand" title="decocare.stick.StickCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.stick.StickCommand</span></tt></a></p>
+<p>Get product info from the usb device.</p>
+<p>Useful for identifying
+what kind of usb stick you&#8217;ve got; there are a few different kinds.
+Eg, European vs US regulatory domains require different frequencies for compliance.</p>
+<dl class="attribute">
+<dt id="decocare.stick.ProductInfo.SW_VER">
+<tt class="descname">SW_VER</tt><em class="property"> = 16</em><a class="headerlink" href="#decocare.stick.ProductInfo.SW_VER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.stick.ProductInfo.code">
+<tt class="descname">code</tt><em class="property"> = [4]</em><a class="headerlink" href="#decocare.stick.ProductInfo.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="decocare.stick.ProductInfo.decode">
+<em class="property">classmethod </em><tt class="descname">decode</tt><big>(</big><em>klass</em>, <em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#ProductInfo.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.ProductInfo.decode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="decocare.stick.ProductInfo.decodeInterfaces">
+<em class="property">classmethod </em><tt class="descname">decodeInterfaces</tt><big>(</big><em>klass</em>, <em>L</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#ProductInfo.decodeInterfaces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.ProductInfo.decodeInterfaces" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.stick.ProductInfo.iface_key">
+<tt class="descname">iface_key</tt><em class="property"> = {1: 'Paradigm RF', 3: 'USB'}</em><a class="headerlink" href="#decocare.stick.ProductInfo.iface_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.stick.ProductInfo.label">
+<tt class="descname">label</tt><em class="property"> = 'usb.productInfo'</em><a class="headerlink" href="#decocare.stick.ProductInfo.label" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.ProductInfo.parse">
+<tt class="descname">parse</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#ProductInfo.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.ProductInfo.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>#&gt;&gt;&gt;</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.stick.ProductInfo.rf_table">
+<tt class="descname">rf_table</tt><em class="property"> = {0: '916.5Mhz', 1: '868.35Mhz', 255: '916.5Mhz'}</em><a class="headerlink" href="#decocare.stick.ProductInfo.rf_table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.stick.RadioStats">
+<em class="property">class </em><tt class="descclassname">decocare.stick.</tt><tt class="descname">RadioStats</tt><a class="reference internal" href="../_modules/decocare/stick.html#RadioStats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.RadioStats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.stick.InterfaceStats" title="decocare.stick.InterfaceStats"><tt class="xref py py-class docutils literal"><span class="pre">decocare.stick.InterfaceStats</span></tt></a></p>
+<p>Count of packets and stats on the radio side of the stick.</p>
+<dl class="attribute">
+<dt id="decocare.stick.RadioStats.code">
+<tt class="descname">code</tt><em class="property"> = [5, 0]</em><a class="headerlink" href="#decocare.stick.RadioStats.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.stick.ReadRadio">
+<em class="property">class </em><tt class="descclassname">decocare.stick.</tt><tt class="descname">ReadRadio</tt><big>(</big><em>size</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#ReadRadio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.ReadRadio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.stick.StickCommand" title="decocare.stick.StickCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.stick.StickCommand</span></tt></a></p>
+<p>Read buffer from the radio.</p>
+<p>Downloads a packet from the radio buffer.</p>
+<dl class="attribute">
+<dt id="decocare.stick.ReadRadio.code">
+<tt class="descname">code</tt><em class="property"> = [12, 0]</em><a class="headerlink" href="#decocare.stick.ReadRadio.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.stick.ReadRadio.dl_size">
+<tt class="descname">dl_size</tt><em class="property"> = 0</em><a class="headerlink" href="#decocare.stick.ReadRadio.dl_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.ReadRadio.format">
+<tt class="descname">format</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#ReadRadio.format"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.ReadRadio.format" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.ReadRadio.parse">
+<tt class="descname">parse</tt><big>(</big><em>raw</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#ReadRadio.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.ReadRadio.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>log.info(&#8216;readData validating remote raw[ack]: %02x&#8217; % raw[0])
+log.info(&#8216;readData; foreign raw should be at least 14 bytes? %s %s&#8217; % (len(raw), len(raw) &gt; 14))
+log.info(&#8216;readData; raw[retries] %s&#8217; % int(raw[3]))
+dl_status = int(raw[0])
+if dl_status != 0x02: # this differs from the others?</p>
+<blockquote>
+<div>raise BadDeviceCommError(&#8220;bad dl raw! %r&#8221; % raw)
+assert (int(raw[0]) == 2), repr(raw)</div></blockquote>
+<p># raw[1] != 0 # interface number !=0
+# raw[2] == 5 # timeout occurred
+# raw[2] == 2 # NAK
+# raw[2] # should be within 0..4
+log.info(&#8220;readData ACK&#8221;)
+lb, hb    = raw[5] &amp; 0x7F, raw[6]
+self.eod  = (raw[5] &amp; 0x80) &gt; 0</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.ReadRadio.respond">
+<tt class="descname">respond</tt><big>(</big><em>raw</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#ReadRadio.respond"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.ReadRadio.respond" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.stick.ReadRadio.size">
+<tt class="descname">size</tt><em class="property"> = 64</em><a class="headerlink" href="#decocare.stick.ReadRadio.size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.stick.SignalStrength">
+<em class="property">class </em><tt class="descclassname">decocare.stick.</tt><tt class="descname">SignalStrength</tt><a class="reference internal" href="../_modules/decocare/stick.html#SignalStrength"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.SignalStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.stick.StickCommand" title="decocare.stick.StickCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.stick.StickCommand</span></tt></a></p>
+<p>This seems to be required to initialize communications with the
+usb stick.  Also, you should wait until a minimum threshold is
+reached.</p>
+<dl class="attribute">
+<dt id="decocare.stick.SignalStrength.code">
+<tt class="descname">code</tt><em class="property"> = [6, 0]</em><a class="headerlink" href="#decocare.stick.SignalStrength.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.SignalStrength.parse">
+<tt class="descname">parse</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#SignalStrength.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.SignalStrength.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>#&gt;&gt;&gt;</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.stick.Stick">
+<em class="property">class </em><tt class="descclassname">decocare.stick.</tt><tt class="descname">Stick</tt><big>(</big><em>link</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>The carelink usb stick acts like a buffer.</p>
+<p>It has a variety of commands providing synchronous IO, eg, you may
+generally perform a read immediately after writing to it, and expect a
+response.</p>
+<p>The commands operate on a local buffer used to facilitate exchanging
+messages over RF with the pump. RF communication with the pump
+happens asynchronously, requiring us to go through 3 separate
+phases for each message we&#8217;d like to exchange with the pumps:</p>
+<blockquote>
+<div><ul class="simple">
+<li>transmit - send commmand</li>
+<li>poll_size - loop</li>
+<li>download - loop</li>
+</ul>
+</div></blockquote>
+<p>Each command is usually only 3 bytes.</p>
+<p>The protocol offers some facility for detecting and recovering
+from inconsistencies in the underlying transport of data, however,
+we are somwhat ignorant of them.  The tricky bits are exactly how
+to recover from, eg CRC, errors that can occur.
+The &#8220;shape&#8221; and timing of these loops seem to mostly get the job
+done.</p>
+<dl class="method">
+<dt id="decocare.stick.Stick.clear_buffer">
+<tt class="descname">clear_buffer</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.clear_buffer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.clear_buffer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.Stick.download">
+<tt class="descname">download</tt><big>(</big><em>size=None</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.download"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.download" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.Stick.download_packet">
+<tt class="descname">download_packet</tt><big>(</big><em>size</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.download_packet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.download_packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.Stick.interface_stats">
+<tt class="descname">interface_stats</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.interface_stats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.interface_stats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.stick.Stick.link">
+<tt class="descname">link</tt><em class="property"> = None</em><a class="headerlink" href="#decocare.stick.Stick.link" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.Stick.old_download_packet">
+<tt class="descname">old_download_packet</tt><big>(</big><em>size</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.old_download_packet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.old_download_packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.Stick.open">
+<tt class="descname">open</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.open"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.Stick.poll_size">
+<tt class="descname">poll_size</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.poll_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.poll_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.Stick.process">
+<tt class="descname">process</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.process" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.Stick.product_info">
+<tt class="descname">product_info</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.product_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.product_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.Stick.query">
+<tt class="descname">query</tt><big>(</big><em>Command</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.query"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.query" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.Stick.radio_stats">
+<tt class="descname">radio_stats</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.radio_stats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.radio_stats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.Stick.read_status">
+<tt class="descname">read_status</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.read_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.read_status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.Stick.send_force_read">
+<tt class="descname">send_force_read</tt><big>(</big><em>retries=5</em>, <em>timeout=1</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.send_force_read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.send_force_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.Stick.signal_strength">
+<tt class="descname">signal_strength</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.signal_strength"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.signal_strength" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.Stick.transmit_packet">
+<tt class="descname">transmit_packet</tt><big>(</big><em>command</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.transmit_packet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.transmit_packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.Stick.usb_stats">
+<tt class="descname">usb_stats</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.usb_stats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.usb_stats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.stick.StickCommand">
+<em class="property">class </em><tt class="descclassname">decocare.stick.</tt><tt class="descname">StickCommand</tt><a class="reference internal" href="../_modules/decocare/stick.html#StickCommand"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.StickCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>Basic stick command</p>
+<p>Each command is used to talk to the usb stick.
+The usb stick interprets the opcode, and then performs the function
+associated with the opcode.
+Altogether, the suite of opcodes that the stick responds to allows
+you to debug and track all packets you are sending/receiving plus
+allows you to send recieve commands to the pump, by formatting your
+message into payloads with opcodes, and then letting the stick work
+on what you&#8217;ve given it.  It&#8217;s kind of like a modem with this funky
+binary interface.</p>
+<dl class="attribute">
+<dt id="decocare.stick.StickCommand.code">
+<tt class="descname">code</tt><em class="property"> = [0]</em><a class="headerlink" href="#decocare.stick.StickCommand.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.stick.StickCommand.delay">
+<tt class="descname">delay</tt><em class="property"> = 0.001</em><a class="headerlink" href="#decocare.stick.StickCommand.delay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.StickCommand.format">
+<tt class="descname">format</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#StickCommand.format"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.StickCommand.format" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.StickCommand.format_cl2">
+<tt class="descname">format_cl2</tt><big>(</big><em>msg</em>, <em>a2=0</em>, <em>a3=0</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#StickCommand.format_cl2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.StickCommand.format_cl2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.stick.StickCommand.label">
+<tt class="descname">label</tt><em class="property"> = 'example stick command'</em><a class="headerlink" href="#decocare.stick.StickCommand.label" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.StickCommand.parse">
+<tt class="descname">parse</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#StickCommand.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.StickCommand.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.StickCommand.respond">
+<tt class="descname">respond</tt><big>(</big><em>raw</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#StickCommand.respond"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.StickCommand.respond" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.stick.StickCommand.size">
+<tt class="descname">size</tt><em class="property"> = 64</em><a class="headerlink" href="#decocare.stick.StickCommand.size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.stick.TransmitPacket">
+<em class="property">class </em><tt class="descclassname">decocare.stick.</tt><tt class="descname">TransmitPacket</tt><big>(</big><em>command</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#TransmitPacket"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.TransmitPacket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.stick.StickCommand" title="decocare.stick.StickCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.stick.StickCommand</span></tt></a></p>
+<p>Format a packet to send on the radio.</p>
+<p>This commands formats a packet from usb, and shoves it into the
+radio buffer.
+The radio buffer is broadcast &#8220;over the air&#8221; so that any device
+sensitive to the packets you sent will respond accordingly
+(probably sending data back).
+For this reason, the serial number of the device you&#8217;d like to talk
+to is formatted into the packet.</p>
+<dl class="method">
+<dt id="decocare.stick.TransmitPacket.calcRecordsRequired">
+<tt class="descname">calcRecordsRequired</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#TransmitPacket.calcRecordsRequired"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.TransmitPacket.calcRecordsRequired" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.stick.TransmitPacket.code">
+<tt class="descname">code</tt><em class="property"> = [1, 0, 167, 1]</em><a class="headerlink" href="#decocare.stick.TransmitPacket.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.TransmitPacket.format">
+<tt class="descname">format</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#TransmitPacket.format"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.TransmitPacket.format" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.stick.TransmitPacket.head">
+<tt class="descname">head</tt><em class="property"> = [1, 0, 167, 1]</em><a class="headerlink" href="#decocare.stick.TransmitPacket.head" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.TransmitPacket.parse">
+<tt class="descname">parse</tt><big>(</big><em>results</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#TransmitPacket.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.TransmitPacket.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.stick.TransmitPacket.respond">
+<tt class="descname">respond</tt><big>(</big><em>raw</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#TransmitPacket.respond"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.TransmitPacket.respond" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.stick.UsbStats">
+<em class="property">class </em><tt class="descclassname">decocare.stick.</tt><tt class="descname">UsbStats</tt><a class="reference internal" href="../_modules/decocare/stick.html#UsbStats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.UsbStats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.stick.InterfaceStats" title="decocare.stick.InterfaceStats"><tt class="xref py py-class docutils literal"><span class="pre">decocare.stick.InterfaceStats</span></tt></a></p>
+<p>Count of packets and stats on the usb side of the stick.</p>
+<dl class="attribute">
+<dt id="decocare.stick.UsbStats.code">
+<tt class="descname">code</tt><em class="property"> = [5, 1]</em><a class="headerlink" href="#decocare.stick.UsbStats.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<p>The carelink usb stick acts like a modem.
+It responds to modem commands, in order to exchange data with a remote
+end-point.  In this case, our little carelink usb modem responds to a
+variety of binary commands, which you must use in a co-ordinated flow
+to exchange data with the remote equipment.  Also, in our case, the
+only remote equipment the carelink usb stick is known to talk to are
+the Me**ronic Par**igm series pumps.</p>
+<p>The purpose of this module is to encapsulate the low level operations
+needed to use the stick in any practical sense.  It serves as a
+set of guides and tutorials which should help people trying to
+understand or their therapy better.  This module seems mostly correct,
+but things start to fall apart when downloading lots of data.  The
+protocol is either sensitive to some timing somewhere that I&#8217;m
+unaware of, or when CRC errors or other things happen, I simply do the
+wrong thing to recover.</p>
+<p>Please ask Medtronic for more information on how to learn what your
+device is doing.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">decocare</a><ul>
+<li><a class="reference internal" href="#module-decocare.stick"><tt class="docutils literal"><span class="pre">stick</span></tt> Module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../index.html"
+                        title="previous chapter">Welcome to insulaudit:decoding-carelink&#8217;s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="next chapter">decocare</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/api/stick.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="decocare"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to insulaudit:decoding-carelink’s documentation!"
+             >previous</a> |</li>
+        <li><a href="../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Insulaudit contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
