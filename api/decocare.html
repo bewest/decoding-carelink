@@ -1055,28 +1055,31 @@ specifically targeted at decoding ReadHistoryData data.</p>
 <dt id="decocare.history.BolusWizard">
 <em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">BolusWizard</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#BolusWizard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.BolusWizard" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
-<p>Decode/parse bolus wizard records.
-&gt;&gt;&gt; rec = BolusWizard(BolusWizard._test_1[:2])
-&gt;&gt;&gt; decoded = rec.parse(BolusWizard._test_1)
-&gt;&gt;&gt; print str(rec)
-BolusWizard 2013-01-20T13:07:45 head[2], body[13] op[0x5b]
-&gt;&gt;&gt; print pformat(decoded)
-{&#8216;_byte[5]&#8217;: 0,</p>
-<blockquote>
-<div>&#8216;_byte[7]&#8217;: 0,
-&#8216;bg&#8217;: 108,
-&#8216;bg_target_high&#8217;: 125,
-&#8216;bg_target_low&#8217;: 106,
-&#8216;bolus_estimate&#8217;: 1.1,
-&#8216;carb_input&#8217;: 15,
-&#8216;carb_ratio&#8217;: 13,
-&#8216;correction_estimate&#8217;: 0.0,
-&#8216;food_estimate&#8217;: 1.1,
-&#8216;sensitivity&#8217;: 45,
-&#8216;unabsorbed_insulin_count&#8217;: &#8216;??&#8217;,
-&#8216;unabsorbed_insulin_total&#8217;: 4.8,
-&#8216;unknown_byte[10]&#8217;: 0,
-&#8216;unknown_byte[8]&#8217;: 0}</div></blockquote>
+<p>Decode/parse bolus wizard records.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rec</span> <span class="o">=</span> <span class="n">BolusWizard</span><span class="p">(</span><span class="n">BolusWizard</span><span class="o">.</span><span class="n">_test_1</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">decoded</span> <span class="o">=</span> <span class="n">rec</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">BolusWizard</span><span class="o">.</span><span class="n">_test_1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
+<span class="go">BolusWizard 2013-01-20T13:07:45 head[2], body[13] op[0x5b]</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">pformat</span><span class="p">(</span><span class="n">decoded</span><span class="p">)</span>
+<span class="go">{&#39;_byte[5]&#39;: 0,</span>
+<span class="go"> &#39;_byte[7]&#39;: 0,</span>
+<span class="go"> &#39;bg&#39;: 108,</span>
+<span class="go"> &#39;bg_target_high&#39;: 125,</span>
+<span class="go"> &#39;bg_target_low&#39;: 106,</span>
+<span class="go"> &#39;bolus_estimate&#39;: 1.1,</span>
+<span class="go"> &#39;carb_input&#39;: 15,</span>
+<span class="go"> &#39;carb_ratio&#39;: 13,</span>
+<span class="go"> &#39;correction_estimate&#39;: 0.0,</span>
+<span class="go"> &#39;food_estimate&#39;: 1.1,</span>
+<span class="go"> &#39;sensitivity&#39;: 45,</span>
+<span class="go"> &#39;unabsorbed_insulin_count&#39;: &#39;??&#39;,</span>
+<span class="go"> &#39;unabsorbed_insulin_total&#39;: 4.8,</span>
+<span class="go"> &#39;unknown_byte[10]&#39;: 0,</span>
+<span class="go"> &#39;unknown_byte[8]&#39;: 0}</span>
+</pre></div>
+</div>
 <dl class="attribute">
 <dt id="decocare.history.BolusWizard.body_length">
 <tt class="descname">body_length</tt><em class="property"> = 13</em><a class="headerlink" href="#decocare.history.BolusWizard.body_length" title="Permalink to this definition">¶</a></dt>
