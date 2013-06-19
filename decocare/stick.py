@@ -220,8 +220,11 @@ class LinkStatus(StickCommand):
     return 0
 
 class ReadRadio(StickCommand):
-  """Read buffer from the radio.  Downloads a packet from the radio
-  buffer."""
+  """Read buffer from the radio.
+
+  Downloads a packet from the radio buffer.
+
+  """
   code = [ 0x0C, 0x00 ]
   dl_size = 0
   size = 64
@@ -314,6 +317,7 @@ class TransmitPacket(StickCommand):
   (probably sending data back).
   For this reason, the serial number of the device you'd like to talk
   to is formatted into the packet.
+
   """
   code = [ 1, 0, 167, 1 ]
   head = [ 1, 0, 167, 1 ]
