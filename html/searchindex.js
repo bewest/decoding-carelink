@@ -1,0 +1,1 @@
+Search.setIndex({objects:{},terms:{index:0,search:0,welcom:0,python:0,carelink:0,insulaudit:0,indic:0,page:0,content:0,decod:0,tabl:0,implement:0,document:0,decocar:0,modul:0,name:0},objtypes:{},titles:["Welcome to insulaudit:decoding-carelink&#8217;s documentation!"],objnames:{},filenames:["index"]})
