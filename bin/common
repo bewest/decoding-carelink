@@ -28,33 +28,33 @@ function repro ( ) {
 
 function run_stick ( ) {
   echo '```'
-  TIME="$TIME" time python pump/stick.py ${PORT} 2>&1 | tee logs/stick.log
+  TIME="$TIME" time python decocare/stick.py ${PORT} 2>&1 | tee logs/stick.log
   echo '```'
 }
 function run_baseline ( ) {
   echo '```'
-  TIME="$TIME" time python pump/stick.py ${PORT} 2>&1 | tee logs/baseline.stick.log
+  TIME="$TIME" time python decocare/stick.py ${PORT} 2>&1 | tee logs/baseline.stick.log
   echo '```'
 }
 function run_postmortem ( ) {
   echo '```'
-  TIME="$TIME" time python pump/stick.py ${PORT} 2>&1 | tee logs/postmortem.stick.log
+  TIME="$TIME" time python decocare/stick.py ${PORT} 2>&1 | tee logs/postmortem.stick.log
   echo '```'
 }
 function run_session ( ) {
   echo '```'
-  TIME="$TIME" time python pump/session.py ${PORT} ${SERIAL} 2>&1 | tee logs/session.log
+  TIME="$TIME" time python decocare/session.py ${PORT} ${SERIAL} 2>&1 | tee logs/session.log
   echo '```'
 }
 function run_commands ( ) {
   echo '```'
-  TIME="$TIME" time python pump/commands.py ${PORT} ${SERIAL} 2>&1 | tee logs/commands.log
+  TIME="$TIME" time python decocare/commands.py ${PORT} ${SERIAL} 2>&1 | tee logs/commands.log
   echo '```'
 }
 
 function run_download ( ) {
   echo '```'
-  TIME="$TIME" time python pump/download.py ${PORT} ${SERIAL} 2>&1 | tee logs/download.log
+  TIME="$TIME" time python decocare/download.py ${PORT} ${SERIAL} 2>&1 | tee logs/download.log
   echo '```'
 }
 

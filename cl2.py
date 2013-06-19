@@ -8,10 +8,10 @@ import time
 import logging
 from pprint import pprint, pformat
 
-from pump import link
-from pump.commands import *
-from pump.stick import ProductInfo, InterfaceStats
-from pump import lib
+from decocare import link
+from decocare.commands import *
+from decocare.stick import ProductInfo, InterfaceStats
+from decocare import lib
 
 logging.basicConfig( stream=sys.stdout )
 log = logging.getLogger( 'auditor' )

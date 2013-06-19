@@ -8,9 +8,9 @@ from binascii import hexlify
 # from datetime import datetime
 # from scapy.all import *
 
-from pump import lib, history
+from decocare import lib, history
 
-from pump.history import NotADate
+from decocare.history import NotADate
 
 def get_opt_parser( ):
   parser = argparse.ArgumentParser( )
