@@ -11,6 +11,8 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   api
+
 
 Decoding-carelink implements a python module named
 decocare
