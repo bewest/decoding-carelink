@@ -534,10 +534,12 @@ class Bolus(KnownRecord):
 class BolusWizard(KnownRecord):
   """
   Decode/parse bolus wizard records.
+
   >>> rec = BolusWizard(BolusWizard._test_1[:2])
   >>> decoded = rec.parse(BolusWizard._test_1)
   >>> print str(rec)
   BolusWizard 2013-01-20T13:07:45 head[2], body[13] op[0x5b]
+
   >>> print pformat(decoded)
   {'_byte[5]': 0,
    '_byte[7]': 0,
