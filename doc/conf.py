@@ -164,7 +164,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'insulauditdecoding-carelinkdoc'
+htmlhelp_basename = 'decocare'
 
 
 # -- Options for LaTeX output --------------------------------------------------

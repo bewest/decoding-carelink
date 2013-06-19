@@ -158,7 +158,7 @@ github:
 	git clone -b gh-pages git@github.com:bewest/decoding-carelink.git ~/tmp/decoding-carelink-docs
 	cd ~/tmp/decoding-carelink-docs; \
 	rm -rf *
-	cp -rf _build/html/ ~/tmp/decoding-carelink-docs
+	cp -rf _build/html/* ~/tmp/decoding-carelink-docs/
 	cd ~/tmp/decoding-carelink-docs; \
 	touch .nojekyll ; \
 	git add . ; \
