@@ -35,7 +35,7 @@ class StickCommand(object):
   binary interface.
   """
   code = [ 0x00 ]
-  label = __doc__
+  label = 'example stick command'
   delay = .001
   size = 64
 
@@ -71,8 +71,13 @@ class StickCommand(object):
     
 
 class ProductInfo(StickCommand):
-  """Get product info from the usb device.  Useful for identifying
-  what kind of usb stick you've got; there are a few different kinds."""
+  """Get product info from the usb device.
+
+  Useful for identifying
+  what kind of usb stick you've got; there are a few different kinds.
+  Eg, European vs US regulatory domains require different frequencies for compliance.
+
+  """
   code   = [ 4 ]
   SW_VER = 16
   label  = 'usb.productInfo'
@@ -414,6 +419,7 @@ class Stick(object):
     to recover from, eg CRC, errors that can occur.
     The "shape" and timing of these loops seem to mostly get the job
     done.
+
   """
   link = None
   def __init__(self, link):

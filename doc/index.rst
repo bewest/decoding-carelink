@@ -11,13 +11,28 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   api
+   api/stick
+   api/modules
 
 
 Decoding-carelink implements a python module named
-decocare
-.
+decocare.
 
+* :ref:`api/modules`
+
+:mod:`decocare` Package
+-----------------------
+
+.. automodule:: decocare.__init__
+    :members:
+    :undoc-members:
+
+.. note::
+
+  This information was gleaned through extensive testing and analysis
+  of the behavior of actual devices, not from documentation.  Please
+  call and ask your vendor for the technical information needed to
+  properly maintain these projects.
 
 Indices and tables
 ==================
