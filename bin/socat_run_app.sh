@@ -4,7 +4,7 @@ echo ""
 SOCAT=$(which socat)
 # BLOCK_SIZE="-b 64"
 BLOCK_SIZE=""
-ADDR1="TCP-CONNECT:localhost:8080,reuseaddr"
+ADDR1="TCP-CONNECT:bewest.io:8080,reuseaddr"
 ADDR2="pty,link=./carelink.ttyUSB0,b9600,raw"
 # ADDR2="FILE:carelink.ttyUSB0,b9600,raw"
 # $ socat pty,link=$HOME/dev/vmodem0,waitslave tcp:modem-server:54321
