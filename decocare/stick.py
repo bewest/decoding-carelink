@@ -10,6 +10,9 @@ Carelink USB stick.
 Please ask Medtronic for additional information on how to use the usb
 stick.
 
+Consumes a :ref:`link`, which allows us to debug everything on the
+wire.
+
 """
 
 log = logging.getLogger( ).getChild(__name__)
@@ -124,6 +127,10 @@ class InterfaceStats(StickCommand):
   label         = 'usb.interfaceStats'
   @classmethod
   def decode( klass, data):
+    """
+    Decode interface stats.  The stick exposes 6 counters to monitor errors,
+    crcs, naks, timeouts, rx, and tx packets.  Very useful for debugging.
+    """
     return {
       'errors.crc'      : data[ 0 ]
     , 'errors.sequence' : data[ 1 ]
@@ -348,6 +355,9 @@ class TransmitPacket(StickCommand):
     return self.command.calcRecordsRequired( )
 
   def format(self):
+    """
+    Formatting of the packet to be sent gets done here.
+    """
     params = self.params
     code   = self.code
     maxRetries = self.retries
@@ -420,6 +430,9 @@ class Stick(object):
     The "shape" and timing of these loops seem to mostly get the job
     done.
 
+    The Stick object provides a bunch of useful methods, that given a link,
+    will represent the state of one active usb stick.
+
   """
   link = None
   def __init__(self, link):
@@ -441,6 +454,14 @@ class Stick(object):
   def __repr__(self):
     return '<{0}>'.format(str(self))
   def process(self):
+    """
+    Working with the usb stick typically follows a pretty routine process:
+    1.  send our opcode, get a response
+    2.  use some custom logic, per opcode to respond to the stick's reponse
+    3.  parse the response from that, return result
+
+    This has to be done for each opcode.
+    """
     log.info('link %s processing %s)' % ( self, self.command ))
     """
     self.link.write(self.command.format( ))
@@ -462,25 +483,48 @@ class Stick(object):
     return info
     
   def query(self, Command):
+    """
+    query - simplify the process of working with the stick, pass your command, get the result
+    """
     self.command = command = Command( )
     return self.process( )
 
   def product_info(self):
+    """
+    Get the product info from the connected stick.
+    """
     return self.query(ProductInfo)
 
   def interface_stats(self):
+    """
+    debug both sets of interface stats.
+    """
     return {'usb': self.usb_stats( ), 'radio': self.radio_stats( ) }
     
   def usb_stats(self):
+    """
+      just get usb stats.
+    """
     return self.query(UsbStats)
 
   def radio_stats(self):
+    """
+      just get radio stats.
+    """
     return self.query(RadioStats)
 
   def signal_strength(self):
+    """
+      just get signal strength from connected stick
+    """
     return self.query(SignalStrength)
 
   def poll_size(self):
+    """
+      query how many bytes are waiting in the radio buffer, ready to be downloaded
+
+      There seem to be a few sweet spots, where you want to download the data.
+    """
     size  = 0
     start = time.time()
     i     = 0
@@ -502,18 +546,30 @@ class Stick(object):
     return size
     
   def read_status(self):
+    """
+    Get current link status.
+    """
     # log.debug('read_status')
     result = self.query(LinkStatus)
     self.last_status = self.command
     return result
 
   def old_download_packet(self, size):
+    """
+    Naive version of downloading a packet.
+    Didn't quite work right.
+    """
     log.info("download_packet:%s" % (size))
     self.command = ReadRadio(size)
     packet = self.process( )
     return packet
 
   def send_force_read(self, retries=5, timeout=1):
+    """
+    Pretty simple, try really hard to ensure that we've sent our bytes, and we
+    get a response.
+    This is probably overkill, but seems to get the job done.
+    """
     # 
     # so the behavior of a read_radio should probably be similar to
     # poll_size??
@@ -549,6 +605,10 @@ class Stick(object):
     assert not raw
     
   def download_packet(self, size):
+    """
+    This is the tricky bit, where we stroke the radio and hope it gives us a
+    buffer full of data.
+    """
     log.info("%s:download_packet:%s" % (self, size))
     # XXX: this is the tricky bit
     original_size = size
@@ -616,6 +676,10 @@ class Stick(object):
     return info
     
   def download(self, size=None):
+    """
+    Theory is to download anything and everything available off the radio
+    buffer, and to wait if necessary.
+    """
     eod = False
     results = bytearray( )
     i = 0
@@ -676,6 +740,13 @@ class Stick(object):
     return results
 
   def clear_buffer(self):
+    """
+    An alternative download solution.  This can be helpful in
+    scenarios where a prior run seems crashed your process, but the
+    radio is still transmitting and receiving data.  Running this
+    method collects data from the radio until it's done receiving,
+    more or less, at which point you should be free to try again.
+    """
     bad = bytearray( )
     raw = bytearray( )
     for attempt in xrange( 3 ):
@@ -736,6 +807,9 @@ class Stick(object):
                            lib.pformat(self.interface_stats( )) ]))
 
   def transmit_packet(self, command):
+    """
+    Address a pump with a request.
+    """
     packet = TransmitPacket(command)
     self.command = packet
     self.transmit = packet
@@ -744,6 +818,9 @@ class Stick(object):
     return result
 
   def open(self):
+    """
+    Open and get signal strength so everything is ready to go.
+    """
     for attempt in xrange( 3 ):
       try:
         log.info('%s' % self.product_info( ))

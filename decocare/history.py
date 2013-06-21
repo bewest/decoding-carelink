@@ -13,6 +13,9 @@ import lib
 class NotADate(Exception): pass
 
 class Mask:
+  """
+  Some useful bit masks.
+  """
   time   = 0xC0
   invert = 0x3F
   year   = 0x0F
@@ -24,6 +27,7 @@ def quick_hex(bb):
 
 def parse_seconds(sec):
   """
+  simple mask
   >>> parse_seconds(0x92)
   18
   """
@@ -31,6 +35,7 @@ def parse_seconds(sec):
 
 def parse_minutes(minutes):
   """
+  simple mask
   >>> parse_minutes(0x9e)
   30
   """
@@ -39,6 +44,7 @@ def parse_minutes(minutes):
 
 def parse_hours(hours):
   """
+  simple mask
   >>> parse_hours(0x0b)
   11
 
@@ -50,6 +56,7 @@ def parse_hours(hours):
 
 def parse_day(day):
   """
+  simple mask
   >>> parse_day( 0x01 )
   1
   """
@@ -57,6 +64,8 @@ def parse_day(day):
 
 def parse_months(seconds, minutes):
   """
+  calculate from extra bits shaved off of seconds and minutes:
+
   >>> parse_months( 0x92, 0x9e )
   10
 
@@ -66,6 +75,9 @@ def parse_months(seconds, minutes):
   return high | low
 
 def parse_years_lax(year):
+  """
+  simple mask plus correction
+  """
   y = (year & Mask.year) + 2000
   return y
 
@@ -78,11 +90,13 @@ _remote_ids = [
 
 def decode_remote_id(msg):
   """
-   0x27
-   0x01 0xe2 0x40
-   0x03 0x42 0x2a
-   0x28 0x0c 0x89
-   0x92 0x00 0x00 0x00
+  practice decoding some remote ids:
+
+  | 0x27
+  | 0x01 0xe2 0x40
+  | 0x03 0x42 0x2a
+  | 0x28 0x0c 0x89
+  | 0x92 0x00 0x00 0x00
 
   >>> decode_remote_id(_remote_ids[0])
   '123456'
@@ -104,6 +118,7 @@ def decode_remote_id(msg):
 
 def extra_year_bits(year=0x86):
   """
+  practice getting some extra bits out of the year byte
   >>> extra_year_bits( )
   [1, 0, 0, 0]
 
@@ -132,6 +147,8 @@ def extra_year_bits(year=0x86):
   
 def extra_hour_bits(value):
   """
+  practice getting extra bits out of the hours bytes
+
   >>> extra_hour_bits(0x28)
   [0, 0, 1]
 
@@ -146,6 +163,7 @@ def extra_hour_bits(value):
   
 def parse_years(year):
   """
+    simple mask plus correction
     >>> parse_years(0x06)
     2006
 
@@ -236,6 +254,7 @@ def test_time_encoders( ):
 def unmask_date(data):
   """
   Extract date values from a series of bytes.
+  Always returns tuple given a bytearray of at least 5 bytes.
 
   Returns 6-tuple of scalar values year, month, day, hours, minutes,
   seconds.
@@ -258,6 +277,9 @@ def unmask_date(data):
   return (year, month, day, hours, minutes, seconds)
 
 def parse_date(date, strict=False, loose=False):
+  """
+  Choose whether or not to throw an error if you get a bad date.
+  """
   try:
     return parse_date_strict(date)
   except NotADate, e:
@@ -272,6 +294,8 @@ def parse_date_strict(data):
   """
   Apply strict datetime validation to extract a datetime from a series
   of bytes.
+  Always throws an error for bad dates.
+
   >>> parse_date(bytearray( [ 0x6f, 0xd7, 0x08, 0x01, 0x06 ] )).isoformat( )
   '2006-07-01T08:23:47'
 
@@ -289,6 +313,11 @@ class Base(object):
   """
     >>> str( Base( bytearray([ 0x00, 0x00 ]) ) )
     'Base unknown head[2], body[0] op[0x00]'
+
+  Each record in the history seems to have a two byte head, possibly
+  some arguments, then a 5 byte description of the datetime, then
+  maybe a body.  The most reliable way to identify records so far,
+  seems to be through the 2 byte head.
 
   """
   head_length = 2
@@ -612,6 +641,9 @@ def decode_unabsorbed(amount, age, curve,strokes=40.0):
 
 class UnabsorbedInsulinBolus(VariableHead):
   """
+  This data is not made available at the time of therapy in the pump
+  UI, but could easily change my dosing decision.
+
   >>> rec = UnabsorbedInsulinBolus( UnabsorbedInsulinBolus._test_1[:2] )
   >>> print str(rec)
   UnabsorbedInsulinBolus unknown head[2], body[0] op[0x5c]
@@ -671,12 +703,20 @@ del x
 
 def suggest(head):
   """
+  Look in the known table of commands to find a suitable record type
+  for this opcode.
   """
   klass = _known.get(head[0], Base)
   record = klass(head)
   return record
 
 def parse_record(fd, head=bytearray( )):
+  """
+  Given a file-like object, and the head of a record, parse the rest
+  of the record.
+  Look up the type of record, read in just enough data to parse it,
+  return the result.
+  """
   # head    = bytearray(fd.read(2))
   date    = bytearray( )
   body    = bytearray( )

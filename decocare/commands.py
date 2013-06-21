@@ -1,10 +1,25 @@
 
 import logging
-
-log = logging.getLogger( ).getChild(__name__)
 import time
 
 import lib
+
+"""
+
+Implementation and decoding of lots of commands.
+
+Each command inherits from :py:`BaseCommand`, which takes care of the
+basic logic for informing the stick if we have recieved all the data
+we expect to recieve.
+
+Many commands are supported by Medtronic but not listed here.
+Examples would include setting profiles and rates.
+(One theory is that these commands are turned into setters with
+correct arguments.)
+
+"""
+
+log = logging.getLogger( ).getChild(__name__)
 
 def CRC8(data):
   return lib.CRC8.compute(data)
@@ -146,6 +161,9 @@ class PowerControl(PumpCommand):
   effectTime = 17
 
 class PowerControlOff(PowerControl):
+  """
+  Here's an example where arguments clearly modify behavior.
+  """
   params = [ 0x00, 0x0A ]
 
 class ReadErrorStatus(PumpCommand):
