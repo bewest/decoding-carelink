@@ -1,4 +1,5 @@
 .. _api:
+
 ===
 API
 ===
@@ -20,3 +21,4 @@ protocol, sometimes known as ComLink2.  The implementation is built
 using python modules as building blocks, each module allowing us to
 prove some specific part of the protocol.
 
+:ref:`modules`

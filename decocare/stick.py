@@ -232,7 +232,8 @@ class LinkStatus(StickCommand):
     return 0
 
 class ReadRadio(StickCommand):
-  """Read buffer from the radio.
+  """
+  Read buffer from the radio.
 
   Downloads a packet from the radio buffer.
 
@@ -272,6 +273,9 @@ class ReadRadio(StickCommand):
     return raw[:1], raw
     
   def parse(self, raw):
+    """
+    Detect BadCRC here.  Also, look for eod set.
+    """
     """
     log.info('readData validating remote raw[ack]: %02x' % raw[0])
     log.info('readData; foreign raw should be at least 14 bytes? %s %s' % (len(raw), len(raw) > 14))
@@ -407,31 +411,31 @@ class TransmitPacket(StickCommand):
 
 class Stick(object):
   """
-    The carelink usb stick acts like a buffer.
+  The carelink usb stick acts like a buffer.
 
-    It has a variety of commands providing synchronous IO, eg, you may
-    generally perform a read immediately after writing to it, and expect a
-    response.
+  It has a variety of commands providing synchronous IO, eg, you may
+  generally perform a read immediately after writing to it, and expect a
+  response.
 
-    The commands operate on a local buffer used to facilitate exchanging
-    messages over RF with the pump. RF communication with the pump
-    happens asynchronously, requiring us to go through 3 separate
-    phases for each message we'd like to exchange with the pumps:
-      * transmit - send commmand
-      * poll_size - loop
-      * download - loop
+  The commands operate on a local buffer used to facilitate exchanging
+  messages over RF with the pump. RF communication with the pump
+  happens asynchronously, requiring us to go through 3 separate
+  phases for each message we'd like to exchange with the pumps:
+  * transmit - send commmand
+  * poll_size - loop
+  * download - loop
 
-    Each command is usually only 3 bytes.
+  Each command is usually only 3 bytes.
 
-    The protocol offers some facility for detecting and recovering
-    from inconsistencies in the underlying transport of data, however,
-    we are somwhat ignorant of them.  The tricky bits are exactly how
-    to recover from, eg CRC, errors that can occur.
-    The "shape" and timing of these loops seem to mostly get the job
-    done.
+  The protocol offers some facility for detecting and recovering
+  from inconsistencies in the underlying transport of data, however,
+  we are somwhat ignorant of them.  The tricky bits are exactly how
+  to recover from, eg CRC, errors that can occur.
+  The "shape" and timing of these loops seem to mostly get the job
+  done.
 
-    The Stick object provides a bunch of useful methods, that given a link,
-    will represent the state of one active usb stick.
+  The Stick object provides a bunch of useful methods, that given a link,
+  will represent the state of one active usb stick.
 
   """
   link = None

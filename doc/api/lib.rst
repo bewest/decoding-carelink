@@ -1,5 +1,5 @@
 
-.. _session:
+.. _lib:
 
 ===
 lib
