@@ -22,6 +22,13 @@ your behalf:
 
 ## Demo
 
+Talk to my test insulin pump over the internet.
+Requires `socat` and `python 2.7`.  The script [`./bin/socat_run_app.sh`](https://github.com/bewest/decoding-carelink/blob/master/bin/socat_run_app.sh)
+will connect to my server, `bewest.io:8080` where my test insulin
+pump, serial `208850` is waiting to talk to you.
+
+Here's an example using my scripts:
+
 ```bash
 $ git checkout -b tester # create a new branch with just your stuff, please
 $ . ./bin/common # import some handy run_* functions
@@ -36,6 +43,9 @@ $ PORT=./carelink.ttyUSB0 SERIAL=208850 run_download
 ```
 * [download](https://raw.github.com/bewest/decoding-carelink/tester/logs/download.log)
 * [commands](https://github.com/bewest/decoding-carelink/blob/tester/logs/commands.log)
+
+Try figuring out the dosing commands.  Is it possible to rewind
+the pump?  Is it possible to enter new profiles and schedules?
 
 ## Future work
 
