@@ -1,11 +1,11 @@
 #!/bin/bash
 
-find ./ \( \
+find ./ \( -type f \
       -name "*.py" \
       -or -name '*.sh'  \
       -or -name '*.markdown'  \
       -or -name 'README*'       \
-    \) -not -path './.git*' -type f \
+    \) -not -path './.git*'  \
     \(  \
     -not -name ".*.sw?"  \
     -not -name "*.data"     \

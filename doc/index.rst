@@ -11,21 +11,16 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   api/stick
-   api/modules
+   api
 
 
 Decoding-carelink implements a python module named
-decocare.
+decocare.  The python module allows learning more about how Medtronic Insulin
+pumps and related devices work.
 
 * :ref:`api/modules`
+* :ref:`decocare`
 
-:mod:`decocare` Package
------------------------
-
-.. automodule:: decocare.__init__
-    :members:
-    :undoc-members:
 
 .. note::
 

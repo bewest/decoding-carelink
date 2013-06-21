@@ -1,6 +1,14 @@
-decocare
-========
+.. _stick:
+=====
+Stick
+=====
 
+This manages communications with the usb stick itself.
+This is really the heart of the whole package.
+
+Given a :ref:`link`, with read/write methods, this module will allow
+using the usb stick as a radio to communicate with compatible medical
+devices.
 
 :mod:`stick` Module
 -------------------
