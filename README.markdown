@@ -20,6 +20,23 @@ your behalf:
 * alarms, etc...
 * current settings
 
+## Demo
+
+```bash
+$ git checkout -b tester # create a new branch with just your stuff, please
+$ . ./bin/common # import some handy run_* functions
+$ ./bin/socat_run_app.sh & # get my test insulin pump from bewest.io:8080
+$ ls carelink.ttyUSB0  # creates this thing
+carelink.ttyUSB0
+$ ./status-quo.sh ./carelink.ttyUSB0
+[...]
+$ PORT=./carelink.ttyUSB0 SERIAL=208850 run_download 
+[...]
+
+```
+* [download](https://raw.github.com/bewest/decoding-carelink/tester/logs/download.log)
+* [commands](https://github.com/bewest/decoding-carelink/blob/tester/logs/commands.log)
+
 ## Future work
 
 * collect more data
