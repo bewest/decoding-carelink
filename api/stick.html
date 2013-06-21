@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>decocare &mdash; insulaudit:decoding-carelink 0.0.3 documentation</title>
+    <title>Stick &mdash; insulaudit:decoding-carelink 0.0.3 documentation</title>
     
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -27,8 +27,9 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="insulaudit:decoding-carelink 0.0.3 documentation" href="../index.html" />
-    <link rel="next" title="decocare" href="modules.html" />
-    <link rel="prev" title="Welcome to insulaudit:decoding-carelink’s documentation!" href="../index.html" /> 
+    <link rel="up" title="API" href="index.html" />
+    <link rel="next" title="Session" href="session.html" />
+    <link rel="prev" title="Link" href="link.html" /> 
   </head>
   <body>
     <div class="related">
@@ -41,12 +42,13 @@
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="modules.html" title="decocare"
+          <a href="session.html" title="Session"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="../index.html" title="Welcome to insulaudit:decoding-carelink’s documentation!"
+          <a href="link.html" title="Link"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">API</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -55,8 +57,13 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="decocare">
-<h1>decocare<a class="headerlink" href="#decocare" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="stick">
+<span id="id1"></span><h1>Stick<a class="headerlink" href="#stick" title="Permalink to this headline">¶</a></h1>
+<p>This manages communications with the usb stick itself.
+This is really the heart of the whole package.</p>
+<p>Given a <a class="reference internal" href="link.html#link"><em>Link</em></a>, with read/write methods, this module will allow
+using the usb stick as a radio to communicate with compatible medical
+devices.</p>
 <div class="section" id="module-decocare.stick">
 <span id="stick-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">stick</span></tt> Module<a class="headerlink" href="#module-decocare.stick" title="Permalink to this headline">¶</a></h2>
 <dl class="exception">
@@ -88,7 +95,9 @@
 <dl class="classmethod">
 <dt id="decocare.stick.InterfaceStats.decode">
 <em class="property">classmethod </em><tt class="descname">decode</tt><big>(</big><em>klass</em>, <em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#InterfaceStats.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.InterfaceStats.decode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Decode interface stats.  The stick exposes 6 counters to monitor errors,
+crcs, naks, timeouts, rx, and tx packets.  Very useful for debugging.</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="decocare.stick.InterfaceStats.label">
@@ -227,21 +236,7 @@ Eg, European vs US regulatory domains require different frequencies for complian
 <dl class="method">
 <dt id="decocare.stick.ReadRadio.parse">
 <tt class="descname">parse</tt><big>(</big><em>raw</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#ReadRadio.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.ReadRadio.parse" title="Permalink to this definition">¶</a></dt>
-<dd><p>log.info(&#8216;readData validating remote raw[ack]: %02x&#8217; % raw[0])
-log.info(&#8216;readData; foreign raw should be at least 14 bytes? %s %s&#8217; % (len(raw), len(raw) &gt; 14))
-log.info(&#8216;readData; raw[retries] %s&#8217; % int(raw[3]))
-dl_status = int(raw[0])
-if dl_status != 0x02: # this differs from the others?</p>
-<blockquote>
-<div>raise BadDeviceCommError(&#8220;bad dl raw! %r&#8221; % raw)
-assert (int(raw[0]) == 2), repr(raw)</div></blockquote>
-<p># raw[1] != 0 # interface number !=0
-# raw[2] == 5 # timeout occurred
-# raw[2] == 2 # NAK
-# raw[2] # should be within 0..4
-log.info(&#8220;readData ACK&#8221;)
-lb, hb    = raw[5] &amp; 0x7F, raw[6]
-self.eod  = (raw[5] &amp; 0x80) &gt; 0</p>
+<dd><p>Detect BadCRC here.  Also, look for eod set.</p>
 </dd></dl>
 
 <dl class="method">
@@ -287,14 +282,10 @@ response.</p>
 <p>The commands operate on a local buffer used to facilitate exchanging
 messages over RF with the pump. RF communication with the pump
 happens asynchronously, requiring us to go through 3 separate
-phases for each message we&#8217;d like to exchange with the pumps:</p>
-<blockquote>
-<div><ul class="simple">
-<li>transmit - send commmand</li>
-<li>poll_size - loop</li>
-<li>download - loop</li>
-</ul>
-</div></blockquote>
+phases for each message we&#8217;d like to exchange with the pumps:
+* transmit - send commmand
+* poll_size - loop
+* download - loop</p>
 <p>Each command is usually only 3 bytes.</p>
 <p>The protocol offers some facility for detecting and recovering
 from inconsistencies in the underlying transport of data, however,
@@ -302,25 +293,37 @@ we are somwhat ignorant of them.  The tricky bits are exactly how
 to recover from, eg CRC, errors that can occur.
 The &#8220;shape&#8221; and timing of these loops seem to mostly get the job
 done.</p>
+<p>The Stick object provides a bunch of useful methods, that given a link,
+will represent the state of one active usb stick.</p>
 <dl class="method">
 <dt id="decocare.stick.Stick.clear_buffer">
 <tt class="descname">clear_buffer</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.clear_buffer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.clear_buffer" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>An alternative download solution.  This can be helpful in
+scenarios where a prior run seems crashed your process, but the
+radio is still transmitting and receiving data.  Running this
+method collects data from the radio until it&#8217;s done receiving,
+more or less, at which point you should be free to try again.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="decocare.stick.Stick.download">
 <tt class="descname">download</tt><big>(</big><em>size=None</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.download"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.download" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Theory is to download anything and everything available off the radio
+buffer, and to wait if necessary.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="decocare.stick.Stick.download_packet">
 <tt class="descname">download_packet</tt><big>(</big><em>size</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.download_packet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.download_packet" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>This is the tricky bit, where we stroke the radio and hope it gives us a
+buffer full of data.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="decocare.stick.Stick.interface_stats">
 <tt class="descname">interface_stats</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.interface_stats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.interface_stats" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>debug both sets of interface stats.</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="decocare.stick.Stick.link">
@@ -330,62 +333,82 @@ done.</p>
 <dl class="method">
 <dt id="decocare.stick.Stick.old_download_packet">
 <tt class="descname">old_download_packet</tt><big>(</big><em>size</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.old_download_packet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.old_download_packet" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Naive version of downloading a packet.
+Didn&#8217;t quite work right.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="decocare.stick.Stick.open">
 <tt class="descname">open</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.open"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.open" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Open and get signal strength so everything is ready to go.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="decocare.stick.Stick.poll_size">
 <tt class="descname">poll_size</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.poll_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.poll_size" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>query how many bytes are waiting in the radio buffer, ready to be downloaded</p>
+<p>There seem to be a few sweet spots, where you want to download the data.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="decocare.stick.Stick.process">
 <tt class="descname">process</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.process" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Working with the usb stick typically follows a pretty routine process:
+1.  send our opcode, get a response
+2.  use some custom logic, per opcode to respond to the stick&#8217;s reponse
+3.  parse the response from that, return result</p>
+<p>This has to be done for each opcode.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="decocare.stick.Stick.product_info">
 <tt class="descname">product_info</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.product_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.product_info" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Get the product info from the connected stick.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="decocare.stick.Stick.query">
 <tt class="descname">query</tt><big>(</big><em>Command</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.query"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.query" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>query - simplify the process of working with the stick, pass your command, get the result</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="decocare.stick.Stick.radio_stats">
 <tt class="descname">radio_stats</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.radio_stats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.radio_stats" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>just get radio stats.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="decocare.stick.Stick.read_status">
 <tt class="descname">read_status</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.read_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.read_status" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Get current link status.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="decocare.stick.Stick.send_force_read">
 <tt class="descname">send_force_read</tt><big>(</big><em>retries=5</em>, <em>timeout=1</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.send_force_read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.send_force_read" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Pretty simple, try really hard to ensure that we&#8217;ve sent our bytes, and we
+get a response.
+This is probably overkill, but seems to get the job done.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="decocare.stick.Stick.signal_strength">
 <tt class="descname">signal_strength</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.signal_strength"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.signal_strength" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>just get signal strength from connected stick</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="decocare.stick.Stick.transmit_packet">
 <tt class="descname">transmit_packet</tt><big>(</big><em>command</em><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.transmit_packet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.transmit_packet" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Address a pump with a request.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="decocare.stick.Stick.usb_stats">
 <tt class="descname">usb_stats</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#Stick.usb_stats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.Stick.usb_stats" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>just get usb stats.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -470,7 +493,8 @@ to is formatted into the packet.</p>
 <dl class="method">
 <dt id="decocare.stick.TransmitPacket.format">
 <tt class="descname">format</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/stick.html#TransmitPacket.format"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.stick.TransmitPacket.format" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Formatting of the packet to be sent gets done here.</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="decocare.stick.TransmitPacket.head">
@@ -529,18 +553,18 @@ device is doing.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">decocare</a><ul>
+<li><a class="reference internal" href="#">Stick</a><ul>
 <li><a class="reference internal" href="#module-decocare.stick"><tt class="docutils literal"><span class="pre">stick</span></tt> Module</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="../index.html"
-                        title="previous chapter">Welcome to insulaudit:decoding-carelink&#8217;s documentation!</a></p>
+  <p class="topless"><a href="link.html"
+                        title="previous chapter">Link</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="modules.html"
-                        title="next chapter">decocare</a></p>
+  <p class="topless"><a href="session.html"
+                        title="next chapter">Session</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../_sources/api/stick.txt"
@@ -573,12 +597,13 @@ device is doing.</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="modules.html" title="decocare"
+          <a href="session.html" title="Session"
              >next</a> |</li>
         <li class="right" >
-          <a href="../index.html" title="Welcome to insulaudit:decoding-carelink’s documentation!"
+          <a href="link.html" title="Link"
              >previous</a> |</li>
-        <li><a href="../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li>
+          <li><a href="index.html" >API</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

@@ -100,9 +100,9 @@
                     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bytez</span> <span class="p">]</span> <span class="p">)</span>
 
 
-<div class="viewcode-block" id="parse"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.parse">[docs]</a><span class="k">class</span> <span class="nc">parse</span><span class="p">:</span>
+<div class="viewcode-block" id="parse"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.parse">[docs]</a><span class="k">class</span> <span class="nc">parse</span><span class="p">:</span>
   <span class="nd">@staticmethod</span>
-<div class="viewcode-block" id="parse.date"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.parse.date">[docs]</a>  <span class="k">def</span> <span class="nf">date</span><span class="p">(</span> <span class="n">data</span> <span class="p">):</span>
+<div class="viewcode-block" id="parse.date"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.parse.date">[docs]</a>  <span class="k">def</span> <span class="nf">date</span><span class="p">(</span> <span class="n">data</span> <span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="sd">    &gt;&gt;&gt; parse.date( &#39;2010-11-10T01:46:00&#39; ).isoformat( )</span>
@@ -123,7 +123,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span> <span class="n">data</span> <span class="p">)</span>
 </div></div>
-<div class="viewcode-block" id="hexdump"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.hexdump">[docs]</a><span class="k">def</span> <span class="nf">hexdump</span><span class="p">(</span> <span class="n">src</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">0</span> <span class="p">):</span>
+<div class="viewcode-block" id="hexdump"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.hexdump">[docs]</a><span class="k">def</span> <span class="nf">hexdump</span><span class="p">(</span> <span class="n">src</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">0</span> <span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  Return a string representing the bytes in src, length bytes per</span>
 <span class="sd">  line.</span>
@@ -145,7 +145,7 @@
   <span class="k">return</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 
 </div>
-<div class="viewcode-block" id="int_dump"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.int_dump">[docs]</a><span class="k">def</span> <span class="nf">int_dump</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<div class="viewcode-block" id="int_dump"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.int_dump">[docs]</a><span class="k">def</span> <span class="nf">int_dump</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  &gt;&gt;&gt; int_dump(bytearray([0x01, 0x02]))</span>
 <span class="sd">  &#39;   1    2&#39;</span>
@@ -166,16 +166,16 @@
 
 
 </div>
-<div class="viewcode-block" id="HighByte"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.HighByte">[docs]</a><span class="k">def</span> <span class="nf">HighByte</span><span class="p">(</span> <span class="n">arg</span> <span class="p">):</span>
+<div class="viewcode-block" id="HighByte"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.HighByte">[docs]</a><span class="k">def</span> <span class="nf">HighByte</span><span class="p">(</span> <span class="n">arg</span> <span class="p">):</span>
   <span class="k">return</span> <span class="n">arg</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span> <span class="o">&amp;</span> <span class="mh">0xFF</span>
 
 </div>
-<div class="viewcode-block" id="LowByte"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.LowByte">[docs]</a><span class="k">def</span> <span class="nf">LowByte</span><span class="p">(</span> <span class="n">arg</span> <span class="p">):</span>
+<div class="viewcode-block" id="LowByte"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.LowByte">[docs]</a><span class="k">def</span> <span class="nf">LowByte</span><span class="p">(</span> <span class="n">arg</span> <span class="p">):</span>
   <span class="k">return</span> <span class="n">arg</span> <span class="o">&amp;</span> <span class="mh">0xFF</span>
 
 
 </div>
-<div class="viewcode-block" id="CRC16CCITT"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.CRC16CCITT">[docs]</a><span class="k">class</span> <span class="nc">CRC16CCITT</span><span class="p">:</span>
+<div class="viewcode-block" id="CRC16CCITT"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.CRC16CCITT">[docs]</a><span class="k">class</span> <span class="nc">CRC16CCITT</span><span class="p">:</span>
   <span class="n">lookup</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4129</span><span class="p">,</span> <span class="mi">8258</span><span class="p">,</span> <span class="mi">12387</span><span class="p">,</span> <span class="mi">16516</span><span class="p">,</span> <span class="mi">20645</span><span class="p">,</span> <span class="mi">24774</span><span class="p">,</span>
     <span class="mi">28903</span><span class="p">,</span> <span class="mi">33032</span><span class="p">,</span> <span class="mi">37161</span><span class="p">,</span> <span class="mi">41290</span><span class="p">,</span> <span class="mi">45419</span><span class="p">,</span> <span class="mi">49548</span><span class="p">,</span> <span class="mi">53677</span><span class="p">,</span> <span class="mi">57806</span><span class="p">,</span>
     <span class="mi">61935</span><span class="p">,</span> <span class="mi">4657</span><span class="p">,</span> <span class="mi">528</span><span class="p">,</span> <span class="mi">12915</span><span class="p">,</span> <span class="mi">8786</span><span class="p">,</span> <span class="mi">21173</span><span class="p">,</span> <span class="mi">17044</span><span class="p">,</span> <span class="mi">29431</span><span class="p">,</span> <span class="mi">25302</span><span class="p">,</span>
@@ -209,7 +209,7 @@
     <span class="mi">65342</span><span class="p">,</span> <span class="mi">53085</span><span class="p">,</span> <span class="mi">57212</span><span class="p">,</span> <span class="mi">44955</span><span class="p">,</span> <span class="mi">49082</span><span class="p">,</span> <span class="mi">36825</span><span class="p">,</span> <span class="mi">40952</span><span class="p">,</span> <span class="mi">28183</span><span class="p">,</span>
     <span class="mi">32310</span><span class="p">,</span> <span class="mi">20053</span><span class="p">,</span> <span class="mi">24180</span><span class="p">,</span> <span class="mi">11923</span><span class="p">,</span> <span class="mi">16050</span><span class="p">,</span> <span class="mi">3793</span><span class="p">,</span> <span class="mi">7920</span> <span class="p">]</span>
   <span class="nd">@classmethod</span>
-<div class="viewcode-block" id="CRC16CCITT.compute"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.CRC16CCITT.compute">[docs]</a>  <span class="k">def</span> <span class="nf">compute</span><span class="p">(</span> <span class="n">klass</span><span class="p">,</span> <span class="n">block</span> <span class="p">):</span>
+<div class="viewcode-block" id="CRC16CCITT.compute"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.CRC16CCITT.compute">[docs]</a>  <span class="k">def</span> <span class="nf">compute</span><span class="p">(</span> <span class="n">klass</span><span class="p">,</span> <span class="n">block</span> <span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="mi">65535</span>
     <span class="c">#result = 0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span> <span class="n">block</span> <span class="p">)</span> <span class="p">):</span>
@@ -218,7 +218,7 @@
     <span class="k">return</span> <span class="n">result</span>
 
 </div></div>
-<div class="viewcode-block" id="CRC8"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.CRC8">[docs]</a><span class="k">class</span> <span class="nc">CRC8</span><span class="p">:</span>
+<div class="viewcode-block" id="CRC8"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.CRC8">[docs]</a><span class="k">class</span> <span class="nc">CRC8</span><span class="p">:</span>
   <span class="n">lookup</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">155</span><span class="p">,</span> <span class="mi">173</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">193</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">247</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span>
     <span class="mi">216</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">238</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">169</span><span class="p">,</span> <span class="mi">159</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">243</span><span class="p">,</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">197</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span>
     <span class="mi">134</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">201</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">147</span><span class="p">,</span>
@@ -240,24 +240,24 @@
     <span class="mi">33</span><span class="p">,</span> <span class="mi">186</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">214</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">123</span> <span class="p">]</span>
 
   <span class="nd">@classmethod</span>
-<div class="viewcode-block" id="CRC8.compute"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.CRC8.compute">[docs]</a>  <span class="k">def</span> <span class="nf">compute</span><span class="p">(</span> <span class="n">klass</span><span class="p">,</span> <span class="n">block</span> <span class="p">):</span>
+<div class="viewcode-block" id="CRC8.compute"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.CRC8.compute">[docs]</a>  <span class="k">def</span> <span class="nf">compute</span><span class="p">(</span> <span class="n">klass</span><span class="p">,</span> <span class="n">block</span> <span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span> <span class="n">block</span> <span class="p">)</span> <span class="p">):</span>
       <span class="n">result</span> <span class="o">=</span> <span class="n">klass</span><span class="o">.</span><span class="n">lookup</span><span class="p">[</span> <span class="p">(</span> <span class="n">result</span> <span class="o">^</span> <span class="n">block</span><span class="p">[</span> <span class="n">i</span> <span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0xFF</span> <span class="p">)</span> <span class="p">]</span>
     <span class="k">return</span> <span class="n">result</span>
 
 </div></div>
-<div class="viewcode-block" id="BangLong"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.BangLong">[docs]</a><span class="k">def</span> <span class="nf">BangLong</span><span class="p">(</span> <span class="n">bytez</span> <span class="p">):</span>
+<div class="viewcode-block" id="BangLong"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.BangLong">[docs]</a><span class="k">def</span> <span class="nf">BangLong</span><span class="p">(</span> <span class="n">bytez</span> <span class="p">):</span>
   <span class="p">(</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="p">)</span> <span class="o">=</span> <span class="n">bytez</span>
   <span class="n">l</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="mi">24</span> <span class="o">|</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span> <span class="o">|</span> <span class="n">c</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span> <span class="o">|</span> <span class="n">d</span><span class="p">;</span>
   <span class="k">return</span> <span class="nb">long</span><span class="p">(</span> <span class="n">l</span> <span class="p">)</span>
 
 </div>
-<div class="viewcode-block" id="BangInt"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.BangInt">[docs]</a><span class="k">def</span> <span class="nf">BangInt</span><span class="p">(</span> <span class="n">ints</span> <span class="p">):</span>
+<div class="viewcode-block" id="BangInt"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.BangInt">[docs]</a><span class="k">def</span> <span class="nf">BangInt</span><span class="p">(</span> <span class="n">ints</span> <span class="p">):</span>
   <span class="p">(</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">)</span> <span class="o">=</span> <span class="n">ints</span>
   <span class="k">return</span> <span class="p">(</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="mh">0xFF</span> <span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span> <span class="o">|</span> <span class="n">y</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">;</span>
 </div>
-<div class="viewcode-block" id="makeByte"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.makeByte">[docs]</a><span class="k">def</span> <span class="nf">makeByte</span><span class="p">(</span><span class="n">highNibble</span><span class="p">,</span> <span class="n">lowNibble</span><span class="p">):</span>
+<div class="viewcode-block" id="makeByte"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.makeByte">[docs]</a><span class="k">def</span> <span class="nf">makeByte</span><span class="p">(</span><span class="n">highNibble</span><span class="p">,</span> <span class="n">lowNibble</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    0 &lt;= highNibble &lt;= 15</span>
 <span class="sd">    0 &lt;= lowNibble  &lt;= 15</span>
@@ -293,7 +293,7 @@
 <span class="n">_enc_result_2</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0xA9</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">,</span> <span class="mh">0x16</span><span class="p">,</span> <span class="mh">0x8E</span><span class="p">,</span> <span class="mh">0x39</span><span class="p">,</span> <span class="mh">0xB2</span><span class="p">,</span> <span class="mh">0x68</span><span class="p">,</span> <span class="mh">0xD5</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0xAA</span><span class="p">,</span>
                  <span class="mh">0x65</span><span class="p">]</span>
 
-<div class="viewcode-block" id="encodeDC"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.encodeDC">[docs]</a><span class="k">def</span> <span class="nf">encodeDC</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+<div class="viewcode-block" id="encodeDC"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.encodeDC">[docs]</a><span class="k">def</span> <span class="nf">encodeDC</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    &gt;&gt;&gt; encodeDC(_enc_test_1) == bytearray(_enc_result_1)</span>
 <span class="sd">    True</span>
@@ -351,7 +351,7 @@
 <span class="n">_decode_test_2</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0xA9</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">,</span> <span class="mh">0x16</span><span class="p">,</span> <span class="mh">0x8E</span><span class="p">,</span> <span class="mh">0x39</span><span class="p">,</span> <span class="mh">0xB2</span><span class="p">,</span> <span class="mh">0x56</span><span class="p">,</span> <span class="mh">0x65</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">,</span> <span class="mh">0x56</span><span class="p">,</span>
                   <span class="mh">0x35</span><span class="p">]</span>
 <span class="n">_decode_result_2</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0xA7</span><span class="p">,</span> <span class="mh">0x47</span><span class="p">,</span> <span class="mh">0x33</span><span class="p">,</span> <span class="mh">0x62</span><span class="p">,</span> <span class="mh">0x06</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">]</span>
-<div class="viewcode-block" id="decodeDC"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.decodeDC">[docs]</a><span class="k">def</span> <span class="nf">decodeDC</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+<div class="viewcode-block" id="decodeDC"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.decodeDC">[docs]</a><span class="k">def</span> <span class="nf">decodeDC</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    &gt;&gt;&gt; decodeDC(_decode_test_1) == bytearray(_decode_result_1)</span>
 <span class="sd">    True</span>
@@ -390,7 +390,7 @@
 
   <span class="k">return</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </div>
-<div class="viewcode-block" id="decodeDCByte"><a class="viewcode-back" href="../../api/decocare.html#decocare.lib.decodeDCByte">[docs]</a><span class="k">def</span> <span class="nf">decodeDCByte</span><span class="p">(</span><span class="n">B</span><span class="p">):</span>
+<div class="viewcode-block" id="decodeDCByte"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.decodeDCByte">[docs]</a><span class="k">def</span> <span class="nf">decodeDCByte</span><span class="p">(</span><span class="n">B</span><span class="p">):</span>
   <span class="c"># B should be 0 &lt; B &amp;&amp; B &lt; 63</span>
   <span class="c"># look up in decode table</span>
   <span class="k">return</span> <span class="n">ENCODE_TABLE</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>

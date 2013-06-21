@@ -58,10 +58,10 @@
 <span class="kn">import</span> <span class="nn">lib</span>
 
 <span class="k">def</span> <span class="nf">CRC8</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-<div class="viewcode-block" id="CRC8"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.CRC8">[docs]</a>  <span class="k">return</span> <span class="n">lib</span><span class="o">.</span><span class="n">CRC8</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class="viewcode-block" id="CRC8"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.CRC8">[docs]</a>  <span class="k">return</span> <span class="n">lib</span><span class="o">.</span><span class="n">CRC8</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">BaseCommand</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span></div>
-<div class="viewcode-block" id="BaseCommand"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.BaseCommand">[docs]</a>  <span class="n">code</span>    <span class="o">=</span> <span class="mh">0x00</span>
+<div class="viewcode-block" id="BaseCommand"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.BaseCommand">[docs]</a>  <span class="n">code</span>    <span class="o">=</span> <span class="mh">0x00</span>
   <span class="n">descr</span>   <span class="o">=</span> <span class="s">&quot;(error)&quot;</span>
   <span class="n">retries</span> <span class="o">=</span> <span class="mi">2</span>
   <span class="n">timeout</span> <span class="o">=</span> <span class="mi">3</span>
@@ -78,21 +78,21 @@
     <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
 
   <span class="k">def</span> <span class="nf">done</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="BaseCommand.done"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.BaseCommand.done">[docs]</a>    <span class="n">found</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">or</span> <span class="p">[</span> <span class="p">])</span>
+<div class="viewcode-block" id="BaseCommand.done"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.BaseCommand.done">[docs]</a>    <span class="n">found</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">or</span> <span class="p">[</span> <span class="p">])</span>
     <span class="n">expect</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">maxRecords</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">bytesPerRecord</span><span class="p">)</span>
     <span class="n">expect_size</span> <span class="o">=</span> <span class="s">&quot;found[{}] expected[{}]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">found</span><span class="p">,</span> <span class="n">expect</span><span class="p">)</span>
     <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:download:done?:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expect_size</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">found</span> <span class="o">&gt;=</span> <span class="n">expect</span>
   <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="BaseCommand.format"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.BaseCommand.format">[docs]</a>    <span class="k">pass</span>
+<div class="viewcode-block" id="BaseCommand.format"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.BaseCommand.format">[docs]</a>    <span class="k">pass</span>
 
   <span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span></div>
-<div class="viewcode-block" id="BaseCommand.respond"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.BaseCommand.respond">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+<div class="viewcode-block" id="BaseCommand.respond"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.BaseCommand.respond">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">getData</span><span class="p">(</span> <span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">responded</span> <span class="o">=</span> <span class="bp">True</span>
 
 <span class="k">class</span> <span class="nc">PumpCommand</span><span class="p">(</span><span class="n">BaseCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="PumpCommand"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.PumpCommand">[docs]</a>  <span class="c">#serial = &#39;665455&#39;</span>
+<div class="viewcode-block" id="PumpCommand"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.PumpCommand">[docs]</a>  <span class="c">#serial = &#39;665455&#39;</span>
   <span class="c">#serial = &#39;206525&#39;</span>
   <span class="n">serial</span> <span class="o">=</span> <span class="s">&#39;208850&#39;</span>
 
@@ -113,10 +113,10 @@
     <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">log_name</span><span class="p">(</span> <span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">log_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">):</span>
-<div class="viewcode-block" id="PumpCommand.log_name"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.PumpCommand.log_name">[docs]</a>    <span class="k">return</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s">&#39;{}.data&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">)</span>
+<div class="viewcode-block" id="PumpCommand.log_name"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.PumpCommand.log_name">[docs]</a>    <span class="k">return</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s">&#39;{}.data&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">):</span></div>
-<div class="viewcode-block" id="PumpCommand.save"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.PumpCommand.save">[docs]</a>    <span class="n">name</span> <span class="o">=</span> <span class="s">&#39;{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">log_name</span><span class="p">(</span><span class="n">prefix</span><span class="p">))</span>
+<div class="viewcode-block" id="PumpCommand.save"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.PumpCommand.save">[docs]</a>    <span class="n">name</span> <span class="o">=</span> <span class="s">&#39;{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">log_name</span><span class="p">(</span><span class="n">prefix</span><span class="p">))</span>
     <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">&#39;wb&#39;</span><span class="p">)</span>
     <span class="n">handle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
     <span class="n">handle</span><span class="o">.</span><span class="n">close</span><span class="p">(</span> <span class="p">)</span>
@@ -131,13 +131,13 @@
     <span class="k">return</span> <span class="s">&#39;&lt;{0}&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="bp">self</span><span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="PumpCommand.getData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.PumpCommand.getData">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+<div class="viewcode-block" id="PumpCommand.getData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.PumpCommand.getData">[docs]</a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
 
   <span class="k">def</span> <span class="nf">allocateRawData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="PumpCommand.allocateRawData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.PumpCommand.allocateRawData">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bytesPerRecord</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxRecords</span>
+<div class="viewcode-block" id="PumpCommand.allocateRawData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.PumpCommand.allocateRawData">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bytesPerRecord</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxRecords</span>
 
   <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="PumpCommand.format"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.PumpCommand.format">[docs]</a>    <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span>
+<div class="viewcode-block" id="PumpCommand.format"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.PumpCommand.format">[docs]</a>    <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span>
     <span class="n">code</span>   <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">code</span>
     <span class="n">maxRetries</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">retries</span>
     <span class="n">serial</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">bytearray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serial</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;hex&#39;</span><span class="p">)))</span>
@@ -172,7 +172,7 @@
     <span class="k">return</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">calcRecordsRequired</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="PumpCommand.calcRecordsRequired"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.PumpCommand.calcRecordsRequired">[docs]</a>    <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bytesPerRecord</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxRecords</span>
+<div class="viewcode-block" id="PumpCommand.calcRecordsRequired"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.PumpCommand.calcRecordsRequired">[docs]</a>    <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bytesPerRecord</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxRecords</span>
     <span class="n">i</span> <span class="o">=</span> <span class="n">length</span> <span class="o">/</span> <span class="mi">64</span>
     <span class="n">j</span> <span class="o">=</span> <span class="n">length</span> <span class="o">%</span> <span class="mi">64</span>
     <span class="k">if</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -181,7 +181,7 @@
 
 
 <span class="k">class</span> <span class="nc">PowerControl</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="PowerControl"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.PowerControl">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PowerControl"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.PowerControl">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    &gt;&gt;&gt; PowerControl(serial=&#39;665455&#39;).format() == PowerControl._test_ok</span>
 <span class="sd">    True</span>
 <span class="sd">  &quot;&quot;&quot;</span>
@@ -197,10 +197,10 @@
   <span class="n">effectTime</span> <span class="o">=</span> <span class="mi">17</span>
 
 <span class="k">class</span> <span class="nc">PowerControlOff</span><span class="p">(</span><span class="n">PowerControl</span><span class="p">):</span></div>
-<div class="viewcode-block" id="PowerControlOff"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.PowerControlOff">[docs]</a>  <span class="n">params</span> <span class="o">=</span> <span class="p">[</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0A</span> <span class="p">]</span>
+<div class="viewcode-block" id="PowerControlOff"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.PowerControlOff">[docs]</a>  <span class="n">params</span> <span class="o">=</span> <span class="p">[</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x0A</span> <span class="p">]</span>
 
 <span class="k">class</span> <span class="nc">ReadErrorStatus</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div>
-<div class="viewcode-block" id="ReadErrorStatus"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadErrorStatus">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadErrorStatus"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadErrorStatus">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    &gt;&gt;&gt; ReadErrorStatus(serial=&#39;665455&#39;).format() == ReadErrorStatus._test_ok</span>
 <span class="sd">    True</span>
 <span class="sd">  &quot;&quot;&quot;</span>
@@ -213,7 +213,7 @@
   <span class="n">maxRecords</span> <span class="o">=</span> <span class="mi">1</span>
 
 <span class="k">class</span> <span class="nc">ReadHistoryData</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div>
-<div class="viewcode-block" id="ReadHistoryData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadHistoryData">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadHistoryData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadHistoryData">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    &gt;&gt;&gt; ReadHistoryData(serial=&#39;208850&#39;, params=[ 0x03 ]).format() == ReadHistoryData._test_ok</span>
 <span class="sd">    True</span>
 <span class="sd">  &quot;&quot;&quot;</span>
@@ -231,7 +231,7 @@
     <span class="nb">super</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">log_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadHistoryData.log_name"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadHistoryData.log_name">[docs]</a>    <span class="k">return</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s">&#39;{}-page-{}.data&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">page</span><span class="p">)</span>
+<div class="viewcode-block" id="ReadHistoryData.log_name"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadHistoryData.log_name">[docs]</a>    <span class="k">return</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s">&#39;{}-page-{}.data&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">page</span><span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
     <span class="n">base</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span>
@@ -240,7 +240,7 @@
     <span class="k">return</span> <span class="s">&#39;{}:data[{}]:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
   
   <span class="k">def</span> <span class="nf">done</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadHistoryData.done"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadHistoryData.done">[docs]</a>    <span class="n">eod</span> <span class="o">=</span> <span class="bp">False</span>
+<div class="viewcode-block" id="ReadHistoryData.done"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadHistoryData.done">[docs]</a>    <span class="n">eod</span> <span class="o">=</span> <span class="bp">False</span>
     <span class="n">found</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">or</span> <span class="p">[</span> <span class="p">])</span>
     <span class="n">expect</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">maxRecords</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">bytesPerRecord</span><span class="p">)</span>
     <span class="n">expect_crc</span> <span class="o">=</span> <span class="n">CRC8</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
@@ -255,7 +255,7 @@
     <span class="k">return</span> <span class="n">found</span> <span class="o">&gt;=</span> <span class="n">expect</span>
 
   <span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw</span><span class="p">):</span></div>
-<div class="viewcode-block" id="ReadHistoryData.respond"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadHistoryData.respond">[docs]</a>    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;{} extending original {} with found {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)))</span>
+<div class="viewcode-block" id="ReadHistoryData.respond"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadHistoryData.respond">[docs]</a>    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;{} extending original {} with found {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)))</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">:</span>
       <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;{} download respond replace original {} with found {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">)))</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">raw</span>
@@ -276,12 +276,12 @@
   <span class="n">data</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadHistoryData.getData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadHistoryData.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+<div class="viewcode-block" id="ReadHistoryData.getData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadHistoryData.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
     <span class="c"># log.info(&quot;XXX: READ HISTORY DATA!!:\n%s&quot; % lib.hexdump(data))</span>
     <span class="k">return</span> <span class="n">data</span>
 
 <span class="k">class</span> <span class="nc">ReadCurPageNumber</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="ReadCurPageNumber"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadCurPageNumber">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadCurPageNumber"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadCurPageNumber">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  &quot;&quot;&quot;</span>
 
   <span class="n">code</span> <span class="o">=</span> <span class="mi">157</span>
@@ -295,17 +295,17 @@
     <span class="k">return</span> <span class="s">&#39;:pages:&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pages</span><span class="p">)</span> <span class="p">])</span>
 
   <span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadCurPageNumber.respond"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadCurPageNumber.respond">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+<div class="viewcode-block" id="ReadCurPageNumber.respond"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadCurPageNumber.respond">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pages</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getData</span><span class="p">(</span> <span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">responded</span> <span class="o">=</span> <span class="bp">True</span>
   <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="ReadCurPageNumber.getData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadCurPageNumber.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+<div class="viewcode-block" id="ReadCurPageNumber.getData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadCurPageNumber.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
     <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;XXX: READ cur page number:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">lib</span><span class="o">.</span><span class="n">BangLong</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
 
 
 <span class="k">class</span> <span class="nc">ReadRTC</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="ReadRTC"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadRTC">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadRTC"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadRTC">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  &quot;&quot;&quot;</span>
 
   <span class="n">code</span> <span class="o">=</span> <span class="mi">112</span>
@@ -316,7 +316,7 @@
 
 
   <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadRTC.getData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadRTC.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+<div class="viewcode-block" id="ReadRTC.getData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadRTC.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
     <span class="n">d</span> <span class="o">=</span> <span class="p">{</span>
       <span class="s">&#39;hour&#39;</span>  <span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
       <span class="s">&#39;minute&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
@@ -329,7 +329,7 @@
     <span class="k">return</span> <span class="s">&quot;</span><span class="si">%(year)s</span><span class="s">-</span><span class="si">%(month)s</span><span class="s">-</span><span class="si">%(day)s</span><span class="s">T</span><span class="si">%(hour)s</span><span class="s">:</span><span class="si">%(minute)s</span><span class="s">:</span><span class="si">%(second)s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">d</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">ReadPumpID</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="ReadPumpID"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadPumpID">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadPumpID"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadPumpID">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  &quot;&quot;&quot;</span>
 
   <span class="n">code</span> <span class="o">=</span> <span class="mi">113</span>
@@ -339,11 +339,11 @@
   <span class="n">maxRecords</span> <span class="o">=</span> <span class="mi">1</span>
 
   <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadPumpID.getData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadPumpID.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+<div class="viewcode-block" id="ReadPumpID.getData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadPumpID.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
     <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span>
 
 <span class="k">class</span> <span class="nc">ReadBatteryStatus</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="ReadBatteryStatus"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadBatteryStatus">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadBatteryStatus"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadBatteryStatus">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  &quot;&quot;&quot;</span>
 
   <span class="n">code</span> <span class="o">=</span> <span class="mi">114</span>
@@ -353,7 +353,7 @@
   <span class="n">maxRecords</span> <span class="o">=</span> <span class="mi">1</span>
 
   <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadBatteryStatus.getData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadBatteryStatus.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+<div class="viewcode-block" id="ReadBatteryStatus.getData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadBatteryStatus.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
     <span class="n">bd</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="n">volt</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">BangInt</span><span class="p">((</span><span class="n">bd</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">bd</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
     <span class="n">indicator</span> <span class="o">=</span> <span class="n">bd</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -362,7 +362,7 @@
 
 
 <span class="k">class</span> <span class="nc">ReadFirmwareVersion</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="ReadFirmwareVersion"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadFirmwareVersion">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadFirmwareVersion"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadFirmwareVersion">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  &quot;&quot;&quot;</span>
 
   <span class="n">code</span> <span class="o">=</span> <span class="mi">116</span>
@@ -372,12 +372,12 @@
   <span class="n">maxRecords</span> <span class="o">=</span> <span class="mi">1</span>
 
   <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadFirmwareVersion.getData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadFirmwareVersion.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+<div class="viewcode-block" id="ReadFirmwareVersion.getData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadFirmwareVersion.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
     <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;READ FIRMWARE HEX:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
     <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span> <span class="nb">chr</span><span class="p">(</span><span class="mh">0x0b</span><span class="p">)</span> <span class="p">)[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span> <span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">ReadRemainingInsulin</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="ReadRemainingInsulin"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadRemainingInsulin">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadRemainingInsulin"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadRemainingInsulin">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  &quot;&quot;&quot;</span>
 
   <span class="n">code</span> <span class="o">=</span> <span class="mi">115</span>
@@ -387,13 +387,13 @@
   <span class="n">maxRecords</span> <span class="o">=</span> <span class="mi">1</span>
 
   <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadRemainingInsulin.getData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadRemainingInsulin.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+<div class="viewcode-block" id="ReadRemainingInsulin.getData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadRemainingInsulin.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
     <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;READ remaining insulin:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">lib</span><span class="o">.</span><span class="n">BangInt</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span><span class="o">/</span><span class="mf">10.0</span>
 
 
 <span class="k">class</span> <span class="nc">ReadTotalsToday</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="ReadTotalsToday"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadTotalsToday">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadTotalsToday"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadTotalsToday">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  &quot;&quot;&quot;</span>
 
   <span class="n">code</span> <span class="o">=</span> <span class="mi">121</span>
@@ -403,7 +403,7 @@
   <span class="n">maxRecords</span> <span class="o">=</span> <span class="mi">1</span>
 
   <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadTotalsToday.getData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadTotalsToday.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+<div class="viewcode-block" id="ReadTotalsToday.getData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadTotalsToday.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
     <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;READ totals today:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
     <span class="n">totals</span> <span class="o">=</span> <span class="p">{</span>
       <span class="s">&#39;today&#39;</span><span class="p">:</span> <span class="n">lib</span><span class="o">.</span><span class="n">BangInt</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="mf">10.0</span><span class="p">,</span>
@@ -413,7 +413,7 @@
 
 
 <span class="k">class</span> <span class="nc">ReadRadioCtrlACL</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="ReadRadioCtrlACL"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadRadioCtrlACL">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadRadioCtrlACL"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadRadioCtrlACL">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  &quot;&quot;&quot;</span>
 
   <span class="n">code</span> <span class="o">=</span> <span class="mi">118</span>
@@ -423,7 +423,7 @@
   <span class="n">maxRecords</span> <span class="o">=</span> <span class="mi">1</span>
 
   <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadRadioCtrlACL.getData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadRadioCtrlACL.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+<div class="viewcode-block" id="ReadRadioCtrlACL.getData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadRadioCtrlACL.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
     <span class="n">ids</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
     <span class="n">ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span> <span class="p">)</span>
     <span class="n">ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">12</span><span class="p">])</span> <span class="p">)</span>
@@ -432,7 +432,7 @@
     <span class="k">return</span> <span class="n">ids</span>
 
 <span class="k">class</span> <span class="nc">ReadBasalTemp</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="ReadBasalTemp"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadBasalTemp">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadBasalTemp"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadBasalTemp">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  MM511 - 120</span>
 <span class="sd">  MM512 and up - opcode 152</span>
 <span class="sd">  # strokes per basalunit = 40 - mm12, 10 in mm11</span>
@@ -445,14 +445,14 @@
   <span class="n">maxRecords</span> <span class="o">=</span> <span class="mi">1</span>
 
   <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadBasalTemp.getData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadBasalTemp.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+<div class="viewcode-block" id="ReadBasalTemp.getData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadBasalTemp.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
     <span class="n">rate</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">BangInt</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span><span class="o">/</span><span class="mf">40.0</span>
     <span class="n">duration</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">BangInt</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span>
     <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;READ temporary basal:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
     <span class="k">return</span> <span class="p">{</span> <span class="s">&#39;rate&#39;</span><span class="p">:</span> <span class="n">rate</span><span class="p">,</span> <span class="s">&#39;duration&#39;</span><span class="p">:</span> <span class="n">duration</span> <span class="p">}</span>
 
 <span class="k">class</span> <span class="nc">ReadContrast</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="ReadContrast"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadContrast">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadContrast"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadContrast">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  &quot;&quot;&quot;</span>
 
   <span class="n">code</span> <span class="o">=</span> <span class="mi">195</span>
@@ -462,13 +462,13 @@
   <span class="n">maxRecords</span> <span class="o">=</span> <span class="mi">1</span>
 
   <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadContrast.getData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadContrast.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+<div class="viewcode-block" id="ReadContrast.getData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadContrast.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
     <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;READ contrast:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">data</span>
 
 
 <span class="k">class</span> <span class="nc">ReadSettings</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="ReadSettings"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadSettings">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadSettings"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadSettings">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  XXX: changed in MM512 to 192</span>
 
 <span class="sd">  &quot;&quot;&quot;</span>
@@ -484,13 +484,13 @@
   <span class="p">}</span>
 
   <span class="k">def</span> <span class="nf">alarm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">alarm</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadSettings.alarm"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadSettings.alarm">[docs]</a>    <span class="n">d</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;volume&#39;</span><span class="p">:</span> <span class="n">alarm</span><span class="p">,</span> <span class="s">&#39;mode&#39;</span><span class="p">:</span> <span class="mi">2</span> <span class="p">}</span>
+<div class="viewcode-block" id="ReadSettings.alarm"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadSettings.alarm">[docs]</a>    <span class="n">d</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;volume&#39;</span><span class="p">:</span> <span class="n">alarm</span><span class="p">,</span> <span class="s">&#39;mode&#39;</span><span class="p">:</span> <span class="mi">2</span> <span class="p">}</span>
     <span class="k">if</span> <span class="n">alarm</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
       <span class="n">d</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;volume&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s">&#39;mode&#39;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}</span>
     <span class="k">return</span> <span class="n">d</span>
     
   <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="ReadSettings.getData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadSettings.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+<div class="viewcode-block" id="ReadSettings.getData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadSettings.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
     <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;READ pump settings:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
     
 
@@ -529,7 +529,7 @@
     <span class="k">return</span> <span class="n">values</span>
 
 <span class="k">class</span> <span class="nc">ReadPumpState</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="ReadPumpState"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadPumpState">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadPumpState"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadPumpState">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    &gt;&gt;&gt; ReadPumpState(serial=&#39;665455&#39;).format() == ReadPumpState._test_ok</span>
 <span class="sd">    True</span>
 <span class="sd">  &quot;&quot;&quot;</span>
@@ -543,7 +543,7 @@
   <span class="n">maxRecords</span> <span class="o">=</span> <span class="mi">1</span>
 
 <span class="k">class</span> <span class="nc">ReadGlucoseHistory</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div>
-<div class="viewcode-block" id="ReadGlucoseHistory"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadGlucoseHistory">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadGlucoseHistory"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadGlucoseHistory">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  &quot;&quot;&quot;</span>
   <span class="n">descr</span> <span class="o">=</span> <span class="s">&quot;Read glucose history&quot;</span>
   <span class="n">code</span> <span class="o">=</span> <span class="mi">131</span>
@@ -553,7 +553,7 @@
 
 
 <span class="k">class</span> <span class="nc">ReadPumpModel</span><span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div>
-<div class="viewcode-block" id="ReadPumpModel"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadPumpModel">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ReadPumpModel"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadPumpModel">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    &gt;&gt;&gt; ReadPumpModel(serial=&#39;665455&#39;).format() == ReadPumpModel._test_ok</span>
 <span class="sd">    True</span>
 <span class="sd">  &quot;&quot;&quot;</span>
@@ -566,14 +566,14 @@
                          <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x8D</span><span class="p">,</span> <span class="mh">0x5B</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">])</span>
 
   <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="ReadPumpModel.getData"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.ReadPumpModel.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+<div class="viewcode-block" id="ReadPumpModel.getData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadPumpModel.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
     <span class="n">length</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">msg</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="o">+</span><span class="n">length</span><span class="p">]</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">msg</span>
     <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">do_commands</span><span class="p">(</span><span class="n">device</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="do_commands"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.do_commands">[docs]</a>  <span class="n">comm</span> <span class="o">=</span> <span class="n">ReadPumpModel</span><span class="p">(</span> <span class="n">serial</span><span class="o">=</span><span class="n">device</span><span class="o">.</span><span class="n">serial</span> <span class="p">)</span>
+<div class="viewcode-block" id="do_commands"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.do_commands">[docs]</a>  <span class="n">comm</span> <span class="o">=</span> <span class="n">ReadPumpModel</span><span class="p">(</span> <span class="n">serial</span><span class="o">=</span><span class="n">device</span><span class="o">.</span><span class="n">serial</span> <span class="p">)</span>
   <span class="n">device</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">comm</span><span class="p">)</span>
   <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;comm:</span><span class="si">%s</span><span class="s">:data:</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">comm</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">comm</span><span class="o">.</span><span class="n">getData</span><span class="p">(</span> <span class="p">),</span> <span class="s">&#39;data&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)))</span>
   <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;REMOTE PUMP MODEL NUMBER: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">comm</span><span class="o">.</span><span class="n">getData</span><span class="p">(</span> <span class="p">))</span>
@@ -640,7 +640,7 @@
   <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;comm:READ history data page!!!:</span><span class="se">\n</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="n">comm</span><span class="o">.</span><span class="n">getData</span><span class="p">(</span> <span class="p">))))</span>
 
 <span class="k">def</span> <span class="nf">get_pages</span><span class="p">(</span><span class="n">device</span><span class="p">):</span></div>
-<div class="viewcode-block" id="get_pages"><a class="viewcode-back" href="../../api/decocare.html#decocare.commands.get_pages">[docs]</a>  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;read cur page number&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="get_pages"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.get_pages">[docs]</a>  <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;read cur page number&quot;</span><span class="p">)</span>
   <span class="n">comm</span> <span class="o">=</span> <span class="n">ReadCurPageNumber</span><span class="p">(</span><span class="n">serial</span><span class="o">=</span><span class="n">device</span><span class="o">.</span><span class="n">serial</span> <span class="p">)</span>
   <span class="n">device</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">comm</span><span class="p">)</span>
   <span class="n">pages</span> <span class="o">=</span> <span class="n">comm</span><span class="o">.</span><span class="n">getData</span><span class="p">(</span> <span class="p">)</span>

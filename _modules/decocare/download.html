@@ -58,7 +58,7 @@
 <span class="kn">import</span> <span class="nn">commands</span>
 
 <span class="k">class</span> <span class="nc">Downloader</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-<div class="viewcode-block" id="Downloader"><a class="viewcode-back" href="../../api/decocare.html#decocare.download.Downloader">[docs]</a>  <span class="n">log_format</span> <span class="o">=</span> <span class="s">&#39;logs/&#39;</span>
+<div class="viewcode-block" id="Downloader"><a class="viewcode-back" href="../../api/download.html#decocare.download.Downloader">[docs]</a>  <span class="n">log_format</span> <span class="o">=</span> <span class="s">&#39;logs/&#39;</span>
   <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stick</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">log_format</span><span class="o">=</span><span class="n">log_format</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">stick</span> <span class="o">=</span> <span class="n">stick</span>
     <span class="n">stick</span><span class="o">.</span><span class="n">open</span><span class="p">(</span> <span class="p">)</span>
@@ -66,7 +66,7 @@
     <span class="bp">self</span><span class="o">.</span><span class="n">log_format</span> <span class="o">=</span> <span class="n">log_format</span>
 
   <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="Downloader.download"><a class="viewcode-back" href="../../api/decocare.html#decocare.download.Downloader.download">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Downloader.download"><a class="viewcode-back" href="../../api/download.html#decocare.download.Downloader.download">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Download a single page, copy paste from elsewhere.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -77,7 +77,7 @@
     <span class="n">comm</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">log_format</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">PageDownloader</span><span class="p">(</span><span class="n">Downloader</span><span class="p">):</span></div></div>
-<div class="viewcode-block" id="PageDownloader"><a class="viewcode-back" href="../../api/decocare.html#decocare.download.PageDownloader">[docs]</a>  <span class="n">log_format</span> <span class="o">=</span> <span class="s">&#39;logs/&#39;</span>
+<div class="viewcode-block" id="PageDownloader"><a class="viewcode-back" href="../../api/download.html#decocare.download.PageDownloader">[docs]</a>  <span class="n">log_format</span> <span class="o">=</span> <span class="s">&#39;logs/&#39;</span>
   <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stick</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">log_format</span><span class="o">=</span><span class="n">log_format</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">stick</span> <span class="o">=</span> <span class="n">stick</span>
     <span class="n">stick</span><span class="o">.</span><span class="n">open</span><span class="p">(</span> <span class="p">)</span>
@@ -85,7 +85,7 @@
     <span class="bp">self</span><span class="o">.</span><span class="n">log_format</span> <span class="o">=</span> <span class="n">log_format</span>
 
   <span class="k">def</span> <span class="nf">read_current</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<div class="viewcode-block" id="PageDownloader.read_current"><a class="viewcode-back" href="../../api/decocare.html#decocare.download.PageDownloader.read_current">[docs]</a>
+<div class="viewcode-block" id="PageDownloader.read_current"><a class="viewcode-back" href="../../api/download.html#decocare.download.PageDownloader.read_current">[docs]</a>
     <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;read cur page number&quot;</span><span class="p">)</span>
     <span class="n">comm</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">ReadCurPageNumber</span><span class="p">(</span> <span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">comm</span><span class="p">)</span>
@@ -95,7 +95,7 @@
 
 
   <span class="k">def</span> <span class="nf">download_page</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span></div>
-<div class="viewcode-block" id="PageDownloader.download_page"><a class="viewcode-back" href="../../api/decocare.html#decocare.download.PageDownloader.download_page">[docs]</a>    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;comm:XXX:READ HISTORY DATA page number: </span><span class="si">%r</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<div class="viewcode-block" id="PageDownloader.download_page"><a class="viewcode-back" href="../../api/download.html#decocare.download.PageDownloader.download_page">[docs]</a>    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;comm:XXX:READ HISTORY DATA page number: </span><span class="si">%r</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">))</span>
     <span class="n">comm</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">ReadHistoryData</span><span class="p">(</span><span class="n">serial</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="o">.</span><span class="n">serial</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">[</span> <span class="n">x</span> <span class="p">]</span> <span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">comm</span><span class="p">)</span>
     <span class="n">page</span> <span class="o">=</span> <span class="n">comm</span><span class="o">.</span><span class="n">getData</span><span class="p">(</span> <span class="p">)</span>
@@ -104,7 +104,7 @@
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">100</span><span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
-<div class="viewcode-block" id="PageDownloader.download"><a class="viewcode-back" href="../../api/decocare.html#decocare.download.PageDownloader.download">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">read_current</span><span class="p">(</span> <span class="p">)</span>
+<div class="viewcode-block" id="PageDownloader.download"><a class="viewcode-back" href="../../api/download.html#decocare.download.PageDownloader.download">[docs]</a>    <span class="bp">self</span><span class="o">.</span><span class="n">read_current</span><span class="p">(</span> <span class="p">)</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pages</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
       <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;read page </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">download_page</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>

@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>lib &mdash; insulaudit:decoding-carelink 0.0.3 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="insulaudit:decoding-carelink 0.0.3 documentation" href="../index.html" />
+    <link rel="up" title="API" href="index.html" />
+    <link rel="next" title="decocare" href="modules.html" />
+    <link rel="prev" title="History" href="history.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="decocare"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="history.html" title="History"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">API</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="lib">
+<span id="id1"></span><h1>lib<a class="headerlink" href="#lib" title="Permalink to this headline">¶</a></h1>
+<p>Sundry stuff to make working with data easier.</p>
+<div class="section" id="module-decocare.lib">
+<span id="lib-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">lib</span></tt> Module<a class="headerlink" href="#module-decocare.lib" title="Permalink to this headline">¶</a></h2>
+<p>This module provides some basic helper/formatting utilities.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">hexdump</span><span class="p">(</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">[</span><span class="mh">0x00</span><span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
+<span class="go">&#39;0000   0x00                       .&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="mh">0x00</span> <span class="o">==</span> <span class="n">HighByte</span><span class="p">(</span> <span class="mh">0x0F</span> <span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="mh">0x0F</span> <span class="o">==</span> <span class="n">LowByte</span><span class="p">(</span> <span class="mh">0x0F</span> <span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">CRC16CCITT</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">[</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span> <span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
+<span class="go">16845</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">CRC16CCITT</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">[</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x09</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+<span class="gp">... </span>                                 <span class="mh">0x05</span><span class="p">,</span> <span class="mh">0x0D</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x03</span> <span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
+<span class="go">29146</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">BangInt</span><span class="p">(</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">[</span>  <span class="mh">0x71</span><span class="p">,</span> <span class="mh">0xDA</span> <span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
+<span class="go">29146</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">BangInt</span><span class="p">(</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">[</span> <span class="mh">0x62</span><span class="p">,</span> <span class="mh">0xC2</span> <span class="p">]</span> <span class="p">)</span> <span class="p">)</span> <span class="o">==</span> <span class="n">CRC16CCITT</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">[</span> <span class="mi">2</span><span class="p">,</span> <span class="mh">0x06</span><span class="p">,</span> <span class="mh">0x08</span><span class="p">,</span> <span class="mi">3</span> <span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">CRC8</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">[</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0xFF</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
+<span class="go">177</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">BangInt</span><span class="p">(</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">[</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0X02</span> <span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
+<span class="go">514</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">BangLong</span><span class="p">(</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">[</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0X0</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mh">0x02</span> <span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
+<span class="go">514L</span>
+</pre></div>
+</div>
+<dl class="function">
+<dt id="decocare.lib.BangInt">
+<tt class="descclassname">decocare.lib.</tt><tt class="descname">BangInt</tt><big>(</big><em>ints</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#BangInt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.BangInt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="decocare.lib.BangLong">
+<tt class="descclassname">decocare.lib.</tt><tt class="descname">BangLong</tt><big>(</big><em>bytez</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#BangLong"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.BangLong" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="decocare.lib.CRC16CCITT">
+<em class="property">class </em><tt class="descclassname">decocare.lib.</tt><tt class="descname">CRC16CCITT</tt><a class="reference internal" href="../_modules/decocare/lib.html#CRC16CCITT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.CRC16CCITT" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="classmethod">
+<dt id="decocare.lib.CRC16CCITT.compute">
+<em class="property">classmethod </em><tt class="descname">compute</tt><big>(</big><em>klass</em>, <em>block</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#CRC16CCITT.compute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.CRC16CCITT.compute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.lib.CRC16CCITT.lookup">
+<tt class="descname">lookup</tt><em class="property"> = [0, 4129, 8258, 12387, 16516, 20645, 24774, 28903, 33032, 37161, 41290, 45419, 49548, 53677, 57806, 61935, 4657, 528, 12915, 8786, 21173, 17044, 29431, 25302, 37689, 33560, 45947, 41818, 54205, 50076, 62463, 58334, 9314, 13379, 1056, 5121, 25830, 29895, 17572, 21637, 42346, 46411, 34088, 38153, 58862, 62927, 50604, 54669, 13907, 9842, 5649, 1584, 30423, 26358, 22165, 18100, 46939, 42874, 38681, 34616, 63455, 59390, 55197, 51132, 18628, 22757, 26758, 30887, 2112, 6241, 10242, 14371, 51660, 55789, 59790, 63919, 35144, 39273, 43274, 47403, 23285, 19156, 31415, 27286, 6769, 2640, 14899, 10770, 56317, 52188, 64447, 60318, 39801, 35672, 47931, 43802, 27814, 31879, 19684, 23749, 11298, 15363, 3168, 7233, 60846, 64911, 52716, 56781, 44330, 48395, 36200, 40265, 32407, 28342, 24277, 20212, 15891, 11826, 7761, 3696, 65439, 61374, 57309, 53244, 48923, 44858, 40793, 36728, 37256, 33193, 45514, 41451, 53516, 49453, 61774, 57711, 4224, 161, 12482, 8419, 20484, 16421, 28742, 24679, 33721, 37784, 41979, 46042, 49981, 54044, 58239, 62302, 689, 4752, 8947, 13010, 16949, 21012, 25207, 29270, 46570, 42443, 38312, 34185, 62830, 58703, 54572, 50445, 13538, 9411, 5280, 1153, 29798, 25671, 21540, 17413, 42971, 47098, 34713, 38840, 59231, 63358, 50973, 55100, 9939, 14066, 1681, 5808, 26199, 30326, 17941, 22068, 55628, 51565, 63758, 59695, 39368, 35305, 47498, 43435, 22596, 18533, 30726, 26663, 6336, 2273, 14466, 10403, 52093, 56156, 60223, 64286, 35833, 39896, 43963, 48026, 19061, 23124, 27191, 31254, 2801, 6864, 10931, 14994, 64814, 60687, 56684, 52557, 48554, 44427, 40424, 36297, 31782, 27655, 23652, 19525, 15522, 11395, 7392, 3265, 61215, 65342, 53085, 57212, 44955, 49082, 36825, 40952, 28183, 32310, 20053, 24180, 11923, 16050, 3793, 7920]</em><a class="headerlink" href="#decocare.lib.CRC16CCITT.lookup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.lib.CRC8">
+<em class="property">class </em><tt class="descclassname">decocare.lib.</tt><tt class="descname">CRC8</tt><a class="reference internal" href="../_modules/decocare/lib.html#CRC8"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.CRC8" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="classmethod">
+<dt id="decocare.lib.CRC8.compute">
+<em class="property">classmethod </em><tt class="descname">compute</tt><big>(</big><em>klass</em>, <em>block</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#CRC8.compute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.CRC8.compute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.lib.CRC8.lookup">
+<tt class="descname">lookup</tt><em class="property"> = [0, 155, 173, 54, 193, 90, 108, 247, 25, 130, 180, 47, 216, 67, 117, 238, 50, 169, 159, 4, 243, 104, 94, 197, 43, 176, 134, 29, 234, 113, 71, 220, 100, 255, 201, 82, 165, 62, 8, 147, 125, 230, 208, 75, 188, 39, 17, 138, 86, 205, 251, 96, 151, 12, 58, 161, 79, 212, 226, 121, 142, 21, 35, 184, 200, 83, 101, 254, 9, 146, 164, 63, 209, 74, 124, 231, 16, 139, 189, 38, 250, 97, 87, 204, 59, 160, 150, 13, 227, 120, 78, 213, 34, 185, 143, 20, 172, 55, 1, 154, 109, 246, 192, 91, 181, 46, 24, 131, 116, 239, 217, 66, 158, 5, 51, 168, 95, 196, 242, 105, 135, 28, 42, 177, 70, 221, 235, 112, 11, 144, 166, 61, 202, 81, 103, 252, 18, 137, 191, 36, 211, 72, 126, 229, 57, 162, 148, 15, 248, 99, 85, 206, 32, 187, 141, 22, 225, 122, 76, 215, 111, 244, 194, 89, 174, 53, 3, 152, 118, 237, 219, 64, 183, 44, 26, 129, 93, 198, 240, 107, 156, 7, 49, 170, 68, 223, 233, 114, 133, 30, 40, 179, 195, 88, 110, 245, 2, 153, 175, 52, 218, 65, 119, 236, 27, 128, 182, 45, 241, 106, 92, 199, 48, 171, 157, 6, 232, 115, 69, 222, 41, 178, 132, 31, 167, 60, 10, 145, 102, 253, 203, 80, 190, 37, 19, 136, 127, 228, 210, 73, 149, 14, 56, 163, 84, 207, 249, 98, 140, 23, 33, 186, 77, 214, 224, 123]</em><a class="headerlink" href="#decocare.lib.CRC8.lookup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="decocare.lib.HighByte">
+<tt class="descclassname">decocare.lib.</tt><tt class="descname">HighByte</tt><big>(</big><em>arg</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#HighByte"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.HighByte" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="decocare.lib.LowByte">
+<tt class="descclassname">decocare.lib.</tt><tt class="descname">LowByte</tt><big>(</big><em>arg</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#LowByte"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.LowByte" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="decocare.lib.decodeDC">
+<tt class="descclassname">decocare.lib.</tt><tt class="descname">decodeDC</tt><big>(</big><em>msg</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#decodeDC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.decodeDC" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">decodeDC</span><span class="p">(</span><span class="n">_decode_test_1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">_decode_result_1</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">decodeDC</span><span class="p">(</span><span class="n">_decode_test_2</span><span class="p">)</span> <span class="o">==</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">_decode_result_2</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="decocare.lib.decodeDCByte">
+<tt class="descclassname">decocare.lib.</tt><tt class="descname">decodeDCByte</tt><big>(</big><em>B</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#decodeDCByte"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.decodeDCByte" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="decocare.lib.encodeDC">
+<tt class="descclassname">decocare.lib.</tt><tt class="descname">encodeDC</tt><big>(</big><em>msg</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#encodeDC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.encodeDC" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">encodeDC</span><span class="p">(</span><span class="n">_enc_test_1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">_enc_result_1</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">encodeDC</span><span class="p">(</span><span class="n">_enc_test_2</span><span class="p">)</span> <span class="o">==</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">_enc_result_2</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="decocare.lib.hexdump">
+<tt class="descclassname">decocare.lib.</tt><tt class="descname">hexdump</tt><big>(</big><em>src</em>, <em>length=8</em>, <em>indent=0</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#hexdump"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.hexdump" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a string representing the bytes in src, length bytes per
+line.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="decocare.lib.int_dump">
+<tt class="descclassname">decocare.lib.</tt><tt class="descname">int_dump</tt><big>(</big><em>stream</em>, <em>indent=0</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#int_dump"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.int_dump" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">int_dump</span><span class="p">(</span><span class="nb">bytearray</span><span class="p">([</span><span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">]))</span>
+<span class="go">&#39;   1    2&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="decocare.lib.makeByte">
+<tt class="descclassname">decocare.lib.</tt><tt class="descname">makeByte</tt><big>(</big><em>highNibble</em>, <em>lowNibble</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#makeByte"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.makeByte" title="Permalink to this definition">¶</a></dt>
+<dd><p>0 &lt;= highNibble &lt;= 15
+0 &lt;= lowNibble  &lt;= 15
+0 &lt;= result     &lt;= 255</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.lib.parse">
+<em class="property">class </em><tt class="descclassname">decocare.lib.</tt><tt class="descname">parse</tt><a class="reference internal" href="../_modules/decocare/lib.html#parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.parse" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="staticmethod">
+<dt id="decocare.lib.parse.date">
+<em class="property">static </em><tt class="descname">date</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#parse.date"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.parse.date" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse</span><span class="o">.</span><span class="n">date</span><span class="p">(</span> <span class="s">&#39;2010-11-10T01:46:00&#39;</span> <span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span> <span class="p">)</span>
+<span class="go">&#39;2010-11-10T01:46:00&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse</span><span class="o">.</span><span class="n">date</span><span class="p">(</span> <span class="s">&#39;2010-11-10 01:46:00&#39;</span> <span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span> <span class="p">)</span>
+<span class="go">&#39;2010-11-10T01:46:00&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse</span><span class="o">.</span><span class="n">date</span><span class="p">(</span> <span class="s">&#39;2010-11-10 01:46PM&#39;</span> <span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span> <span class="p">)</span>
+<span class="go">&#39;2010-11-10T13:46:00&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse</span><span class="o">.</span><span class="n">date</span><span class="p">(</span> <span class="s">&#39;2010-11-10 13:46&#39;</span> <span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span> <span class="p">)</span>
+<span class="go">&#39;2010-11-10T13:46:00&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse</span><span class="o">.</span><span class="n">date</span><span class="p">(</span> <span class="s">&#39;2010-11-10 1:46AM&#39;</span> <span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span> <span class="p">)</span>
+<span class="go">&#39;2010-11-10T01:46:00&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">lib</a><ul>
+<li><a class="reference internal" href="#module-decocare.lib"><tt class="docutils literal"><span class="pre">lib</span></tt> Module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="history.html"
+                        title="previous chapter">History</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="next chapter">decocare</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/api/lib.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="decocare"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="history.html" title="History"
+             >previous</a> |</li>
+        <li><a href="../index.html">insulaudit:decoding-carelink 0.0.3 documentation</a> &raquo;</li>
+          <li><a href="index.html" >API</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Insulaudit contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
