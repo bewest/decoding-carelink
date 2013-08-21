@@ -1,5 +1,5 @@
 INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
-INFO:link:Link opened serial port: Serial<id=0x1891bd0, open=True>(port='/dev/ttyUSB0', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.5, xonxoff=False, rtscts=False, dsrdtr=False)
+INFO:link:Link opened serial port: Serial<id=0x11f3dd0, open=True>(port='/dev/ttyUSB0', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.5, xonxoff=False, rtscts=False, dsrdtr=False)
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
@@ -8,7 +8,7 @@ INFO:root:usb.write.len: 3
 DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0x0b 0x2c 0x00 0x00 0x00    .U..,...
+0000   0x01 0x55 0x00 0x0c 0x17 0x00 0x00 0x00    .U......
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -17,8 +17,8 @@ INFO:root:usb.read.raw:
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:finished processing ProductInfo:0x04, {'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0b2c00'}
-INFO:__main__:{'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0b2c00'}
+INFO:__main__:finished processing ProductInfo:0x04, {'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0c1700'}
+INFO:__main__:{'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0c1700'}
 INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
@@ -28,7 +28,7 @@ INFO:root:usb.write.len: 3
 DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0xc1 0x2c 0x00 0x00 0x00    .U..,...
+0000   0x01 0x55 0x00 0xbe 0x17 0x00 0x00 0x00    .U......
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -37,9 +37,9 @@ INFO:root:usb.read.raw:
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:193
-INFO:__main__:finished processing SignalStrength:0x06 0x00, 193
-INFO:__main__:we seem to have found a nice signal strength of: 193
+INFO:__main__:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:190
+INFO:__main__:finished processing SignalStrength:0x06 0x00, 190
+INFO:__main__:we seem to have found a nice signal strength of: 190
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
@@ -48,7 +48,7 @@ INFO:root:usb.write.len: 3
 DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0x0b 0x2c 0x00 0x00 0x00    .U..,...
+0000   0x01 0x55 0x00 0x0c 0x17 0x00 0x00 0x00    .U......
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -57,8 +57,8 @@ INFO:root:usb.read.raw:
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:finished processing ProductInfo:0x04, {'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0b2c00'}
-INFO:__main__:{'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0b2c00'}
+INFO:__main__:finished processing ProductInfo:0x04, {'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0c1700'}
+INFO:__main__:{'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0c1700'}
 INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
@@ -68,7 +68,7 @@ INFO:root:usb.write.len: 3
 DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0xc0 0x2c 0x00 0x00 0x00    .U..,...
+0000   0x01 0x55 0x00 0xbf 0x17 0x00 0x00 0x00    .U......
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -77,9 +77,9 @@ INFO:root:usb.read.raw:
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:192
-INFO:__main__:finished processing SignalStrength:0x06 0x00, 192
-INFO:__main__:we seem to have found a nice signal strength of: 192
+INFO:__main__:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:191
+INFO:__main__:finished processing SignalStrength:0x06 0x00, 191
+INFO:__main__:we seem to have found a nice signal strength of: 191
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
@@ -88,7 +88,7 @@ INFO:root:usb.write.len: 3
 DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0x0b 0x2c 0x00 0x00 0x00    .U..,...
+0000   0x01 0x55 0x00 0x0c 0x17 0x00 0x00 0x00    .U......
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -97,8 +97,8 @@ INFO:root:usb.read.raw:
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:finished processing ProductInfo:0x04, {'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0b2c00'}
-INFO:__main__:{'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0b2c00'}
+INFO:__main__:finished processing ProductInfo:0x04, {'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0c1700'}
+INFO:__main__:{'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0c1700'}
 INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
@@ -108,7 +108,7 @@ INFO:root:usb.write.len: 3
 DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0xbe 0x2c 0x00 0x00 0x00    .U..,...
+0000   0x01 0x55 0x00 0xbe 0x17 0x00 0x00 0x00    .U......
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -129,7 +129,7 @@ INFO:root:usb.write.len: 3
 DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0x0b 0x2c 0x00 0x00 0x00    .U..,...
+0000   0x01 0x55 0x00 0x0c 0x17 0x00 0x00 0x00    .U......
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -138,12 +138,12 @@ INFO:root:usb.read.raw:
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:finished processing ProductInfo:0x04, {'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0b2c00'}
+INFO:__main__:finished processing ProductInfo:0x04, {'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0c1700'}
 INFO:__main__:{'description': 'ComLink II',
  'interfaces': [(0, 'Paradigm RF'), (1, 'USB')],
  'product.version': '0.0',
  'rf.freq': '916.5Mhz',
- 'serial': '0b2c00',
+ 'serial': '0c1700',
  'software.version': '1.16'}
 INFO:__main__:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
@@ -154,7 +154,7 @@ INFO:root:usb.write.len: 3
 DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0xc8 0x2c 0x00 0x00 0x00    .U..,...
+0000   0x01 0x55 0x00 0xc2 0x17 0x00 0x00 0x00    .U......
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -163,9 +163,9 @@ INFO:root:usb.read.raw:
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:__main__:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:200
-INFO:__main__:finished processing SignalStrength:0x06 0x00, 200
-INFO:__main__:we seem to have found a nice signal strength of: 200
+INFO:__main__:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:194
+INFO:__main__:finished processing SignalStrength:0x06 0x00, 194
+INFO:__main__:we seem to have found a nice signal strength of: 194
 INFO:__main__:at this point, we could issue remote commands to a medical
     device, let's inspect the interfaces
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
@@ -569,8 +569,8 @@ INFO:__main__:INTERFACE STATS:
          'packets.received': 23L,
          'packets.transmit': 23L}}
 INFO:__main__:howdy! all done looking at the stick
-python pump/stick.py /dev/ttyUSB0
-	elapsed 0:02.03
-	user 0.17
-	system 0.10
-	CPU 13% (0text+0data 42304max)k
+python decocare/stick.py /dev/ttyUSB0
+	elapsed 0:01.43
+	user 0.16
+	system 0.06
+	CPU 15% (0text+0data 42544max)k
