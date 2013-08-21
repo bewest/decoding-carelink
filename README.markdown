@@ -20,6 +20,29 @@ your behalf:
 * alarms, etc...
 * current settings
 
+## Install first run:
+
+This only needs to be done once:
+
+```bash
+git clone https://github.com/bewest/decoding-carelink.git
+cd decoding-carelink
+sudo python ez_setup.py # only if you rarely use python
+sudo python setup.py develop
+git checkout -b myname/init
+# all done
+
+```
+Now you are ready for the demo:
+
+```bash
+$ . ./bin/common # import some handy run_* functions
+$ dmesg | grep ttyUSB # notice the path to the new ttyUSB$x
+$ sudo ./insert.sh
+$ ./status-quo.sh /dev/ttyUSB0
+
+```
+
 ## Demo
 
 Talk to my test insulin pump over the internet.
