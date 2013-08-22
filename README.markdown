@@ -20,7 +20,7 @@ your behalf:
 * alarms, etc...
 * current settings
 
-## Install first run:
+## Install first run
 
 This only needs to be done once:
 
@@ -29,26 +29,77 @@ git clone https://github.com/bewest/decoding-carelink.git
 cd decoding-carelink
 sudo python ez_setup.py # only if you rarely use python
 sudo python setup.py develop
-git checkout -b myname/init
+git checkout -b myname/init # replace <myname> with your name
 # all done
-
 ```
-Now you are ready for the demo:
 
+Congratulations, now you are ready for the demo:
+Plug in the carelink usb stick, and run this:
 ```bash
 dmesg | grep ttyUSB # notice the new ttyUSB$x
 sudo ./insert.sh
-./status-quo.sh /dev/ttyUSB0 <pump-serial>
-# email me your results like this:
-git bundle create myname-expr.bundle master..myname/init
-
 ```
 
-Whatever your branch name is, this will create several log files for me.
+You are all done with setup.
+Here's how to test just the usb stick, then we'll run the full suite of
+experiments.
+
+* on **MAC** the `PORT` is called `/dev/tty.serial` or something.
+* on **windows** the `PORT` is called `COM1` or something
+* on **Linux** the `PORT` is called `/dev/ttyUSBx` or something
+
+```bash
+python decocare/stick.py /dev/ttyUSB0 # on windows this is called COM1
+# should get a bunch of output, notably some counters called INTERFACE STATS
+# run all experiments:
+./status-quo.sh /dev/ttyUSB0 <pump-serial> # use your pump's serial number
+```
+
+Fantastic.
+Send me your results!
+
+Do this every time, after you run some experiments:
+```bash
+git commit -avm 'for @bewest, these are @<my-name> results'
+```
+
+Set up for sending me results.
+```bash
+# email me your results like this:
+git bundle create myname-expr.bundle master..myname/init
+# you can send me myname-expr.bundle in an email
+```
+
+Even better, [fork the repo](https://github.com/bewest/decoding-carelink/fork)
+and setup to for easy.
+```bash
+# add your fork like this:
+git remote rename origin author
+git remote add origin git@github.com:<my-user-name>/decoding-carelink.git
+git push -u origin myname/init
+```
+
+
+Now you can do this easily:
+```bash
+./status-quo.sh /dev/ttyUSB0 <pump-serial> # use your pump's serial number
+git commit -avm 'for @bewest, these are @<my-name> results'
+git push -u origin myname/init
+```
+
+Repeat.  The easiest way to see what happened is to look at
+explain.log, and use `git diff` and `git show`.  Pushing to github as
+shown above will allow everyone to discuss our analysis together.
+
+There are several log files created for each experiment.
+
 
 ## Demo
 
+> If you don't want to use your own equipment, I've made some of my
+> test equipment available.
 Talk to my test insulin pump over the internet.
+
 Requires `socat` and `python 2.7`.  The script [`./bin/socat_run_app.sh`](https://github.com/bewest/decoding-carelink/blob/master/bin/socat_run_app.sh)
 will connect to my server, `bewest.io:8080` where my test insulin
 pump, serial `208850` is waiting to talk to you.
