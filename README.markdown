@@ -36,12 +36,15 @@ git checkout -b myname/init
 Now you are ready for the demo:
 
 ```bash
-$ . ./bin/common # import some handy run_* functions
-$ dmesg | grep ttyUSB # notice the path to the new ttyUSB$x
-$ sudo ./insert.sh
-$ ./status-quo.sh /dev/ttyUSB0
+dmesg | grep ttyUSB # notice the new ttyUSB$x
+sudo ./insert.sh
+./status-quo.sh /dev/ttyUSB0 <pump-serial>
+# email me your results like this:
+git bundle create myname-expr.bundle master..myname/init
 
 ```
+
+Whatever your branch name is, this will create several log files for me.
 
 ## Demo
 
