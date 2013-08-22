@@ -1,5 +1,5 @@
 INFO:__main__:howdy! I'm going to take a look at your pump.
-INFO:link:Link opened serial port: Serial<id=0x12c5990, open=True>(port='/dev/ttyUSB0', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.2, xonxoff=False, rtscts=False, dsrdtr=False)
+INFO:link:Link opened serial port: Serial<id=0x2177d90, open=True>(port='/dev/ttyUSB0', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.2, xonxoff=False, rtscts=False, dsrdtr=False)
 INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
 INFO:stick:send_force_read: attempt 0/5 send command, read until we get something within some timeout
 INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
@@ -8,7 +8,7 @@ INFO:root:usb.write.len: 3
 DEBUG:stick:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0x0b 0x30 0x00 0x00 0x00    .U..0...
+0000   0x01 0x55 0x00 0x0c 0x17 0x00 0x00 0x00    .U......
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -17,8 +17,8 @@ INFO:root:usb.read.raw:
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:stick:finished processing ProductInfo:0x04, {'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0b3000'}
-INFO:stick:{'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0b3000'}
+INFO:stick:finished processing ProductInfo:0x04, {'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0c1700'}
+INFO:stick:{'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0c1700'}
 INFO:stick:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
 INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
 INFO:stick:send_force_read: attempt 0/5 send command, read until we get something within some timeout
@@ -28,7 +28,7 @@ INFO:root:usb.write.len: 3
 DEBUG:stick:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0xc1 0x30 0x00 0x00 0x00    .U..0...
+0000   0x01 0x55 0x00 0xbc 0x17 0x00 0x00 0x00    .U......
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -37,9 +37,9 @@ INFO:root:usb.read.raw:
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:stick:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:193
-INFO:stick:finished processing SignalStrength:0x06 0x00, 193
-INFO:stick:we seem to have found a nice signal strength of: 193
+INFO:stick:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:188
+INFO:stick:finished processing SignalStrength:0x06 0x00, 188
+INFO:stick:we seem to have found a nice signal strength of: 188
 INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
 INFO:stick:send_force_read: attempt 0/5 send command, read until we get something within some timeout
 INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
@@ -48,7 +48,7 @@ INFO:root:usb.write.len: 3
 DEBUG:stick:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0x0b 0x30 0x00 0x00 0x00    .U..0...
+0000   0x01 0x55 0x00 0x0c 0x17 0x00 0x00 0x00    .U......
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -57,8 +57,8 @@ INFO:root:usb.read.raw:
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:stick:finished processing ProductInfo:0x04, {'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0b3000'}
-INFO:stick:{'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0b3000'}
+INFO:stick:finished processing ProductInfo:0x04, {'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0c1700'}
+INFO:stick:{'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0c1700'}
 INFO:stick:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
 INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
 INFO:stick:send_force_read: attempt 0/5 send command, read until we get something within some timeout
@@ -68,7 +68,7 @@ INFO:root:usb.write.len: 3
 DEBUG:stick:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0xc3 0x30 0x00 0x00 0x00    .U..0...
+0000   0x01 0x55 0x00 0xc3 0x17 0x00 0x00 0x00    .U......
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -88,7 +88,7 @@ INFO:root:usb.write.len: 3
 DEBUG:stick:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0x0b 0x30 0x00 0x00 0x00    .U..0...
+0000   0x01 0x55 0x00 0x0c 0x17 0x00 0x00 0x00    .U......
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -97,8 +97,8 @@ INFO:root:usb.read.raw:
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:stick:finished processing ProductInfo:0x04, {'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0b3000'}
-INFO:stick:{'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0b3000'}
+INFO:stick:finished processing ProductInfo:0x04, {'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0c1700'}
+INFO:stick:{'description': 'ComLink II', 'software.version': '1.16', 'interfaces': [(0, 'Paradigm RF'), (1, 'USB')], 'product.version': '0.0', 'rf.freq': '916.5Mhz', 'serial': '0c1700'}
 INFO:stick:get signal strength of Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>]
 INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<SignalStrength:0x06 0x00:size(64)>] processing SignalStrength:0x06 0x00)
 INFO:stick:send_force_read: attempt 0/5 send command, read until we get something within some timeout
@@ -108,7 +108,7 @@ INFO:root:usb.write.len: 3
 DEBUG:stick:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x01 0x55 0x00 0xbb 0x30 0x00 0x00 0x00    .U..0...
+0000   0x01 0x55 0x00 0xbe 0x17 0x00 0x00 0x00    .U......
 0008   0x00 0x43 0x6f 0x6d 0x4c 0x69 0x6e 0x6b    .ComLink
 0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
 0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -117,10 +117,10 @@ INFO:root:usb.read.raw:
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:stick:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:187
-INFO:stick:finished processing SignalStrength:0x06 0x00, 187
-INFO:stick:we seem to have found a nice signal strength of: 187
-INFO:__main__:setting up to talk with 047006
+INFO:stick:<SignalStrength:0x06 0x00:size(64)>:readSignalStrength:190
+INFO:stick:finished processing SignalStrength:0x06 0x00, 190
+INFO:stick:we seem to have found a nice signal strength of: 190
+INFO:__main__:setting up to talk with 665455
 INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] processing UsbStats:0x05 0x01)
 INFO:stick:send_force_read: attempt 0/5 send command, read until we get something within some timeout
 INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<UsbStats:0x05 0x01:size(64)>] sending UsbStats:0x05 0x01)
@@ -130,15 +130,15 @@ DEBUG:stick:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
 0000   0x01 0x55 0x00 0x00 0x00 0x00 0x00 0x00    .U......
-0008   0x00 0x00 0xde 0x00 0x00 0x00 0xde 0x00    ........
-0010   0xdf 0x00 0xfb 0x00 0xde 0x04 0x00 0x00    ........
+0008   0x00 0x03 0x91 0x00 0x00 0x03 0x91 0x03    ........
+0010   0x92 0x05 0x3c 0x03 0x91 0x04 0x00 0x00    ..<.....
 0018   0x05 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 222L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 222L, 'errors.crc': 0}
+INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 913L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 913L, 'errors.crc': 0}
 INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] processing RadioStats:0x05 0x00)
 INFO:stick:send_force_read: attempt 0/5 send command, read until we get something within some timeout
 INFO:stick:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<RadioStats:0x05 0x00:size(64)>] sending RadioStats:0x05 0x00)
@@ -148,53 +148,53 @@ DEBUG:stick:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
 0000   0x01 0x55 0x00 0x00 0x00 0x00 0x00 0x00    .U......
-0008   0x00 0x00 0x21 0x00 0x00 0x00 0x22 0x00    ..!...".
-0010   0x00 0x00 0x0f 0x00 0x05 0x00 0x10 0x00    ........
-0018   0x1a 0x00 0x03 0x00 0x02 0x00 0x00 0x00    ........
-0020   0x00 0x01 0x00 0xf2 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x02 0x98 0x00 0x00 0x02 0xbe 0x00    ........
+0010   0x00 0x00 0x36 0x00 0x29 0x02 0x60 0x02    ..6.).`.
+0018   0x6e 0x00 0x28 0x00 0x01 0x00 0x00 0x00    n.(.....
+0020   0x00 0x01 0x00 0x6f 0x00 0x00 0x00 0x00    ...o....
 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 34L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 33L, 'errors.crc': 0}
+INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 702L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 664L, 'errors.crc': 0}
 INFO:__main__:{'radio': {'errors.crc': 0,
            'errors.naks': 0,
            'errors.sequence': 0,
            'errors.timeouts': 0,
-           'packets.received': 33L,
-           'packets.transmit': 34L},
+           'packets.received': 664L,
+           'packets.transmit': 702L},
  'usb': {'errors.crc': 0,
          'errors.naks': 0,
          'errors.sequence': 0,
          'errors.timeouts': 0,
-         'packets.received': 222L,
-         'packets.transmit': 222L}}
+         'packets.received': 913L,
+         'packets.transmit': 913L}}
 INFO:__main__:BEGIN POWER CONTROL
-PowerControl SERIAL 047006
+PowerControl SERIAL 665455
 INFO:__main__:execute attempt: 1
 INFO:__main__:session transferring packet
 INFO:stick:transmit_packet:write:<TransmitPacket:PowerControl:data:unknown>
 INFO:stick:link Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<TransmitPacket:PowerControl:data:unknown>] processing TransmitPacket:PowerControl:data:unknown)
 INFO:stick:send_force_read: attempt 0/5 send command, read until we get something within some timeout
 INFO:stick:link Stick transmit[TransmitPacket:PowerControl:data:unknown] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<TransmitPacket:PowerControl:data:unknown>] sending TransmitPacket:PowerControl:data:unknown)
-DEBUG:stick:[1, 0, 167, 1, 4, 112, 6, 128, 2, 85, 0, 0, 0, 93, 252, 1, 10, 162]
+DEBUG:stick:[1, 0, 167, 1, 102, 84, 85, 128, 2, 85, 0, 0, 0, 93, 230, 1, 10, 162]
 INFO:root:usb.write.len: 18
-0000   0x01 0x00 0xa7 0x01 0x04 0x70 0x06 0x80    .....p..
-0008   0x02 0x55 0x00 0x00 0x00 0x5d 0xfc 0x01    .U...]..
+0000   0x01 0x00 0xa7 0x01 0x66 0x54 0x55 0x80    ....fTU.
+0008   0x02 0x55 0x00 0x00 0x00 0x5d 0xe6 0x01    .U...]..
 0010   0x0a 0xa2                                  ..
 DEBUG:stick:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
 0000   0x01 0x55 0x00 0x00 0x00 0x00 0x00 0x00    .U......
-0008   0x00 0x00 0x21 0x00 0x00 0x00 0x22 0x00    ..!...".
-0010   0x00 0x00 0x0f 0x00 0x05 0x00 0x10 0x00    ........
-0018   0x1a 0x00 0x03 0x00 0x02 0x00 0x00 0x00    ........
-0020   0x00 0x01 0x00 0xf2 0x00 0x00 0x00 0x00    ........
+0008   0x00 0x02 0x98 0x00 0x00 0x02 0xbe 0x00    ........
+0010   0x00 0x00 0x36 0x00 0x29 0x02 0x60 0x02    ..6.).`.
+0018   0x6e 0x00 0x28 0x00 0x01 0x00 0x00 0x00    n.(.....
+0020   0x00 0x01 0x00 0x6f 0x00 0x00 0x00 0x00    ...o....
 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:stick:finished processing TransmitPacket:PowerControl:data:unknown, bytearray(b'\x00\x00\x00\x00\x00\x00\x00!\x00\x00\x00"\x00\x00\x00\x0f\x00\x05\x00\x10\x00\x1a\x00\x03\x00\x02\x00\x00\x00\x00\x01\x00\xf2\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+INFO:stick:finished processing TransmitPacket:PowerControl:data:unknown, bytearray(b'\x00\x00\x00\x00\x00\x00\x02\x98\x00\x00\x02\xbe\x00\x00\x006\x00)\x02`\x02n\x00(\x00\x01\x00\x00\x00\x00\x01\x00o\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
 INFO:__main__:sleeping 17 before download
 INFO:__main__:no download required
 INFO:__main__:finished executing:PowerControl:data:unknown
@@ -203,11 +203,11 @@ Traceback (most recent call last):
   File "decocare/session.py", line 127, in <module>
     session.power_control( )
   File "decocare/session.py", line 83, in power_control
-    log.info('manually download PowerControl serial' % serial)
-NameError: global name 'serial' is not defined
+    log.info('manually download PowerControl serial' % self.serial)
+TypeError: not all arguments converted during string formatting
 Command exited with non-zero status 1
-python decocare/session.py /dev/ttyUSB0 047006
-	elapsed 0:17.15
-	user 0.09
-	system 0.02
-	CPU 0% (0text+0data 60032max)k
+python decocare/session.py /dev/ttyUSB0 665455
+	elapsed 0:17.66
+	user 0.14
+	system 0.07
+	CPU 1% (0text+0data 59856max)k
