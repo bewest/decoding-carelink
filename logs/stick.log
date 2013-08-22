@@ -1,8 +1,0 @@
-usage:
-decocare/stick.py /dev/ttyUSB0
-Command exited with non-zero status 1
-python decocare/stick.py
-	elapsed 0:00.17
-	user 0.12
-	system 0.04
-	CPU 94% (0text+0data 40864max)k
