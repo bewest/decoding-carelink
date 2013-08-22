@@ -3,8 +3,9 @@
 
 CMD="$*"
 NAME=$0
-PORT=${1-'/dev/ttyUSB0'}
-SERIAL=${2-'208850'}
+export PORT=${1-'/dev/ttyUSB0'}
+export SERIAL=${2-'208850'}
+
 
 . bin/common
 
