@@ -318,7 +318,8 @@ def find_dates(stream):
         print lib.hexdump(extra, indent=4)
         print "##### DEBUG DECIMAL"
         print int_dump(extra, indent=11)
-        print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
+        if history.parse_date(bolus):
+          print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
         break
 
     if datetime is not None or Record.is_midnight(head):
