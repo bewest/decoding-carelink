@@ -268,6 +268,8 @@ class ReadCurPageNumber(PumpCommand):
   def getData(self):
     data = self.data
     log.info("XXX: READ cur page number:\n%s" % lib.hexdump(data))
+    if len(data) == 1:
+      return int(data[0])
     return lib.BangLong(data[0:4])
 
 
@@ -460,6 +462,9 @@ class ReadSettings(PumpCommand):
     data = self.data
     log.info("READ pump settings:\n%s" % lib.hexdump(data))
     
+    if len(data) < 2:
+      log.info("pump settings: unsupported version, sorry")
+      return data
 
     auto_off_duration_hrs = data[0]
     alarm = self.alarm(data[1])
