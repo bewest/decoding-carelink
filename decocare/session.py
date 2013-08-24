@@ -80,7 +80,7 @@ class Pump(Session):
     print "PowerControl SERIAL", self.serial
     response = self.query(commands.PowerControl)
     power = self.command
-    log.info('manually download PowerControl serial' % self.serial)
+    log.info('manually download PowerControl serial %s' % self.serial)
     data = self.stick.download( )
     log.info("ENDING manual download:\n%s" % lib.hexdump(data))
     return data
