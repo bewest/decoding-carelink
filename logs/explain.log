@@ -1,6 +1,6 @@
 OUT
 ## Observations
-Sat Aug 24 20:11:56 EDT 2013
+Sat Aug 24 20:39:14 EDT 2013
 
 ## stick
 
@@ -13,27 +13,29 @@ Sat Aug 24 20:11:56 EDT 2013
 
 ```
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[0]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1]:
 ```
 
 
-## commands session:finished: 14
+## commands session:finished: 15
 
 ```
 INFO:session:finished executing:ReadBasalTemp:size[64]:data:{'duration': 0, 'rate': 0.0}
-INFO:session:finished executing:ReadBatteryStatus:size[64]:data:{'status': 'normal', 'voltage': 1.39}
+INFO:session:finished executing:ReadBatteryStatus:size[64]:data:{'status': 'normal', 'voltage': 1.4}
 INFO:session:finished executing:ReadContrast:size[64]:data:bytearray(b'\x08')
 INFO:session:finished executing:ReadCurPageNumber:pages:8
 INFO:session:finished executing:ReadFirmwareVersion:size[64]:data:'VER 1.3B1.1'
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[0]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1]:
 INFO:session:finished executing:ReadPumpID:size[64]:data:'047006'
 INFO:session:finished executing:ReadPumpModel:size[64]:data:'512'
-INFO:session:finished executing:ReadRTC:size[64]:data:'2013-8-23T10:53:4'
+INFO:session:finished executing:ReadRTC:size[64]:data:'2013-8-23T11:20:16'
 INFO:session:finished executing:ReadRadioCtrlACL:size[64]:data:['------', '------', '------']
-INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:106.7
+INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:106.6
 INFO:session:finished executing:ReadSettings:size[64]:data:bytearray(b'\x08')
-INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 9.9, 'today': 3.4}
+INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 9.9, 'today': 3.5}
 ```
 
 howdy! pump runs were NOT OK
