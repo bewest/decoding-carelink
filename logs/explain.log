@@ -1,23 +1,39 @@
 OUT
 ## Observations
-Sat Aug 24 19:36:07 EDT 2013
+Sat Aug 24 20:11:56 EDT 2013
 
 ## stick
 
-* not ok
+* stick runs appear to be ok
 
 ## pump
 
 
-## downloaded: 0
+## downloaded: 1
 
 ```
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1]:
 ```
 
 
-## commands session:finished: 0
+## commands session:finished: 14
 
 ```
+INFO:session:finished executing:ReadBasalTemp:size[64]:data:{'duration': 0, 'rate': 0.0}
+INFO:session:finished executing:ReadBatteryStatus:size[64]:data:{'status': 'normal', 'voltage': 1.39}
+INFO:session:finished executing:ReadContrast:size[64]:data:bytearray(b'\x08')
+INFO:session:finished executing:ReadCurPageNumber:pages:8
+INFO:session:finished executing:ReadFirmwareVersion:size[64]:data:'VER 1.3B1.1'
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1]:
+INFO:session:finished executing:ReadPumpID:size[64]:data:'047006'
+INFO:session:finished executing:ReadPumpModel:size[64]:data:'512'
+INFO:session:finished executing:ReadRTC:size[64]:data:'2013-8-23T10:53:4'
+INFO:session:finished executing:ReadRadioCtrlACL:size[64]:data:['------', '------', '------']
+INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:106.7
+INFO:session:finished executing:ReadSettings:size[64]:data:bytearray(b'\x08')
+INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 9.9, 'today': 3.4}
 ```
 
 howdy! pump runs were NOT OK
@@ -25,6 +41,10 @@ howdy! pump runs were NOT OK
 ### Last send command
 
 ```
+INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData:size[1024]:[page][1]:data[0]:] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<ReadRadio:size:15>]:download(attempts[1],expect[15],results[1]:data[1]):adding segment
+INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData:size[1024]:[page][1]:data[0]:] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<ReadRadio:size:15>]:download(attempts[1],expect[15],results[1]:data[1]):DONE
+INFO:commands:ReadHistoryData:size[1024]:[page][1]:data[0]: extending original 0 with found 1
+INFO:commands:ReadHistoryData:size[1024]:[page][1]:data[0]: download respond extend original 0 with found 1
 ```
 ### stats before traceback
 
@@ -33,118 +53,32 @@ howdy! pump runs were NOT OK
 ### Traceback
 
 ```
-echo "OUT" | tee logs/explain.log
-. ./explain-brief.sh | tee -a logs/explain.log
-explain_markdown
-
-
-#####
-# EOF
-Sat Aug 24 19:36:06 EDT 2013
-```
-INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
+INFO:stick:readData validating remote raw[ack]: 02
+INFO:stick:readData; foreign raw should be at least 14 bytes? 15 True
+INFO:stick:readData; raw[retries] 0
+INFO:stick:ReadRadio:size:15:eod:found eod (True)
+INFO:stick:found packet len(1), link expects(1)
+INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData:size[1024]:[page][1]:data[0]:] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<ReadRadio:size:15>]:download(attempts[1],expect[15],results[1]:data[1]):adding segment
+INFO:stick:Stick transmit[TransmitPacket:ReadHistoryData:size[1024]:[page][1]:data[0]:] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<ReadRadio:size:15>]:download(attempts[1],expect[15],results[1]:data[1]):DONE
+INFO:commands:ReadHistoryData:size[1024]:[page][1]:data[0]: extending original 0 with found 1
+INFO:commands:ReadHistoryData:size[1024]:[page][1]:data[0]: download respond extend original 0 with found 1
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1]:
 Traceback (most recent call last):
-  File "decocare/stick.py", line 854, in <module>
-    stick = Stick(link.Link(port))
-  File "/home/sharon/decoding-carelink/decocare/link.py", line 18, in __init__
-    self.open( port )
-  File "/home/sharon/decoding-carelink/decocare/link.py", line 27, in open
-    self.serial = serial.Serial( self.port, **kwds )
-  File "/usr/lib/python2.7/dist-packages/serial/serialutil.py", line 260, in __init__
-    self.open()
-  File "/usr/lib/python2.7/dist-packages/serial/serialposix.py", line 276, in open
-    raise SerialException("could not open port %s: %s" % (self._port, msg))
-serial.serialutil.SerialException: could not open port /dev/ttyUSB0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
-Command exited with non-zero status 1
-python decocare/stick.py /dev/ttyUSB0
-	elapsed 0:00.27
-	user 0.09
-	system 0.02
-	CPU 44% (0text+0data 59296max)k
-```
-```
-INFO:__main__:howdy! I'm going to take a look at your pump.
-Traceback (most recent call last):
-  File "decocare/session.py", line 123, in <module>
-    stick = stick.Stick(link.Link(port, timeout=.200))
-  File "/home/sharon/decoding-carelink/decocare/link.py", line 18, in __init__
-    self.open( port )
-  File "/home/sharon/decoding-carelink/decocare/link.py", line 27, in open
-    self.serial = serial.Serial( self.port, **kwds )
-  File "/usr/lib/python2.7/dist-packages/serial/serialutil.py", line 260, in __init__
-    self.open()
-  File "/usr/lib/python2.7/dist-packages/serial/serialposix.py", line 276, in open
-    raise SerialException("could not open port %s: %s" % (self._port, msg))
-serial.serialutil.SerialException: could not open port /dev/ttyUSB0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
-Command exited with non-zero status 1
-python decocare/session.py /dev/ttyUSB0 047006
-	elapsed 0:00.12
-	user 0.08
-	system 0.01
-	CPU 81% (0text+0data 59376max)k
-```
-```
-INFO:__main__:howdy! I'm going to take a look at your pump and grab lots of info.
-Traceback (most recent call last):
-  File "decocare/commands.py", line 646, in <module>
-    stick = stick.Stick(link.Link(port, timeout=.400))
-  File "/home/sharon/decoding-carelink/decocare/link.py", line 18, in __init__
-    self.open( port )
-  File "/home/sharon/decoding-carelink/decocare/link.py", line 27, in open
-    self.serial = serial.Serial( self.port, **kwds )
-  File "/usr/lib/python2.7/dist-packages/serial/serialutil.py", line 260, in __init__
-    self.open()
-  File "/usr/lib/python2.7/dist-packages/serial/serialposix.py", line 276, in open
-    raise SerialException("could not open port %s: %s" % (self._port, msg))
-serial.serialutil.SerialException: could not open port /dev/ttyUSB0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
-Command exited with non-zero status 1
-python decocare/commands.py /dev/ttyUSB0 047006
-	elapsed 0:00.14
-	user 0.10
-	system 0.02
-	CPU 82% (0text+0data 60976max)k
-```
-Was there an ACK ERROR?
-### DIAGNOSE CRC
-```
-INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
-Traceback (most recent call last):
-  File "decocare/stick.py", line 854, in <module>
-    stick = Stick(link.Link(port))
-  File "/home/sharon/decoding-carelink/decocare/link.py", line 18, in __init__
-    self.open( port )
-  File "/home/sharon/decoding-carelink/decocare/link.py", line 27, in open
-    self.serial = serial.Serial( self.port, **kwds )
-  File "/usr/lib/python2.7/dist-packages/serial/serialutil.py", line 260, in __init__
-    self.open()
-  File "/usr/lib/python2.7/dist-packages/serial/serialposix.py", line 276, in open
-    raise SerialException("could not open port %s: %s" % (self._port, msg))
-serial.serialutil.SerialException: could not open port /dev/ttyUSB0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
-Command exited with non-zero status 1
-python decocare/stick.py /dev/ttyUSB0
-	elapsed 0:00.11
-	user 0.08
-	system 0.03
-	CPU 97% (0text+0data 59312max)k
-```
-```
-INFO:__main__:howdy! I'm going to take a look at your pump download something info.
-Traceback (most recent call last):
-  File "decocare/download.py", line 78, in <module>
-    stick = stick.Stick(link.Link(port, timeout=.400))
-  File "/home/sharon/decoding-carelink/decocare/link.py", line 18, in __init__
-    self.open( port )
-  File "/home/sharon/decoding-carelink/decocare/link.py", line 27, in open
-    self.serial = serial.Serial( self.port, **kwds )
-  File "/usr/lib/python2.7/dist-packages/serial/serialutil.py", line 260, in __init__
-    self.open()
-  File "/usr/lib/python2.7/dist-packages/serial/serialposix.py", line 276, in open
-    raise SerialException("could not open port %s: %s" % (self._port, msg))
-serial.serialutil.SerialException: could not open port /dev/ttyUSB0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+  File "decocare/download.py", line 87, in <module>
+    downloader.download( )
+  File "decocare/download.py", line 59, in download
+    self.download_page(x)
+  File "decocare/download.py", line 49, in download_page
+    self.device.execute(comm)
+  File "/home/sharon/decoding-carelink/decocare/session.py", line 101, in execute
+    return super(type(self), self).execute(command)
+  File "/home/sharon/decoding-carelink/decocare/session.py", line 41, in execute
+    if command.done( ):
+  File "/home/sharon/decoding-carelink/decocare/commands.py", line 218, in done
+    self.eod  = eod = (self.data[5] & 0x80) > 0
+IndexError: bytearray index out of range
 Command exited with non-zero status 1
 python decocare/download.py /dev/ttyUSB0 047006
-	elapsed 0:00.10
-	user 0.08
 ```
 * NO CRC ERROR FOUND
 * no nak found
