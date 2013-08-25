@@ -213,7 +213,7 @@ class ReadHistoryData(PumpCommand):
     expect_crc = CRC8(self.data[:-1])
     expect_size = "size check found[{}] expected[{}]".format(found, expect)
     found_crc = 0
-    if self.responded and len(self.data) > 0:
+    if self.responded and len(self.data) > 5:
       found_crc = self.data[-1]
       self.eod  = eod = (self.data[5] & 0x80) > 0
     explain_crc = "CRC ACK check found[{}] expected[{}]".format(found_crc, expect_crc)
