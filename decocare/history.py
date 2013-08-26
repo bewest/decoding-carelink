@@ -331,6 +331,13 @@ class Base(object):
     self.datetime = None
     self.body = bytearray( )
 
+  @classmethod
+  def describe(klass):
+    opstring = "0x%02x" % (getattr(klass, 'opcode', 0))
+    name = klass.__name__
+    out = [ klass.head_length, klass.date_length, klass.body_length ]
+    return ",".join([ opstring, name ] + map(str, out))
+
   def __str__(self):
     name = self.__class__.__name__
     lengths = 'head[{}], body[{}]'.format(len(self.head), len(self.body))
@@ -733,6 +740,15 @@ def parse_record(fd, head=bytearray( )):
   # print record.pformat(prefix=str(record) )
   return record
 
+
+def describe( ):
+  keys = _known.keys( )
+  out  = [ ]
+  for k in keys:
+    out.append(_known[k].describe( ))
+  return out
+
+    
 
 if __name__ == '__main__':
   import doctest
