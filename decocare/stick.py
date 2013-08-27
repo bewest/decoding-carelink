@@ -467,7 +467,7 @@ class Stick(object):
     This has to be done for each opcode.
     """
     msg = ':'.join(['PROCESS', 'START'
-           ] + map(str, [self.command, time.time( )]))
+           ] + map(str, [ time.time( ), self.command]))
     log.info(msg)
     log.info('link %s processing %s)' % ( self, self.command ))
     """
@@ -488,7 +488,7 @@ class Stick(object):
     info = self.command.parse(response)
     log.info('finished processing {0}, {1}'.format(self.command, repr(info)))
     msg = ':'.join(['PROCESS', 'END'
-           ] + map(str, [self.command, time.time( )]))
+           ] + map(str, [ time.time( ), self.command]))
     log.info(msg)
     return info
     
