@@ -467,7 +467,7 @@ class Stick(object):
     This has to be done for each opcode.
     """
     msg = ':'.join(['PROCESS', 'START'
-           ] + map(str, [ time.time( ), self.command]))
+           ] + map(str, [ time.clock( ), self.command]))
     log.info(msg)
     log.info('link %s processing %s)' % ( self, self.command ))
     """
@@ -488,7 +488,7 @@ class Stick(object):
     info = self.command.parse(response)
     log.info('finished processing {0}, {1}'.format(self.command, repr(info)))
     msg = ':'.join(['PROCESS', 'END'
-           ] + map(str, [ time.time( ), self.command]))
+           ] + map(str, [ time.clock( ), self.command]))
     log.info(msg)
     return info
     
@@ -833,12 +833,16 @@ class Stick(object):
     """
     for attempt in xrange( 3 ):
       try:
+        msg = ':'.join(['PROCESS', 'OPEN', str(time.clock( ))] )
+        log.info(msg)
+        log.info('%s' % self.product_info( ))
         log.info('%s' % self.product_info( ))
         log.info('get signal strength of %s' % self)
         signal = 0
         while signal < 50:
           signal = self.signal_strength( )
         log.info('we seem to have found a nice signal strength of: %s' % signal)
+        return True
       except AckError, e:
         log.info('failed:(%s):\n%s' % (attempt, e))
     
