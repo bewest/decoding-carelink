@@ -177,14 +177,16 @@ class LinkStatus(StickCommand):
   the current state of the radio/stick.
   """
   code = [ 0x03 ]
-  reason = ''
+  reasons = ['OK']
 
   def __str__(self):
     extra = ''
+    size = getattr(self, 'size', None) or '??'
+    extra += "size=%s" % size
     if getattr(self, 'error', False):
-      extra = '{0}:error:{1}:reason:{2}'.format(self.__class__.__name__, self.error, self.reason)
+      extra += '{0}:error:{1}:reason:{2}'.format(self.__class__.__name__, self.error, str(self.reasons))
     base = super(type(self), self).__str__( )
-    return '{0}:error:{1}'.format(base, extra)
+    return '{0}:status:{1}'.format(base, extra)
       
   def record_error(self, result):
     self.error  = True
@@ -196,7 +198,7 @@ class LinkStatus(StickCommand):
 
     if self.ack == 0 and (self.status & 0x1) > 0:
       self.error = False
-    self.set_reason(self.status)
+    self.set_reason(self.error)
 
   def set_reason(self, status):
     reasons = [ ]
@@ -207,12 +209,12 @@ class LinkStatus(StickCommand):
     if (status & 0x8) > 0:
       reasons.append('STATUS: interface error!')
     if (status & 0x10) > 0:
-      reasons.append('STATUS: recieve overflow!')
+      reasons.append('STATUS: receive overflow!')
     if (status & 0x20) > 0:
       reasons.append('STATUS: transmit overflow!')
     if (status & 0x1) > 0:
       reasons.append('STATUS: OK')
-    msg = '\n'.join(map(str, [ self, ', '.join(reasons) ]))
+    msg = '\n'.join(map(str, [ self, '|'.join(reasons) ]))
     log.info(msg)
     self.reasons = reasons
 
@@ -467,7 +469,7 @@ class Stick(object):
     This has to be done for each opcode.
     """
     msg = ':'.join(['PROCESS', 'START'
-           ] + map(str, [ time.time( ), self.command]))
+           ] + map(str, [ time.clock( ), self.command]))
     log.info(msg)
     log.info('link %s processing %s)' % ( self, self.command ))
     """
@@ -488,7 +490,7 @@ class Stick(object):
     info = self.command.parse(response)
     log.info('finished processing {0}, {1}'.format(self.command, repr(info)))
     msg = ':'.join(['PROCESS', 'END'
-           ] + map(str, [ time.time( ), self.command]))
+           ] + map(str, [ time.clock( ), self.command]))
     log.info(msg)
     return info
     
@@ -624,6 +626,9 @@ class Stick(object):
     original_size = size
     self.command = reader = ReadRadio(size)
     self.reader = reader
+    msg = ':'.join(['PROCESS', 'START'
+           ] + map(str, [ time.clock( ), self.command]))
+    log.info(msg)
     raw = self.send_force_read( )
     # return
     # packet = self.process( )
@@ -649,6 +654,9 @@ class Stick(object):
     try:
       ack, response = self.command.respond(raw)
       info = self.command.parse(response)
+      msg = ':'.join(['PROCESS', 'END'
+             ] + map(str, [ time.clock( ), self.command]))
+      log.info(msg)
       return info
     except BadDeviceCommError, e:
       log.critical("download_packet:%s:ERROR:%s:ACK!?" % (self, e))
@@ -833,12 +841,16 @@ class Stick(object):
     """
     for attempt in xrange( 3 ):
       try:
+        msg = ':'.join(['PROCESS', 'OPEN', str(time.clock( ))] )
+        log.info(msg)
+        log.info('%s' % self.product_info( ))
         log.info('%s' % self.product_info( ))
         log.info('get signal strength of %s' % self)
         signal = 0
         while signal < 50:
           signal = self.signal_strength( )
         log.info('we seem to have found a nice signal strength of: %s' % signal)
+        return True
       except AckError, e:
         log.info('failed:(%s):\n%s' % (attempt, e))
     
