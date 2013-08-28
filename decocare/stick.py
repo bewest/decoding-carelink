@@ -177,14 +177,16 @@ class LinkStatus(StickCommand):
   the current state of the radio/stick.
   """
   code = [ 0x03 ]
-  reason = ''
+  reasons = ['OK']
 
   def __str__(self):
     extra = ''
+    size = getattr(self, 'size', None) or '??'
+    extra += "size=%s" % size
     if getattr(self, 'error', False):
-      extra = '{0}:error:{1}:reason:{2}'.format(self.__class__.__name__, self.error, self.reason)
+      extra += '{0}:error:{1}:reason:{2}'.format(self.__class__.__name__, self.error, str(self.reasons))
     base = super(type(self), self).__str__( )
-    return '{0}:error:{1}'.format(base, extra)
+    return '{0}:status:{1}'.format(base, extra)
       
   def record_error(self, result):
     self.error  = True
@@ -196,7 +198,7 @@ class LinkStatus(StickCommand):
 
     if self.ack == 0 and (self.status & 0x1) > 0:
       self.error = False
-    self.set_reason(self.status)
+    self.set_reason(self.error)
 
   def set_reason(self, status):
     reasons = [ ]
@@ -207,12 +209,12 @@ class LinkStatus(StickCommand):
     if (status & 0x8) > 0:
       reasons.append('STATUS: interface error!')
     if (status & 0x10) > 0:
-      reasons.append('STATUS: recieve overflow!')
+      reasons.append('STATUS: receive overflow!')
     if (status & 0x20) > 0:
       reasons.append('STATUS: transmit overflow!')
     if (status & 0x1) > 0:
       reasons.append('STATUS: OK')
-    msg = '\n'.join(map(str, [ self, ', '.join(reasons) ]))
+    msg = '\n'.join(map(str, [ self, '|'.join(reasons) ]))
     log.info(msg)
     self.reasons = reasons
 
