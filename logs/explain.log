@@ -1,6 +1,6 @@
 OUT
 ## Observations
-Wed Aug 28 15:33:12 EDT 2013
+Wed Aug 28 15:44:23 EDT 2013
 
 ## stick
 
@@ -59,11 +59,11 @@ INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[1]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[2]:
 INFO:session:finished executing:ReadPumpID:size[64]:data:'047006'
 INFO:session:finished executing:ReadPumpModel:size[64]:data:'512'
-INFO:session:finished executing:ReadRTC:size[64]:data:'2013-8-28T15:31:27'
+INFO:session:finished executing:ReadRTC:size[64]:data:'2013-8-28T15:42:40'
 INFO:session:finished executing:ReadRadioCtrlACL:size[64]:data:['------', '------', '------']
-INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:93.4
+INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:93.3
 INFO:session:finished executing:ReadSettings:size[64]:data:bytearray(b'\x08')
-INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 0.2, 'today': 8.1}
+INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 0.2, 'today': 8.2}
 ```
 
 howdy! pump runs were NOT OK
