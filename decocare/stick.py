@@ -619,6 +619,9 @@ class Stick(object):
     This is the tricky bit, where we stroke the radio and hope it gives us a
     buffer full of data.
     """
+    msg = ':'.join(['PROCESS', 'START'
+           ] + map(str, [ time.clock( ), self.command]))
+    log.info(msg)
     log.info("%s:download_packet:%s" % (self, size))
     # XXX: this is the tricky bit
     original_size = size
@@ -649,6 +652,9 @@ class Stick(object):
     try:
       ack, response = self.command.respond(raw)
       info = self.command.parse(response)
+      msg = ':'.join(['PROCESS', 'END'
+             ] + map(str, [ time.clock( ), self.command]))
+      log.info(msg)
       return info
     except BadDeviceCommError, e:
       log.critical("download_packet:%s:ERROR:%s:ACK!?" % (self, e))
