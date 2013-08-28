@@ -198,7 +198,7 @@ class LinkStatus(StickCommand):
 
     if self.ack == 0 and (self.status & 0x1) > 0:
       self.error = False
-    self.set_reason(self.error)
+    self.set_reason(self.ack)
 
   def set_reason(self, status):
     reasons = [ ]
@@ -469,7 +469,7 @@ class Stick(object):
     This has to be done for each opcode.
     """
     msg = ':'.join(['PROCESS', 'START'
-           ] + map(str, [ time.clock( ), self.command]))
+           ] + map(str, [ self.timer.millis( ), self.command]))
     log.info(msg)
     log.info('link %s processing %s)' % ( self, self.command ))
     """
@@ -490,7 +490,7 @@ class Stick(object):
     info = self.command.parse(response)
     log.info('finished processing {0}, {1}'.format(self.command, repr(info)))
     msg = ':'.join(['PROCESS', 'END'
-           ] + map(str, [ time.clock( ), self.command]))
+           ] + map(str, [ self.timer.millis( ), self.command]))
     log.info(msg)
     return info
     
@@ -627,7 +627,7 @@ class Stick(object):
     self.command = reader = ReadRadio(size)
     self.reader = reader
     msg = ':'.join(['PROCESS', 'START'
-           ] + map(str, [ time.clock( ), self.command]))
+           ] + map(str, [ self.timer.millis( ), self.command]))
     log.info(msg)
     raw = self.send_force_read( )
     # return
@@ -655,7 +655,7 @@ class Stick(object):
       ack, response = self.command.respond(raw)
       info = self.command.parse(response)
       msg = ':'.join(['PROCESS', 'END'
-             ] + map(str, [ time.clock( ), self.command]))
+             ] + map(str, [ self.timer.millis( ), self.command]))
       log.info(msg)
       return info
     except BadDeviceCommError, e:
@@ -839,9 +839,10 @@ class Stick(object):
     """
     Open and get signal strength so everything is ready to go.
     """
+    self.timer = lib.Timer( )
     for attempt in xrange( 3 ):
       try:
-        msg = ':'.join(['PROCESS', 'OPEN', str(time.clock( ))] )
+        msg = ':'.join(['PROCESS', 'OPEN', str(self.timer.millis( ))] )
         log.info(msg)
         log.info('%s' % self.product_info( ))
         log.info('%s' % self.product_info( ))
