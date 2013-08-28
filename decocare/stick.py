@@ -621,14 +621,14 @@ class Stick(object):
     This is the tricky bit, where we stroke the radio and hope it gives us a
     buffer full of data.
     """
-    msg = ':'.join(['PROCESS', 'START'
-           ] + map(str, [ time.clock( ), self.command]))
-    log.info(msg)
     log.info("%s:download_packet:%s" % (self, size))
     # XXX: this is the tricky bit
     original_size = size
     self.command = reader = ReadRadio(size)
     self.reader = reader
+    msg = ':'.join(['PROCESS', 'START'
+           ] + map(str, [ time.clock( ), self.command]))
+    log.info(msg)
     raw = self.send_force_read( )
     # return
     # packet = self.process( )
