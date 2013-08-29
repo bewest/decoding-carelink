@@ -1,6 +1,6 @@
 OUT
 ## Observations
-Wed Aug 28 17:37:11 EDT 2013
+Thu Aug 29 16:00:51 EDT 2013
 
 ## stick
 
@@ -35,26 +35,26 @@ INFO:commands:XXX: READ cur page number:
 ### stats before traceback
 
 ```
-114:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2201L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2201L, 'errors.crc': 0}
-134:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 545L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 485L, 'errors.crc': 1}
-136:INFO:__main__:{'radio': {'errors.crc': 1,
+114:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 98L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 98L, 'errors.crc': 0}
+134:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 1, 'packets.transmit': 3L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 0L, 'errors.crc': 0}
+136:INFO:__main__:{'radio': {'errors.crc': 0,
 137:           'errors.naks': 0,
-138:           'errors.sequence': 4,
-139:           'errors.timeouts': 18,
-140:           'packets.received': 485L,
-141:           'packets.transmit': 545L},
+138:           'errors.sequence': 0,
+139:           'errors.timeouts': 1,
+140:           'packets.received': 0L,
+141:           'packets.transmit': 3L},
 142: 'usb': {'errors.crc': 0,
 143:         'errors.naks': 0,
 144:         'errors.sequence': 0,
 145:         'errors.timeouts': 0,
-146:         'packets.received': 2201L,
-147:         'packets.transmit': 2201L}}
-831:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2229L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2229L, 'errors.crc': 0}
-851:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 19, 'packets.transmit': 547L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 485L, 'errors.crc': 1}
-853:INFO:__main__:{'radio': {'errors.crc': 1,
+146:         'packets.received': 98L,
+147:         'packets.transmit': 98L}}
+831:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 126L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 126L, 'errors.crc': 0}
+851:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 2, 'packets.transmit': 5L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 0L, 'errors.crc': 0}
+853:INFO:__main__:{'radio': {'errors.crc': 0,
 854:           'errors.naks': 0,
-855:           'errors.sequence': 4,
-856:           'errors.timeouts': 19,
+855:           'errors.sequence': 0,
+856:           'errors.timeouts': 2,
 ```
 ### Traceback
 
@@ -64,7 +64,7 @@ INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
 INFO:stick:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:['OK']
 
 INFO:stick:finished processing LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[], 0
-INFO:stick:PROCESS:END:23072.19:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]
+INFO:stick:PROCESS:END:23073.179:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]
 DEBUG:stick:poll zero, sleeping in POLL, .100
 INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[9] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:STOP POLL after 10 attempts:size:0
 CRITICAL:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[False] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:download(attempts[1],expect[0],results[0]:data[0]):BAD AILING
@@ -91,7 +91,7 @@ INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
 INFO:stick:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:['OK']
 
 INFO:stick:finished processing LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[], 0
-INFO:stick:PROCESS:END:3243.755:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]
+INFO:stick:PROCESS:END:3243.857:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]
 DEBUG:stick:poll zero, sleeping in POLL, .100
 INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[9] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:STOP POLL after 10 attempts:size:0
 CRITICAL:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[False] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:download(attempts[1],expect[0],results[0]:data[0]):BAD AILING
@@ -116,7 +116,7 @@ Traceback (most recent call last):
 INFO:stick:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:['OK']
 
 INFO:stick:finished processing LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[], 0
-INFO:stick:PROCESS:END:3236.105:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]
+INFO:stick:PROCESS:END:3236.053:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]
 DEBUG:stick:poll zero, sleeping in POLL, .100
 INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[9] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:STOP POLL after 10 attempts:size:0
 CRITICAL:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[False] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:download(attempts[1],expect[0],results[0]:data[0]):BAD AILING
