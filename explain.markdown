@@ -5,7 +5,7 @@
 ## cat logs/explain.log
 OUT
 ## Observations
-Wed Aug 28 15:44:23 EDT 2013
+Wed Aug 28 17:37:11 EDT 2013
 
 ## stick
 
@@ -14,61 +14,17 @@ Wed Aug 28 15:44:23 EDT 2013
 ## pump
 
 
-## downloaded: 1
+## downloaded: 0
 
 ```
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[2]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[0]:
 ```
 
 
-## commands session:finished: 29
+## commands session:finished: 1
 
 ```
-INFO:session:finished executing:ReadBasalTemp:size[64]:data:{'duration': 0, 'rate': 0.0}
-INFO:session:finished executing:ReadBatteryStatus:size[64]:data:{'status': 'normal', 'voltage': 1.43}
-INFO:session:finished executing:ReadContrast:size[64]:data:bytearray(b'\x08')
-INFO:session:finished executing:ReadCurPageNumber:pages:8
-INFO:session:finished executing:ReadFirmwareVersion:size[64]:data:'VER 1.3B1.1'
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[2]:
-INFO:session:finished executing:ReadPumpID:size[64]:data:'047006'
-INFO:session:finished executing:ReadPumpModel:size[64]:data:'512'
-INFO:session:finished executing:ReadRTC:size[64]:data:'2013-8-28T15:42:40'
-INFO:session:finished executing:ReadRadioCtrlACL:size[64]:data:['------', '------', '------']
-INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:93.3
-INFO:session:finished executing:ReadSettings:size[64]:data:bytearray(b'\x08')
-INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 0.2, 'today': 8.2}
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[0]:
 ```
 
 howdy! pump runs were NOT OK
@@ -76,14 +32,118 @@ howdy! pump runs were NOT OK
 ### Last send command
 
 ```
+CRITICAL:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[False] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:download(attempts[1],expect[0],results[0]:data[0]):BAD AILING
+INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[False] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:download(attempts[1],expect[0],results[0]:data[0]):DONE
+INFO:commands:XXX: READ cur page number:
+
 ```
 ### stats before traceback
 
 ```
+114:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2201L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2201L, 'errors.crc': 0}
+134:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 18, 'packets.transmit': 545L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 485L, 'errors.crc': 1}
+136:INFO:__main__:{'radio': {'errors.crc': 1,
+137:           'errors.naks': 0,
+138:           'errors.sequence': 4,
+139:           'errors.timeouts': 18,
+140:           'packets.received': 485L,
+141:           'packets.transmit': 545L},
+142: 'usb': {'errors.crc': 0,
+143:         'errors.naks': 0,
+144:         'errors.sequence': 0,
+145:         'errors.timeouts': 0,
+146:         'packets.received': 2201L,
+147:         'packets.transmit': 2201L}}
+831:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 2229L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 2229L, 'errors.crc': 0}
+851:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 19, 'packets.transmit': 547L, 'errors.naks': 0, 'errors.sequence': 4, 'packets.received': 485L, 'errors.crc': 1}
+853:INFO:__main__:{'radio': {'errors.crc': 1,
+854:           'errors.naks': 0,
+855:           'errors.sequence': 4,
+856:           'errors.timeouts': 19,
 ```
 ### Traceback
 
 ```
+0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
+INFO:stick:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:['OK']
+
+INFO:stick:finished processing LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[], 0
+INFO:stick:PROCESS:END:23072.19:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]
+DEBUG:stick:poll zero, sleeping in POLL, .100
+INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[9] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:STOP POLL after 10 attempts:size:0
+CRITICAL:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[False] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:download(attempts[1],expect[0],results[0]:data[0]):BAD AILING
+INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[False] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:download(attempts[1],expect[0],results[0]:data[0]):DONE
+Traceback (most recent call last):
+  File "decocare/session.py", line 129, in <module>
+    log.info('PUMP MODEL: %s' % session.read_model( ))
+  File "decocare/session.py", line 89, in read_model
+    model = self.query(commands.ReadPumpModel)
+  File "decocare/session.py", line 104, in query
+    self.execute(command)
+  File "decocare/session.py", line 101, in execute
+    return super(type(self), self).execute(command)
+  File "decocare/session.py", line 39, in execute
+    self.download( )
+  File "decocare/session.py", line 54, in download
+    self.command.respond(data)
+  File "/home/sharon/decoding-carelink/decocare/commands.py", line 55, in respond
+    self.getData( )
+  File "/home/sharon/decoding-carelink/decocare/commands.py", line 542, in getData
+--
+0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
+INFO:stick:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:['OK']
+
+INFO:stick:finished processing LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[], 0
+INFO:stick:PROCESS:END:3243.755:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]
+DEBUG:stick:poll zero, sleeping in POLL, .100
+INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[9] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:STOP POLL after 10 attempts:size:0
+CRITICAL:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[False] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:download(attempts[1],expect[0],results[0]:data[0]):BAD AILING
+INFO:stick:Stick transmit[TransmitPacket:ReadPumpModel:data:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[False] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:download(attempts[1],expect[0],results[0]:data[0]):DONE
+Traceback (most recent call last):
+  File "decocare/commands.py", line 650, in <module>
+    log.info('PUMP MODEL: %s' % session.read_model( ))
+  File "/home/sharon/decoding-carelink/decocare/session.py", line 89, in read_model
+    model = self.query(commands.ReadPumpModel)
+  File "/home/sharon/decoding-carelink/decocare/session.py", line 104, in query
+    self.execute(command)
+  File "/home/sharon/decoding-carelink/decocare/session.py", line 101, in execute
+    return super(type(self), self).execute(command)
+  File "/home/sharon/decoding-carelink/decocare/session.py", line 39, in execute
+    self.download( )
+  File "/home/sharon/decoding-carelink/decocare/session.py", line 54, in download
+    self.command.respond(data)
+  File "/home/sharon/decoding-carelink/decocare/commands.py", line 55, in respond
+    self.getData( )
+  File "/home/sharon/decoding-carelink/decocare/commands.py", line 542, in getData
+--
+INFO:stick:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:['OK']
+
+INFO:stick:finished processing LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[], 0
+INFO:stick:PROCESS:END:3236.105:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]
+DEBUG:stick:poll zero, sleeping in POLL, .100
+INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[9] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:STOP POLL after 10 attempts:size:0
+CRITICAL:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[False] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:download(attempts[1],expect[0],results[0]:data[0]):BAD AILING
+INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[None] download_i[1] status[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>] poll_size[0] poll_i[False] command[<LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:[]:size(0)>]:download(attempts[1],expect[0],results[0]:data[0]):DONE
+INFO:commands:XXX: READ cur page number:
+
+Traceback (most recent call last):
+  File "decocare/download.py", line 87, in <module>
+    downloader.download( )
+  File "decocare/download.py", line 56, in download
+    self.read_current( )
+  File "decocare/download.py", line 40, in read_current
+    self.device.execute(comm)
+  File "/home/sharon/decoding-carelink/decocare/session.py", line 101, in execute
+    return super(type(self), self).execute(command)
+  File "/home/sharon/decoding-carelink/decocare/session.py", line 39, in execute
+    self.download( )
+  File "/home/sharon/decoding-carelink/decocare/session.py", line 54, in download
+    self.command.respond(data)
+  File "/home/sharon/decoding-carelink/decocare/commands.py", line 266, in respond
+    self.pages = self.getData( )
+  File "/home/sharon/decoding-carelink/decocare/commands.py", line 273, in getData
 ```
 * NO CRC ERROR FOUND
 * no nak found
