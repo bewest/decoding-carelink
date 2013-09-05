@@ -356,7 +356,7 @@ function opcodes ( ) {
 function run_regress ( ) {
   for x in logs/ReadHistoryData-page-*.data ; do
     echo $x
-    opcodes $x | tee analysis/bewest-pump/$(basename $x).list_opcodes.markdown
+    opcodes $x | tee analysis/sarak/$(basename $x).list_opcodes.markdown
   done
 
 }
