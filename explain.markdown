@@ -1,39 +1,28 @@
-# ./status-quo.sh /dev/ttyUSB0 047006
+# ./status-quo.sh /dev/ttyUSB0 665455
 ## cat ./status-quo.sh
 ```bash
 ```
 ## cat logs/explain.log
 OUT
 ## Observations
-Wed Aug 21 19:58:32 EDT 2013
+Sun Sep  8 17:35:06 PDT 2013
 
 ## stick
 
-* stick runs appear to be ok
+* not ok
 
 ## pump
 
 
-## downloaded: 1
+## downloaded: 0
 
 ```
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
 ```
 
 
-## commands session:finished: 10
+## commands session:finished: 0
 
 ```
-INFO:session:finished executing:ReadBasalTemp:size[64]:data:{'duration': 0, 'rate': 0.0}
-INFO:session:finished executing:ReadBatteryStatus:size[64]:data:{'status': 'normal', 'voltage': 1.34}
-INFO:session:finished executing:ReadFirmwareVersion:size[64]:data:'VER 1.3B1.1'
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
-INFO:session:finished executing:ReadPumpID:size[64]:data:'047006'
-INFO:session:finished executing:ReadPumpModel:size[64]:data:'512'
-INFO:session:finished executing:ReadRadioCtrlACL:size[64]:data:['------', '------', '------']
-INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:120.8
-INFO:session:finished executing:ReadRTC:size[64]:data:'2013-8-21T20:2:14'
-INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 6.9, 'today': 9.1}
 ```
 
 howdy! pump runs were NOT OK
@@ -41,118 +30,145 @@ howdy! pump runs were NOT OK
 ### Last send command
 
 ```
-INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<ReadRadio:size:15>]:download(attempts[1],expect[15],results[1]:data[1]):adding segment
-INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<ReadRadio:size:15>]:download(attempts[1],expect[15],results[1]:data[1]):DONE
-INFO:commands:XXX: READ cur page number:
-0000   0x08                                       .
+INFO:stick:send_force_read: attempt 0/5 send command, read until we get something within some timeout
+INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData:size[1024]:[page][0]:data[0]:] reader[None] download_i[1] status[None] poll_size[0] poll_i[0] command[<LinkStatus:0x03:status:size=64:size(64)>] sending LinkStatus:0x03:status:size=64)
+INFO:root:usb.write.len: 3
+0000   0x03 0x00 0x00                             ...
 ```
 ### stats before traceback
 
 ```
-155:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 231L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 231L, 'errors.crc': 0}
-173:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 36L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 35L, 'errors.crc': 0}
-174:INFO:__main__:{'radio': {'errors.crc': 0,
-175:           'errors.naks': 0,
-176:           'errors.sequence': 0,
-177:           'errors.timeouts': 0,
-178:           'packets.received': 35L,
-179:           'packets.transmit': 36L},
-180: 'usb': {'errors.crc': 0,
-181:         'errors.naks': 0,
-182:         'errors.sequence': 0,
-183:         'errors.timeouts': 0,
-184:         'packets.received': 231L,
-185:         'packets.transmit': 231L}}
-1216:INFO:__main__:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 274L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 274L, 'errors.crc': 0}
-1234:INFO:__main__:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 47L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 46L, 'errors.crc': 0}
-1235:INFO:__main__:{'radio': {'errors.crc': 0,
-1236:           'errors.naks': 0,
-1237:           'errors.sequence': 0,
-1238:           'errors.timeouts': 0,
+185:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1833724270L, 'errors.naks': 0, 'errors.sequence': 23, 'packets.received': 17263L, 'errors.crc': 190}
+205:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 205L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 205L, 'errors.crc': 0}
+207:INFO:__main__:{'radio': {'errors.crc': 0,
+208:           'errors.naks': 0,
+209:           'errors.sequence': 0,
+210:           'errors.timeouts': 0,
+211:           'packets.received': 205L,
+212:           'packets.transmit': 205L},
+213: 'usb': {'errors.crc': 190,
+214:         'errors.naks': 0,
+215:         'errors.sequence': 23,
+216:         'errors.timeouts': 0,
+217:         'packets.received': 17263L,
+218:         'packets.transmit': 1833724270L}}
+540:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1833724270L, 'errors.naks': 0, 'errors.sequence': 23, 'packets.received': 17263L, 'errors.crc': 189}
+560:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 217L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 217L, 'errors.crc': 0}
+562:INFO:__main__:{'radio': {'errors.crc': 0,
+563:           'errors.naks': 0,
+564:           'errors.sequence': 0,
+565:           'errors.timeouts': 0,
 ```
 ### Traceback
 
 ```
-0020   0x00 0x01 0x00 0xf2 0x00 0x00 0x00 0x00    ........
+0000   0x03 0x00 0x00                             ...
+DEBUG:stick:sleeping 0.001
+INFO:root:usb.read.len: 0
+INFO:root:usb.read.raw:
+
+INFO:stick:zero length READ, try once more sleep .250
+INFO:root:usb.read.len: 0
+INFO:root:usb.read.raw:
+
+CRITICAL:stick:FAILED TO DOWNLOAD ANYTHING, after 4  expected:64
+Traceback (most recent call last):
+  File "decocare/session.py", line 127, in <module>
+    session.power_control( )
+  File "decocare/session.py", line 84, in power_control
+    data = self.stick.download( )
+  File "/home/bewest/src/decoding-carelink/decocare/stick.py", line 718, in download
+    size = self.poll_size( )
+  File "/home/bewest/src/decoding-carelink/decocare/stick.py", line 549, in poll_size
+    size  = self.read_status( )
+  File "/home/bewest/src/decoding-carelink/decocare/stick.py", line 565, in read_status
+    result = self.query(LinkStatus)
+  File "/home/bewest/src/decoding-carelink/decocare/stick.py", line 502, in query
+    return self.process( )
+  File "/home/bewest/src/decoding-carelink/decocare/stick.py", line 484, in process
+    if len(raw) == 0:
+TypeError: object of type 'NoneType' has no len()
+--
+
+INFO:stick:attempt another read
+INFO:root:usb.read.len: 0
+INFO:root:usb.read.raw:
+
+INFO:stick:NESTED zero length READ, try once more sleep .100
+INFO:root:usb.read.len: 0
+INFO:root:usb.read.raw:
+
+ERROR:stick:ACK is zero bytes!
+Traceback (most recent call last):
+  File "decocare/commands.py", line 650, in <module>
+    log.info('PUMP MODEL: %s' % session.read_model( ))
+  File "/home/bewest/src/decoding-carelink/decocare/session.py", line 89, in read_model
+    model = self.query(commands.ReadPumpModel)
+  File "/home/bewest/src/decoding-carelink/decocare/session.py", line 104, in query
+    self.execute(command)
+  File "/home/bewest/src/decoding-carelink/decocare/session.py", line 101, in execute
+    return super(type(self), self).execute(command)
+  File "/home/bewest/src/decoding-carelink/decocare/session.py", line 39, in execute
+    self.download( )
+  File "/home/bewest/src/decoding-carelink/decocare/session.py", line 52, in download
+    data = self.stick.download( )
+  File "/home/bewest/src/decoding-carelink/decocare/stick.py", line 734, in download
+    data = self.download_packet(size)
+  File "/home/bewest/src/decoding-carelink/decocare/stick.py", line 688, in download_packet
+--
+INFO:root:usb.read.raw:
+0000   0x02 0x00 0x03 0x00 0xcb 0x80 0x40 0xa7    ......@.
+0008   0x01 0x66 0x54 0x55 0xcb 0x03 0x35 0x32    .fTU..52
+0010   0x32 0x00 0x00 0x00 0x00 0x00 0x00 0x00    2.......
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
+Traceback (most recent call last):
+  File "decocare/stick.py", line 874, in <module>
+    stick.open( )
+  File "decocare/stick.py", line 847, in open
+    log.info('%s' % self.product_info( ))
+  File "decocare/stick.py", line 508, in product_info
+    return self.query(ProductInfo)
+  File "decocare/stick.py", line 502, in query
+    return self.process( )
+  File "decocare/stick.py", line 489, in process
+    ack, response = self.command.respond(raw)
+  File "decocare/stick.py", line 68, in respond
+    assert commStatus == 1, ('commStatus: %02x expected 0x1' % commStatus)
+AssertionError: commStatus: 02 expected 0x1
+Command exited with non-zero status 1
+python decocare/stick.py /dev/ttyUSB0
+--
+0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
+0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
-INFO:stick:finished processing TransmitPacket:PowerControl:data:unknown, bytearray(b'\x00\x00\x00\x00\x00\x00\x00!\x00\x00\x00"\x00\x00\x00\x0f\x00\x05\x00\x10\x00\x1a\x00\x03\x00\x02\x00\x00\x00\x00\x01\x00\xf2\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-INFO:__main__:sleeping 17 before download
-INFO:__main__:no download required
-INFO:__main__:finished executing:PowerControl:data:unknown
-INFO:commands:PowerControl:data:unknown:download:done?:found[0] expected[0]
+INFO:stick:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:['OK']
+STATUS: receive in progress!|STATUS: transmit in progress!|STATUS: interface error!|STATUS: receive overflow!|STATUS: transmit overflow!|STATUS: OK
+ERROR:stick:readStatus: non-zero status: bf
 Traceback (most recent call last):
-  File "decocare/session.py", line 127, in <module>
-    session.power_control( )
-  File "decocare/session.py", line 83, in power_control
-    log.info('manually download PowerControl serial' % serial)
-NameError: global name 'serial' is not defined
-Command exited with non-zero status 1
-python decocare/session.py /dev/ttyUSB0 047006
-	elapsed 0:17.15
-	user 0.09
-	system 0.02
-	CPU 0% (0text+0data 60032max)k
-```
-```
-INFO:__main__:howdy! I'm going to take a look at your pump and grab lots of info.
-INFO:link:Link opened serial port: Serial<id=0x17e7150, open=True>(port='/dev/ttyUSB0', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.4, xonxoff=False, rtscts=False, dsrdtr=False)
---
-INFO:stick:quit send_force_read, found len: 15 expected 64 after 0 attempts
-INFO:stick:readData validating remote raw[ack]: 02
-INFO:stick:readData; foreign raw should be at least 14 bytes? 15 True
-INFO:stick:readData; raw[retries] 0
-INFO:stick:ReadRadio:size:15:eod:found eod (True)
-INFO:stick:found packet len(1), link expects(1)
-INFO:stick:Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<ReadRadio:size:15>]:download(attempts[1],expect[15],results[1]:data[1]):adding segment
-INFO:stick:Stick transmit[TransmitPacket:ReadSettings:data:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<ReadRadio:size:15>]:download(attempts[1],expect[15],results[1]:data[1]):DONE
-INFO:__main__:READ pump settings:
-0000   0x08                                       .
-Traceback (most recent call last):
-  File "decocare/commands.py", line 646, in <module>
-    do_commands(session)
-  File "decocare/commands.py", line 591, in do_commands
-    device.execute(comm)
-  File "/home/sharon/decoding-carelink/decocare/session.py", line 101, in execute
-    return super(type(self), self).execute(command)
-  File "/home/sharon/decoding-carelink/decocare/session.py", line 39, in execute
-    self.download( )
-  File "/home/sharon/decoding-carelink/decocare/session.py", line 54, in download
-    self.command.respond(data)
-  File "decocare/commands.py", line 55, in respond
-    self.getData( )
-  File "decocare/commands.py", line 465, in getData
-    alarm = self.alarm(data[1])
-IndexError: bytearray index out of range
---
-INFO:stick:quit send_force_read, found len: 15 expected 64 after 0 attempts
-INFO:stick:readData validating remote raw[ack]: 02
-INFO:stick:readData; foreign raw should be at least 14 bytes? 15 True
-INFO:stick:readData; raw[retries] 0
-INFO:stick:ReadRadio:size:15:eod:found eod (True)
-INFO:stick:found packet len(1), link expects(1)
-INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<ReadRadio:size:15>]:download(attempts[1],expect[15],results[1]:data[1]):adding segment
-INFO:stick:Stick transmit[TransmitPacket:ReadCurPageNumber:pages:unknown] reader[ReadRadio:size:15] download_i[1] status[<LinkStatus:0x03:error::size(15)>] poll_size[15] poll_i[False] command[<ReadRadio:size:15>]:download(attempts[1],expect[15],results[1]:data[1]):DONE
-INFO:commands:XXX: READ cur page number:
-0000   0x08                                       .
-Traceback (most recent call last):
-  File "decocare/download.py", line 87, in <module>
+  File "decocare/download.py", line 84, in <module>
     downloader.download( )
-  File "decocare/download.py", line 56, in download
-    self.read_current( )
-  File "decocare/download.py", line 40, in read_current
+  File "decocare/download.py", line 24, in download
     self.device.execute(comm)
-  File "/home/sharon/decoding-carelink/decocare/session.py", line 101, in execute
+  File "/home/bewest/src/decoding-carelink/decocare/session.py", line 101, in execute
     return super(type(self), self).execute(command)
-  File "/home/sharon/decoding-carelink/decocare/session.py", line 39, in execute
+  File "/home/bewest/src/decoding-carelink/decocare/session.py", line 39, in execute
     self.download( )
-  File "/home/sharon/decoding-carelink/decocare/session.py", line 54, in download
-    self.command.respond(data)
-  File "/home/sharon/decoding-carelink/decocare/commands.py", line 266, in respond
-    self.pages = self.getData( )
-  File "/home/sharon/decoding-carelink/decocare/commands.py", line 271, in getData
+  File "/home/bewest/src/decoding-carelink/decocare/session.py", line 52, in download
+    data = self.stick.download( )
+  File "/home/bewest/src/decoding-carelink/decocare/stick.py", line 718, in download
+    size = self.poll_size( )
+  File "/home/bewest/src/decoding-carelink/decocare/stick.py", line 549, in poll_size
+    size  = self.read_status( )
+  File "/home/bewest/src/decoding-carelink/decocare/stick.py", line 565, in read_status
 ```
 * NO CRC ERROR FOUND
 * no nak found
