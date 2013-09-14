@@ -4,8 +4,9 @@ from binascii import hexlify
 from datetime import datetime
 from pprint import pformat
 
-import lib
-from history import *
+
+from times import *
+from bolus import *
 
 # I don't know where else to put this.
 """
