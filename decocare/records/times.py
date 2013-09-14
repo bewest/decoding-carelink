@@ -265,6 +265,46 @@ def parse_date_strict(data):
   except ValueError, e:
     raise NotADate(e)
 
+__test__ = {
+  'unmask': '''
+  These examples are fixed! Thanks ehwest, robg.
+  >>> unmask_date( bytearray( [ 0x93, 0xd4, 0x0e, 0x10, 0x0c ] ))
+  (2012, 11, 16, 14, 20, 19)
+
+  >>> unmask_date( bytearray( [ 0xa6, 0xeb, 0x0b, 0x10, 0x0c, ] ))
+  (2012, 11, 16, 11, 43, 38)
+
+  >>> unmask_date( bytearray( [ 0x95, 0xe8, 0x0e, 0x10, 0x0c ] ))
+  (2012, 11, 16, 14, 40, 21)
+
+
+  >>> unmask_date( bytearray( [ 0x80, 0xcf, 0x30, 0x10, 0x0c, ] ))
+  (2012, 11, 16, 16, 15, 0)
+
+
+  >>> unmask_date( bytearray( [ 0xa3, 0xcf, 0x30, 0x10, 0x0c, ] ))
+  (2012, 11, 16, 16, 15, 35)
+
+''',
+
+  'encode_monthbyte': '''
+  >>> encode_monthbyte(month=1) == bytearray(b'\x12^')
+  True
+
+  >>> encode_monthbyte(month=2) == bytearray(b'\x12\x9e')
+  True
+
+  >>> encode_monthbyte(month=3) ==  bytearray(b'\x12\xde')
+  True
+
+  >>> encode_monthbyte(month=10, minute=0, sec=0) == bytearray(b'\x80\x80')
+  True
+
+  >>> encode_monthbyte(month=10, minute=0, sec=24) == bytearray(b'\x98\x80')
+  True
+''',
+
+}
 
 if __name__ == '__main__':
   import doctest
