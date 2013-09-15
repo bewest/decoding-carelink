@@ -4,13 +4,15 @@ from binascii import hexlify
 from datetime import datetime
 from pprint import pformat
 
+import json
+import difflib
 
 from times import *
 from bolus import *
 
 # I don't know where else to put this.
 """
-    # 
+    #
     ( bytearray([ 0x07, 0x00 ])
     + bytearray([ ])
     + bytearray([ ])),
@@ -135,7 +137,7 @@ _midnights = {
     # record 2 (2012, 0, 13, 22, 4, 0)
     # 9/14/12 00:00:00,31.2,ResultDailyTotal,"AMOUNT=31.2,
     # CONCENTRATION=null"
-    # 
+    #
     ( bytearray([ 0x07, 0x00 ])
     + bytearray([ 0x00, 0x04, 0x96, 0x8d, 0x8c, ])
     + bytearray([ 0x6d, 0x8d, 0x8c, 0x05, 0x00, 0x80, 0x68, 0x97,
@@ -213,7 +215,7 @@ def _test_decode_bolus( ):
   '2012-04-10T12:12:00'
 
   ## day,month is wrong, time H:M:S is correct
-  # expected: 
+  # expected:
   >>> parse_date( bytearray( _bewest_dates['page-19'][2] ) ).isoformat( )
   '2012-02-08T03:11:12'
 
@@ -243,7 +245,7 @@ def _test_decode_bolus( ):
   0x00
   0xaa 0xf7 0x40 0x0c 0x0c # expected  - page-19[6]
 
-  0x0a 0x0c 
+  0x0a 0x0c
   0x8b 0xc3 0x28 0x0c 0x8c # page-19[3]
 
 
@@ -472,15 +474,25 @@ def _test_bolus( ):
   """
 
 class TestSaraBolus:
+  # model 722
   hexdump = """
-  5b 67 a1 51 0e 04 0d 0d 50 00 78 3c 64 00 00 28
-  00 00 14 00 28 78 5c 08 44 79 c0 3c 4b d0 01 00
-  28 00 28 00 14 00 a1 51 4e 04 0d 0a fc b4 54 2f
-  04 0d 5b fc b7 54 0f 04 0d 00 50 00 78 3c 64 58
-  00 00 00 00 1c 00 3c 78 5c 0b 28 40 c0 44 b8 c0
-  3c 8a d0 01 00 3c 00 3c 00 1c 00 b7 54 4f 04 0d
+  5b 67
+    a1 51 0e 04 0d
+    0d 50 00 78
+  3c 64 00 00 28 00 00 14 00 28 78
+  5c 08 44 79 c0 3c 4b d0
+  01 00 28 00 28 00 14 00
+    a1 51 4e 04 0d
+  0a fc
+    b4 54 2f 04 0d
+  5b fc
+    b7 54 0f 04 0d
+    00 50 00 78
+  3c 64 58 00 00 00 00 1c 00 3c 78
+  5c 0b 28 40 c0 44 b8 c0 3c 8a d0
+  01 00 3c 00 3c 00 1c 00
+    b7 54 4f 04 0d
   """
-
   csv_breakdown = """
   9/4/13 14:17:33,,,,,,,Normal,1.0,1.0,,,,,,,,,,,,,,,,,,,,,BolusNormal
     "AMOUNT=1
@@ -577,6 +589,101 @@ class TestSaraBolus:
     11345487205,52554138,84,Paradigm Revel - 723
   9/4/13 16:11:57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorMissedDataTime,TIME=1800000,11345487185,52554138,64,Paradigm Revel - 723
   """
+  bolus_1_ok = {
+      'bg': 103,
+      # 'BG_UNITS': 'mg dl'
+      'carb_input': 13,
+      #'CARB_UNITS': 'grams',
+      'carb_ratio': 12,
+      'sensitivity': 60,
+      'bg_target_low': 100,
+      'bg_target_high': 120,
+      'bolus_estimate': 1,
+      'correction_estimate': 0,
+      'food_estimate': 1,
+      'unabsorbed_insulin_total': 0.5,
+      'unabsorbed_insulin_count': 2,
+      #'action_requestor': 'pump'
+  }
+  @classmethod
+  def prove_1(klass):
+    """
+
+    TestSaraBolus( ).prove_1( )
+
+    """
+    b = """5b 67
+    a1 51 0e 04 0d
+    0d 50 00 78
+    3c 64 00 00 28 00 00 14 00 28 78
+    """.strip( ).split( )
+    b = bytearray(''.join(b).decode('hex'))
+    rec = BW722(b[:2])
+    d = rec.parse(b)
+    csv = """9/4/13 14:17:33,,,,,,,,,,,,,,,1.0,120,100,12,60,13,103,0,1,0.5,,,,,,BolusWizardBolusEstimate,"BG_INPUT=103
+      BG_UNITS=mg dl
+      CARB_INPUT=13
+      CARB_UNITS=grams
+      CARB_RATIO=12
+      INSULIN_SENSITIVITY=60
+      BG_TARGET_LOW=100
+      BG_TARGET_HIGH=120
+      BOLUS_ESTIMATE=1
+      CORRECTION_ESTIMATE=0
+      FOOD_ESTIMATE=1
+      UNABSORBED_INSULIN_TOTAL=0.5
+      UNABSORBED_INSULIN_COUNT=2
+      ACTION_REQUESTOR=pump"
+    11345487208,52554138,87,Paradigm Revel - 723
+    """
+
+    txt_1 = dictlines(d)
+    txt_2 = dictlines(klass.bolus_1_ok)
+    # print "\n".join
+    import sys
+    sys.stdout.writelines(list(difflib.unified_diff(txt_2, txt_1, 'expected', 'found')))
+    if txt_1 != txt_2:
+      print "Bad bolus wizard decoding EXPECTED"
+      print "".join(txt_2)
+      print "DECODED"
+      print "".join(txt_1)
+
+def dictlines(d):
+  items = d.items( )
+  items.sort( )
+  d = [ "%s: %s\n" % (k, v) for (k, v) in items ]
+  return d
+
+class BW722(BolusWizard):
+  def decode(self):
+    self.parse_time( )
+    bg = lib.BangInt([ self.body[1] & 0x0f, self.head[1] ])
+    carb_input = int(self.body[0])
+    carb_ratio = int(self.body[2])
+    bg_target_low = int(self.body[5])
+    bg_target_high = int(self.body[3])
+    sensitivity = int(self.body[12])
+
+    # XXX: Most likely incorrect.
+    correction = ( twos_comp( self.body[7], 8 )
+                 + twos_comp( self.body[5] & 0x0f, 8 ) ) / 10.0
+    wizard = { 'bg': bg, 'carb_input': carb_input,
+               'carb_ratio': carb_ratio,
+               'sensitivity': sensitivity,
+               'bg_target_low': bg_target_low,
+               'bg_target_high': bg_target_high,
+               #'bolus_estimate': int(self.body[6])/10.0,
+               #'food_estimate': int(self.body[13])/10.0,
+               #'unabsorbed_insulin_total': int(self.body[9])/10.0,
+               #'unabsorbed_insulin_count': self.body[11],
+               'correction_estimate': correction,
+               # '??': '??',
+               # 'unabsorbed_insulin_total': int(self.body[9])/10.0,
+               # 'food_estimate': int(self.body[0]),
+             }
+    return wizard
+
+
 
 if __name__ == '__main__':
   import doctest

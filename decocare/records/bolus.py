@@ -1,5 +1,6 @@
 from base import KnownRecord, VariableHead
 from .. import lib
+from times import extra_year_bits
 from pprint import pformat
 
 class Bolus(KnownRecord):
@@ -143,6 +144,39 @@ class UnabsorbedInsulinBolus(VariableHead):
       doses.append( decode_unabsorbed(*head) )
       raw = tail
     return doses
+
+class CalBGForPH(KnownRecord):
+  """
+    >>> rec = CalBGForPH( CalBGForPH._test_1[:2] )
+    >>> rec.parse( CalBGForPH._test_1 )
+    {'amount': 139}
+    >>> print str(rec)
+    CalBGForPH 2012-12-18T15:04:46 head[2], body[0] op[0x0a]
+
+  """
+  _test_1 = bytearray([ 0x0a, 0x8b,
+                        0xee, 0x04, 0x2f, 0x12, 0x0c, ])
+
+  _test_2 = bytearray([ 0x0a, 0xa7,
+                        0x22, 0x53, 0x30, 0x0e, 0x0d, ])
+
+  _test_3 = bytearray([ 0x0a, 0xb0,
+                        0x00, 0x6f, 0x2f, 0x0e, 0x0d, ])
+
+  _test_4 = bytearray([ 0x0a, 0x42,
+                        0x0c, 0x6c, 0x31, 0x0e, 0x8d, ])
+
+  _test_5 = bytearray([ 0x0a, 0x60,
+                        0x04, 0x59, 0x2b, 0x0e, 0x8d, ])
+  _test_6 = bytearray([ 0x0a, 0x5b,
+                        0x16, 0x52, 0x2a, 0x0e, 0x8d, ])
+  opcode = 0x0a
+  def decode(self):
+    self.parse_time( )
+    year_bits = extra_year_bits(self.date[4])
+
+    return { 'amount': int(lib.BangInt([ year_bits[0], self.head[1] ])) }
+    pass
 
 if __name__ == '__main__':
   import doctest
