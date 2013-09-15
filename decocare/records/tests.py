@@ -654,6 +654,53 @@ def dictlines(d):
   d = [ "%s: %s\n" % (k, v) for (k, v) in items ]
   return d
 
+def unsolved_bolus_wizard( ):
+  # these byte sequences line up with these records:
+  manual_decoding = ["""
+  5b 67
+    a1 51 0e 04 0d
+    0d 50 00 78
+  3c 64 00 00 28 00 00 14 00 28 78
+  """, """
+  5b fc
+    b7 54 0f 04 0d
+    00 50 00 78
+  3c 64 58 00 00 00 00 1c 00 3c 78
+  """ ]
+  csv_original = """
+  9/4/13 14:17:33,,,,,,,,,,,,,,,1.0,120,100,12,60,13,103,0,1,0.5,,,,,,BolusWizardBolusEstimate,"BG_INPUT=103
+      BG_UNITS=mg dl
+      CARB_INPUT=13
+      CARB_UNITS=grams
+      CARB_RATIO=12
+      INSULIN_SENSITIVITY=60
+      BG_TARGET_LOW=100
+      BG_TARGET_HIGH=120
+      BOLUS_ESTIMATE=1
+      CORRECTION_ESTIMATE=0
+      FOOD_ESTIMATE=1
+      UNABSORBED_INSULIN_TOTAL=0.5
+      UNABSORBED_INSULIN_COUNT=2
+      ACTION_REQUESTOR=pump"
+    11345487208,52554138,87,Paradigm Revel - 723
+
+  9/4/13 15:20:55,,,,,,,,,,,,,,,1.5,120,100,12,60,0,252,2.2,0,0.7,,,,,,BolusWizardBolusEstimate,"BG_INPUT=252
+      BG_UNITS=mg dl
+      CARB_INPUT=0
+      CARB_UNITS=grams
+      CARB_RATIO=12
+      INSULIN_SENSITIVITY=60
+      BG_TARGET_LOW=100
+      BG_TARGET_HIGH=120
+      BOLUS_ESTIMATE=1.5
+      CORRECTION_ESTIMATE=2.2
+      FOOD_ESTIMATE=0
+      UNABSORBED_INSULIN_TOTAL=0.7
+      UNABSORBED_INSULIN_COUNT=3
+      ACTION_REQUESTOR=pump"
+    11345487202,52554138,81,Paradigm Revel - 723
+  """
+
 class BW722(BolusWizard):
   def decode(self):
     self.parse_time( )
