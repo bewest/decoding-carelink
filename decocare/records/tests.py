@@ -605,48 +605,38 @@ class TestSaraBolus:
       'unabsorbed_insulin_count': 2,
       #'action_requestor': 'pump'
   }
-  @classmethod
-  def prove_1(klass):
-    """
-
-    TestSaraBolus( ).prove_1( )
-
-    """
-    b = """5b 67
+  bw_1_bytes = bytearray(''.join("""
+  5b 67
     a1 51 0e 04 0d
     0d 50 00 78
     3c 64 00 00 28 00 00 14 00 28 78
-    """.strip( ).split( )
-    b = bytearray(''.join(b).decode('hex'))
-    rec = BW722(b[:2])
-    d = rec.parse(b)
-    csv = """9/4/13 14:17:33,,,,,,,,,,,,,,,1.0,120,100,12,60,13,103,0,1,0.5,,,,,,BolusWizardBolusEstimate,"BG_INPUT=103
-      BG_UNITS=mg dl
-      CARB_INPUT=13
-      CARB_UNITS=grams
-      CARB_RATIO=12
-      INSULIN_SENSITIVITY=60
-      BG_TARGET_LOW=100
-      BG_TARGET_HIGH=120
-      BOLUS_ESTIMATE=1
-      CORRECTION_ESTIMATE=0
-      FOOD_ESTIMATE=1
-      UNABSORBED_INSULIN_TOTAL=0.5
-      UNABSORBED_INSULIN_COUNT=2
-      ACTION_REQUESTOR=pump"
-    11345487208,52554138,87,Paradigm Revel - 723
-    """
+  """.strip( ).split( )).decode('hex'))
+  bw_2_bytes = bytearray(''.join("""
+  5b fc
+    b7 54 0f 04 0d
+    00 50 00 78
+    3c 64 58 00 00 00 00 1c 00 3c 78
+  """.strip( ).split( )).decode('hex'))
 
-    txt_1 = dictlines(d)
-    txt_2 = dictlines(klass.bolus_1_ok)
-    # print "\n".join
-    import sys
-    sys.stdout.writelines(list(difflib.unified_diff(txt_2, txt_1, 'expected', 'found')))
-    if txt_1 != txt_2:
-      print "Bad bolus wizard decoding EXPECTED"
-      print "".join(txt_2)
-      print "DECODED"
-      print "".join(txt_1)
+  cal_bg_bytes = bytearray(''.join("""
+  0a fc
+    b4 54 2f 04 0d
+  """.strip( ).split( )).decode('hex'))
+  @classmethod
+  def test_cal_bg(klass):
+    """
+    >>> TestSaraBolus.test_cal_bg( )
+    CalBGForPH 2013-09-04T15:20:52 head[2], body[0] op[0x0a]
+    {
+      "amount": 252
+    }
+    """
+    # 9/4/13 15:20:52,,,,,,,,,,,,,,,,,,,,,,,,,,252,,,,CalBGForPH,"AMOUNT=252, ACTION_REQUESTOR=pump"
+    data = klass.cal_bg_bytes
+    rec = CalBGForPH(data[:2])
+    d = rec.parse(data)
+    print str(rec)
+    print json.dumps(d, indent=2)
 
 def dictlines(d):
   items = d.items( )
@@ -655,51 +645,93 @@ def dictlines(d):
   return d
 
 def unsolved_bolus_wizard( ):
-  # these byte sequences line up with these records:
-  manual_decoding = ["""
-  5b 67
-    a1 51 0e 04 0d
-    0d 50 00 78
-  3c 64 00 00 28 00 00 14 00 28 78
-  """, """
-  5b fc
-    b7 54 0f 04 0d
-    00 50 00 78
-  3c 64 58 00 00 00 00 1c 00 3c 78
-  """ ]
-  csv_original = """
-  9/4/13 14:17:33,,,,,,,,,,,,,,,1.0,120,100,12,60,13,103,0,1,0.5,,,,,,BolusWizardBolusEstimate,"BG_INPUT=103
-      BG_UNITS=mg dl
-      CARB_INPUT=13
-      CARB_UNITS=grams
-      CARB_RATIO=12
-      INSULIN_SENSITIVITY=60
-      BG_TARGET_LOW=100
-      BG_TARGET_HIGH=120
-      BOLUS_ESTIMATE=1
-      CORRECTION_ESTIMATE=0
-      FOOD_ESTIMATE=1
-      UNABSORBED_INSULIN_TOTAL=0.5
-      UNABSORBED_INSULIN_COUNT=2
-      ACTION_REQUESTOR=pump"
-    11345487208,52554138,87,Paradigm Revel - 723
-
-  9/4/13 15:20:55,,,,,,,,,,,,,,,1.5,120,100,12,60,0,252,2.2,0,0.7,,,,,,BolusWizardBolusEstimate,"BG_INPUT=252
-      BG_UNITS=mg dl
-      CARB_INPUT=0
-      CARB_UNITS=grams
-      CARB_RATIO=12
-      INSULIN_SENSITIVITY=60
-      BG_TARGET_LOW=100
-      BG_TARGET_HIGH=120
-      BOLUS_ESTIMATE=1.5
-      CORRECTION_ESTIMATE=2.2
-      FOOD_ESTIMATE=0
-      UNABSORBED_INSULIN_TOTAL=0.7
-      UNABSORBED_INSULIN_COUNT=3
-      ACTION_REQUESTOR=pump"
-    11345487202,52554138,81,Paradigm Revel - 723
   """
+  >>> unsolved_bolus_wizard( )
+  """
+  # these byte sequences line up with these records:
+  bw_ok_1 = {
+      'bg_input': 103,
+      'carb_input': 13,
+      'carb_ratio': 12,
+      'insulin_sensitivity': 60,
+      'bg_target_low': 100,
+      'bg_target_high': 120,
+      'bolus_estimate': 1,
+      'correction_estimate': 0,
+      'food_estimate': 1,
+      'unabsorbed_insulin_total': 0.5,
+      'unabsorbed_insulin_count': 2,
+  }
+  bw_ok_2 = {
+      'bg_input': 252,
+      'carb_input': 0,
+      'carb_ratio': 12,
+      'insulin_sensitivity': 60,
+      'bg_target_low': 100,
+      'bg_target_high': 120,
+      'bolus_estimate': 1.5,
+      'correction_estimate': 2.2,
+      'food_estimate': 0,
+      'unabsorbed_insulin_total': 0.7,
+      'unabsorbed_insulin_count': 3,
+  }
+  found = decode_wizard(TestSaraBolus.bw_1_bytes)
+  if found != bw_ok_1:
+    print "FOUND:"
+    print json.dumps(found, indent=2)
+    print "EXPECTED:"
+    print json.dumps(bw_ok_1, indent=2)
+  found = decode_wizard(TestSaraBolus.bw_2_bytes)
+  if found != bw_ok_2:
+    print "FOUND:"
+    print json.dumps(found, indent=2)
+    print "EXPECTED:"
+    print json.dumps(bw_ok_2, indent=2)
+
+def decode_wizard(data):
+  """
+  BYTE
+  01:
+  02:
+  03:
+  04:
+  05:
+  06:
+  07:
+  08:
+  09:
+  10:
+  12:
+  13:
+  14:
+  15:
+  16:
+  17:
+  18:
+  19:
+  20:
+  21:
+  22:
+  """
+  head = data[:2]
+  date = data[2:7]
+  datetime = parse_date(date)
+  body = data[7:]
+  bg = lib.BangInt([ body[1] & 0x0f, head[1] ])
+  carb_input = int(body[0])
+  carb_ratio = int(body[2])
+  bg_target_low = int(body[5])
+  bg_target_high = int(body[3])
+  sensitivity = int(body[11])
+
+  print "BOLUS WIZARD", datetime.isoformat( )
+  wizard = { 'bg': bg, 'carb_input': carb_input,
+             'carb_ratio': carb_ratio,
+             'sensitivity': sensitivity,
+             'bg_target_low': bg_target_low,
+             'bg_target_high': bg_target_high,
+  }
+  return wizard
 
 class BW722(BolusWizard):
   def decode(self):
