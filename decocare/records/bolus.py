@@ -65,7 +65,7 @@ class BolusWizard(KnownRecord):
                         0x45, 0x50, 0x0d, 0x2d, 0x6a, 0x03, 0x35, 0x00,
                         0x00, 0x00, 0x00, 0x38, 0x7d, ])
   opcode = 0x5b
-  body_length = 13
+  body_length = 15
   def decode(self):
     self.parse_time( )
     bg = lib.BangInt([ self.body[1] & 0x0f, self.head[1] ])
