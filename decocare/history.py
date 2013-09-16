@@ -138,6 +138,12 @@ class Ian50(KnownRecord):
   body_length = 34
 _confirmed.append(Ian50)
 
+class Ian54(KnownRecord):
+  opcode = 0x54
+  body_length = 34 + 23
+_confirmed.append(Ian54)
+
+
 
 class Ian0B(KnownRecord):
   opcode = 0x0B
