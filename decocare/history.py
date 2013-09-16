@@ -49,11 +49,11 @@ class NoDelivery(KnownRecord):
 class ResultTotals(KnownRecord):
   opcode = 0x07
   head_length = 5
-  body_length = 38 + 3
+  body_length = 38 + 6 + 7
 
 class ChangeBasalProfile(KnownRecord):
   opcode = 0x08
-  body_length = 42
+  body_length = 44
 class ClearAlarm(KnownRecord):
   opcode = 0x0C
 class SelectBasalProfile(KnownRecord):
@@ -125,6 +125,16 @@ _confirmed = [ Bolus, Prime, NoDelivery, ResultTotals, ChangeBasalProfile,
                PumpResume, CalBGForPH, Rewind, EnableDisableRemote,
                ChangeRemoteID, TempBasal, LowReservoir, BolusWizard,
                UnabsorbedInsulinBolus, ChangeUtility, ChangeTimeDisplay ]
+
+class Sara7B(KnownRecord):
+  opcode = 0x7b
+  body_length = 3
+_confirmed.append(Sara7B)
+class Sara6E(KnownRecord):
+  opcode = 0x6e
+  head_length = 54
+  body_length = 3
+_confirmed.append(Sara6E)
 
 class hack1(InvalidRecord):
   opcode = 0x6d
