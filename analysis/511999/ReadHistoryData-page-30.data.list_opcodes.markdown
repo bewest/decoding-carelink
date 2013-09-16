@@ -13,7 +13,7 @@ reading more to debug 0x00
               0    0   70  219   74  106   13  123
               3   64  192   12   10   13   24   29
               0   10  104  106  208   47   10   13
-#### RECORD 0 Sara7B 2013-07-09T17:45:32 head[2], body[3] op[0x7b]
+#### RECORD 0 BasalProfileStart 2013-07-09T17:45:32 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x03                                  {.

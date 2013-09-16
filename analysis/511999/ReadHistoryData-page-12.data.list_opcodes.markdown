@@ -623,7 +623,7 @@ reading more to debug 0x00
     0000   0x8c 0x12 0x57 0x08 0x0d                   ..W..
     body (0)
 
-#### RECORD 29 Sara7B 2013-08-09T00:00:00 head[2], body[3] op[0x7b]
+#### RECORD 29 BasalProfileStart 2013-08-09T00:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x00                                  {.
@@ -824,7 +824,7 @@ reading more to debug 0x00
     0000   0xb4 0x3a 0x4b 0x09 0x0d                   .:K..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 41 Sara7B 2013-08-09T12:00:00 head[2], body[3] op[0x7b]
+#### RECORD 41 BasalProfileStart 2013-08-09T12:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x03                                  {.

@@ -37,7 +37,7 @@ reading more to debug 0x00
     0000   0x67 0xdf 0x01 0x14 0x0d                   g....
     body (0)
     HOUR BITS: [1, 1, 0]
-#### RECORD 2 Sara7B 2013-07-20T01:31:40 head[2], body[3] op[0x7b]
+#### RECORD 2 BasalProfileStart 2013-07-20T01:31:40 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x00                                  {.
@@ -51,7 +51,7 @@ reading more to debug 0x00
     decimal
               0   31    0
     HOUR BITS: [1, 1, 0]
-#### RECORD 3 Sara7B 2013-07-20T04:00:00 head[2], body[3] op[0x7b]
+#### RECORD 3 BasalProfileStart 2013-07-20T04:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x01                                  {.
@@ -65,7 +65,7 @@ reading more to debug 0x00
     decimal
               8   33    0
     HOUR BITS: [1, 1, 0]
-#### RECORD 4 Sara7B 2013-07-20T08:00:00 head[2], body[3] op[0x7b]
+#### RECORD 4 BasalProfileStart 2013-07-20T08:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x02                                  {.
@@ -79,7 +79,7 @@ reading more to debug 0x00
     decimal
              16   34    0
     HOUR BITS: [1, 1, 0]
-#### RECORD 5 Sara7B 2013-07-20T12:00:00 head[2], body[3] op[0x7b]
+#### RECORD 5 BasalProfileStart 2013-07-20T12:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x03                                  {.
@@ -499,7 +499,7 @@ reading more to debug 0x00
     0000   0x72 0xdb 0x54 0x74 0x0d                   r.Tt.
     body (0)
     HOUR BITS: [1, 1, 0] DAY BITS: [0, 1, 1]
-#### RECORD 27 Sara7B 2013-07-21T00:00:00 head[2], body[3] op[0x7b]
+#### RECORD 27 BasalProfileStart 2013-07-21T00:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x00                                  {.
@@ -773,7 +773,7 @@ reading more to debug 0x00
     0000   0x73 0xd2 0x4b 0x15 0x0d                   s.K..
     body (0)
     HOUR BITS: [1, 1, 0]
-#### RECORD 43 Sara7B 2013-07-21T12:00:00 head[2], body[3] op[0x7b]
+#### RECORD 43 BasalProfileStart 2013-07-21T12:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x03                                  {.
@@ -1093,7 +1093,7 @@ reading more to debug 0x00
     0000   0x61 0xde 0x55 0x75 0x0d                   a.Uu.
     body (0)
     HOUR BITS: [1, 1, 0] DAY BITS: [0, 1, 1]
-#### RECORD 60 Sara7B 2013-07-22T00:00:00 head[2], body[3] op[0x7b]
+#### RECORD 60 BasalProfileStart 2013-07-22T00:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x00                                  {.

@@ -73,7 +73,7 @@ reading more to debug 0x00
     0000   0x79 0xf9 0x4a 0x76 0x0d                   y.Jv.
     body (0)
     HOUR BITS: [1, 1, 1] DAY BITS: [0, 1, 1]
-#### RECORD 3 Sara7B 2013-07-22T12:00:00 head[2], body[3] op[0x7b]
+#### RECORD 3 BasalProfileStart 2013-07-22T12:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x03                                  {.

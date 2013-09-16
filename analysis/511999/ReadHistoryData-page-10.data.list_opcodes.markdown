@@ -84,7 +84,7 @@
     0000   0x99 0x2e 0x49 0x0b 0x0d                   ..I..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 5 Sara7B 2013-08-11T12:00:00 head[2], body[3] op[0x7b]
+#### RECORD 5 BasalProfileStart 2013-08-11T12:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x03                                  {.
@@ -316,7 +316,7 @@
     0000   0xb2 0x0e 0x57 0x0b 0x0d                   ..W..
     body (0)
 
-#### RECORD 18 Sara7B 2013-08-12T00:00:00 head[2], body[3] op[0x7b]
+#### RECORD 18 BasalProfileStart 2013-08-12T00:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x00                                  {.
@@ -445,7 +445,7 @@
     0000   0x87 0x3b 0x49 0x0c 0x0d                   .;I..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 26 Sara7B 2013-08-12T12:00:00 head[2], body[3] op[0x7b]
+#### RECORD 26 BasalProfileStart 2013-08-12T12:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x03                                  {.
@@ -531,7 +531,7 @@
     0000   0x94 0x23 0x4c 0x0c 0x0d                   .#L..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 31 Sara7B 2013-08-13T00:00:00 head[2], body[3] op[0x7b]
+#### RECORD 31 BasalProfileStart 2013-08-13T00:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x00                                  {.
@@ -601,7 +601,7 @@
     0000   0x0d 0x0d 0x10 0x22 0x00                   ...".
     body (0)
     DAY BITS: [0, 0, 1]
-#### RECORD 36 Sara7B 2013-08-13T12:00:00 head[2], body[3] op[0x7b]
+#### RECORD 36 BasalProfileStart 2013-08-13T12:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x03                                  {.
@@ -895,7 +895,7 @@
     0000   0xa0 0x31 0x56 0x0d 0x0d                   .1V..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 52 Sara7B 2013-08-14T00:00:00 head[2], body[3] op[0x7b]
+#### RECORD 52 BasalProfileStart 2013-08-14T00:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x00                                  {.
@@ -965,7 +965,7 @@
     0000   0x0e 0x0d 0x10 0x22 0x00                   ...".
     body (0)
     DAY BITS: [0, 0, 1]
-#### RECORD 57 Sara7B 2013-08-14T09:12:03 head[2], body[3] op[0x7b]
+#### RECORD 57 BasalProfileStart 2013-08-14T09:12:03 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x02                                  {.
@@ -1051,7 +1051,7 @@
     0000   0x9b 0x0c 0x49 0x0e 0x0d                   ..I..
     body (0)
 
-#### RECORD 62 Sara7B 2013-08-14T12:00:00 head[2], body[3] op[0x7b]
+#### RECORD 62 BasalProfileStart 2013-08-14T12:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x03                                  {.

@@ -128,7 +128,7 @@ reading more to debug 0x00
     0000   0x69 0xf9 0x56 0x6e 0x0d                   i.Vn.
     body (0)
     HOUR BITS: [1, 1, 1] DAY BITS: [0, 1, 1]
-#### RECORD 6 Sara7B 2013-07-15T00:00:00 head[2], body[3] op[0x7b]
+#### RECORD 6 BasalProfileStart 2013-07-15T00:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x00                                  {.
