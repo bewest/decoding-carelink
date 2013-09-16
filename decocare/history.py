@@ -46,10 +46,12 @@ def decode_remote_id(msg):
 class NoDelivery(KnownRecord):
   opcode = 0x06
   head_length = 4
-class ResultTotals(KnownRecord):
+#class ResultTotals(KnownRecord):
+class ResultTotals(InvalidRecord):
+  """On 722 this seems like two records."""
   opcode = 0x07
   head_length = 5
-  body_length = 38 + 6 + 7
+  #body_length = 38 + 6 + 7
 
 class ChangeBasalProfile(KnownRecord):
   opcode = 0x08
@@ -126,14 +128,15 @@ _confirmed = [ Bolus, Prime, NoDelivery, ResultTotals, ChangeBasalProfile,
                ChangeRemoteID, TempBasal, LowReservoir, BolusWizard,
                UnabsorbedInsulinBolus, ChangeUtility, ChangeTimeDisplay ]
 
-class Sara7B(KnownRecord):
+class BasalProfileStart(KnownRecord):
   opcode = 0x7b
   body_length = 3
-_confirmed.append(Sara7B)
-class Sara6E(KnownRecord):
+_confirmed.append(BasalProfileStart)
+class Sara6E(InvalidRecord):
+  """Seems specific to 722?"""
   opcode = 0x6e
-  head_length = 54
-  body_length = 3
+  head_length = 52 - 5
+  # body_length = 1
 _confirmed.append(Sara6E)
 
 class hack1(InvalidRecord):

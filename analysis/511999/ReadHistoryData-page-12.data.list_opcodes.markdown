@@ -623,7 +623,7 @@ reading more to debug 0x00
     0000   0x8c 0x12 0x57 0x08 0x0d                   ..W..
     body (0)
 
-#### RECORD 29 Sara7B 2013-08-09T00:00:00 head[2], body[3] op[0x7b]
+#### RECORD 29 BasalProfileStart 2013-08-09T00:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x00                                  {.
@@ -637,7 +637,7 @@ reading more to debug 0x00
     decimal
               0   29    0
 
-#### RECORD 30 ResultTotals (2000, 8, 0, 0, 13, 8) head[5], body[51] op[0x07]
+#### RECORD 30 ResultTotals (2000, 8, 0, 0, 13, 8) head[5], body[0] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x05 0xf7                   .....
@@ -645,54 +645,56 @@ reading more to debug 0x00
               7    0    0    5  247
     datetime ((2000, 8, 0, 0, 13, 8))
     0000   0x88 0x0d 0x00 0x00 0x00                   .....
-    body (51)
-    hex
+    body (0)
+
+#### RECORD 31 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
+
+    op hex (47)
     0000   0x6e 0x88 0x0d 0x05 0x00 0x9f 0x00 0x00    n.......
     0008   0x0e 0x00 0x00 0x05 0xf7 0x02 0xdb 0x30    .......0
     0010   0x03 0x1c 0x34 0x00 0x9e 0x01 0xc4 0x00    ..4.....
     0018   0x54 0x00 0xa8 0x00 0x5c 0x08 0x04 0x03    T...\...
     0020   0x02 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x64 0xd8 0x00 0x00 0x00 0x00    ..d.....
-    0030   0x00 0x00 0x00                             ...
+    0028   0x00 0x00 0x64 0xd8 0x00 0x00 0x00         ..d....
     decimal
             110  136   13    5    0  159    0    0
              14    0    0    5  247    2  219   48
               3   28   52    0  158    1  196    0
              84    0  168    0   92    8    4    3
               2    0    0    0    0    0    0    0
-              0    0  100  216    0    0    0    0
-              0    0    0
+              0    0  100  216    0    0    0
+    datetime ((2000, 0, 0, 0, 0, 0))
+    0000   0x00 0x00 0x00 0x00 0x00                   .....
+    body (0)
 
-#### RECORD 31 Base (2009, 2, 4, 0, 0, 1) head[2], body[0] op[0x00]
+#### RECORD 32 BasalProfileStart 2013-08-09T04:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
-    0000   0x00 0x7b                                  .{
+    0000   0x7b 0x01                                  {.
     decimal
-              0  123
-    datetime ((2009, 2, 4, 0, 0, 1))
-    0000   0x01 0x80 0x00 0x04 0x09                   .....
-    body (0)
-    HOUR BITS: [1, 0, 0]
-#### RECORD 32 Base (2000, 0, 2, 27, 0, 33) head[2], body[0] op[0x0d]
+            123    1
+    datetime (2013-08-09T04:00:00)
+    0000   0x80 0x00 0x04 0x09 0x0d                   .....
+    body (3)
+    hex
+    0000   0x08 0x21 0x00                             .!.
+    decimal
+              8   33    0
+
+#### RECORD 33 BasalProfileStart 2013-08-09T08:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
-    0000   0x0d 0x08                                  ..
+    0000   0x7b 0x02                                  {.
     decimal
-             13    8
-    datetime ((2000, 0, 2, 27, 0, 33))
-    0000   0x21 0x00 0x7b 0x02 0x80                   !.{..
-    body (0)
-    YEAR BITS: [1, 0, 0, 0]
-#### RECORD 33 Base (2000, 0, 2, 16, 13, 9) head[2], body[0] op[0x00]
+            123    2
+    datetime (2013-08-09T08:00:00)
+    0000   0x80 0x00 0x08 0x09 0x0d                   .....
+    body (3)
+    hex
+    0000   0x10 0x22 0x00                             .".
+    decimal
+             16   34    0
 
-    op hex (2)
-    0000   0x00 0x08                                  ..
-    decimal
-              0    8
-    datetime ((2000, 0, 2, 16, 13, 9))
-    0000   0x09 0x0d 0x10 0x22 0x00                   ...".
-    body (0)
-    DAY BITS: [0, 0, 1]
 #### RECORD 34 CalBGForPH 2013-08-09T10:19:25 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -824,7 +826,7 @@ reading more to debug 0x00
     0000   0xb4 0x3a 0x4b 0x09 0x0d                   .:K..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 41 Sara7B 2013-08-09T12:00:00 head[2], body[3] op[0x7b]
+#### RECORD 41 BasalProfileStart 2013-08-09T12:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x03                                  {.

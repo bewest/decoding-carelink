@@ -1,5 +1,5 @@
 ## START logs/ReadHistoryData-page-29.data
-#### STOPPING DOUBLE NULLS @ 257, found 130 nulls
+#### STOPPING DOUBLE NULLS @ 288, found 99 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
               0    0
@@ -229,7 +229,7 @@ reading more to debug 0x00
     0000   0x7b 0xd2 0x56 0x6c 0x0d                   {.Vl.
     body (0)
     HOUR BITS: [1, 1, 0] DAY BITS: [0, 1, 1]
-#### RECORD 10 Sara7B 2013-07-13T00:00:00 head[2], body[3] op[0x7b]
+#### RECORD 10 BasalProfileStart 2013-07-13T00:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x00                                  {.
@@ -243,7 +243,7 @@ reading more to debug 0x00
     decimal
               0   28    0
     HOUR BITS: [1, 1, 0]
-#### RECORD 11 ResultTotals (2000, 6, 0, 0, 13, 44) head[5], body[51] op[0x07]
+#### RECORD 11 ResultTotals (2000, 6, 0, 0, 13, 44) head[5], body[0] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x04 0xb4                   .....
@@ -251,52 +251,50 @@ reading more to debug 0x00
               7    0    0    4  180
     datetime ((2000, 6, 0, 0, 13, 44))
     0000   0x6c 0x8d 0x00 0x00 0x00                   l....
-    body (51)
-    hex
+    body (0)
+    HOUR BITS: [1, 0, 0]
+#### RECORD 12 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
+
+    op hex (47)
     0000   0x6e 0x6c 0x8d 0x05 0x00 0xc6 0x00 0x00    nl......
     0008   0x07 0x00 0x00 0x04 0xb4 0x02 0xd4 0x3c    .......<
     0010   0x01 0xe0 0x28 0x00 0x44 0x00 0xa8 0x00    ..(.D...
     0018   0x94 0x00 0xa4 0x00 0x00 0x03 0x02 0x01    ........
     0020   0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x68 0x39 0x00 0x00 0x00 0x00    ..h9....
-    0030   0x00 0x00 0x00                             ...
+    0028   0x00 0x00 0x68 0x39 0x00 0x00 0x00         ..h9...
     decimal
             110  108  141    5    0  198    0    0
               7    0    0    4  180    2  212   60
               1  224   40    0   68    0  168    0
             148    0  164    0    0    3    2    1
               0    4    0    0    0    0    0    0
-              0    0  104   57    0    0    0    0
-              0    0    0
-    HOUR BITS: [1, 0, 0]
-#### RECORD 12 Base (2013, 1, 0, 15, 26, 4) head[2], body[0] op[0x00]
-
-    op hex (2)
-    0000   0x00 0x08                                  ..
-    decimal
-              0    8
-    datetime ((2013, 1, 0, 15, 26, 4))
-    0000   0x04 0x5a 0xef 0x00 0x0d                   .Z...
-    body (0)
-    HOUR BITS: [0, 1, 0]
-#### RECORD 13 Base (2000, 0, 30, 8, 0, 28) head[2], body[0] op[0x0d]
-
-    op hex (2)
-    0000   0x0d 0x00                                  ..
-    decimal
-             13    0
-    datetime ((2000, 0, 30, 8, 0, 28))
-    0000   0x1c 0x00 0x08 0x1e 0x00                   .....
+              0    0  104   57    0    0    0
+    datetime ((2000, 0, 0, 0, 0, 0))
+    0000   0x00 0x00 0x00 0x00 0x00                   .....
     body (0)
 
-#### RECORD 14 Base (2000, 0, 0, 29, 24, 0) head[2], body[0] op[0x10]
+#### RECORD 13 ChangeBasalProfile 2013-07-13T00:47:26 head[2], body[44] op[0x08]
 
     op hex (2)
-    0000   0x10 0x24                                  .$
+    0000   0x08 0x04                                  ..
     decimal
-             16   36
-    datetime ((2000, 0, 0, 29, 24, 0))
-    0000   0x00 0x18 0x1d 0x00 0x00                   .....
-    body (0)
-
-`end logs/ReadHistoryData-page-29.data: 15 records`
+              8    4
+    datetime (2013-07-13T00:47:26)
+    0000   0x5a 0xef 0x00 0x0d 0x0d                   Z....
+    body (44)
+    hex
+    0000   0x00 0x1c 0x00 0x08 0x1e 0x00 0x10 0x24    .......$
+    0008   0x00 0x18 0x1d 0x00 0x00 0x00 0x00 0x00    ........
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0028   0x00 0x00 0x00 0x00                        ....
+    decimal
+              0   28    0    8   30    0   16   36
+              0   24   29    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0
+    HOUR BITS: [1, 1, 1]
+`end logs/ReadHistoryData-page-29.data: 14 records`

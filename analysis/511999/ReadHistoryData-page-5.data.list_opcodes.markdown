@@ -110,7 +110,7 @@ reading more to debug 0x00
     0000   0xa3 0x37 0x4b 0x18 0x0d                   .7K..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 6 Sara7B 2013-08-24T12:00:00 head[2], body[3] op[0x7b]
+#### RECORD 6 BasalProfileStart 2013-08-24T12:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x03                                  {.
@@ -489,7 +489,7 @@ reading more to debug 0x00
     0000   0xaa 0x0d 0x57 0x18 0x0d                   ..W..
     body (0)
 
-#### RECORD 26 Sara7B 2013-08-25T00:00:00 head[2], body[3] op[0x7b]
+#### RECORD 26 BasalProfileStart 2013-08-25T00:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x00                                  {.
@@ -503,7 +503,7 @@ reading more to debug 0x00
     decimal
               0   29    0
 
-#### RECORD 27 ResultTotals (2000, 8, 0, 0, 13, 24) head[5], body[51] op[0x07]
+#### RECORD 27 ResultTotals (2000, 8, 0, 0, 13, 24) head[5], body[0] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x04 0xe2                   .....
@@ -511,55 +511,57 @@ reading more to debug 0x00
               7    0    0    4  226
     datetime ((2000, 8, 0, 0, 13, 24))
     0000   0x98 0x0d 0x00 0x00 0x00                   .....
-    body (51)
-    hex
+    body (0)
+
+#### RECORD 28 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
+
+    op hex (47)
     0000   0x6e 0x98 0x0d 0x05 0x00 0xb9 0x00 0x00    n.......
     0008   0x07 0x00 0x00 0x04 0xe2 0x02 0x56 0x30    ......V0
     0010   0x02 0x8c 0x34 0x00 0x5f 0x01 0x58 0x01    ..4._.X.
     0018   0x34 0x00 0x00 0x00 0x00 0x06 0x02 0x00    4.......
     0020   0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x6d 0xbb 0x00 0x00 0x00 0x00    ..m.....
-    0030   0x00 0x00 0x00                             ...
+    0028   0x00 0x00 0x6d 0xbb 0x00 0x00 0x00         ..m....
     decimal
             110  152   13    5    0  185    0    0
               7    0    0    4  226    2   86   48
               2  140   52    0   95    1   88    1
              52    0    0    0    0    6    2    0
               0    4    0    0    0    0    0    0
-              0    0  109  187    0    0    0    0
-              0    0    0
+              0    0  109  187    0    0    0
+    datetime ((2000, 0, 0, 0, 0, 0))
+    0000   0x00 0x00 0x00 0x00 0x00                   .....
+    body (0)
 
-#### RECORD 28 Base (2009, 2, 4, 0, 0, 1) head[2], body[0] op[0x00]
+#### RECORD 29 BasalProfileStart 2013-08-25T04:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
-    0000   0x00 0x7b                                  .{
+    0000   0x7b 0x01                                  {.
     decimal
-              0  123
-    datetime ((2009, 2, 4, 0, 0, 1))
-    0000   0x01 0x80 0x00 0x04 0x19                   .....
-    body (0)
-    HOUR BITS: [1, 0, 0] YEAR BITS: [0, 0, 0, 1]
-#### RECORD 29 Base (2000, 0, 2, 27, 0, 33) head[2], body[0] op[0x0d]
+            123    1
+    datetime (2013-08-25T04:00:00)
+    0000   0x80 0x00 0x04 0x19 0x0d                   .....
+    body (3)
+    hex
+    0000   0x08 0x21 0x00                             .!.
+    decimal
+              8   33    0
+
+#### RECORD 30 BasalProfileStart 2013-08-25T08:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
-    0000   0x0d 0x08                                  ..
+    0000   0x7b 0x02                                  {.
     decimal
-             13    8
-    datetime ((2000, 0, 2, 27, 0, 33))
-    0000   0x21 0x00 0x7b 0x02 0x80                   !.{..
-    body (0)
-    YEAR BITS: [1, 0, 0, 0]
-#### RECORD 30 Base (2000, 0, 2, 16, 13, 25) head[2], body[0] op[0x00]
+            123    2
+    datetime (2013-08-25T08:00:00)
+    0000   0x80 0x00 0x08 0x19 0x0d                   .....
+    body (3)
+    hex
+    0000   0x10 0x22 0x00                             .".
+    decimal
+             16   34    0
 
-    op hex (2)
-    0000   0x00 0x08                                  ..
-    decimal
-              0    8
-    datetime ((2000, 0, 2, 16, 13, 25))
-    0000   0x19 0x0d 0x10 0x22 0x00                   ...".
-    body (0)
-    DAY BITS: [0, 0, 1]
-#### RECORD 31 Sara7B 2013-08-25T12:00:00 head[2], body[3] op[0x7b]
+#### RECORD 31 BasalProfileStart 2013-08-25T12:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x03                                  {.
@@ -704,7 +706,7 @@ reading more to debug 0x00
     0000   0x97 0x36 0x55 0x79 0x0d                   .6Uy.
     body (0)
     HOUR BITS: [0, 0, 1] DAY BITS: [0, 1, 1]
-#### RECORD 39 Sara7B 2013-08-26T00:00:00 head[2], body[3] op[0x7b]
+#### RECORD 39 BasalProfileStart 2013-08-26T00:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x00                                  {.
@@ -718,7 +720,7 @@ reading more to debug 0x00
     decimal
               0   29    0
 
-#### RECORD 40 ResultTotals (2000, 8, 0, 0, 13, 25) head[5], body[51] op[0x07]
+#### RECORD 40 ResultTotals (2000, 8, 0, 0, 13, 25) head[5], body[0] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x03 0xa4                   .....
@@ -726,54 +728,56 @@ reading more to debug 0x00
               7    0    0    3  164
     datetime ((2000, 8, 0, 0, 13, 25))
     0000   0x99 0x0d 0x00 0x00 0x00                   .....
-    body (51)
-    hex
+    body (0)
+
+#### RECORD 41 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
+
+    op hex (47)
     0000   0x6e 0x99 0x0d 0x05 0x00 0xd2 0x00 0x00    n.......
     0008   0x02 0x00 0x00 0x03 0xa4 0x02 0xdc 0x4f    .......O
     0010   0x00 0xc8 0x15 0x00 0x15 0x00 0x00 0x00    ........
     0018   0x58 0x00 0x70 0x00 0x00 0x00 0x01 0x01    X.p.....
     0020   0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0xa3 0x00 0x00 0x00 0x00 0x00    ........
-    0030   0x00 0x00 0x00                             ...
+    0028   0x00 0x00 0xa3 0x00 0x00 0x00 0x00         .......
     decimal
             110  153   13    5    0  210    0    0
               2    0    0    3  164    2  220   79
               0  200   21    0   21    0    0    0
              88    0  112    0    0    0    1    1
               0    4    0    0    0    0    0    0
-              0    0  163    0    0    0    0    0
-              0    0    0
+              0    0  163    0    0    0    0
+    datetime ((2000, 0, 0, 0, 0, 0))
+    0000   0x00 0x00 0x00 0x00 0x00                   .....
+    body (0)
 
-#### RECORD 41 Base (2010, 2, 4, 0, 0, 1) head[2], body[0] op[0x00]
+#### RECORD 42 BasalProfileStart 2013-08-26T04:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
-    0000   0x00 0x7b                                  .{
+    0000   0x7b 0x01                                  {.
     decimal
-              0  123
-    datetime ((2010, 2, 4, 0, 0, 1))
-    0000   0x01 0x80 0x00 0x04 0x1a                   .....
-    body (0)
-    HOUR BITS: [1, 0, 0] YEAR BITS: [0, 0, 0, 1]
-#### RECORD 42 Base (2000, 0, 2, 27, 0, 33) head[2], body[0] op[0x0d]
+            123    1
+    datetime (2013-08-26T04:00:00)
+    0000   0x80 0x00 0x04 0x1a 0x0d                   .....
+    body (3)
+    hex
+    0000   0x08 0x21 0x00                             .!.
+    decimal
+              8   33    0
+
+#### RECORD 43 BasalProfileStart 2013-08-26T08:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
-    0000   0x0d 0x08                                  ..
+    0000   0x7b 0x02                                  {.
     decimal
-             13    8
-    datetime ((2000, 0, 2, 27, 0, 33))
-    0000   0x21 0x00 0x7b 0x02 0x80                   !.{..
-    body (0)
-    YEAR BITS: [1, 0, 0, 0]
-#### RECORD 43 Base (2000, 0, 2, 16, 13, 26) head[2], body[0] op[0x00]
+            123    2
+    datetime (2013-08-26T08:00:00)
+    0000   0x80 0x00 0x08 0x1a 0x0d                   .....
+    body (3)
+    hex
+    0000   0x10 0x22 0x00                             .".
+    decimal
+             16   34    0
 
-    op hex (2)
-    0000   0x00 0x08                                  ..
-    decimal
-              0    8
-    datetime ((2000, 0, 2, 16, 13, 26))
-    0000   0x1a 0x0d 0x10 0x22 0x00                   ...".
-    body (0)
-    DAY BITS: [0, 0, 1]
 #### RECORD 44 CalBGForPH 2013-08-26T10:42:17 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -833,7 +837,7 @@ reading more to debug 0x00
     0000   0x99 0x2a 0x4a 0x1a 0x0d                   .*J..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 47 Sara7B 2013-08-26T12:00:00 head[2], body[3] op[0x7b]
+#### RECORD 47 BasalProfileStart 2013-08-26T12:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x03                                  {.
@@ -1150,7 +1154,7 @@ reading more to debug 0x00
     0000   0xa0 0x2a 0x54 0x1a 0x0d                   .*T..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 64 Sara7B 2013-08-27T00:00:00 head[2], body[3] op[0x7b]
+#### RECORD 64 BasalProfileStart 2013-08-27T00:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x00                                  {.
@@ -1164,7 +1168,7 @@ reading more to debug 0x00
     decimal
               0   29    0
 
-#### RECORD 65 ResultTotals (2000, 8, 0, 0, 13, 26) head[5], body[51] op[0x07]
+#### RECORD 65 ResultTotals (2000, 8, 0, 0, 13, 26) head[5], body[0] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x04 0x14                   .....
@@ -1172,55 +1176,57 @@ reading more to debug 0x00
               7    0    0    4   20
     datetime ((2000, 8, 0, 0, 13, 26))
     0000   0x9a 0x0d 0x00 0x00 0x00                   .....
-    body (51)
-    hex
+    body (0)
+
+#### RECORD 66 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
+
+    op hex (47)
     0000   0x6e 0x9a 0x0d 0x05 0x00 0x94 0x00 0x00    n.......
     0008   0x05 0x00 0x00 0x04 0x14 0x02 0xdc 0x46    .......F
     0010   0x01 0x38 0x1e 0x00 0x3e 0x00 0xd0 0x00    .8..>...
     0018   0x68 0x00 0x00 0x00 0x00 0x04 0x01 0x00    h.......
     0020   0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x6b 0x1e 0x00 0x00 0x00 0x00    ..k.....
-    0030   0x00 0x00 0x00                             ...
+    0028   0x00 0x00 0x6b 0x1e 0x00 0x00 0x00         ..k....
     decimal
             110  154   13    5    0  148    0    0
               5    0    0    4   20    2  220   70
               1   56   30    0   62    0  208    0
             104    0    0    0    0    4    1    0
               0    4    0    0    0    0    0    0
-              0    0  107   30    0    0    0    0
-              0    0    0
+              0    0  107   30    0    0    0
+    datetime ((2000, 0, 0, 0, 0, 0))
+    0000   0x00 0x00 0x00 0x00 0x00                   .....
+    body (0)
 
-#### RECORD 66 Base (2011, 2, 4, 0, 0, 1) head[2], body[0] op[0x00]
+#### RECORD 67 BasalProfileStart 2013-08-27T04:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
-    0000   0x00 0x7b                                  .{
+    0000   0x7b 0x01                                  {.
     decimal
-              0  123
-    datetime ((2011, 2, 4, 0, 0, 1))
-    0000   0x01 0x80 0x00 0x04 0x1b                   .....
-    body (0)
-    HOUR BITS: [1, 0, 0] YEAR BITS: [0, 0, 0, 1]
-#### RECORD 67 Base (2000, 0, 2, 27, 0, 33) head[2], body[0] op[0x0d]
+            123    1
+    datetime (2013-08-27T04:00:00)
+    0000   0x80 0x00 0x04 0x1b 0x0d                   .....
+    body (3)
+    hex
+    0000   0x08 0x21 0x00                             .!.
+    decimal
+              8   33    0
+
+#### RECORD 68 BasalProfileStart 2013-08-27T08:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
-    0000   0x0d 0x08                                  ..
+    0000   0x7b 0x02                                  {.
     decimal
-             13    8
-    datetime ((2000, 0, 2, 27, 0, 33))
-    0000   0x21 0x00 0x7b 0x02 0x80                   !.{..
-    body (0)
-    YEAR BITS: [1, 0, 0, 0]
-#### RECORD 68 Base (2000, 0, 2, 16, 13, 27) head[2], body[0] op[0x00]
+            123    2
+    datetime (2013-08-27T08:00:00)
+    0000   0x80 0x00 0x08 0x1b 0x0d                   .....
+    body (3)
+    hex
+    0000   0x10 0x22 0x00                             .".
+    decimal
+             16   34    0
 
-    op hex (2)
-    0000   0x00 0x08                                  ..
-    decimal
-              0    8
-    datetime ((2000, 0, 2, 16, 13, 27))
-    0000   0x1b 0x0d 0x10 0x22 0x00                   ...".
-    body (0)
-    DAY BITS: [0, 0, 1]
-#### RECORD 69 Sara7B 2013-08-27T12:00:00 head[2], body[3] op[0x7b]
+#### RECORD 69 BasalProfileStart 2013-08-27T12:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x03                                  {.
