@@ -1,4 +1,18 @@
 ## START logs/ReadHistoryData-page-17.data
+#### STOPPING DOUBLE NULLS @ 918, found 0 nulls
+reading more to debug 0x00
+    0000   0x00 0x00                                  ..
+              0    0
+##### DEBUG HEX
+    0000   0x48 0x00 0x00 0x00 0x00 0x48 0x36 0x5c    H....H6\
+    0008   0x05 0x78 0x2f 0x14 0x69 0x0b 0x94 0x2f    .x/.i../
+    0010   0x0c 0x15 0x0c 0x0e 0x1e 0x01 0x00 0x48    .......H
+    0018   0x00 0x48 0x00 0x00 0x00 0x94 0x2f 0x4c    .H..../L
+##### DEBUG DECIMAL
+             72    0    0    0    0   72   54   92
+              5  120   47   20  105   11  148   47
+             12   21   12   14   30    1    0   72
+              0   72    0    0    0  148   47   76
 #### RECORD 0 BolusWizard 2012-08-20T16:43:17 head[2], body[15] op[0x5b]
 ###### DECODED
 ```python
@@ -764,131 +778,130 @@
     0000   0xa6 0x05 0x23 0x75 0x8c                   ..#u.
     body (0)
     DAY BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 33 Base (2012, 8, 21, 3, 5, 38) head[2], body[0] op[0x3f]
+#### RECORD 33 Ian3F 2012-08-21T03:05:38 head[2], body[3] op[0x3f]
 
     op hex (2)
     0000   0x3f 0x2d                                  ?-
     decimal
              63   45
-    datetime ((2012, 8, 21, 3, 5, 38))
+    datetime (2012-08-21T03:05:38)
     0000   0xa6 0x05 0x43 0x75 0x0c                   ..Cu.
+    body (3)
+    hex
+    0000   0x69 0x69 0x96                             ii.
+    decimal
+            105  105  150
+    DAY BITS: [0, 1, 1]
+#### RECORD 34 BolusWizard 2012-08-21T03:06:27 head[2], body[15] op[0x5b]
+###### DECODED
+```python
+{'_byte[5]': 54,
+ '_byte[7]': 0,
+ 'bg': 201,
+ 'bg_target_high': 0,
+ 'bg_target_low': 23,
+ 'bolus_estimate': 3.2,
+ 'carb_input': 0,
+ 'carb_ratio': 0,
+ 'correction_estimate': 0.6,
+ 'food_estimate': 25.2,
+ 'sensitivity': 110,
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 0}
+```
+    op hex (2)
+    0000   0x5b 0xc9                                  [.
+    decimal
+             91  201
+    datetime (2012-08-21T03:06:27)
+    0000   0x9b 0x06 0x03 0x75 0x0c                   ...u.
+    body (15)
+    hex
+    0000   0x00 0x90 0x00 0x6e 0x17 0x36 0xfc 0x00    ...n.6..
+    0008   0x00 0x00 0x00 0x20 0x00 0xdc 0x36         ... ..6
+    decimal
+              0  144    0  110   23   54  252    0
+              0    0    0   32    0  220   54
+    DAY BITS: [0, 1, 1]
+#### RECORD 35 UnabsorbedInsulinBolus unknown head[20], body[0] op[0x5c]
+###### DECODED
+```python
+[{'age': 182, 'amount': 2.1, 'curve': 4},
+ {'age': 192, 'amount': 2.9, 'curve': 4},
+ {'age': 16, 'amount': 0.8, 'curve': 20},
+ {'age': 26, 'amount': 3.2, 'curve': 20},
+ {'age': 36, 'amount': 1.7, 'curve': 20},
+ {'age': 76, 'amount': 2.0, 'curve': 20}]
+```
+    op hex (20)
+    0000   0x5c 0x14 0x54 0xb6 0x04 0x74 0xc0 0x04    \.T..t..
+    0008   0x20 0x10 0x14 0x80 0x1a 0x14 0x44 0x24     .....D$
+    0010   0x14 0x50 0x4c 0x14                        .PL.
+    decimal
+             92   20   84  182    4  116  192    4
+             32   16   20  128   26   20   68   36
+             20   80   76   20
+    datetime (unknown)
+
+    body (0)
+
+#### RECORD 36 Bolus 2012-08-21T03:06:27 head[8], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 0.0, 'dual_component': '??', 'programmed': 22.0, 'type': '??'}
+```
+    op hex (8)
+    0000   0x01 0x00 0xdc 0x00 0xdc 0x00 0x20 0x00    ...... .
+    decimal
+              1    0  220    0  220    0   32    0
+    datetime (2012-08-21T03:06:27)
+    0000   0x9b 0x06 0x43 0x75 0x0c                   ..Cu.
     body (0)
     DAY BITS: [0, 1, 1]
-#### RECORD 34 Ian69 2006-09-27T09:27:22 head[2], body[8] op[0x69]
+#### RECORD 37 BasalProfileStart 2012-08-21T04:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
-    0000   0x69 0x69                                  ii
+    0000   0x7b 0x01                                  {.
     decimal
-            105  105
-    datetime (2006-09-27T09:27:22)
-    0000   0x96 0x5b 0xc9 0x9b 0x06                   .[...
-    body (8)
+            123    1
+    datetime (2012-08-21T04:00:00)
+    0000   0x80 0x00 0x04 0x15 0x0c                   .....
+    body (3)
     hex
-    0000   0x03 0x75 0x0c 0x00 0x90 0x00 0x6e 0x17    .u....n.
+    0000   0x08 0x2e 0x00                             ...
     decimal
-              3  117   12    0  144    0  110   23
-    HOUR BITS: [0, 1, 0] DAY BITS: [1, 0, 0]
-#### RECORD 35 Base (2000, 0, 0, 0, 0, 0) head[2], body[0] op[0x36]
+              8   46    0
+
+#### RECORD 38 CalBGForPH 2012-08-21T07:49:42 head[2], body[0] op[0x0a]
+###### DECODED
+```python
+{'amount': 224}
+```
+    op hex (2)
+    0000   0x0a 0xe0                                  ..
+    decimal
+             10  224
+    datetime (2012-08-21T07:49:42)
+    0000   0xaa 0x31 0x27 0x75 0x0c                   .1'u.
+    body (0)
+    HOUR BITS: [0, 0, 1] DAY BITS: [0, 1, 1]
+#### RECORD 39 Ian3F 2012-08-21T07:49:42 head[2], body[3] op[0x3f]
 
     op hex (2)
-    0000   0x36 0xfc                                  6.
+    0000   0x3f 0x1c                                  ?.
     decimal
-             54  252
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x20                   .... 
-    body (0)
-    YEAR BITS: [0, 0, 1, 0]
-#### RECORD 36 Base (2006, 1, 20, 20, 28, 54) head[2], body[0] op[0x00]
-
-    op hex (2)
-    0000   0x00 0xdc                                  ..
+             63   28
+    datetime (2012-08-21T07:49:42)
+    0000   0xaa 0x31 0x07 0x75 0x0c                   .1.u.
+    body (3)
+    hex
+    0000   0x69 0x69 0x96                             ii.
     decimal
-              0  220
-    datetime ((2006, 1, 20, 20, 28, 54))
-    0000   0x36 0x5c 0x14 0x54 0xb6                   6\.T.
-    body (0)
-    HOUR BITS: [0, 1, 0] DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 1, 1]
-#### RECORD 37 Base (2004, 12, 16, 0, 4, 0) head[2], body[0] op[0x04]
-
-    op hex (2)
-    0000   0x04 0x74                                  .t
-    decimal
-              4  116
-    datetime ((2004, 12, 16, 0, 4, 0))
-    0000   0xc0 0x04 0x20 0x10 0x14                   .. ..
-    body (0)
-    YEAR BITS: [0, 0, 0, 1]
-#### RECORD 38 Base (2000, 1, 20, 4, 4, 20) head[2], body[0] op[0x80]
-
-    op hex (2)
-    0000   0x80 0x1a                                  ..
-    decimal
-            128   26
-    datetime ((2000, 1, 20, 4, 4, 20))
-    0000   0x14 0x44 0x24 0x14 0x50                   .D$.P
-    body (0)
-    HOUR BITS: [0, 1, 0] YEAR BITS: [0, 1, 0, 1]
-#### RECORD 39 Base (2012, 0, 0, 28, 0, 1) head[2], body[0] op[0x4c]
-
-    op hex (2)
-    0000   0x4c 0x14                                  L.
-    decimal
-             76   20
-    datetime ((2012, 0, 0, 28, 0, 1))
-    0000   0x01 0x00 0xdc 0x00 0xdc                   .....
-    body (0)
-    YEAR BITS: [1, 1, 0, 1]
-#### RECORD 40 Base (2005, 2, 3, 6, 27, 0) head[2], body[0] op[0x00]
-
-    op hex (2)
-    0000   0x00 0x20                                  . 
-    decimal
-              0   32
-    datetime ((2005, 2, 3, 6, 27, 0))
-    0000   0x00 0x9b 0x06 0x43 0x75                   ...Cu
-    body (0)
-    HOUR BITS: [1, 0, 0] DAY BITS: [0, 1, 0] YEAR BITS: [0, 1, 1, 1]
-#### RECORD 41 ClearAlarm 2005-02-04T00:00:01 head[2], body[0] op[0x0c]
-
-    op hex (2)
-    0000   0x0c 0x7b                                  .{
-    decimal
-             12  123
-    datetime (2005-02-04T00:00:01)
-    0000   0x01 0x80 0x00 0x04 0x15                   .....
-    body (0)
-    HOUR BITS: [1, 0, 0] YEAR BITS: [0, 0, 0, 1]
-#### RECORD 42 ClearAlarm (2010, 0, 0, 10, 0, 46) head[2], body[0] op[0x0c]
-
-    op hex (2)
-    0000   0x0c 0x08                                  ..
-    decimal
-             12    8
-    datetime ((2010, 0, 0, 10, 0, 46))
-    0000   0x2e 0x00 0x0a 0xe0 0xaa                   .....
-    body (0)
-    DAY BITS: [1, 1, 1] YEAR BITS: [1, 0, 1, 0]
-#### RECORD 43 Base (2010, 4, 28, 31, 12, 53) head[2], body[0] op[0x31]
-
-    op hex (2)
-    0000   0x31 0x27                                  1'
-    decimal
-             49   39
-    datetime ((2010, 4, 28, 31, 12, 53))
-    0000   0x75 0x0c 0x3f 0x1c 0xaa                   u.?..
-    body (0)
-    YEAR BITS: [1, 0, 1, 0]
-#### RECORD 44 Base (2006, 4, 9, 9, 12, 53) head[2], body[0] op[0x31]
-
-    op hex (2)
-    0000   0x31 0x07                                  1.
-    decimal
-             49    7
-    datetime ((2006, 4, 9, 9, 12, 53))
-    0000   0x75 0x0c 0x69 0x69 0x96                   u.ii.
-    body (0)
-    DAY BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 1]
-#### RECORD 45 BolusWizard 2012-08-21T07:49:58 head[2], body[15] op[0x5b]
+            105  105  150
+    HOUR BITS: [0, 0, 1] DAY BITS: [0, 1, 1]
+#### RECORD 40 BolusWizard 2012-08-21T07:49:58 head[2], body[15] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 54,
@@ -921,7 +934,7 @@
               0  144    0  110   23   54  120    0
               0    0    0    0    0  120   54
     HOUR BITS: [0, 0, 1] DAY BITS: [0, 1, 1]
-#### RECORD 46 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
+#### RECORD 41 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 29, 'amount': 5.5, 'curve': 20},
@@ -938,7 +951,7 @@
 
     body (0)
 
-#### RECORD 47 Bolus 2012-08-21T07:49:58 head[8], body[0] op[0x01]
+#### RECORD 42 Bolus 2012-08-21T07:49:58 head[8], body[0] op[0x01]
 ###### DECODED
 ```python
 {'amount': 0.0, 'dual_component': '??', 'programmed': 12.0, 'type': '??'}
@@ -951,7 +964,7 @@
     0000   0xba 0x31 0x47 0x75 0x0c                   .1Gu.
     body (0)
     HOUR BITS: [0, 0, 1] DAY BITS: [0, 1, 1]
-#### RECORD 48 BasalProfileStart 2012-08-21T09:30:00 head[2], body[3] op[0x7b]
+#### RECORD 43 BasalProfileStart 2012-08-21T09:30:00 head[2], body[3] op[0x7b]
 
     op hex (2)
     0000   0x7b 0x02                                  {.
@@ -965,7 +978,7 @@
     decimal
              19   30    0
 
-#### RECORD 49 CalBGForPH 2012-08-21T09:46:48 head[2], body[0] op[0x0a]
+#### RECORD 44 CalBGForPH 2012-08-21T09:46:48 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 116}
@@ -978,98 +991,55 @@
     0000   0xb0 0x2e 0x29 0x75 0x0c                   ..)u.
     body (0)
     HOUR BITS: [0, 0, 1] DAY BITS: [0, 1, 1]
-#### RECORD 50 Base (2012, 8, 21, 9, 46, 48) head[2], body[0] op[0x3f]
+#### RECORD 45 Ian3F 2012-08-21T09:46:48 head[2], body[3] op[0x3f]
 
     op hex (2)
     0000   0x3f 0x0e                                  ?.
     decimal
              63   14
-    datetime ((2012, 8, 21, 9, 46, 48))
+    datetime (2012-08-21T09:46:48)
     0000   0xb0 0x2e 0x89 0x75 0x0c                   ...u.
-    body (0)
-    HOUR BITS: [0, 0, 1] DAY BITS: [0, 1, 1]
-#### RECORD 51 Ian69 (2010, 8, 0, 10, 52, 22) head[2], body[8] op[0x69]
-
-    op hex (2)
-    0000   0x69 0x69                                  ii
-    decimal
-            105  105
-    datetime ((2010, 8, 0, 10, 52, 22))
-    0000   0x96 0x34 0x0a 0x80 0x0a                   .4...
-    body (8)
+    body (3)
     hex
-    0000   0x0a 0x15 0x8c 0x69 0x08 0x80 0x1e 0x0a    ...i....
+    0000   0x69 0x69 0x96                             ii.
     decimal
-             10   21  140  105    8  128   30   10
-    HOUR BITS: [0, 0, 1] DAY BITS: [1, 0, 0]
-#### RECORD 52 Base (2004, 0, 0, 27, 30, 42) head[2], body[0] op[0x15]
-
+            105  105  150
+    HOUR BITS: [0, 0, 1] DAY BITS: [0, 1, 1]
+#### RECORD 46 LowReservoir 2012-08-21T10:10:00 head[2], body[0] op[0x34]
+###### DECODED
+```python
+{'amount': 1.0}
+```
     op hex (2)
-    0000   0x15 0x0c                                  ..
+    0000   0x34 0x0a                                  4.
     decimal
-             21   12
-    datetime ((2004, 0, 0, 27, 30, 42))
-    0000   0x2a 0x1e 0x5b 0x00 0x94                   *.[..
-    body (0)
-    YEAR BITS: [1, 0, 0, 1]
-#### RECORD 53 Base (2000, 4, 16, 20, 12, 53) head[2], body[0] op[0x2f]
-
-    op hex (2)
-    0000   0x2f 0x0c                                  /.
-    decimal
-             47   12
-    datetime ((2000, 4, 16, 20, 12, 53))
-    0000   0x75 0x0c 0x14 0x90 0x00                   u....
-    body (0)
-    DAY BITS: [1, 0, 0]
-#### RECORD 54 Sara6E (2006, 0, 0, 27, 0, 38) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x17 0x36 0x00 0x00 0x48 0x00 0x00    n.6..H..
-    0008   0x00 0x00 0x48 0x36 0x5c 0x05 0x78 0x2f    ..H6\.x/
-    0010   0x14 0x69 0x0b 0x94 0x2f 0x0c 0x15 0x0c    .i../...
-    0018   0x0e 0x1e 0x01 0x00 0x48 0x00 0x48 0x00    ....H.H.
-    0020   0x00 0x00 0x94 0x2f 0x4c 0x75 0x0c 0x7b    .../Lu.{
-    0028   0x03 0x80 0x00 0x0d 0x15 0x0c 0x1a         .......
-    decimal
-            110   23   54    0    0   72    0    0
-              0    0   72   54   92    5  120   47
-             20  105   11  148   47   12   21   12
-             14   30    1    0   72    0   72    0
-              0    0  148   47   76  117   12  123
-              3  128    0   13   21   12   26
-    datetime ((2006, 0, 0, 27, 0, 38))
-    0000   0x26 0x00 0x5b 0x00 0x86                   &.[..
+             52   10
+    datetime (2012-08-21T10:10:00)
+    0000   0x80 0x0a 0x0a 0x15 0x8c                   .....
     body (0)
     YEAR BITS: [1, 0, 0, 0]
-#### RECORD 55 SelectBasalProfile 2000-04-16T05:12:53 head[2], body[0] op[0x14]
+#### RECORD 47 Ian69 2012-08-21T10:30:00 head[2], body[8] op[0x69]
 
     op hex (2)
-    0000   0x14 0x0e                                  ..
+    0000   0x69 0x08                                  i.
     decimal
-             20   14
-    datetime (2000-04-16T05:12:53)
-    0000   0x75 0x0c 0x25 0x90 0x00                   u.%..
-    body (0)
-    DAY BITS: [1, 0, 0]
-#### RECORD 56 Sara6E (2009, 0, 26, 0, 0, 0) head[47], body[0] op[0x6e]
+            105    8
+    datetime (2012-08-21T10:30:00)
+    0000   0x80 0x1e 0x0a 0x15 0x0c                   .....
+    body (8)
+    hex
+    0000   0x2a 0x1e 0x5b 0x00 0x94 0x2f 0x0c 0x75    *.[../.u
+    decimal
+             42   30   91    0  148   47   12  117
 
-    op hex (47)
-    0000   0x6e 0x17 0x36 0x00 0x00 0x84 0x00 0x00    n.6.....
-    0008   0x00 0x00 0x84 0x36 0x5c 0x08 0x48 0x60    ...6\.H`
-    0010   0x04 0x78 0x8c 0x14 0x34 0x60 0x87 0x14    .x..4`..
-    0018   0x6e 0x15 0x8c 0x01 0x00 0x84 0x00 0x84    n.......
-    0020   0x00 0x2c 0x00 0x86 0x14 0x4e 0x75 0x0c    .,...Nu.
-    0028   0x0a 0x69 0x92 0x16 0x32 0x75 0x8c         .i..2u.
+#### RECORD 48 ClearAlarm 2006-08-23T14:00:16 head[2], body[0] op[0x0c]
+
+    op hex (2)
+    0000   0x0c 0x14                                  ..
     decimal
-            110   23   54    0    0  132    0    0
-              0    0  132   54   92    8   72   96
-              4  120  140   20   52   96  135   20
-            110   21  140    1    0  132    0  132
-              0   44    0  134   20   78  117   12
-             10  105  146   22   50  117  140
-    datetime ((2009, 0, 26, 0, 0, 0))
-    0000   0x00 0x00 0x00 0xba 0x59                   ....Y
+             12   20
+    datetime (2006-08-23T14:00:16)
+    0000   0x90 0x00 0x6e 0x17 0x36                   ..n.6
     body (0)
-    DAY BITS: [1, 0, 1] YEAR BITS: [0, 1, 0, 1]
-`end logs/ReadHistoryData-page-17.data: 57 records`
+    YEAR BITS: [0, 0, 1, 1]
+`end logs/ReadHistoryData-page-17.data: 49 records`

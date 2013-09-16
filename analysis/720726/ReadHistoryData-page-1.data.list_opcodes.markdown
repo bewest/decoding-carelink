@@ -1282,7 +1282,7 @@
     decimal
               0  200
     datetime (unknown)
-    0000   0x48                                       H
+
     body (0)
 
 `end logs/ReadHistoryData-page-1.data: 68 records`
