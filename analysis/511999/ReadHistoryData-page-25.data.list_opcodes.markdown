@@ -1,18 +1,18 @@
 ## START logs/ReadHistoryData-page-25.data
-#### STOPPING DOUBLE NULLS @ 105, found 0 nulls
+#### STOPPING DOUBLE NULLS @ 237, found 99 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
               0    0
 ##### DEBUG HEX
-    0000   0x07 0x33 0x6e 0x8d 0x00 0x00 0x00 0x6e    .3n....n
-    0008   0x6e 0x8d 0x05 0x00 0xf8 0x00 0x00 0x0b    n.......
-    0010   0x00 0x00 0x07 0x33 0x02 0xcb 0x27 0x04    ...3..'.
-    0018   0x68 0x3d 0x00 0x9a 0x01 0xac 0x01 0xf8    h=......
+    0000   0x09 0x04 0x5f 0xd0 0x09 0x0f 0x0d 0x00    .._.....
+    0008   0x1f 0x00 0x08 0x21 0x00 0x10 0x22 0x00    ...!..".
+    0010   0x18 0x1d 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 ##### DEBUG DECIMAL
-              7   51  110  141    0    0    0  110
-            110  141    5    0  248    0    0   11
-              0    0    7   51    2  203   39    4
-            104   61    0  154    1  172    1  248
+              9    4   95  208    9   15   13    0
+             31    0    8   33    0   16   34    0
+             24   29    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
 #### RECORD 0 UnabsorbedInsulinBolus unknown head[17], body[0] op[0x5c]
 ###### DECODED
 ```python
@@ -34,127 +34,192 @@ reading more to debug 0x00
 
     body (0)
 
-#### RECORD 1 Bolus (2003, 4, 0, 16, 0, 24) head[4], body[0] op[0x01]
+#### RECORD 1 Bolus 2013-07-14T22:21:51 head[8], body[0] op[0x01]
 ###### DECODED
 ```python
 {'amount': 0.0, 'dual_component': '??', 'programmed': 8.8, 'type': '??'}
 ```
-    op hex (4)
-    0000   0x01 0x00 0x58 0x00                        ..X.
+    op hex (8)
+    0000   0x01 0x00 0x58 0x00 0x58 0x00 0x50 0x00    ..X.X.P.
     decimal
-              1    0   88    0
-    datetime ((2003, 4, 0, 16, 0, 24))
-    0000   0x58 0x00 0x50 0x00 0x73                   X.P.s
+              1    0   88    0   88    0   80    0
+    datetime (2013-07-14T22:21:51)
+    0000   0x73 0xd5 0x56 0x6e 0x0d                   s.Vn.
     body (0)
-    YEAR BITS: [0, 1, 1, 1]
-#### RECORD 2 Base (2000, 4, 26, 10, 13, 46) head[2], body[0] op[0xd5]
+    HOUR BITS: [1, 1, 0] DAY BITS: [0, 1, 1]
+#### RECORD 2 CalBGForPH 2013-07-14T22:57:32 head[2], body[0] op[0x0a]
+###### DECODED
+```python
+{'amount': 186}
+```
+    op hex (2)
+    0000   0x0a 0xba                                  ..
+    decimal
+             10  186
+    datetime (2013-07-14T22:57:32)
+    0000   0x60 0xf9 0x36 0x0e 0x0d                   `.6..
+    body (0)
+    HOUR BITS: [1, 1, 1]
+#### RECORD 3 BolusWizard 2013-07-14T22:57:41 head[2], body[15] op[0x5b]
+###### DECODED
+```python
+{'_byte[5]': 100,
+ '_byte[7]': 0,
+ 'bg': 186,
+ 'bg_target_high': 0,
+ 'bg_target_low': 60,
+ 'bolus_estimate': 12.4,
+ 'carb_input': 19,
+ 'carb_ratio': 0,
+ 'correction_estimate': 0.4,
+ 'food_estimate': 4.4,
+ 'sensitivity': 100,
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 76}
+```
+    op hex (2)
+    0000   0x5b 0xba                                  [.
+    decimal
+             91  186
+    datetime (2013-07-14T22:57:41)
+    0000   0x69 0xf9 0x16 0x6e 0x0d                   i..n.
+    body (15)
+    hex
+    0000   0x13 0x50 0x00 0x64 0x3c 0x64 0x2c 0x00    .P.d<d,.
+    0008   0x4c 0x00 0x00 0x7c 0x00 0x4c 0x78         L..|.Lx
+    decimal
+             19   80    0  100   60  100   44    0
+             76    0    0  124    0   76  120
+    HOUR BITS: [1, 1, 1] DAY BITS: [0, 1, 1]
+#### RECORD 4 UnabsorbedInsulinBolus unknown head[20], body[0] op[0x5c]
+###### DECODED
+```python
+[{'age': 34, 'amount': 0.5, 'curve': 192},
+ {'age': 44, 'amount': 2.6, 'curve': 192},
+ {'age': 134, 'amount': 2.7, 'curve': 192},
+ {'age': 18, 'amount': 2.9, 'curve': 208},
+ {'age': 108, 'amount': 2.0, 'curve': 208},
+ {'age': 218, 'amount': 1.0, 'curve': 208}]
+```
+    op hex (20)
+    0000   0x5c 0x14 0x14 0x22 0xc0 0x68 0x2c 0xc0    \..".h,.
+    0008   0x6c 0x86 0xc0 0x74 0x12 0xd0 0x50 0x6c    l..t..Pl
+    0010   0xd0 0x28 0xda 0xd0                        .(..
+    decimal
+             92   20   20   34  192  104   44  192
+            108  134  192  116   18  208   80  108
+            208   40  218  208
+    datetime (unknown)
+
+    body (0)
+
+#### RECORD 5 Bolus 2013-07-14T22:57:41 head[8], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 0.0, 'dual_component': '??', 'programmed': 7.6, 'type': '??'}
+```
+    op hex (8)
+    0000   0x01 0x00 0x4c 0x00 0x4c 0x00 0x7c 0x00    ..L.L.|.
+    decimal
+              1    0   76    0   76    0  124    0
+    datetime (2013-07-14T22:57:41)
+    0000   0x69 0xf9 0x56 0x6e 0x0d                   i.Vn.
+    body (0)
+    HOUR BITS: [1, 1, 1] DAY BITS: [0, 1, 1]
+#### RECORD 6 Sara7B 2013-07-15T00:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
-    0000   0xd5 0x56                                  .V
+    0000   0x7b 0x00                                  {.
     decimal
-            213   86
-    datetime ((2000, 4, 26, 10, 13, 46))
-    0000   0x6e 0x0d 0x0a 0xba 0x60                   n...`
-    body (0)
-    DAY BITS: [1, 0, 1] YEAR BITS: [0, 1, 1, 0]
-#### RECORD 3 Base (2009, 0, 26, 27, 13, 14) head[2], body[0] op[0xf9]
+            123    0
+    datetime (2013-07-15T00:00:00)
+    0000   0x40 0xc0 0x00 0x0f 0x0d                   @....
+    body (3)
+    hex
+    0000   0x00 0x1f 0x00                             ...
+    decimal
+              0   31    0
+    HOUR BITS: [1, 1, 0]
+#### RECORD 7 ResultTotals (2000, 6, 0, 0, 13, 46) head[5], body[51] op[0x07]
+
+    op hex (5)
+    0000   0x07 0x00 0x00 0x07 0x33                   ....3
+    decimal
+              7    0    0    7   51
+    datetime ((2000, 6, 0, 0, 13, 46))
+    0000   0x6e 0x8d 0x00 0x00 0x00                   n....
+    body (51)
+    hex
+    0000   0x6e 0x6e 0x8d 0x05 0x00 0xf8 0x00 0x00    nn......
+    0008   0x0b 0x00 0x00 0x07 0x33 0x02 0xcb 0x27    ....3..'
+    0010   0x04 0x68 0x3d 0x00 0x9a 0x01 0xac 0x01    .h=.....
+    0018   0xf8 0x00 0xc4 0x00 0x00 0x04 0x05 0x02    ........
+    0020   0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0028   0x00 0x00 0x82 0x4e 0x00 0x00 0x00 0x00    ...N....
+    0030   0x00 0x00 0x00                             ...
+    decimal
+            110  110  141    5    0  248    0    0
+             11    0    0    7   51    2  203   39
+              4  104   61    0  154    1  172    1
+            248    0  196    0    0    4    5    2
+              0    4    0    0    0    0    0    0
+              0    0  130   78    0    0    0    0
+              0    0    0
+    HOUR BITS: [1, 0, 0]
+#### RECORD 8 Base (2015, 1, 4, 0, 0, 1) head[2], body[0] op[0x00]
 
     op hex (2)
-    0000   0xf9 0x36                                  .6
+    0000   0x00 0x7b                                  .{
     decimal
-            249   54
-    datetime ((2009, 0, 26, 27, 13, 14))
-    0000   0x0e 0x0d 0x5b 0xba 0x69                   ..[.i
+              0  123
+    datetime ((2015, 1, 4, 0, 0, 1))
+    0000   0x01 0x40 0xc0 0x04 0x0f                   .@...
     body (0)
-    DAY BITS: [1, 0, 1] YEAR BITS: [0, 1, 1, 0]
-#### RECORD 4 Base (2000, 4, 16, 19, 13, 46) head[2], body[0] op[0xf9]
+    HOUR BITS: [0, 1, 0]
+#### RECORD 9 Base (2000, 0, 2, 27, 0, 31) head[2], body[0] op[0x0d]
 
     op hex (2)
-    0000   0xf9 0x16                                  ..
+    0000   0x0d 0x08                                  ..
     decimal
-            249   22
-    datetime ((2000, 4, 16, 19, 13, 46))
-    0000   0x6e 0x0d 0x13 0x50 0x00                   n..P.
+             13    8
+    datetime ((2000, 0, 2, 27, 0, 31))
+    0000   0x1f 0x00 0x7b 0x02 0x40                   ..{.@
     body (0)
-    DAY BITS: [0, 1, 0]
-#### RECORD 5 ChangeTimeDisplay 2000-04-12T00:44:36 head[2], body[0] op[0x64]
+    YEAR BITS: [0, 1, 0, 0]
+#### RECORD 10 Base (2000, 0, 2, 16, 13, 15) head[2], body[0] op[0xc0]
 
     op hex (2)
-    0000   0x64 0x3c                                  d<
+    0000   0xc0 0x08                                  ..
     decimal
-            100   60
-    datetime (2000-04-12T00:44:36)
-    0000   0x64 0x2c 0x00 0x4c 0x00                   d,.L.
+            192    8
+    datetime ((2000, 0, 2, 16, 13, 15))
+    0000   0x0f 0x0d 0x10 0x22 0x00                   ...".
     body (0)
-    HOUR BITS: [0, 0, 1] DAY BITS: [0, 1, 0]
-#### RECORD 6 Base (2004, 1, 28, 24, 12, 0) head[2], body[0] op[0x00]
+    DAY BITS: [0, 0, 1]
+#### RECORD 11 ChangeBasalProfile 2013-07-15T09:16:31 head[2], body[44] op[0x08]
 
     op hex (2)
-    0000   0x00 0x7c                                  .|
+    0000   0x08 0x04                                  ..
     decimal
-              0  124
-    datetime ((2004, 1, 28, 24, 12, 0))
-    0000   0x00 0x4c 0x78 0x5c 0x14                   .Lx\.
-    body (0)
-    HOUR BITS: [0, 1, 0] DAY BITS: [0, 1, 0] YEAR BITS: [0, 0, 0, 1]
-#### RECORD 7 SelectBasalProfile (2012, 13, 0, 12, 40, 0) head[2], body[0] op[0x14]
-
-    op hex (2)
-    0000   0x14 0x22                                  ."
+              8    4
+    datetime (2013-07-15T09:16:31)
+    0000   0x5f 0xd0 0x09 0x0f 0x0d                   _....
+    body (44)
+    hex
+    0000   0x00 0x1f 0x00 0x08 0x1f 0x00 0x10 0x22    ......."
+    0008   0x00 0x18 0x1d 0x00 0x00 0x00 0x00 0x00    ........
+    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0028   0x00 0x00 0x00 0x00                        ....
     decimal
-             20   34
-    datetime ((2012, 13, 0, 12, 40, 0))
-    0000   0xc0 0x68 0x2c 0xc0 0x6c                   .h,.l
-    body (0)
-    HOUR BITS: [0, 1, 1] DAY BITS: [1, 1, 0] YEAR BITS: [0, 1, 1, 0]
-#### RECORD 8 Base (2012, 4, 16, 16, 18, 52) head[2], body[0] op[0x86]
-
-    op hex (2)
-    0000   0x86 0xc0                                  ..
-    decimal
-            134  192
-    datetime ((2012, 4, 16, 16, 18, 52))
-    0000   0x74 0x12 0xd0 0x50 0x6c                   t..Pl
-    body (0)
-    DAY BITS: [0, 1, 0] YEAR BITS: [0, 1, 1, 0]
-#### RECORD 9 Base (2012, 15, 0, 1, 16, 26) head[2], body[0] op[0xd0]
-
-    op hex (2)
-    0000   0xd0 0x28                                  .(
-    decimal
-            208   40
-    datetime ((2012, 15, 0, 1, 16, 26))
-    0000   0xda 0xd0 0x01 0x00 0x4c                   ....L
-    body (0)
-    HOUR BITS: [1, 1, 0] YEAR BITS: [0, 1, 0, 0]
-#### RECORD 10 Base (2009, 1, 9, 0, 60, 0) head[2], body[0] op[0x00]
-
-    op hex (2)
-    0000   0x00 0x4c                                  .L
-    decimal
-              0   76
-    datetime ((2009, 1, 9, 0, 60, 0))
-    0000   0x00 0x7c 0x00 0x69 0xf9                   .|.i.
-    body (0)
-    HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1] YEAR BITS: [1, 1, 1, 1]
-#### RECORD 11 Base (2000, 1, 0, 0, 59, 13) head[2], body[0] op[0x56]
-
-    op hex (2)
-    0000   0x56 0x6e                                  Vn
-    decimal
-             86  110
-    datetime ((2000, 1, 0, 0, 59, 13))
-    0000   0x0d 0x7b 0x00 0x40 0xc0                   .{.@.
-    body (0)
-    HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 0] YEAR BITS: [1, 1, 0, 0]
-#### RECORD 12 Base (2007, 0, 0, 31, 0, 13) head[2], body[0] op[0x00]
-
-    op hex (2)
-    0000   0x00 0x0f                                  ..
-    decimal
-              0   15
-    datetime ((2007, 0, 0, 31, 0, 13))
-    0000   0x0d 0x00 0x1f 0x00 0x07                   .....
-    body (0)
-
-`end logs/ReadHistoryData-page-25.data: 13 records`
+              0   31    0    8   31    0   16   34
+              0   24   29    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0
+    HOUR BITS: [1, 1, 0]
+`end logs/ReadHistoryData-page-25.data: 12 records`
