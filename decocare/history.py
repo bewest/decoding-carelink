@@ -132,10 +132,22 @@ class Ian69(KnownRecord):
   opcode = 0x69
   body_length = 8
 _confirmed.append(Ian69)
+
 class Ian0B(KnownRecord):
   opcode = 0x0B
   head_length = 3
 _confirmed.append(Ian0B)
+
+class Ian3F(KnownRecord):
+  opcode = 0x3F
+  body_length = 3
+_confirmed.append(Ian3F)
+
+class IanA8(KnownRecord):
+  opcode = 0xA8
+  head_length = 10
+_confirmed.append(IanA8)
+
 class BasalProfileStart(KnownRecord):
   opcode = 0x7b
   body_length = 3
