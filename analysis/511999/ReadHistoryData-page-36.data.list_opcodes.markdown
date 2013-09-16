@@ -6,7 +6,7 @@ Traceback (most recent call last):
     records = find_records(stream)
   File "list_history.py", line 67, in find_records
     record = parse_record( stream, B )
-  File "/home/bewest/src/decoding-carelink/decocare/history.py", line 180, in parse_record
+  File "/home/bewest/src/decoding-carelink/decocare/history.py", line 182, in parse_record
     record.parse( head + date + body )
   File "/home/bewest/src/decoding-carelink/decocare/records/base.py", line 59, in parse
     return self.decode( )
