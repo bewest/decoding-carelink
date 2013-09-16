@@ -1,7 +1,7 @@
 INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
-INFO:link:Link opened serial port: Serial<id=0x20b9f50, open=True>(port='/dev/ttyUSB0', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.5, xonxoff=False, rtscts=False, dsrdtr=False)
-INFO:__main__:PROCESS:OPEN:0.031
-INFO:__main__:PROCESS:START:0.221:ProductInfo:0x04
+INFO:link:Link opened serial port: Serial<id=0x2702f50, open=True>(port='/dev/ttyUSB0', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.5, xonxoff=False, rtscts=False, dsrdtr=False)
+INFO:__main__:PROCESS:OPEN:0.034
+INFO:__main__:PROCESS:START:0.163:ProductInfo:0x04
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
 INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
 INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
@@ -10,9 +10,9 @@ INFO:root:usb.write.len: 3
 DEBUG:__main__:sleeping 0.001
 INFO:root:usb.read.len: 64
 INFO:root:usb.read.raw:
-0000   0x02 0x00 0x03 0x00 0xcb 0x80 0x40 0xa7    ......@.
-0008   0x01 0x66 0x54 0x55 0xcb 0x03 0x35 0x32    .fTU..52
-0010   0x32 0x00 0x00 0x00 0x00 0x00 0x00 0x00    2.......
+0000   0x02 0x00 0x03 0x00 0xc2 0x80 0x40 0xa7    ......@.
+0008   0x01 0x51 0x19 0x99 0x14 0x03 0x37 0x32    .Q....72
+0010   0x33 0x00 0x00 0x00 0x00 0x00 0x00 0x00    3.......
 0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -36,6 +36,6 @@ AssertionError: commStatus: 02 expected 0x1
 Command exited with non-zero status 1
 python decocare/stick.py /dev/ttyUSB0
 	elapsed 0:00.20
-	user 0.14
-	system 0.04
-	CPU 89% (0text+0data 59584max)k
+	user 0.15
+	system 0.03
+	CPU 93% (0text+0data 59584max)k

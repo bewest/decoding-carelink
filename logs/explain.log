@@ -1,6 +1,6 @@
 OUT
 ## Observations
-Sun Sep  8 17:35:06 PDT 2013
+Thu Sep  5 15:29:25 PDT 2013
 
 ## stick
 
@@ -15,9 +15,10 @@ Sun Sep  8 17:35:06 PDT 2013
 ```
 
 
-## commands session:finished: 0
+## commands session:finished: 1
 
 ```
+INFO:session:finished executing:ReadPumpModel:size[64]:data:''
 ```
 
 howdy! pump runs were NOT OK
@@ -33,26 +34,26 @@ INFO:root:usb.write.len: 3
 ### stats before traceback
 
 ```
-185:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1833724270L, 'errors.naks': 0, 'errors.sequence': 23, 'packets.received': 17263L, 'errors.crc': 190}
-205:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 205L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 205L, 'errors.crc': 0}
+185:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1833724270L, 'errors.naks': 0, 'errors.sequence': 23, 'packets.received': 17263L, 'errors.crc': 194}
+205:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 232L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 232L, 'errors.crc': 0}
 207:INFO:__main__:{'radio': {'errors.crc': 0,
 208:           'errors.naks': 0,
 209:           'errors.sequence': 0,
 210:           'errors.timeouts': 0,
-211:           'packets.received': 205L,
-212:           'packets.transmit': 205L},
-213: 'usb': {'errors.crc': 190,
+211:           'packets.received': 232L,
+212:           'packets.transmit': 232L},
+213: 'usb': {'errors.crc': 194,
 214:         'errors.naks': 0,
 215:         'errors.sequence': 23,
 216:         'errors.timeouts': 0,
 217:         'packets.received': 17263L,
 218:         'packets.transmit': 1833724270L}}
-540:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1833724270L, 'errors.naks': 0, 'errors.sequence': 23, 'packets.received': 17263L, 'errors.crc': 189}
-560:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 217L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 217L, 'errors.crc': 0}
-562:INFO:__main__:{'radio': {'errors.crc': 0,
-563:           'errors.naks': 0,
-564:           'errors.sequence': 0,
-565:           'errors.timeouts': 0,
+1025:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1833724270L, 'errors.naks': 0, 'errors.sequence': 23, 'packets.received': 17263L, 'errors.crc': 189}
+1045:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 264L, 'errors.naks': 0, 'errors.sequence': 0, 'packets.received': 264L, 'errors.crc': 0}
+1047:INFO:__main__:{'radio': {'errors.crc': 0,
+1048:           'errors.naks': 0,
+1049:           'errors.sequence': 0,
+1050:           'errors.timeouts': 0,
 ```
 ### Traceback
 
@@ -112,9 +113,9 @@ Traceback (most recent call last):
   File "/home/bewest/src/decoding-carelink/decocare/stick.py", line 688, in download_packet
 --
 INFO:root:usb.read.raw:
-0000   0x02 0x00 0x03 0x00 0xcb 0x80 0x40 0xa7    ......@.
-0008   0x01 0x66 0x54 0x55 0xcb 0x03 0x35 0x32    .fTU..52
-0010   0x32 0x00 0x00 0x00 0x00 0x00 0x00 0x00    2.......
+0000   0x02 0x00 0x03 0x00 0xc2 0x80 0x40 0xa7    ......@.
+0008   0x01 0x51 0x19 0x99 0x14 0x03 0x37 0x32    .Q....72
+0010   0x33 0x00 0x00 0x00 0x00 0x00 0x00 0x00    3.......
 0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
@@ -146,8 +147,8 @@ python decocare/stick.py /dev/ttyUSB0
 0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
 INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
 INFO:stick:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:['OK']
-STATUS: receive in progress!|STATUS: transmit in progress!|STATUS: interface error!|STATUS: receive overflow!|STATUS: transmit overflow!|STATUS: OK
-ERROR:stick:readStatus: non-zero status: bf
+STATUS: receive in progress!|STATUS: transmit in progress!|STATUS: interface error!|STATUS: receive overflow!|STATUS: transmit overflow!
+ERROR:stick:readStatus: non-zero status: be
 Traceback (most recent call last):
   File "decocare/download.py", line 84, in <module>
     downloader.download( )
