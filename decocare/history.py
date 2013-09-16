@@ -51,7 +51,11 @@ class ResultTotals(InvalidRecord):
   """On 722 this seems like two records."""
   opcode = 0x07
   head_length = 5
-  #body_length = 38 + 6 + 7
+  body_length = 38 + 6 + 7
+  def __init__(self, head, larger=False):
+    super(type(self), self).__init__(head, larger)
+    if larger:
+      self.body_length = 0
 
 class ChangeBasalProfile(KnownRecord):
   opcode = 0x08
