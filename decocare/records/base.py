@@ -101,8 +101,8 @@ class Base(object):
 
 
 class VariableHead(Base):
-  def __init__(self, head):
-    Base.__init__(self, head)
+  def __init__(self, head, larger=False):
+    Base.__init__(self, head, larger)
     self.head_length = head[1]
 
 class KnownRecord(Base):
