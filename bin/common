@@ -354,9 +354,10 @@ function opcodes ( ) {
 }
 
 function run_regress ( ) {
+  mkdir -p analysis/${SERIAL}
   for x in logs/ReadHistoryData-page-*.data ; do
     echo $x
-    opcodes $x | tee analysis/sarak/$(basename $x).list_opcodes.markdown
+    opcodes $x | tee analysis/${SERIAL}/$(basename $x).list_opcodes.markdown
   done
 
 }
