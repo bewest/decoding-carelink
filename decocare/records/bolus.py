@@ -18,7 +18,10 @@ class Bolus(KnownRecord):
                         0xdc, 0x05, 0x4f, 0x12, 0x0c, ])
   opcode = 0x01
   head_length = 4
-  head_length = 8
+  def __init__(self, head, larger=False):
+    super(type(self), self).__init__(head, larger)
+    if larger:
+      self.head_length = 8
   def decode(self):
     self.parse_time( )
     dose = { 'amount': self.head[1]/10.0,
@@ -66,7 +69,11 @@ class BolusWizard(KnownRecord):
                         0x45, 0x50, 0x0d, 0x2d, 0x6a, 0x03, 0x35, 0x00,
                         0x00, 0x00, 0x00, 0x38, 0x7d, ])
   opcode = 0x5b
-  body_length = 15
+  body_length = 13
+  def __init__(self, head, larger=False):
+    super(type(self), self).__init__(head, larger)
+    if larger:
+      self.body_length = 15
   def decode(self):
     self.parse_time( )
     bg = lib.BangInt([ self.body[1] & 0x0f, self.head[1] ])

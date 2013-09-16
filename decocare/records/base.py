@@ -16,7 +16,7 @@ class Base(object):
   head_length = 2
   body_length = 0
   date_length = 5
-  def __init__(self, head=bytearray( )):
+  def __init__(self, head=bytearray( ), larger=False):
     self.bolus = bytearray( )
     self.opcode = head[0]
     self.head = head
@@ -115,6 +115,7 @@ class KnownRecord(Base):
 
   def decode(self):
     self.parse_time( )
+
 
 
 class InvalidRecord(KnownRecord):

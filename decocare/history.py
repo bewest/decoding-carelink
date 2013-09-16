@@ -178,22 +178,23 @@ class hack1(InvalidRecord):
 _confirmed.append(hack1)
 _known = { }
 
+_variant = { }
 
 for x in _confirmed:
   _known[x.opcode] = x
 
 del x
 
-def suggest(head):
+def suggest(head, larger=False):
   """
   Look in the known table of commands to find a suitable record type
   for this opcode.
   """
   klass = _known.get(head[0], Base)
-  record = klass(head)
+  record = klass(head, larger)
   return record
 
-def parse_record(fd, head=bytearray( )):
+def parse_record(fd, head=bytearray( ), larger=False):
   """
   Given a file-like object, and the head of a record, parse the rest
   of the record.
@@ -203,7 +204,7 @@ def parse_record(fd, head=bytearray( )):
   # head    = bytearray(fd.read(2))
   date    = bytearray( )
   body    = bytearray( )
-  record  = suggest(head)
+  record  = suggest(head, larger)
   remaining = record.head_length - len(head)
   if remaining > 0:
     head.extend(bytearray(fd.read(remaining)))

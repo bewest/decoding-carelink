@@ -19,10 +19,16 @@ def get_opt_parser( ):
                       type=argparse.FileType('r'),
                       help="Find dates in this file.")
 
+  parser.add_argument('--larger',
+                      dest='larger', action='store_true')
+  parser.add_argument('--no-larger',
+                      dest='larger', action='store_false')
+
   parser.add_argument('--out',
                       default=sys.stdout,
                       type=argparse.FileType('w'),
                       help="Write records here.")
+  parser.set_defaults(larger=False)
   return parser
 
 ##
@@ -41,7 +47,7 @@ def eat_nulls(fd):
   print "found %s nulls" % len(nulls)
   return nulls
 
-def find_records(stream):
+def find_records(stream, opts):
   records = [ ]
   errors  = [ ]
   bolus = bytearray( )
@@ -64,7 +70,7 @@ def find_records(stream):
       print lib.int_dump(extra, indent=11)
       # print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
       break
-    record = parse_record( stream, B )
+    record = parse_record( stream, B, larger=opts.larger )
     records.append(record)
 
   return records
@@ -80,7 +86,7 @@ def main( ):
   wrapper = textwrap.TextWrapper(**tw_opts)
   for stream in opts.infile:
     print "## START %s" % (stream.name)
-    records = find_records(stream)
+    records = find_records(stream, opts)
     i = 0
     for record in records:
 
