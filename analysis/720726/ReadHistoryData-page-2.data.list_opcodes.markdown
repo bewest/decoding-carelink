@@ -1,5 +1,5 @@
 ## START logs/ReadHistoryData-page-2.data
-#### STOPPING DOUBLE NULLS @ 212, found 2 nulls
+#### STOPPING DOUBLE NULLS @ 208, found 6 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
               0    0
@@ -153,164 +153,104 @@ reading more to debug 0x00
     0000   0x69 0x0d 0x00 0x90 0x00                   i....
     body (0)
     DAY BITS: [1, 0, 0]
-#### RECORD 14 Base (2000, 1, 0, 0, 28, 54) head[2], body[0] op[0x6e]
+#### RECORD 14 Sara6E 2013-09-09T11:36:03 head[47], body[0] op[0x6e]
 
-    op hex (2)
-    0000   0x6e 0x17                                  n.
+    op hex (47)
+    0000   0x6e 0x17 0x36 0x5c 0x00 0x00 0x00 0x00    n.6\....
+    0008   0x94 0x00 0x00 0x36 0x5c 0x11 0x8c 0x15    ...6\...
+    0010   0x04 0x28 0xdd 0x04 0x78 0xe7 0x04 0x6c    .(..x..l
+    0018   0xc3 0x15 0x0c 0xcd 0x14 0x0b 0x68 0x00    ......h.
+    0020   0x87 0x62 0x4b 0xa9 0x0d 0x0b 0x6a 0x00    .bK...j.
+    0028   0x87 0x62 0x4b 0xa9 0x0d 0x0a 0x92         .bK....
     decimal
-            110   23
-    datetime ((2000, 1, 0, 0, 28, 54))
-    0000   0x36 0x5c 0x00 0x00 0x00                   6\...
-    body (0)
-    HOUR BITS: [0, 1, 0]
-#### RECORD 15 Base (2001, 0, 28, 22, 0, 0) head[2], body[0] op[0x00]
-
-    op hex (2)
-    0000   0x00 0x94                                  ..
-    decimal
-              0  148
-    datetime ((2001, 0, 28, 22, 0, 0))
-    0000   0x00 0x00 0x36 0x5c 0x11                   ..6\.
-    body (0)
-    DAY BITS: [0, 1, 0] YEAR BITS: [0, 0, 0, 1]
-#### RECORD 16 Base (2008, 0, 4, 29, 40, 4) head[2], body[0] op[0x8c]
-
-    op hex (2)
-    0000   0x8c 0x15                                  ..
-    decimal
-            140   21
-    datetime ((2008, 0, 4, 29, 40, 4))
-    0000   0x04 0x28 0xdd 0x04 0x78                   .(..x
-    body (0)
-    HOUR BITS: [0, 0, 1] YEAR BITS: [0, 1, 1, 1]
-#### RECORD 17 Base (2013, 7, 12, 21, 3, 44) head[2], body[0] op[0xe7]
-
-    op hex (2)
-    0000   0xe7 0x04                                  ..
-    decimal
-            231    4
-    datetime ((2013, 7, 12, 21, 3, 44))
-    0000   0x6c 0xc3 0x15 0x0c 0xcd                   l....
-    body (0)
-    HOUR BITS: [1, 1, 0] YEAR BITS: [1, 1, 0, 0]
-#### RECORD 18 SelectBasalProfile 2011-04-02T07:00:40 head[2], body[0] op[0x14]
-
-    op hex (2)
-    0000   0x14 0x0b                                  ..
-    decimal
-             20   11
-    datetime (2011-04-02T07:00:40)
-    0000   0x68 0x00 0x87 0x62 0x4b                   h..bK
-    body (0)
-    DAY BITS: [0, 1, 1] YEAR BITS: [0, 1, 0, 0]
-#### RECORD 19 Base (2002, 1, 7, 0, 42, 11) head[2], body[0] op[0xa9]
-
-    op hex (2)
-    0000   0xa9 0x0d                                  ..
-    decimal
-            169   13
-    datetime ((2002, 1, 7, 0, 42, 11))
-    0000   0x0b 0x6a 0x00 0x87 0x62                   .j..b
-    body (0)
-    HOUR BITS: [0, 1, 1] DAY BITS: [1, 0, 0] YEAR BITS: [0, 1, 1, 0]
-#### RECORD 20 Base (2004, 0, 3, 18, 10, 13) head[2], body[0] op[0x4b]
-
-    op hex (2)
-    0000   0x4b 0xa9                                  K.
-    decimal
-             75  169
-    datetime ((2004, 0, 3, 18, 10, 13))
-    0000   0x0d 0x0a 0x92 0x83 0x64                   ....d
-    body (0)
-    DAY BITS: [1, 0, 0] YEAR BITS: [0, 1, 1, 0]
-#### RECORD 21 Base (2004, 0, 3, 18, 63, 13) head[2], body[0] op[0x2b]
-
-    op hex (2)
-    0000   0x2b 0x69                                  +i
-    decimal
-             43  105
-    datetime ((2004, 0, 3, 18, 63, 13))
-    0000   0x0d 0x3f 0x12 0x83 0x64                   .?..d
-    body (0)
-    HOUR BITS: [0, 0, 1] DAY BITS: [1, 0, 0] YEAR BITS: [0, 1, 1, 0]
-#### RECORD 22 Base (2011, 1, 16, 16, 50, 13) head[2], body[0] op[0x4b]
-
-    op hex (2)
-    0000   0x4b 0x69                                  Ki
-    decimal
-             75  105
-    datetime ((2011, 1, 16, 16, 50, 13))
-    0000   0x0d 0x72 0x90 0x70 0x0b                   .r.p.
+            110   23   54   92    0    0    0    0
+            148    0    0   54   92   17  140   21
+              4   40  221    4  120  231    4  108
+            195   21   12  205   20   11  104    0
+            135   98   75  169   13   11  106    0
+            135   98   75  169   13   10  146
+    datetime (2013-09-09T11:36:03)
+    0000   0x83 0x64 0x2b 0x69 0x0d                   .d+i.
     body (0)
     HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1]
-#### RECORD 23 Base (2013, 9, 9, 11, 47, 41) head[2], body[0] op[0x6c]
+#### RECORD 15 Base (2013, 9, 9, 11, 36, 3) head[2], body[0] op[0x3f]
 
     op hex (2)
-    0000   0x6c 0x00                                  l.
+    0000   0x3f 0x12                                  ?.
     decimal
-            108    0
-    datetime ((2013, 9, 9, 11, 47, 41))
-    0000   0xa9 0x6f 0x4b 0xa9 0x0d                   .oK..
+             63   18
+    datetime ((2013, 9, 9, 11, 36, 3))
+    0000   0x83 0x64 0x4b 0x69 0x0d                   .dKi.
     body (0)
-    HOUR BITS: [0, 1, 1] DAY BITS: [1, 0, 1]
-#### RECORD 24 Base (2009, 2, 11, 15, 41, 0) head[2], body[0] op[0x0b]
+    HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1]
+#### RECORD 16 Base (2009, 4, 0, 12, 11, 48) head[2], body[0] op[0x72]
 
     op hex (2)
-    0000   0x0b 0x6a                                  .j
+    0000   0x72 0x90                                  r.
     decimal
-             11  106
-    datetime ((2009, 2, 11, 15, 41, 0))
-    0000   0x00 0xa9 0x6f 0x4b 0xa9                   ..oK.
+            114  144
+    datetime ((2009, 4, 0, 12, 11, 48))
+    0000   0x70 0x0b 0x6c 0x00 0xa9                   p.l..
     body (0)
-    HOUR BITS: [1, 0, 1] DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 1, 0]
-#### RECORD 25 Base (2009, 6, 11, 17, 29, 63) head[2], body[0] op[0x0d]
+    YEAR BITS: [1, 0, 1, 0]
+#### RECORD 17 Base (2000, 8, 10, 11, 13, 41) head[2], body[0] op[0x6f]
 
     op hex (2)
-    0000   0x0d 0x0a                                  ..
+    0000   0x6f 0x4b                                  oK
     decimal
-             13   10
-    datetime ((2009, 6, 11, 17, 29, 63))
-    0000   0x7f 0x9d 0x71 0x2b 0x69                   ..q+i
+            111   75
+    datetime ((2000, 8, 10, 11, 13, 41))
+    0000   0xa9 0x0d 0x0b 0x6a 0x00                   ...j.
     body (0)
-    HOUR BITS: [1, 0, 0] DAY BITS: [0, 0, 1] YEAR BITS: [0, 1, 1, 0]
-#### RECORD 26 Base (2009, 2, 11, 17, 29, 15) head[2], body[0] op[0x0d]
+    DAY BITS: [0, 1, 1]
+#### RECORD 18 Base (2015, 6, 10, 13, 41, 11) head[2], body[0] op[0xa9]
 
     op hex (2)
-    0000   0x0d 0x3f                                  .?
+    0000   0xa9 0x6f                                  .o
     decimal
-             13   63
-    datetime ((2009, 2, 11, 17, 29, 15))
-    0000   0x0f 0x9d 0x71 0xeb 0x69                   ..q.i
+            169  111
+    datetime ((2015, 6, 10, 13, 41, 11))
+    0000   0x4b 0xa9 0x0d 0x0a 0x7f                   K....
     body (0)
-    HOUR BITS: [1, 0, 0] DAY BITS: [1, 1, 1] YEAR BITS: [0, 1, 1, 0]
-#### RECORD 27 Base (2010, 9, 0, 27, 48, 16) head[2], body[0] op[0x0d]
+    HOUR BITS: [1, 0, 1] YEAR BITS: [0, 1, 1, 1]
+#### RECORD 19 Base (2015, 1, 31, 13, 41, 43) head[2], body[0] op[0x9d]
 
     op hex (2)
-    0000   0x0d 0x72                                  .r
+    0000   0x9d 0x71                                  .q
     decimal
-             13  114
-    datetime ((2010, 9, 0, 27, 48, 16))
-    0000   0x90 0x70 0x5b 0x00 0xaa                   .p[..
+            157  113
+    datetime ((2015, 1, 31, 13, 41, 43))
+    0000   0x2b 0x69 0x0d 0x3f 0x0f                   +i.?.
     body (0)
-    HOUR BITS: [0, 1, 1] YEAR BITS: [1, 0, 1, 0]
-#### RECORD 28 Base (2000, 4, 16, 0, 13, 41) head[2], body[0] op[0x48]
+    HOUR BITS: [0, 1, 1] DAY BITS: [0, 0, 1]
+#### RECORD 20 Base (2000, 13, 18, 13, 41, 43) head[2], body[0] op[0x9d]
 
     op hex (2)
-    0000   0x48 0x0c                                  H.
+    0000   0x9d 0x71                                  .q
     decimal
-             72   12
-    datetime ((2000, 4, 16, 0, 13, 41))
-    0000   0x69 0x0d 0x00 0x90 0x00                   i....
+            157  113
+    datetime ((2000, 13, 18, 13, 41, 43))
+    0000   0xeb 0x69 0x0d 0x72 0x90                   .i.r.
     body (0)
-    DAY BITS: [1, 0, 0]
-#### RECORD 29 Base (2000, 0, 0, 0, 0, 54) head[2], body[0] op[0x6e]
+    HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 1]
+#### RECORD 21 Base (2009, 2, 12, 8, 42, 0) head[2], body[0] op[0x70]
 
     op hex (2)
-    0000   0x6e 0x17                                  n.
+    0000   0x70 0x5b                                  p[
     decimal
-            110   23
-    datetime ((2000, 0, 0, 0, 0, 54))
-    0000   0x36 0x00 0x00 0x00 0x00                   6....
+            112   91
+    datetime ((2009, 2, 12, 8, 42, 0))
+    0000   0x00 0xaa 0x48 0x0c 0x69                   ..H.i
     body (0)
+    HOUR BITS: [1, 0, 1] YEAR BITS: [0, 1, 1, 0]
+#### RECORD 22 Base (2006, 8, 23, 14, 0, 16) head[2], body[0] op[0x0d]
 
-`end logs/ReadHistoryData-page-2.data: 30 records`
+    op hex (2)
+    0000   0x0d 0x00                                  ..
+    decimal
+             13    0
+    datetime ((2006, 8, 23, 14, 0, 16))
+    0000   0x90 0x00 0x6e 0x17 0x36                   ..n.6
+    body (0)
+    YEAR BITS: [0, 0, 1, 1]
+`end logs/ReadHistoryData-page-2.data: 23 records`
