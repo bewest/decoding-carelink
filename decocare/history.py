@@ -128,6 +128,14 @@ _confirmed = [ Bolus, Prime, NoDelivery, ResultTotals, ChangeBasalProfile,
                ChangeRemoteID, TempBasal, LowReservoir, BolusWizard,
                UnabsorbedInsulinBolus, ChangeUtility, ChangeTimeDisplay ]
 
+class Ian69(KnownRecord):
+  opcode = 0x69
+  body_length = 8
+_confirmed.append(Ian69)
+class Ian0B(KnownRecord):
+  opcode = 0x0B
+  head_length = 3
+_confirmed.append(Ian0B)
 class BasalProfileStart(KnownRecord):
   opcode = 0x7b
   body_length = 3
