@@ -47,7 +47,11 @@ class Base(object):
         result = "{}".format(unmask_date(self.date))
     return result
 
+  def min_length(self):
+    return self.head_length + self.date_length
   def parse(self, bolus):
+    if len(bolus) < self.min_length( ):
+      return
     head_length = self.head_length
     date_length = self.date_length
 
@@ -106,7 +110,8 @@ class KnownRecord(Base):
   decodes_date = True
 
   def parse_time(self):
-    self.datetime = parse_date(self.date)
+    if len(self.date) == 5:
+      self.datetime = parse_date(self.date)
 
   def decode(self):
     self.parse_time( )
