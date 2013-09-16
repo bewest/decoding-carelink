@@ -18,6 +18,7 @@ class Bolus(KnownRecord):
                         0xdc, 0x05, 0x4f, 0x12, 0x0c, ])
   opcode = 0x01
   head_length = 4
+  head_length = 8
   def decode(self):
     self.parse_time( )
     dose = { 'amount': self.head[1]/10.0,
@@ -139,7 +140,7 @@ class UnabsorbedInsulinBolus(VariableHead):
   def decode(self):
     raw = self.head[2:]
     doses = [ ]
-    while raw:
+    while raw and len(raw) > 2:
       head, tail = raw[:3], raw[3:]
       doses.append( decode_unabsorbed(*head) )
       raw = tail

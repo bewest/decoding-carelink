@@ -722,12 +722,12 @@ def decode_wizard(data):
   carb_ratio = int(body[2])
   bg_target_low = int(body[5])
   bg_target_high = int(body[3])
-  sensitivity = int(body[11])
+  sensitivity = int(body[4])
 
   print "BOLUS WIZARD", datetime.isoformat( )
-  wizard = { 'bg': bg, 'carb_input': carb_input,
+  wizard = { 'bg_input': bg, 'carb_input': carb_input,
              'carb_ratio': carb_ratio,
-             'sensitivity': sensitivity,
+             'insulin_sensitivity': sensitivity,
              'bg_target_low': bg_target_low,
              'bg_target_high': bg_target_high,
   }
