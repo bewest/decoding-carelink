@@ -1,23 +1,12 @@
 ## START logs/ReadHistoryData-page-37.data
-Traceback (most recent call last):
-  File "list_history.py", line 99, in <module>
-    main( )
-  File "list_history.py", line 83, in main
-    records = find_records(stream)
-  File "list_history.py", line 67, in find_records
-    record = parse_record( stream, B )
-  File "/home/bewest/src/decoding-carelink/decocare/history.py", line 182, in parse_record
-    record.parse( head + date + body )
-  File "/home/bewest/src/decoding-carelink/decocare/records/base.py", line 59, in parse
-    return self.decode( )
-  File "/home/bewest/src/decoding-carelink/decocare/records/base.py", line 112, in decode
-    self.parse_time( )
-  File "/home/bewest/src/decoding-carelink/decocare/records/base.py", line 109, in parse_time
-    self.datetime = parse_date(self.date)
-  File "/home/bewest/src/decoding-carelink/decocare/records/times.py", line 241, in parse_date
-    return parse_date_strict(date)
-  File "/home/bewest/src/decoding-carelink/decocare/records/times.py", line 261, in parse_date_strict
-    (year, month, day, hours, minutes, seconds) = unmask_date(data)
-  File "/home/bewest/src/decoding-carelink/decocare/records/times.py", line 226, in unmask_date
-    seconds = parse_seconds(data[0])
-IndexError: bytearray index out of range
+#### RECORD 0 ChangeBasalProfile unknown head[2], body[0] op[0x08]
+
+    op hex (2)
+    0000   0x08 0x08                                  ..
+    decimal
+              8    8
+    datetime (unknown)
+
+    body (0)
+
+`end logs/ReadHistoryData-page-37.data: 1 records`

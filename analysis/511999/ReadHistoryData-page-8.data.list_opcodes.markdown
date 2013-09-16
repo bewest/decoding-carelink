@@ -1315,7 +1315,7 @@
     decimal
               0  141
     datetime (unknown)
-    0000   0xb0                                       .
+
     body (0)
 
 `end logs/ReadHistoryData-page-8.data: 76 records`
