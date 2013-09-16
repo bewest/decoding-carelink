@@ -1,4 +1,12 @@
 ## START logs/ReadHistoryData-page-17.data
+#### STOPPING DOUBLE NULLS @ 987, found 35 nulls
+reading more to debug 0x00
+    0000   0x00 0x00                                  ..
+              0    0
+##### DEBUG HEX
+    0000   0xe9 0xb8                                  ..
+##### DEBUG DECIMAL
+            233  184
 #### RECORD 0 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
 
     op hex (47)
@@ -771,7 +779,7 @@
     decimal
               0   29    0
     HOUR BITS: [1, 1, 0]
-#### RECORD 41 ResultTotals (2000, 6, 0, 0, 13, 62) head[5], body[51] op[0x07]
+#### RECORD 41 ResultTotals (2000, 6, 0, 0, 13, 62) head[5], body[0] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x04 0xe4                   .....
@@ -779,54 +787,56 @@
               7    0    0    4  228
     datetime ((2000, 6, 0, 0, 13, 62))
     0000   0x7e 0x8d 0x00 0x00 0x00                   ~....
-    body (51)
-    hex
+    body (0)
+    HOUR BITS: [1, 0, 0]
+#### RECORD 42 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
+
+    op hex (47)
     0000   0x6e 0x7e 0x8d 0x05 0x00 0x8a 0x00 0x00    n~......
     0008   0x0a 0x00 0x00 0x04 0xe4 0x02 0xdc 0x3a    .......:
     0010   0x02 0x08 0x2a 0x00 0x8e 0x01 0x88 0x00    ..*.....
     0018   0x44 0x00 0x3c 0x00 0x00 0x06 0x02 0x01    D.<.....
     0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x48 0xfd 0x00 0x00 0x00 0x00    ..H.....
-    0030   0x00 0x00 0x00                             ...
+    0028   0x00 0x00 0x48 0xfd 0x00 0x00 0x00         ..H....
     decimal
             110  126  141    5    0  138    0    0
              10    0    0    4  228    2  220   58
               2    8   42    0  142    1  136    0
              68    0   60    0    0    6    2    1
               0    0    0    0    0    0    0    0
-              0    0   72  253    0    0    0    0
-              0    0    0
-    HOUR BITS: [1, 0, 0]
-#### RECORD 42 Base (2015, 1, 4, 0, 0, 1) head[2], body[0] op[0x00]
+              0    0   72  253    0    0    0
+    datetime ((2000, 0, 0, 0, 0, 0))
+    0000   0x00 0x00 0x00 0x00 0x00                   .....
+    body (0)
+
+#### RECORD 43 BasalProfileStart 2013-07-31T04:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
-    0000   0x00 0x7b                                  .{
+    0000   0x7b 0x01                                  {.
     decimal
-              0  123
-    datetime ((2015, 1, 4, 0, 0, 1))
-    0000   0x01 0x40 0xc0 0x04 0x1f                   .@...
-    body (0)
-    HOUR BITS: [0, 1, 0] YEAR BITS: [0, 0, 0, 1]
-#### RECORD 43 Base (2000, 0, 2, 27, 0, 33) head[2], body[0] op[0x0d]
+            123    1
+    datetime (2013-07-31T04:00:00)
+    0000   0x40 0xc0 0x04 0x1f 0x0d                   @....
+    body (3)
+    hex
+    0000   0x08 0x21 0x00                             .!.
+    decimal
+              8   33    0
+    HOUR BITS: [1, 1, 0]
+#### RECORD 44 BasalProfileStart 2013-07-31T08:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
-    0000   0x0d 0x08                                  ..
+    0000   0x7b 0x02                                  {.
     decimal
-             13    8
-    datetime ((2000, 0, 2, 27, 0, 33))
-    0000   0x21 0x00 0x7b 0x02 0x40                   !.{.@
-    body (0)
-    YEAR BITS: [0, 1, 0, 0]
-#### RECORD 44 Base (2000, 0, 2, 16, 13, 31) head[2], body[0] op[0xc0]
-
-    op hex (2)
-    0000   0xc0 0x08                                  ..
+            123    2
+    datetime (2013-07-31T08:00:00)
+    0000   0x40 0xc0 0x08 0x1f 0x0d                   @....
+    body (3)
+    hex
+    0000   0x10 0x22 0x00                             .".
     decimal
-            192    8
-    datetime ((2000, 0, 2, 16, 13, 31))
-    0000   0x1f 0x0d 0x10 0x22 0x00                   ...".
-    body (0)
-    DAY BITS: [0, 0, 1]
+             16   34    0
+    HOUR BITS: [1, 1, 0]
 #### RECORD 45 CalBGForPH 2013-07-31T08:34:48 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -1278,7 +1288,7 @@
     decimal
               0   29    0
 
-#### RECORD 71 ResultTotals (2000, 6, 0, 0, 13, 63) head[5], body[39] op[0x07]
+#### RECORD 71 ResultTotals (2000, 6, 0, 0, 13, 63) head[5], body[0] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x03 0xe2                   .....
@@ -1286,18 +1296,6 @@
               7    0    0    3  226
     datetime ((2000, 6, 0, 0, 13, 63))
     0000   0x7f 0x8d 0x00 0x00 0x00                   .....
-    body (39)
-    hex
-    0000   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0020   0x00 0x00 0x00 0x00 0x00 0xe9 0xb8         .......
-    decimal
-              0    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0    0
-              0    0    0    0    0  233  184
+    body (0)
     HOUR BITS: [1, 0, 0]
 `end logs/ReadHistoryData-page-17.data: 72 records`
