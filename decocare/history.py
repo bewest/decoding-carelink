@@ -126,14 +126,14 @@ _confirmed = [ Bolus, Prime, NoDelivery, ResultTotals, ChangeBasalProfile,
                ChangeRemoteID, TempBasal, LowReservoir, BolusWizard,
                UnabsorbedInsulinBolus, ChangeUtility, ChangeTimeDisplay ]
 
-class Sara7B(KnownRecord):
+class BasalProfileStart(KnownRecord):
   opcode = 0x7b
   body_length = 3
-_confirmed.append(Sara7B)
-class Sara6E(KnownRecord):
+_confirmed.append(BasalProfileStart)
+class Sara6E(InvalidRecord):
   opcode = 0x6e
-  head_length = 54
-  body_length = 3
+  head_length = 52 - 5
+  # body_length = 1
 _confirmed.append(Sara6E)
 
 class hack1(InvalidRecord):
