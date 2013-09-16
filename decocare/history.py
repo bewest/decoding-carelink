@@ -130,7 +130,7 @@ _confirmed = [ Bolus, Prime, NoDelivery, ResultTotals, ChangeBasalProfile,
 
 class Ian69(KnownRecord):
   opcode = 0x69
-  body_length = 8
+  body_length = 2
 _confirmed.append(Ian69)
 
 class Ian50(KnownRecord):
