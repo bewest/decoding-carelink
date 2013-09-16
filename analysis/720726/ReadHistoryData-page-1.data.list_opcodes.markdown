@@ -727,7 +727,7 @@
 
     body (0)
 
-#### RECORD 39 Ian69 2013-09-10T08:56:42 head[2], body[8] op[0x69]
+#### RECORD 39 Ian69 2013-09-10T08:56:42 head[2], body[2] op[0x69]
 
     op hex (2)
     0000   0x69 0x08                                  i.
@@ -735,18 +735,21 @@
             105    8
     datetime (2013-09-10T08:56:42)
     0000   0xaa 0x78 0x08 0x0a 0x0d                   .x...
-    body (8)
+    body (2)
     hex
-    0000   0x0a 0x1e 0x01 0x00 0x7c 0x00 0x7c 0x00    ....|.|.
+    0000   0x0a 0x1e                                  ..
     decimal
-             10   30    1    0  124    0  124    0
+             10   30
     HOUR BITS: [0, 1, 1]
-#### RECORD 40 NewTimeSet 2013-09-10T08:56:42 head[2], body[0] op[0x18]
-
-    op hex (2)
-    0000   0x18 0x00                                  ..
+#### RECORD 40 Bolus 2013-09-10T08:56:42 head[8], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 0.0, 'dual_component': '??', 'programmed': 12.4, 'type': '??'}
+```
+    op hex (8)
+    0000   0x01 0x00 0x7c 0x00 0x7c 0x00 0x18 0x00    ..|.|...
     decimal
-             24    0
+              1    0  124    0  124    0   24    0
     datetime (2013-09-10T08:56:42)
     0000   0xaa 0x78 0x48 0x6a 0x0d                   .xHj.
     body (0)
@@ -1182,7 +1185,7 @@
 
     body (0)
 
-#### RECORD 62 Ian69 2013-09-10T12:23:36 head[2], body[8] op[0x69]
+#### RECORD 62 Ian69 2013-09-10T12:23:36 head[2], body[2] op[0x69]
 
     op hex (2)
     0000   0x69 0x0b                                  i.
@@ -1190,19 +1193,22 @@
             105   11
     datetime (2013-09-10T12:23:36)
     0000   0xa4 0x57 0x0c 0x0a 0x0d                   .W...
-    body (8)
+    body (2)
     hex
-    0000   0x0e 0x1e 0x01 0x00 0x80 0x00 0x80 0x00    ........
+    0000   0x0e 0x1e                                  ..
     decimal
-             14   30    1    0  128    0  128    0
+             14   30
     HOUR BITS: [0, 1, 0]
-#### RECORD 63 Base (2013, 9, 10, 12, 23, 36) head[2], body[0] op[0x40]
-
-    op hex (2)
-    0000   0x40 0x00                                  @.
+#### RECORD 63 Bolus 2013-09-10T12:23:36 head[8], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 0.0, 'dual_component': '??', 'programmed': 12.8, 'type': '??'}
+```
+    op hex (8)
+    0000   0x01 0x00 0x80 0x00 0x80 0x00 0x40 0x00    ......@.
     decimal
-             64    0
-    datetime ((2013, 9, 10, 12, 23, 36))
+              1    0  128    0  128    0   64    0
+    datetime (2013-09-10T12:23:36)
     0000   0xa4 0x57 0x4c 0x6a 0x0d                   .WLj.
     body (0)
     HOUR BITS: [0, 1, 0] DAY BITS: [0, 1, 1]

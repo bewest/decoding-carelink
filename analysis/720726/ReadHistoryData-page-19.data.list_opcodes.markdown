@@ -859,7 +859,7 @@ reading more to debug 0x00
 
     body (0)
 
-#### RECORD 54 Ian69 2012-08-19T12:18:01 head[2], body[8] op[0x69]
+#### RECORD 54 Ian69 2012-08-19T12:18:01 head[2], body[2] op[0x69]
 
     op hex (2)
     0000   0x69 0x0b                                  i.
@@ -867,19 +867,22 @@ reading more to debug 0x00
             105   11
     datetime (2012-08-19T12:18:01)
     0000   0x81 0x12 0x0c 0x13 0x0c                   .....
-    body (8)
+    body (2)
     hex
-    0000   0x0e 0x1e 0x01 0x00 0x68 0x00 0x68 0x00    ....h.h.
+    0000   0x0e 0x1e                                  ..
     decimal
-             14   30    1    0  104    0  104    0
+             14   30
 
-#### RECORD 55 Base (2012, 8, 19, 12, 18, 1) head[2], body[0] op[0x88]
-
-    op hex (2)
-    0000   0x88 0x00                                  ..
+#### RECORD 55 Bolus 2012-08-19T12:18:01 head[8], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 0.0, 'dual_component': '??', 'programmed': 10.4, 'type': '??'}
+```
+    op hex (8)
+    0000   0x01 0x00 0x68 0x00 0x68 0x00 0x88 0x00    ..h.h...
     decimal
-            136    0
-    datetime ((2012, 8, 19, 12, 18, 1))
+              1    0  104    0  104    0  136    0
+    datetime (2012-08-19T12:18:01)
     0000   0x81 0x12 0x4c 0x73 0x0c                   ..Ls.
     body (0)
     DAY BITS: [0, 1, 1]

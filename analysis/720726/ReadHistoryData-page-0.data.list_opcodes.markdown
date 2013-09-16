@@ -330,7 +330,7 @@ reading more to debug 0x00
 
     body (0)
 
-#### RECORD 15 Ian69 2013-09-10T18:15:58 head[2], body[8] op[0x69]
+#### RECORD 15 Ian69 2013-09-10T18:15:58 head[2], body[2] op[0x69]
 
     op hex (2)
     0000   0x69 0xd1                                  i.
@@ -338,18 +338,21 @@ reading more to debug 0x00
             105  209
     datetime (2013-09-10T18:15:58)
     0000   0xba 0x4f 0x72 0x0a 0x0d                   .Or..
-    body (8)
+    body (2)
     hex
-    0000   0x15 0x1e 0x01 0x00 0x8c 0x00 0x8c 0x00    ........
+    0000   0x15 0x1e                                  ..
     decimal
-             21   30    1    0  140    0  140    0
+             21   30
     HOUR BITS: [0, 1, 0]
-#### RECORD 16 SelectBasalProfile 2013-09-10T18:15:58 head[2], body[0] op[0x14]
-
-    op hex (2)
-    0000   0x14 0x00                                  ..
+#### RECORD 16 Bolus 2013-09-10T18:15:58 head[8], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 0.0, 'dual_component': '??', 'programmed': 14.0, 'type': '??'}
+```
+    op hex (8)
+    0000   0x01 0x00 0x8c 0x00 0x8c 0x00 0x14 0x00    ........
     decimal
-             20    0
+              1    0  140    0  140    0   20    0
     datetime (2013-09-10T18:15:58)
     0000   0xba 0x4f 0x52 0x6a 0x0d                   .ORj.
     body (0)

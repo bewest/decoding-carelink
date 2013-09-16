@@ -1,18 +1,12 @@
 ## START logs/ReadHistoryData-page-17.data
-#### STOPPING DOUBLE NULLS @ 918, found 0 nulls
+#### STOPPING DOUBLE NULLS @ 1021, found 1 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
               0    0
 ##### DEBUG HEX
-    0000   0x48 0x00 0x00 0x00 0x00 0x48 0x36 0x5c    H....H6\
-    0008   0x05 0x78 0x2f 0x14 0x69 0x0b 0x94 0x2f    .x/.i../
-    0010   0x0c 0x15 0x0c 0x0e 0x1e 0x01 0x00 0x48    .......H
-    0018   0x00 0x48 0x00 0x00 0x00 0x94 0x2f 0x4c    .H..../L
+    0000   0xba 0x59                                  .Y
 ##### DEBUG DECIMAL
-             72    0    0    0    0   72   54   92
-              5  120   47   20  105   11  148   47
-             12   21   12   14   30    1    0   72
-              0   72    0    0    0  148   47   76
+            186   89
 #### RECORD 0 BolusWizard 2012-08-20T16:43:17 head[2], body[15] op[0x5b]
 ###### DECODED
 ```python
@@ -146,7 +140,7 @@ reading more to debug 0x00
 
     body (0)
 
-#### RECORD 5 Ian69 2012-08-20T17:35:22 head[2], body[8] op[0x69]
+#### RECORD 5 Ian69 2012-08-20T17:35:22 head[2], body[2] op[0x69]
 
     op hex (2)
     0000   0x69 0xd1                                  i.
@@ -154,19 +148,22 @@ reading more to debug 0x00
             105  209
     datetime (2012-08-20T17:35:22)
     0000   0x96 0x23 0x71 0x14 0x0c                   .#q..
-    body (8)
+    body (2)
     hex
-    0000   0x15 0x1e 0x01 0x00 0x58 0x00 0x58 0x00    ....X.X.
+    0000   0x15 0x1e                                  ..
     decimal
-             21   30    1    0   88    0   88    0
+             21   30
     HOUR BITS: [0, 0, 1]
-#### RECORD 6 Base (2012, 8, 20, 17, 35, 22) head[2], body[0] op[0x98]
-
-    op hex (2)
-    0000   0x98 0x00                                  ..
+#### RECORD 6 Bolus 2012-08-20T17:35:22 head[8], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 0.0, 'dual_component': '??', 'programmed': 8.8, 'type': '??'}
+```
+    op hex (8)
+    0000   0x01 0x00 0x58 0x00 0x58 0x00 0x98 0x00    ..X.X...
     decimal
-            152    0
-    datetime ((2012, 8, 20, 17, 35, 22))
+              1    0   88    0   88    0  152    0
+    datetime (2012-08-20T17:35:22)
     0000   0x96 0x23 0x51 0x74 0x0c                   .#Qt.
     body (0)
     HOUR BITS: [0, 0, 1] DAY BITS: [0, 1, 1]
@@ -1018,7 +1015,7 @@ reading more to debug 0x00
     0000   0x80 0x0a 0x0a 0x15 0x8c                   .....
     body (0)
     YEAR BITS: [1, 0, 0, 0]
-#### RECORD 47 Ian69 2012-08-21T10:30:00 head[2], body[8] op[0x69]
+#### RECORD 47 Ian69 2012-08-21T10:30:00 head[2], body[2] op[0x69]
 
     op hex (2)
     0000   0x69 0x08                                  i.
@@ -1026,20 +1023,183 @@ reading more to debug 0x00
             105    8
     datetime (2012-08-21T10:30:00)
     0000   0x80 0x1e 0x0a 0x15 0x0c                   .....
-    body (8)
+    body (2)
     hex
-    0000   0x2a 0x1e 0x5b 0x00 0x94 0x2f 0x0c 0x75    *.[../.u
+    0000   0x2a 0x1e                                  *.
     decimal
-             42   30   91    0  148   47   12  117
+             42   30
 
-#### RECORD 48 ClearAlarm 2006-08-23T14:00:16 head[2], body[0] op[0x0c]
+#### RECORD 48 BolusWizard 2012-08-21T12:47:20 head[2], body[15] op[0x5b]
+###### DECODED
+```python
+{'_byte[5]': 54,
+ '_byte[7]': 0,
+ 'bg': 0,
+ 'bg_target_high': 0,
+ 'bg_target_low': 23,
+ 'bolus_estimate': 0.0,
+ 'carb_input': 20,
+ 'carb_ratio': 0,
+ 'correction_estimate': 0.6,
+ 'food_estimate': 0.0,
+ 'sensitivity': 110,
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 72}
+```
+    op hex (2)
+    0000   0x5b 0x00                                  [.
+    decimal
+             91    0
+    datetime (2012-08-21T12:47:20)
+    0000   0x94 0x2f 0x0c 0x75 0x0c                   ./.u.
+    body (15)
+    hex
+    0000   0x14 0x90 0x00 0x6e 0x17 0x36 0x00 0x00    ...n.6..
+    0008   0x48 0x00 0x00 0x00 0x00 0x48 0x36         H....H6
+    decimal
+             20  144    0  110   23   54    0    0
+             72    0    0    0    0   72   54
+    HOUR BITS: [0, 0, 1] DAY BITS: [0, 1, 1]
+#### RECORD 49 UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]
+###### DECODED
+```python
+[{'age': 47, 'amount': 3.0, 'curve': 20}]
+```
+    op hex (5)
+    0000   0x5c 0x05 0x78 0x2f 0x14                   \.x/.
+    decimal
+             92    5  120   47   20
+    datetime (unknown)
+
+    body (0)
+
+#### RECORD 50 Ian69 2012-08-21T12:47:20 head[2], body[2] op[0x69]
 
     op hex (2)
-    0000   0x0c 0x14                                  ..
+    0000   0x69 0x0b                                  i.
     decimal
-             12   20
-    datetime (2006-08-23T14:00:16)
-    0000   0x90 0x00 0x6e 0x17 0x36                   ..n.6
+            105   11
+    datetime (2012-08-21T12:47:20)
+    0000   0x94 0x2f 0x0c 0x15 0x0c                   ./...
+    body (2)
+    hex
+    0000   0x0e 0x1e                                  ..
+    decimal
+             14   30
+    HOUR BITS: [0, 0, 1]
+#### RECORD 51 Bolus 2012-08-21T12:47:20 head[8], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 0.0, 'dual_component': '??', 'programmed': 7.2, 'type': '??'}
+```
+    op hex (8)
+    0000   0x01 0x00 0x48 0x00 0x48 0x00 0x00 0x00    ..H.H...
+    decimal
+              1    0   72    0   72    0    0    0
+    datetime (2012-08-21T12:47:20)
+    0000   0x94 0x2f 0x4c 0x75 0x0c                   ./Lu.
     body (0)
-    YEAR BITS: [0, 0, 1, 1]
-`end logs/ReadHistoryData-page-17.data: 49 records`
+    HOUR BITS: [0, 0, 1] DAY BITS: [0, 1, 1]
+#### RECORD 52 BasalProfileStart 2012-08-21T13:00:00 head[2], body[3] op[0x7b]
+
+    op hex (2)
+    0000   0x7b 0x03                                  {.
+    decimal
+            123    3
+    datetime (2012-08-21T13:00:00)
+    0000   0x80 0x00 0x0d 0x15 0x0c                   .....
+    body (3)
+    hex
+    0000   0x1a 0x26 0x00                             .&.
+    decimal
+             26   38    0
+
+#### RECORD 53 BolusWizard 2012-08-21T14:20:06 head[2], body[15] op[0x5b]
+###### DECODED
+```python
+{'_byte[5]': 54,
+ '_byte[7]': 0,
+ 'bg': 0,
+ 'bg_target_high': 0,
+ 'bg_target_low': 23,
+ 'bolus_estimate': 0.0,
+ 'carb_input': 37,
+ 'carb_ratio': 0,
+ 'correction_estimate': 0.6,
+ 'food_estimate': 0.0,
+ 'sensitivity': 110,
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 132}
+```
+    op hex (2)
+    0000   0x5b 0x00                                  [.
+    decimal
+             91    0
+    datetime (2012-08-21T14:20:06)
+    0000   0x86 0x14 0x0e 0x75 0x0c                   ...u.
+    body (15)
+    hex
+    0000   0x25 0x90 0x00 0x6e 0x17 0x36 0x00 0x00    %..n.6..
+    0008   0x84 0x00 0x00 0x00 0x00 0x84 0x36         ......6
+    decimal
+             37  144    0  110   23   54    0    0
+            132    0    0    0    0  132   54
+    DAY BITS: [0, 1, 1]
+#### RECORD 54 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
+###### DECODED
+```python
+[{'age': 96, 'amount': 1.8, 'curve': 4},
+ {'age': 140, 'amount': 3.0, 'curve': 20}]
+```
+    op hex (8)
+    0000   0x5c 0x08 0x48 0x60 0x04 0x78 0x8c 0x14    \.H`.x..
+    decimal
+             92    8   72   96    4  120  140   20
+    datetime (unknown)
+
+    body (0)
+
+#### RECORD 55 LowReservoir 2012-08-21T14:20:07 head[2], body[0] op[0x34]
+###### DECODED
+```python
+{'amount': 9.6}
+```
+    op hex (2)
+    0000   0x34 0x60                                  4`
+    decimal
+             52   96
+    datetime (2012-08-21T14:20:07)
+    0000   0x87 0x14 0x6e 0x15 0x8c                   ..n..
+    body (0)
+    YEAR BITS: [1, 0, 0, 0]
+#### RECORD 56 Bolus 2012-08-21T14:20:06 head[8], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 0.0, 'dual_component': '??', 'programmed': 13.2, 'type': '??'}
+```
+    op hex (8)
+    0000   0x01 0x00 0x84 0x00 0x84 0x00 0x2c 0x00    ......,.
+    decimal
+              1    0  132    0  132    0   44    0
+    datetime (2012-08-21T14:20:06)
+    0000   0x86 0x14 0x4e 0x75 0x0c                   ..Nu.
+    body (0)
+    DAY BITS: [0, 1, 1]
+#### RECORD 57 CalBGForPH 2012-08-21T18:22:18 head[2], body[0] op[0x0a]
+###### DECODED
+```python
+{'amount': 361}
+```
+    op hex (2)
+    0000   0x0a 0x69                                  .i
+    decimal
+             10  105
+    datetime (2012-08-21T18:22:18)
+    0000   0x92 0x16 0x32 0x75 0x8c                   ..2u.
+    body (0)
+    DAY BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 0]
+`end logs/ReadHistoryData-page-17.data: 58 records`
