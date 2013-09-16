@@ -46,10 +46,11 @@ def decode_remote_id(msg):
 class NoDelivery(KnownRecord):
   opcode = 0x06
   head_length = 4
-class ResultTotals(KnownRecord):
+#class ResultTotals(KnownRecord):
+class ResultTotals(InvalidRecord):
   opcode = 0x07
   head_length = 5
-  body_length = 38 + 6 + 7
+  #body_length = 38 + 6 + 7
 
 class ChangeBasalProfile(KnownRecord):
   opcode = 0x08
