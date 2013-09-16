@@ -1,0 +1,41 @@
+INFO:__main__:howdy! I'm going to take a look at your carelink usb stick.
+INFO:link:Link opened serial port: Serial<id=0x2702f50, open=True>(port='/dev/ttyUSB0', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=0.5, xonxoff=False, rtscts=False, dsrdtr=False)
+INFO:__main__:PROCESS:OPEN:0.034
+INFO:__main__:PROCESS:START:0.163:ProductInfo:0x04
+INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] processing ProductInfo:0x04)
+INFO:__main__:send_force_read: attempt 0/5 send command, read until we get something within some timeout
+INFO:__main__:link Stick transmit[None] reader[None] download_i[False] status[None] poll_size[None] poll_i[None] command[<ProductInfo:0x04:size(64)>] sending ProductInfo:0x04)
+INFO:root:usb.write.len: 3
+0000   0x04 0x00 0x00                             ...
+DEBUG:__main__:sleeping 0.001
+INFO:root:usb.read.len: 64
+INFO:root:usb.read.raw:
+0000   0x02 0x00 0x03 0x00 0xc2 0x80 0x40 0xa7    ......@.
+0008   0x01 0x51 0x19 0x99 0x14 0x03 0x37 0x32    .Q....72
+0010   0x33 0x00 0x00 0x00 0x00 0x00 0x00 0x00    3.......
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
+Traceback (most recent call last):
+  File "decocare/stick.py", line 874, in <module>
+    stick.open( )
+  File "decocare/stick.py", line 847, in open
+    log.info('%s' % self.product_info( ))
+  File "decocare/stick.py", line 508, in product_info
+    return self.query(ProductInfo)
+  File "decocare/stick.py", line 502, in query
+    return self.process( )
+  File "decocare/stick.py", line 489, in process
+    ack, response = self.command.respond(raw)
+  File "decocare/stick.py", line 68, in respond
+    assert commStatus == 1, ('commStatus: %02x expected 0x1' % commStatus)
+AssertionError: commStatus: 02 expected 0x1
+Command exited with non-zero status 1
+python decocare/stick.py /dev/ttyUSB0
+	elapsed 0:00.20
+	user 0.15
+	system 0.03
+	CPU 93% (0text+0data 59584max)k
