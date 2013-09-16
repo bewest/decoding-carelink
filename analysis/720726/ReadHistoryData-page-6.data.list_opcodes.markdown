@@ -1,5 +1,5 @@
 ## START logs/ReadHistoryData-page-6.data
-#### STOPPING DOUBLE NULLS @ 210, found 1 nulls
+#### STOPPING DOUBLE NULLS @ 211, found 0 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
               0    0
@@ -176,34 +176,28 @@ reading more to debug 0x00
              20  144    0  110   23   54   48    0
              72    0    0    0    0  120   54
     HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1]
-#### RECORD 11 Base (2013, 9, 5, 11, 48, 31) head[2], body[0] op[0x69]
+#### RECORD 11 Ian69 2013-09-05T11:48:31 head[2], body[8] op[0x69]
 
     op hex (2)
     0000   0x69 0x0b                                  i.
     decimal
             105   11
-    datetime ((2013, 9, 5, 11, 48, 31))
+    datetime (2013-09-05T11:48:31)
     0000   0x9f 0x70 0x0b 0x05 0x0d                   .p...
-    body (0)
+    body (8)
+    hex
+    0000   0x0e 0x1e 0x34 0x80 0x9f 0x70 0xab 0x05    ..4..p..
+    decimal
+             14   30   52  128  159  112  171    5
     HOUR BITS: [0, 1, 1]
-#### RECORD 12 Base (2011, 2, 16, 31, 0, 52) head[2], body[0] op[0x0e]
+#### RECORD 12 Base (2000, 1, 24, 0, 56, 0) head[2], body[0] op[0x8d]
 
     op hex (2)
-    0000   0x0e 0x1e                                  ..
+    0000   0x8d 0x01                                  ..
     decimal
-             14   30
-    datetime ((2011, 2, 16, 31, 0, 52))
-    0000   0x34 0x80 0x9f 0x70 0xab                   4..p.
+            141    1
+    datetime ((2000, 1, 24, 0, 56, 0))
+    0000   0x00 0x78 0x00 0x78 0x00                   .x.x.
     body (0)
-    HOUR BITS: [1, 0, 0] DAY BITS: [0, 1, 1] YEAR BITS: [1, 0, 1, 0]
-#### RECORD 13 Base (2008, 0, 0, 24, 0, 1) head[2], body[0] op[0x05]
-
-    op hex (2)
-    0000   0x05 0x8d                                  ..
-    decimal
-              5  141
-    datetime ((2008, 0, 0, 24, 0, 1))
-    0000   0x01 0x00 0x78 0x00 0x78                   ..x.x
-    body (0)
-    YEAR BITS: [0, 1, 1, 1]
-`end logs/ReadHistoryData-page-6.data: 14 records`
+    HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1]
+`end logs/ReadHistoryData-page-6.data: 13 records`

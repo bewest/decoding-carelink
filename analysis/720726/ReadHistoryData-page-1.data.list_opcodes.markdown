@@ -1,18 +1,4 @@
 ## START logs/ReadHistoryData-page-1.data
-#### STOPPING DOUBLE NULLS @ 699, found 0 nulls
-reading more to debug 0x00
-    0000   0x00 0x00                                  ..
-              0    0
-##### DEBUG HEX
-    0000   0x7c 0x00 0x18 0x36 0x5c 0x0e 0x28 0x1e    |..6\.(.
-    0008   0x04 0x30 0x50 0x04 0x4c 0x5a 0x04 0xfc    .0P.LZ..
-    0010   0x2c 0x14 0x01 0x00 0x0c 0x00 0x0c 0x00    ,.......
-    0018   0x7c 0x00 0xb1 0x52 0x4a 0x6a 0x0d 0x5b    |..RJj.[
-##### DEBUG DECIMAL
-            124    0   24   54   92   14   40   30
-              4   48   80    4   76   90    4  252
-             44   20    1    0   12    0   12    0
-            124    0  177   82   74  106   13   91
 #### RECORD 0 UnabsorbedInsulinBolus unknown head[29], body[0] op[0x5c]
 ###### DECODED
 ```python
@@ -741,97 +727,562 @@ reading more to debug 0x00
 
     body (0)
 
-#### RECORD 39 Base (2013, 9, 10, 8, 56, 42) head[2], body[0] op[0x69]
+#### RECORD 39 Ian69 2013-09-10T08:56:42 head[2], body[8] op[0x69]
 
     op hex (2)
     0000   0x69 0x08                                  i.
     decimal
             105    8
-    datetime ((2013, 9, 10, 8, 56, 42))
+    datetime (2013-09-10T08:56:42)
     0000   0xaa 0x78 0x08 0x0a 0x0d                   .x...
-    body (0)
+    body (8)
+    hex
+    0000   0x0a 0x1e 0x01 0x00 0x7c 0x00 0x7c 0x00    ....|.|.
+    decimal
+             10   30    1    0  124    0  124    0
     HOUR BITS: [0, 1, 1]
-#### RECORD 40 CalBGForPH (2012, 0, 0, 28, 0, 1) head[2], body[0] op[0x0a]
+#### RECORD 40 NewTimeSet 2013-09-10T08:56:42 head[2], body[0] op[0x18]
+
+    op hex (2)
+    0000   0x18 0x00                                  ..
+    decimal
+             24    0
+    datetime (2013-09-10T08:56:42)
+    0000   0xaa 0x78 0x48 0x6a 0x0d                   .xHj.
+    body (0)
+    HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1]
+#### RECORD 41 BasalProfileStart 2013-09-10T09:30:00 head[2], body[3] op[0x7b]
+
+    op hex (2)
+    0000   0x7b 0x02                                  {.
+    decimal
+            123    2
+    datetime (2013-09-10T09:30:00)
+    0000   0x80 0x5e 0x09 0x0a 0x0d                   .^...
+    body (3)
+    hex
+    0000   0x13 0x1e 0x00                             ...
+    decimal
+             19   30    0
+    HOUR BITS: [0, 1, 0]
+#### RECORD 42 BolusWizard 2013-09-10T09:49:18 head[2], body[15] op[0x5b]
 ###### DECODED
 ```python
-{'amount': 30}
+{'_byte[5]': 54,
+ '_byte[7]': 0,
+ 'bg': 0,
+ 'bg_target_high': 0,
+ 'bg_target_low': 23,
+ 'bolus_estimate': 0.0,
+ 'carb_input': 12,
+ 'carb_ratio': 0,
+ 'correction_estimate': 0.6,
+ 'food_estimate': 0.0,
+ 'sensitivity': 110,
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 40}
 ```
     op hex (2)
-    0000   0x0a 0x1e                                  ..
+    0000   0x5b 0x00                                  [.
     decimal
-             10   30
-    datetime ((2012, 0, 0, 28, 0, 1))
-    0000   0x01 0x00 0x7c 0x00 0x7c                   ..|.|
+             91    0
+    datetime (2013-09-10T09:49:18)
+    0000   0x92 0x71 0x09 0x6a 0x0d                   .q.j.
+    body (15)
+    hex
+    0000   0x0c 0x90 0x00 0x6e 0x17 0x36 0x00 0x00    ...n.6..
+    0008   0x28 0x00 0x00 0x00 0x00 0x28 0x36         (....(6
+    decimal
+             12  144    0  110   23   54    0    0
+             40    0    0    0    0   40   54
+    HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1]
+#### RECORD 43 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
+###### DECODED
+```python
+[{'age': 51, 'amount': 1.2, 'curve': 4},
+ {'age': 61, 'amount': 1.9, 'curve': 4},
+ {'age': 15, 'amount': 6.3, 'curve': 20}]
+```
+    op hex (11)
+    0000   0x5c 0x0b 0x30 0x33 0x04 0x4c 0x3d 0x04    \.03.L=.
+    0008   0xfc 0x0f 0x14                             ...
+    decimal
+             92   11   48   51    4   76   61    4
+            252   15   20
+    datetime (unknown)
+
     body (0)
-    YEAR BITS: [0, 1, 1, 1]
-#### RECORD 41 Base (2010, 2, 8, 24, 42, 0) head[2], body[0] op[0x00]
+
+#### RECORD 44 Bolus 2013-09-10T09:49:18 head[8], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 0.0, 'dual_component': '??', 'programmed': 4.0, 'type': '??'}
+```
+    op hex (8)
+    0000   0x01 0x00 0x28 0x00 0x28 0x00 0x68 0x00    ..(.(.h.
+    decimal
+              1    0   40    0   40    0  104    0
+    datetime (2013-09-10T09:49:18)
+    0000   0x92 0x71 0x49 0x6a 0x0d                   .qIj.
+    body (0)
+    HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1]
+#### RECORD 45 CalBGForPH 2013-09-10T10:18:40 head[2], body[0] op[0x0a]
+###### DECODED
+```python
+{'amount': 75}
+```
+    op hex (2)
+    0000   0x0a 0x4b                                  .K
+    decimal
+             10   75
+    datetime (2013-09-10T10:18:40)
+    0000   0xa8 0x52 0x4a 0x0a 0x0d                   .RJ..
+    body (0)
+    HOUR BITS: [0, 1, 0]
+#### RECORD 46 BolusWizard 2013-09-10T10:18:49 head[2], body[15] op[0x5b]
+###### DECODED
+```python
+{'_byte[5]': 54,
+ '_byte[7]': 0,
+ 'bg': 75,
+ 'bg_target_high': 0,
+ 'bg_target_low': 23,
+ 'bolus_estimate': 12.4,
+ 'carb_input': 7,
+ 'carb_ratio': 0,
+ 'correction_estimate': 0.6,
+ 'food_estimate': 3.6,
+ 'sensitivity': 110,
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 24}
+```
+    op hex (2)
+    0000   0x5b 0x4b                                  [K
+    decimal
+             91   75
+    datetime (2013-09-10T10:18:49)
+    0000   0xb1 0x52 0x0a 0x6a 0x0d                   .R.j.
+    body (15)
+    hex
+    0000   0x07 0x90 0x00 0x6e 0x17 0x36 0x24 0x00    ...n.6$.
+    0008   0x18 0x00 0x00 0x7c 0x00 0x18 0x36         ...|..6
+    decimal
+              7  144    0  110   23   54   36    0
+             24    0    0  124    0   24   54
+    HOUR BITS: [0, 1, 0] DAY BITS: [0, 1, 1]
+#### RECORD 47 UnabsorbedInsulinBolus unknown head[14], body[0] op[0x5c]
+###### DECODED
+```python
+[{'age': 30, 'amount': 1.0, 'curve': 4},
+ {'age': 80, 'amount': 1.2, 'curve': 4},
+ {'age': 90, 'amount': 1.9, 'curve': 4},
+ {'age': 44, 'amount': 6.3, 'curve': 20}]
+```
+    op hex (14)
+    0000   0x5c 0x0e 0x28 0x1e 0x04 0x30 0x50 0x04    \.(..0P.
+    0008   0x4c 0x5a 0x04 0xfc 0x2c 0x14              LZ..,.
+    decimal
+             92   14   40   30    4   48   80    4
+             76   90    4  252   44   20
+    datetime (unknown)
+
+    body (0)
+
+#### RECORD 48 Bolus 2013-09-10T10:18:49 head[8], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 0.0, 'dual_component': '??', 'programmed': 1.2, 'type': '??'}
+```
+    op hex (8)
+    0000   0x01 0x00 0x0c 0x00 0x0c 0x00 0x7c 0x00    ......|.
+    decimal
+              1    0   12    0   12    0  124    0
+    datetime (2013-09-10T10:18:49)
+    0000   0xb1 0x52 0x4a 0x6a 0x0d                   .RJj.
+    body (0)
+    HOUR BITS: [0, 1, 0] DAY BITS: [0, 1, 1]
+#### RECORD 49 BolusWizard 2013-09-10T10:24:13 head[2], body[15] op[0x5b]
+###### DECODED
+```python
+{'_byte[5]': 54,
+ '_byte[7]': 0,
+ 'bg': 75,
+ 'bg_target_high': 0,
+ 'bg_target_low': 23,
+ 'bolus_estimate': 12.8,
+ 'carb_input': 17,
+ 'carb_ratio': 0,
+ 'correction_estimate': 0.6,
+ 'food_estimate': 3.6,
+ 'sensitivity': 110,
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 60}
+```
+    op hex (2)
+    0000   0x5b 0x4b                                  [K
+    decimal
+             91   75
+    datetime (2013-09-10T10:24:13)
+    0000   0x8d 0x58 0x0a 0x6a 0x0d                   .X.j.
+    body (15)
+    hex
+    0000   0x11 0x90 0x00 0x6e 0x17 0x36 0x24 0x00    ...n.6$.
+    0008   0x3c 0x00 0x00 0x80 0x00 0x3c 0x36         <....<6
+    decimal
+             17  144    0  110   23   54   36    0
+             60    0    0  128    0   60   54
+    HOUR BITS: [0, 1, 0] DAY BITS: [0, 1, 1]
+#### RECORD 50 UnabsorbedInsulinBolus unknown head[17], body[0] op[0x5c]
+###### DECODED
+```python
+[{'age': 6, 'amount': 0.3, 'curve': 4},
+ {'age': 36, 'amount': 1.0, 'curve': 4},
+ {'age': 86, 'amount': 1.2, 'curve': 4},
+ {'age': 96, 'amount': 1.9, 'curve': 4},
+ {'age': 50, 'amount': 6.3, 'curve': 20}]
+```
+    op hex (17)
+    0000   0x5c 0x11 0x0c 0x06 0x04 0x28 0x24 0x04    \....($.
+    0008   0x30 0x56 0x04 0x4c 0x60 0x04 0xfc 0x32    0V.L`..2
+    0010   0x14                                       .
+    decimal
+             92   17   12    6    4   40   36    4
+             48   86    4   76   96    4  252   50
+             20
+    datetime (unknown)
+
+    body (0)
+
+#### RECORD 51 Bolus 2013-09-10T10:24:13 head[8], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 0.0, 'dual_component': '??', 'programmed': 6.0, 'type': '??'}
+```
+    op hex (8)
+    0000   0x01 0x00 0x3c 0x00 0x3c 0x00 0x80 0x00    ..<.<...
+    decimal
+              1    0   60    0   60    0  128    0
+    datetime (2013-09-10T10:24:13)
+    0000   0x8d 0x58 0x4a 0x6a 0x0d                   .XJj.
+    body (0)
+    HOUR BITS: [0, 1, 0] DAY BITS: [0, 1, 1]
+#### RECORD 52 BolusWizard 2013-09-10T10:36:04 head[2], body[15] op[0x5b]
+###### DECODED
+```python
+{'_byte[5]': 54,
+ '_byte[7]': 0,
+ 'bg': 0,
+ 'bg_target_high': 0,
+ 'bg_target_low': 23,
+ 'bolus_estimate': 0.0,
+ 'carb_input': 6,
+ 'carb_ratio': 0,
+ 'correction_estimate': 0.6,
+ 'food_estimate': 0.0,
+ 'sensitivity': 110,
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 20}
+```
+    op hex (2)
+    0000   0x5b 0x00                                  [.
+    decimal
+             91    0
+    datetime (2013-09-10T10:36:04)
+    0000   0x84 0x64 0x0a 0x6a 0x0d                   .d.j.
+    body (15)
+    hex
+    0000   0x06 0x90 0x00 0x6e 0x17 0x36 0x00 0x00    ...n.6..
+    0008   0x14 0x00 0x00 0x00 0x00 0x14 0x36         ......6
+    decimal
+              6  144    0  110   23   54    0    0
+             20    0    0    0    0   20   54
+    HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1]
+#### RECORD 53 UnabsorbedInsulinBolus unknown head[17], body[0] op[0x5c]
+###### DECODED
+```python
+[{'age': 18, 'amount': 1.8, 'curve': 4},
+ {'age': 48, 'amount': 1.0, 'curve': 4},
+ {'age': 98, 'amount': 1.2, 'curve': 4},
+ {'age': 108, 'amount': 1.9, 'curve': 4},
+ {'age': 62, 'amount': 6.3, 'curve': 20}]
+```
+    op hex (17)
+    0000   0x5c 0x11 0x48 0x12 0x04 0x28 0x30 0x04    \.H..(0.
+    0008   0x30 0x62 0x04 0x4c 0x6c 0x04 0xfc 0x3e    0b.Ll..>
+    0010   0x14                                       .
+    decimal
+             92   17   72   18    4   40   48    4
+             48   98    4   76  108    4  252   62
+             20
+    datetime (unknown)
+
+    body (0)
+
+#### RECORD 54 Bolus 2013-09-10T10:36:04 head[8], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 0.0, 'dual_component': '??', 'programmed': 2.0, 'type': '??'}
+```
+    op hex (8)
+    0000   0x01 0x00 0x14 0x00 0x14 0x00 0xb0 0x00    ........
+    decimal
+              1    0   20    0   20    0  176    0
+    datetime (2013-09-10T10:36:04)
+    0000   0x84 0x64 0x4a 0x6a 0x0d                   .dJj.
+    body (0)
+    HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1]
+#### RECORD 55 Ian0B 2013-09-10T10:38:00 head[3], body[0] op[0x0b]
+
+    op hex (3)
+    0000   0x0b 0x69 0x00                             .i.
+    decimal
+             11  105    0
+    datetime (2013-09-10T10:38:00)
+    0000   0x80 0x66 0x4a 0xaa 0x0d                   .fJ..
+    body (0)
+    HOUR BITS: [0, 1, 1] DAY BITS: [1, 0, 1]
+#### RECORD 56 Ian0B 2013-09-10T11:38:00 head[3], body[0] op[0x0b]
+
+    op hex (3)
+    0000   0x0b 0x68 0x00                             .h.
+    decimal
+             11  104    0
+    datetime (2013-09-10T11:38:00)
+    0000   0x80 0x66 0x4b 0xaa 0x0d                   .fK..
+    body (0)
+    HOUR BITS: [0, 1, 1] DAY BITS: [1, 0, 1]
+#### RECORD 57 CalBGForPH 2013-09-10T11:38:55 head[2], body[0] op[0x0a]
+###### DECODED
+```python
+{'amount': 48}
+```
+    op hex (2)
+    0000   0x0a 0x30                                  .0
+    decimal
+             10   48
+    datetime (2013-09-10T11:38:55)
+    0000   0xb7 0x66 0x4b 0x0a 0x0d                   .fK..
+    body (0)
+    HOUR BITS: [0, 1, 1]
+#### RECORD 58 BolusWizard 2013-09-10T12:23:26 head[2], body[15] op[0x5b]
+###### DECODED
+```python
+{'_byte[5]': 54,
+ '_byte[7]': 0,
+ 'bg': 0,
+ 'bg_target_high': 0,
+ 'bg_target_low': 23,
+ 'bolus_estimate': 0.0,
+ 'carb_input': 0,
+ 'carb_ratio': 0,
+ 'correction_estimate': 0.6,
+ 'food_estimate': 0.0,
+ 'sensitivity': 110,
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 0}
+```
+    op hex (2)
+    0000   0x5b 0x00                                  [.
+    decimal
+             91    0
+    datetime (2013-09-10T12:23:26)
+    0000   0x9a 0x57 0x0c 0x6a 0x0d                   .W.j.
+    body (15)
+    hex
+    0000   0x00 0x90 0x00 0x6e 0x17 0x36 0x00 0x00    ...n.6..
+    0008   0x00 0x00 0x00 0x00 0x00 0x00 0x36         ......6
+    decimal
+              0  144    0  110   23   54    0    0
+              0    0    0    0    0    0   54
+    HOUR BITS: [0, 1, 0] DAY BITS: [0, 1, 1]
+#### RECORD 59 UnabsorbedInsulinBolus unknown head[20], body[0] op[0x5c]
+###### DECODED
+```python
+[{'age': 115, 'amount': 0.5, 'curve': 4},
+ {'age': 125, 'amount': 1.8, 'curve': 4},
+ {'age': 155, 'amount': 1.0, 'curve': 4},
+ {'age': 205, 'amount': 1.2, 'curve': 4},
+ {'age': 215, 'amount': 1.9, 'curve': 4},
+ {'age': 169, 'amount': 6.3, 'curve': 20}]
+```
+    op hex (20)
+    0000   0x5c 0x14 0x14 0x73 0x04 0x48 0x7d 0x04    \..s.H}.
+    0008   0x28 0x9b 0x04 0x30 0xcd 0x04 0x4c 0xd7    (..0..L.
+    0010   0x04 0xfc 0xa9 0x14                        ....
+    decimal
+             92   20   20  115    4   72  125    4
+             40  155    4   48  205    4   76  215
+              4  252  169   20
+    datetime (unknown)
+
+    body (0)
+
+#### RECORD 60 BolusWizard 2013-09-10T12:23:35 head[2], body[15] op[0x5b]
+###### DECODED
+```python
+{'_byte[5]': 54,
+ '_byte[7]': 0,
+ 'bg': 0,
+ 'bg_target_high': 0,
+ 'bg_target_low': 23,
+ 'bolus_estimate': 0.0,
+ 'carb_input': 36,
+ 'carb_ratio': 0,
+ 'correction_estimate': 0.6,
+ 'food_estimate': 0.0,
+ 'sensitivity': 110,
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 128}
+```
+    op hex (2)
+    0000   0x5b 0x00                                  [.
+    decimal
+             91    0
+    datetime (2013-09-10T12:23:35)
+    0000   0xa3 0x57 0x0c 0x6a 0x0d                   .W.j.
+    body (15)
+    hex
+    0000   0x24 0x90 0x00 0x6e 0x17 0x36 0x00 0x00    $..n.6..
+    0008   0x80 0x00 0x00 0x00 0x00 0x80 0x36         ......6
+    decimal
+             36  144    0  110   23   54    0    0
+            128    0    0    0    0  128   54
+    HOUR BITS: [0, 1, 0] DAY BITS: [0, 1, 1]
+#### RECORD 61 UnabsorbedInsulinBolus unknown head[20], body[0] op[0x5c]
+###### DECODED
+```python
+[{'age': 115, 'amount': 0.5, 'curve': 4},
+ {'age': 125, 'amount': 1.8, 'curve': 4},
+ {'age': 155, 'amount': 1.0, 'curve': 4},
+ {'age': 205, 'amount': 1.2, 'curve': 4},
+ {'age': 215, 'amount': 1.9, 'curve': 4},
+ {'age': 169, 'amount': 6.3, 'curve': 20}]
+```
+    op hex (20)
+    0000   0x5c 0x14 0x14 0x73 0x04 0x48 0x7d 0x04    \..s.H}.
+    0008   0x28 0x9b 0x04 0x30 0xcd 0x04 0x4c 0xd7    (..0..L.
+    0010   0x04 0xfc 0xa9 0x14                        ....
+    decimal
+             92   20   20  115    4   72  125    4
+             40  155    4   48  205    4   76  215
+              4  252  169   20
+    datetime (unknown)
+
+    body (0)
+
+#### RECORD 62 Ian69 2013-09-10T12:23:36 head[2], body[8] op[0x69]
 
     op hex (2)
-    0000   0x00 0x18                                  ..
+    0000   0x69 0x0b                                  i.
     decimal
-              0   24
-    datetime ((2010, 2, 8, 24, 42, 0))
-    0000   0x00 0xaa 0x78 0x48 0x6a                   ..xHj
-    body (0)
-    HOUR BITS: [1, 0, 1] DAY BITS: [0, 1, 0] YEAR BITS: [0, 1, 1, 0]
-#### RECORD 42 Base (2010, 2, 9, 30, 0, 2) head[2], body[0] op[0x0d]
+            105   11
+    datetime (2013-09-10T12:23:36)
+    0000   0xa4 0x57 0x0c 0x0a 0x0d                   .W...
+    body (8)
+    hex
+    0000   0x0e 0x1e 0x01 0x00 0x80 0x00 0x80 0x00    ........
+    decimal
+             14   30    1    0  128    0  128    0
+    HOUR BITS: [0, 1, 0]
+#### RECORD 63 Base (2013, 9, 10, 12, 23, 36) head[2], body[0] op[0x40]
 
     op hex (2)
-    0000   0x0d 0x7b                                  .{
+    0000   0x40 0x00                                  @.
     decimal
-             13  123
-    datetime ((2010, 2, 9, 30, 0, 2))
-    0000   0x02 0x80 0x5e 0x09 0x0a                   ..^..
+             64    0
+    datetime ((2013, 9, 10, 12, 23, 36))
+    0000   0xa4 0x57 0x4c 0x6a 0x0d                   .WLj.
     body (0)
-    HOUR BITS: [1, 0, 0]
-#### RECORD 43 Base (2002, 0, 0, 27, 0, 30) head[2], body[0] op[0x0d]
+    HOUR BITS: [0, 1, 0] DAY BITS: [0, 1, 1]
+#### RECORD 64 BolusWizard 2013-09-10T12:41:19 head[2], body[15] op[0x5b]
+###### DECODED
+```python
+{'_byte[5]': 54,
+ '_byte[7]': 0,
+ 'bg': 0,
+ 'bg_target_high': 0,
+ 'bg_target_low': 23,
+ 'bolus_estimate': 0.0,
+ 'carb_input': 7,
+ 'carb_ratio': 0,
+ 'correction_estimate': 0.6,
+ 'food_estimate': 0.0,
+ 'sensitivity': 110,
+ 'unabsorbed_insulin_count': '??',
+ 'unabsorbed_insulin_total': 0.0,
+ 'unknown_byte[10]': 0,
+ 'unknown_byte[8]': 24}
+```
+    op hex (2)
+    0000   0x5b 0x00                                  [.
+    decimal
+             91    0
+    datetime (2013-09-10T12:41:19)
+    0000   0x93 0x69 0x0c 0x6a 0x0d                   .i.j.
+    body (15)
+    hex
+    0000   0x07 0x90 0x00 0x6e 0x17 0x36 0x00 0x00    ...n.6..
+    0008   0x18 0x00 0x00 0x00 0x00 0x18 0x36         ......6
+    decimal
+              7  144    0  110   23   54    0    0
+             24    0    0    0    0   24   54
+    HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1]
+#### RECORD 65 UnabsorbedInsulinBolus unknown head[23], body[0] op[0x5c]
+###### DECODED
+```python
+[{'age': 23, 'amount': 3.2, 'curve': 4},
+ {'age': 133, 'amount': 0.5, 'curve': 4},
+ {'age': 143, 'amount': 1.8, 'curve': 4},
+ {'age': 173, 'amount': 1.0, 'curve': 4},
+ {'age': 223, 'amount': 1.2, 'curve': 4},
+ {'age': 233, 'amount': 1.9, 'curve': 4},
+ {'age': 187, 'amount': 6.3, 'curve': 20}]
+```
+    op hex (23)
+    0000   0x5c 0x17 0x80 0x17 0x04 0x14 0x85 0x04    \.......
+    0008   0x48 0x8f 0x04 0x28 0xad 0x04 0x30 0xdf    H..(..0.
+    0010   0x04 0x4c 0xe9 0x04 0xfc 0xbb 0x14         .L.....
+    decimal
+             92   23  128   23    4   20  133    4
+             72  143    4   40  173    4   48  223
+              4   76  233    4  252  187   20
+    datetime (unknown)
+
+    body (0)
+
+#### RECORD 66 Bolus 2013-09-10T12:41:19 head[8], body[0] op[0x01]
+###### DECODED
+```python
+{'amount': 0.0, 'dual_component': '??', 'programmed': 3.2, 'type': '??'}
+```
+    op hex (8)
+    0000   0x01 0x00 0x20 0x00 0x20 0x00 0xac 0x00    .. . ...
+    decimal
+              1    0   32    0   32    0  172    0
+    datetime (2013-09-10T12:41:19)
+    0000   0x93 0x69 0x4c 0x6a 0x0d                   .iLj.
+    body (0)
+    HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1]
+#### RECORD 67 Base unknown head[2], body[0] op[0x00]
 
     op hex (2)
-    0000   0x0d 0x13                                  ..
+    0000   0x00 0xc8                                  ..
     decimal
-             13   19
-    datetime ((2002, 0, 0, 27, 0, 30))
-    0000   0x1e 0x00 0x5b 0x00 0x92                   ..[..
+              0  200
+    datetime (unknown)
+    0000   0x48                                       H
     body (0)
-    YEAR BITS: [1, 0, 0, 1]
-#### RECORD 44 Base (2000, 4, 16, 12, 13, 42) head[2], body[0] op[0x71]
 
-    op hex (2)
-    0000   0x71 0x09                                  q.
-    decimal
-            113    9
-    datetime ((2000, 4, 16, 12, 13, 42))
-    0000   0x6a 0x0d 0x0c 0x90 0x00                   j....
-    body (0)
-    DAY BITS: [1, 0, 0]
-#### RECORD 45 Sara6E 2000-01-07T13:42:10 head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x17 0x36 0x00 0x00 0x28 0x00 0x00    n.6..(..
-    0008   0x00 0x00 0x28 0x36 0x5c 0x0b 0x30 0x33    ..(6\.03
-    0010   0x04 0x4c 0x3d 0x04 0xfc 0x0f 0x14 0x01    .L=.....
-    0018   0x00 0x28 0x00 0x28 0x00 0x68 0x00 0x92    .(.(.h..
-    0020   0x71 0x49 0x6a 0x0d 0x0a 0x4b 0xa8 0x52    qIj..K.R
-    0028   0x4a 0x0a 0x0d 0x5b 0x4b 0xb1 0x52         J..[K.R
-    decimal
-            110   23   54    0    0   40    0    0
-              0    0   40   54   92   11   48   51
-              4   76   61    4  252   15   20    1
-              0   40    0   40    0  104    0  146
-            113   73  106   13   10   75  168   82
-             74   10   13   91   75  177   82
-    datetime (2000-01-07T13:42:10)
-    0000   0x0a 0x6a 0x0d 0x07 0x90                   .j...
-    body (0)
-    HOUR BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 1]
-#### RECORD 46 Base (2008, 0, 0, 4, 54, 23) head[2], body[0] op[0x00]
-
-    op hex (2)
-    0000   0x00 0x6e                                  .n
-    decimal
-              0  110
-    datetime ((2008, 0, 0, 4, 54, 23))
-    0000   0x17 0x36 0x24 0x00 0x18                   .6$..
-    body (0)
-    HOUR BITS: [0, 0, 1] YEAR BITS: [0, 0, 0, 1]
-`end logs/ReadHistoryData-page-1.data: 47 records`
+`end logs/ReadHistoryData-page-1.data: 68 records`

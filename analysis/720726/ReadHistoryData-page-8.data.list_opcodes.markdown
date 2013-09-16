@@ -1,5 +1,5 @@
 ## START logs/ReadHistoryData-page-8.data
-#### STOPPING DOUBLE NULLS @ 16, found 1 nulls
+#### STOPPING DOUBLE NULLS @ 17, found 0 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
               0    0
@@ -13,27 +13,18 @@ reading more to debug 0x00
              94    9    2   13   19   30    0  123
               3  128   64   13    2   13   26   38
               0  105   11  128   94   14    2   13
-#### RECORD 0 Base (2013, 9, 2, 9, 23, 26) head[2], body[0] op[0x69]
+#### RECORD 0 Ian69 2013-09-02T09:23:26 head[2], body[8] op[0x69]
 
     op hex (2)
     0000   0x69 0x08                                  i.
     decimal
             105    8
-    datetime ((2013, 9, 2, 9, 23, 26))
+    datetime (2013-09-02T09:23:26)
     0000   0x9a 0x57 0x09 0x02 0x0d                   .W...
-    body (0)
-    HOUR BITS: [0, 1, 0]
-#### RECORD 1 CalBGForPH (2000, 0, 0, 0, 0, 1) head[2], body[0] op[0x0a]
-###### DECODED
-```python
-{'amount': 30}
-```
-    op hex (2)
-    0000   0x0a 0x1e                                  ..
+    body (8)
+    hex
+    0000   0x0a 0x1e 0x01 0x00 0x60 0x00 0x60 0x00    ....`.`.
     decimal
-             10   30
-    datetime ((2000, 0, 0, 0, 0, 1))
-    0000   0x01 0x00 0x60 0x00 0x60                   ..`.`
-    body (0)
-    YEAR BITS: [0, 1, 1, 0]
-`end logs/ReadHistoryData-page-8.data: 2 records`
+             10   30    1    0   96    0   96    0
+    HOUR BITS: [0, 1, 0]
+`end logs/ReadHistoryData-page-8.data: 1 records`

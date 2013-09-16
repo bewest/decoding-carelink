@@ -1,18 +1,18 @@
 ## START logs/ReadHistoryData-page-21.data
-#### STOPPING DOUBLE NULLS @ 193, found 1 nulls
+#### STOPPING DOUBLE NULLS @ 144, found 0 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
               0    0
 ##### DEBUG HEX
-    0000   0x2c 0x85 0x23 0x29 0x0f 0x0d 0x7b 0x02    ,.#)..{.
-    0008   0xb6 0x23 0x09 0x0f 0x0d 0x13 0x1e 0x00    .#......
-    0010   0x03 0x00 0x09 0x00 0x09 0x93 0x23 0x09    ......#.
-    0018   0x0f 0x0d 0x0a 0xde 0xb5 0x02 0x2c 0x6f    ......,o
+    0000   0xb4 0x00 0x00 0x00 0x00 0xb4 0x36 0x69    ......6i
+    0008   0x08 0x81 0x35 0x08 0x0f 0x0d 0x0a 0x1e    ..5.....
+    0010   0x01 0x00 0xb4 0x00 0xb4 0x00 0x00 0x00    ........
+    0018   0x81 0x35 0x48 0x6f 0x0d 0x7b 0x02 0x80    .5Ho.{..
 ##### DEBUG DECIMAL
-             44  133   35   41   15   13  123    2
-            182   35    9   15   13   19   30    0
-              3    0    9    0    9  147   35    9
-             15   13   10  222  181    2   44  111
+            180    0    0    0    0  180   54  105
+              8  129   53    8   15   13   10   30
+              1    0  180    0  180    0    0    0
+            129   53   72  111   13  123    2  128
 #### RECORD 0 Bolus 2013-08-14T22:00:08 head[8], body[0] op[0x01]
 ###### DECODED
 ```python
@@ -93,81 +93,58 @@ reading more to debug 0x00
     0000   0xb3 0x05 0xe0 0x6f 0x0d                   ...o.
     body (0)
     DAY BITS: [0, 1, 1]
-#### RECORD 6 Base (2008, 8, 25, 22, 10, 22) head[2], body[0] op[0x69]
+#### RECORD 6 Ian69 2008-08-25T22:10:22 head[2], body[8] op[0x69]
 
     op hex (2)
     0000   0x69 0x69                                  ii
     decimal
             105  105
-    datetime ((2008, 8, 25, 22, 10, 22))
+    datetime (2008-08-25T22:10:22)
     0000   0x96 0x0a 0x56 0xb9 0x08                   ..V..
-    body (0)
-    DAY BITS: [1, 0, 1]
-#### RECORD 7 Rewind (2008, 0, 25, 10, 63, 13) head[2], body[0] op[0x21]
-
-    op hex (2)
-    0000   0x21 0x6f                                  !o
-    decimal
-             33  111
-    datetime ((2008, 0, 25, 10, 63, 13))
-    0000   0x0d 0x3f 0x0a 0xb9 0x08                   .?...
-    body (0)
-    HOUR BITS: [0, 0, 1] DAY BITS: [1, 0, 1]
-#### RECORD 8 Base (2011, 1, 22, 9, 41, 13) head[2], body[0] op[0xc1]
-
-    op hex (2)
-    0000   0xc1 0x6f                                  .o
-    decimal
-            193  111
-    datetime ((2011, 1, 22, 9, 41, 13))
-    0000   0x0d 0x69 0x69 0x96 0x7b                   .ii.{
-    body (0)
-    HOUR BITS: [0, 1, 1] DAY BITS: [1, 0, 0] YEAR BITS: [0, 1, 1, 1]
-#### RECORD 9 Bolus 2005-01-01T00:27:00 head[8], body[0] op[0x01]
-###### DECODED
-```python
-{'amount': 12.8, 'dual_component': '??', 'programmed': 0.0, 'type': '??'}
-```
-    op hex (8)
-    0000   0x01 0x80 0x00 0x04 0x0f 0x0d 0x08 0x2e    ........
-    decimal
-              1  128    0    4   15   13    8   46
-    datetime (2005-01-01T00:27:00)
-    0000   0x00 0x5b 0x00 0x81 0x35                   .[..5
-    body (0)
-    HOUR BITS: [0, 1, 0] DAY BITS: [1, 0, 0] YEAR BITS: [0, 0, 1, 1]
-#### RECORD 10 ChangeBasalProfile (2014, 0, 0, 16, 50, 13) head[2], body[44] op[0x08]
-
-    op hex (2)
-    0000   0x08 0x6f                                  .o
-    decimal
-              8  111
-    datetime ((2014, 0, 0, 16, 50, 13))
-    0000   0x0d 0x32 0x90 0x00 0x6e                   .2..n
-    body (44)
+    body (8)
     hex
-    0000   0x17 0x36 0x00 0x00 0xb4 0x00 0x00 0x00    .6......
-    0008   0x00 0xb4 0x36 0x69 0x08 0x81 0x35 0x08    ..6i..5.
-    0010   0x0f 0x0d 0x0a 0x1e 0x01 0x00 0xb4 0x00    ........
-    0018   0xb4 0x00 0x00 0x00 0x81 0x35 0x48 0x6f    .....5Ho
-    0020   0x0d 0x7b 0x02 0x80 0x1e 0x09 0x0f 0x0d    .{......
-    0028   0x13 0x1e 0x00 0x21                        ...!
+    0000   0x21 0x6f 0x0d 0x3f 0x0a 0xb9 0x08 0xc1    !o.?....
     decimal
-             23   54    0    0  180    0    0    0
-              0  180   54  105    8  129   53    8
-             15   13   10   30    1    0  180    0
-            180    0    0    0  129   53   72  111
-             13  123    2  128   30    9   15   13
-             19   30    0   33
-    HOUR BITS: [0, 0, 1] YEAR BITS: [0, 1, 1, 0]
-#### RECORD 11 Base (2003, 0, 13, 15, 9, 31) head[2], body[0] op[0x00]
+             33  111   13   63   10  185    8  193
+    DAY BITS: [1, 0, 1]
+#### RECORD 7 Base (2001, 5, 27, 22, 41, 41) head[2], body[0] op[0x6f]
 
     op hex (2)
-    0000   0x00 0x87                                  ..
+    0000   0x6f 0x0d                                  o.
     decimal
-              0  135
-    datetime ((2003, 0, 13, 15, 9, 31))
-    0000   0x1f 0x09 0x0f 0x0d 0x03                   .....
+            111   13
+    datetime ((2001, 5, 27, 22, 41, 41))
+    0000   0x69 0x69 0x96 0x7b 0x01                   ii.{.
     body (0)
+    HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1]
+#### RECORD 8 Base (2014, 0, 8, 13, 15, 4) head[2], body[0] op[0x80]
 
-`end logs/ReadHistoryData-page-21.data: 12 records`
+    op hex (2)
+    0000   0x80 0x00                                  ..
+    decimal
+            128    0
+    datetime ((2014, 0, 8, 13, 15, 4))
+    0000   0x04 0x0f 0x0d 0x08 0x2e                   .....
+    body (0)
+    YEAR BITS: [0, 0, 1, 0]
+#### RECORD 9 Base (2015, 2, 8, 21, 1, 0) head[2], body[0] op[0x00]
+
+    op hex (2)
+    0000   0x00 0x5b                                  .[
+    decimal
+              0   91
+    datetime ((2015, 2, 8, 21, 1, 0))
+    0000   0x00 0x81 0x35 0x08 0x6f                   ..5.o
+    body (0)
+    HOUR BITS: [1, 0, 0] YEAR BITS: [0, 1, 1, 0]
+#### RECORD 10 Base (2006, 8, 23, 14, 0, 16) head[2], body[0] op[0x0d]
+
+    op hex (2)
+    0000   0x0d 0x32                                  .2
+    decimal
+             13   50
+    datetime ((2006, 8, 23, 14, 0, 16))
+    0000   0x90 0x00 0x6e 0x17 0x36                   ..n.6
+    body (0)
+    YEAR BITS: [0, 0, 1, 1]
+`end logs/ReadHistoryData-page-21.data: 11 records`
