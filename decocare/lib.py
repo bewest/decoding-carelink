@@ -37,6 +37,7 @@ True
 """
 
 from pprint import pformat
+from datetime import datetime
 
 import dateutil.parser
 
@@ -47,6 +48,14 @@ def _fmt_txt( bytez ):
   return ''.join( [ chr( x ) if 0x20 <= x < 0x7F else '.' \
                     for x in bytez ] )
 
+
+class Timer(object):
+  def __init__(self):
+    self.begin = datetime.now( )
+  def millis(self):
+    dt = datetime.now() - self.begin
+    ms = (dt.days * 24 * 60 * 60 + dt.seconds) * 1000 + dt.microseconds / 1000.0
+    return ms
 
 class parse:
   @staticmethod

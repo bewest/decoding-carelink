@@ -4,12 +4,15 @@ from binascii import hexlify
 from datetime import datetime
 from pprint import pformat
 
-import lib
-from history import *
+import json
+import difflib
+
+from times import *
+from bolus import *
 
 # I don't know where else to put this.
 """
-    # 
+    #
     ( bytearray([ 0x07, 0x00 ])
     + bytearray([ ])
     + bytearray([ ])),
@@ -134,7 +137,7 @@ _midnights = {
     # record 2 (2012, 0, 13, 22, 4, 0)
     # 9/14/12 00:00:00,31.2,ResultDailyTotal,"AMOUNT=31.2,
     # CONCENTRATION=null"
-    # 
+    #
     ( bytearray([ 0x07, 0x00 ])
     + bytearray([ 0x00, 0x04, 0x96, 0x8d, 0x8c, ])
     + bytearray([ 0x6d, 0x8d, 0x8c, 0x05, 0x00, 0x80, 0x68, 0x97,
@@ -212,7 +215,7 @@ def _test_decode_bolus( ):
   '2012-04-10T12:12:00'
 
   ## day,month is wrong, time H:M:S is correct
-  # expected: 
+  # expected:
   >>> parse_date( bytearray( _bewest_dates['page-19'][2] ) ).isoformat( )
   '2012-02-08T03:11:12'
 
@@ -242,7 +245,7 @@ def _test_decode_bolus( ):
   0x00
   0xaa 0xf7 0x40 0x0c 0x0c # expected  - page-19[6]
 
-  0x0a 0x0c 
+  0x0a 0x0c
   0x8b 0xc3 0x28 0x0c 0x8c # page-19[3]
 
 
@@ -257,19 +260,23 @@ def _test_decode_bolus( ):
 395,11/12/12,00:55:42,11/12/12 00:55:42,Normal 1.1,1.1,BolusNormal
   "AMOUNT=1.1, CONCENTRATION=null, PROGRAMMED_AMOUNT=1.1,
   ACTION_REQUESTOR=pump, ENABLE=true, IS_DUAL_COMPONENT=false,
-  UNABSORBED_INSULIN_TOTAL=null",9942920032,51974238,2086,Paradigm 522
+  UNABSORBED_INSULIN_TOTAL=null"
+    9942920032,51974238,2086,Paradigm 522
 
 396,11/12/12,00:56:17,11/12/12 00:56:17 JournalEntryPumpLowReservoir
-  "AMOUNT=20, ACTION_REQUESTOR=pump",9942920033,51974238,2087,Paradigm 522
+  "AMOUNT=20, ACTION_REQUESTOR=pump"
+    9942920033,51974238,2087,Paradigm 522
 
 
 397,11/12/12,08:03:11,11/12/12 08:03:11 268 CalBGForPH
-  "AMOUNT=268, ACTION_REQUESTOR=pump",9942920031,51974238,2085,Paradigm 522
+  "AMOUNT=268, ACTION_REQUESTOR=pump"
+    9942920031,51974238,2085,Paradigm 522
 
 398,11/12/12,08:03:13,11/12/12 08:03:13 UnabsorbedInsulin
   "BOLUS_ESTIMATE_DATUM=9942920029, INDEX=0, AMOUNT=1.1, RECORD_AGE=429,
   INSULIN_TYPE=null,
-  INSULIN_ACTION_CURVE=240",9942920030,51974238,2084,Paradigm 522
+  INSULIN_ACTION_CURVE=240"
+    9942920030,51974238,2084,Paradigm 522
 
 399,11/12/12,08:03:13,11/12/12 08:03:13
   3.1,125,106,13,45,0,268,3.1,0,0.0
@@ -278,59 +285,22 @@ def _test_decode_bolus( ):
   INSULIN_SENSITIVITY=45, BG_TARGET_LOW=106, BG_TARGET_HIGH=125,
   BOLUS_ESTIMATE=3.1, CORRECTION_ESTIMATE=3.1, FOOD_ESTIMATE=0,
   UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=1,
-  ACTION_REQUESTOR=pump",9942920029,51974238,2083,Paradigm 522
+  ACTION_REQUESTOR=pump"
+    9942920029,51974238,2083,Paradigm 522
 
 400,11/12/12,08:03:13,11/12/12 08:03:13 Normal
   3.1,3.1 BolusNormal "AMOUNT=3.1, CONCENTRATION=null,
   PROGRAMMED_AMOUNT=3.1, ACTION_REQUESTOR=pump, ENABLE=true,
   IS_DUAL_COMPONENT=false,
-  UNABSORBED_INSULIN_TOTAL=null",9942920028,51974238,2082,Paradigm 522
+  UNABSORBED_INSULIN_TOTAL=null"
+    9942920028,51974238,2082,Paradigm 522
 
 401,11/12/12,08:50:31,11/12/12 08:50:31 JournalEntryPumpLowReservoir
-  "AMOUNT=10, ACTION_REQUESTOR=pump",9942920027,51974238,2081,Paradigm 522
+  "AMOUNT=10, ACTION_REQUESTOR=pump"
+    9942920027,51974238,2081,Paradigm 522
 
 """
 
-__test__ = {
-  'unmask': '''
-  These examples are fixed! Thanks ehwest, robg.
-  >>> unmask_date( bytearray( [ 0x93, 0xd4, 0x0e, 0x10, 0x0c ] ))
-  (2012, 11, 16, 14, 20, 19)
-
-  >>> unmask_date( bytearray( [ 0xa6, 0xeb, 0x0b, 0x10, 0x0c, ] ))
-  (2012, 11, 16, 11, 43, 38)
-
-  >>> unmask_date( bytearray( [ 0x95, 0xe8, 0x0e, 0x10, 0x0c ] ))
-  (2012, 11, 16, 14, 40, 21)
-
-
-  >>> unmask_date( bytearray( [ 0x80, 0xcf, 0x30, 0x10, 0x0c, ] ))
-  (2012, 11, 16, 16, 15, 0)
-
-
-  >>> unmask_date( bytearray( [ 0xa3, 0xcf, 0x30, 0x10, 0x0c, ] ))
-  (2012, 11, 16, 16, 15, 35)
-
-''',
-
-  'encode_monthbyte': '''
-  >>> encode_monthbyte(month=1) == bytearray(b'\x12^')
-  True
-
-  >>> encode_monthbyte(month=2) == bytearray(b'\x12\x9e')
-  True
-
-  >>> encode_monthbyte(month=3) ==  bytearray(b'\x12\xde')
-  True
-
-  >>> encode_monthbyte(month=10, minute=0, sec=0) == bytearray(b'\x80\x80')
-  True
-
-  >>> encode_monthbyte(month=10, minute=0, sec=24) == bytearray(b'\x98\x80')
-  True
-''',
-
-}
 
 
 _bad_days = [
@@ -393,7 +363,8 @@ _wizards = [
   # INSULIN_SENSITIVITY=45, BG_TARGET_LOW=106, BG_TARGET_HIGH=125,
   # BOLUS_ESTIMATE=5.9, CORRECTION_ESTIMATE=-0.7, FOOD_ESTIMATE=6.6,
   # UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=0,
-  # ACTION_REQUESTOR=pump",9942918055,51974238,109,Paradigm 522
+  # ACTION_REQUESTOR=pump"
+  # 9942918055,51974238,109,Paradigm 522
   bytearray([ 0x5b, 0x4b,
               0x0f, 0x72, 0x15, 0x13, 0x0d,
               0x57, 0x50, 0x0d, 0x2d, 0x6a, 0xf9, 0x42, 0xf0,
@@ -405,7 +376,8 @@ _wizards = [
   # INSULIN_SENSITIVITY=45, BG_TARGET_LOW=106, BG_TARGET_HIGH=125,
   # BOLUS_ESTIMATE=6.7, CORRECTION_ESTIMATE=-0.5, FOOD_ESTIMATE=7.2,
   # UNABSORBED_INSULIN_TOTAL=1, UNABSORBED_INSULIN_COUNT=8,
-  # ACTION_REQUESTOR=pump",9942918140,51974238,194,Paradigm 522
+  # ACTION_REQUESTOR=pump"
+  #  9942918140,51974238,194,Paradigm 522
   bytearray([ 0x5b, 0x53,
               0x00, 0x64, 0x16, 0x0e, 0x0d,
               0x5e, 0x50, 0x0d, 0x2d, 0x6a, 0xfb, 0x48, 0xf0,
@@ -467,8 +439,8 @@ _bolus = [
   # 21:50:15,Dual/Normal,2.6,2.6,BolusNormal,"AMOUNT=2.6,
   # CONCENTRATION=null, PROGRAMMED_AMOUNT=2.6, ACTION_REQUESTOR=pump,
   # ENABLE=true, IS_DUAL_COMPONENT=true,
-  # UNABSORBED_INSULIN_TOTAL=null",9942918054,51974238,108,Paradigm
-  # 522
+  # UNABSORBED_INSULIN_TOTAL=null"
+  #  9942918054,51974238,108,Paradigm 522
   bytearray([ 0x01, 0x1a, 0x1a, 0x00,
               0x0f, 0x72, 0x95, 0x13, 0x0d, ]),
 
@@ -476,8 +448,8 @@ _bolus = [
   # 15:57:16,Normal,1.7,1.7,BolusNormal,"AMOUNT=1.7,
   # CONCENTRATION=null, PROGRAMMED_AMOUNT=1.7, ACTION_REQUESTOR=pump,
   # ENABLE=true, IS_DUAL_COMPONENT=false,
-  # UNABSORBED_INSULIN_TOTAL=null",9942918131,51974238,185,Paradigm
-  # 522
+  # UNABSORBED_INSULIN_TOTAL=null"
+  #  9942918131,51974238,185,Paradigm 522
   bytearray([ 0x01, 0x11, 0x11, 0x00,
               0x10, 0x79, 0x4f, 0x0f, 0x0d, ]),
   # bytearray([ ]),
@@ -500,6 +472,298 @@ def _test_bolus( ):
   Bolus 2013-01-15T15:57:16 head[4], body[0] op[0x01]
 
   """
+
+class TestSaraBolus:
+  # model 722
+  hexdump = """
+  5b 67
+    a1 51 0e 04 0d
+    0d 50 00 78
+  3c 64 00 00 28 00 00 14 00 28 78
+  5c 08 44 79 c0 3c 4b d0
+  01 00 28 00 28 00 14 00
+    a1 51 4e 04 0d
+  0a fc
+    b4 54 2f 04 0d
+  5b fc
+    b7 54 0f 04 0d
+    00 50 00 78
+  3c 64 58 00 00 00 00 1c 00 3c 78
+  5c 0b 28 40 c0 44 b8 c0 3c 8a d0
+  01 00 3c 00 3c 00 1c 00
+    b7 54 4f 04 0d
+  """
+  csv_breakdown = """
+  9/4/13 14:17:33,,,,,,,Normal,1.0,1.0,,,,,,,,,,,,,,,,,,,,,BolusNormal
+    "AMOUNT=1
+      CONCENTRATION=null
+      PROGRAMMED_AMOUNT=1
+      ACTION_REQUESTOR=pump
+      ENABLE=true
+      IS_DUAL_COMPONENT=false
+      UNABSORBED_INSULIN_TOTAL=0.5"
+    11345487207,52554138,86,Paradigm Revel - 723
+
+  9/4/13 14:17:33,,,,,,,,,,,,,,,1.0,120,100,12,60,13,103,0,1,0.5,,,,,,BolusWizardBolusEstimate,"BG_INPUT=103
+      BG_UNITS=mg dl
+      CARB_INPUT=13
+      CARB_UNITS=grams
+      CARB_RATIO=12
+      INSULIN_SENSITIVITY=60
+      BG_TARGET_LOW=100
+      BG_TARGET_HIGH=120
+      BOLUS_ESTIMATE=1
+      CORRECTION_ESTIMATE=0
+      FOOD_ESTIMATE=1
+      UNABSORBED_INSULIN_TOTAL=0.5
+      UNABSORBED_INSULIN_COUNT=2
+      ACTION_REQUESTOR=pump"
+    11345487208,52554138,87,Paradigm Revel - 723
+
+  9/4/13 14:17:33,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=11345487208
+      INDEX=0
+      AMOUNT=1.7
+      RECORD_AGE=121
+      INSULIN_TYPE=null
+      INSULIN_ACTION_CURVE=180"
+    11345487209,52554138,88,Paradigm Revel - 723
+
+  9/4/13 14:17:33,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=11345487208
+      INDEX=1
+      AMOUNT=1.5
+      RECORD_AGE=331
+      INSULIN_TYPE=null
+      INSULIN_ACTION_CURVE=180"
+    11345487210,52554138,89,Paradigm Revel - 723
+
+  9/4/13 15:20:52,,,,,,,,,,,,,,,,,,,,,,,,,,252,,,,CalBGForPH,"AMOUNT=252, ACTION_REQUESTOR=pump"
+    11345487206,52554138,85,Paradigm Revel - 723
+
+  9/4/13 15:20:55,,,,,,,Normal,1.5,1.5,,,,,,,,,,,,,,,,,,,,,BolusNormal,"AMOUNT=1.5
+      CONCENTRATION=null
+      PROGRAMMED_AMOUNT=1.5
+      ACTION_REQUESTOR=pump
+      ENABLE=true
+      IS_DUAL_COMPONENT=false
+      UNABSORBED_INSULIN_TOTAL=0.7"
+    11345487201,52554138,80,Paradigm Revel - 723
+
+  9/4/13 15:20:55,,,,,,,,,,,,,,,1.5,120,100,12,60,0,252,2.2,0,0.7,,,,,,BolusWizardBolusEstimate,"BG_INPUT=252
+      BG_UNITS=mg dl
+      CARB_INPUT=0
+      CARB_UNITS=grams
+      CARB_RATIO=12
+      INSULIN_SENSITIVITY=60
+      BG_TARGET_LOW=100
+      BG_TARGET_HIGH=120
+      BOLUS_ESTIMATE=1.5
+      CORRECTION_ESTIMATE=2.2
+      FOOD_ESTIMATE=0
+      UNABSORBED_INSULIN_TOTAL=0.7
+      UNABSORBED_INSULIN_COUNT=3
+      ACTION_REQUESTOR=pump"
+    11345487202,52554138,81,Paradigm Revel - 723
+
+  9/4/13 15:20:55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=11345487202
+      INDEX=0
+      AMOUNT=1
+      RECORD_AGE=64
+      INSULIN_TYPE=null
+      INSULIN_ACTION_CURVE=180"
+    11345487203,52554138,82,Paradigm Revel - 723
+
+  9/4/13 15:20:55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=11345487202
+      INDEX=1
+      AMOUNT=1.7
+      RECORD_AGE=184
+      INSULIN_TYPE=null
+      INSULIN_ACTION_CURVE=180"
+    11345487204,52554138,83,Paradigm Revel - 723
+
+  9/4/13 15:20:55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=11345487202
+      INDEX=2
+      AMOUNT=1.5
+      RECORD_AGE=394
+      INSULIN_TYPE=null
+      INSULIN_ACTION_CURVE=180"
+    11345487205,52554138,84,Paradigm Revel - 723
+  9/4/13 16:11:57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorMissedDataTime,TIME=1800000,11345487185,52554138,64,Paradigm Revel - 723
+  """
+  bolus_1_ok = {
+      'bg': 103,
+      # 'BG_UNITS': 'mg dl'
+      'carb_input': 13,
+      #'CARB_UNITS': 'grams',
+      'carb_ratio': 12,
+      'sensitivity': 60,
+      'bg_target_low': 100,
+      'bg_target_high': 120,
+      'bolus_estimate': 1,
+      'correction_estimate': 0,
+      'food_estimate': 1,
+      'unabsorbed_insulin_total': 0.5,
+      'unabsorbed_insulin_count': 2,
+      #'action_requestor': 'pump'
+  }
+  bw_1_bytes = bytearray(''.join("""
+  5b 67
+    a1 51 0e 04 0d
+    0d 50 00 78
+    3c 64 00 00 28 00 00 14 00 28 78
+  """.strip( ).split( )).decode('hex'))
+  bw_2_bytes = bytearray(''.join("""
+  5b fc
+    b7 54 0f 04 0d
+    00 50 00 78
+    3c 64 58 00 00 00 00 1c 00 3c 78
+  """.strip( ).split( )).decode('hex'))
+
+  cal_bg_bytes = bytearray(''.join("""
+  0a fc
+    b4 54 2f 04 0d
+  """.strip( ).split( )).decode('hex'))
+  @classmethod
+  def test_cal_bg(klass):
+    """
+    >>> TestSaraBolus.test_cal_bg( )
+    CalBGForPH 2013-09-04T15:20:52 head[2], body[0] op[0x0a]
+    {
+      "amount": 252
+    }
+    """
+    # 9/4/13 15:20:52,,,,,,,,,,,,,,,,,,,,,,,,,,252,,,,CalBGForPH,"AMOUNT=252, ACTION_REQUESTOR=pump"
+    data = klass.cal_bg_bytes
+    rec = CalBGForPH(data[:2])
+    d = rec.parse(data)
+    print str(rec)
+    print json.dumps(d, indent=2)
+
+def dictlines(d):
+  items = d.items( )
+  items.sort( )
+  d = [ "%s: %s\n" % (k, v) for (k, v) in items ]
+  return d
+
+def unsolved_bolus_wizard( ):
+  """
+  >>> unsolved_bolus_wizard( )
+  """
+  # these byte sequences line up with these records:
+  bw_ok_1 = {
+      'bg_input': 103,
+      'carb_input': 13,
+      'carb_ratio': 12,
+      'insulin_sensitivity': 60,
+      'bg_target_low': 100,
+      'bg_target_high': 120,
+      'bolus_estimate': 1,
+      'correction_estimate': 0,
+      'food_estimate': 1,
+      'unabsorbed_insulin_total': 0.5,
+      'unabsorbed_insulin_count': 2,
+  }
+  bw_ok_2 = {
+      'bg_input': 252,
+      'carb_input': 0,
+      'carb_ratio': 12,
+      'insulin_sensitivity': 60,
+      'bg_target_low': 100,
+      'bg_target_high': 120,
+      'bolus_estimate': 1.5,
+      'correction_estimate': 2.2,
+      'food_estimate': 0,
+      'unabsorbed_insulin_total': 0.7,
+      'unabsorbed_insulin_count': 3,
+  }
+  found = decode_wizard(TestSaraBolus.bw_1_bytes)
+  if found != bw_ok_1:
+    print "FOUND:"
+    print json.dumps(found, indent=2)
+    print "EXPECTED:"
+    print json.dumps(bw_ok_1, indent=2)
+  found = decode_wizard(TestSaraBolus.bw_2_bytes)
+  if found != bw_ok_2:
+    print "FOUND:"
+    print json.dumps(found, indent=2)
+    print "EXPECTED:"
+    print json.dumps(bw_ok_2, indent=2)
+
+def decode_wizard(data):
+  """
+  BYTE
+  01:
+  02:
+  03:
+  04:
+  05:
+  06:
+  07:
+  08:
+  09:
+  10:
+  12:
+  13:
+  14:
+  15:
+  16:
+  17:
+  18:
+  19:
+  20:
+  21:
+  22:
+  """
+  head = data[:2]
+  date = data[2:7]
+  datetime = parse_date(date)
+  body = data[7:]
+  bg = lib.BangInt([ body[1] & 0x0f, head[1] ])
+  carb_input = int(body[0])
+  carb_ratio = int(body[2])
+  bg_target_low = int(body[5])
+  bg_target_high = int(body[3])
+  sensitivity = int(body[4])
+
+  print "BOLUS WIZARD", datetime.isoformat( )
+  wizard = { 'bg_input': bg, 'carb_input': carb_input,
+             'carb_ratio': carb_ratio,
+             'insulin_sensitivity': sensitivity,
+             'bg_target_low': bg_target_low,
+             'bg_target_high': bg_target_high,
+  }
+  return wizard
+
+class BW722(BolusWizard):
+  def decode(self):
+    self.parse_time( )
+    bg = lib.BangInt([ self.body[1] & 0x0f, self.head[1] ])
+    carb_input = int(self.body[0])
+    carb_ratio = int(self.body[2])
+    bg_target_low = int(self.body[5])
+    bg_target_high = int(self.body[3])
+    sensitivity = int(self.body[12])
+
+    # XXX: Most likely incorrect.
+    correction = ( twos_comp( self.body[7], 8 )
+                 + twos_comp( self.body[5] & 0x0f, 8 ) ) / 10.0
+    wizard = { 'bg': bg, 'carb_input': carb_input,
+               'carb_ratio': carb_ratio,
+               'sensitivity': sensitivity,
+               'bg_target_low': bg_target_low,
+               'bg_target_high': bg_target_high,
+               #'bolus_estimate': int(self.body[6])/10.0,
+               #'food_estimate': int(self.body[13])/10.0,
+               #'unabsorbed_insulin_total': int(self.body[9])/10.0,
+               #'unabsorbed_insulin_count': self.body[11],
+               'correction_estimate': correction,
+               # '??': '??',
+               # 'unabsorbed_insulin_total': int(self.body[9])/10.0,
+               # 'food_estimate': int(self.body[0]),
+             }
+    return wizard
+
+
+
 if __name__ == '__main__':
   import doctest
   doctest.testmod( )
