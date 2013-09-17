@@ -177,7 +177,9 @@ _confirmed.append(Sara6E)
 
 class old6c(InvalidRecord):
   opcode = 0x6c
-  head_length = 45
+  #head_length = 45
+  body_length = 38
+  # body_length = 34
 _confirmed.append(old6c)
 
 class hack1(InvalidRecord):
