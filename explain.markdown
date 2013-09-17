@@ -1,11 +1,11 @@
-# ./status-quo.sh ./carelink.ttyUSB0
+# ./status-quo.sh /dev/ttyUSB0 047006
 ## cat ./status-quo.sh
 ```bash
 ```
 ## cat logs/explain.log
 OUT
 ## Observations
-Thu Jun 20 20:49:15 PDT 2013
+Thu Aug 29 16:44:14 EDT 2013
 
 ## stick
 
@@ -14,49 +14,87 @@ Thu Jun 20 20:49:15 PDT 2013
 ## pump
 
 
-## downloaded: 1
+## downloaded: 0
 
 ```
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1664]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1088]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[192]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[256]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[384]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[448]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[832]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[0]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[2]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[2]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[2]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[2]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[2]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[2]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[2]:
 ```
 
 
-## commands session:finished: 17
+## commands session:finished: 34
 
 ```
 INFO:session:finished executing:ReadBasalTemp:size[64]:data:{'duration': 0, 'rate': 0.0}
-INFO:session:finished executing:ReadBatteryStatus:size[64]:data:{'status': 'normal', 'voltage': 1.45}
-INFO:session:finished executing:ReadContrast:size[64]:data:bytearray(b'\x02\x07\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-INFO:session:finished executing:ReadCurPageNumber:pages:0
-INFO:session:finished executing:ReadCurPageNumber:pages:15
-INFO:session:finished executing:ReadFirmwareVersion:size[64]:data:'VER 2.1A1.1'
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1664]:
+INFO:session:finished executing:ReadBatteryStatus:size[64]:data:{'status': 'normal', 'voltage': 1.41}
+INFO:session:finished executing:ReadContrast:size[64]:data:bytearray(b'\x08')
+INFO:session:finished executing:ReadCurPageNumber:pages:8
+INFO:session:finished executing:ReadFirmwareVersion:size[64]:data:'VER 1.3B1.1'
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1088]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[192]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[256]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[384]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[448]:
 INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[832]:
-INFO:session:finished executing:ReadPumpID:size[64]:data:'208850'
-INFO:session:finished executing:ReadPumpModel:size[64]:data:'515'
-INFO:session:finished executing:ReadRadioCtrlACL:size[64]:data:['123456', '213546', '821650']
-INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:158.9
-INFO:session:finished executing:ReadRTC:size[64]:data:'2013-6-20T20:53:22'
-INFO:session:finished executing:ReadSettings:size[64]:data:{'low_reservoir_warn_point': 20, 'keypad_lock_status': 0, 'maxBasal': 2, 'low_reservoir_warn_type': 0, 'insulinConcentration': 100, 'audio_bolus_enable': True, 'variable_bolus_enable': False, 'alarm': {'volume': 3, 'mode': 2}, 'rf_enable': True, 'block_enable': False, 'timeformat': 0, 'auto_off_duration_hrs': 0, 'audio_bolus_size': 2.0, 'selected_pattern': 2, 'patterns_enabled': True, 'maxBolus': 10.0, 'insulin_action_type': 5}
-INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 0.0, 'today': 15.2}
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[0]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[2]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[2]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[2]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[2]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[2]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[2]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[1]:
+INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[2]:
+INFO:session:finished executing:ReadPumpID:size[64]:data:'047006'
+INFO:session:finished executing:ReadPumpModel:size[64]:data:'512'
+INFO:session:finished executing:ReadRTC:size[64]:data:'2013-8-28T23:53:56'
+INFO:session:finished executing:ReadRadioCtrlACL:size[64]:data:['------', '------', '------']
+INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:91.2
+INFO:session:finished executing:ReadSettings:size[64]:data:bytearray(b'\x08')
+INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 0.2, 'today': 10.3}
 ```
 
-## howdy! pump runs appear to be OK
+howdy! pump runs were NOT OK
 
-
-## CRC errors found, caught, recovered: 4
+### Last send command
 
 ```
-4163:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
-4406:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
-5521:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
-6016:INFO:stick:XXX:IGNORE:BadCRC:returning empty message, sleep .100, avoid errors.
 ```
+### stats before traceback
 
+```
+```
+### Traceback
+
+```
+```
+* NO CRC ERROR FOUND
 * no nak found
-* SUCCESS, GOOD CLEAN RUN
+* NOT A CLEAN RUN
