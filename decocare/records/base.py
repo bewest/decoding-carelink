@@ -86,7 +86,9 @@ class Base(object):
       extra.append("DAY BITS: {}".format(str(day_bits)))
     if 1 in year_bits:
       extra.append("YEAR BITS: {}".format(str(year_bits)))
-    decoded = self.decode( )
+    decoded = None
+    if len(self.head + self.date + self.body) >= self.min_length( ):
+      decoded = self.decode( )
     decode_msg = ''
     if decoded is not None:
       decode_msg = '\n'.join([ '###### DECODED',
