@@ -145,9 +145,8 @@ _confirmed.append(Ian50)
 class Ian54(KnownRecord):
   opcode = 0x54
   body_length = 34 + 23
+  body_length = 57
 _confirmed.append(Ian54)
-
-
 
 class Ian0B(KnownRecord):
   opcode = 0x0B
@@ -184,7 +183,7 @@ _confirmed.append(old6c)
 
 class hack1(InvalidRecord):
   opcode = 0x6d
-  head_length = 46
+  head_length = 39
 
 _confirmed.append(hack1)
 _known = { }
