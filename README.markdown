@@ -175,34 +175,69 @@ therapy, and then send the data to their preferred auditing software.
 
 ## Tools
 
-#### hexlog2binary.sh
-Convert a hexdump from cl2.py into binary data.
-Used something like:
+#### `status-quo.sh`
 
-```bash
-function new_name ( ) { echo $1 | sed -e "s/hex/binary/g" | sed -e "s/log/data/g"; }
+`status-quo.sh </dev/ttyUSB0> <SERIAL>` runs several experiments, described below.
+Each experiment is saved in the `./logs` directory, which is tracked by git.
 
-bewest:~/src/decoding-carelink/new-years-day/rollover-month/stage-5$ for x in hex-*; do ../../../hexlog2binary.sh  $x $(new_name $x); done
-```
 
-#### list_opcodes.py
+##### `. bin/common`
+Source a bunch of helper functions, notably:
+
+##### `run_stick`_
+Runs `python decocare/stick.py /dev/ttyUSB0`
+and saves results in `logs/stick.log`.
+When run by `status-quo.sh`, it creates
+`./logs/baseline.stick.log` before continuing.
+At end of experiments, it records `./logs/postmortem.stick.log`
+
+##### `run_session`_
+Runs `python decocare/session.py /dev/ttyUSB0 <SERIAL>`
+and saves results in `logs/session.log`.
+
+##### `run_commands`_
+Runs `python decocare/commands.py /dev/ttyUSB0 <SERIAL>`
+and saves results in `logs/commands.log`.
+
+##### `run_download`_
+
+Runs `python decocare/download.py /dev/ttyUSB0 <SERIAL>`
+and saves results in `logs/download.log`.
+
+The download script is configured to save each page of historical data as a raw
+binary blob in the `./logs/` subdirectory like this:
+`./logs/ReadHistoryData-page-$x.data`.
+
+This script can take several minutes to run; it attempts to download
+all pages of data available.
+
+#### quick overview:
+
+`status-quo.sh` also tries to summarize what happened, saving a quick
+explanation of what happened in `logs/explain.log`.  The entire output
+is saved in `./status-quo.log`.
+
+#### `run_regress`
+After `. bin/common`, `export SERIAL=511888` with your serial number.
+
+Runs `python list_history.py` on each binary file found in `logs/`, saves
+results in `./analysis/<SERIAL>/...`.
+
+This is what I use to render the markdown files in analysis.
+Often, the diffs between runs help test theories.
+
+#### `list_history.py`
+`List_history.py [--larger] ./logs/ReadHistory....page-0.data`
+List/decode a page of history as markdown.
+
+#### `list_opcodes.py`
+`List_opcodes.py`
 List records found in binary data by looking for opcodes, and a
 regular data structure associated with that length.  Includes at least
 one variable stop length strength.
 
-#### list_dates.py
+#### `list_dates.py`
 List records found in binary data by looking for dates.
-
-#### cl2.py
-Download data from an insulin pump.
-[cl2.py src](https://github.com/bewest/insulaudit/blob/master/cl2.py)
-Working on a simpler version...
-
-Covers about a dozen opcodes, including downloading multiple "pages"
-of historical data from a pump.
-
-#### decoder.py
-Run a binary file through a rudimentary scapy model.
 
 #### usblyzer_filter.sh
 
