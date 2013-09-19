@@ -181,11 +181,51 @@ class old6c(InvalidRecord):
   # body_length = 34
 _confirmed.append(old6c)
 
-class hack1(InvalidRecord):
+class Model522ResultTotals(KnownRecord):
   opcode = 0x6d
-  head_length = 39
+  head_length = 1
+  body_length = 37
+  def parse_time(self):
+    mid = unmask_m_midnight(self.date)
+    try:
+      self.datetime = date = datetime(*mid)
+      return date
+    except ValueError, e:
+      raise
+      pass
+    return mid
+      
+    
+  def date_str(self):
+    result = 'unknown'
+    if self.datetime is not None:
+      result = self.datetime.isoformat( )
+    else:
+      if len(self.date) == 5:
+        result = "{}".format(unmask_m_midnight(self.date))
+    return result
 
-_confirmed.append(hack1)
+def unmask_m_midnight(data):
+  """
+  Extract date values from a series of bytes.
+  Always returns tuple given a bytearray of at least 3 bytes.
+
+  Returns 6-tuple of scalar values year, month, day, hours, minutes,
+  seconds.
+
+  """
+  data = data[:]
+  seconds = 0
+  minutes = 0
+  hours   = 0
+
+  day     = parse_seconds(data[0])
+  year    = parse_years(data[1])
+
+  month   = parse_months( data[0], data[2] )
+  return (year, month, day, hours, minutes, seconds)
+
+_confirmed.append(Model522ResultTotals)
 _known = { }
 
 _variant = { }
