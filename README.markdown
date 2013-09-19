@@ -227,11 +227,11 @@ This is what I use to render the markdown files in analysis.
 Often, the diffs between runs help test theories.
 
 #### `list_history.py`
-`List_history.py [--larger] ./logs/ReadHistory....page-0.data`
+`list_history.py [--larger] ./logs/ReadHistory....page-0.data`
 List/decode a page of history as markdown.
 
 #### `list_opcodes.py`
-`List_opcodes.py`
+`list_opcodes.py`
 List records found in binary data by looking for opcodes, and a
 regular data structure associated with that length.  Includes at least
 one variable stop length strength.
