@@ -1,0 +1,239 @@
++#### RECORD 0 Model522ResultTotals 2013-08-16T00:00:00 head[1], body[38] op[0x6d]
++
++    op hex (1)
++    0000   0x6d                                       m
++    decimal
++            109
++    datetime (2013-08-16T00:00:00)
++    0000   0x90 0x0d 0x05 0x00 0x78                   ....x
++    body (38)
++    hex
++    0000   0x5f 0x8e 0x03 0x00 0x00 0x04 0x94 0x03    _.......
++    0008   0x70 0x4b 0x01 0x24 0x19 0x00 0x60 0x01    pK.$..`.
++    0010   0x24 0x19 0x01 0x18 0x60 0x00 0x0c 0x04    $...`...
++    0018   0x00 0x00 0x00 0x03 0x02 0x01 0x00 0x00    ........
++    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
++    decimal
++             95  142    3    0    0    4  148    3
++            112   75    1   36   25    0   96    1
++             36   25    1   24   96    0   12    4
++              0    0    0    3    2    1    0    0
++             12    0  232    0    0    0
++    YEAR BITS: [0, 1, 1, 1]
+ #### RECORD 1 CalBGForPH 2013-08-17T03:01:14 head[2], body[0] op[0x0a]
+ ###### DECODED
+ ```python
+ {'amount': 219}
+ ```
+     op hex (2)
+     0000   0x0a 0xdb                                  ..
+     decimal
+              10  219
+     datetime (2013-08-17T03:01:14)
+     0000   0x8e 0x01 0x23 0x11 0x0d                   ..#..
+     body (0)
+ 
+ #### RECORD 2 BolusWizard 2013-08-17T03:01:23 head[2], body[13] op[0x5b]
+ ###### DECODED
+diff --git a/analysis/665455/ReadHistoryData-page-1.data.list_opcodes.markdown b/analysis/665455/ReadHistoryData-page-1.data.list_opcodes.markdown
+index 934354f..7d88ca8 100644
+--
++#### RECORD 0 Model522ResultTotals 2013-08-11T00:00:00 head[1], body[38] op[0x6d]
++
++    op hex (1)
++    0000   0x6d                                       m
++    decimal
++            109
++    datetime (2013-08-11T00:00:00)
++    0000   0x8b 0x0d 0x05 0x00 0x77                   ....w
++    body (38)
++    hex
++    0000   0x72 0x7c 0x03 0x00 0x00 0x04 0x48 0x03    r|....H.
++    0008   0x84 0x52 0x00 0xc4 0x12 0x00 0x40 0x00    .R....@.
++    0010   0xc4 0x12 0x00 0xc4 0x64 0x00 0x00 0x00    ....d...
++    0018   0x00 0x00 0x00 0x01 0x01 0x00 0x00 0x00    ........
++    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
++    decimal
++            114  124    3    0    0    4   72    3
++            132   82    0  196   18    0   64    0
++            196   18    0  196  100    0    0    0
++              0    0    0    1    1    0    0    0
++             12    0  232    0    0    0
++    YEAR BITS: [0, 1, 1, 1]
+ #### RECORD 1 Rewind 2013-08-12T10:06:02 head[2], body[0] op[0x21]
+ 
+     op hex (2)
+     0000   0x21 0x00                                  !.
+     decimal
+              33    0
+     datetime (2013-08-12T10:06:02)
+     0000   0x82 0x06 0x0a 0x0c 0x0d                   .....
+     body (0)
+ 
+ #### RECORD 2 Prime 2013-08-12T10:09:04 head[5], body[0] op[0x03]
+ ###### DECODED
+ ```python
+ {'amount': 2.1, 'fixed': 0.0, 'type': 'manual'}
+ ```
+diff --git a/analysis/665455/ReadHistoryData-page-16.data.list_opcodes.markdown b/analysis/665455/ReadHistoryData-page-16.data.list_opcodes.markdown
+index eaa49d5..700e047 100644
+--
++#### RECORD 0 Model522ResultTotals 2013-04-24T00:00:00 head[1], body[38] op[0x6d]
+ 
+-    op hex (39)
+-    0000   0x6d 0x58 0x8d 0x05 0x00 0x6c 0x6c 0x6c    mX...lll
+-    0008   0x01 0x00 0x00 0x04 0x04 0x03 0x74 0x56    ......tV
+-    0010   0x00 0x90 0x0e 0x00 0x30 0x00 0x90 0x0e    ....0...
+-    0018   0x00 0x90 0x64 0x00 0x00 0x00 0x00 0x00    ..d.....
+-    0020   0x00 0x01 0x01 0x00 0x00 0x00 0x0c         .......
+-    decimal
+-            109   88  141    5    0  108  108  108
+-              1    0    0    4    4    3  116   86
+-              0  144   14    0   48    0  144   14
+-              0  144  100    0    0    0    0    0
+-              0    1    1    0    0    0   12
+-    datetime ((2000, 3, 0, 0, 40, 0))
+-    0000   0x00 0xe8 0x00 0x00 0x00                   .....
+-    body (0)
+-    HOUR BITS: [1, 1, 1]
++    op hex (1)
++    0000   0x6d                                       m
++    decimal
++            109
++    datetime (2013-04-24T00:00:00)
++    0000   0x58 0x8d 0x05 0x00 0x6c                   X...l
++    body (38)
++    hex
++    0000   0x6c 0x6c 0x01 0x00 0x00 0x04 0x04 0x03    ll......
++    0008   0x74 0x56 0x00 0x90 0x0e 0x00 0x30 0x00    tV....0.
++    0010   0x90 0x0e 0x00 0x90 0x64 0x00 0x00 0x00    ....d...
++    0018   0x00 0x00 0x00 0x01 0x01 0x00 0x00 0x00    ........
++    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
++    decimal
++            108  108    1    0    0    4    4    3
++            116   86    0  144   14    0   48    0
++            144   14    0  144  100    0    0    0
++              0    0    0    1    1    0    0    0
++             12    0  232    0    0    0
++    HOUR BITS: [1, 0, 0] YEAR BITS: [0, 1, 1, 0]
+ #### RECORD 1 CalBGForPH 2013-05-25T21:01:02 head[2], body[0] op[0x0a]
+--
++#### RECORD 0 Model522ResultTotals 2013-04-19T00:00:00 head[1], body[38] op[0x6d]
+ 
+-    op hex (39)
+-    0000   0x6d 0x53 0x8d 0x05 0x10 0xa6 0x6a 0x12    mS....j.
+-    0008   0x05 0x00 0x00 0x05 0x34 0x03 0x78 0x43    ....4.xC
+-    0010   0x01 0xbc 0x21 0x00 0x62 0x01 0xbc 0x21    ..!.b..!
+-    0018   0x01 0x28 0x43 0x00 0x94 0x21 0x00 0x00    .(C..!..
+-    0020   0x00 0x04 0x01 0x02 0x01 0x00 0x0c         .......
+-    decimal
+-            109   83  141    5   16  166  106   18
+-              5    0    0    5   52    3  120   67
+-              1  188   33    0   98    1  188   33
+-              1   40   67    0  148   33    0    0
+-              0    4    1    2    1    0   12
+-    datetime ((2000, 3, 0, 0, 40, 0))
+-    0000   0x00 0xe8 0x00 0x00 0x00                   .....
+-    body (0)
+-    HOUR BITS: [1, 1, 1]
++    op hex (1)
++    0000   0x6d                                       m
++    decimal
++            109
++    datetime (2013-04-19T00:00:00)
++    0000   0x53 0x8d 0x05 0x10 0xa6                   S....
++    body (38)
++    hex
++    0000   0x6a 0x12 0x05 0x00 0x00 0x05 0x34 0x03    j.....4.
++    0008   0x78 0x43 0x01 0xbc 0x21 0x00 0x62 0x01    xC..!.b.
++    0010   0xbc 0x21 0x01 0x28 0x43 0x00 0x94 0x21    .!.(C..!
++    0018   0x00 0x00 0x00 0x04 0x01 0x02 0x01 0x00    ........
++    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
++    decimal
++            106   18    5    0    0    5   52    3
++            120   67    1  188   33    0   98    1
++            188   33    1   40   67    0  148   33
++              0    0    0    4    1    2    1    0
++             12    0  232    0    0    0
++    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 1, 0]
+ #### RECORD 1 CalBGForPH 2013-05-20T03:35:43 head[2], body[0] op[0x0a]
+--
++#### RECORD 0 Model522ResultTotals 2013-04-10T00:00:00 head[1], body[38] op[0x6d]
+ 
+-    op hex (39)
+-    0000   0x6d 0x4a 0x8d 0x05 0x00 0x71 0x40 0xba    mJ...q@.
+-    0008   0x05 0x00 0x00 0x04 0x42 0x03 0x72 0x51    ....B.rQ
+-    0010   0x00 0xd0 0x13 0x00 0x33 0x00 0xd0 0x13    ....3...
+-    0018   0x00 0x9c 0x4b 0x00 0x34 0x19 0x00 0x00    ..K.4...
+-    0020   0x00 0x02 0x01 0x01 0x00 0x00 0x0c         .......
+-    decimal
+-            109   74  141    5    0  113   64  186
+-              5    0    0    4   66    3  114   81
+-              0  208   19    0   51    0  208   19
+-              0  156   75    0   52   25    0    0
+-              0    2    1    1    0    0   12
+-    datetime ((2000, 3, 0, 0, 40, 0))
+-    0000   0x00 0xe8 0x00 0x00 0x00                   .....
+-    body (0)
+-    HOUR BITS: [1, 1, 1]
++    op hex (1)
++    0000   0x6d                                       m
++    decimal
++            109
++    datetime (2013-04-10T00:00:00)
++    0000   0x4a 0x8d 0x05 0x00 0x71                   J...q
++    body (38)
++    hex
++    0000   0x40 0xba 0x05 0x00 0x00 0x04 0x42 0x03    @.....B.
++    0008   0x72 0x51 0x00 0xd0 0x13 0x00 0x33 0x00    rQ....3.
++    0010   0xd0 0x13 0x00 0x9c 0x4b 0x00 0x34 0x19    ....K.4.
++    0018   0x00 0x00 0x00 0x02 0x01 0x01 0x00 0x00    ........
++    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
++    decimal
++             64  186    5    0    0    4   66    3
++            114   81    0  208   19    0   51    0
++            208   19    0  156   75    0   52   25
++              0    0    0    2    1    1    0    0
++             12    0  232    0    0    0
++    HOUR BITS: [1, 0, 0] YEAR BITS: [0, 1, 1, 1]
+ #### RECORD 1 CalBGForPH 2013-05-11T22:49:42 head[2], body[0] op[0x0a]
+--
++#### RECORD 0 Model522ResultTotals 2013-08-04T00:00:00 head[1], body[38] op[0x6d]
+ 
+-    op hex (39)
+-    0000   0x6d 0x84 0x0d 0x05 0x00 0x96 0x75 0xba    m.....u.
+-    0008   0x04 0x00 0x00 0x05 0x20 0x03 0x70 0x43    .... .pC
+-    0010   0x01 0xb0 0x21 0x00 0x73 0x01 0xb0 0x21    ..!.s..!
+-    0018   0x01 0x60 0x51 0x00 0x50 0x13 0x00 0x00    .`Q.P...
+-    0020   0x00 0x04 0x02 0x02 0x00 0x00 0x0c         .......
+-    decimal
+-            109  132   13    5    0  150  117  186
+-              4    0    0    5   32    3  112   67
+-              1  176   33    0  115    1  176   33
+-              1   96   81    0   80   19    0    0
+-              0    4    2    2    0    0   12
+-    datetime ((2000, 3, 0, 0, 40, 0))
+-    0000   0x00 0xe8 0x00 0x00 0x00                   .....
+-    body (0)
+-    HOUR BITS: [1, 1, 1]
++    op hex (1)
++    0000   0x6d                                       m
++    decimal
++            109
++    datetime (2013-08-04T00:00:00)
++    0000   0x84 0x0d 0x05 0x00 0x96                   .....
++    body (38)
++    hex
++    0000   0x75 0xba 0x04 0x00 0x00 0x05 0x20 0x03    u..... .
++    0008   0x70 0x43 0x01 0xb0 0x21 0x00 0x73 0x01    pC..!.s.
++    0010   0xb0 0x21 0x01 0x60 0x51 0x00 0x50 0x13    .!.`Q.P.
++    0018   0x00 0x00 0x00 0x04 0x02 0x02 0x00 0x00    ........
++    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
++    decimal
++            117  186    4    0    0    5   32    3
++            112   67    1  176   33    0  115    1
++            176   33    1   96   81    0   80   19
++              0    0    0    4    2    2    0    0
++             12    0  232    0    0    0
++    YEAR BITS: [1, 0, 0, 1]
+ #### RECORD 1 CalBGForPH 2013-08-05T09:20:35 head[2], body[0] op[0x0a]
