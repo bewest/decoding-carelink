@@ -1420,10 +1420,7 @@
     body (0)
 
 #### RECORD 77 LowReservoir unknown head[2], body[0] op[0x34]
-###### DECODED
-```python
-{'amount': 20.0}
-```
+
     op hex (2)
     0000   0x34 0xc8                                  4.
     decimal

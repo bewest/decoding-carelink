@@ -500,13 +500,14 @@
 
     body (0)
 
-Traceback (most recent call last):
-  File "list_history.py", line 105, in <module>
-    main( )
-  File "list_history.py", line 94, in main
-    print record.pformat(prefix)
-  File "/home/bewest/src/decoding-carelink/decocare/records/base.py", line 89, in pformat
-    decoded = self.decode( )
-  File "/home/bewest/src/decoding-carelink/decocare/records/bolus.py", line 27, in decode
-    dose = { 'amount': self.head[1]/10.0,
-IndexError: bytearray index out of range
+#### RECORD 30 Bolus unknown head[1], body[0] op[0x01]
+
+    op hex (1)
+    0000   0x01                                       .
+    decimal
+              1
+    datetime (unknown)
+
+    body (0)
+
+`end logs/ReadHistoryData-page-24.data: 31 records`

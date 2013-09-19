@@ -829,13 +829,14 @@
     0000   0x5d 0x1c 0x4f 0x1e 0x0d                   ].O..
     body (0)
 
-Traceback (most recent call last):
-  File "list_history.py", line 105, in <module>
-    main( )
-  File "list_history.py", line 94, in main
-    print record.pformat(prefix)
-  File "/home/bewest/src/decoding-carelink/decocare/records/base.py", line 89, in pformat
-    decoded = self.decode( )
-  File "/home/bewest/src/decoding-carelink/decocare/records/bolus.py", line 184, in decode
-    year_bits = extra_year_bits(self.date[4])
-IndexError: bytearray index out of range
+#### RECORD 45 CalBGForPH unknown head[2], body[0] op[0x0a]
+
+    op hex (2)
+    0000   0x0a 0xcb                                  ..
+    decimal
+             10  203
+    datetime (unknown)
+
+    body (0)
+
+`end logs/ReadHistoryData-page-22.data: 46 records`
