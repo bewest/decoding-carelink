@@ -346,10 +346,11 @@ function print_pretty_csv( ) {
 }
 
 TOOL=list_history.py
+TOOL_ARGS=""
 
 function opcodes ( ) {
   x=${1}
-  python $TOOL $x 2>&1
+  python $TOOL $TOOL_ARGS $x 2>&1
 
 }
 
@@ -360,6 +361,10 @@ function run_regress ( ) {
     opcodes $x | tee analysis/${SERIAL}/$(basename $x).list_opcodes.markdown
   done
 
+}
+
+function set_tool_args ( ) {
+  export TOOL_ARGS=$1
 }
 
 function find_missing_for ( ) {
