@@ -356,7 +356,9 @@ function opcodes ( ) {
 
 function run_regress ( ) {
   mkdir -p analysis/${SERIAL}
-  for x in logs/ReadHistoryData-page-*.data ; do
+  in_prefix=${1-'logs'}
+  pages=${2-'ReadHistoryData-page-*.data'}
+  for x in ${in_prefix}/${pages}; do
     echo $x
     opcodes $x | tee analysis/${SERIAL}/$(basename $x).list_opcodes.markdown
   done

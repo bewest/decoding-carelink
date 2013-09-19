@@ -1,4 +1,4 @@
-## START logs/ReadHistoryData-page-19.data
+## START analysis/bewest-pump/fall-2013//ReadHistoryData-page-19.data
 #### RECORD 0 Model522ResultTotals 2013-04-10T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
@@ -1348,4 +1348,4 @@
 
     body (0)
 
-`end logs/ReadHistoryData-page-19.data: 79 records`
+`end analysis/bewest-pump/fall-2013//ReadHistoryData-page-19.data: 79 records`

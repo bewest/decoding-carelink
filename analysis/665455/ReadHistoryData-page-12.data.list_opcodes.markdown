@@ -1,4 +1,4 @@
-## START logs/ReadHistoryData-page-12.data
+## START analysis/bewest-pump/fall-2013//ReadHistoryData-page-12.data
 #### STOPPING DOUBLE NULLS @ 1014, found 8 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
@@ -1358,4 +1358,4 @@ reading more to debug 0x00
     0000   0x64 0xa7 0x30 0x0f 0x0d                   d.0..
     body (0)
     HOUR BITS: [1, 0, 1]
-`end logs/ReadHistoryData-page-12.data: 81 records`
+`end analysis/bewest-pump/fall-2013//ReadHistoryData-page-12.data: 81 records`
