@@ -1,22 +1,26 @@
 ## START logs/ReadHistoryData-page-19.data
-#### RECORD 0 hack1 (2000, 3, 0, 0, 40, 0) head[39], body[0] op[0x6d]
+#### RECORD 0 Model522ResultTotals 2013-04-10T00:00:00 head[1], body[38] op[0x6d]
 
-    op hex (39)
-    0000   0x6d 0x4a 0x8d 0x05 0x00 0x71 0x40 0xba    mJ...q@.
-    0008   0x05 0x00 0x00 0x04 0x42 0x03 0x72 0x51    ....B.rQ
-    0010   0x00 0xd0 0x13 0x00 0x33 0x00 0xd0 0x13    ....3...
-    0018   0x00 0x9c 0x4b 0x00 0x34 0x19 0x00 0x00    ..K.4...
-    0020   0x00 0x02 0x01 0x01 0x00 0x00 0x0c         .......
+    op hex (1)
+    0000   0x6d                                       m
     decimal
-            109   74  141    5    0  113   64  186
-              5    0    0    4   66    3  114   81
-              0  208   19    0   51    0  208   19
-              0  156   75    0   52   25    0    0
-              0    2    1    1    0    0   12
-    datetime ((2000, 3, 0, 0, 40, 0))
-    0000   0x00 0xe8 0x00 0x00 0x00                   .....
-    body (0)
-    HOUR BITS: [1, 1, 1]
+            109
+    datetime (2013-04-10T00:00:00)
+    0000   0x4a 0x8d 0x05 0x00 0x71                   J...q
+    body (38)
+    hex
+    0000   0x40 0xba 0x05 0x00 0x00 0x04 0x42 0x03    @.....B.
+    0008   0x72 0x51 0x00 0xd0 0x13 0x00 0x33 0x00    rQ....3.
+    0010   0xd0 0x13 0x00 0x9c 0x4b 0x00 0x34 0x19    ....K.4.
+    0018   0x00 0x00 0x00 0x02 0x01 0x01 0x00 0x00    ........
+    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    decimal
+             64  186    5    0    0    4   66    3
+            114   81    0  208   19    0   51    0
+            208   19    0  156   75    0   52   25
+              0    0    0    2    1    1    0    0
+             12    0  232    0    0    0
+    HOUR BITS: [1, 0, 0] YEAR BITS: [0, 1, 1, 1]
 #### RECORD 1 CalBGForPH 2013-05-11T22:49:42 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python

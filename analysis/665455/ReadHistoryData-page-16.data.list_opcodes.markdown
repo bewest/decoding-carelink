@@ -7,24 +7,28 @@ reading more to debug 0x00
     0000   0x76 0x49                                  vI
 ##### DEBUG DECIMAL
             118   73
-#### RECORD 0 hack1 (2000, 3, 0, 0, 40, 0) head[39], body[0] op[0x6d]
+#### RECORD 0 Model522ResultTotals 2013-04-24T00:00:00 head[1], body[38] op[0x6d]
 
-    op hex (39)
-    0000   0x6d 0x58 0x8d 0x05 0x00 0x6c 0x6c 0x6c    mX...lll
-    0008   0x01 0x00 0x00 0x04 0x04 0x03 0x74 0x56    ......tV
-    0010   0x00 0x90 0x0e 0x00 0x30 0x00 0x90 0x0e    ....0...
-    0018   0x00 0x90 0x64 0x00 0x00 0x00 0x00 0x00    ..d.....
-    0020   0x00 0x01 0x01 0x00 0x00 0x00 0x0c         .......
+    op hex (1)
+    0000   0x6d                                       m
     decimal
-            109   88  141    5    0  108  108  108
-              1    0    0    4    4    3  116   86
-              0  144   14    0   48    0  144   14
-              0  144  100    0    0    0    0    0
-              0    1    1    0    0    0   12
-    datetime ((2000, 3, 0, 0, 40, 0))
-    0000   0x00 0xe8 0x00 0x00 0x00                   .....
-    body (0)
-    HOUR BITS: [1, 1, 1]
+            109
+    datetime (2013-04-24T00:00:00)
+    0000   0x58 0x8d 0x05 0x00 0x6c                   X...l
+    body (38)
+    hex
+    0000   0x6c 0x6c 0x01 0x00 0x00 0x04 0x04 0x03    ll......
+    0008   0x74 0x56 0x00 0x90 0x0e 0x00 0x30 0x00    tV....0.
+    0010   0x90 0x0e 0x00 0x90 0x64 0x00 0x00 0x00    ....d...
+    0018   0x00 0x00 0x00 0x01 0x01 0x00 0x00 0x00    ........
+    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    decimal
+            108  108    1    0    0    4    4    3
+            116   86    0  144   14    0   48    0
+            144   14    0  144  100    0    0    0
+              0    0    0    1    1    0    0    0
+             12    0  232    0    0    0
+    HOUR BITS: [1, 0, 0] YEAR BITS: [0, 1, 1, 0]
 #### RECORD 1 CalBGForPH 2013-05-25T21:01:02 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
