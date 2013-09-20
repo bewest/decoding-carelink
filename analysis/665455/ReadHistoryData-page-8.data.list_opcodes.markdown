@@ -1,4 +1,5 @@
 ## START analysis/bewest-pump/fall-2013//ReadHistoryData-page-8.data
+ERROR day is out of range for month 0000   0x7e 0x0d 0x05 0x10 0xf7                   ~....
 #### RECORD 0 BolusWizard 2013-06-28T13:33:58 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
@@ -140,13 +141,13 @@
     0000   0x00 0x04 0xb4 0x7c 0x0d                   ...|.
     body (0)
     DAY BITS: [0, 1, 1]
-#### RECORD 8 Model522ResultTotals 2013-04-28T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 8 Model522ResultTotals 2013-06-29T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-28T00:00:00)
+    datetime (2013-06-29T00:00:00)
     0000   0x7c 0x0d 0x05 0x00 0x7a                   |...z
     body (38)
     hex
@@ -435,13 +436,13 @@
     0000   0x00 0x05 0x1c 0x7d 0x0d                   ...}.
     body (0)
     DAY BITS: [0, 1, 1]
-#### RECORD 24 Model522ResultTotals 2013-04-29T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 24 Model522ResultTotals 2013-06-30T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-29T00:00:00)
+    datetime (2013-06-30T00:00:00)
     0000   0x7d 0x0d 0x05 0x10 0xcb                   }....
     body (38)
     hex
@@ -1019,13 +1020,14 @@
     0000   0x00 0x07 0x3a 0x7e 0x0d                   ..:~.
     body (0)
     DAY BITS: [0, 1, 1]
-#### RECORD 58 Model522ResultTotals 2013-04-30T00:00:00 head[1], body[38] op[0x6d]
+ERROR day is out of range for month 0000   0x7e 0x0d 0x05 0x10 0xf7                   ~....
+#### RECORD 58 Model522ResultTotals (2013, 6, 31, 0, 0, 0) head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-30T00:00:00)
+    datetime ((2013, 6, 31, 0, 0, 0))
     0000   0x7e 0x0d 0x05 0x10 0xf7                   ~....
     body (38)
     hex
@@ -1364,13 +1366,13 @@
     0000   0x00 0x05 0x50 0x61 0x8d                   ..Pa.
     body (0)
     DAY BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 78 Model522ResultTotals 2013-06-01T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 78 Model522ResultTotals 2013-07-02T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-01T00:00:00)
+    datetime (2013-07-02T00:00:00)
     0000   0x61 0x8d 0x05 0x10 0xc7                   a....
     body (38)
     hex

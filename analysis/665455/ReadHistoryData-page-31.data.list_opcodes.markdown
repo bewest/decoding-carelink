@@ -1,5 +1,4 @@
 ## START analysis/bewest-pump/fall-2013//ReadHistoryData-page-31.data
-ERROR day is out of range for month 0000   0x3e 0x8d 0x05 0x00 0x97                   >....
 ERROR day is out of range for month 0000   0x3f 0x8d 0x05 0x10 0x82                   ?....
 #### STOPPING DOUBLE NULLS @ 1013, found 9 nulls
 reading more to debug 0x00
@@ -91,14 +90,13 @@ reading more to debug 0x00
     0000   0x00 0x04 0x32 0x3e 0x8d                   ..2>.
     body (0)
     DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
-ERROR day is out of range for month 0000   0x3e 0x8d 0x05 0x00 0x97                   >....
-#### RECORD 5 Model522ResultTotals (2013, 2, 30, 0, 0, 0) head[1], body[38] op[0x6d]
+#### RECORD 5 Model522ResultTotals 2013-03-31T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime ((2013, 2, 30, 0, 0, 0))
+    datetime (2013-03-31T00:00:00)
     0000   0x3e 0x8d 0x05 0x00 0x97                   >....
     body (38)
     hex
@@ -483,13 +481,13 @@ ERROR day is out of range for month 0000   0x3e 0x8d 0x05 0x00 0x97             
     body (0)
     DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
 ERROR day is out of range for month 0000   0x3f 0x8d 0x05 0x10 0x82                   ?....
-#### RECORD 29 Model522ResultTotals (2013, 2, 31, 0, 0, 0) head[1], body[38] op[0x6d]
+#### RECORD 29 Model522ResultTotals (2013, 3, 32, 0, 0, 0) head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime ((2013, 2, 31, 0, 0, 0))
+    datetime ((2013, 3, 32, 0, 0, 0))
     0000   0x3f 0x8d 0x05 0x10 0x82                   ?....
     body (38)
     hex
@@ -972,13 +970,13 @@ ERROR day is out of range for month 0000   0x3f 0x8d 0x05 0x10 0x82             
     0000   0x00 0x05 0x18 0x41 0x0d                   ...A.
     body (0)
     DAY BITS: [0, 1, 0]
-#### RECORD 56 Model522ResultTotals 2013-04-01T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 56 Model522ResultTotals 2013-04-02T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-01T00:00:00)
+    datetime (2013-04-02T00:00:00)
     0000   0x41 0x0d 0x05 0x00 0x85                   A....
     body (38)
     hex

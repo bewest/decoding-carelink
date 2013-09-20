@@ -7,13 +7,13 @@ reading more to debug 0x00
     0000   0xb7 0xd5                                  ..
 ##### DEBUG DECIMAL
             183  213
-#### RECORD 0 Model522ResultTotals 2013-06-19T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 0 Model522ResultTotals 2013-05-20T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-19T00:00:00)
+    datetime (2013-05-20T00:00:00)
     0000   0x53 0x8d 0x05 0x10 0xa6                   S....
     body (38)
     hex
@@ -449,13 +449,13 @@ reading more to debug 0x00
     0000   0x00 0x05 0x82 0x54 0x8d                   ...T.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 26 Model522ResultTotals 2013-06-20T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 26 Model522ResultTotals 2013-05-21T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-20T00:00:00)
+    datetime (2013-05-21T00:00:00)
     0000   0x54 0x8d 0x05 0x00 0x99                   T....
     body (38)
     hex
@@ -856,13 +856,13 @@ reading more to debug 0x00
     0000   0x00 0x04 0x94 0x55 0x8d                   ...U.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 51 Model522ResultTotals 2013-06-21T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 51 Model522ResultTotals 2013-05-22T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-21T00:00:00)
+    datetime (2013-05-22T00:00:00)
     0000   0x55 0x8d 0x05 0x10 0x97                   U....
     body (38)
     hex
@@ -967,13 +967,13 @@ reading more to debug 0x00
     0000   0x00 0x03 0xf4 0x56 0x8d                   ...V.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 58 Model522ResultTotals 2013-06-22T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 58 Model522ResultTotals 2013-05-23T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-22T00:00:00)
+    datetime (2013-05-23T00:00:00)
     0000   0x56 0x8d 0x05 0x00 0x87                   V....
     body (38)
     hex
@@ -1269,13 +1269,13 @@ reading more to debug 0x00
     0000   0x00 0x05 0x20 0x57 0x8d                   .. W.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 75 Model522ResultTotals 2013-06-23T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 75 Model522ResultTotals 2013-05-24T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-23T00:00:00)
+    datetime (2013-05-24T00:00:00)
     0000   0x57 0x8d 0x05 0x00 0x73                   W...s
     body (38)
     hex

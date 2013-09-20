@@ -173,13 +173,13 @@
     0000   0x00 0x05 0xbe 0x6f 0x8d                   ...o.
     body (0)
     DAY BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 11 Model522ResultTotals 2013-06-15T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 11 Model522ResultTotals 2013-07-16T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-15T00:00:00)
+    datetime (2013-07-16T00:00:00)
     0000   0x6f 0x8d 0x05 0x10 0xdd                   o....
     body (38)
     hex
@@ -363,13 +363,13 @@
     0000   0x00 0x04 0xb8 0x70 0x8d                   ...p.
     body (0)
     DAY BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 23 Model522ResultTotals 2013-06-16T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 23 Model522ResultTotals 2013-07-17T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-16T00:00:00)
+    datetime (2013-07-17T00:00:00)
     0000   0x70 0x8d 0x05 0x10 0xc5                   p....
     body (38)
     hex

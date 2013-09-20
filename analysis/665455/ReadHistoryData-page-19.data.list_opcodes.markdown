@@ -1,11 +1,11 @@
 ## START analysis/bewest-pump/fall-2013//ReadHistoryData-page-19.data
-#### RECORD 0 Model522ResultTotals 2013-06-10T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 0 Model522ResultTotals 2013-05-11T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-10T00:00:00)
+    datetime (2013-05-11T00:00:00)
     0000   0x4a 0x8d 0x05 0x00 0x71                   J...q
     body (38)
     hex
@@ -103,13 +103,13 @@
     0000   0x00 0x04 0x58 0x4b 0x8d                   ..XK.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 6 Model522ResultTotals 2013-06-11T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 6 Model522ResultTotals 2013-05-12T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-11T00:00:00)
+    datetime (2013-05-12T00:00:00)
     0000   0x4b 0x8d 0x05 0x00 0x6f                   K...o
     body (38)
     hex
@@ -445,13 +445,13 @@
     0000   0x00 0x04 0xee 0x4c 0x8d                   ...L.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 26 Model522ResultTotals 2013-06-12T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 26 Model522ResultTotals 2013-05-13T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-12T00:00:00)
+    datetime (2013-05-13T00:00:00)
     0000   0x4c 0x8d 0x05 0x10 0xa8                   L....
     body (38)
     hex
@@ -900,13 +900,13 @@
     0000   0x00 0x05 0x42 0x4d 0x8d                   ..BM.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 55 Model522ResultTotals 2013-06-13T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 55 Model522ResultTotals 2013-05-14T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-13T00:00:00)
+    datetime (2013-05-14T00:00:00)
     0000   0x4d 0x8d 0x05 0x00 0x8e                   M....
     body (38)
     hex
@@ -1186,13 +1186,13 @@
     0000   0x00 0x05 0x2e 0x4e 0x8d                   ...N.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 72 Model522ResultTotals 2013-06-14T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 72 Model522ResultTotals 2013-05-15T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-14T00:00:00)
+    datetime (2013-05-15T00:00:00)
     0000   0x4e 0x8d 0x05 0x00 0xb4                   N....
     body (38)
     hex
@@ -1310,13 +1310,13 @@
     0000   0x00 0x03 0xea 0x4f 0x8d                   ...O.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 80 Model522ResultTotals 2013-06-15T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 80 Model522ResultTotals 2013-05-16T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-15T00:00:00)
+    datetime (2013-05-16T00:00:00)
     0000   0x4f 0x8d 0x05 0x00 0x58                   O...X
     body (38)
     hex

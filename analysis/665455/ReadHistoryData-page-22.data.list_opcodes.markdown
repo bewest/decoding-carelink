@@ -574,13 +574,13 @@
     0000   0x00 0x05 0x0e 0x5d 0x0d                   ...].
     body (0)
     DAY BITS: [0, 1, 0]
-#### RECORD 31 Model522ResultTotals 2013-04-29T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 31 Model522ResultTotals 2013-04-30T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-29T00:00:00)
+    datetime (2013-04-30T00:00:00)
     0000   0x5d 0x0d 0x05 0x10 0xd2                   ]....
     body (38)
     hex

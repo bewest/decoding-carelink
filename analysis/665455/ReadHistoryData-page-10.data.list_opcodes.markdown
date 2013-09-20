@@ -254,13 +254,13 @@ reading more to debug 0x00
     0000   0x00 0x04 0x88 0x73 0x0d                   ...s.
     body (0)
     DAY BITS: [0, 1, 1]
-#### RECORD 13 Model522ResultTotals 2013-04-19T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 13 Model522ResultTotals 2013-06-20T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-19T00:00:00)
+    datetime (2013-06-20T00:00:00)
     0000   0x73 0x0d 0x05 0x10 0xcb                   s....
     body (38)
     hex
@@ -689,13 +689,13 @@ reading more to debug 0x00
     0000   0x00 0x05 0x12 0x74 0x0d                   ...t.
     body (0)
     DAY BITS: [0, 1, 1]
-#### RECORD 38 Model522ResultTotals 2013-04-20T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 38 Model522ResultTotals 2013-06-21T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-20T00:00:00)
+    datetime (2013-06-21T00:00:00)
     0000   0x74 0x0d 0x05 0x00 0x99                   t....
     body (38)
     hex
@@ -934,13 +934,13 @@ reading more to debug 0x00
     0000   0x00 0x04 0xda 0x75 0x0d                   ...u.
     body (0)
     DAY BITS: [0, 1, 1]
-#### RECORD 54 Model522ResultTotals 2013-04-21T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 54 Model522ResultTotals 2013-06-22T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-21T00:00:00)
+    datetime (2013-06-22T00:00:00)
     0000   0x75 0x0d 0x05 0x00 0x97                   u....
     body (38)
     hex
@@ -1242,13 +1242,13 @@ reading more to debug 0x00
     0000   0x00 0x05 0xec 0x76 0x0d                   ...v.
     body (0)
     DAY BITS: [0, 1, 1]
-#### RECORD 71 Model522ResultTotals 2013-04-22T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 71 Model522ResultTotals 2013-06-23T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-22T00:00:00)
+    datetime (2013-06-23T00:00:00)
     0000   0x76 0x0d 0x05 0x10 0xbc                   v....
     body (38)
     hex

@@ -41,13 +41,13 @@ ERROR day is out of range for month 0000   0x5f 0x8d 0x05 0x10 0x9a             
     0000   0x00 0x05 0x18 0x5d 0x8d                   ...].
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 3 Model522ResultTotals 2013-06-29T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 3 Model522ResultTotals 2013-05-30T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-29T00:00:00)
+    datetime (2013-05-30T00:00:00)
     0000   0x5d 0x8d 0x05 0x00 0xb8                   ]....
     body (38)
     hex
@@ -475,13 +475,13 @@ ERROR day is out of range for month 0000   0x5f 0x8d 0x05 0x10 0x9a             
     0000   0x00 0x05 0x44 0x5e 0x8d                   ..D^.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 28 Model522ResultTotals 2013-06-30T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 28 Model522ResultTotals 2013-05-31T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-06-30T00:00:00)
+    datetime (2013-05-31T00:00:00)
     0000   0x5e 0x8d 0x05 0x10 0xab                   ^....
     body (38)
     hex
@@ -714,13 +714,13 @@ ERROR day is out of range for month 0000   0x5f 0x8d 0x05 0x10 0x9a             
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
 ERROR day is out of range for month 0000   0x5f 0x8d 0x05 0x10 0x9a                   _....
-#### RECORD 43 Model522ResultTotals (2013, 6, 31, 0, 0, 0) head[1], body[38] op[0x6d]
+#### RECORD 43 Model522ResultTotals (2013, 5, 32, 0, 0, 0) head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime ((2013, 6, 31, 0, 0, 0))
+    datetime ((2013, 5, 32, 0, 0, 0))
     0000   0x5f 0x8d 0x05 0x10 0x9a                   _....
     body (38)
     hex
@@ -1184,13 +1184,13 @@ ERROR day is out of range for month 0000   0x5f 0x8d 0x05 0x10 0x9a             
     0000   0x00 0x05 0xe8 0x61 0x0d                   ...a.
     body (0)
     DAY BITS: [0, 1, 1]
-#### RECORD 69 Model522ResultTotals 2013-04-01T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 69 Model522ResultTotals 2013-06-02T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-01T00:00:00)
+    datetime (2013-06-02T00:00:00)
     0000   0x61 0x0d 0x05 0x10 0xb3                   a....
     body (38)
     hex

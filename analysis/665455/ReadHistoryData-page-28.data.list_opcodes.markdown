@@ -98,13 +98,13 @@
     0000   0x00 0x04 0xac 0x49 0x0d                   ...I.
     body (0)
     DAY BITS: [0, 1, 0]
-#### RECORD 6 Model522ResultTotals 2013-04-09T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 6 Model522ResultTotals 2013-04-10T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-09T00:00:00)
+    datetime (2013-04-10T00:00:00)
     0000   0x49 0x0d 0x05 0x00 0xc8                   I....
     body (38)
     hex
@@ -610,13 +610,13 @@
     0000   0x00 0x05 0x38 0x4a 0x0d                   ..8J.
     body (0)
     DAY BITS: [0, 1, 0]
-#### RECORD 35 Model522ResultTotals 2013-04-10T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 35 Model522ResultTotals 2013-04-11T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-10T00:00:00)
+    datetime (2013-04-11T00:00:00)
     0000   0x4a 0x0d 0x05 0x10 0xa5                   J....
     body (38)
     hex
@@ -1087,13 +1087,13 @@
     0000   0x00 0x05 0x86 0x4b 0x0d                   ...K.
     body (0)
     DAY BITS: [0, 1, 0]
-#### RECORD 63 Model522ResultTotals 2013-04-11T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 63 Model522ResultTotals 2013-04-12T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-11T00:00:00)
+    datetime (2013-04-12T00:00:00)
     0000   0x4b 0x0d 0x05 0x10 0x89                   K....
     body (38)
     hex
@@ -1436,13 +1436,13 @@
     0000   0x00 0x05 0x4a 0x4c 0x0d                   ..JL.
     body (0)
     DAY BITS: [0, 1, 0]
-#### RECORD 83 Model522ResultTotals 2013-04-12T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 83 Model522ResultTotals 2013-04-13T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-12T00:00:00)
+    datetime (2013-04-13T00:00:00)
     0000   0x4c 0x0d 0x05 0x00 0x83                   L....
     body (38)
     hex

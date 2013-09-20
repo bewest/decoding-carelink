@@ -7,13 +7,13 @@ reading more to debug 0x00
     0000   0x9e 0xf0                                  ..
 ##### DEBUG DECIMAL
             158  240
-#### RECORD 0 Model522ResultTotals 2013-08-11T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 0 Model522ResultTotals 2013-08-12T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-08-11T00:00:00)
+    datetime (2013-08-12T00:00:00)
     0000   0x8b 0x0d 0x05 0x00 0x77                   ....w
     body (38)
     hex
@@ -350,13 +350,13 @@ reading more to debug 0x00
     0000   0x00 0x04 0xae 0x8c 0x0d                   .....
     body (0)
     DAY BITS: [1, 0, 0]
-#### RECORD 22 Model522ResultTotals 2013-08-12T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 22 Model522ResultTotals 2013-08-13T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-08-12T00:00:00)
+    datetime (2013-08-13T00:00:00)
     0000   0x8c 0x0d 0x05 0x10 0x75                   ....u
     body (38)
     hex
@@ -559,13 +559,13 @@ reading more to debug 0x00
     0000   0x00 0x05 0x00 0x8d 0x0d                   .....
     body (0)
     DAY BITS: [1, 0, 0]
-#### RECORD 33 Model522ResultTotals 2013-08-13T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 33 Model522ResultTotals 2013-08-14T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-08-13T00:00:00)
+    datetime (2013-08-14T00:00:00)
     0000   0x8d 0x0d 0x05 0x00 0xa7                   .....
     body (38)
     hex
@@ -850,13 +850,13 @@ reading more to debug 0x00
     0000   0x00 0x05 0x9c 0x8e 0x0d                   .....
     body (0)
     DAY BITS: [1, 0, 0]
-#### RECORD 51 Model522ResultTotals 2013-08-14T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 51 Model522ResultTotals 2013-08-15T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-08-14T00:00:00)
+    datetime (2013-08-15T00:00:00)
     0000   0x8e 0x0d 0x05 0x11 0x03                   .....
     body (38)
     hex
@@ -1131,13 +1131,13 @@ reading more to debug 0x00
     0000   0x00 0x04 0xce 0x8f 0x0d                   .....
     body (0)
     DAY BITS: [1, 0, 0]
-#### RECORD 68 Model522ResultTotals 2013-08-15T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 68 Model522ResultTotals 2013-08-16T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-08-15T00:00:00)
+    datetime (2013-08-16T00:00:00)
     0000   0x8f 0x0d 0x05 0x10 0xc4                   .....
     body (38)
     hex

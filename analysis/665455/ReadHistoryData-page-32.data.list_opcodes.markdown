@@ -1,5 +1,4 @@
 ## START analysis/bewest-pump/fall-2013//ReadHistoryData-page-32.data
-ERROR day is out of range for month 0000   0x3d 0x8d 0x05 0x00 0x73                   =...s
 #### STOPPING DOUBLE NULLS @ 1005, found 17 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
@@ -346,13 +345,13 @@ reading more to debug 0x00
     0000   0x00 0x05 0xc4 0x3b 0x8d                   ...;.
     body (0)
     DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 18 Model522ResultTotals 2013-02-27T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 18 Model522ResultTotals 2013-03-28T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-02-27T00:00:00)
+    datetime (2013-03-28T00:00:00)
     0000   0x3b 0x8d 0x05 0x10 0xb5                   ;....
     body (38)
     hex
@@ -1001,13 +1000,13 @@ reading more to debug 0x00
     0000   0x00 0x06 0x10 0x3c 0x8d                   ...<.
     body (0)
     DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 53 Model522ResultTotals 2013-02-28T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 53 Model522ResultTotals 2013-03-29T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-02-28T00:00:00)
+    datetime (2013-03-29T00:00:00)
     0000   0x3c 0x8d 0x05 0x10 0xda                   <....
     body (38)
     hex
@@ -1385,14 +1384,13 @@ reading more to debug 0x00
     0000   0x00 0x05 0x1e 0x3d 0x8d                   ...=.
     body (0)
     DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
-ERROR day is out of range for month 0000   0x3d 0x8d 0x05 0x00 0x73                   =...s
-#### RECORD 76 Model522ResultTotals (2013, 2, 29, 0, 0, 0) head[1], body[38] op[0x6d]
+#### RECORD 76 Model522ResultTotals 2013-03-30T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime ((2013, 2, 29, 0, 0, 0))
+    datetime (2013-03-30T00:00:00)
     0000   0x3d 0x8d 0x05 0x00 0x73                   =...s
     body (38)
     hex

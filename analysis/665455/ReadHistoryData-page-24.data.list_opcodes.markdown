@@ -44,13 +44,13 @@
     0000   0x00 0x05 0xf4 0x56 0x0d                   ...V.
     body (0)
     DAY BITS: [0, 1, 0]
-#### RECORD 3 Model522ResultTotals 2013-04-22T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 3 Model522ResultTotals 2013-04-23T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-22T00:00:00)
+    datetime (2013-04-23T00:00:00)
     0000   0x56 0x0d 0x05 0x00 0xa4                   V....
     body (38)
     hex
@@ -300,13 +300,13 @@
     0000   0x00 0x04 0xf0 0x57 0x0d                   ...W.
     body (0)
     DAY BITS: [0, 1, 0]
-#### RECORD 18 Model522ResultTotals 2013-04-23T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 18 Model522ResultTotals 2013-04-24T00:00:00 head[1], body[38] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
-    datetime (2013-04-23T00:00:00)
+    datetime (2013-04-24T00:00:00)
     0000   0x57 0x0d 0x05 0x00 0xa4                   W....
     body (38)
     hex
