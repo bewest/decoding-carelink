@@ -51,6 +51,8 @@ class MResultTotals(InvalidRecord):
   """On 722 this seems like two records."""
   opcode = 0x07
   #head_length = 5
+  head_length = 5
+  date_length = 2
   #body_length = 37 + 4
   #body_length = 2
   def __init__(self, head, larger=False):
@@ -58,7 +60,7 @@ class MResultTotals(InvalidRecord):
     if larger:
       self.body_length = 0
   def parse_time(self):
-    mid = unmask_m_midnight(self.date[3:])
+    mid = unmask_m_midnight(self.date)
     try:
       self.datetime = date = datetime(*mid)
       return date
@@ -74,7 +76,7 @@ class MResultTotals(InvalidRecord):
       result = self.datetime.isoformat( )
     else:
       if len(self.date) >=2:
-        result = "{}".format(unmask_m_midnight(self.date[3:]))
+        result = "{}".format(unmask_m_midnight(self.date))
     return result
 
 class ChangeBasalProfile(KnownRecord):
