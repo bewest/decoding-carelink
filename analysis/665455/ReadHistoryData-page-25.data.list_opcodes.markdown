@@ -194,31 +194,39 @@
     0000   0x64 0x0a 0x57 0x14 0x0d                   d.W..
     body (0)
 
-#### RECORD 10 ResultTotals 2013-04-20T13:13:20 head[5], body[41] op[0x07]
+#### RECORD 10 MResultTotals (2013, 0, 20, 28, 4, 0) head[2], body[0] op[0x07]
 
-    op hex (5)
-    0000   0x07 0x00 0x00 0x04 0xbc                   .....
+    op hex (2)
+    0000   0x07 0x00                                  ..
     decimal
-              7    0    0    4  188
-    datetime (2013-04-20T13:13:20)
-    0000   0x54 0x0d 0x6d 0x54 0x0d                   T.mT.
-    body (41)
-    hex
-    0000   0x05 0x00 0xb9 0xb0 0xc9 0x03 0x00 0x00    ........
-    0008   0x04 0xbc 0x03 0x84 0x4a 0x01 0x38 0x1a    ....J.8.
-    0010   0x00 0x4c 0x01 0x38 0x1a 0x00 0xe8 0x4a    .L.8...J
-    0018   0x00 0x50 0x1a 0x00 0x00 0x00 0x04 0x02    .P......
-    0020   0x02 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
-    0028   0x00                                       .
-    decimal
-              5    0  185  176  201    3    0    0
-              4  188    3  132   74    1   56   26
-              0   76    1   56   26    0  232   74
-              0   80   26    0    0    0    4    2
-              2    0    0   12    0  232    0    0
-              0
+              7    0
+    datetime ((2013, 0, 20, 28, 4, 0))
+    0000   0x00 0x04 0xbc 0x54 0x0d                   ...T.
+    body (0)
     DAY BITS: [0, 1, 0]
-#### RECORD 11 CalBGForPH 2013-04-21T03:11:48 head[2], body[0] op[0x0a]
+#### RECORD 11 Model522ResultTotals 2013-04-20T00:00:00 head[1], body[38] op[0x6d]
+
+    op hex (1)
+    0000   0x6d                                       m
+    decimal
+            109
+    datetime (2013-04-20T00:00:00)
+    0000   0x54 0x0d 0x05 0x00 0xb9                   T....
+    body (38)
+    hex
+    0000   0xb0 0xc9 0x03 0x00 0x00 0x04 0xbc 0x03    ........
+    0008   0x84 0x4a 0x01 0x38 0x1a 0x00 0x4c 0x01    .J.8..L.
+    0010   0x38 0x1a 0x00 0xe8 0x4a 0x00 0x50 0x1a    8...J.P.
+    0018   0x00 0x00 0x00 0x04 0x02 0x02 0x00 0x00    ........
+    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    decimal
+            176  201    3    0    0    4  188    3
+            132   74    1   56   26    0   76    1
+             56   26    0  232   74    0   80   26
+              0    0    0    4    2    2    0    0
+             12    0  232    0    0    0
+    YEAR BITS: [1, 0, 1, 1]
+#### RECORD 12 CalBGForPH 2013-04-21T03:11:48 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 327}
@@ -231,7 +239,7 @@
     0000   0x70 0x0b 0x23 0x15 0x8d                   p.#..
     body (0)
     YEAR BITS: [1, 0, 0, 0]
-#### RECORD 12 BolusWizard 2013-04-21T03:11:57 head[2], body[13] op[0x5b]
+#### RECORD 13 BolusWizard 2013-04-21T03:11:57 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 44,
@@ -264,7 +272,7 @@
               0   81   13   45  106   44    0    0
               0    0    0   44  125
 
-#### RECORD 13 UnabsorbedInsulinBolus unknown head[14], body[0] op[0x5c]
+#### RECORD 14 UnabsorbedInsulinBolus unknown head[14], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 247, 'amount': 1.2, 'curve': 4},
@@ -282,7 +290,7 @@
 
     body (0)
 
-#### RECORD 14 Bolus 2013-04-21T03:11:57 head[4], body[0] op[0x01]
+#### RECORD 15 Bolus 2013-04-21T03:11:57 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
 {'amount': 4.4, 'dual_component': '??', 'programmed': 4.4, 'type': '??'}
@@ -295,7 +303,7 @@
     0000   0x79 0x0b 0x43 0x15 0x0d                   y.C..
     body (0)
 
-#### RECORD 15 CalBGForPH 2013-04-21T07:25:59 head[2], body[0] op[0x0a]
+#### RECORD 16 CalBGForPH 2013-04-21T07:25:59 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 186}
@@ -308,7 +316,7 @@
     0000   0x7b 0x19 0x27 0x15 0x0d                   {.'..
     body (0)
 
-#### RECORD 16 BolusWizard 2013-04-21T07:26:02 head[2], body[13] op[0x5b]
+#### RECORD 17 BolusWizard 2013-04-21T07:26:02 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 13,
@@ -341,7 +349,7 @@
               0   80   13   45  106   13    0    0
               0    0    0   13  125
 
-#### RECORD 17 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
+#### RECORD 18 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 252, 'amount': 1.3, 'curve': 4},
@@ -355,7 +363,7 @@
 
     body (0)
 
-#### RECORD 18 Bolus 2013-04-21T07:26:02 head[4], body[0] op[0x01]
+#### RECORD 19 Bolus 2013-04-21T07:26:02 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
 {'amount': 1.3, 'dual_component': '??', 'programmed': 1.3, 'type': '??'}
@@ -368,7 +376,7 @@
     0000   0x42 0x1a 0x47 0x15 0x0d                   B.G..
     body (0)
 
-#### RECORD 19 PumpSuspend 2013-04-21T08:42:20 head[2], body[0] op[0x1e]
+#### RECORD 20 PumpSuspend 2013-04-21T08:42:20 head[2], body[0] op[0x1e]
 
     op hex (2)
     0000   0x1e 0x00                                  ..
@@ -378,7 +386,7 @@
     0000   0x54 0x2a 0x08 0x15 0x0d                   T*...
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 20 PumpResume 2013-04-21T09:11:47 head[2], body[0] op[0x1f]
+#### RECORD 21 PumpResume 2013-04-21T09:11:47 head[2], body[0] op[0x1f]
 
     op hex (2)
     0000   0x1f 0x00                                  ..
@@ -388,7 +396,7 @@
     0000   0x6f 0x0b 0x09 0x15 0x0d                   o....
     body (0)
 
-#### RECORD 21 CalBGForPH 2013-04-21T10:21:47 head[2], body[0] op[0x0a]
+#### RECORD 22 CalBGForPH 2013-04-21T10:21:47 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 220}
@@ -401,7 +409,7 @@
     0000   0x6f 0x15 0x2a 0x15 0x0d                   o.*..
     body (0)
 
-#### RECORD 22 BolusWizard 2013-04-21T10:21:49 head[2], body[13] op[0x5b]
+#### RECORD 23 BolusWizard 2013-04-21T10:21:49 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 21,
@@ -434,7 +442,7 @@
               0   80   13   45  106   21    0    0
               0    3    0   18  125
 
-#### RECORD 23 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
+#### RECORD 24 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 177, 'amount': 1.3, 'curve': 4},
@@ -451,7 +459,7 @@
 
     body (0)
 
-#### RECORD 24 LowReservoir 2013-04-21T10:22:45 head[2], body[0] op[0x34]
+#### RECORD 25 LowReservoir 2013-04-21T10:22:45 head[2], body[0] op[0x34]
 ###### DECODED
 ```python
 {'amount': 20.0}
@@ -464,7 +472,7 @@
     0000   0x6d 0x16 0x0a 0x15 0x0d                   m....
     body (0)
 
-#### RECORD 25 Bolus 2013-04-21T10:21:49 head[4], body[0] op[0x01]
+#### RECORD 26 Bolus 2013-04-21T10:21:49 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
 {'amount': 1.8, 'dual_component': '??', 'programmed': 1.8, 'type': '??'}
@@ -477,7 +485,7 @@
     0000   0x71 0x15 0x4a 0x15 0x0d                   q.J..
     body (0)
 
-#### RECORD 26 BolusWizard 2013-04-21T10:32:07 head[2], body[13] op[0x5b]
+#### RECORD 27 BolusWizard 2013-04-21T10:32:07 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 0,
@@ -510,7 +518,7 @@
              18   80   13   45  106    0   13    0
               0    0    0   13  125
     HOUR BITS: [0, 0, 1]
-#### RECORD 27 UnabsorbedInsulinBolus unknown head[14], body[0] op[0x5c]
+#### RECORD 28 UnabsorbedInsulinBolus unknown head[14], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 18, 'amount': 1.8, 'curve': 4},
@@ -528,7 +536,7 @@
 
     body (0)
 
-#### RECORD 28 Bolus 2013-04-21T10:32:07 head[4], body[0] op[0x01]
+#### RECORD 29 Bolus 2013-04-21T10:32:07 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
 {'amount': 1.3, 'dual_component': '??', 'programmed': 1.3, 'type': '??'}
@@ -541,7 +549,7 @@
     0000   0x47 0x20 0x4a 0x15 0x0d                   G J..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 29 CalBGForPH 2013-04-21T11:47:57 head[2], body[0] op[0x0a]
+#### RECORD 30 CalBGForPH 2013-04-21T11:47:57 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 281}
@@ -554,7 +562,7 @@
     0000   0x79 0x2f 0x2b 0x15 0x8d                   y/+..
     body (0)
     HOUR BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 30 BolusWizard 2013-04-21T11:48:05 head[2], body[13] op[0x5b]
+#### RECORD 31 BolusWizard 2013-04-21T11:48:05 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 34,
@@ -587,7 +595,7 @@
               0   81   13   45  106   34    0    0
               0   21    0   13  125
     HOUR BITS: [0, 0, 1]
-#### RECORD 31 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
+#### RECORD 32 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 84, 'amount': 1.3, 'curve': 4},
@@ -604,7 +612,7 @@
 
     body (0)
 
-#### RECORD 32 Bolus 2013-04-21T11:48:05 head[4], body[0] op[0x01]
+#### RECORD 33 Bolus 2013-04-21T11:48:05 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
 {'amount': 1.5, 'dual_component': '??', 'programmed': 1.5, 'type': '??'}
@@ -617,7 +625,7 @@
     0000   0x45 0x30 0x4b 0x15 0x0d                   E0K..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 33 CalBGForPH 2013-04-21T12:04:11 head[2], body[0] op[0x0a]
+#### RECORD 34 CalBGForPH 2013-04-21T12:04:11 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 243}
@@ -630,7 +638,7 @@
     0000   0x4b 0x04 0x2c 0x15 0x0d                   K.,..
     body (0)
 
-#### RECORD 34 BolusWizard 2013-04-21T12:04:48 head[2], body[13] op[0x5b]
+#### RECORD 35 BolusWizard 2013-04-21T12:04:48 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 26,
@@ -663,7 +671,7 @@
               0   80   13   45  106   26    0    0
               0   32    0    0  125
 
-#### RECORD 35 UnabsorbedInsulinBolus unknown head[14], body[0] op[0x5c]
+#### RECORD 36 UnabsorbedInsulinBolus unknown head[14], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 20, 'amount': 1.5, 'curve': 4},
@@ -681,7 +689,7 @@
 
     body (0)
 
-#### RECORD 36 Bolus 2013-04-21T12:04:48 head[4], body[0] op[0x01]
+#### RECORD 37 Bolus 2013-04-21T12:04:48 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
 {'amount': 0.5, 'dual_component': '??', 'programmed': 0.5, 'type': '??'}
@@ -694,7 +702,7 @@
     0000   0x70 0x04 0x4c 0x15 0x0d                   p.L..
     body (0)
 
-#### RECORD 37 CalBGForPH 2013-04-21T12:39:33 head[2], body[0] op[0x0a]
+#### RECORD 38 CalBGForPH 2013-04-21T12:39:33 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 204}
@@ -707,7 +715,7 @@
     0000   0x61 0x27 0x2c 0x15 0x0d                   a',..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 38 BolusWizard 2013-04-21T12:41:05 head[2], body[13] op[0x5b]
+#### RECORD 39 BolusWizard 2013-04-21T12:41:05 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 17,
@@ -740,7 +748,7 @@
              42   80   13   45  106   17   32    0
               0   28    0   32  125
     HOUR BITS: [0, 0, 1]
-#### RECORD 39 UnabsorbedInsulinBolus unknown head[17], body[0] op[0x5c]
+#### RECORD 40 UnabsorbedInsulinBolus unknown head[17], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 37, 'amount': 0.5, 'curve': 4},
@@ -761,7 +769,7 @@
 
     body (0)
 
-#### RECORD 40 Bolus 2013-04-21T12:41:05 head[4], body[0] op[0x01]
+#### RECORD 41 Bolus 2013-04-21T12:41:05 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
 {'amount': 3.2, 'dual_component': '??', 'programmed': 3.2, 'type': '??'}
@@ -774,7 +782,7 @@
     0000   0x45 0x29 0x4c 0x15 0x0d                   E)L..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 41 LowReservoir 2013-04-21T13:10:54 head[2], body[0] op[0x34]
+#### RECORD 42 LowReservoir 2013-04-21T13:10:54 head[2], body[0] op[0x34]
 ###### DECODED
 ```python
 {'amount': 10.0}
@@ -787,7 +795,7 @@
     0000   0x76 0x0a 0x0d 0x15 0x0d                   v....
     body (0)
 
-#### RECORD 42 CalBGForPH 2013-04-21T13:24:50 head[2], body[0] op[0x0a]
+#### RECORD 43 CalBGForPH 2013-04-21T13:24:50 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 120}
@@ -800,7 +808,7 @@
     0000   0x72 0x18 0x2d 0x15 0x0d                   r.-..
     body (0)
 
-#### RECORD 43 CalBGForPH 2013-04-21T15:23:35 head[2], body[0] op[0x0a]
+#### RECORD 44 CalBGForPH 2013-04-21T15:23:35 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 107}
@@ -813,7 +821,7 @@
     0000   0x63 0x17 0x2f 0x15 0x0d                   c./..
     body (0)
 
-#### RECORD 44 CalBGForPH 2013-04-21T21:28:43 head[2], body[0] op[0x0a]
+#### RECORD 45 CalBGForPH 2013-04-21T21:28:43 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 246}
@@ -826,7 +834,7 @@
     0000   0x6b 0x1c 0x35 0x15 0x0d                   k.5..
     body (0)
 
-#### RECORD 45 BolusWizard 2013-04-21T21:28:45 head[2], body[13] op[0x5b]
+#### RECORD 46 BolusWizard 2013-04-21T21:28:45 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 26,
@@ -859,7 +867,7 @@
               0   80   13   45  106   26    0    0
               0    0    0   26  125
 
-#### RECORD 46 Bolus 2013-04-21T21:28:45 head[4], body[0] op[0x01]
+#### RECORD 47 Bolus 2013-04-21T21:28:45 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
 {'amount': 2.6, 'dual_component': '??', 'programmed': 2.6, 'type': '??'}
@@ -872,7 +880,7 @@
     0000   0x6d 0x1c 0x55 0x15 0x0d                   m.U..
     body (0)
 
-#### RECORD 47 Rewind 2013-04-21T22:52:51 head[2], body[0] op[0x21]
+#### RECORD 48 Rewind 2013-04-21T22:52:51 head[2], body[0] op[0x21]
 
     op hex (2)
     0000   0x21 0x00                                  !.
@@ -882,7 +890,7 @@
     0000   0x73 0x34 0x16 0x15 0x0d                   s4...
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 48 Prime 2013-04-21T22:54:43 head[5], body[0] op[0x03]
+#### RECORD 49 Prime 2013-04-21T22:54:43 head[5], body[0] op[0x03]
 ###### DECODED
 ```python
 {'amount': 5.7, 'fixed': 0.0, 'type': 'manual'}
@@ -895,7 +903,7 @@
     0000   0x6b 0x36 0x36 0x15 0x0d                   k66..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 49 Prime 2013-04-21T22:55:13 head[5], body[0] op[0x03]
+#### RECORD 50 Prime 2013-04-21T22:55:13 head[5], body[0] op[0x03]
 ###### DECODED
 ```python
 {'amount': 0.5, 'fixed': 0.5, 'type': 'fixed'}
@@ -908,7 +916,7 @@
     0000   0x4d 0x37 0x16 0x15 0x0d                   M7...
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 50 CalBGForPH 2013-04-21T23:00:26 head[2], body[0] op[0x0a]
+#### RECORD 51 CalBGForPH 2013-04-21T23:00:26 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 134}
@@ -921,7 +929,7 @@
     0000   0x5a 0x00 0x37 0x15 0x0d                   Z.7..
     body (0)
 
-#### RECORD 51 BolusWizard 2013-04-21T23:00:37 head[2], body[13] op[0x5b]
+#### RECORD 52 BolusWizard 2013-04-21T23:00:37 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 2,
@@ -954,7 +962,7 @@
              49   80   13   45  106    2   37    0
               0   16    0   37  125
 
-#### RECORD 52 UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]
+#### RECORD 53 UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 96, 'amount': 2.6, 'curve': 4}]
@@ -967,7 +975,7 @@
 
     body (0)
 
-#### RECORD 53 BolusWizard 2013-04-20T22:40:40 head[2], body[13] op[0x5b]
+#### RECORD 54 BolusWizard 2013-04-20T22:40:40 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 11,
@@ -1000,7 +1008,7 @@
               0   80   13   45  106   11    0    0
               0    7    0    4  125
     HOUR BITS: [0, 0, 1]
-#### RECORD 54 UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]
+#### RECORD 55 UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 126, 'amount': 1.6, 'curve': 4}]
@@ -1013,7 +1021,7 @@
 
     body (0)
 
-#### RECORD 55 Bolus 2013-04-20T22:40:40 head[4], body[0] op[0x01]
+#### RECORD 56 Bolus 2013-04-20T22:40:40 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
 {'amount': 0.4, 'dual_component': '??', 'programmed': 0.4, 'type': '??'}
@@ -1026,7 +1034,7 @@
     0000   0x68 0x28 0x56 0x14 0x0d                   h(V..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 56 CalBGForPH 2013-04-20T22:46:50 head[2], body[0] op[0x0a]
+#### RECORD 57 CalBGForPH 2013-04-20T22:46:50 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 177}
@@ -1039,7 +1047,7 @@
     0000   0x72 0x2e 0x36 0x14 0x0d                   r.6..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 57 BolusWizard 2013-04-20T22:47:07 head[2], body[13] op[0x5b]
+#### RECORD 58 BolusWizard 2013-04-20T22:47:07 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 11,
@@ -1072,7 +1080,7 @@
              60   80   13   45  106   11   46    0
               0   11    0   46  125
     HOUR BITS: [0, 0, 1]
-#### RECORD 58 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
+#### RECORD 59 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 13, 'amount': 0.4, 'curve': 4},
@@ -1086,7 +1094,7 @@
 
     body (0)
 
-#### RECORD 59 Bolus 2013-04-20T22:47:07 head[4], body[0] op[0x01]
+#### RECORD 60 Bolus 2013-04-20T22:47:07 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
 {'amount': 4.6, 'dual_component': '??', 'programmed': 4.6, 'type': '??'}
@@ -1099,7 +1107,7 @@
     0000   0x47 0x2f 0x56 0x14 0x0d                   G/V..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 60 BolusWizard 2013-04-20T23:10:36 head[2], body[13] op[0x5b]
+#### RECORD 61 BolusWizard 2013-04-20T23:10:36 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 0,
@@ -1132,7 +1140,7 @@
              16   80   13   45  106    0   12    0
               0    0    0   12  125
 
-#### RECORD 61 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
+#### RECORD 62 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 26, 'amount': 4.6, 'curve': 4},
@@ -1149,7 +1157,7 @@
 
     body (0)
 
-#### RECORD 62 Bolus 2013-04-20T23:10:36 head[4], body[0] op[0x01]
+#### RECORD 63 Bolus 2013-04-20T23:10:36 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
 {'amount': 1.2, 'dual_component': '??', 'programmed': 1.2, 'type': '??'}
@@ -1162,31 +1170,39 @@
     0000   0x64 0x0a 0x57 0x14 0x0d                   d.W..
     body (0)
 
-#### RECORD 63 ResultTotals 2013-04-20T13:13:20 head[5], body[41] op[0x07]
+#### RECORD 64 MResultTotals (2013, 0, 20, 28, 4, 0) head[2], body[0] op[0x07]
 
-    op hex (5)
-    0000   0x07 0x00 0x00 0x04 0xbc                   .....
+    op hex (2)
+    0000   0x07 0x00                                  ..
     decimal
-              7    0    0    4  188
-    datetime (2013-04-20T13:13:20)
-    0000   0x54 0x0d 0x6d 0x54 0x0d                   T.mT.
-    body (41)
-    hex
-    0000   0x05 0x00 0xb9 0xb0 0xc9 0x03 0x00 0x00    ........
-    0008   0x04 0xbc 0x03 0x84 0x4a 0x01 0x38 0x1a    ....J.8.
-    0010   0x00 0x4c 0x01 0x38 0x1a 0x00 0xe8 0x4a    .L.8...J
-    0018   0x00 0x50 0x1a 0x00 0x00 0x00 0x04 0x02    .P......
-    0020   0x02 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
-    0028   0x00                                       .
-    decimal
-              5    0  185  176  201    3    0    0
-              4  188    3  132   74    1   56   26
-              0   76    1   56   26    0  232   74
-              0   80   26    0    0    0    4    2
-              2    0    0   12    0  232    0    0
-              0
+              7    0
+    datetime ((2013, 0, 20, 28, 4, 0))
+    0000   0x00 0x04 0xbc 0x54 0x0d                   ...T.
+    body (0)
     DAY BITS: [0, 1, 0]
-#### RECORD 64 CalBGForPH 2013-04-21T03:11:48 head[2], body[0] op[0x0a]
+#### RECORD 65 Model522ResultTotals 2013-04-20T00:00:00 head[1], body[38] op[0x6d]
+
+    op hex (1)
+    0000   0x6d                                       m
+    decimal
+            109
+    datetime (2013-04-20T00:00:00)
+    0000   0x54 0x0d 0x05 0x00 0xb9                   T....
+    body (38)
+    hex
+    0000   0xb0 0xc9 0x03 0x00 0x00 0x04 0xbc 0x03    ........
+    0008   0x84 0x4a 0x01 0x38 0x1a 0x00 0x4c 0x01    .J.8..L.
+    0010   0x38 0x1a 0x00 0xe8 0x4a 0x00 0x50 0x1a    8...J.P.
+    0018   0x00 0x00 0x00 0x04 0x02 0x02 0x00 0x00    ........
+    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    decimal
+            176  201    3    0    0    4  188    3
+            132   74    1   56   26    0   76    1
+             56   26    0  232   74    0   80   26
+              0    0    0    4    2    2    0    0
+             12    0  232    0    0    0
+    YEAR BITS: [1, 0, 1, 1]
+#### RECORD 66 CalBGForPH 2013-04-21T03:11:48 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 327}
@@ -1199,7 +1215,7 @@
     0000   0x70 0x0b 0x23 0x15 0x8d                   p.#..
     body (0)
     YEAR BITS: [1, 0, 0, 0]
-#### RECORD 65 BolusWizard 2013-04-21T03:11:57 head[2], body[13] op[0x5b]
+#### RECORD 67 BolusWizard 2013-04-21T03:11:57 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 44,
@@ -1232,7 +1248,7 @@
               0   81   13   45  106   44    0    0
               0    0    0   44  125
 
-#### RECORD 66 UnabsorbedInsulinBolus unknown head[14], body[0] op[0x5c]
+#### RECORD 68 UnabsorbedInsulinBolus unknown head[14], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 247, 'amount': 1.2, 'curve': 4},
@@ -1250,7 +1266,7 @@
 
     body (0)
 
-#### RECORD 67 Bolus 2013-04-21T03:11:57 head[4], body[0] op[0x01]
+#### RECORD 69 Bolus 2013-04-21T03:11:57 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
 {'amount': 4.4, 'dual_component': '??', 'programmed': 4.4, 'type': '??'}
@@ -1263,7 +1279,7 @@
     0000   0x79 0x0b 0x43 0x15 0x0d                   y.C..
     body (0)
 
-#### RECORD 68 CalBGForPH 2013-04-21T07:25:59 head[2], body[0] op[0x0a]
+#### RECORD 70 CalBGForPH 2013-04-21T07:25:59 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 186}
@@ -1276,7 +1292,7 @@
     0000   0x7b 0x19 0x27 0x15 0x0d                   {.'..
     body (0)
 
-#### RECORD 69 BolusWizard 2013-04-21T07:26:02 head[2], body[13] op[0x5b]
+#### RECORD 71 BolusWizard 2013-04-21T07:26:02 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 13,
@@ -1309,7 +1325,7 @@
               0   80   13   45  106   13    0    0
               0    0    0   13  125
 
-#### RECORD 70 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
+#### RECORD 72 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 252, 'amount': 1.3, 'curve': 4},
@@ -1323,7 +1339,7 @@
 
     body (0)
 
-#### RECORD 71 Bolus 2013-04-21T07:26:02 head[4], body[0] op[0x01]
+#### RECORD 73 Bolus 2013-04-21T07:26:02 head[4], body[0] op[0x01]
 ###### DECODED
 ```python
 {'amount': 1.3, 'dual_component': '??', 'programmed': 1.3, 'type': '??'}
@@ -1336,7 +1352,7 @@
     0000   0x42 0x1a 0x47 0x15 0x0d                   B.G..
     body (0)
 
-#### RECORD 72 PumpSuspend 2013-04-21T08:42:20 head[2], body[0] op[0x1e]
+#### RECORD 74 PumpSuspend 2013-04-21T08:42:20 head[2], body[0] op[0x1e]
 
     op hex (2)
     0000   0x1e 0x00                                  ..
@@ -1346,7 +1362,7 @@
     0000   0x54 0x2a 0x08 0x15 0x0d                   T*...
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 73 PumpResume 2013-04-21T09:11:47 head[2], body[0] op[0x1f]
+#### RECORD 75 PumpResume 2013-04-21T09:11:47 head[2], body[0] op[0x1f]
 
     op hex (2)
     0000   0x1f 0x00                                  ..
@@ -1356,7 +1372,7 @@
     0000   0x6f 0x0b 0x09 0x15 0x0d                   o....
     body (0)
 
-#### RECORD 74 CalBGForPH 2013-04-21T10:21:47 head[2], body[0] op[0x0a]
+#### RECORD 76 CalBGForPH 2013-04-21T10:21:47 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
 {'amount': 220}
@@ -1369,7 +1385,7 @@
     0000   0x6f 0x15 0x2a 0x15 0x0d                   o.*..
     body (0)
 
-#### RECORD 75 BolusWizard 2013-04-21T10:21:49 head[2], body[13] op[0x5b]
+#### RECORD 77 BolusWizard 2013-04-21T10:21:49 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
 {'_byte[5]': 21,
@@ -1402,7 +1418,7 @@
               0   80   13   45  106   21    0    0
               0    3    0   18  125
 
-#### RECORD 76 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
+#### RECORD 78 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 177, 'amount': 1.3, 'curve': 4},
@@ -1419,7 +1435,7 @@
 
     body (0)
 
-#### RECORD 77 LowReservoir unknown head[2], body[0] op[0x34]
+#### RECORD 79 LowReservoir unknown head[2], body[0] op[0x34]
 
     op hex (2)
     0000   0x34 0xc8                                  4.
@@ -1429,4 +1445,4 @@
 
     body (0)
 
-`end analysis/bewest-pump/fall-2013//ReadHistoryData-page-25.data: 78 records`
+`end analysis/bewest-pump/fall-2013//ReadHistoryData-page-25.data: 80 records`
