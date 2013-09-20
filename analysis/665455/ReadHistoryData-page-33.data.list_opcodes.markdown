@@ -456,16 +456,16 @@
     0000   0x20 0xe3 0x53 0x18 0x0d                    .S..
     body (0)
     HOUR BITS: [1, 1, 1]
-#### RECORD 26 MResultTotals 2013-03-25T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 26 MResultTotals 2013-03-25T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0xc6                   .....
     decimal
-              7    0
+              7    0    0    4  198
     datetime (2013-03-25T00:00:00)
-    0000   0x00 0x04 0xc6 0x38 0x8d                   ...8.
+    0000   0x38 0x8d                                  8.
     body (0)
-    DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
+    HOUR BITS: [1, 0, 0]
 #### RECORD 27 Model522ResultTotals 2013-03-25T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
@@ -816,16 +816,16 @@
     0000   0x02 0xc0 0x52 0x19 0x0d                   ..R..
     body (0)
     HOUR BITS: [1, 1, 0]
-#### RECORD 47 MResultTotals 2013-03-26T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 47 MResultTotals 2013-03-26T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0xae                   .....
     decimal
-              7    0
+              7    0    0    4  174
     datetime (2013-03-26T00:00:00)
-    0000   0x00 0x04 0xae 0x39 0x8d                   ...9.
+    0000   0x39 0x8d                                  9.
     body (0)
-    DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
+    HOUR BITS: [1, 0, 0]
 #### RECORD 48 Model522ResultTotals 2013-03-26T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
@@ -1202,16 +1202,16 @@
     0000   0x2f 0xcc 0x35 0x1a 0x0d                   /.5..
     body (0)
     HOUR BITS: [1, 1, 0]
-#### RECORD 70 MResultTotals 2013-03-27T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 70 MResultTotals 2013-03-27T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x5c                   ....\
     decimal
-              7    0
+              7    0    0    5   92
     datetime (2013-03-27T00:00:00)
-    0000   0x00 0x05 0x5c 0x3a 0x8d                   ..\:.
+    0000   0x3a 0x8d                                  :.
     body (0)
-    DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
+    HOUR BITS: [1, 0, 0]
 #### RECORD 71 Model522ResultTotals 2013-03-27T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)

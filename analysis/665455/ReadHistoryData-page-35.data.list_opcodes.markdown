@@ -186,16 +186,16 @@ reading more to debug 0x00
     0000   0x1d 0xf3 0x57 0x10 0x0d                   ..W..
     body (0)
     HOUR BITS: [1, 1, 1]
-#### RECORD 11 MResultTotals 2013-03-17T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 11 MResultTotals 2013-03-17T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0xe4                   .....
     decimal
-              7    0
+              7    0    0    4  228
     datetime (2013-03-17T00:00:00)
-    0000   0x00 0x04 0xe4 0x30 0x8d                   ...0.
+    0000   0x30 0x8d                                  0.
     body (0)
-    DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
+    HOUR BITS: [1, 0, 0]
 #### RECORD 12 Model522ResultTotals 2013-03-17T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
@@ -549,16 +549,16 @@ reading more to debug 0x00
     0000   0x32 0xc4 0x54 0x11 0x0d                   2.T..
     body (0)
     HOUR BITS: [1, 1, 0]
-#### RECORD 33 MResultTotals 2013-03-18T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 33 MResultTotals 2013-03-18T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x6e                   ....n
     decimal
-              7    0
+              7    0    0    5  110
     datetime (2013-03-18T00:00:00)
-    0000   0x00 0x05 0x6e 0x31 0x8d                   ..n1.
+    0000   0x31 0x8d                                  1.
     body (0)
-    DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
+    HOUR BITS: [1, 0, 0]
 #### RECORD 34 Model522ResultTotals 2013-03-18T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
@@ -940,16 +940,16 @@ reading more to debug 0x00
     0000   0x23 0xcd 0x37 0x12 0x0d                   #.7..
     body (0)
     HOUR BITS: [1, 1, 0]
-#### RECORD 56 MResultTotals 2013-03-19T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 56 MResultTotals 2013-03-19T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0xf2                   .....
     decimal
-              7    0
+              7    0    0    4  242
     datetime (2013-03-19T00:00:00)
-    0000   0x00 0x04 0xf2 0x32 0x8d                   ...2.
+    0000   0x32 0x8d                                  2.
     body (0)
-    DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
+    HOUR BITS: [1, 0, 0]
 #### RECORD 57 Model522ResultTotals 2013-03-19T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
@@ -1491,14 +1491,14 @@ reading more to debug 0x00
     0000   0x19 0xf6 0x35 0x13 0x0d                   ..5..
     body (0)
     HOUR BITS: [1, 1, 1]
-#### RECORD 87 MResultTotals 2013-03-20T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 87 MResultTotals 2013-03-20T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0xb4                   .....
     decimal
-              7    0
+              7    0    0    5  180
     datetime (2013-03-20T00:00:00)
-    0000   0x00 0x05 0xb4 0x33 0x8d                   ...3.
+    0000   0x33 0x8d                                  3.
     body (0)
-    DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
+    HOUR BITS: [1, 0, 0]
 `end analysis/bewest-pump/fall-2013//ReadHistoryData-page-35.data: 88 records`

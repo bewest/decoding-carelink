@@ -564,16 +564,16 @@
     0000   0x5b 0x20 0x17 0x1d 0x0d                   [ ...
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 30 MResultTotals 2013-04-30T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 30 MResultTotals 2013-04-30T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x0e                   .....
     decimal
-              7    0
+              7    0    0    5   14
     datetime (2013-04-30T00:00:00)
-    0000   0x00 0x05 0x0e 0x5d 0x0d                   ...].
+    0000   0x5d 0x0d                                  ].
     body (0)
-    DAY BITS: [0, 1, 0]
+
 #### RECORD 31 Model522ResultTotals 2013-04-30T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)

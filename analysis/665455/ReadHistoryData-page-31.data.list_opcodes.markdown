@@ -1,5 +1,5 @@
 ## START analysis/bewest-pump/fall-2013//ReadHistoryData-page-31.data
-ERROR day is out of range for month (2013, 3, 32, 0, 0, 0) 0000   0x00 0x05 0x1e 0x3f 0x8d                   ...?.
+ERROR day is out of range for month (2013, 3, 32, 0, 0, 0) 0000   0x3f 0x8d                                  ?.
 ERROR day is out of range for month 0000   0x3f 0x8d                                  ?.
 #### STOPPING DOUBLE NULLS @ 1013, found 9 nulls
 reading more to debug 0x00
@@ -81,16 +81,16 @@ reading more to debug 0x00
     0000   0x29 0xfb 0x37 0x1e 0x0d                   ).7..
     body (0)
     HOUR BITS: [1, 1, 1]
-#### RECORD 4 MResultTotals 2013-03-31T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 4 MResultTotals 2013-03-31T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0x32                   ....2
     decimal
-              7    0
+              7    0    0    4   50
     datetime (2013-03-31T00:00:00)
-    0000   0x00 0x04 0x32 0x3e 0x8d                   ..2>.
+    0000   0x3e 0x8d                                  >.
     body (0)
-    DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
+    HOUR BITS: [1, 0, 0]
 #### RECORD 5 Model522ResultTotals 2013-03-31T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
@@ -473,17 +473,17 @@ reading more to debug 0x00
     0000   0x1b 0xcd 0x56 0x1f 0x0d                   ..V..
     body (0)
     HOUR BITS: [1, 1, 0]
-ERROR day is out of range for month (2013, 3, 32, 0, 0, 0) 0000   0x00 0x05 0x1e 0x3f 0x8d                   ...?.
-#### RECORD 28 MResultTotals (2013, 3, 32, 0, 0, 0) head[2], body[0] op[0x07]
+ERROR day is out of range for month (2013, 3, 32, 0, 0, 0) 0000   0x3f 0x8d                                  ?.
+#### RECORD 28 MResultTotals (2013, 3, 32, 0, 0, 0) head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x1e                   .....
     decimal
-              7    0
+              7    0    0    5   30
     datetime ((2013, 3, 32, 0, 0, 0))
-    0000   0x00 0x05 0x1e 0x3f 0x8d                   ...?.
+    0000   0x3f 0x8d                                  ?.
     body (0)
-    DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
+    HOUR BITS: [1, 0, 0]
 ERROR day is out of range for month 0000   0x3f 0x8d                                  ?.
 #### RECORD 29 Model522ResultTotals (2013, 3, 32, 0, 0, 0) head[1], body[41] op[0x6d]
 
@@ -966,16 +966,16 @@ ERROR day is out of range for month 0000   0x3f 0x8d                            
     0000   0x69 0x32 0x55 0x01 0x0d                   i2U..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 55 MResultTotals 2013-04-02T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 55 MResultTotals 2013-04-02T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x18                   .....
     decimal
-              7    0
+              7    0    0    5   24
     datetime (2013-04-02T00:00:00)
-    0000   0x00 0x05 0x18 0x41 0x0d                   ...A.
+    0000   0x41 0x0d                                  A.
     body (0)
-    DAY BITS: [0, 1, 0]
+
 #### RECORD 56 Model522ResultTotals 2013-04-02T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)

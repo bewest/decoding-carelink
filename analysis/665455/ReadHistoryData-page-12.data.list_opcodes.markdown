@@ -118,16 +118,16 @@ reading more to debug 0x00
     0000   0x54 0x9e 0x36 0x0a 0x0d                   T.6..
     body (0)
     HOUR BITS: [1, 0, 0]
-#### RECORD 6 MResultTotals 2013-06-11T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 6 MResultTotals 2013-06-11T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0xfa                   .....
     decimal
-              7    0
+              7    0    0    4  250
     datetime (2013-06-11T00:00:00)
-    0000   0x00 0x04 0xfa 0x6a 0x0d                   ...j.
+    0000   0x6a 0x0d                                  j.
     body (0)
-    DAY BITS: [0, 1, 1]
+
 #### RECORD 7 Model522ResultTotals 2013-06-11T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
@@ -296,16 +296,16 @@ reading more to debug 0x00
     0000   0x42 0xa0 0x34 0x0b 0x0d                   B.4..
     body (0)
     HOUR BITS: [1, 0, 1]
-#### RECORD 16 MResultTotals 2013-06-12T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 16 MResultTotals 2013-06-12T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0x58                   ....X
     decimal
-              7    0
+              7    0    0    4   88
     datetime (2013-06-12T00:00:00)
-    0000   0x00 0x04 0x58 0x6b 0x0d                   ..Xk.
+    0000   0x6b 0x0d                                  k.
     body (0)
-    DAY BITS: [0, 1, 1]
+
 #### RECORD 17 Model522ResultTotals 2013-06-12T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
@@ -654,16 +654,16 @@ reading more to debug 0x00
     0000   0x41 0x99 0x56 0x0c 0x0d                   A.V..
     body (0)
     HOUR BITS: [1, 0, 0]
-#### RECORD 39 MResultTotals 2013-06-13T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 39 MResultTotals 2013-06-13T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x34                   ....4
     decimal
-              7    0
+              7    0    0    5   52
     datetime (2013-06-13T00:00:00)
-    0000   0x00 0x05 0x34 0x6c 0x0d                   ..4l.
+    0000   0x6c 0x0d                                  l.
     body (0)
-    DAY BITS: [0, 1, 1]
+
 #### RECORD 40 Model522ResultTotals 2013-06-13T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
@@ -1031,16 +1031,16 @@ reading more to debug 0x00
     0000   0x61 0x86 0x35 0x0d 0x0d                   a.5..
     body (0)
     HOUR BITS: [1, 0, 0]
-#### RECORD 62 MResultTotals 2013-06-14T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 62 MResultTotals 2013-06-14T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x78                   ....x
     decimal
-              7    0
+              7    0    0    5  120
     datetime (2013-06-14T00:00:00)
-    0000   0x00 0x05 0x78 0x6d 0x0d                   ..xm.
+    0000   0x6d 0x0d                                  m.
     body (0)
-    DAY BITS: [0, 1, 1]
+
 #### RECORD 63 Model522ResultTotals 2013-06-14T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
@@ -1341,16 +1341,16 @@ reading more to debug 0x00
     0000   0x48 0xa9 0x34 0x0e 0x0d                   H.4..
     body (0)
     HOUR BITS: [1, 0, 1]
-#### RECORD 81 MResultTotals 2013-06-15T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 81 MResultTotals 2013-06-15T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0xec                   .....
     decimal
-              7    0
+              7    0    0    4  236
     datetime (2013-06-15T00:00:00)
-    0000   0x00 0x04 0xec 0x6e 0x0d                   ...n.
+    0000   0x6e 0x0d                                  n.
     body (0)
-    DAY BITS: [0, 1, 1]
+
 #### RECORD 82 Model522ResultTotals 2013-06-15T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)

@@ -88,16 +88,16 @@
     0000   0x5c 0x0f 0x54 0x09 0x0d                   \.T..
     body (0)
 
-#### RECORD 5 MResultTotals 2013-04-10T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 5 MResultTotals 2013-04-10T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x04 0xac                   .....
     decimal
-              7    0
+              7    0    0    4  172
     datetime (2013-04-10T00:00:00)
-    0000   0x00 0x04 0xac 0x49 0x0d                   ...I.
+    0000   0x49 0x0d                                  I.
     body (0)
-    DAY BITS: [0, 1, 0]
+
 #### RECORD 6 Model522ResultTotals 2013-04-10T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
@@ -602,16 +602,16 @@
     0000   0x47 0x08 0x57 0x0a 0x0d                   G.W..
     body (0)
 
-#### RECORD 34 MResultTotals 2013-04-11T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 34 MResultTotals 2013-04-11T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x38                   ....8
     decimal
-              7    0
+              7    0    0    5   56
     datetime (2013-04-11T00:00:00)
-    0000   0x00 0x05 0x38 0x4a 0x0d                   ..8J.
+    0000   0x4a 0x0d                                  J.
     body (0)
-    DAY BITS: [0, 1, 0]
+
 #### RECORD 35 Model522ResultTotals 2013-04-11T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
@@ -1081,16 +1081,16 @@
     0000   0x4c 0x01 0x54 0x0b 0x0d                   L.T..
     body (0)
 
-#### RECORD 62 MResultTotals 2013-04-12T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 62 MResultTotals 2013-04-12T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x86                   .....
     decimal
-              7    0
+              7    0    0    5  134
     datetime (2013-04-12T00:00:00)
-    0000   0x00 0x05 0x86 0x4b 0x0d                   ...K.
+    0000   0x4b 0x0d                                  K.
     body (0)
-    DAY BITS: [0, 1, 0]
+
 #### RECORD 63 Model522ResultTotals 2013-04-12T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
@@ -1432,16 +1432,16 @@
     0000   0x56 0x2f 0x17 0x0c 0x0d                   V/...
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 82 MResultTotals 2013-04-13T00:00:00 head[2], body[0] op[0x07]
+#### RECORD 82 MResultTotals 2013-04-13T00:00:00 head[5], body[0] op[0x07]
 
-    op hex (2)
-    0000   0x07 0x00                                  ..
+    op hex (5)
+    0000   0x07 0x00 0x00 0x05 0x4a                   ....J
     decimal
-              7    0
+              7    0    0    5   74
     datetime (2013-04-13T00:00:00)
-    0000   0x00 0x05 0x4a 0x4c 0x0d                   ..JL.
+    0000   0x4c 0x0d                                  L.
     body (0)
-    DAY BITS: [0, 1, 0]
+
 #### RECORD 83 Model522ResultTotals 2013-04-13T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
