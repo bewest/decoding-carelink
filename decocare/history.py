@@ -47,11 +47,12 @@ class NoDelivery(KnownRecord):
   opcode = 0x06
   head_length = 4
 #class ResultTotals(KnownRecord):
-class ResultTotals(InvalidRecord):
+class MResultTotals(InvalidRecord):
   """On 722 this seems like two records."""
   opcode = 0x07
-  head_length = 5
-  body_length = 37 + 4
+  #head_length = 5
+  #body_length = 37 + 4
+  #body_length = 2
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
     if larger:
@@ -125,7 +126,7 @@ class ChangeUtility(KnownRecord):
 class ChangeTimeDisplay(KnownRecord):
   opcode = 0x64
 
-_confirmed = [ Bolus, Prime, NoDelivery, ResultTotals, ChangeBasalProfile,
+_confirmed = [ Bolus, Prime, NoDelivery, MResultTotals, ChangeBasalProfile,
                ClearAlarm, SelectBasalProfile, TempBasalDuration, ChangeTime,
                NewTimeSet, LowBattery, Battery, PumpSuspend,
                PumpResume, CalBGForPH, Rewind, EnableDisableRemote,
@@ -191,7 +192,7 @@ class Model522ResultTotals(KnownRecord):
       self.datetime = date = datetime(*mid)
       return date
     except ValueError, e:
-      raise
+      print "ERROR", e, lib.hexdump(self.date)
       pass
     return mid
       
@@ -219,10 +220,17 @@ def unmask_m_midnight(data):
   minutes = 0
   hours   = 0
 
-  day     = parse_seconds(data[0])
-  year    = parse_years(data[1])
+  day     = parse_day(data[0])
 
-  month   = parse_months( data[0], data[2] )
+  high = data[0] >> 4
+  low  = data[0] & 0x1F
+
+  year_high = data[1] >> 4
+  # month = int(high) #+ year_high
+  month   = parse_months( data[0], data[1] )
+  day = int(low)
+
+  year = parse_years(data[1])
   return (year, month, day, hours, minutes, seconds)
 
 _confirmed.append(Model522ResultTotals)
