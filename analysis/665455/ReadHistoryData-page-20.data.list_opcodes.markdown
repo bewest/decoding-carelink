@@ -359,28 +359,30 @@ reading more to debug 0x00
     0000   0x00 0x05 0xe8 0x47 0x8d                   ...G.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 20 Model522ResultTotals 2013-05-08T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 20 Model522ResultTotals 2013-05-08T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-05-08T00:00:00)
-    0000   0x47 0x8d 0x05 0x10 0xdf                   G....
-    body (38)
+    0000   0x47 0x8d                                  G.
+    body (41)
     hex
-    0000   0x5c 0x60 0x05 0x00 0x00 0x05 0xe8 0x03    \`......
-    0008   0x78 0x3b 0x02 0x70 0x29 0x00 0x70 0x02    x;.p).p.
-    0010   0x70 0x29 0x01 0x48 0x35 0x01 0x28 0x2f    p).H5.(/
-    0018   0x00 0x00 0x00 0x05 0x02 0x03 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x10 0xdf 0x5c 0x60 0x05 0x00 0x00    ...\`...
+    0008   0x05 0xe8 0x03 0x78 0x3b 0x02 0x70 0x29    ...x;.p)
+    0010   0x00 0x70 0x02 0x70 0x29 0x01 0x48 0x35    .p.p).H5
+    0018   0x01 0x28 0x2f 0x00 0x00 0x00 0x05 0x02    .(/.....
+    0020   0x03 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             92   96    5    0    0    5  232    3
-            120   59    2  112   41    0  112    2
-            112   41    1   72   53    1   40   47
-              0    0    0    5    2    3    0    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 1, 0, 1]
+              5   16  223   92   96    5    0    0
+              5  232    3  120   59    2  112   41
+              0  112    2  112   41    1   72   53
+              1   40   47    0    0    0    5    2
+              3    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 21 LowReservoir 2013-05-08T10:54:32 head[2], body[0] op[0x34]
 ###### DECODED
 ```python
@@ -972,28 +974,30 @@ reading more to debug 0x00
     0000   0x00 0x05 0x76 0x48 0x8d                   ..vH.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 62 Model522ResultTotals 2013-05-09T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 62 Model522ResultTotals 2013-05-09T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-05-09T00:00:00)
-    0000   0x48 0x8d 0x05 0x00 0x80                   H....
-    body (38)
+    0000   0x48 0x8d                                  H.
+    body (41)
     hex
-    0000   0x55 0xa3 0x05 0x00 0x00 0x05 0x76 0x03    U.....v.
-    0008   0x6e 0x3f 0x02 0x08 0x25 0x00 0x9f 0x02    n?..%...
-    0010   0x08 0x25 0x01 0xd0 0x59 0x00 0x38 0x0b    .%..Y.8.
-    0018   0x00 0x00 0x00 0x05 0x03 0x01 0x01 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x00 0x80 0x55 0xa3 0x05 0x00 0x00    ...U....
+    0008   0x05 0x76 0x03 0x6e 0x3f 0x02 0x08 0x25    .v.n?..%
+    0010   0x00 0x9f 0x02 0x08 0x25 0x01 0xd0 0x59    ....%..Y
+    0018   0x00 0x38 0x0b 0x00 0x00 0x00 0x05 0x03    .8......
+    0020   0x01 0x01 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             85  163    5    0    0    5  118    3
-            110   63    2    8   37    0  159    2
-              8   37    1  208   89    0   56   11
-              0    0    0    5    3    1    1    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
+              5    0  128   85  163    5    0    0
+              5  118    3  110   63    2    8   37
+              0  159    2    8   37    1  208   89
+              0   56   11    0    0    0    5    3
+              1    1    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 63 CalBGForPH 2013-05-09T00:08:28 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -1241,28 +1245,30 @@ reading more to debug 0x00
     0000   0x00 0x04 0xa4 0x49 0x8d                   ...I.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 78 Model522ResultTotals 2013-05-10T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 78 Model522ResultTotals 2013-05-10T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-05-10T00:00:00)
-    0000   0x49 0x8d 0x05 0x10 0x93                   I....
-    body (38)
+    0000   0x49 0x8d                                  I.
+    body (41)
     hex
-    0000   0x42 0x1e 0x04 0x00 0x00 0x04 0xa4 0x03    B.......
-    0008   0x70 0x4a 0x01 0x34 0x1a 0x00 0x40 0x01    pJ.4..@.
-    0010   0x34 0x1a 0x00 0xa8 0x37 0x00 0x8c 0x2d    4...7..-
-    0018   0x00 0x00 0x00 0x03 0x02 0x01 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x10 0x93 0x42 0x1e 0x04 0x00 0x00    ...B....
+    0008   0x04 0xa4 0x03 0x70 0x4a 0x01 0x34 0x1a    ...pJ.4.
+    0010   0x00 0x40 0x01 0x34 0x1a 0x00 0xa8 0x37    .@.4...7
+    0018   0x00 0x8c 0x2d 0x00 0x00 0x00 0x03 0x02    ..-.....
+    0020   0x01 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             66   30    4    0    0    4  164    3
-            112   74    1   52   26    0   64    1
-             52   26    0  168   55    0  140   45
-              0    0    0    3    2    1    0    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 1]
+              5   16  147   66   30    4    0    0
+              4  164    3  112   74    1   52   26
+              0   64    1   52   26    0  168   55
+              0  140   45    0    0    0    3    2
+              1    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 79 PumpSuspend 2013-05-10T12:53:02 head[2], body[0] op[0x1e]
 
     op hex (2)

@@ -1,26 +1,28 @@
 ## START analysis/bewest-pump/fall-2013//ReadHistoryData-page-33.data
-#### RECORD 0 Model522ResultTotals 2013-03-24T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 0 Model522ResultTotals 2013-03-24T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-03-24T00:00:00)
-    0000   0x37 0x8d 0x05 0x10 0xd9                   7....
-    body (38)
+    0000   0x37 0x8d                                  7.
+    body (41)
     hex
-    0000   0x46 0x8f 0x0b 0x00 0x00 0x04 0xce 0x03    F.......
-    0008   0x72 0x48 0x01 0x5c 0x1c 0x00 0x18 0x01    rH.\....
-    0010   0x5c 0x1c 0x00 0x48 0x15 0x01 0x14 0x4f    \..H...O
-    0018   0x00 0x00 0x00 0x04 0x00 0x03 0x01 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x10 0xd9 0x46 0x8f 0x0b 0x00 0x00    ...F....
+    0008   0x04 0xce 0x03 0x72 0x48 0x01 0x5c 0x1c    ...rH.\.
+    0010   0x00 0x18 0x01 0x5c 0x1c 0x00 0x48 0x15    ...\..H.
+    0018   0x01 0x14 0x4f 0x00 0x00 0x00 0x04 0x00    ..O.....
+    0020   0x03 0x01 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             70  143   11    0    0    4  206    3
-            114   72    1   92   28    0   24    1
-             92   28    0   72   21    1   20   79
-              0    0    0    4    0    3    1    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 1, 0, 1]
+              5   16  217   70  143   11    0    0
+              4  206    3  114   72    1   92   28
+              0   24    1   92   28    0   72   21
+              1   20   79    0    0    0    4    0
+              3    1    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 1 PumpSuspend 2013-03-24T09:20:55 head[2], body[0] op[0x1e]
 
     op hex (2)
@@ -464,28 +466,30 @@
     0000   0x00 0x04 0xc6 0x38 0x8d                   ...8.
     body (0)
     DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 27 Model522ResultTotals 2013-03-25T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 27 Model522ResultTotals 2013-03-25T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-03-25T00:00:00)
-    0000   0x38 0x8d 0x05 0x00 0x6d                   8...m
-    body (38)
+    0000   0x38 0x8d                                  8.
+    body (41)
     hex
-    0000   0x2e 0x97 0x09 0x00 0x00 0x04 0xc6 0x03    ........
-    0008   0x7a 0x49 0x01 0x4c 0x1b 0x00 0x78 0x01    zI.L..x.
-    0010   0x4c 0x1b 0x01 0x4c 0x64 0x00 0x00 0x00    L..Ld...
-    0018   0x00 0x00 0x00 0x05 0x05 0x00 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x00 0x6d 0x2e 0x97 0x09 0x00 0x00    ..m.....
+    0008   0x04 0xc6 0x03 0x7a 0x49 0x01 0x4c 0x1b    ...zI.L.
+    0010   0x00 0x78 0x01 0x4c 0x1b 0x01 0x4c 0x64    .x.L..Ld
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x05 0x05    ........
+    0020   0x00 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             46  151    9    0    0    4  198    3
-            122   73    1   76   27    0  120    1
-             76   27    1   76  100    0    0    0
-              0    0    0    5    5    0    0    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [0, 1, 1, 0]
+              5    0  109   46  151    9    0    0
+              4  198    3  122   73    1   76   27
+              0  120    1   76   27    1   76  100
+              0    0    0    0    0    0    5    5
+              0    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 28 PumpSuspend 2013-03-25T13:01:55 head[2], body[0] op[0x1e]
 
     op hex (2)
@@ -822,28 +826,30 @@
     0000   0x00 0x04 0xae 0x39 0x8d                   ...9.
     body (0)
     DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 48 Model522ResultTotals 2013-03-26T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 48 Model522ResultTotals 2013-03-26T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-03-26T00:00:00)
-    0000   0x39 0x8d 0x05 0x00 0x93                   9....
-    body (38)
+    0000   0x39 0x8d                                  9.
+    body (41)
     hex
-    0000   0x70 0xb7 0x06 0x00 0x00 0x04 0xae 0x03    p.......
-    0008   0x5e 0x48 0x01 0x50 0x1c 0x00 0x70 0x01    ^H.P..p.
-    0010   0x50 0x1c 0x01 0x50 0x64 0x00 0x00 0x00    P..Pd...
-    0018   0x00 0x00 0x00 0x04 0x04 0x00 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x00 0x93 0x70 0xb7 0x06 0x00 0x00    ...p....
+    0008   0x04 0xae 0x03 0x5e 0x48 0x01 0x50 0x1c    ...^H.P.
+    0010   0x00 0x70 0x01 0x50 0x1c 0x01 0x50 0x64    .p.P..Pd
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x04 0x04    ........
+    0020   0x00 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            112  183    6    0    0    4  174    3
-             94   72    1   80   28    0  112    1
-             80   28    1   80  100    0    0    0
-              0    0    0    4    4    0    0    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 1]
+              5    0  147  112  183    6    0    0
+              4  174    3   94   72    1   80   28
+              0  112    1   80   28    1   80  100
+              0    0    0    0    0    0    4    4
+              0    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 49 PumpSuspend 2013-03-26T10:48:39 head[2], body[0] op[0x1e]
 
     op hex (2)
@@ -1206,28 +1212,30 @@
     0000   0x00 0x05 0x5c 0x3a 0x8d                   ..\:.
     body (0)
     DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 71 Model522ResultTotals 2013-03-27T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 71 Model522ResultTotals 2013-03-27T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-03-27T00:00:00)
-    0000   0x3a 0x8d 0x05 0x10 0xdb                   :....
-    body (38)
+    0000   0x3a 0x8d                                  :.
+    body (41)
     hex
-    0000   0x75 0xc9 0x08 0x00 0x00 0x05 0x5c 0x03    u.....\.
-    0008   0x74 0x40 0x01 0xe8 0x24 0x00 0x1c 0x01    t@..$...
-    0010   0xe8 0x24 0x00 0x54 0x11 0x01 0x94 0x53    .$.T...S
-    0018   0x00 0x00 0x00 0x04 0x01 0x03 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x10 0xdb 0x75 0xc9 0x08 0x00 0x00    ...u....
+    0008   0x05 0x5c 0x03 0x74 0x40 0x01 0xe8 0x24    .\.t@..$
+    0010   0x00 0x1c 0x01 0xe8 0x24 0x00 0x54 0x11    ....$.T.
+    0018   0x01 0x94 0x53 0x00 0x00 0x00 0x04 0x01    ..S.....
+    0020   0x03 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            117  201    8    0    0    5   92    3
-            116   64    1  232   36    0   28    1
-            232   36    0   84   17    1  148   83
-              0    0    0    4    1    3    0    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 1, 0, 1]
+              5   16  219  117  201    8    0    0
+              5   92    3  116   64    1  232   36
+              0   28    1  232   36    0   84   17
+              1  148   83    0    0    0    4    1
+              3    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 72 LowReservoir 2013-03-27T07:56:50 head[2], body[0] op[0x34]
 ###### DECODED
 ```python

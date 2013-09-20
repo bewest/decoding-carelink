@@ -345,28 +345,30 @@ reading more to debug 0x00
     0000   0x00 0x05 0xc4 0x3b 0x8d                   ...;.
     body (0)
     DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 18 Model522ResultTotals 2013-03-28T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 18 Model522ResultTotals 2013-03-28T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-03-28T00:00:00)
-    0000   0x3b 0x8d 0x05 0x10 0xb5                   ;....
-    body (38)
+    0000   0x3b 0x8d                                  ;.
+    body (41)
     hex
-    0000   0x4b 0x39 0x06 0x00 0x00 0x05 0xc4 0x03    K9......
-    0008   0x6c 0x3b 0x02 0x58 0x29 0x00 0x93 0x02    l;.X)...
-    0010   0x58 0x29 0x01 0x90 0x43 0x00 0xc8 0x21    X)..C..!
-    0018   0x00 0x00 0x00 0x07 0x04 0x03 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x10 0xb5 0x4b 0x39 0x06 0x00 0x00    ...K9...
+    0008   0x05 0xc4 0x03 0x6c 0x3b 0x02 0x58 0x29    ...l;.X)
+    0010   0x00 0x93 0x02 0x58 0x29 0x01 0x90 0x43    ...X)..C
+    0018   0x00 0xc8 0x21 0x00 0x00 0x00 0x07 0x04    ..!.....
+    0020   0x03 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             75   57    6    0    0    5  196    3
-            108   59    2   88   41    0  147    2
-             88   41    1  144   67    0  200   33
-              0    0    0    7    4    3    0    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 1, 1]
+              5   16  181   75   57    6    0    0
+              5  196    3  108   59    2   88   41
+              0  147    2   88   41    1  144   67
+              0  200   33    0    0    0    7    4
+              3    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 19 PumpSuspend 2013-03-28T11:12:20 head[2], body[0] op[0x1e]
 
     op hex (2)
@@ -1000,28 +1002,30 @@ reading more to debug 0x00
     0000   0x00 0x06 0x10 0x3c 0x8d                   ...<.
     body (0)
     DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 53 Model522ResultTotals 2013-03-29T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 53 Model522ResultTotals 2013-03-29T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-03-29T00:00:00)
-    0000   0x3c 0x8d 0x05 0x10 0xda                   <....
-    body (38)
+    0000   0x3c 0x8d                                  <.
+    body (41)
     hex
-    0000   0x81 0x4c 0x08 0x00 0x00 0x06 0x10 0x03    .L......
-    0008   0x6c 0x38 0x02 0xa4 0x2c 0x00 0x56 0x02    l8..,.V.
-    0010   0xa4 0x2c 0x01 0x04 0x26 0x01 0xa0 0x3e    .,..&..>
-    0018   0x00 0x00 0x00 0x08 0x03 0x05 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x10 0xda 0x81 0x4c 0x08 0x00 0x00    ....L...
+    0008   0x06 0x10 0x03 0x6c 0x38 0x02 0xa4 0x2c    ...l8..,
+    0010   0x00 0x56 0x02 0xa4 0x2c 0x01 0x04 0x26    .V..,..&
+    0018   0x01 0xa0 0x3e 0x00 0x00 0x00 0x08 0x03    ..>.....
+    0020   0x05 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            129   76    8    0    0    6   16    3
-            108   56    2  164   44    0   86    2
-            164   44    1    4   38    1  160   62
-              0    0    0    8    3    5    0    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 1, 0, 1]
+              5   16  218  129   76    8    0    0
+              6   16    3  108   56    2  164   44
+              0   86    2  164   44    1    4   38
+              1  160   62    0    0    0    8    3
+              5    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 54 CalBGForPH 2013-03-29T03:03:18 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -1384,28 +1388,30 @@ reading more to debug 0x00
     0000   0x00 0x05 0x1e 0x3d 0x8d                   ...=.
     body (0)
     DAY BITS: [0, 0, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 76 Model522ResultTotals 2013-03-30T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 76 Model522ResultTotals 2013-03-30T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-03-30T00:00:00)
-    0000   0x3d 0x8d 0x05 0x00 0x73                   =...s
-    body (38)
+    0000   0x3d 0x8d                                  =.
+    body (41)
     hex
-    0000   0x48 0xbf 0x08 0x00 0x00 0x05 0x1e 0x03    H.......
-    0008   0x76 0x44 0x01 0xa8 0x20 0x00 0x88 0x01    vD.. ...
-    0010   0xa8 0x20 0x01 0x78 0x59 0x00 0x30 0x0b    . .xY.0.
-    0018   0x00 0x00 0x00 0x04 0x03 0x01 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x00 0x73 0x48 0xbf 0x08 0x00 0x00    ..sH....
+    0008   0x05 0x1e 0x03 0x76 0x44 0x01 0xa8 0x20    ...vD.. 
+    0010   0x00 0x88 0x01 0xa8 0x20 0x01 0x78 0x59    .... .xY
+    0018   0x00 0x30 0x0b 0x00 0x00 0x00 0x04 0x03    .0......
+    0020   0x01 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             72  191    8    0    0    5   30    3
-            118   68    1  168   32    0  136    1
-            168   32    1  120   89    0   48   11
-              0    0    0    4    3    1    0    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [0, 1, 1, 1]
+              5    0  115   72  191    8    0    0
+              5   30    3  118   68    1  168   32
+              0  136    1  168   32    1  120   89
+              0   48   11    0    0    0    4    3
+              1    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 77 PumpSuspend 2013-03-30T14:42:43 head[2], body[0] op[0x1e]
 
     op hex (2)

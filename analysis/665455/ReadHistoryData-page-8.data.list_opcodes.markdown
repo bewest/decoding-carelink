@@ -1,5 +1,5 @@
 ## START analysis/bewest-pump/fall-2013//ReadHistoryData-page-8.data
-ERROR day is out of range for month 0000   0x7e 0x0d 0x05 0x10 0xf7                   ~....
+ERROR day is out of range for month 0000   0x7e 0x0d                                  ~.
 #### RECORD 0 BolusWizard 2013-06-28T13:33:58 head[2], body[13] op[0x5b]
 ###### DECODED
 ```python
@@ -141,28 +141,30 @@ ERROR day is out of range for month 0000   0x7e 0x0d 0x05 0x10 0xf7             
     0000   0x00 0x04 0xb4 0x7c 0x0d                   ...|.
     body (0)
     DAY BITS: [0, 1, 1]
-#### RECORD 8 Model522ResultTotals 2013-06-29T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 8 Model522ResultTotals 2013-06-29T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-06-29T00:00:00)
-    0000   0x7c 0x0d 0x05 0x00 0x7a                   |...z
-    body (38)
+    0000   0x7c 0x0d                                  |.
+    body (41)
     hex
-    0000   0x68 0x88 0x04 0x00 0x00 0x04 0xb4 0x03    h.......
-    0008   0x74 0x49 0x01 0x40 0x1b 0x00 0x67 0x01    tI.@..g.
-    0010   0x40 0x1b 0x01 0x38 0x61 0x00 0x08 0x03    @..8a...
-    0018   0x00 0x00 0x00 0x02 0x01 0x00 0x01 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x00 0x7a 0x68 0x88 0x04 0x00 0x00    ..zh....
+    0008   0x04 0xb4 0x03 0x74 0x49 0x01 0x40 0x1b    ...tI.@.
+    0010   0x00 0x67 0x01 0x40 0x1b 0x01 0x38 0x61    .g.@..8a
+    0018   0x00 0x08 0x03 0x00 0x00 0x00 0x02 0x01    ........
+    0020   0x00 0x01 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            104  136    4    0    0    4  180    3
-            116   73    1   64   27    0  103    1
-             64   27    1   56   97    0    8    3
-              0    0    0    2    1    0    1    0
-             12    0  232    0    0    0
-    YEAR BITS: [0, 1, 1, 1]
+              5    0  122  104  136    4    0    0
+              4  180    3  116   73    1   64   27
+              0  103    1   64   27    1   56   97
+              0    8    3    0    0    0    2    1
+              0    1    0   12    0  232    0    0
+              0
+
 #### RECORD 9 CalBGForPH 2013-06-29T08:43:46 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -436,28 +438,30 @@ ERROR day is out of range for month 0000   0x7e 0x0d 0x05 0x10 0xf7             
     0000   0x00 0x05 0x1c 0x7d 0x0d                   ...}.
     body (0)
     DAY BITS: [0, 1, 1]
-#### RECORD 24 Model522ResultTotals 2013-06-30T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 24 Model522ResultTotals 2013-06-30T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-06-30T00:00:00)
-    0000   0x7d 0x0d 0x05 0x10 0xcb                   }....
-    body (38)
+    0000   0x7d 0x0d                                  }.
+    body (41)
     hex
-    0000   0x88 0x0d 0x02 0x00 0x00 0x05 0x1c 0x03    ........
-    0008   0x84 0x45 0x01 0x98 0x1f 0x00 0x5a 0x01    .E....Z.
-    0010   0x98 0x1f 0x01 0x10 0x43 0x00 0x88 0x21    ....C..!
-    0018   0x00 0x00 0x00 0x04 0x02 0x01 0x01 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x10 0xcb 0x88 0x0d 0x02 0x00 0x00    ........
+    0008   0x05 0x1c 0x03 0x84 0x45 0x01 0x98 0x1f    ....E...
+    0010   0x00 0x5a 0x01 0x98 0x1f 0x01 0x10 0x43    .Z.....C
+    0018   0x00 0x88 0x21 0x00 0x00 0x00 0x04 0x02    ..!.....
+    0020   0x01 0x01 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            136   13    2    0    0    5   28    3
-            132   69    1  152   31    0   90    1
-            152   31    1   16   67    0  136   33
-              0    0    0    4    2    1    1    0
-             12    0  232    0    0    0
-    YEAR BITS: [1, 1, 0, 0]
+              5   16  203  136   13    2    0    0
+              5   28    3  132   69    1  152   31
+              0   90    1  152   31    1   16   67
+              0  136   33    0    0    0    4    2
+              1    1    0   12    0  232    0    0
+              0
+
 #### RECORD 25 CalBGForPH 2013-06-30T03:22:22 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -1020,29 +1024,31 @@ ERROR day is out of range for month 0000   0x7e 0x0d 0x05 0x10 0xf7             
     0000   0x00 0x07 0x3a 0x7e 0x0d                   ..:~.
     body (0)
     DAY BITS: [0, 1, 1]
-ERROR day is out of range for month 0000   0x7e 0x0d 0x05 0x10 0xf7                   ~....
-#### RECORD 58 Model522ResultTotals (2013, 6, 31, 0, 0, 0) head[1], body[38] op[0x6d]
+ERROR day is out of range for month 0000   0x7e 0x0d                                  ~.
+#### RECORD 58 Model522ResultTotals (2013, 6, 31, 0, 0, 0) head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime ((2013, 6, 31, 0, 0, 0))
-    0000   0x7e 0x0d 0x05 0x10 0xf7                   ~....
-    body (38)
+    0000   0x7e 0x0d                                  ~.
+    body (41)
     hex
-    0000   0x9f 0x49 0x06 0x00 0x00 0x07 0x3a 0x03    .I....:.
-    0008   0x72 0x30 0x03 0xc8 0x34 0x00 0x93 0x03    r0..4...
-    0010   0xc8 0x34 0x01 0xc0 0x2e 0x02 0x08 0x36    .4.....6
-    0018   0x00 0x00 0x00 0x07 0x03 0x04 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x10 0xf7 0x9f 0x49 0x06 0x00 0x00    ....I...
+    0008   0x07 0x3a 0x03 0x72 0x30 0x03 0xc8 0x34    .:.r0..4
+    0010   0x00 0x93 0x03 0xc8 0x34 0x01 0xc0 0x2e    ....4...
+    0018   0x02 0x08 0x36 0x00 0x00 0x00 0x07 0x03    ..6.....
+    0020   0x04 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            159   73    6    0    0    7   58    3
-            114   48    3  200   52    0  147    3
-            200   52    1  192   46    2    8   54
-              0    0    0    7    3    4    0    0
-             12    0  232    0    0    0
-    YEAR BITS: [1, 1, 1, 1]
+              5   16  247  159   73    6    0    0
+              7   58    3  114   48    3  200   52
+              0  147    3  200   52    1  192   46
+              2    8   54    0    0    0    7    3
+              4    0    0   12    0  232    0    0
+              0
+
 #### RECORD 59 CalBGForPH 2013-07-01T02:15:06 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -1366,28 +1372,30 @@ ERROR day is out of range for month 0000   0x7e 0x0d 0x05 0x10 0xf7             
     0000   0x00 0x05 0x50 0x61 0x8d                   ..Pa.
     body (0)
     DAY BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 78 Model522ResultTotals 2013-07-02T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 78 Model522ResultTotals 2013-07-02T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-07-02T00:00:00)
-    0000   0x61 0x8d 0x05 0x10 0xc7                   a....
-    body (38)
+    0000   0x61 0x8d                                  a.
+    body (41)
     hex
-    0000   0x5a 0x42 0x05 0x00 0x00 0x05 0x50 0x03    ZB....P.
-    0008   0x78 0x41 0x01 0xd8 0x23 0x00 0x4a 0x01    xA..#.J.
-    0010   0xd8 0x23 0x00 0xd0 0x2c 0x01 0x08 0x38    .#..,..8
-    0018   0x00 0x00 0x00 0x04 0x02 0x02 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x10 0xc7 0x5a 0x42 0x05 0x00 0x00    ...ZB...
+    0008   0x05 0x50 0x03 0x78 0x41 0x01 0xd8 0x23    .P.xA..#
+    0010   0x00 0x4a 0x01 0xd8 0x23 0x00 0xd0 0x2c    .J..#..,
+    0018   0x01 0x08 0x38 0x00 0x00 0x00 0x04 0x02    ..8.....
+    0020   0x02 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             90   66    5    0    0    5   80    3
-            120   65    1  216   35    0   74    1
-            216   35    0  208   44    1    8   56
-              0    0    0    4    2    2    0    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 1, 0, 0]
+              5   16  199   90   66    5    0    0
+              5   80    3  120   65    1  216   35
+              0   74    1  216   35    0  208   44
+              1    8   56    0    0    0    4    2
+              2    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 79 PumpSuspend 2013-07-02T13:25:09 head[2], body[0] op[0x1e]
 
     op hex (2)

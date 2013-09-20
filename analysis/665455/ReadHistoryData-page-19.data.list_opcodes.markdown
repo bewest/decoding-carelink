@@ -1,26 +1,28 @@
 ## START analysis/bewest-pump/fall-2013//ReadHistoryData-page-19.data
-#### RECORD 0 Model522ResultTotals 2013-05-11T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 0 Model522ResultTotals 2013-05-11T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-05-11T00:00:00)
-    0000   0x4a 0x8d 0x05 0x00 0x71                   J...q
-    body (38)
+    0000   0x4a 0x8d                                  J.
+    body (41)
     hex
-    0000   0x40 0xba 0x05 0x00 0x00 0x04 0x42 0x03    @.....B.
-    0008   0x72 0x51 0x00 0xd0 0x13 0x00 0x33 0x00    rQ....3.
-    0010   0xd0 0x13 0x00 0x9c 0x4b 0x00 0x34 0x19    ....K.4.
-    0018   0x00 0x00 0x00 0x02 0x01 0x01 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x00 0x71 0x40 0xba 0x05 0x00 0x00    ..q@....
+    0008   0x04 0x42 0x03 0x72 0x51 0x00 0xd0 0x13    .B.rQ...
+    0010   0x00 0x33 0x00 0xd0 0x13 0x00 0x9c 0x4b    .3.....K
+    0018   0x00 0x34 0x19 0x00 0x00 0x00 0x02 0x01    .4......
+    0020   0x01 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             64  186    5    0    0    4   66    3
-            114   81    0  208   19    0   51    0
-            208   19    0  156   75    0   52   25
-              0    0    0    2    1    1    0    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [0, 1, 1, 1]
+              5    0  113   64  186    5    0    0
+              4   66    3  114   81    0  208   19
+              0   51    0  208   19    0  156   75
+              0   52   25    0    0    0    2    1
+              1    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 1 CalBGForPH 2013-05-11T22:49:42 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -103,28 +105,30 @@
     0000   0x00 0x04 0x58 0x4b 0x8d                   ..XK.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 6 Model522ResultTotals 2013-05-12T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 6 Model522ResultTotals 2013-05-12T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-05-12T00:00:00)
-    0000   0x4b 0x8d 0x05 0x00 0x6f                   K...o
-    body (38)
+    0000   0x4b 0x8d                                  K.
+    body (41)
     hex
-    0000   0x65 0x79 0x02 0x00 0x00 0x04 0x58 0x03    ey....X.
-    0008   0x84 0x51 0x00 0xd4 0x13 0x00 0x46 0x00    .Q....F.
-    0010   0xd4 0x13 0x00 0xd4 0x64 0x00 0x00 0x00    ....d...
-    0018   0x00 0x00 0x00 0x01 0x01 0x00 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x00 0x6f 0x65 0x79 0x02 0x00 0x00    ..oey...
+    0008   0x04 0x58 0x03 0x84 0x51 0x00 0xd4 0x13    .X..Q...
+    0010   0x00 0x46 0x00 0xd4 0x13 0x00 0xd4 0x64    .F.....d
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x01 0x01    ........
+    0020   0x00 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-            101  121    2    0    0    4   88    3
-            132   81    0  212   19    0   70    0
-            212   19    0  212  100    0    0    0
-              0    0    0    1    1    0    0    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [0, 1, 1, 0]
+              5    0  111  101  121    2    0    0
+              4   88    3  132   81    0  212   19
+              0   70    0  212   19    0  212  100
+              0    0    0    0    0    0    1    1
+              0    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 7 CalBGForPH 2013-05-12T09:05:14 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -445,28 +449,30 @@
     0000   0x00 0x04 0xee 0x4c 0x8d                   ...L.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 26 Model522ResultTotals 2013-05-13T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 26 Model522ResultTotals 2013-05-13T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-05-13T00:00:00)
-    0000   0x4c 0x8d 0x05 0x10 0xa8                   L....
-    body (38)
+    0000   0x4c 0x8d                                  L.
+    body (41)
     hex
-    0000   0x5b 0x3b 0x04 0x00 0x00 0x04 0xee 0x03    [;......
-    0008   0x72 0x46 0x01 0x7c 0x1e 0x00 0x3e 0x01    rF.|..>.
-    0010   0x7c 0x1e 0x00 0xac 0x2d 0x00 0xd0 0x37    |...-..7
-    0018   0x00 0x00 0x00 0x04 0x02 0x02 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x10 0xa8 0x5b 0x3b 0x04 0x00 0x00    ...[;...
+    0008   0x04 0xee 0x03 0x72 0x46 0x01 0x7c 0x1e    ...rF.|.
+    0010   0x00 0x3e 0x01 0x7c 0x1e 0x00 0xac 0x2d    .>.|...-
+    0018   0x00 0xd0 0x37 0x00 0x00 0x00 0x04 0x02    ..7.....
+    0020   0x02 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             91   59    4    0    0    4  238    3
-            114   70    1  124   30    0   62    1
-            124   30    0  172   45    0  208   55
-              0    0    0    4    2    2    0    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 1, 0]
+              5   16  168   91   59    4    0    0
+              4  238    3  114   70    1  124   30
+              0   62    1  124   30    0  172   45
+              0  208   55    0    0    0    4    2
+              2    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 27 CalBGForPH 2013-05-13T00:02:10 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -900,28 +906,30 @@
     0000   0x00 0x05 0x42 0x4d 0x8d                   ..BM.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 55 Model522ResultTotals 2013-05-14T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 55 Model522ResultTotals 2013-05-14T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-05-14T00:00:00)
-    0000   0x4d 0x8d 0x05 0x00 0x8e                   M....
-    body (38)
+    0000   0x4d 0x8d                                  M.
+    body (41)
     hex
-    0000   0x5d 0xb5 0x09 0x00 0x00 0x05 0x42 0x03    ].....B.
-    0008   0x62 0x40 0x01 0xe0 0x24 0x00 0x96 0x01    b@..$...
-    0010   0xe0 0x24 0x01 0xc0 0x5d 0x00 0x20 0x07    .$..]. .
-    0018   0x00 0x00 0x00 0x04 0x03 0x00 0x01 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x00 0x8e 0x5d 0xb5 0x09 0x00 0x00    ...]....
+    0008   0x05 0x42 0x03 0x62 0x40 0x01 0xe0 0x24    .B.b@..$
+    0010   0x00 0x96 0x01 0xe0 0x24 0x01 0xc0 0x5d    ....$..]
+    0018   0x00 0x20 0x07 0x00 0x00 0x00 0x04 0x03    . ......
+    0020   0x00 0x01 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             93  181    9    0    0    5   66    3
-             98   64    1  224   36    0  150    1
-            224   36    1  192   93    0   32    7
-              0    0    0    4    3    0    1    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 0]
+              5    0  142   93  181    9    0    0
+              5   66    3   98   64    1  224   36
+              0  150    1  224   36    1  192   93
+              0   32    7    0    0    0    4    3
+              0    1    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 56 PumpSuspend 2013-05-14T14:02:34 head[2], body[0] op[0x1e]
 
     op hex (2)
@@ -1186,28 +1194,30 @@
     0000   0x00 0x05 0x2e 0x4e 0x8d                   ...N.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 72 Model522ResultTotals 2013-05-15T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 72 Model522ResultTotals 2013-05-15T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-05-15T00:00:00)
-    0000   0x4e 0x8d 0x05 0x00 0xb4                   N....
-    body (38)
+    0000   0x4e 0x8d                                  N.
+    body (41)
     hex
-    0000   0x4a 0xe4 0x05 0x00 0x00 0x05 0x2e 0x03    J.......
-    0008   0x72 0x43 0x01 0xbc 0x21 0x00 0x7b 0x01    rC..!.{.
-    0010   0xbc 0x21 0x01 0x5c 0x4e 0x00 0x60 0x16    .!.\N.`.
-    0018   0x00 0x00 0x00 0x03 0x01 0x00 0x02 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x00 0xb4 0x4a 0xe4 0x05 0x00 0x00    ...J....
+    0008   0x05 0x2e 0x03 0x72 0x43 0x01 0xbc 0x21    ...rC..!
+    0010   0x00 0x7b 0x01 0xbc 0x21 0x01 0x5c 0x4e    .{..!.\N
+    0018   0x00 0x60 0x16 0x00 0x00 0x00 0x03 0x01    .`......
+    0020   0x00 0x02 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             74  228    5    0    0    5   46    3
-            114   67    1  188   33    0  123    1
-            188   33    1   92   78    0   96   22
-              0    0    0    3    1    0    2    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 1, 1]
+              5    0  180   74  228    5    0    0
+              5   46    3  114   67    1  188   33
+              0  123    1  188   33    1   92   78
+              0   96   22    0    0    0    3    1
+              0    2    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 73 PumpSuspend 2013-05-15T13:33:20 head[2], body[0] op[0x1e]
 
     op hex (2)
@@ -1310,28 +1320,30 @@
     0000   0x00 0x03 0xea 0x4f 0x8d                   ...O.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 80 Model522ResultTotals 2013-05-16T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 80 Model522ResultTotals 2013-05-16T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-05-16T00:00:00)
-    0000   0x4f 0x8d 0x05 0x00 0x58                   O...X
-    body (38)
+    0000   0x4f 0x8d                                  O.
+    body (41)
     hex
-    0000   0x58 0x58 0x02 0x00 0x00 0x03 0xea 0x03    XX......
-    0008   0x76 0x58 0x00 0x74 0x0c 0x00 0x2b 0x00    vX.t..+.
-    0010   0x74 0x0c 0x00 0x74 0x64 0x00 0x00 0x00    t..td...
-    0018   0x00 0x00 0x00 0x01 0x01 0x00 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x00 0x58 0x58 0x58 0x02 0x00 0x00    ..XXX...
+    0008   0x03 0xea 0x03 0x76 0x58 0x00 0x74 0x0c    ...vX.t.
+    0010   0x00 0x2b 0x00 0x74 0x0c 0x00 0x74 0x64    .+.t..td
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x01 0x01    ........
+    0020   0x00 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             88   88    2    0    0    3  234    3
-            118   88    0  116   12    0   43    0
-            116   12    0  116  100    0    0    0
-              0    0    0    1    1    0    0    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [0, 1, 0, 1]
+              5    0   88   88   88    2    0    0
+              3  234    3  118   88    0  116   12
+              0   43    0  116   12    0  116  100
+              0    0    0    0    0    0    1    1
+              0    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 81 CalBGForPH 2013-05-16T00:14:55 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python

@@ -356,28 +356,30 @@ reading more to debug 0x00
     0000   0x00 0x05 0x0a 0x50 0x8d                   ...P.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 21 Model522ResultTotals 2013-05-17T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 21 Model522ResultTotals 2013-05-17T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-05-17T00:00:00)
-    0000   0x50 0x8d 0x05 0x00 0x9b                   P....
-    body (38)
+    0000   0x50 0x8d                                  P.
+    body (41)
     hex
-    0000   0x43 0xfd 0x06 0x00 0x00 0x05 0x0a 0x03    C.......
-    0008   0x6a 0x44 0x01 0xa0 0x20 0x00 0x64 0x01    jD.. .d.
-    0010   0xa0 0x20 0x01 0x2c 0x48 0x00 0x74 0x1c    . .,H.t.
-    0018   0x00 0x00 0x00 0x05 0x03 0x01 0x01 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x00 0x9b 0x43 0xfd 0x06 0x00 0x00    ...C....
+    0008   0x05 0x0a 0x03 0x6a 0x44 0x01 0xa0 0x20    ...jD.. 
+    0010   0x00 0x64 0x01 0xa0 0x20 0x01 0x2c 0x48    .d.. .,H
+    0018   0x00 0x74 0x1c 0x00 0x00 0x00 0x05 0x03    .t......
+    0020   0x01 0x01 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             67  253    6    0    0    5   10    3
-            106   68    1  160   32    0  100    1
-            160   32    1   44   72    0  116   28
-              0    0    0    5    3    1    1    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 1]
+              5    0  155   67  253    6    0    0
+              5   10    3  106   68    1  160   32
+              0  100    1  160   32    1   44   72
+              0  116   28    0    0    0    5    3
+              1    1    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 22 LowReservoir 2013-05-17T09:38:10 head[2], body[0] op[0x34]
 ###### DECODED
 ```python
@@ -555,28 +557,30 @@ reading more to debug 0x00
     0000   0x00 0x04 0x24 0x51 0x8d                   ..$Q.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 35 Model522ResultTotals 2013-05-18T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 35 Model522ResultTotals 2013-05-18T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-05-18T00:00:00)
-    0000   0x51 0x8d 0x05 0x00 0x4c                   Q...L
-    body (38)
+    0000   0x51 0x8d                                  Q.
+    body (41)
     hex
-    0000   0x36 0x57 0x04 0x00 0x00 0x04 0x24 0x03    6W....$.
-    0008   0x68 0x52 0x00 0xbc 0x12 0x00 0x43 0x00    hR....C.
-    0010   0xbc 0x12 0x00 0xbc 0x64 0x00 0x00 0x00    ....d...
-    0018   0x00 0x00 0x00 0x01 0x01 0x00 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x00 0x4c 0x36 0x57 0x04 0x00 0x00    ..L6W...
+    0008   0x04 0x24 0x03 0x68 0x52 0x00 0xbc 0x12    .$.hR...
+    0010   0x00 0x43 0x00 0xbc 0x12 0x00 0xbc 0x64    .C.....d
+    0018   0x00 0x00 0x00 0x00 0x00 0x00 0x01 0x01    ........
+    0020   0x00 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             54   87    4    0    0    4   36    3
-            104   82    0  188   18    0   67    0
-            188   18    0  188  100    0    0    0
-              0    0    0    1    1    0    0    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [0, 1, 0, 0]
+              5    0   76   54   87    4    0    0
+              4   36    3  104   82    0  188   18
+              0   67    0  188   18    0  188  100
+              0    0    0    0    0    0    1    1
+              0    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 36 CalBGForPH 2013-05-18T06:50:58 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -1148,28 +1152,30 @@ reading more to debug 0x00
     0000   0x00 0x05 0x96 0x52 0x8d                   ...R.
     body (0)
     DAY BITS: [0, 1, 0] YEAR BITS: [1, 0, 0, 0]
-#### RECORD 69 Model522ResultTotals 2013-05-19T00:00:00 head[1], body[38] op[0x6d]
+#### RECORD 69 Model522ResultTotals 2013-05-19T00:00:00 head[1], body[41] op[0x6d]
 
     op hex (1)
     0000   0x6d                                       m
     decimal
             109
     datetime (2013-05-19T00:00:00)
-    0000   0x52 0x8d 0x05 0x10 0x99                   R....
-    body (38)
+    0000   0x52 0x8d                                  R.
+    body (41)
     hex
-    0000   0x52 0x0e 0x0a 0x00 0x00 0x05 0x96 0x03    R.......
-    0008   0x76 0x3e 0x02 0x20 0x26 0x00 0x69 0x02    v>. &.i.
-    0010   0x20 0x26 0x01 0x18 0x33 0x01 0x08 0x31     &..3..1
-    0018   0x00 0x00 0x00 0x07 0x03 0x04 0x00 0x00    ........
-    0020   0x0c 0x00 0xe8 0x00 0x00 0x00              ......
+    0000   0x05 0x10 0x99 0x52 0x0e 0x0a 0x00 0x00    ...R....
+    0008   0x05 0x96 0x03 0x76 0x3e 0x02 0x20 0x26    ...v>. &
+    0010   0x00 0x69 0x02 0x20 0x26 0x01 0x18 0x33    .i. &..3
+    0018   0x01 0x08 0x31 0x00 0x00 0x00 0x07 0x03    ..1.....
+    0020   0x04 0x00 0x00 0x0c 0x00 0xe8 0x00 0x00    ........
+    0028   0x00                                       .
     decimal
-             82   14   10    0    0    5  150    3
-            118   62    2   32   38    0  105    2
-             32   38    1   24   51    1    8   49
-              0    0    0    7    3    4    0    0
-             12    0  232    0    0    0
-    HOUR BITS: [1, 0, 0] YEAR BITS: [1, 0, 0, 1]
+              5   16  153   82   14   10    0    0
+              5  150    3  118   62    2   32   38
+              0  105    2   32   38    1   24   51
+              1    8   49    0    0    0    7    3
+              4    0    0   12    0  232    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 70 CalBGForPH 2013-05-19T01:36:51 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
