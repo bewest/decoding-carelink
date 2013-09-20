@@ -185,7 +185,8 @@ _confirmed.append(old6c)
 class Model522ResultTotals(KnownRecord):
   opcode = 0x6d
   head_length = 1
-  body_length = 37
+  date_length = 2
+  body_length = 40
   def parse_time(self):
     mid = unmask_m_midnight(self.date)
     try:
@@ -202,7 +203,7 @@ class Model522ResultTotals(KnownRecord):
     if self.datetime is not None:
       result = self.datetime.isoformat( )
     else:
-      if len(self.date) == 5:
+      if len(self.date) >=2:
         result = "{}".format(unmask_m_midnight(self.date))
     return result
 
