@@ -57,6 +57,25 @@ class MResultTotals(InvalidRecord):
     super(type(self), self).__init__(head, larger)
     if larger:
       self.body_length = 0
+  def parse_time(self):
+    mid = unmask_m_midnight(self.date[3:])
+    try:
+      self.datetime = date = datetime(*mid)
+      return date
+    except ValueError, e:
+      print "ERROR", e, mid, lib.hexdump(self.date)
+      pass
+    return mid
+      
+    
+  def date_str(self):
+    result = 'unknown'
+    if self.datetime is not None:
+      result = self.datetime.isoformat( )
+    else:
+      if len(self.date) >=2:
+        result = "{}".format(unmask_m_midnight(self.date[3:]))
+    return result
 
 class ChangeBasalProfile(KnownRecord):
   opcode = 0x08
