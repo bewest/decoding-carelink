@@ -227,8 +227,11 @@ def unmask_m_midnight(data):
 
   year_high = data[1] >> 4
   # month = int(high) #+ year_high
-  month   = parse_months( data[0], data[1] )
-  day = int(low)
+  # month   = parse_months( data[0], data[1] )
+  mhigh = (data[0] & 0xE0) >> 4
+  mlow  = (data[1] & 0x80) >> 7
+  month =  int(mhigh + mlow)
+  day = int(low) + 1
 
   year = parse_years(data[1])
   return (year, month, day, hours, minutes, seconds)
