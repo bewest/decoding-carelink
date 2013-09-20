@@ -88,13 +88,13 @@
     0000   0x5c 0x0f 0x54 0x09 0x0d                   \.T..
     body (0)
 
-#### RECORD 5 MResultTotals (2013, 0, 9, 12, 4, 0) head[2], body[0] op[0x07]
+#### RECORD 5 MResultTotals 2013-04-10T00:00:00 head[2], body[0] op[0x07]
 
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime ((2013, 0, 9, 12, 4, 0))
+    datetime (2013-04-10T00:00:00)
     0000   0x00 0x04 0xac 0x49 0x0d                   ...I.
     body (0)
     DAY BITS: [0, 1, 0]
@@ -602,13 +602,13 @@
     0000   0x47 0x08 0x57 0x0a 0x0d                   G.W..
     body (0)
 
-#### RECORD 34 MResultTotals (2013, 0, 10, 24, 5, 0) head[2], body[0] op[0x07]
+#### RECORD 34 MResultTotals 2013-04-11T00:00:00 head[2], body[0] op[0x07]
 
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime ((2013, 0, 10, 24, 5, 0))
+    datetime (2013-04-11T00:00:00)
     0000   0x00 0x05 0x38 0x4a 0x0d                   ..8J.
     body (0)
     DAY BITS: [0, 1, 0]
@@ -1081,13 +1081,13 @@
     0000   0x4c 0x01 0x54 0x0b 0x0d                   L.T..
     body (0)
 
-#### RECORD 62 MResultTotals (2013, 0, 11, 6, 5, 0) head[2], body[0] op[0x07]
+#### RECORD 62 MResultTotals 2013-04-12T00:00:00 head[2], body[0] op[0x07]
 
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime ((2013, 0, 11, 6, 5, 0))
+    datetime (2013-04-12T00:00:00)
     0000   0x00 0x05 0x86 0x4b 0x0d                   ...K.
     body (0)
     DAY BITS: [0, 1, 0]
@@ -1432,13 +1432,13 @@
     0000   0x56 0x2f 0x17 0x0c 0x0d                   V/...
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 82 MResultTotals (2013, 0, 12, 10, 5, 0) head[2], body[0] op[0x07]
+#### RECORD 82 MResultTotals 2013-04-13T00:00:00 head[2], body[0] op[0x07]
 
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime ((2013, 0, 12, 10, 5, 0))
+    datetime (2013-04-13T00:00:00)
     0000   0x00 0x05 0x4a 0x4c 0x0d                   ..JL.
     body (0)
     DAY BITS: [0, 1, 0]

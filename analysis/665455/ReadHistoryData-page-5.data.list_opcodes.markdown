@@ -163,13 +163,13 @@
     0000   0x4c 0xf8 0x55 0x0f 0x0d                   L.U..
     body (0)
     HOUR BITS: [1, 1, 1]
-#### RECORD 10 MResultTotals (2013, 0, 15, 30, 5, 0) head[2], body[0] op[0x07]
+#### RECORD 10 MResultTotals 2013-07-16T00:00:00 head[2], body[0] op[0x07]
 
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime ((2013, 0, 15, 30, 5, 0))
+    datetime (2013-07-16T00:00:00)
     0000   0x00 0x05 0xbe 0x6f 0x8d                   ...o.
     body (0)
     DAY BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 0]
@@ -355,13 +355,13 @@
     0000   0x6c 0xd6 0x56 0x10 0x0d                   l.V..
     body (0)
     HOUR BITS: [1, 1, 0]
-#### RECORD 22 MResultTotals (2013, 0, 16, 24, 4, 0) head[2], body[0] op[0x07]
+#### RECORD 22 MResultTotals 2013-07-17T00:00:00 head[2], body[0] op[0x07]
 
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime ((2013, 0, 16, 24, 4, 0))
+    datetime (2013-07-17T00:00:00)
     0000   0x00 0x04 0xb8 0x70 0x8d                   ...p.
     body (0)
     DAY BITS: [0, 1, 1] YEAR BITS: [1, 0, 0, 0]

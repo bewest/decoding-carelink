@@ -304,13 +304,13 @@ reading more to debug 0x00
     0000   0x45 0xba 0x53 0x06 0x0d                   E.S..
     body (0)
     HOUR BITS: [1, 0, 1]
-#### RECORD 15 MResultTotals (2013, 0, 6, 18, 5, 0) head[2], body[0] op[0x07]
+#### RECORD 15 MResultTotals 2013-06-07T00:00:00 head[2], body[0] op[0x07]
 
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime ((2013, 0, 6, 18, 5, 0))
+    datetime (2013-06-07T00:00:00)
     0000   0x00 0x05 0x52 0x66 0x0d                   ..Rf.
     body (0)
     DAY BITS: [0, 1, 1]
@@ -417,13 +417,13 @@ reading more to debug 0x00
     0000   0x42 0x92 0x4f 0x07 0x0d                   B.O..
     body (0)
     HOUR BITS: [1, 0, 0]
-#### RECORD 22 MResultTotals (2013, 0, 7, 24, 4, 0) head[2], body[0] op[0x07]
+#### RECORD 22 MResultTotals 2013-06-08T00:00:00 head[2], body[0] op[0x07]
 
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime ((2013, 0, 7, 24, 4, 0))
+    datetime (2013-06-08T00:00:00)
     0000   0x00 0x04 0x38 0x67 0x0d                   ..8g.
     body (0)
     DAY BITS: [0, 1, 1]
@@ -842,13 +842,13 @@ reading more to debug 0x00
     0000   0x49 0xa5 0x56 0x08 0x0d                   I.V..
     body (0)
     HOUR BITS: [1, 0, 1]
-#### RECORD 49 MResultTotals (2013, 0, 8, 22, 5, 0) head[2], body[0] op[0x07]
+#### RECORD 49 MResultTotals 2013-06-09T00:00:00 head[2], body[0] op[0x07]
 
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime ((2013, 0, 8, 22, 5, 0))
+    datetime (2013-06-09T00:00:00)
     0000   0x00 0x05 0x76 0x68 0x0d                   ..vh.
     body (0)
     DAY BITS: [0, 1, 1]
@@ -1139,13 +1139,13 @@ reading more to debug 0x00
     0000   0x72 0x9d 0x57 0x09 0x0d                   r.W..
     body (0)
     HOUR BITS: [1, 0, 0]
-#### RECORD 65 MResultTotals (2013, 0, 9, 16, 5, 0) head[2], body[0] op[0x07]
+#### RECORD 65 MResultTotals 2013-06-10T00:00:00 head[2], body[0] op[0x07]
 
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime ((2013, 0, 9, 16, 5, 0))
+    datetime (2013-06-10T00:00:00)
     0000   0x00 0x05 0xd0 0x69 0x0d                   ...i.
     body (0)
     DAY BITS: [0, 1, 1]

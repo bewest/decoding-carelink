@@ -194,13 +194,13 @@
     0000   0x64 0x0a 0x57 0x14 0x0d                   d.W..
     body (0)
 
-#### RECORD 10 MResultTotals (2013, 0, 20, 28, 4, 0) head[2], body[0] op[0x07]
+#### RECORD 10 MResultTotals 2013-04-21T00:00:00 head[2], body[0] op[0x07]
 
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime ((2013, 0, 20, 28, 4, 0))
+    datetime (2013-04-21T00:00:00)
     0000   0x00 0x04 0xbc 0x54 0x0d                   ...T.
     body (0)
     DAY BITS: [0, 1, 0]
@@ -1172,13 +1172,13 @@
     0000   0x64 0x0a 0x57 0x14 0x0d                   d.W..
     body (0)
 
-#### RECORD 64 MResultTotals (2013, 0, 20, 28, 4, 0) head[2], body[0] op[0x07]
+#### RECORD 64 MResultTotals 2013-04-21T00:00:00 head[2], body[0] op[0x07]
 
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime ((2013, 0, 20, 28, 4, 0))
+    datetime (2013-04-21T00:00:00)
     0000   0x00 0x04 0xbc 0x54 0x0d                   ...T.
     body (0)
     DAY BITS: [0, 1, 0]

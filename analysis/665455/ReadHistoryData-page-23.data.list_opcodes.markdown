@@ -213,13 +213,13 @@ reading more to debug 0x00
     0000   0x4f 0x21 0x36 0x1a 0x0d                   O!6..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 13 MResultTotals (2013, 0, 26, 8, 5, 0) head[2], body[0] op[0x07]
+#### RECORD 13 MResultTotals 2013-04-27T00:00:00 head[2], body[0] op[0x07]
 
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime ((2013, 0, 26, 8, 5, 0))
+    datetime (2013-04-27T00:00:00)
     0000   0x00 0x05 0x88 0x5a 0x0d                   ...Z.
     body (0)
     DAY BITS: [0, 1, 0]
@@ -963,13 +963,13 @@ reading more to debug 0x00
     0000   0x42 0x2b 0x56 0x1b 0x0d                   B+V..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 60 MResultTotals (2013, 0, 27, 0, 5, 0) head[2], body[0] op[0x07]
+#### RECORD 60 MResultTotals 2013-04-28T00:00:00 head[2], body[0] op[0x07]
 
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime ((2013, 0, 27, 0, 5, 0))
+    datetime (2013-04-28T00:00:00)
     0000   0x00 0x05 0x40 0x5b 0x0d                   ..@[.
     body (0)
     DAY BITS: [0, 1, 0]
@@ -1353,13 +1353,13 @@ reading more to debug 0x00
     0000   0x64 0x10 0x36 0x1c 0x0d                   d.6..
     body (0)
 
-#### RECORD 84 MResultTotals (2013, 0, 28, 26, 4, 0) head[2], body[0] op[0x07]
+#### RECORD 84 MResultTotals 2013-04-29T00:00:00 head[2], body[0] op[0x07]
 
     op hex (2)
     0000   0x07 0x00                                  ..
     decimal
               7    0
-    datetime ((2013, 0, 28, 26, 4, 0))
+    datetime (2013-04-29T00:00:00)
     0000   0x00 0x04 0x9a 0x5c 0x0d                   ...\.
     body (0)
     DAY BITS: [0, 1, 0]
