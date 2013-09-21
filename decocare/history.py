@@ -261,6 +261,10 @@ class Sara6E(Model522ResultTotals):
   # body_length = 1
   body_length = 48
   #body_length = 0
+  def __init__(self, head, larger=False):
+    super(type(self), self).__init__(head, larger)
+    if larger:
+      self.body_length = 48
 _confirmed.append(Sara6E)
 
 _known = { }
