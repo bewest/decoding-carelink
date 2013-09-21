@@ -1,4 +1,4 @@
-## START logs/ReadHistoryData-page-11.data
+## START analysis/sarak/raw//ReadHistoryData-page-11.data
 #### RECORD 0 UnabsorbedInsulinBolus unknown head[17], body[0] op[0x5c]
 ###### DECODED
 ```python
@@ -259,35 +259,45 @@
     decimal
               0   29    0
 
-#### RECORD 13 ResultTotals (2000, 8, 0, 0, 13, 9) head[5], body[0] op[0x07]
+#### RECORD 13 MResultTotals 2013-08-10T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x05 0x08                   .....
     decimal
               7    0    0    5    8
-    datetime ((2000, 8, 0, 0, 13, 9))
-    0000   0x89 0x0d 0x00 0x00 0x00                   .....
-    body (0)
-
-#### RECORD 14 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x89 0x0d 0x05 0x00 0x87 0x00 0x00    n.......
-    0008   0x0a 0x00 0x00 0x05 0x08 0x02 0xdc 0x39    .......9
-    0010   0x02 0x2c 0x2b 0x00 0x83 0x01 0xd8 0x00    .,+.....
-    0018   0x54 0x00 0x00 0x00 0x00 0x08 0x02 0x00    T.......
-    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x64 0xf0 0x00 0x00 0x00         ..d....
+    datetime (2013-08-10T00:00:00)
+    0000   0x89 0x0d                                  ..
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  137   13    5    0  135    0    0
-             10    0    0    5    8    2  220   57
-              2   44   43    0  131    1  216    0
-             84    0    0    0    0    8    2    0
-              0    0    0    0    0    0    0    0
-              0    0  100  240    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+
+#### RECORD 14 Sara6E 2013-08-10T00:00:00 head[1], body[49] op[0x6e]
+
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-08-10T00:00:00)
+    0000   0x89 0x0d                                  ..
+    body (49)
+    hex
+    0000   0x05 0x00 0x87 0x00 0x00 0x0a 0x00 0x00    ........
+    0008   0x05 0x08 0x02 0xdc 0x39 0x02 0x2c 0x2b    ....9.,+
+    0010   0x00 0x83 0x01 0xd8 0x00 0x54 0x00 0x00    .....T..
+    0018   0x00 0x00 0x08 0x02 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x64    .......d
+    0028   0xf0 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              5    0  135    0    0   10    0    0
+              5    8    2  220   57    2   44   43
+              0  131    1  216    0   84    0    0
+              0    0    8    2    0    0    0    0
+              0    0    0    0    0    0    0  100
+            240    0    0    0    0    0    0    0
+              0
 
 #### RECORD 15 LowReservoir 2013-08-10T01:20:41 head[2], body[0] op[0x34]
 ###### DECODED
@@ -1092,35 +1102,45 @@
     decimal
               0   29    0
 
-#### RECORD 60 ResultTotals (2000, 8, 0, 0, 13, 9) head[5], body[0] op[0x07]
+#### RECORD 60 MResultTotals 2013-08-10T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x05 0x08                   .....
     decimal
               7    0    0    5    8
-    datetime ((2000, 8, 0, 0, 13, 9))
-    0000   0x89 0x0d 0x00 0x00 0x00                   .....
-    body (0)
-
-#### RECORD 61 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x89 0x0d 0x05 0x00 0x87 0x00 0x00    n.......
-    0008   0x0a 0x00 0x00 0x05 0x08 0x02 0xdc 0x39    .......9
-    0010   0x02 0x2c 0x2b 0x00 0x83 0x01 0xd8 0x00    .,+.....
-    0018   0x54 0x00 0x00 0x00 0x00 0x08 0x02 0x00    T.......
-    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x64 0xf0 0x00 0x00 0x00         ..d....
+    datetime (2013-08-10T00:00:00)
+    0000   0x89 0x0d                                  ..
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  137   13    5    0  135    0    0
-             10    0    0    5    8    2  220   57
-              2   44   43    0  131    1  216    0
-             84    0    0    0    0    8    2    0
-              0    0    0    0    0    0    0    0
-              0    0  100  240    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+
+#### RECORD 61 Sara6E 2013-08-10T00:00:00 head[1], body[49] op[0x6e]
+
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-08-10T00:00:00)
+    0000   0x89 0x0d                                  ..
+    body (49)
+    hex
+    0000   0x05 0x00 0x87 0x00 0x00 0x0a 0x00 0x00    ........
+    0008   0x05 0x08 0x02 0xdc 0x39 0x02 0x2c 0x2b    ....9.,+
+    0010   0x00 0x83 0x01 0xd8 0x00 0x54 0x00 0x00    .....T..
+    0018   0x00 0x00 0x08 0x02 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x64    .......d
+    0028   0xf0 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              5    0  135    0    0   10    0    0
+              5    8    2  220   57    2   44   43
+              0  131    1  216    0   84    0    0
+              0    0    8    2    0    0    0    0
+              0    0    0    0    0    0    0  100
+            240    0    0    0    0    0    0    0
+              0
 
 #### RECORD 62 LowReservoir 2013-08-10T01:20:41 head[2], body[0] op[0x34]
 ###### DECODED
@@ -2011,34 +2031,42 @@
     decimal
               0   29    0
 
-#### RECORD 111 ResultTotals (2000, 8, 0, 0, 13, 10) head[5], body[0] op[0x07]
+#### RECORD 111 MResultTotals 2013-08-11T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x05 0x53                   ....S
     decimal
               7    0    0    5   83
-    datetime ((2000, 8, 0, 0, 13, 10))
-    0000   0x8a 0x0d 0x00 0x00 0x00                   .....
-    body (0)
-
-#### RECORD 112 Sara6E unknown head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x8a 0x0d 0x05 0x00 0xaa 0x00 0x00    n.......
-    0008   0x09 0x00 0x00 0x05 0x53 0x02 0xdb 0x36    ....S..6
-    0010   0x02 0x78 0x2e 0x00 0x7f 0x01 0x88 0x00    .x......
-    0018   0xa4 0x00 0x4c 0x00 0x00 0x06 0x02 0x01    ..L.....
-    0020   0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x64 0x42 0x00 0x00 0x00         ..dB...
+    datetime (2013-08-11T00:00:00)
+    0000   0x8a 0x0d                                  ..
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  138   13    5    0  170    0    0
-              9    0    0    5   83    2  219   54
-              2  120   46    0  127    1  136    0
-            164    0   76    0    0    6    2    1
-              0    4    0    0    0    0    0    0
-              0    0  100   66    0    0    0
-    datetime (unknown)
+              0    0    0
 
-    body (0)
+#### RECORD 112 Sara6E 2013-08-11T00:00:00 head[1], body[48] op[0x6e]
 
-`end logs/ReadHistoryData-page-11.data: 113 records`
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-08-11T00:00:00)
+    0000   0x8a 0x0d                                  ..
+    body (48)
+    hex
+    0000   0x05 0x00 0xaa 0x00 0x00 0x09 0x00 0x00    ........
+    0008   0x05 0x53 0x02 0xdb 0x36 0x02 0x78 0x2e    .S..6.x.
+    0010   0x00 0x7f 0x01 0x88 0x00 0xa4 0x00 0x4c    .......L
+    0018   0x00 0x00 0x06 0x02 0x01 0x00 0x04 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x64    .......d
+    0028   0x42 0x00 0x00 0x00 0x00 0x00 0x00 0x00    B.......
+    decimal
+              5    0  170    0    0    9    0    0
+              5   83    2  219   54    2  120   46
+              0  127    1  136    0  164    0   76
+              0    0    6    2    1    0    4    0
+              0    0    0    0    0    0    0  100
+             66    0    0    0    0    0    0    0
+
+`end analysis/sarak/raw//ReadHistoryData-page-11.data: 113 records`

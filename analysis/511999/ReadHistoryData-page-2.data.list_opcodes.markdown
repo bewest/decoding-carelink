@@ -1,4 +1,6 @@
-## START logs/ReadHistoryData-page-2.data
+## START analysis/sarak/raw//ReadHistoryData-page-2.data
+ERROR day is out of range for month (2013, 8, 32, 0, 0, 0) 0000   0x9f 0x0d                                  ..
+ERROR day is out of range for month 0000   0x9f 0x0d                                  ..
 #### STOPPING DOUBLE NULLS @ 990, found 32 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
@@ -7,25 +9,31 @@ reading more to debug 0x00
     0000   0x42 0x5b                                  B[
 ##### DEBUG DECIMAL
              66   91
-#### RECORD 0 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
+#### RECORD 0 Sara6E 2013-08-31T00:00:00 head[1], body[49] op[0x6e]
 
-    op hex (47)
-    0000   0x6e 0x9e 0x0d 0x05 0x00 0xc0 0x00 0x00    n.......
-    0008   0x09 0x00 0x00 0x06 0x54 0x04 0x00 0x3f    ....T..?
-    0010   0x02 0x54 0x25 0x00 0x34 0x00 0xa8 0x01    .T%.4...
-    0018   0xac 0x00 0x00 0x00 0x00 0x03 0x05 0x00    ........
-    0020   0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x68 0x82 0x00 0x00 0x00         ..h....
+    op hex (1)
+    0000   0x6e                                       n
     decimal
-            110  158   13    5    0  192    0    0
-              9    0    0    6   84    4    0   63
-              2   84   37    0   52    0  168    1
-            172    0    0    0    0    3    5    0
-              0    4    0    0    0    0    0    0
-              0    0  104  130    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+            110
+    datetime (2013-08-31T00:00:00)
+    0000   0x9e 0x0d                                  ..
+    body (49)
+    hex
+    0000   0x05 0x00 0xc0 0x00 0x00 0x09 0x00 0x00    ........
+    0008   0x06 0x54 0x04 0x00 0x3f 0x02 0x54 0x25    .T..?.T%
+    0010   0x00 0x34 0x00 0xa8 0x01 0xac 0x00 0x00    .4......
+    0018   0x00 0x00 0x03 0x05 0x00 0x00 0x04 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x68    .......h
+    0028   0x82 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              5    0  192    0    0    9    0    0
+              6   84    4    0   63    2   84   37
+              0   52    0  168    1  172    0    0
+              0    0    3    5    0    0    4    0
+              0    0    0    0    0    0    0  104
+            130    0    0    0    0    0    0    0
+              0
 
 #### RECORD 1 BasalProfileStart 2013-08-31T01:03:47 head[2], body[3] op[0x7b]
 
@@ -577,35 +585,47 @@ reading more to debug 0x00
     0000   0xb7 0x3b 0x52 0x1f 0x0d                   .;R..
     body (0)
     HOUR BITS: [0, 0, 1]
-#### RECORD 30 ResultTotals (2000, 8, 0, 0, 13, 31) head[5], body[0] op[0x07]
+ERROR day is out of range for month (2013, 8, 32, 0, 0, 0) 0000   0x9f 0x0d                                  ..
+#### RECORD 30 MResultTotals (2013, 8, 32, 0, 0, 0) head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x04 0xd2                   .....
     decimal
               7    0    0    4  210
-    datetime ((2000, 8, 0, 0, 13, 31))
-    0000   0x9f 0x0d 0x00 0x00 0x00                   .....
-    body (0)
-
-#### RECORD 31 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x9f 0x0d 0x05 0x00 0xad 0x00 0x00    n.......
-    0008   0x08 0x00 0x00 0x04 0xd2 0x02 0xbe 0x39    .......9
-    0010   0x02 0x14 0x2b 0x00 0x5a 0x01 0x24 0x00    ..+.Z.$.
-    0018   0xf0 0x00 0x00 0x00 0x00 0x04 0x03 0x00    ........
-    0020   0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x4b 0x27 0x00 0x00 0x00         ..K'...
+    datetime ((2013, 8, 32, 0, 0, 0))
+    0000   0x9f 0x0d                                  ..
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  159   13    5    0  173    0    0
-              8    0    0    4  210    2  190   57
-              2   20   43    0   90    1   36    0
-            240    0    0    0    0    4    3    0
-              0    4    0    0    0    0    0    0
-              0    0   75   39    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+
+ERROR day is out of range for month 0000   0x9f 0x0d                                  ..
+#### RECORD 31 Sara6E (2013, 8, 32, 0, 0, 0) head[1], body[49] op[0x6e]
+
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime ((2013, 8, 32, 0, 0, 0))
+    0000   0x9f 0x0d                                  ..
+    body (49)
+    hex
+    0000   0x05 0x00 0xad 0x00 0x00 0x08 0x00 0x00    ........
+    0008   0x04 0xd2 0x02 0xbe 0x39 0x02 0x14 0x2b    ....9..+
+    0010   0x00 0x5a 0x01 0x24 0x00 0xf0 0x00 0x00    .Z.$....
+    0018   0x00 0x00 0x04 0x03 0x00 0x00 0x04 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x4b    .......K
+    0028   0x27 0x00 0x00 0x00 0x00 0x00 0x00 0x00    '.......
+    0030   0x00                                       .
+    decimal
+              5    0  173    0    0    8    0    0
+              4  210    2  190   57    2   20   43
+              0   90    1   36    0  240    0    0
+              0    0    4    3    0    0    4    0
+              0    0    0    0    0    0    0   75
+             39    0    0    0    0    0    0    0
+              0
 
 #### RECORD 32 CalBGForPH 2013-09-01T09:42:08 head[2], body[0] op[0x0a]
 ###### DECODED
@@ -1300,14 +1320,18 @@ reading more to debug 0x00
     decimal
               0   29    0
     HOUR BITS: [0, 1, 0]
-#### RECORD 70 ResultTotals (2000, 10, 0, 0, 13, 1) head[5], body[0] op[0x07]
+#### RECORD 70 MResultTotals 2013-09-02T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x04 0xdb                   .....
     decimal
               7    0    0    4  219
-    datetime ((2000, 10, 0, 0, 13, 1))
-    0000   0x81 0x8d 0x00 0x00 0x00                   .....
-    body (0)
+    datetime (2013-09-02T00:00:00)
+    0000   0x81 0x8d                                  ..
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
+    decimal
+              0    0    0
     HOUR BITS: [1, 0, 0]
-`end logs/ReadHistoryData-page-2.data: 71 records`
+`end analysis/sarak/raw//ReadHistoryData-page-2.data: 71 records`

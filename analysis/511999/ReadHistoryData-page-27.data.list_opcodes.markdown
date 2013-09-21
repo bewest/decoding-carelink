@@ -1,4 +1,4 @@
-## START logs/ReadHistoryData-page-27.data
+## START analysis/sarak/raw//ReadHistoryData-page-27.data
 #### STOPPING DOUBLE NULLS @ 125, found 99 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
@@ -13,26 +13,32 @@ reading more to debug 0x00
              30    0    8   30    0   16   34    0
              24   29    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
-#### RECORD 0 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
+#### RECORD 0 Sara6E 2013-07-14T00:00:00 head[1], body[49] op[0x6e]
 
-    op hex (47)
-    0000   0x6e 0x6d 0x8d 0x05 0x00 0xd9 0x00 0x00    nm......
-    0008   0x08 0x00 0x00 0x06 0x02 0x02 0xbe 0x2e    ........
-    0010   0x03 0x44 0x36 0x00 0x7b 0x01 0x50 0x01    .D6.{.P.
-    0018   0x48 0x00 0xac 0x00 0x00 0x03 0x04 0x01    H.......
-    0020   0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x77 0x49 0x00 0x00 0x00         ..wI...
+    op hex (1)
+    0000   0x6e                                       n
     decimal
-            110  109  141    5    0  217    0    0
-              8    0    0    6    2    2  190   46
-              3   68   54    0  123    1   80    1
-             72    0  172    0    0    3    4    1
-              0    4    0    0    0    0    0    0
-              0    0  119   73    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
-
+            110
+    datetime (2013-07-14T00:00:00)
+    0000   0x6d 0x8d                                  m.
+    body (49)
+    hex
+    0000   0x05 0x00 0xd9 0x00 0x00 0x08 0x00 0x00    ........
+    0008   0x06 0x02 0x02 0xbe 0x2e 0x03 0x44 0x36    ......D6
+    0010   0x00 0x7b 0x01 0x50 0x01 0x48 0x00 0xac    .{.P.H..
+    0018   0x00 0x00 0x03 0x04 0x01 0x00 0x04 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x77    .......w
+    0028   0x49 0x00 0x00 0x00 0x00 0x00 0x00 0x00    I.......
+    0030   0x00                                       .
+    decimal
+              5    0  217    0    0    8    0    0
+              6    2    2  190   46    3   68   54
+              0  123    1   80    1   72    0  172
+              0    0    3    4    1    0    4    0
+              0    0    0    0    0    0    0  119
+             73    0    0    0    0    0    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 1 BasalProfileStart 2013-07-14T04:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
@@ -85,4 +91,4 @@ reading more to debug 0x00
               0    0    0    0    0    0    0    0
               0    0    0    0
     HOUR BITS: [1, 1, 0]
-`end logs/ReadHistoryData-page-27.data: 4 records`
+`end analysis/sarak/raw//ReadHistoryData-page-27.data: 4 records`

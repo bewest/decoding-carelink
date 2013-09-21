@@ -1,4 +1,4 @@
-## START logs/ReadHistoryData-page-31.data
+## START analysis/sarak/raw//ReadHistoryData-page-31.data
 #### RECORD 0 BolusWizard 2013-07-08T14:27:24 head[2], body[15] op[0x5b]
 ###### DECODED
 ```python
@@ -310,36 +310,46 @@
     decimal
               0   28    0
     HOUR BITS: [1, 1, 0]
-#### RECORD 16 ResultTotals (2000, 6, 0, 0, 13, 40) head[5], body[0] op[0x07]
+#### RECORD 16 MResultTotals 2013-07-09T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x05 0x28                   ....(
     decimal
               7    0    0    5   40
-    datetime ((2000, 6, 0, 0, 13, 40))
-    0000   0x68 0x8d 0x00 0x00 0x00                   h....
-    body (0)
-    HOUR BITS: [1, 0, 0]
-#### RECORD 17 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x68 0x8d 0x05 0x00 0xa4 0x00 0x00    nh......
-    0008   0x07 0x00 0x00 0x05 0x28 0x02 0xd4 0x37    ....(..7
-    0010   0x02 0x54 0x2d 0x00 0x6e 0x01 0x14 0x00    .T-.n...
-    0018   0x8c 0x00 0xb4 0x00 0x00 0x05 0x02 0x02    ........
-    0020   0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x6d 0x0a 0x00 0x00 0x00         ..m....
+    datetime (2013-07-09T00:00:00)
+    0000   0x68 0x8d                                  h.
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  104  141    5    0  164    0    0
-              7    0    0    5   40    2  212   55
-              2   84   45    0  110    1   20    0
-            140    0  180    0    0    5    2    2
-              0    4    0    0    0    0    0    0
-              0    0  109   10    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+    HOUR BITS: [1, 0, 0]
+#### RECORD 17 Sara6E 2013-07-09T00:00:00 head[1], body[49] op[0x6e]
 
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-07-09T00:00:00)
+    0000   0x68 0x8d                                  h.
+    body (49)
+    hex
+    0000   0x05 0x00 0xa4 0x00 0x00 0x07 0x00 0x00    ........
+    0008   0x05 0x28 0x02 0xd4 0x37 0x02 0x54 0x2d    .(..7.T-
+    0010   0x00 0x6e 0x01 0x14 0x00 0x8c 0x00 0xb4    .n......
+    0018   0x00 0x00 0x05 0x02 0x02 0x00 0x04 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x6d    .......m
+    0028   0x0a 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              5    0  164    0    0    7    0    0
+              5   40    2  212   55    2   84   45
+              0  110    1   20    0  140    0  180
+              0    0    5    2    2    0    4    0
+              0    0    0    0    0    0    0  109
+             10    0    0    0    0    0    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 18 CalBGForPH 2013-07-09T00:08:57 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -1408,4 +1418,4 @@
 
     body (0)
 
-`end logs/ReadHistoryData-page-31.data: 81 records`
+`end analysis/sarak/raw//ReadHistoryData-page-31.data: 81 records`

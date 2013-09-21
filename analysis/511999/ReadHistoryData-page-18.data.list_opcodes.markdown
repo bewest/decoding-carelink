@@ -1,4 +1,4 @@
-## START logs/ReadHistoryData-page-18.data
+## START analysis/sarak/raw//ReadHistoryData-page-18.data
 #### STOPPING DOUBLE NULLS @ 983, found 39 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
@@ -276,36 +276,46 @@ reading more to debug 0x00
     decimal
               0   29    0
     HOUR BITS: [1, 1, 0]
-#### RECORD 15 ResultTotals (2000, 6, 0, 0, 13, 59) head[5], body[0] op[0x07]
+#### RECORD 15 MResultTotals 2013-07-28T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x04 0xa0                   .....
     decimal
               7    0    0    4  160
-    datetime ((2000, 6, 0, 0, 13, 59))
-    0000   0x7b 0x8d 0x00 0x00 0x00                   {....
-    body (0)
-    HOUR BITS: [1, 0, 0]
-#### RECORD 16 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x7b 0x8d 0x05 0x00 0x87 0x00 0x00    n{......
-    0008   0x08 0x00 0x00 0x04 0xa0 0x02 0xdc 0x3e    .......>
-    0010   0x01 0xc4 0x26 0x00 0x70 0x01 0x88 0x00    ..&.p...
-    0018   0x0c 0x00 0x30 0x00 0x00 0x05 0x01 0x01    ..0.....
-    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x67 0xdd 0x00 0x00 0x00         ..g....
+    datetime (2013-07-28T00:00:00)
+    0000   0x7b 0x8d                                  {.
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  123  141    5    0  135    0    0
-              8    0    0    4  160    2  220   62
-              1  196   38    0  112    1  136    0
-             12    0   48    0    0    5    1    1
-              0    0    0    0    0    0    0    0
-              0    0  103  221    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+    HOUR BITS: [1, 0, 0]
+#### RECORD 16 Sara6E 2013-07-28T00:00:00 head[1], body[49] op[0x6e]
 
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-07-28T00:00:00)
+    0000   0x7b 0x8d                                  {.
+    body (49)
+    hex
+    0000   0x05 0x00 0x87 0x00 0x00 0x08 0x00 0x00    ........
+    0008   0x04 0xa0 0x02 0xdc 0x3e 0x01 0xc4 0x26    ....>..&
+    0010   0x00 0x70 0x01 0x88 0x00 0x0c 0x00 0x30    .p.....0
+    0018   0x00 0x00 0x05 0x01 0x01 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x67    .......g
+    0028   0xdd 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              5    0  135    0    0    8    0    0
+              4  160    2  220   62    1  196   38
+              0  112    1  136    0   12    0   48
+              0    0    5    1    1    0    0    0
+              0    0    0    0    0    0    0  103
+            221    0    0    0    0    0    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 17 BasalProfileStart 2013-07-28T04:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
@@ -711,36 +721,46 @@ reading more to debug 0x00
     decimal
               0   29    0
     HOUR BITS: [1, 1, 0]
-#### RECORD 40 ResultTotals (2000, 6, 0, 0, 13, 60) head[5], body[0] op[0x07]
+#### RECORD 40 MResultTotals 2013-07-29T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x04 0xec                   .....
     decimal
               7    0    0    4  236
-    datetime ((2000, 6, 0, 0, 13, 60))
-    0000   0x7c 0x8d 0x00 0x00 0x00                   |....
-    body (0)
-    HOUR BITS: [1, 0, 0]
-#### RECORD 41 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x7c 0x8d 0x05 0x00 0xc8 0x00 0x00    n|......
-    0008   0x05 0x00 0x00 0x04 0xec 0x02 0xdc 0x3a    .......:
-    0010   0x02 0x10 0x2a 0x00 0x4f 0x00 0xc0 0x00    ..*.O...
-    0018   0xd8 0x00 0x78 0x00 0x00 0x02 0x02 0x01    ..x.....
-    0020   0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x7b 0x5a 0x00 0x00 0x00         ..{Z...
+    datetime (2013-07-29T00:00:00)
+    0000   0x7c 0x8d                                  |.
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  124  141    5    0  200    0    0
-              5    0    0    4  236    2  220   58
-              2   16   42    0   79    0  192    0
-            216    0  120    0    0    2    2    1
-              0    4    0    0    0    0    0    0
-              0    0  123   90    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+    HOUR BITS: [1, 0, 0]
+#### RECORD 41 Sara6E 2013-07-29T00:00:00 head[1], body[49] op[0x6e]
 
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-07-29T00:00:00)
+    0000   0x7c 0x8d                                  |.
+    body (49)
+    hex
+    0000   0x05 0x00 0xc8 0x00 0x00 0x05 0x00 0x00    ........
+    0008   0x04 0xec 0x02 0xdc 0x3a 0x02 0x10 0x2a    ....:..*
+    0010   0x00 0x4f 0x00 0xc0 0x00 0xd8 0x00 0x78    .O.....x
+    0018   0x00 0x00 0x02 0x02 0x01 0x00 0x04 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x7b    .......{
+    0028   0x5a 0x00 0x00 0x00 0x00 0x00 0x00 0x00    Z.......
+    0030   0x00                                       .
+    decimal
+              5    0  200    0    0    5    0    0
+              4  236    2  220   58    2   16   42
+              0   79    0  192    0  216    0  120
+              0    0    2    2    1    0    4    0
+              0    0    0    0    0    0    0  123
+             90    0    0    0    0    0    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 42 CalBGForPH 2013-07-29T00:20:51 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -1295,14 +1315,18 @@ reading more to debug 0x00
     decimal
               0   29    0
     HOUR BITS: [1, 1, 0]
-#### RECORD 73 ResultTotals (2000, 6, 0, 0, 13, 61) head[5], body[0] op[0x07]
+#### RECORD 73 MResultTotals 2013-07-30T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x04 0xbc                   .....
     decimal
               7    0    0    4  188
-    datetime ((2000, 6, 0, 0, 13, 61))
-    0000   0x7d 0x8d 0x00 0x00 0x00                   }....
-    body (0)
+    datetime (2013-07-30T00:00:00)
+    0000   0x7d 0x8d                                  }.
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
+    decimal
+              0    0    0
     HOUR BITS: [1, 0, 0]
-`end logs/ReadHistoryData-page-18.data: 74 records`
+`end analysis/sarak/raw//ReadHistoryData-page-18.data: 74 records`

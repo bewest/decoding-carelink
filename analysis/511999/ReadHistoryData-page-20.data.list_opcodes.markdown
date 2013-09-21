@@ -1,4 +1,4 @@
-## START logs/ReadHistoryData-page-20.data
+## START analysis/sarak/raw//ReadHistoryData-page-20.data
 #### STOPPING DOUBLE NULLS @ 1020, found 2 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
@@ -183,36 +183,46 @@ reading more to debug 0x00
     decimal
               0   29    0
     HOUR BITS: [1, 1, 0]
-#### RECORD 9 ResultTotals (2000, 6, 0, 0, 13, 55) head[5], body[0] op[0x07]
+#### RECORD 9 MResultTotals 2013-07-24T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x05 0x00                   .....
     decimal
               7    0    0    5    0
-    datetime ((2000, 6, 0, 0, 13, 55))
-    0000   0x77 0x8d 0x00 0x00 0x00                   w....
-    body (0)
-    HOUR BITS: [1, 0, 0]
-#### RECORD 10 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x77 0x8d 0x05 0x00 0xcd 0x00 0x00    nw......
-    0008   0x0a 0x00 0x00 0x05 0x00 0x02 0xdc 0x39    .......9
-    0010   0x02 0x24 0x2b 0x00 0x44 0x00 0xd0 0x01    .$+.D...
-    0018   0x10 0x00 0x44 0x00 0x00 0x03 0x05 0x01    ..D.....
-    0020   0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x61 0x24 0x00 0x00 0x00         ..a$...
+    datetime (2013-07-24T00:00:00)
+    0000   0x77 0x8d                                  w.
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  119  141    5    0  205    0    0
-             10    0    0    5    0    2  220   57
-              2   36   43    0   68    0  208    1
-             16    0   68    0    0    3    5    1
-              0    4    0    0    0    0    0    0
-              0    0   97   36    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+    HOUR BITS: [1, 0, 0]
+#### RECORD 10 Sara6E 2013-07-24T00:00:00 head[1], body[49] op[0x6e]
 
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-07-24T00:00:00)
+    0000   0x77 0x8d                                  w.
+    body (49)
+    hex
+    0000   0x05 0x00 0xcd 0x00 0x00 0x0a 0x00 0x00    ........
+    0008   0x05 0x00 0x02 0xdc 0x39 0x02 0x24 0x2b    ....9.$+
+    0010   0x00 0x44 0x00 0xd0 0x01 0x10 0x00 0x44    .D.....D
+    0018   0x00 0x00 0x03 0x05 0x01 0x00 0x04 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x61    .......a
+    0028   0x24 0x00 0x00 0x00 0x00 0x00 0x00 0x00    $.......
+    0030   0x00                                       .
+    decimal
+              5    0  205    0    0   10    0    0
+              5    0    2  220   57    2   36   43
+              0   68    0  208    1   16    0   68
+              0    0    3    5    1    0    4    0
+              0    0    0    0    0    0    0   97
+             36    0    0    0    0    0    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 11 LowReservoir 2013-07-24T00:49:39 head[2], body[0] op[0x34]
 ###### DECODED
 ```python
@@ -1293,4 +1303,4 @@ reading more to debug 0x00
              17   80    0  100   60  100    0    0
              68    0    0   72    0   68  120
     HOUR BITS: [1, 1, 1] DAY BITS: [0, 1, 1]
-`end logs/ReadHistoryData-page-20.data: 82 records`
+`end analysis/sarak/raw//ReadHistoryData-page-20.data: 82 records`

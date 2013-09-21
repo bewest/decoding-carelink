@@ -1,4 +1,4 @@
-## START logs/ReadHistoryData-page-13.data
+## START analysis/sarak/raw//ReadHistoryData-page-13.data
 #### STOPPING DOUBLE NULLS @ 1016, found 6 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
@@ -591,35 +591,45 @@ reading more to debug 0x00
     decimal
               0   29    0
 
-#### RECORD 30 ResultTotals (2000, 8, 0, 0, 13, 7) head[5], body[0] op[0x07]
+#### RECORD 30 MResultTotals 2013-08-08T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x05 0x5c                   ....\
     decimal
               7    0    0    5   92
-    datetime ((2000, 8, 0, 0, 13, 7))
-    0000   0x87 0x0d 0x00 0x00 0x00                   .....
-    body (0)
-
-#### RECORD 31 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x87 0x0d 0x05 0x00 0x8f 0x00 0x00    n.......
-    0008   0x0a 0x00 0x00 0x05 0x5c 0x02 0xdc 0x35    ....\..5
-    0010   0x02 0x80 0x2f 0x00 0x91 0x02 0x08 0x00    ../.....
-    0018   0x48 0x00 0x30 0x00 0x00 0x07 0x02 0x01    H.0.....
-    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x64 0xe7 0x00 0x00 0x00         ..d....
+    datetime (2013-08-08T00:00:00)
+    0000   0x87 0x0d                                  ..
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  135   13    5    0  143    0    0
-             10    0    0    5   92    2  220   53
-              2  128   47    0  145    2    8    0
-             72    0   48    0    0    7    2    1
-              0    0    0    0    0    0    0    0
-              0    0  100  231    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+
+#### RECORD 31 Sara6E 2013-08-08T00:00:00 head[1], body[49] op[0x6e]
+
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-08-08T00:00:00)
+    0000   0x87 0x0d                                  ..
+    body (49)
+    hex
+    0000   0x05 0x00 0x8f 0x00 0x00 0x0a 0x00 0x00    ........
+    0008   0x05 0x5c 0x02 0xdc 0x35 0x02 0x80 0x2f    .\..5../
+    0010   0x00 0x91 0x02 0x08 0x00 0x48 0x00 0x30    .....H.0
+    0018   0x00 0x00 0x07 0x02 0x01 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x64    .......d
+    0028   0xe7 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              5    0  143    0    0   10    0    0
+              5   92    2  220   53    2  128   47
+              0  145    2    8    0   72    0   48
+              0    0    7    2    1    0    0    0
+              0    0    0    0    0    0    0  100
+            231    0    0    0    0    0    0    0
+              0
 
 #### RECORD 32 BolusWizard 2013-08-08T00:24:24 head[2], body[15] op[0x5b]
 ###### DECODED
@@ -1315,4 +1325,4 @@ reading more to debug 0x00
     0000   0x9c 0x20 0x4f 0x08 0x0d                   . O..
     body (0)
     HOUR BITS: [0, 0, 1]
-`end logs/ReadHistoryData-page-13.data: 70 records`
+`end analysis/sarak/raw//ReadHistoryData-page-13.data: 70 records`
