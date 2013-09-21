@@ -1,4 +1,4 @@
-## START analysis/ianj/raw//ReadHistoryData-page-18.data
+## START analysis/ianj/raw/ReadHistoryData-page-18.data
 #### RECORD 0 UnabsorbedInsulinBolus unknown head[26], body[0] op[0x5c]
 ###### DECODED
 ```python
@@ -443,36 +443,46 @@
     decimal
               0   32    0
 
-#### RECORD 21 ResultTotals 2008-08-05T00:12:19 head[5], body[0] op[0x07]
+#### RECORD 21 MResultTotals 2012-08-20T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x08 0x7b                   ....{
     decimal
               7    0    0    8  123
-    datetime (2008-08-05T00:12:19)
-    0000   0x93 0x0c 0x00 0x05 0x08                   .....
-    body (0)
-
-#### RECORD 22 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x93 0x0c 0x06 0x00 0x56 0x56 0x56    n....VVV
-    0008   0x01 0x00 0x00 0x08 0x7b 0x02 0x4b 0x1b    ....{.K.
-    0010   0x06 0x30 0x49 0x01 0x94 0x05 0x20 0x00    .0I... .
-    0018   0x00 0x00 0x68 0x00 0xa8 0x0c 0x00 0x01    ..h.....
-    0020   0x02 0x50 0x00 0x00 0x00 0x00 0x00 0x00    .P......
-    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00         .......
+    datetime (2012-08-20T00:00:00)
+    0000   0x93 0x0c                                  ..
+    body (3)
+    hex
+    0000   0x00 0x05 0x08                             ...
     decimal
-            110  147   12    6    0   86   86   86
-              1    0    0    8  123    2   75   27
-              6   48   73    1  148    5   32    0
-              0    0  104    0  168   12    0    1
-              2   80    0    0    0    0    0    0
-              0    0    0    0    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x40                   ....@
-    body (0)
-    YEAR BITS: [0, 1, 0, 0]
+              0    5    8
+
+#### RECORD 22 Sara6E 2012-08-20T00:00:00 head[1], body[49] op[0x6e]
+
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2012-08-20T00:00:00)
+    0000   0x93 0x0c                                  ..
+    body (49)
+    hex
+    0000   0x06 0x00 0x56 0x56 0x56 0x01 0x00 0x00    ..VVV...
+    0008   0x08 0x7b 0x02 0x4b 0x1b 0x06 0x30 0x49    .{.K..0I
+    0010   0x01 0x94 0x05 0x20 0x00 0x00 0x00 0x68    ... ...h
+    0018   0x00 0xa8 0x0c 0x00 0x01 0x02 0x50 0x00    ......P.
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x40                                       @
+    decimal
+              6    0   86   86   86    1    0    0
+              8  123    2   75   27    6   48   73
+              1  148    5   32    0    0    0  104
+              0  168   12    0    1    2   80    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+             64
+
 #### RECORD 23 BolusWizard 2012-08-20T00:59:50 head[2], body[15] op[0x5b]
 ###### DECODED
 ```python
@@ -1270,4 +1280,4 @@
 
     body (0)
 
-`end analysis/ianj/raw//ReadHistoryData-page-18.data: 64 records`
+`end analysis/ianj/raw/ReadHistoryData-page-18.data: 64 records`

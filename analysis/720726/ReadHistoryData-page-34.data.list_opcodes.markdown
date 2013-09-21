@@ -1,4 +1,4 @@
-## START analysis/ianj/raw//ReadHistoryData-page-34.data
+## START analysis/ianj/raw/ReadHistoryData-page-34.data
 #### STOPPING DOUBLE NULLS @ 1014, found 8 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
@@ -392,36 +392,46 @@ reading more to debug 0x00
     decimal
               0   32    0
     HOUR BITS: [1, 1, 0]
-#### RECORD 20 ResultTotals (2000, 6, 0, 0, 13, 58) head[5], body[0] op[0x07]
+#### RECORD 20 MResultTotals 2013-07-27T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x07 0xea                   .....
     decimal
               7    0    0    7  234
-    datetime ((2000, 6, 0, 0, 13, 58))
-    0000   0x7a 0x8d 0x00 0x00 0x00                   z....
-    body (0)
-    HOUR BITS: [1, 0, 0]
-#### RECORD 21 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x7a 0x8d 0x06 0x00 0xa2 0x47 0xf3    nz....G.
-    0008   0x06 0x00 0x00 0x07 0xea 0x03 0x72 0x2c    ......r,
-    0010   0x04 0x78 0x38 0x01 0x0c 0x02 0x28 0x00    .x8...(.
-    0018   0x00 0x02 0x50 0x00 0x00 0x07 0x00 0x04    ..P.....
-    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00         .......
+    datetime (2013-07-27T00:00:00)
+    0000   0x7a 0x8d                                  z.
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  122  141    6    0  162   71  243
-              6    0    0    7  234    3  114   44
-              4  120   56    1   12    2   40    0
-              0    2   80    0    0    7    0    4
-              0    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+    HOUR BITS: [1, 0, 0]
+#### RECORD 21 Sara6E 2013-07-27T00:00:00 head[1], body[49] op[0x6e]
 
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-07-27T00:00:00)
+    0000   0x7a 0x8d                                  z.
+    body (49)
+    hex
+    0000   0x06 0x00 0xa2 0x47 0xf3 0x06 0x00 0x00    ...G....
+    0008   0x07 0xea 0x03 0x72 0x2c 0x04 0x78 0x38    ...r,.x8
+    0010   0x01 0x0c 0x02 0x28 0x00 0x00 0x02 0x50    ...(...P
+    0018   0x00 0x00 0x07 0x00 0x04 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              6    0  162   71  243    6    0    0
+              7  234    3  114   44    4  120   56
+              1   12    2   40    0    0    2   80
+              0    0    7    0    4    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 22 CalBGForPH 2013-07-27T01:10:08 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -1323,4 +1333,4 @@ reading more to debug 0x00
     decimal
             105  105  150
     HOUR BITS: [1, 1, 0] DAY BITS: [0, 1, 1]
-`end analysis/ianj/raw//ReadHistoryData-page-34.data: 72 records`
+`end analysis/ianj/raw/ReadHistoryData-page-34.data: 72 records`

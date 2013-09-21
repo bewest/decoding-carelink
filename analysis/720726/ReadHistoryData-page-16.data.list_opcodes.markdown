@@ -1,4 +1,4 @@
-## START analysis/ianj/raw//ReadHistoryData-page-16.data
+## START analysis/ianj/raw/ReadHistoryData-page-16.data
 #### STOPPING DOUBLE NULLS @ 1021, found 1 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
@@ -482,35 +482,45 @@ reading more to debug 0x00
     decimal
               0   32    0
 
-#### RECORD 30 ResultTotals (2000, 8, 0, 0, 12, 21) head[5], body[0] op[0x07]
+#### RECORD 30 MResultTotals 2012-08-22T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x08 0xd3                   .....
     decimal
               7    0    0    8  211
-    datetime ((2000, 8, 0, 0, 12, 21))
-    0000   0x95 0x0c 0x00 0x00 0x00                   .....
-    body (0)
-
-#### RECORD 31 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x95 0x0c 0x06 0x11 0x0a 0x74 0x6a    n.....tj
-    0008   0x07 0x00 0x00 0x08 0xd3 0x03 0x53 0x26    ......S&
-    0010   0x05 0x80 0x3e 0x00 0x9d 0x01 0xb4 0x02    ..>.....
-    0018   0x50 0x01 0x2c 0x00 0x50 0x04 0x03 0x01    P.,.P...
-    0020   0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00         .......
+    datetime (2012-08-22T00:00:00)
+    0000   0x95 0x0c                                  ..
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  149   12    6   17   10  116  106
-              7    0    0    8  211    3   83   38
-              5  128   62    0  157    1  180    2
-             80    1   44    0   80    4    3    1
-              1    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+
+#### RECORD 31 Sara6E 2012-08-22T00:00:00 head[1], body[49] op[0x6e]
+
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2012-08-22T00:00:00)
+    0000   0x95 0x0c                                  ..
+    body (49)
+    hex
+    0000   0x06 0x11 0x0a 0x74 0x6a 0x07 0x00 0x00    ...tj...
+    0008   0x08 0xd3 0x03 0x53 0x26 0x05 0x80 0x3e    ...S&..>
+    0010   0x00 0x9d 0x01 0xb4 0x02 0x50 0x01 0x2c    .....P.,
+    0018   0x00 0x50 0x04 0x03 0x01 0x01 0x00 0x00    .P......
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              6   17   10  116  106    7    0    0
+              8  211    3   83   38    5  128   62
+              0  157    1  180    2   80    1   44
+              0   80    4    3    1    1    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0
 
 #### RECORD 32 BasalProfileStart 2012-08-22T04:00:00 head[2], body[3] op[0x7b]
 
@@ -1356,4 +1366,4 @@ reading more to debug 0x00
     0000   0x9a 0x25 0x4d 0x76 0x0c                   .%Mv.
     body (0)
     HOUR BITS: [0, 0, 1] DAY BITS: [0, 1, 1]
-`end analysis/ianj/raw//ReadHistoryData-page-16.data: 77 records`
+`end analysis/ianj/raw/ReadHistoryData-page-16.data: 77 records`

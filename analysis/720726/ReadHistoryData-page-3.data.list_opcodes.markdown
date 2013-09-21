@@ -1,4 +1,4 @@
-## START analysis/ianj/raw//ReadHistoryData-page-3.data
+## START analysis/ianj/raw/ReadHistoryData-page-3.data
 #### STOPPING DOUBLE NULLS @ 1022, found 0 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
@@ -883,36 +883,46 @@ reading more to debug 0x00
     0000   0xb9 0x74 0x56 0x68 0x0d                   .tVh.
     body (0)
     HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1]
-#### RECORD 61 ResultTotals (2000, 10, 0, 0, 13, 8) head[5], body[0] op[0x07]
+#### RECORD 61 MResultTotals 2013-09-09T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x05 0xf4                   .....
     decimal
               7    0    0    5  244
-    datetime ((2000, 10, 0, 0, 13, 8))
-    0000   0x88 0x8d 0x00 0x00 0x00                   .....
-    body (0)
-    HOUR BITS: [1, 0, 0]
-#### RECORD 62 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x88 0x8d 0x06 0x00 0x7b 0x35 0xeb    n....{5.
-    0008   0x0f 0x00 0x00 0x05 0xf4 0x03 0x10 0x33    .......3
-    0010   0x02 0xe4 0x31 0x00 0x72 0x01 0x08 0x00    ..1.r...
-    0018   0xf8 0x00 0xe4 0x00 0x00 0x04 0x03 0x02    ........
-    0020   0x00 0x00 0x49 0x00 0x36 0x2e 0xa2 0x12    ..I.6...
-    0028   0x00 0x00 0xa8 0xa8 0x14 0x00 0x00         .......
+    datetime (2013-09-09T00:00:00)
+    0000   0x88 0x8d                                  ..
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  136  141    6    0  123   53  235
-             15    0    0    5  244    3   16   51
-              2  228   49    0  114    1    8    0
-            248    0  228    0    0    4    3    2
-              0    0   73    0   54   46  162   18
-              0    0  168  168   20    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+    HOUR BITS: [1, 0, 0]
+#### RECORD 62 Sara6E 2013-09-09T00:00:00 head[1], body[49] op[0x6e]
 
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-09-09T00:00:00)
+    0000   0x88 0x8d                                  ..
+    body (49)
+    hex
+    0000   0x06 0x00 0x7b 0x35 0xeb 0x0f 0x00 0x00    ..{5....
+    0008   0x05 0xf4 0x03 0x10 0x33 0x02 0xe4 0x31    ....3..1
+    0010   0x00 0x72 0x01 0x08 0x00 0xf8 0x00 0xe4    .r......
+    0018   0x00 0x00 0x04 0x03 0x02 0x00 0x00 0x49    .......I
+    0020   0x00 0x36 0x2e 0xa2 0x12 0x00 0x00 0xa8    .6......
+    0028   0xa8 0x14 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              6    0  123   53  235   15    0    0
+              5  244    3   16   51    2  228   49
+              0  114    1    8    0  248    0  228
+              0    0    4    3    2    0    0   73
+              0   54   46  162   18    0    0  168
+            168   20    0    0    0    0    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 63 CalBGForPH 2013-09-09T03:57:41 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -1324,4 +1334,4 @@ reading more to debug 0x00
 
     body (0)
 
-`end analysis/ianj/raw//ReadHistoryData-page-3.data: 90 records`
+`end analysis/ianj/raw/ReadHistoryData-page-3.data: 90 records`

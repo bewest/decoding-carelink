@@ -1,4 +1,4 @@
-## START analysis/ianj/raw//ReadHistoryData-page-1.data
+## START analysis/ianj/raw/ReadHistoryData-page-1.data
 #### RECORD 0 UnabsorbedInsulinBolus unknown head[29], body[0] op[0x5c]
 ###### DECODED
 ```python
@@ -424,36 +424,46 @@
     decimal
               0   32    0
     HOUR BITS: [0, 1, 0]
-#### RECORD 23 ResultTotals (2000, 10, 0, 0, 13, 9) head[5], body[0] op[0x07]
+#### RECORD 23 MResultTotals 2013-09-10T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x09 0x8a                   .....
     decimal
               7    0    0    9  138
-    datetime ((2000, 10, 0, 0, 13, 9))
-    0000   0x89 0x8d 0x00 0x00 0x00                   .....
-    body (0)
-    HOUR BITS: [1, 0, 0]
-#### RECORD 24 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x89 0x8d 0x06 0x20 0xde 0x7f 0x1b    n... ...
-    0008   0x0f 0x00 0x00 0x09 0x8a 0x02 0x5e 0x19    ......^.
-    0010   0x07 0x2c 0x4b 0x00 0xcd 0x01 0xfc 0x03    .,K.....
-    0018   0x7c 0x01 0xb4 0x00 0x00 0x08 0x06 0x03    |.......
-    0020   0x00 0x04 0x84 0x00 0x64 0x00 0xfc 0x28    ....d..(
-    0028   0x00 0x00 0x6c 0x38 0x00 0x00 0x00         ..l8...
+    datetime (2013-09-10T00:00:00)
+    0000   0x89 0x8d                                  ..
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  137  141    6   32  222  127   27
-             15    0    0    9  138    2   94   25
-              7   44   75    0  205    1  252    3
-            124    1  180    0    0    8    6    3
-              0    4  132    0  100    0  252   40
-              0    0  108   56    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+    HOUR BITS: [1, 0, 0]
+#### RECORD 24 Sara6E 2013-09-10T00:00:00 head[1], body[49] op[0x6e]
 
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-09-10T00:00:00)
+    0000   0x89 0x8d                                  ..
+    body (49)
+    hex
+    0000   0x06 0x20 0xde 0x7f 0x1b 0x0f 0x00 0x00    . ......
+    0008   0x09 0x8a 0x02 0x5e 0x19 0x07 0x2c 0x4b    ...^..,K
+    0010   0x00 0xcd 0x01 0xfc 0x03 0x7c 0x01 0xb4    .....|..
+    0018   0x00 0x00 0x08 0x06 0x03 0x00 0x04 0x84    ........
+    0020   0x00 0x64 0x00 0xfc 0x28 0x00 0x00 0x6c    .d..(..l
+    0028   0x38 0x00 0x00 0x00 0x00 0x00 0x00 0x00    8.......
+    0030   0x00                                       .
+    decimal
+              6   32  222  127   27   15    0    0
+              9  138    2   94   25    7   44   75
+              0  205    1  252    3  124    1  180
+              0    0    8    6    3    0    4  132
+              0  100    0  252   40    0    0  108
+             56    0    0    0    0    0    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 25 BasalProfileStart 2013-09-10T04:00:00 head[2], body[3] op[0x7b]
 
     op hex (2)
@@ -1291,4 +1301,4 @@
 
     body (0)
 
-`end analysis/ianj/raw//ReadHistoryData-page-1.data: 68 records`
+`end analysis/ianj/raw/ReadHistoryData-page-1.data: 68 records`

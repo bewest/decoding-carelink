@@ -1,34 +1,46 @@
-## START analysis/ianj/raw//ReadHistoryData-page-31.data
-#### RECORD 0 ResultTotals (2000, 6, 0, 0, 13, 62) head[5], body[0] op[0x07]
+## START analysis/ianj/raw/ReadHistoryData-page-31.data
+ERROR day is out of range for month (2013, 7, 32, 0, 0, 0) 0000   0x7f 0x8d                                  ..
+ERROR day is out of range for month 0000   0x7f 0x8d                                  ..
+#### RECORD 0 MResultTotals 2013-07-31T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x07 0x8d                   .....
     decimal
               7    0    0    7  141
-    datetime ((2000, 6, 0, 0, 13, 62))
-    0000   0x7e 0x8d 0x00 0x00 0x00                   ~....
-    body (0)
-    HOUR BITS: [1, 0, 0]
-#### RECORD 1 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x7e 0x8d 0x06 0x10 0xf8 0xab 0x46    n~.....F
-    0008   0x05 0x00 0x00 0x07 0x8d 0x03 0x69 0x2d    ......i-
-    0010   0x04 0x24 0x37 0x00 0x92 0x01 0xc4 0x01    .$7.....
-    0018   0x48 0x01 0x18 0x00 0x00 0x04 0x02 0x01    H.......
-    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00         .......
+    datetime (2013-07-31T00:00:00)
+    0000   0x7e 0x8d                                  ~.
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  126  141    6   16  248  171   70
-              5    0    0    7  141    3  105   45
-              4   36   55    0  146    1  196    1
-             72    1   24    0    0    4    2    1
-              0    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+    HOUR BITS: [1, 0, 0]
+#### RECORD 1 Sara6E 2013-07-31T00:00:00 head[1], body[49] op[0x6e]
 
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-07-31T00:00:00)
+    0000   0x7e 0x8d                                  ~.
+    body (49)
+    hex
+    0000   0x06 0x10 0xf8 0xab 0x46 0x05 0x00 0x00    ....F...
+    0008   0x07 0x8d 0x03 0x69 0x2d 0x04 0x24 0x37    ...i-.$7
+    0010   0x00 0x92 0x01 0xc4 0x01 0x48 0x01 0x18    .....H..
+    0018   0x00 0x00 0x04 0x02 0x01 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              6   16  248  171   70    5    0    0
+              7  141    3  105   45    4   36   55
+              0  146    1  196    1   72    1   24
+              0    0    4    2    1    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 2 BolusWizard 2013-07-31T00:34:42 head[2], body[15] op[0x5b]
 ###### DECODED
 ```python
@@ -1134,36 +1146,48 @@
     decimal
               0   32    0
 
-#### RECORD 63 ResultTotals (2000, 6, 0, 0, 13, 63) head[5], body[0] op[0x07]
+ERROR day is out of range for month (2013, 7, 32, 0, 0, 0) 0000   0x7f 0x8d                                  ..
+#### RECORD 63 MResultTotals (2013, 7, 32, 0, 0, 0) head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x07 0xb6                   .....
     decimal
               7    0    0    7  182
-    datetime ((2000, 6, 0, 0, 13, 63))
-    0000   0x7f 0x8d 0x00 0x00 0x00                   .....
-    body (0)
-    HOUR BITS: [1, 0, 0]
-#### RECORD 64 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x7f 0x8d 0x06 0x00 0x7a 0x48 0xf0    n....zH.
-    0008   0x06 0x00 0x00 0x07 0xb6 0x03 0x86 0x2e    ........
-    0010   0x04 0x30 0x36 0x01 0x0d 0x03 0xa8 0x00    .06.....
-    0018   0x88 0x00 0x00 0x00 0x00 0x0b 0x01 0x00    ........
-    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00         .......
+    datetime ((2013, 7, 32, 0, 0, 0))
+    0000   0x7f 0x8d                                  ..
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  127  141    6    0  122   72  240
-              6    0    0    7  182    3  134   46
-              4   48   54    1   13    3  168    0
-            136    0    0    0    0   11    1    0
-              0    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+    HOUR BITS: [1, 0, 0]
+ERROR day is out of range for month 0000   0x7f 0x8d                                  ..
+#### RECORD 64 Sara6E (2013, 7, 32, 0, 0, 0) head[1], body[49] op[0x6e]
 
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime ((2013, 7, 32, 0, 0, 0))
+    0000   0x7f 0x8d                                  ..
+    body (49)
+    hex
+    0000   0x06 0x00 0x7a 0x48 0xf0 0x06 0x00 0x00    ..zH....
+    0008   0x07 0xb6 0x03 0x86 0x2e 0x04 0x30 0x36    ......06
+    0010   0x01 0x0d 0x03 0xa8 0x00 0x88 0x00 0x00    ........
+    0018   0x00 0x00 0x0b 0x01 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              6    0  122   72  240    6    0    0
+              7  182    3  134   46    4   48   54
+              1   13    3  168    0  136    0    0
+              0    0   11    1    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 65 BolusWizard 2013-08-01T00:02:57 head[2], body[15] op[0x5b]
 ###### DECODED
 ```python
@@ -1283,4 +1307,4 @@
 
     body (0)
 
-`end analysis/ianj/raw//ReadHistoryData-page-31.data: 72 records`
+`end analysis/ianj/raw/ReadHistoryData-page-31.data: 72 records`

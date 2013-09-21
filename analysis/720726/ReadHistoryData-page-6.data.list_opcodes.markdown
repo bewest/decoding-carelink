@@ -1,4 +1,4 @@
-## START analysis/ianj/raw//ReadHistoryData-page-6.data
+## START analysis/ianj/raw/ReadHistoryData-page-6.data
 #### STOPPING DOUBLE NULLS @ 1014, found 8 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
@@ -7,26 +7,32 @@ reading more to debug 0x00
     0000   0x23 0x24                                  #$
 ##### DEBUG DECIMAL
              35   36
-#### RECORD 0 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
+#### RECORD 0 Sara6E 2013-09-05T00:00:00 head[1], body[49] op[0x6e]
 
-    op hex (47)
-    0000   0x6e 0x84 0x8d 0x06 0x00 0xcd 0xba 0xba    n.......
-    0008   0x02 0x00 0x00 0x06 0xb1 0x03 0x89 0x35    .......5
-    0010   0x03 0x28 0x2f 0x00 0xa8 0x01 0x4c 0x00    .(/...L.
-    0018   0x70 0x01 0x6c 0x00 0x00 0x05 0x01 0x03    p.l.....
-    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0xdf 0xdf 0x00 0x00 0x00         .......
+    op hex (1)
+    0000   0x6e                                       n
     decimal
-            110  132  141    6    0  205  186  186
-              2    0    0    6  177    3  137   53
-              3   40   47    0  168    1   76    0
-            112    1  108    0    0    5    1    3
-              0    0    0    0    0    0    0    0
-              0    0  223  223    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
-
+            110
+    datetime (2013-09-05T00:00:00)
+    0000   0x84 0x8d                                  ..
+    body (49)
+    hex
+    0000   0x06 0x00 0xcd 0xba 0xba 0x02 0x00 0x00    ........
+    0008   0x06 0xb1 0x03 0x89 0x35 0x03 0x28 0x2f    ....5.(/
+    0010   0x00 0xa8 0x01 0x4c 0x00 0x70 0x01 0x6c    ...L.p.l
+    0018   0x00 0x00 0x05 0x01 0x03 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0xdf    ........
+    0028   0xdf 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              6    0  205  186  186    2    0    0
+              6  177    3  137   53    3   40   47
+              0  168    1   76    0  112    1  108
+              0    0    5    1    3    0    0    0
+              0    0    0    0    0    0    0  223
+            223    0    0    0    0    0    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 1 CalBGForPH 2013-09-05T01:15:34 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -517,36 +523,46 @@ reading more to debug 0x00
     0000   0x80 0x68 0x0f 0x05 0x0d                   .h...
     body (0)
     HOUR BITS: [0, 1, 1]
-#### RECORD 37 ResultTotals (2000, 2, 0, 0, 8, 1) head[5], body[0] op[0x07]
+#### RECORD 37 MResultTotals 2008-01-02T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x00 0x00                   .....
     decimal
               7    0    0    0    0
-    datetime ((2000, 2, 0, 0, 8, 1))
-    0000   0x01 0x88 0x00 0x00 0x00                   .....
-    body (0)
+    datetime (2008-01-02T00:00:00)
+    0000   0x01 0x88                                  ..
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
+    decimal
+              0    0    0
     HOUR BITS: [1, 0, 0]
-#### RECORD 38 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
+#### RECORD 38 Sara6E 2008-01-02T00:00:00 head[1], body[49] op[0x6e]
 
-    op hex (47)
-    0000   0x6e 0x01 0x88 0x06 0x00 0x45 0x45 0x45    n....EEE
-    0008   0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2008-01-02T00:00:00)
+    0000   0x01 0x88                                  ..
+    body (49)
+    hex
+    0000   0x06 0x00 0x45 0x45 0x45 0x01 0x00 0x00    ..EEE...
+    0008   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
     0010   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
     0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
     0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00         .......
+    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
     decimal
-            110    1  136    6    0   69   69   69
-              1    0    0    0    0    0    0    0
+              6    0   69   69   69    1    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
               0    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
-
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 39 Rewind 2013-09-05T15:40:02 head[2], body[0] op[0x21]
 
     op hex (2)
@@ -804,36 +820,46 @@ reading more to debug 0x00
     decimal
               0   32    0
     HOUR BITS: [0, 1, 0]
-#### RECORD 54 ResultTotals 2015-10-08T00:13:05 head[5], body[0] op[0x07]
+#### RECORD 54 MResultTotals 2013-09-06T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x02 0x68                   ....h
     decimal
               7    0    0    2  104
-    datetime (2015-10-08T00:13:05)
-    0000   0x85 0x8d 0x00 0x28 0x0f                   ...(.
-    body (0)
-    HOUR BITS: [1, 0, 0] DAY BITS: [0, 0, 1]
-#### RECORD 55 Sara6E (2008, 8, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x85 0x8d 0x06 0x00 0x36 0x36 0x36    n....666
-    0008   0x01 0x00 0x00 0x02 0x68 0x01 0x3c 0x33    ....h.<3
-    0010   0x01 0x2c 0x31 0x00 0x54 0x01 0x2c 0x00    .,1.T.,.
-    0018   0x00 0x00 0x00 0x00 0x00 0x03 0x00 0x00    ........
-    0020   0x00 0x80 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00         .......
+    datetime (2013-09-06T00:00:00)
+    0000   0x85 0x8d                                  ..
+    body (3)
+    hex
+    0000   0x00 0x28 0x0f                             .(.
     decimal
-            110  133  141    6    0   54   54   54
-              1    0    0    2  104    1   60   51
-              1   44   49    0   84    1   44    0
-              0    0    0    0    0    3    0    0
-              0  128    0    0    0    0    0    0
-              0    0    0    0    0    0    0
-    datetime ((2008, 8, 0, 0, 0, 0))
-    0000   0x80 0x00 0x00 0x00 0x78                   ....x
-    body (0)
-    YEAR BITS: [0, 1, 1, 1]
+              0   40   15
+    HOUR BITS: [1, 0, 0]
+#### RECORD 55 Sara6E 2013-09-06T00:00:00 head[1], body[49] op[0x6e]
+
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-09-06T00:00:00)
+    0000   0x85 0x8d                                  ..
+    body (49)
+    hex
+    0000   0x06 0x00 0x36 0x36 0x36 0x01 0x00 0x00    ..666...
+    0008   0x02 0x68 0x01 0x3c 0x33 0x01 0x2c 0x31    .h.<3.,1
+    0010   0x00 0x54 0x01 0x2c 0x00 0x00 0x00 0x00    .T.,....
+    0018   0x00 0x00 0x03 0x00 0x00 0x00 0x80 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0028   0x00 0x00 0x00 0x00 0x80 0x00 0x00 0x00    ........
+    0030   0x78                                       x
+    decimal
+              6    0   54   54   54    1    0    0
+              2  104    1   60   51    1   44   49
+              0   84    1   44    0    0    0    0
+              0    0    3    0    0    0  128    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0  128    0    0    0
+            120
+    HOUR BITS: [1, 0, 0]
 #### RECORD 56 CalBGForPH 2013-09-06T00:16:51 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -1284,4 +1310,4 @@ reading more to debug 0x00
              12  144    0  110   23   54    0    0
              40    0    0    0    0   40   54
     HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1]
-`end analysis/ianj/raw//ReadHistoryData-page-6.data: 82 records`
+`end analysis/ianj/raw/ReadHistoryData-page-6.data: 82 records`

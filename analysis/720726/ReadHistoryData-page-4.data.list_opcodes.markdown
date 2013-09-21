@@ -1,24 +1,30 @@
-## START analysis/ianj/raw//ReadHistoryData-page-4.data
-#### RECORD 0 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
+## START analysis/ianj/raw/ReadHistoryData-page-4.data
+#### RECORD 0 Sara6E 2013-09-08T00:00:00 head[1], body[49] op[0x6e]
 
-    op hex (47)
-    0000   0x6e 0x87 0x8d 0x06 0x10 0xa3 0x41 0x1d    n.....A.
-    0008   0x08 0x00 0x00 0x08 0x7e 0x04 0xf6 0x3a    ....~..:
-    0010   0x03 0x88 0x2a 0x00 0x92 0x02 0x08 0x01    ..*.....
-    0018   0x80 0x00 0x00 0x00 0x00 0x06 0x03 0x00    ........
-    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00         .......
+    op hex (1)
+    0000   0x6e                                       n
     decimal
-            110  135  141    6   16  163   65   29
-              8    0    0    8  126    4  246   58
-              3  136   42    0  146    2    8    1
-            128    0    0    0    0    6    3    0
+            110
+    datetime (2013-09-08T00:00:00)
+    0000   0x87 0x8d                                  ..
+    body (49)
+    hex
+    0000   0x06 0x10 0xa3 0x41 0x1d 0x08 0x00 0x00    ...A....
+    0008   0x08 0x7e 0x04 0xf6 0x3a 0x03 0x88 0x2a    .~..:..*
+    0010   0x00 0x92 0x02 0x08 0x01 0x80 0x00 0x00    ........
+    0018   0x00 0x00 0x06 0x03 0x00 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              6   16  163   65   29    8    0    0
+              8  126    4  246   58    3  136   42
+              0  146    2    8    1  128    0    0
+              0    0    6    3    0    0    0    0
               0    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
-
+              0    0    0    0    0    0    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 1 CalBGForPH 2013-09-08T00:06:59 head[2], body[0] op[0x0a]
 ###### DECODED
 ```python
@@ -1369,4 +1375,4 @@
 
     body (0)
 
-`end analysis/ianj/raw//ReadHistoryData-page-4.data: 108 records`
+`end analysis/ianj/raw/ReadHistoryData-page-4.data: 108 records`

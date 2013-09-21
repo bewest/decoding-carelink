@@ -1,4 +1,4 @@
-## START analysis/ianj/raw//ReadHistoryData-page-8.data
+## START analysis/ianj/raw/ReadHistoryData-page-8.data
 #### STOPPING DOUBLE NULLS @ 1004, found 18 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
@@ -562,36 +562,46 @@ reading more to debug 0x00
     decimal
               0   32    0
     HOUR BITS: [0, 1, 0]
-#### RECORD 29 ResultTotals (2000, 10, 0, 0, 13, 2) head[5], body[0] op[0x07]
+#### RECORD 29 MResultTotals 2013-09-03T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x06 0x4d                   ....M
     decimal
               7    0    0    6   77
-    datetime ((2000, 10, 0, 0, 13, 2))
-    0000   0x82 0x8d 0x00 0x00 0x00                   .....
-    body (0)
-    HOUR BITS: [1, 0, 0]
-#### RECORD 30 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x82 0x8d 0x06 0x00 0x00 0x00 0x00    n.......
-    0008   0x00 0x00 0x00 0x06 0x4d 0x03 0x89 0x38    ....M..8
-    0010   0x02 0xc4 0x2c 0x00 0xb3 0x02 0x18 0x00    ..,.....
-    0018   0x00 0x00 0x9c 0x00 0x10 0x07 0x00 0x01    ........
-    0020   0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00         .......
+    datetime (2013-09-03T00:00:00)
+    0000   0x82 0x8d                                  ..
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  130  141    6    0    0    0    0
-              0    0    0    6   77    3  137   56
-              2  196   44    0  179    2   24    0
-              0    0  156    0   16    7    0    1
-              1    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+    HOUR BITS: [1, 0, 0]
+#### RECORD 30 Sara6E 2013-09-03T00:00:00 head[1], body[49] op[0x6e]
 
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-09-03T00:00:00)
+    0000   0x82 0x8d                                  ..
+    body (49)
+    hex
+    0000   0x06 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0008   0x06 0x4d 0x03 0x89 0x38 0x02 0xc4 0x2c    .M..8..,
+    0010   0x00 0xb3 0x02 0x18 0x00 0x00 0x00 0x9c    ........
+    0018   0x00 0x10 0x07 0x00 0x01 0x01 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              6    0    0    0    0    0    0    0
+              6   77    3  137   56    2  196   44
+              0  179    2   24    0    0    0  156
+              0   16    7    0    1    1    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0
+    HOUR BITS: [1, 0, 0]
 #### RECORD 31 BolusWizard 2013-09-03T01:23:47 head[2], body[15] op[0x5b]
 ###### DECODED
 ```python
@@ -1303,4 +1313,4 @@ reading more to debug 0x00
     0000   0x91 0x75 0x51 0x63 0x0d                   .uQc.
     body (0)
     HOUR BITS: [0, 1, 1] DAY BITS: [0, 1, 1]
-`end analysis/ianj/raw//ReadHistoryData-page-8.data: 68 records`
+`end analysis/ianj/raw/ReadHistoryData-page-8.data: 68 records`

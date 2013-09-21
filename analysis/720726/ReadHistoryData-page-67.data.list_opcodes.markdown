@@ -1,4 +1,4 @@
-## START analysis/ianj/raw//ReadHistoryData-page-67.data
+## START analysis/ianj/raw/ReadHistoryData-page-67.data
 #### RECORD 0 ChangeBasalProfile unknown head[2], body[0] op[0x08]
 
     op hex (2)
@@ -9,4 +9,4 @@
 
     body (0)
 
-`end analysis/ianj/raw//ReadHistoryData-page-67.data: 1 records`
+`end analysis/ianj/raw/ReadHistoryData-page-67.data: 1 records`

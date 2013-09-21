@@ -1,4 +1,4 @@
-## START analysis/ianj/raw//ReadHistoryData-page-14.data
+## START analysis/ianj/raw/ReadHistoryData-page-14.data
 #### STOPPING DOUBLE NULLS @ 1017, found 5 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
@@ -847,35 +847,45 @@ reading more to debug 0x00
     decimal
               0   32    0
 
-#### RECORD 49 ResultTotals (2000, 8, 0, 0, 12, 24) head[5], body[0] op[0x07]
+#### RECORD 49 MResultTotals 2012-08-25T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x07 0x0c                   .....
     decimal
               7    0    0    7   12
-    datetime ((2000, 8, 0, 0, 12, 24))
-    0000   0x98 0x0c 0x00 0x00 0x00                   .....
-    body (0)
-
-#### RECORD 50 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x98 0x0c 0x06 0x00 0x83 0x3e 0xf9    n.....>.
-    0008   0x06 0x00 0x00 0x07 0x0c 0x03 0x88 0x32    .......2
-    0010   0x03 0x84 0x32 0x00 0xc2 0x01 0xf8 0x00    ..2.....
-    0018   0x80 0x01 0x0c 0x00 0x00 0x05 0x01 0x02    ........
-    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00         .......
+    datetime (2012-08-25T00:00:00)
+    0000   0x98 0x0c                                  ..
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  152   12    6    0  131   62  249
-              6    0    0    7   12    3  136   50
-              3  132   50    0  194    1  248    0
-            128    1   12    0    0    5    1    2
+              0    0    0
+
+#### RECORD 50 Sara6E 2012-08-25T00:00:00 head[1], body[49] op[0x6e]
+
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2012-08-25T00:00:00)
+    0000   0x98 0x0c                                  ..
+    body (49)
+    hex
+    0000   0x06 0x00 0x83 0x3e 0xf9 0x06 0x00 0x00    ...>....
+    0008   0x07 0x0c 0x03 0x88 0x32 0x03 0x84 0x32    ....2..2
+    0010   0x00 0xc2 0x01 0xf8 0x00 0x80 0x01 0x0c    ........
+    0018   0x00 0x00 0x05 0x01 0x02 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              6    0  131   62  249    6    0    0
+              7   12    3  136   50    3  132   50
+              0  194    1  248    0  128    1   12
+              0    0    5    1    2    0    0    0
               0    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0    0    0    0    0    0
+              0
 
 #### RECORD 51 CalBGForPH 2012-08-25T00:29:26 head[2], body[0] op[0x0a]
 ###### DECODED
@@ -1389,4 +1399,4 @@ reading more to debug 0x00
              23  144    0  110   23   54    0    0
              80    0    0    0    0   80   54
     DAY BITS: [0, 1, 1]
-`end analysis/ianj/raw//ReadHistoryData-page-14.data: 80 records`
+`end analysis/ianj/raw/ReadHistoryData-page-14.data: 80 records`

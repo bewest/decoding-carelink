@@ -1,4 +1,4 @@
-## START analysis/ianj/raw//ReadHistoryData-page-27.data
+## START analysis/ianj/raw/ReadHistoryData-page-27.data
 #### STOPPING DOUBLE NULLS @ 1019, found 3 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
@@ -261,35 +261,45 @@ reading more to debug 0x00
     decimal
               0   32    0
 
-#### RECORD 15 ResultTotals (2000, 8, 0, 0, 13, 5) head[5], body[0] op[0x07]
+#### RECORD 15 MResultTotals 2013-08-06T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x07 0x75                   ....u
     decimal
               7    0    0    7  117
-    datetime ((2000, 8, 0, 0, 13, 5))
-    0000   0x85 0x0d 0x00 0x00 0x00                   .....
-    body (0)
-
-#### RECORD 16 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x85 0x0d 0x06 0x00 0xa8 0x70 0xea    n.....p.
-    0008   0x08 0x00 0x00 0x07 0x75 0x03 0x89 0x2f    ....u../
-    0010   0x03 0xec 0x35 0x00 0xeb 0x02 0xc4 0x00    ..5.....
-    0018   0x00 0x01 0x00 0x00 0x28 0x07 0x00 0x01    ....(...
-    0020   0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00         .......
+    datetime (2013-08-06T00:00:00)
+    0000   0x85 0x0d                                  ..
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  133   13    6    0  168  112  234
-              8    0    0    7  117    3  137   47
-              3  236   53    0  235    2  196    0
-              0    1    0    0   40    7    0    1
-              1    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0
+
+#### RECORD 16 Sara6E 2013-08-06T00:00:00 head[1], body[49] op[0x6e]
+
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-08-06T00:00:00)
+    0000   0x85 0x0d                                  ..
+    body (49)
+    hex
+    0000   0x06 0x00 0xa8 0x70 0xea 0x08 0x00 0x00    ...p....
+    0008   0x07 0x75 0x03 0x89 0x2f 0x03 0xec 0x35    .u../..5
+    0010   0x00 0xeb 0x02 0xc4 0x00 0x00 0x01 0x00    ........
+    0018   0x00 0x28 0x07 0x00 0x01 0x01 0x00 0x00    .(......
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              6    0  168  112  234    8    0    0
+              7  117    3  137   47    3  236   53
+              0  235    2  196    0    0    1    0
+              0   40    7    0    1    1    0    0
+              0    0    0    0    0    0    0    0
+              0    0    0    0    0    0    0    0
+              0
 
 #### RECORD 17 BolusWizard 2013-08-06T00:19:41 head[2], body[15] op[0x5b]
 ###### DECODED
@@ -1251,35 +1261,45 @@ reading more to debug 0x00
     decimal
               0   32    0
 
-#### RECORD 71 ResultTotals (2000, 8, 0, 0, 13, 6) head[5], body[0] op[0x07]
+#### RECORD 71 MResultTotals 2013-08-07T00:00:00 head[5], body[3] op[0x07]
 
     op hex (5)
     0000   0x07 0x00 0x00 0x06 0xc3                   .....
     decimal
               7    0    0    6  195
-    datetime ((2000, 8, 0, 0, 13, 6))
-    0000   0x86 0x0d 0x00 0x00 0x00                   .....
-    body (0)
-
-#### RECORD 72 Sara6E (2000, 0, 0, 0, 0, 0) head[47], body[0] op[0x6e]
-
-    op hex (47)
-    0000   0x6e 0x86 0x0d 0x06 0x10 0xc6 0x7c 0x03    n.....|.
-    0008   0x08 0x00 0x00 0x06 0xc3 0x03 0x89 0x34    .......4
-    0010   0x03 0x3a 0x30 0x00 0xb5 0x01 0x52 0x00    .:0...R.
-    0018   0x9c 0x01 0x4c 0x00 0x00 0x06 0x01 0x02    ..L.....
-    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
-    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00         .......
+    datetime (2013-08-07T00:00:00)
+    0000   0x86 0x0d                                  ..
+    body (3)
+    hex
+    0000   0x00 0x00 0x00                             ...
     decimal
-            110  134   13    6   16  198  124    3
-              8    0    0    6  195    3  137   52
-              3   58   48    0  181    1   82    0
-            156    1   76    0    0    6    1    2
+              0    0    0
+
+#### RECORD 72 Sara6E 2013-08-07T00:00:00 head[1], body[49] op[0x6e]
+
+    op hex (1)
+    0000   0x6e                                       n
+    decimal
+            110
+    datetime (2013-08-07T00:00:00)
+    0000   0x86 0x0d                                  ..
+    body (49)
+    hex
+    0000   0x06 0x10 0xc6 0x7c 0x03 0x08 0x00 0x00    ...|....
+    0008   0x06 0xc3 0x03 0x89 0x34 0x03 0x3a 0x30    ....4.:0
+    0010   0x00 0xb5 0x01 0x52 0x00 0x9c 0x01 0x4c    ...R...L
+    0018   0x00 0x00 0x06 0x01 0x02 0x00 0x00 0x00    ........
+    0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+    0030   0x00                                       .
+    decimal
+              6   16  198  124    3    8    0    0
+              6  195    3  137   52    3   58   48
+              0  181    1   82    0  156    1   76
+              0    0    6    1    2    0    0    0
               0    0    0    0    0    0    0    0
-              0    0    0    0    0    0    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+              0    0    0    0    0    0    0    0
+              0
 
 #### RECORD 73 BasalProfileStart 2013-08-07T00:17:37 head[2], body[3] op[0x7b]
 
@@ -1308,4 +1328,4 @@ reading more to debug 0x00
     0000   0x83 0x11 0x00 0x07 0x0d                   .....
     body (0)
 
-`end analysis/ianj/raw//ReadHistoryData-page-27.data: 75 records`
+`end analysis/ianj/raw/ReadHistoryData-page-27.data: 75 records`
