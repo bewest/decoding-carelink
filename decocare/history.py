@@ -58,7 +58,7 @@ class MResultTotals(InvalidRecord):
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
     if larger:
-      self.body_length = 0
+      self.body_length = 3
   def parse_time(self):
     mid = unmask_m_midnight(self.date)
     try:
@@ -189,12 +189,6 @@ class BasalProfileStart(KnownRecord):
   opcode = 0x7b
   body_length = 3
 _confirmed.append(BasalProfileStart)
-class Sara6E(InvalidRecord):
-  """Seems specific to 722?"""
-  opcode = 0x6e
-  head_length = 52 - 5
-  # body_length = 1
-_confirmed.append(Sara6E)
 
 class old6c(InvalidRecord):
   opcode = 0x6c
@@ -259,6 +253,16 @@ def unmask_m_midnight(data):
   return (year, month, day, hours, minutes, seconds)
 
 _confirmed.append(Model522ResultTotals)
+
+class Sara6E(Model522ResultTotals):
+  """Seems specific to 722?"""
+  opcode = 0x6e
+  #head_length = 52 - 5
+  # body_length = 1
+  body_length = 48
+  #body_length = 0
+_confirmed.append(Sara6E)
+
 _known = { }
 
 _variant = { }
