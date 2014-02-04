@@ -1,4 +1,3 @@
-
 # What do prime events look like?
 
 ```
@@ -7,11 +6,11 @@
 2th byte - programmed amount (or 0 == manual!??)
 3th byte - concentration???
 4th byte - amount primed
-5th byte - seconds + (0x40) !?
-6th byte - minutes + (0xC0) !?
+5th byte - first 2 bits = month , last 6 bits = seconds
+6th byte - first 2 bits = month , last 6 bits = minutes + (0xC0)
 7th byte - hours (24 hour)
-8th byte - EOF?
-9th byte - EOF?
+8th byte - day of the month
+9th byte - year
 
 ```
 
