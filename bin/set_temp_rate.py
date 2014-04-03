@@ -40,18 +40,22 @@ def get_parser ( ):
 def main (args):
   print "## set a temporary basal rate"
   print "hi", "`", args, "`"
+  print "```"
   uart = stick.Stick(link.Link(args.port, timeout=.400))
+  print "```"
   print "```"
   uart.open( )
   print "```"
+  print "```"
   pump = session.Pump(uart, args.serial)
+  print "```"
   print "```json"
   log.info(pformat(uart.interface_stats( )))
   print "```"
   print "```"
   model = pump.read_model( )
   print "```"
-  log.info('### PUMP MODEL: `%s`' % model)
+  print '### PUMP MODEL: `%s`' % model
 
   print "### setting rate"
   print "#### sending command"
