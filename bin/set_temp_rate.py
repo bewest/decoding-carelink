@@ -74,7 +74,7 @@ def main (args):
   print "#### sending command"
   print "```"
   #comm = commands.TempBasal(serial=device.serial, params=[ x ] )
-  params = [0x00, 0x1f, 0x0d]
+  params = [0x00, 0x1f, 0x0e]
   comm = commands.TempBasal(serial=pump.serial, params=params)
   pump.execute(comm)
   page = comm.getData( )
