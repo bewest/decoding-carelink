@@ -52,7 +52,7 @@ def main (args):
   print "```"
   stats = uart.interface_stats( )
   print "```"
-  print "```json"
+  print "```javascript"
   print pformat(stats)
   print "```"
   print "```"
@@ -70,8 +70,11 @@ def main (args):
   print "```"
   print "### result"
   log.info("XXX: SET TempBasal!!:\n```\n%s\n```" % lib.hexdump(page))
-  print "```json"
-  log.info(pformat(uart.interface_stats( )))
+  print "```"
+  stats = uart.interface_stats( )
+  print "```"
+  print "```javascript"
+  print pformat(uart.interface_stats( ))
   print "```"
 
 if __name__ == '__main__':
