@@ -38,19 +38,32 @@ def get_parser ( ):
   return parser
 
 def main (args):
-  print "hi", args
+  print "## set a temporary basal rate"
+  print "hi", "`", args, "`"
   uart = stick.Stick(link.Link(args.port, timeout=.400))
   uart.open( )
   pump = session.Pump(uart, args.serial)
+  print "```json"
   log.info(pformat(uart.interface_stats( )))
-  log.info('PUMP MODEL: %s' % pump.read_model( ))
+  print "```"
+  print "```"
+  model = pump.read_model( )
+  print "```"
+  log.info('### PUMP MODEL: `%s`' % model)
 
+  print "### setting rate"
+  print "#### sending command"
+  print "```"
   #comm = commands.TempBasal(serial=device.serial, params=[ x ] )
   comm = commands.TempBasal(serial=pump.serial, params=[0x00, 0x20, 0x07])
   pump.execute(comm)
   page = comm.getData( )
-  log.info("XXX: SET TempBasal!!:\n%s" % lib.hexdump(page))
+  print "```"
+  print "### result"
+  log.info("XXX: SET TempBasal!!:\n```\n%s\n```" % lib.hexdump(page))
+  print "```json"
   log.info(pformat(uart.interface_stats( )))
+  print "```"
 
 if __name__ == '__main__':
   parser = get_parser( )
