@@ -46,7 +46,7 @@ def main (args):
   log.info('PUMP MODEL: %s' % pump.read_model( ))
 
   #comm = commands.TempBasal(serial=device.serial, params=[ x ] )
-  comm = commands.TempBasal(serial=pump.serial)
+  comm = commands.TempBasal(serial=pump.serial, params=[0x01, 0x20, 0x07])
   pump.execute(comm)
   page = comm.getData( )
   log.info("XXX: SET TempBasal!!:\n%s" % lib.hexdump(page))
