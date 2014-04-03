@@ -31,7 +31,7 @@ def get_parser ( ):
                       )
   parser.add_argument('--rate',
                       dest='rate',
-                      type=int, default=0,
+                      type=float, default=0,
                       help="Rate of temp basal [default: %(default)s)]"
                       )
   argcomplete.autocomplete(parser)
