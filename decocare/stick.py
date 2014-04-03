@@ -481,7 +481,7 @@ class Stick(object):
 
     """
     raw = self.send_force_read( )
-    if len(raw) == 0:
+    if not raw or len(raw) == 0:
       log.info('process zero length READ, try once more sleep .010')
       time.sleep(.010)
       raw = bytearray(self.link.read(self.command.size))
