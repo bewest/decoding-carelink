@@ -49,8 +49,11 @@ def main (args):
   print "```"
   pump = session.Pump(uart, args.serial)
   print "```"
+  print "```"
+  stats = uart.interface_stats( )
+  print "```"
   print "```json"
-  log.info(pformat(uart.interface_stats( )))
+  print pformat(stats)
   print "```"
   print "```"
   model = pump.read_model( )
