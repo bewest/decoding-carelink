@@ -60,21 +60,41 @@ def main (args):
   print "```"
   print '### PUMP MODEL: `%s`' % model
 
+  print "### existing temp basal"
+  print "```"
+  reader = commands.ReadBasalTemp(serial=pump.serial)
+  pump.execute(reader)
+  temp_basal = reader.getData( )
+  print "```"
+  print "```javascript"
+  print pformat(temp_basal)
+  print "```"
+
   print "### setting rate"
   print "#### sending command"
   print "```"
   #comm = commands.TempBasal(serial=device.serial, params=[ x ] )
-  comm = commands.TempBasal(serial=pump.serial, params=[0x00, 0x20, 0x07])
+  params = [0x00, 0x21, 0x07]
+  comm = commands.TempBasal(serial=pump.serial, params=params)
   pump.execute(comm)
   page = comm.getData( )
   print "```"
   print "### result"
   log.info("XXX: SET TempBasal!!:\n```\n%s\n```" % lib.hexdump(page))
+
+  print "```"
+  reader = commands.ReadBasalTemp(serial=pump.serial)
+  pump.execute(reader)
+  temp_basal = reader.getData( )
+  print "```"
+  print "```javascript"
+  print pformat(temp_basal)
+  print "```"
   print "```"
   stats = uart.interface_stats( )
   print "```"
   print "```javascript"
-  print pformat(uart.interface_stats( ))
+  print pformat(stats)
   print "```"
 
 if __name__ == '__main__':
