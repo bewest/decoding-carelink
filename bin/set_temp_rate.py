@@ -41,7 +41,9 @@ def main (args):
   print "## set a temporary basal rate"
   print "hi", "`", args, "`"
   uart = stick.Stick(link.Link(args.port, timeout=.400))
+  print "```"
   uart.open( )
+  print "```"
   pump = session.Pump(uart, args.serial)
   print "```json"
   log.info(pformat(uart.interface_stats( )))
