@@ -646,7 +646,7 @@ def dictlines(d):
 
 def unsolved_bolus_wizard( ):
   """
-  >>> unsolved_bolus_wizard( )
+  # >>> unsolved_bolus_wizard( )
   """
   # these byte sequences line up with these records:
   bw_ok_1 = {

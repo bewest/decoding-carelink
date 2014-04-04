@@ -3,7 +3,7 @@ This module provides some basic helper/formatting utilities.
 
 
 >>> hexdump( bytearray( [0x00] ) )
-'0000   0x00                       .'
+'0000   0x00                                       .'
 
 >>> 0x00 == HighByte( 0x0F )
 True

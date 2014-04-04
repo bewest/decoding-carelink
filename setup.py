@@ -16,6 +16,9 @@ setup(name='decocare',
     url="https://github.com/bewest/decoding-carelink",
     #namespace_packages = ['insulaudit'],
     packages=['decocare'],
+    install_requires = [
+      'pyserial', 'python-dateutil', 'argcomplete'
+    ],
 
     classifiers = [
         'Development Status :: 3 - Alpha',

@@ -166,6 +166,18 @@ class PowerControlOff(PowerControl):
   """
   params = [ 0x00, 0x0A ]
 
+class TempBasal(PumpCommand):
+  """
+
+  """
+
+  code = 76
+  descr = "Set temp basal"
+  params = [ 0x00, 0x00, 0x00 ]
+  retries = 0
+  #maxRecords = 0
+  #timeout = 1
+
 class ReadErrorStatus(PumpCommand):
   """
     >>> ReadErrorStatus(serial='665455').format() == ReadErrorStatus._test_ok
