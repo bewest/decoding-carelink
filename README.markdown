@@ -7,6 +7,13 @@ We are hoping to help diabetics independently reproduce therapeutic
 audits of their Medtronic insulin pumps.  This experimental software
 will download pump settings, and the entire log of historical data.
 
+## [Docs](http://bewest.github.io/decoding-carelink/)
+
+* http://bewest.github.io/decoding-carelink/ Sphinx docs.
+* https://gist.github.com/bewest/6330546 some diagrams
+
+![overview](https://gist.github.com/bewest/6330546/raw/dffdb1e95ef9882e3929579784f95db8c5c6705d/overview.seq.png)
+
 ## Status
 
 We can decode many of the opcodes that store configuration settings.
