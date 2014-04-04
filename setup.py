@@ -17,7 +17,7 @@ setup(name='decocare',
     #namespace_packages = ['insulaudit'],
     packages=['decocare'],
     install_requires = [
-      'pyserial', 'dateutil', 'argcomplete'
+      'pyserial', 'python-dateutil', 'argcomplete'
     ],
 
     classifiers = [
