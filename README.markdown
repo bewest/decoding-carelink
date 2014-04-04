@@ -9,6 +9,10 @@ will download pump settings, and the entire log of historical data.
 
 ## [Docs](http://bewest.github.io/decoding-carelink/)
 
+Spot something incorrect or not working?  Want a feature/tool to do
+something?
+[Please file an issue!](https://github.com/bewest/decoding-carelink/issues)
+
 * http://bewest.github.io/decoding-carelink/ Sphinx docs.
 * https://gist.github.com/bewest/6330546 some diagrams
 
