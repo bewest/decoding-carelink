@@ -50,7 +50,7 @@ def get_parser ( ):
   return parser
 
 command_map = {
-    'query': commands.ReadPumpState
+    'query': commands.ReadPumpStatus
   , 'suspend': commands.PumpSuspend
   , 'resume': commands.PumpResume
 }
@@ -60,6 +60,7 @@ def exec_request (pump, request):
   response = pump.query(msg)
   print "response: %s", response
   print "hexdump:\n", lib.hexdump(response.data)
+  print "##### decoded:\n```python\n", response.getData( ), "\n```"
 
 def main (args):
   print "## query or set suspend/resume status"
@@ -93,7 +94,6 @@ def main (args):
       print "#### dry run, no action taken"
     else:
       exec_request(pump, flow)
-  print "```"
 
   print "### end stats"
   print "```"

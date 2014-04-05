@@ -526,6 +526,26 @@ class ReadPumpState(PumpCommand):
   retries = 2
   maxRecords = 1
 
+class ReadPumpStatus(PumpCommand):
+  """
+  """
+
+
+  code = 206
+  descr = "Read Pump Status"
+  params = [ ]
+  retries = 2
+  maxRecords = 1
+  def getData(self):
+    data = self.data
+    normal = { 03: 'normal' }
+    status = { 'status': normal.get(data[0], 'error'),
+               'bolusing': data[1] == 1,
+               'suspended': data[2] == 1
+             }
+    return status
+
+
 class SetSuspend(PumpCommand):
   code = 77
   descr = "Set Pump Suspend/Resume status"
