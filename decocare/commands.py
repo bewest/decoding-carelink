@@ -526,6 +526,21 @@ class ReadPumpState(PumpCommand):
   retries = 2
   maxRecords = 1
 
+class SetSuspend(PumpCommand):
+  code = 77
+  descr = "Set Pump Suspend/Resume status"
+  params = [ ]
+  retries = 2
+  maxRecords = 1
+
+class PumpSuspend(SetSuspend):
+  descr = "Suspend pump"
+  params = [ 1 ]
+
+class PumpResume(SetSuspend):
+  descr = "Resume pump (cancel suspend)"
+  params = [ 0 ]
+
 class ReadGlucoseHistory(PumpCommand):
   """
   """
