@@ -4,7 +4,6 @@ import time
 log = logging.getLogger( ).getChild(__name__)
 import commands
 import lib
-import stick
 from errors import StickError, AckError, BadDeviceCommError
 
 
