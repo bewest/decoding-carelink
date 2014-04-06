@@ -59,7 +59,10 @@ def exec_request (pump, request):
   msg = command_map.get(request)
   response = pump.query(msg)
   print "response: %s", response
-  print "hexdump:\n", lib.hexdump(response.data)
+  print "hexdump:",
+  print "```"
+  print lib.hexdump(response.data)
+  print "```"
   print "##### decoded:\n```python\n", response.getData( ), "\n```"
 
 def main (args):
