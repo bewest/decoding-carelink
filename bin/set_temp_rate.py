@@ -24,6 +24,11 @@ def get_parser ( ):
                       dest='port',
                       default=conf.get('port', ''),
                       help="Path to device [default: %(default)s]")
+  parser.add_argument('-v', '--verbose',
+                      dest='verbose',
+                      action='append_const', const=1,
+                      help="Verbosity"
+                      )
   parser.add_argument('--duration',
                       dest='duration',
                       type=int, default=0,
@@ -113,6 +118,9 @@ def main (args):
 if __name__ == '__main__':
   parser = get_parser( )
   args = parser.parse_args( )
-  logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+  level = None
+  if args.verbose > 0:
+    level = args.verbose > 1 and logging.DEBUG or logging.INFO
+  logging.basicConfig(stream=sys.stdout, level=level)
   main(args)
 
