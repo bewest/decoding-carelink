@@ -44,7 +44,7 @@ def get_parser ( ):
                       #dest='status',
                       choices=['act', 'esc', 'up', 'down', 'easy' ],
                       default='act',
-                      help="Set or query pump status [default: %(default)s)]"
+                      help="buttons to press [default: %(default)s)]"
                       )
   argcomplete.autocomplete(parser)
   return parser
@@ -68,8 +68,8 @@ def exec_request (pump, request):
   print "##### decoded:\n```python\n", repr(response.getData( )), "\n```"
 
 def main (args):
-  print "## query or set suspend/resume status"
-  print "hi", "`", args, "`"
+  print "## press keys on a pump"
+  print "using", "`", args, "`"
 
   print "```"
   uart = stick.Stick(link.Link(args.port, timeout=.400))

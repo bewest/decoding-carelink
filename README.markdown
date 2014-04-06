@@ -34,6 +34,8 @@ your behalf:
   `./bin/mm-set-suspend.py`
 * set/edit/query temporary basal rates
   `./bin/set_temp_rate.py`
+* press any button on the keypad, using
+  `./bin/mm-press-key.py`
 
 ## Install first run
 
@@ -221,6 +223,26 @@ usage: mm-set-suspend.py [-h] [--serial SERIAL] [--port PORT] [--no-op] [-v]
 positional arguments:
   {query,suspend,resume}
                         Set or query pump status [default: query)]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --serial SERIAL       serial number of pump [default: ]
+  --port PORT           Path to device [default: ]
+  --no-op               Dry run, don't do main function
+  -v, --verbose         Verbosity
+  --init                Send power ctrl to initialize RF session.
+```
+
+#### `./bin/mm-press-key.py`
+
+```bash
+usage: mm-press-key.py [-h] [--serial SERIAL] [--port PORT] [--no-op] [-v]
+                       [--init]
+                       {act,esc,up,down,easy} [{act,esc,up,down,easy} ...]
+
+positional arguments:
+  {act,esc,up,down,easy}
+                        buttons to press [default: act)]
 
 optional arguments:
   -h, --help            show this help message and exit
