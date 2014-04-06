@@ -469,7 +469,11 @@ class ReadSettings(PumpCommand):
     if alarm == 4:
       d = { 'volume': -1, 'mode': 1 }
     return d
-    
+  def temp_basal_type(self, data):
+    temp = { 'type': data[0] == 1 and "Percent" or "Units/hour",
+             'percent': data[1]
+           }
+    return temp
   def getData(self):
     data = self.data
     log.info("READ pump settings:\n%s" % lib.hexdump(data))
@@ -495,6 +499,8 @@ class ReadSettings(PumpCommand):
     selected_pattern = data[11]
     rf_enable = data[12] == 1
     block_enable = data[13] == 1
+    temp_basal = self.temp_basal_type(data[14:16])
+    paradigm_enabled = data[16]
     """
     # MM12
     insulin_action_type = data[17] == 0 and 'Fast' or 'Regular'
