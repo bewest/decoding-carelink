@@ -158,7 +158,7 @@ class PowerControl(PumpCommand):
   retries = 0
   maxRecords = 0
   #timeout = 1
-  effectTime = 17
+  effectTime = 7
 
 class PowerControlOff(PowerControl):
   """
