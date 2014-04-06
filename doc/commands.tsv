@@ -15,7 +15,7 @@ MMPump508/	REC_SIZE_READ_CURR_SETTINGS4	2	0x02	('\x02')	??
 MMPump508/	CMD_READ_BATTERY_STATUS	4	0x04	EOT	??
 MMPump508/	CMD_READ_RTC	32	0x20	(' ')	??
 MMPump508/	CMD_READ_PUMP_ID	33	0x21	('!')	??
-MMPump???/	CMD_?????	34	0x22	(")	??
+MMPump???/	CMD_?????	34	0x22	doublequote	??
 MMPump508/	CMD_READ_REMAINING_INSULIN	35	0x23	#	??
 MMPump???/	CMD_?????	36	0x24	('$')	??
 MMPump508/	CMD_READ_FIRMWARE_VER	37	0x25	('%')	??
