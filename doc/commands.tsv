@@ -35,8 +35,8 @@ MMPump508/	CMD_READ_B_PROFILES	68	??
 
 
 MMPump???/	SetTempBasal	76	OK
-MMPump511/	SuspendResume	77	??
-MMPump511/	PushKeypad	91	??
+MMPump511/	SuspendResume	77	OK
+MMPump511/	PushKeypad	91	OK
 MMPump511/	PowerCTRL	93	OK
 MMPump511/	ReadRTC	112	OK
 MMPump511/	ReadPumpId	113	OK
