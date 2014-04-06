@@ -158,7 +158,7 @@ class PowerControl(PumpCommand):
   retries = 0
   maxRecords = 0
   #timeout = 1
-  effectTime = 17
+  effectTime = 7
 
 class PowerControlOff(PowerControl):
   """
@@ -469,7 +469,11 @@ class ReadSettings(PumpCommand):
     if alarm == 4:
       d = { 'volume': -1, 'mode': 1 }
     return d
-    
+  def temp_basal_type(self, data):
+    temp = { 'type': data[0] == 1 and "Percent" or "Units/hour",
+             'percent': data[1]
+           }
+    return temp
   def getData(self):
     data = self.data
     log.info("READ pump settings:\n%s" % lib.hexdump(data))
@@ -495,6 +499,8 @@ class ReadSettings(PumpCommand):
     selected_pattern = data[11]
     rf_enable = data[12] == 1
     block_enable = data[13] == 1
+    temp_basal = self.temp_basal_type(data[14:16])
+    paradigm_enabled = data[16]
     """
     # MM12
     insulin_action_type = data[17] == 0 and 'Fast' or 'Regular'
@@ -525,6 +531,41 @@ class ReadPumpState(PumpCommand):
   params = [ ]
   retries = 2
   maxRecords = 1
+
+class ReadPumpStatus(PumpCommand):
+  """
+  """
+
+
+  code = 206
+  descr = "Read Pump Status"
+  params = [ ]
+  retries = 2
+  maxRecords = 1
+  def getData(self):
+    data = self.data
+    normal = { 03: 'normal' }
+    status = { 'status': normal.get(data[0], 'error'),
+               'bolusing': data[1] == 1,
+               'suspended': data[2] == 1
+             }
+    return status
+
+
+class SetSuspend(PumpCommand):
+  code = 77
+  descr = "Set Pump Suspend/Resume status"
+  params = [ ]
+  retries = 2
+  maxRecords = 1
+
+class PumpSuspend(SetSuspend):
+  descr = "Suspend pump"
+  params = [ 1 ]
+
+class PumpResume(SetSuspend):
+  descr = "Resume pump (cancel suspend)"
+  params = [ 0 ]
 
 class ReadGlucoseHistory(PumpCommand):
   """

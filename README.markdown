@@ -30,6 +30,10 @@ your behalf:
 * unabsorbed insulin
 * alarms, etc...
 * current settings
+* query pump status: normal, suspended, bolusing
+  `./bin/mm-set-suspend.py`
+* set/edit/query temporary basal rates
+  `./bin/set_temp_rate.py`
 
 ## Install first run
 
@@ -185,6 +189,47 @@ over the internet, allowing anyone to independently audit their
 therapy, and then send the data to their preferred auditing software.
 
 ## Tools
+### `./bin/set_temp_rate.py`
+
+```bash
+usage: set_temp_rate.py [-h] [--serial SERIAL] [--port PORT]
+                        [--duration DURATION] [--rate RATE]
+
+optional arguments:
+  -h, --help           show this help message and exit
+  --serial SERIAL      serial number of pump [default: ]
+  --port PORT          Path to device [default: ]
+  --duration DURATION  Duration of temp rate [default: 0)]
+  --rate RATE          Rate of temp basal [default: 0)]
+```
+
+Eg:
+
+`./bin/set_temp_rate.py --duration 60 --rate 2.0`
+
+**Duration** is in minutes, must be in 30 minute intervals!
+**Rate** is float, describing units per hour.  Smallest rate is
+`0.025`, and increments by that mount.
+
+### `./bin/mm-set-suspend.py`
+
+```bash
+usage: mm-set-suspend.py [-h] [--serial SERIAL] [--port PORT] [--no-op] [-v]
+                         [--init]
+                         {query,suspend,resume} [{query,suspend,resume} ...]
+
+positional arguments:
+  {query,suspend,resume}
+                        Set or query pump status [default: query)]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --serial SERIAL       serial number of pump [default: ]
+  --port PORT           Path to device [default: ]
+  --no-op               Dry run, don't do main function
+  -v, --verbose         Verbosity
+  --init                Send power ctrl to initialize RF session.
+```
 
 #### `status-quo.sh`
 
