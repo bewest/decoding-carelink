@@ -33,7 +33,6 @@ MMPump508/	CMD_READ_STD_PROFILES	66	0x42	('B')	??
 MMPump508/	CMD_READ_A_PROFILES	67	0x43	('C')	??
 MMPump508/	CMD_READ_B_PROFILES	68	0x44	('D')	??
 
-
 MMPump???/	SetTempBasal	76	0x4c	('L')	OK
 MMPump511/	SuspendResume	77	0x4d	('M')	OK
 MMPump511/	PushKeypad	91	0x5b	('[')	OK
