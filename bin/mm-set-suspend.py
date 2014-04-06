@@ -63,7 +63,7 @@ def exec_request (pump, request):
   print "```"
   print lib.hexdump(response.data)
   print "```"
-  print "##### decoded:\n```python\n", response.getData( ), "\n```"
+  print "##### decoded:\n```python\n", repr(response.getData( )), "\n```"
 
 def main (args):
   print "## query or set suspend/resume status"
