@@ -58,7 +58,7 @@ command_map = {
 def exec_request (pump, request):
   msg = command_map.get(request)
   response = pump.query(msg)
-  print "response: %s", response
+  print "response: %s" % response
   print "hexdump:"
   print "```"
   print lib.hexdump(response.data)
