@@ -567,6 +567,38 @@ class PumpResume(SetSuspend):
   descr = "Resume pump (cancel suspend)"
   params = [ 0 ]
 
+class KeypadPush(PumpCommand):
+  code = 91
+  descr = "Press buttons on the keypad"
+  params = [ ]
+  retries = 1
+  maxRecords = 0
+
+  @classmethod
+  def ACT(klass, **kwds):
+    return klass(params=[0x02], **kwds)
+
+  @classmethod
+  def ESC(klass, **kwds):
+    return klass(params=[0x01], **kwds)
+
+  @classmethod
+  def DOWN(klass, **kwds):
+    return klass(params=[0x04], **kwds)
+
+  @classmethod
+  def UP(klass, **kwds):
+    return klass(params=[0x03], **kwds)
+
+  @classmethod
+  def EASY(klass, **kwds):
+    return klass(params=[0x00], **kwds)
+
+
+
+
+
+
 class ReadGlucoseHistory(PumpCommand):
   """
   """
