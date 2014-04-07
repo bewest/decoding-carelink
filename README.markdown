@@ -191,6 +191,71 @@ over the internet, allowing anyone to independently audit their
 therapy, and then send the data to their preferred auditing software.
 
 ## Tools
+### `./bin/mm-send-comm.py`
+
+```bash
+
+usage: mm-send-comm.py [-h] [--serial SERIAL] [--port PORT] [--no-op]
+                       [--skip-prelude] [--no-rf-prelude] [--skip-postlude]
+                       [-v] [--init]
+                       [--prefix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand}]
+                       [--postfix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand}]
+                       {sleep,ManualCommand} ...
+
+positional arguments:
+  {sleep,ManualCommand}
+                        commands
+    sleep               Just sleep between command sets
+    ManualCommand       Customize a command
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --serial SERIAL       serial number of pump [default: ]
+  --port PORT           Path to device [default: ]
+  --no-op               Dry run, don't do main function
+  --skip-prelude        Don't do the normal prelude.
+  --no-rf-prelude       Do the prelude, but don't query the pump.
+  --skip-postlude       Don't do the normal postlude.
+  -v, --verbose         Verbosity
+  --init                Send power ctrl to initialize RF session.
+  --prefix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand}
+                        Built-in commands to run before the main one.
+  --postfix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand}
+                        Built-in commands to run after the main one.
+
+
+
+
+usage: mm-send-comm.py ManualCommand [-h] [--params PARAMS] [--descr DESCR]
+                                     [--name NAME] [--save SAVE]
+                                     [--effectTime EFFECTTIME]
+                                     [--maxRecords MAXRECORDS]
+                                     [--bytesPerRecord BYTESPERRECORD]
+                                     code
+
+positional arguments:
+  code
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --params PARAMS
+  --descr DESCR
+  --name NAME
+  --save SAVE
+  --effectTime EFFECTTIME
+  --maxRecords MAXRECORDS
+  --bytesPerRecord BYTESPERRECORD
+
+
+usage: mm-send-comm.py sleep [-h] timeout
+
+positional arguments:
+  timeout
+
+optional arguments:
+  -h, --help  show this help message and exit
+```
+
 ### `./bin/set_temp_rate.py`
 
 ```bash
