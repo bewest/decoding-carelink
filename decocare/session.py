@@ -98,8 +98,8 @@ class Pump(Session):
   def execute(self, command):
     command.serial = self.serial
     return super(type(self), self).execute(command)
-  def query(self, Command):
-    command = Command(serial=self.serial)
+  def query(self, Command, **kwds):
+    command = Command(serial=self.serial, **kwds)
     self.execute(command)
     return command
 

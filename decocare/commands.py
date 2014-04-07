@@ -55,6 +55,9 @@ class BaseCommand(object):
     self.getData( )
     self.responded = True
 
+  def hexdump (self):
+    return lib.hexdump(self.data)
+
 class PumpCommand(BaseCommand):
   #serial = '665455'
   #serial = '206525'
@@ -67,7 +70,7 @@ class PumpCommand(BaseCommand):
   effectTime = .500
   data = bytearray( )
   __fields__ = ['maxRecords', 'code', 'descr',
-                'serial', 'bytesPerRecord', 'params']
+                'serial', 'bytesPerRecord', 'retries', 'params']
   def __init__(self, **kwds):
     for k in self.__fields__:
       value = kwds.get(k, getattr(self, k))
@@ -143,6 +146,22 @@ class PumpCommand(BaseCommand):
       return i + 1
     return i
 
+class ManualCommand(PumpCommand):
+  def __init__(self, **kwds):
+    super(type(self), self).__init__(**kwds)
+    self.name = kwds.get('name', self.__class__.__name__)
+    self.kwds = kwds
+  def __str__(self):
+    if self.responded:
+      return '{}:{}:size[{}]:data:{}'.format(self.name, self.kwds,
+                                          self.size, str(self.getData( )))
+    return '{}:{}:data:unknown'.format(self.name, self.kwds)
+
+  def __repr__(self):
+    return '<{0}>'.format(self)
+
+  def getData(self):
+    return self.hexdump( )
 
 class PowerControl(PumpCommand):
   """
@@ -594,8 +613,20 @@ class KeypadPush(PumpCommand):
   def EASY(klass, **kwds):
     return klass(params=[0x00], **kwds)
 
+def PushACT (**kwds):
+  return KeypadPush.ACT(**kwds)
 
+def PushESC (**kwds):
+  return KeypadPush.ESC(**kwds)
 
+def PushDOWN (**kwds):
+  return KeypadPush.DOWN(**kwds)
+
+def PushUP (**kwds):
+  return KeypadPush.UP(**kwds)
+
+def PushEASY (**kwds):
+  return KeypadPush.EASY(**kwds)
 
 
 
@@ -710,6 +741,19 @@ def get_pages(device):
     page = comm.getData( )
     log.info("XXX: READ HISTORY DATA!!:\n%s" % lib.hexdump(page))
     time.sleep(.100)
+
+__all__ = [
+  'BaseCommand', 'KeypadPush', 'PowerControl', 'PowerControlOff',
+  'PumpCommand', 'PumpResume', 'PumpSuspend',
+  'ReadBasalTemp', 'ReadBatteryStatus', 'ReadContrast',
+  'ReadCurPageNumber', 'ReadErrorStatus', 'ReadFirmwareVersion',
+  'ReadGlucoseHistory', 'ReadHistoryData', 'ReadPumpID',
+  'ReadPumpModel', 'ReadPumpState', 'ReadPumpStatus',
+  'ReadRTC', 'ReadRadioCtrlACL', 'ReadRemainingInsulin',
+  'ReadSettings', 'ReadTotalsToday', 'SetSuspend',
+  'PushEASY', 'PushUP', 'PushDOWN', 'PushACT', 'PushESC',
+  'TempBasal', 'ManualCommand'
+]
 
 if __name__ == '__main__':
   import doctest
