@@ -22,14 +22,10 @@ PORT=/dev/ttyUSB.Carelink0
 # is currently bolusing.
 $INIT
 sleep 2
-# cancel any temp basal in progress (set to 0) and report current temp
-# basal rate
-$TEMPBASAL
-sleep 2
 # set temp basal rate to 0 for 90 minutes.
 # --rate can be a float, like 2.0 or 0.025
 # --duration must be a multiple of 30 minutes
-# this set's a 0 rate for 90 minutes.
+# this sets a 0 rate for 90 minutes.
 $TEMPBASAL --rate 0 --duration 90
 sleep 2
 # press the esc key, so we can see the results on the pump
