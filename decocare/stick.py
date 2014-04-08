@@ -718,18 +718,23 @@ class Stick(object):
         size = self.poll_size( )
         log.info("%s:end first poll" % (stats.format(self, i, size,
                                         len(results), len(data))))
-      if size == 0 and i > 1:
-        """
+      if size == 0:
+        if i % 3 == 0:
+          time.sleep(1.5)
+        time.sleep(1.5)
+        size = self.poll_size( )
+      """
+      if size == 0:
+      # if size == 0 and i > 1:
         log.info("%s:zero poll size, sleep .500 try again" % ( \
                   stats.format(self, i, size, len(results), len(data))))
-        time.sleep(.500)
         size = self.poll_size( )
-        """
-        if size == 0:
-          log.warn("%s:BAD AILING" % (stats.format(self, i, size,
-                                          len(results), len(data))))
-          # time.sleep(.500)
-          #continue
+        time.sleep(.500)
+      """
+      if size == 0 and i > 1:
+        log.warn("%s:BAD AILING" % (stats.format(self, i, size,
+                                        len(results), len(data))))
+        continue
           # break
 
       log.info("%s:proceed to download packet" % (stats.format(self, i, size,
