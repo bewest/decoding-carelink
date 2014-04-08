@@ -180,13 +180,14 @@ class PowerControl(PumpCommand):
   retries = 0
   maxRecords = 0
   #timeout = 1
-  effectTime = 7
+  # effectTime = 7
+  effectTime = 17
 
 class PowerControlOff(PowerControl):
   """
   Here's an example where arguments clearly modify behavior.
   """
-  params = [ 0x00, 0x0A ]
+  params = [ 0x00, 0x00 ]
 
 class TempBasal(PumpCommand):
   """

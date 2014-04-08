@@ -261,7 +261,9 @@ class SendMsgApp(CommandApp):
 
     subparsers = parser.add_subparsers(help="Main thing to do between --prefix and--postfix", dest="command")
     sleep_parser = subparsers.add_parser("sleep", help="Just sleep between command sets")
-    sleep_parser.add_argument('timeout', type=float, default=2)
+    sleep_parser.add_argument('timeout', type=float, default=0,
+                              help="Sleep in between running --prefix and --postfix"
+                              )
     all_parser = subparsers.add_parser("ManualCommand", help="Customize a command")
     all_parser.add_argument('code', type=int,
                             help="The opcode to send to the pump."
