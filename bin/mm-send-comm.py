@@ -165,6 +165,8 @@ command_map = {
 
 def exec_request (pump, msg, args={},
                   dryrun=False,
+                  save=False,
+                  prefix='',
                   render_decoded=True,
                   render_hexdump=True):
   if dryrun:
@@ -182,12 +184,14 @@ def exec_request (pump, msg, args={},
     print "```python"
     print response.getData( )
     print "```"
+  if save:
+    response.save(prefix=prefix)
   return response
 
 class SendMsgApp(CommandApp):
   def main (self, args):
     if args.prefix:
-      self.execute_list(args.prefix)
+      self.execute_list(args.prefix, args.saveall)
     if args.command == "ManualCommand":
       kwds = {
           'params': map(int, getattr(args, 'params', [ ])),
@@ -198,20 +202,35 @@ class SendMsgApp(CommandApp):
           'descr': getattr(args, 'descr', "Experimental msg")
         }
       msg = commands.ManualCommand
-      exec_request(self.pump, msg, args=kwds, dryrun=args.dryrun, render_hexdump=False)
+      resp = exec_request(self.pump, msg, args=kwds,
+                   dryrun=args.dryrun, render_hexdump=False, save=args.save, prefix=args.prefix_path)
+      #if args.save:
+      #  resp.save(prefix=args.prefix_path)
     if args.command == "sleep":
       time.sleep(args.timeout)
     if args.postfix:
-      self.execute_list(args.postfix)
+      self.execute_list(args.postfix, args.saveall)
 
-  def execute_list (self, messages):
+  def execute_list (self, messages, save=False):
     for name in messages:
       msg = getattr(commands, name)
       print msg
-      exec_request(self.pump, msg, dryrun=self.args.dryrun, render_hexdump=self.args.verbose>0)
+      resp = exec_request(self.pump, msg, dryrun=self.args.dryrun, render_hexdump=self.args.verbose>0, save=save, prefix=self.args.prefix_path)
 
   def customize_parser (self, parser):
     choices = commands.__all__
+    parser.add_argument('--prefix-path',
+                        dest="prefix_path",
+                        type=str,
+                        default="",
+                        help="Prefix to store saved files when using --save or --saveall."
+                        )
+    parser.add_argument('--saveall',
+                        action="store_true",
+                        default=False,
+                        help="Whether or not to save all responses.",
+                        )
+
     parser.add_argument('--prefix',
                         action="append",
                         choices=choices,
@@ -228,7 +247,8 @@ class SendMsgApp(CommandApp):
     sleep_parser = subparsers.add_parser("sleep", help="Just sleep between command sets")
     sleep_parser.add_argument('timeout', type=float, default=2)
     all_parser = subparsers.add_parser("ManualCommand", help="Customize a command")
-    all_parser.add_argument('code', type=int
+    all_parser.add_argument('code', type=int,
+                            help="The opcode to send to the pump."
                            )
     #__fields__ = ['maxRecords', 'code', 'descr',
     #            'serial', 'bytesPerRecord', 'retries', 'params']
@@ -239,7 +259,8 @@ class SendMsgApp(CommandApp):
                            )
     all_parser.add_argument('--name', type=str
                            )
-    all_parser.add_argument('--save', type=str
+    all_parser.add_argument('--save', action="store_true", default=False,
+                            help="Save response in a file."
                            )
     all_parser.add_argument('--effectTime', type=float,
                             default=commands.ManualCommand.effectTime

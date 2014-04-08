@@ -148,15 +148,18 @@ class PumpCommand(BaseCommand):
 
 class ManualCommand(PumpCommand):
   def __init__(self, **kwds):
-    super(type(self), self).__init__(**kwds)
     self.name = kwds.get('name', self.__class__.__name__)
+    super(type(self), self).__init__(**kwds)
     self.kwds = kwds
+    self.name = kwds.get('name', self.__class__.__name__)
   def __str__(self):
     if self.responded:
       return '{}:{}:size[{}]:data:{}'.format(self.name, self.kwds,
                                           self.size, str(self.getData( )))
     return '{}:{}:data:unknown'.format(self.name, self.kwds)
 
+  def log_name(self, prefix=''):
+    return prefix + '{}.data'.format(self.name)
   def __repr__(self):
     return '<{0}>'.format(self)
 
