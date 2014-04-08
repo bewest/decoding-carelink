@@ -228,7 +228,7 @@ class SendMsgApp(CommandApp):
   def execute_list (self, messages, save=False):
     for name in messages:
       msg = getattr(commands, name)
-      print "###### sending `%s`" % msg.name
+      print "###### sending `%s`" % getattr(msg, 'name', msg)
       resp = exec_request(self.pump, msg, dryrun=self.args.dryrun,
                           render_hexdump=self.args.verbose>0,
                           save=save, prefix=self.args.prefix_path)
