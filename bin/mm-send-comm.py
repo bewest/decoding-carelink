@@ -35,8 +35,8 @@ class CommandApp(object):
   def get_parser (self):
     conf = parse_env( )
     helptext = self.help( ).split("\n")
-    description = helptext[0]
-    epilog = '\n'.join(helptext[1:])
+    description = '\n'.join(helptext[0:2])
+    epilog = '\n'.join(helptext[2:])
     parser = argparse.ArgumentParser(description=description, epilog=epilog)
     parser.add_argument('--serial', type=str,
                         dest='serial',
@@ -209,6 +209,8 @@ class SendMsgApp(CommandApp):
           'params': map(int, getattr(args, 'params', [ ])),
           'retries': getattr(args, 'retries', 0),
           'effectTime': getattr(args, 'effectTime'),
+          'maxRecords': getattr(args, 'maxRecords'),
+          'bytesPerRecord': getattr(args, 'bytesPerRecord'),
           'code': args.code,
           'name': getattr(args, 'name', "ExperimentCode%02x" % args.code),
           'descr': getattr(args, 'descr', "Experimental msg")

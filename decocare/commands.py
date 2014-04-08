@@ -45,7 +45,7 @@ class BaseCommand(object):
     found = len(self.data or [ ])
     expect = int(self.maxRecords * self.bytesPerRecord)
     expect_size = "found[{}] expected[{}]".format(found, expect)
-    log.info("%s:download:done?:%s" % (self, expect_size))
+    log.info("%s:download:done?explain=%s" % (self, expect_size))
     return found >= expect
   def format(self):
     pass
@@ -154,8 +154,8 @@ class ManualCommand(PumpCommand):
     self.name = kwds.get('name', self.__class__.__name__)
   def __str__(self):
     if self.responded:
-      return '{}:{}:size[{}]:data:{}'.format(self.name, self.kwds,
-                                          self.size, str(self.getData( )))
+      return '{}:{}:size[{}]:'.format(self.name, self.kwds,
+                                      self.size)
     return '{}:{}:data:unknown'.format(self.name, self.kwds)
 
   def log_name(self, prefix=''):

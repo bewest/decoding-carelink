@@ -247,8 +247,8 @@ class ReadRadio(StickCommand):
     self.size = size
     self.dl_size = size
     packet = [12, 0, lib.HighByte(size), lib.LowByte(size)]
-    if size < 64:
-      log.error('size is less than 64, which will cause an error. trying 64 instead')
+    if size < 64 and size != 15:
+      log.error('size (%s) is less than 64 and not 15, which may cause an error.' % size)
       self.size = 64
     self.code = packet + [ CRC8(packet) ]
 
@@ -308,7 +308,7 @@ class ReadRadio(StickCommand):
     head = raw[13:]
     crc = raw[-1]
     # crc check
-    if crc == 0:
+    if crc == 0 and len(data) > 1:
       log.warn('bad zero CRC?')
     expected_crc = CRC8(data)
     if crc != expected_crc:
