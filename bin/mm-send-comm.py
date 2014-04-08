@@ -29,9 +29,15 @@ class CommandApp(object):
       # no auto completion
       pass
 
+  def help (self):
+    return self.__class__.__doc__
+
   def get_parser (self):
     conf = parse_env( )
-    parser = argparse.ArgumentParser( )
+    helptext = self.help( ).split("\n")
+    description = helptext[0]
+    epilog = '\n'.join(helptext[1:])
+    parser = argparse.ArgumentParser(description=description, epilog=epilog)
     parser.add_argument('--serial', type=str,
                         dest='serial',
                         default=conf.get('serial', ''),
@@ -189,6 +195,12 @@ def exec_request (pump, msg, args={},
   return response
 
 class SendMsgApp(CommandApp):
+  """
+  %(prog)s - send messages to a compatible MM insulin pump
+
+  This tool is intended to help discover protocol behavior.
+  Under no circumstance is it intended to deliver therapy.
+  """
   def main (self, args):
     if args.prefix:
       self.execute_list(args.prefix, args.saveall)
@@ -214,8 +226,10 @@ class SendMsgApp(CommandApp):
   def execute_list (self, messages, save=False):
     for name in messages:
       msg = getattr(commands, name)
-      print msg
-      resp = exec_request(self.pump, msg, dryrun=self.args.dryrun, render_hexdump=self.args.verbose>0, save=save, prefix=self.args.prefix_path)
+      print "###### sending `%s`" % msg.name
+      resp = exec_request(self.pump, msg, dryrun=self.args.dryrun,
+                          render_hexdump=self.args.verbose>0,
+                          save=save, prefix=self.args.prefix_path)
 
   def customize_parser (self, parser):
     choices = commands.__all__
@@ -243,7 +257,7 @@ class SendMsgApp(CommandApp):
                         help="Built-in commands to run after the main one."
                         )
 
-    subparsers = parser.add_subparsers(help="commands", dest="command")
+    subparsers = parser.add_subparsers(help="Main thing to do between --prefix and--postfix", dest="command")
     sleep_parser = subparsers.add_parser("sleep", help="Just sleep between command sets")
     sleep_parser.add_argument('timeout', type=float, default=2)
     all_parser = subparsers.add_parser("ManualCommand", help="Customize a command")
@@ -253,22 +267,28 @@ class SendMsgApp(CommandApp):
     #__fields__ = ['maxRecords', 'code', 'descr',
     #            'serial', 'bytesPerRecord', 'retries', 'params']
     all_parser.add_argument('--params', type=str, action="append",
+                            help="parameters to format into sent message",
                             default=commands.ManualCommand.params
                            )
-    all_parser.add_argument('--descr', type=str, default="Experimental command"
+    all_parser.add_argument('--descr', type=str, default="Experimental command",
+                            help="Description of command"
                            )
-    all_parser.add_argument('--name', type=str
+    all_parser.add_argument('--name', type=str,
+                            help="Proposed name of command"
                            )
     all_parser.add_argument('--save', action="store_true", default=False,
                             help="Save response in a file."
                            )
     all_parser.add_argument('--effectTime', type=float,
+                            help="time to sleep before responding to message, float in seconds",
                             default=commands.ManualCommand.effectTime
                            )
     all_parser.add_argument('--maxRecords', type=int,
+                            help="number of frames in a packet composing payload response",
                             default=commands.ManualCommand.maxRecords
                            )
     all_parser.add_argument('--bytesPerRecord', type=int,
+                            help="bytes per frame",
                             default=commands.ManualCommand.bytesPerRecord
                            )
 
