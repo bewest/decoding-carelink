@@ -195,7 +195,7 @@ function summarize_pump ( ) {
   echo '```'
   echo ""
 
-  if [[ 4 -eq $(grep -E "howdy" $LOG | grep pump | wc -l) ]] ; then
+  if [[ 4 -lt $(grep -E "howdy" $LOG | grep pump | wc -l) ]] ; then
     echo '## howdy! pump runs appear to be OK'
     echo ""
   else

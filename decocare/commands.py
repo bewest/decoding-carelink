@@ -305,7 +305,30 @@ class ReadCurPageNumber(PumpCommand):
     log.info("XXX: READ cur page number:\n%s" % lib.hexdump(data))
     if len(data) == 1:
       return int(data[0])
-    return lib.BangLong(data[0:4])
+    page = lib.BangLong(data[0:4])
+    # https://bitbucket.org/bewest/carelink/src/419fbf23495a/ddmsDTWApplet.src/minimed/ddms/deviceportreader/MMX15.java#cl-157
+    if page <= 0 or page > 36:
+      page = 36
+    return page
+
+
+class ReadCurGlucosePageNumber(PumpCommand):
+  """
+  """
+
+  code = 205
+  descr = "Read Cur Glucose Page Number"
+  params = [ ]
+  retries = 2
+  maxRecords = 1
+
+  def getData(self):
+    data = self.data
+    log.info("XXX: READ cur page number:\n%s" % lib.hexdump(data))
+    if len(data) == 1:
+      return int(data[0])
+    result = dict(page= lib.BangLong(data[0:4]), glucose=data[5], isig=data[7])
+    return result
 
 
 class ReadRTC(PumpCommand):
@@ -756,7 +779,7 @@ __all__ = [
   'ReadRTC', 'ReadRadioCtrlACL', 'ReadRemainingInsulin',
   'ReadSettings', 'ReadTotalsToday', 'SetSuspend',
   'PushEASY', 'PushUP', 'PushDOWN', 'PushACT', 'PushESC',
-  'TempBasal', 'ManualCommand'
+  'TempBasal', 'ManualCommand', 'ReadCurGlucosePageNumber'
 ]
 
 if __name__ == '__main__':

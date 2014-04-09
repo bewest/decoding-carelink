@@ -218,8 +218,6 @@ class SendMsgApp(CommandApp):
       msg = commands.ManualCommand
       resp = exec_request(self.pump, msg, args=kwds,
                    dryrun=args.dryrun, render_hexdump=False, save=args.save, prefix=args.prefix_path)
-      #if args.save:
-      #  resp.save(prefix=args.prefix_path)
     if args.command == "sleep":
       time.sleep(args.timeout)
     if args.postfix:
