@@ -57,6 +57,19 @@ class Timer(object):
     ms = (dt.days * 24 * 60 * 60 + dt.seconds) * 1000 + dt.microseconds / 1000.0
     return ms
 
+def format_filter_date (date):
+  """
+
+    >>> format_filter_date(parse.date('2014-04-09'))
+    [7, 222, 4, 9]
+  """
+  params = [ HighByte(date.year), LowByte(date.year),
+             date.month, date.day ]
+  return params
+
+def filter_date_today ( ):
+  return format_filter_date(datetime.now( ))
+
 class parse:
   @staticmethod
   def date( data ):

@@ -300,10 +300,12 @@ class ReadHistoryData(PumpCommand):
     >>> ReadHistoryData(serial='208850', params=[ 0x03 ]).format() == ReadHistoryData._test_ok
     True
   """
+  __fields__ = PumpCommand.__fields__ + ['page']
   _test_ok = bytearray([ 0x01, 0x00, 0xA7, 0x01, 0x20, 0x88, 0x50, 0x80,
                0x01, 0x00, 0x02, 0x02, 0x00, 0x80, 0x9B, 0x03,
                0x36, ])
 
+  page = None
   def __init__(self, page=None, **kwds):
     if page is None and kwds.get('params', [ ]):
       page = kwds.pop('params')[0] or 0
@@ -311,7 +313,7 @@ class ReadHistoryData(PumpCommand):
     if page is not None:
       self.page = int(page)
       kwds['params'] = [ self.page ]
-    super(type(self), self).__init__(**kwds)
+    super(ReadHistoryData, self).__init__(**kwds)
 
   def log_name(self, prefix=''):
     return prefix + '{}-page-{}.data'.format(self.__class__.__name__, self.page)
@@ -774,15 +776,125 @@ def PushEASY (**kwds):
   return KeypadPush.EASY(**kwds)
 
 
-
-class ReadGlucoseHistory(PumpCommand):
+# MMX22/	CMD_READ_SENSOR_SETTINGS	153	0x99	('\x99')	??
+class ReadSensorSettings (PumpCommand):
   """
   """
-  descr = "Read glucose history"
-  code = 131
+  descr = "Read sensor settings"
+  code = 153
   params = [ ]
   retries = 2
 
+class ReadSensorHistoryData (ReadHistoryData):
+  def __init__(self, page=None, **kwds):
+    params = kwds.get('params', [ ])
+    if len(params) == 0:
+      params = [ lib.LowByte(page >> 24), lib.LowByte(page >> 16),
+                 lib.LowByte(page >>  8), lib.LowByte(page) ]
+
+    kwds['params'] = params
+    super(ReadSensorHistoryData, self).__init__(**kwds)
+
+# MMX22/	CMD_READ_GLUCOSE_HISTORY	154	0x9a	('\x9a')	??
+class ReadGlucoseHistory (ReadHistoryData):
+  """
+  """
+  descr = "read glucose history"
+  code = 154
+  params = [ ]
+
+# MMX22/	CMD_READ_ISIG_HISTORY	155	0x9b	('\x9b')	??
+class ReadISIGHistory (ReadHistoryData):
+  """
+  """
+  descr = "read ISIG history"
+  code = 155
+  params = [ ]
+  maxRecords = 32
+
+class FilterHistory (PumpCommand):
+  code = None
+  begin = None
+  end = None
+  __fields__ = PumpCommand.__fields__ + ['begin', 'end']
+
+  def __init__(self, begin=None, end=None, **kwds):
+    params = kwds.get('params', [ ])
+    if len(params) == 0:
+      params.extend(lib.format_filter_date(begin))
+      params.extend(lib.format_filter_date(end))
+
+    kwds['params'] = params
+    super(FilterHistory, self).__init__(**kwds)
+
+  def getData(self):
+    data = self.data
+    return bytearray(data)
+    begin = lib.BangInt(data[0:2])
+    end = lib.BangInt(data[2:4])
+    return dict(begin=begin, end=end)
+
+  @classmethod
+  def ISO (klass, begin=None, end=None, **kwds):
+    return klass(begin=lib.parse.date(begin), end=lib.parse.date(end), **kwds)
+
+# MMX22??/	CMD_FILTER_BG	168	0xa8	('\xa8')	??
+class FilterGlucoseHistory (FilterHistory):
+  code = 168
+
+# MMX22??/	CMD_FILTER_ISIG	169	0xa9	('\xa9')	??
+class FilterISIGHistory (FilterHistory):
+  code = 169
+
+class TweakAnotherCommand (ManualCommand):
+  @classmethod
+  def get_kwds (klass, Other, args):
+    kwds = { }
+    fields = list(set(Other.__fields__) - set(['serial', ]))
+    for k in fields:
+      default = getattr(Other, k, None)
+      value = getattr(args, k, None)
+      if value is not None:
+        kwds[k] = value
+    return kwds
+
+  @classmethod
+  def config_argparse (klass, parser):
+    parser.add_argument('--params', type=int, action="append",
+                        help="parameters to format into sent message"
+                       )
+    parser.add_argument('--descr', type=str,
+                        help="Description of command"
+                       )
+    parser.add_argument('--name', type=str,
+                        help="Proposed name of command"
+                       )
+    parser.add_argument('--save', action="store_true", default=False,
+                        help="Save response in a file."
+                       )
+    parser.add_argument('--effectTime', type=float,
+                        help="time to sleep before responding to message, float in seconds"
+                       )
+    parser.add_argument('--maxRecords', type=int,
+                        help="number of frames in a packet composing payload response"
+                       )
+    parser.add_argument('--bytesPerRecord', type=int,
+                        help="bytes per frame"
+                       )
+
+    parser.add_argument('--page', type=int,
+                        help="Page to fetch (for ReadHistoryData)"
+                       )
+
+    parser.add_argument('--begin', type=lib.parse.date,
+                        help="begin date for FilterHistory"
+                       )
+    parser.add_argument('--end', type=lib.parse.date,
+                        help="end date for FilterHistory"
+                       )
+
+
+    return parser
 
 
 class ReadPumpModel(PumpCommand):
@@ -897,7 +1009,7 @@ __all__ = [
   'ReadRTC', 'ReadRadioCtrlACL', 'ReadRemainingInsulin',
   'ReadSettings', 'ReadTotalsToday', 'SetSuspend',
   'PushEASY', 'PushUP', 'PushDOWN', 'PushACT', 'PushESC',
-  'TempBasal', 'ManualCommand', 'ReadCurGlucosePageNumber'
+  'TempBasal', 'ManualCommand', 'ReadCurGlucosePageNumber',
   'ReadErrorStatus508',
   'ReadBolusHistory',
   'ReadDailyTotals',
@@ -910,6 +1022,15 @@ __all__ = [
   'Read256KMem',
   'ReadBasalTemp508',
   'ReadTodayTotals508',
+  'ReadGlucoseHistory',
+  'ReadSensorSettings',
+  'ReadSensorHistoryData',
+  'ReadGlucoseHistory',
+  'ReadISIGHistory',
+  'FilterHistory',
+  'FilterGlucoseHistory',
+  'FilterISIGHistory',
+
 ]
 
 if __name__ == '__main__':
