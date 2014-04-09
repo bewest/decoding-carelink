@@ -363,6 +363,7 @@ class ReadHistoryData(PumpCommand):
   def getData(self):
     data = self.data
     # log.info("XXX: READ HISTORY DATA!!:\n%s" % lib.hexdump(data))
+    return self.hexdump( )
     return data
 
 class ReadCurPageNumber(PumpCommand):
@@ -1021,10 +1022,8 @@ __all__ = [
   'Read256KMem',
   'ReadBasalTemp508',
   'ReadTodayTotals508',
-  'ReadGlucoseHistory',
   'ReadSensorSettings',
   'ReadSensorHistoryData',
-  'ReadGlucoseHistory',
   'ReadISIGHistory',
   'FilterHistory',
   'FilterGlucoseHistory',
