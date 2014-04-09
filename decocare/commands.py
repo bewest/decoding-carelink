@@ -852,7 +852,6 @@ class TweakAnotherCommand (ManualCommand):
     kwds = { }
     fields = list(set(Other.__fields__) - set(['serial', ]))
     for k in fields:
-      default = getattr(Other, k, None)
       value = getattr(args, k, None)
       if value is not None:
         kwds[k] = value
