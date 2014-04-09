@@ -201,6 +201,87 @@ class TempBasal(PumpCommand):
   #maxRecords = 0
   #timeout = 1
 
+class ReadErrorStatus508 (PumpCommand):
+  """
+
+  """
+  code = 38
+  descr = "error status"
+  params = [ ]
+
+class ReadBolusHistory (PumpCommand):
+  """
+
+  """
+  code = 39
+  descr = "bolus history"
+  params = [ ]
+
+class ReadDailyTotals (PumpCommand):
+  """
+
+  """
+  code = 40
+  descr = "..."
+  params = [ ]
+
+class ReadPrimeBoluses (PumpCommand):
+  """
+
+  """
+  code = 41
+  descr = "..."
+  params = [ ]
+
+class ReadAlarms (PumpCommand):
+  """
+
+  """
+  code = 42
+  descr = "..."
+  params = [ ]
+
+class ReadProfileSets (PumpCommand):
+  """
+
+  """
+  code = 43
+  descr = "..."
+  params = [ ]
+
+class ReadUserEvents (PumpCommand):
+  """
+
+  """
+  code = 44
+  descr = "..."
+  params = [ ]
+
+class ReadRemoteControlID (PumpCommand):
+  """
+
+  """
+  code = 46
+  descr = "..."
+  params = [ ]
+
+class Read128KMem (PumpCommand):
+  """
+
+  """
+  code = 55
+  descr = "..."
+  params = [ ]
+
+class Read256KMem (PumpCommand):
+  """
+
+  """
+  code = 56
+  descr = "..."
+  params = [ ]
+
+
 class ReadErrorStatus(PumpCommand):
   """
     >>> ReadErrorStatus(serial='665455').format() == ReadErrorStatus._test_ok
@@ -417,6 +498,43 @@ class ReadRemainingInsulin(PumpCommand):
     data = self.data
     log.info("READ remaining insulin:\n%s" % lib.hexdump(data))
     return lib.BangInt(data[0:2])/10.0
+
+class ReadBasalTemp508 (PumpCommand):
+  """
+  """
+
+  code = 64
+  descr = "Read Temp Basal 508 (old)"
+  params = [ ]
+  retries = 2
+  maxRecords = 1
+
+  def getData(self):
+    data = self.data
+    rate = lib.BangInt(data[2:4])/40.0
+    duration = lib.BangInt(data[4:6])
+    log.info("READ temporary basal:\n%s" % lib.hexdump(data))
+    return { 'rate': rate, 'duration': duration }
+
+
+class ReadTodayTotals508 (PumpCommand):
+  """
+  """
+
+  code = 65
+  descr = "Read Totals Today"
+  params = [ ]
+  retries = 2
+  maxRecords = 1
+
+  def getData(self):
+    data = self.data
+    log.info("READ totals today:\n%s" % lib.hexdump(data))
+    totals = {
+      'today': lib.BangInt(data[0:2]) / 10.0,
+      'yesterday': lib.BangInt(data[2:4]) / 10.0
+    }
+    return totals
 
 
 class ReadTotalsToday(PumpCommand):
@@ -780,6 +898,18 @@ __all__ = [
   'ReadSettings', 'ReadTotalsToday', 'SetSuspend',
   'PushEASY', 'PushUP', 'PushDOWN', 'PushACT', 'PushESC',
   'TempBasal', 'ManualCommand', 'ReadCurGlucosePageNumber'
+  'ReadErrorStatus508',
+  'ReadBolusHistory',
+  'ReadDailyTotals',
+  'ReadPrimeBoluses',
+  'ReadAlarms',
+  'ReadProfileSets',
+  'ReadUserEvents',
+  'ReadRemoteControlID',
+  'Read128KMem',
+  'Read256KMem',
+  'ReadBasalTemp508',
+  'ReadTodayTotals508',
 ]
 
 if __name__ == '__main__':
