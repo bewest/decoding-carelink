@@ -191,6 +191,84 @@ over the internet, allowing anyone to independently audit their
 therapy, and then send the data to their preferred auditing software.
 
 ## Tools
+### `./bin/mm-send-comm.py`
+
+```bash
+
+usage: mm-send-comm.py [-h] [--serial SERIAL] [--port PORT] [--no-op]
+                       [--skip-prelude] [--no-rf-prelude] [--skip-postlude]
+                       [-v] [--init] [--prefix-path PREFIX_PATH] [--saveall]
+                       [--prefix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand}]
+                       [--postfix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand}]
+                       {sleep,ManualCommand} ...
+
+mm-send-comm.py - send messages to a compatible MM insulin pump
+
+positional arguments:
+  {sleep,ManualCommand}
+                        Main thing to do between --prefix and--postfix
+    sleep               Just sleep between command sets
+    ManualCommand       Customize a command
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --serial SERIAL       serial number of pump [default: ]
+  --port PORT           Path to device [default: ]
+  --no-op               Dry run, don't do main function
+  --skip-prelude        Don't do the normal prelude.
+  --no-rf-prelude       Do the prelude, but don't query the pump.
+  --skip-postlude       Don't do the normal postlude.
+  -v, --verbose         Verbosity
+  --init                Send power ctrl to initialize RF session.
+  --prefix-path PREFIX_PATH
+                        Prefix to store saved files when using --save or
+                        --saveall.
+  --saveall             Whether or not to save all responses.
+  --prefix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand}
+                        Built-in commands to run before the main one.
+  --postfix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand}
+                        Built-in commands to run after the main one.
+
+This tool is intended to help discover protocol behavior. Under no
+circumstance is it intended to deliver therapy.
+
+
+usage: mm-send-comm.py ManualCommand [-h] [--params PARAMS] [--descr DESCR]
+                                     [--name NAME] [--save]
+                                     [--effectTime EFFECTTIME]
+                                     [--maxRecords MAXRECORDS]
+                                     [--bytesPerRecord BYTESPERRECORD]
+                                     code
+
+positional arguments:
+  code                  The opcode to send to the pump.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --params PARAMS       parameters to format into sent message
+  --descr DESCR         Description of command
+  --name NAME           Proposed name of command
+  --save                Save response in a file.
+  --effectTime EFFECTTIME
+                        time to sleep before responding to message, float in
+                        seconds
+  --maxRecords MAXRECORDS
+                        number of frames in a packet composing payload
+                        response
+  --bytesPerRecord BYTESPERRECORD
+                        bytes per frame
+
+
+usage: mm-send-comm.py sleep [-h] timeout
+
+positional arguments:
+  timeout     Sleep in between running --prefix and --postfix
+
+optional arguments:
+  -h, --help  show this help message and exit
+
+```
+
 ### `./bin/set_temp_rate.py`
 
 ```bash

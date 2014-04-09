@@ -45,7 +45,7 @@ class BaseCommand(object):
     found = len(self.data or [ ])
     expect = int(self.maxRecords * self.bytesPerRecord)
     expect_size = "found[{}] expected[{}]".format(found, expect)
-    log.info("%s:download:done?:%s" % (self, expect_size))
+    log.info("%s:download:done?explain=%s" % (self, expect_size))
     return found >= expect
   def format(self):
     pass
@@ -54,6 +54,9 @@ class BaseCommand(object):
     self.data = data
     self.getData( )
     self.responded = True
+
+  def hexdump (self):
+    return lib.hexdump(self.data)
 
 class PumpCommand(BaseCommand):
   #serial = '665455'
@@ -67,7 +70,7 @@ class PumpCommand(BaseCommand):
   effectTime = .500
   data = bytearray( )
   __fields__ = ['maxRecords', 'code', 'descr',
-                'serial', 'bytesPerRecord', 'params']
+                'serial', 'bytesPerRecord', 'retries', 'params']
   def __init__(self, **kwds):
     for k in self.__fields__:
       value = kwds.get(k, getattr(self, k))
@@ -143,6 +146,25 @@ class PumpCommand(BaseCommand):
       return i + 1
     return i
 
+class ManualCommand(PumpCommand):
+  def __init__(self, **kwds):
+    self.name = kwds.get('name', self.__class__.__name__)
+    super(type(self), self).__init__(**kwds)
+    self.kwds = kwds
+    self.name = kwds.get('name', self.__class__.__name__)
+  def __str__(self):
+    if self.responded:
+      return '{}:{}:size[{}]:'.format(self.name, self.kwds,
+                                      self.size)
+    return '{}:{}:data:unknown'.format(self.name, self.kwds)
+
+  def log_name(self, prefix=''):
+    return prefix + '{}.data'.format(self.name)
+  def __repr__(self):
+    return '<{0}>'.format(self)
+
+  def getData(self):
+    return self.hexdump( )
 
 class PowerControl(PumpCommand):
   """
@@ -158,13 +180,14 @@ class PowerControl(PumpCommand):
   retries = 0
   maxRecords = 0
   #timeout = 1
-  effectTime = 7
+  # effectTime = 7
+  effectTime = 17
 
 class PowerControlOff(PowerControl):
   """
   Here's an example where arguments clearly modify behavior.
   """
-  params = [ 0x00, 0x0A ]
+  params = [ 0x00, 0x00 ]
 
 class TempBasal(PumpCommand):
   """
@@ -282,7 +305,30 @@ class ReadCurPageNumber(PumpCommand):
     log.info("XXX: READ cur page number:\n%s" % lib.hexdump(data))
     if len(data) == 1:
       return int(data[0])
-    return lib.BangLong(data[0:4])
+    page = lib.BangLong(data[0:4])
+    # https://bitbucket.org/bewest/carelink/src/419fbf23495a/ddmsDTWApplet.src/minimed/ddms/deviceportreader/MMX15.java#cl-157
+    if page <= 0 or page > 36:
+      page = 36
+    return page
+
+
+class ReadCurGlucosePageNumber(PumpCommand):
+  """
+  """
+
+  code = 205
+  descr = "Read Cur Glucose Page Number"
+  params = [ ]
+  retries = 2
+  maxRecords = 1
+
+  def getData(self):
+    data = self.data
+    log.info("XXX: READ cur page number:\n%s" % lib.hexdump(data))
+    if len(data) == 1:
+      return int(data[0])
+    result = dict(page= lib.BangLong(data[0:4]), glucose=data[5], isig=data[7])
+    return result
 
 
 class ReadRTC(PumpCommand):
@@ -594,8 +640,20 @@ class KeypadPush(PumpCommand):
   def EASY(klass, **kwds):
     return klass(params=[0x00], **kwds)
 
+def PushACT (**kwds):
+  return KeypadPush.ACT(**kwds)
 
+def PushESC (**kwds):
+  return KeypadPush.ESC(**kwds)
 
+def PushDOWN (**kwds):
+  return KeypadPush.DOWN(**kwds)
+
+def PushUP (**kwds):
+  return KeypadPush.UP(**kwds)
+
+def PushEASY (**kwds):
+  return KeypadPush.EASY(**kwds)
 
 
 
@@ -710,6 +768,19 @@ def get_pages(device):
     page = comm.getData( )
     log.info("XXX: READ HISTORY DATA!!:\n%s" % lib.hexdump(page))
     time.sleep(.100)
+
+__all__ = [
+  'BaseCommand', 'KeypadPush', 'PowerControl', 'PowerControlOff',
+  'PumpCommand', 'PumpResume', 'PumpSuspend',
+  'ReadBasalTemp', 'ReadBatteryStatus', 'ReadContrast',
+  'ReadCurPageNumber', 'ReadErrorStatus', 'ReadFirmwareVersion',
+  'ReadGlucoseHistory', 'ReadHistoryData', 'ReadPumpID',
+  'ReadPumpModel', 'ReadPumpState', 'ReadPumpStatus',
+  'ReadRTC', 'ReadRadioCtrlACL', 'ReadRemainingInsulin',
+  'ReadSettings', 'ReadTotalsToday', 'SetSuspend',
+  'PushEASY', 'PushUP', 'PushDOWN', 'PushACT', 'PushESC',
+  'TempBasal', 'ManualCommand', 'ReadCurGlucosePageNumber'
+]
 
 if __name__ == '__main__':
   import doctest

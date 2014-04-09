@@ -247,8 +247,8 @@ class ReadRadio(StickCommand):
     self.size = size
     self.dl_size = size
     packet = [12, 0, lib.HighByte(size), lib.LowByte(size)]
-    if size < 64:
-      log.error('size is less than 64, which will cause an error. trying 64 instead')
+    if size < 64 and size != 15:
+      log.error('size (%s) is less than 64 and not 15, which may cause an error.' % size)
       self.size = 64
     self.code = packet + [ CRC8(packet) ]
 
@@ -308,7 +308,7 @@ class ReadRadio(StickCommand):
     head = raw[13:]
     crc = raw[-1]
     # crc check
-    if crc == 0:
+    if crc == 0 and len(data) > 1:
       log.warn('bad zero CRC?')
     expected_crc = CRC8(data)
     if crc != expected_crc:
@@ -719,14 +719,23 @@ class Stick(object):
         log.info("%s:end first poll" % (stats.format(self, i, size,
                                         len(results), len(data))))
       if size == 0:
+        if i % 3 == 0:
+          time.sleep(1.5)
+        time.sleep(1.5)
+        size = self.poll_size( )
+      """
+      if size == 0:
+      # if size == 0 and i > 1:
         log.info("%s:zero poll size, sleep .500 try again" % ( \
                   stats.format(self, i, size, len(results), len(data))))
-        time.sleep(.500)
         size = self.poll_size( )
-        if size == 0:
-          log.critical("%s:BAD AILING" % (stats.format(self, i, size,
-                                          len(results), len(data))))
-          break
+        time.sleep(.500)
+      """
+      if size == 0 and i > 1:
+        log.warn("%s:BAD AILING" % (stats.format(self, i, size,
+                                        len(results), len(data))))
+        continue
+          # break
 
       log.info("%s:proceed to download packet" % (stats.format(self, i, size,
                                                   len(results), len(data))))
