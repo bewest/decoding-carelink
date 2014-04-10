@@ -106,8 +106,8 @@ MMPump511/	ReadTotalsToday	121	0x79	('y')	OK
 MMPump511/	ReadProfiles_STD	122	0x7a	('z')	OK
 MMPump511/	ReadProfiles_A	123	0x7b	('{')	partial
 MMPump511/	ReadProfiles_B	124	0x7c	('|')	partial
-MMPumppartial?/	CMD_partialpartial?	125	0x7d	('}')	partial
-MMPumppartial?/	CMD_partialpartial?	126	0x7e	('~')	partial
+MMPump???/	CMD_?????	125	0x7d	('}')	??
+MMPump???/	CMD_?????	126	0x7e	('~')	??
 MMPump511/	ReadSettings	127	0x7f	DEL	partial
 MMPump511/	ReadHistoryData	128	0x80	('\x80')	OK
 MMPump11??/	CMD_?????	129	0x81	0x81	??
@@ -117,7 +117,7 @@ MMPump11??/	CMD_?????	132	0x84	0x84	??
 MMPump11??/	CMD_?????	133	0x85	0x85	??
 MMPump511/	ReadPumpTrace	163	0xa3	('\xa3')	partial
 MMPump511/	ReadDetailTrace	164	0xa4	('\xa4')	partial
-MMPump11partial/	CMD_partialpartialpartialpartialpartialpartial	165	0xa5	0xa5	partial
+MMPump11??/	CMD_????????????	165	0xa5	0xa5	??
 MMPump511/	ReadNewTraceAlarm	166	0xa6	('\xa6')	partial
 MMPump511/	ReadOldTraceAlarm	167	0xa7	('\xa7')	partial
 

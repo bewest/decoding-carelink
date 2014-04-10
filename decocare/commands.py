@@ -936,7 +936,7 @@ class ReadSensorHistoryData (ReadHistoryData):
     super(ReadSensorHistoryData, self).__init__(**kwds)
 
 # MMX22/	CMD_READ_GLUCOSE_HISTORY	154	0x9a	('\x9a')	??
-class ReadGlucoseHistory (ReadHistoryData):
+class ReadGlucoseHistory (ReadSensorHistoryData):
   """
   """
   descr = "read glucose history"
