@@ -954,7 +954,7 @@ class ReadVCNTRHistory (ReadHistoryData):
   code = 213
 
 # MMX23/	CMD_READ_OTHER_DEVICES_IDS	240	0xf0	('\xf0')	??
-class ReadOtherDevicesIDS (ReadHistoryData):
+class ReadOtherDevicesIDS (PumpCommand):
   code = 240
 
 class FilterHistory (PumpCommand):
