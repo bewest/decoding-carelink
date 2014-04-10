@@ -194,26 +194,27 @@ therapy, and then send the data to their preferred auditing software.
 ### `./bin/mm-send-comm.py`
 
 ```bash
-
 usage: mm-send-comm.py [-h] [--serial SERIAL] [--port PORT] [--no-op]
                        [--skip-prelude] [--no-rf-prelude] [--skip-postlude]
                        [-v] [--init] [--prefix-path PREFIX_PATH] [--saveall]
-                       [--prefix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand}]
-                       [--postfix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand}]
-                       {sleep,ManualCommand} ...
+                       [--prefix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory}]
+                       [--postfix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory}]
+                       {sleep,tweak,ManualCommand} ...
 
 mm-send-comm.py - send messages to a compatible MM insulin pump
 
 positional arguments:
-  {sleep,ManualCommand}
+  {sleep,tweak,ManualCommand}
                         Main thing to do between --prefix and--postfix
     sleep               Just sleep between command sets
+    tweak               Tweak a builtin command
     ManualCommand       Customize a command
 
 optional arguments:
   -h, --help            show this help message and exit
-  --serial SERIAL       serial number of pump [default: ]
-  --port PORT           Path to device [default: ]
+  --serial SERIAL       serial number of pump [default: 208850]
+  --port PORT           Path to device [default: /dev/serial/by-id/usb-
+                        0a21_8001-if00-port0]
   --no-op               Dry run, don't do main function
   --skip-prelude        Don't do the normal prelude.
   --no-rf-prelude       Do the prelude, but don't query the pump.
@@ -224,13 +225,53 @@ optional arguments:
                         Prefix to store saved files when using --save or
                         --saveall.
   --saveall             Whether or not to save all responses.
-  --prefix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand}
+  --prefix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory}
                         Built-in commands to run before the main one.
-  --postfix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand}
+  --postfix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory}
                         Built-in commands to run after the main one.
 
 This tool is intended to help discover protocol behavior. Under no
 circumstance is it intended to deliver therapy.
+
+
+usage: mm-send-comm.py sleep [-h] timeout
+
+positional arguments:
+  timeout     Sleep in between running --prefix and --postfix
+
+optional arguments:
+  -h, --help  show this help message and exit
+
+
+usage: mm-send-comm.py tweak [-h] [--params PARAMS] [--descr DESCR]
+                             [--name NAME] [--save] [--effectTime EFFECTTIME]
+                             [--maxRecords MAXRECORDS]
+                             [--bytesPerRecord BYTESPERRECORD] [--page PAGE]
+                             [--begin BEGIN] [--end END]
+                             
+                             {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory}
+
+positional arguments:
+  {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory}
+                        Command to tweak.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --params PARAMS       parameters to format into sent message
+  --descr DESCR         Description of command
+  --name NAME           Proposed name of command
+  --save                Save response in a file.
+  --effectTime EFFECTTIME
+                        time to sleep before responding to message, float in
+                        seconds
+  --maxRecords MAXRECORDS
+                        number of frames in a packet composing payload
+                        response
+  --bytesPerRecord BYTESPERRECORD
+                        bytes per frame
+  --page PAGE           Page to fetch (for ReadHistoryData)
+  --begin BEGIN         begin date for FilterHistory
+  --end END             end date for FilterHistory
 
 
 usage: mm-send-comm.py ManualCommand [-h] [--params PARAMS] [--descr DESCR]
@@ -257,58 +298,6 @@ optional arguments:
                         response
   --bytesPerRecord BYTESPERRECORD
                         bytes per frame
-
-
-usage: mm-send-comm.py sleep [-h] timeout
-
-positional arguments:
-  timeout     Sleep in between running --prefix and --postfix
-
-optional arguments:
-  -h, --help  show this help message and exit
-
-```
-
-### `./bin/set_temp_rate.py`
-
-```bash
-usage: set_temp_rate.py [-h] [--serial SERIAL] [--port PORT]
-                        [--duration DURATION] [--rate RATE]
-
-optional arguments:
-  -h, --help           show this help message and exit
-  --serial SERIAL      serial number of pump [default: ]
-  --port PORT          Path to device [default: ]
-  --duration DURATION  Duration of temp rate [default: 0)]
-  --rate RATE          Rate of temp basal [default: 0)]
-```
-
-Eg:
-
-`./bin/set_temp_rate.py --duration 60 --rate 2.0`
-
-**Duration** is in minutes, must be in 30 minute intervals!
-**Rate** is float, describing units per hour.  Smallest rate is
-`0.025`, and increments by that mount.
-
-### `./bin/mm-set-suspend.py`
-
-```bash
-usage: mm-set-suspend.py [-h] [--serial SERIAL] [--port PORT] [--no-op] [-v]
-                         [--init]
-                         {query,suspend,resume} [{query,suspend,resume} ...]
-
-positional arguments:
-  {query,suspend,resume}
-                        Set or query pump status [default: query)]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --serial SERIAL       serial number of pump [default: ]
-  --port PORT           Path to device [default: ]
-  --no-op               Dry run, don't do main function
-  -v, --verbose         Verbosity
-  --init                Send power ctrl to initialize RF session.
 ```
 
 #### `./bin/mm-press-key.py`
