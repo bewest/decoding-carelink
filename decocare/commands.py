@@ -201,6 +201,87 @@ class TempBasal(PumpCommand):
   #maxRecords = 0
   #timeout = 1
 
+class ReadErrorStatus508 (PumpCommand):
+  """
+
+  """
+  code = 38
+  descr = "error status"
+  params = [ ]
+
+class ReadBolusHistory (PumpCommand):
+  """
+
+  """
+  code = 39
+  descr = "bolus history"
+  params = [ ]
+
+class ReadDailyTotals (PumpCommand):
+  """
+
+  """
+  code = 40
+  descr = "..."
+  params = [ ]
+
+class ReadPrimeBoluses (PumpCommand):
+  """
+
+  """
+  code = 41
+  descr = "..."
+  params = [ ]
+
+class ReadAlarms (PumpCommand):
+  """
+
+  """
+  code = 42
+  descr = "..."
+  params = [ ]
+
+class ReadProfileSets (PumpCommand):
+  """
+
+  """
+  code = 43
+  descr = "..."
+  params = [ ]
+
+class ReadUserEvents (PumpCommand):
+  """
+
+  """
+  code = 44
+  descr = "..."
+  params = [ ]
+
+class ReadRemoteControlID (PumpCommand):
+  """
+
+  """
+  code = 46
+  descr = "..."
+  params = [ ]
+
+class Read128KMem (PumpCommand):
+  """
+
+  """
+  code = 55
+  descr = "..."
+  params = [ ]
+
+class Read256KMem (PumpCommand):
+  """
+
+  """
+  code = 56
+  descr = "..."
+  params = [ ]
+
+
 class ReadErrorStatus(PumpCommand):
   """
     >>> ReadErrorStatus(serial='665455').format() == ReadErrorStatus._test_ok
@@ -219,10 +300,12 @@ class ReadHistoryData(PumpCommand):
     >>> ReadHistoryData(serial='208850', params=[ 0x03 ]).format() == ReadHistoryData._test_ok
     True
   """
+  __fields__ = PumpCommand.__fields__ + ['page']
   _test_ok = bytearray([ 0x01, 0x00, 0xA7, 0x01, 0x20, 0x88, 0x50, 0x80,
                0x01, 0x00, 0x02, 0x02, 0x00, 0x80, 0x9B, 0x03,
                0x36, ])
 
+  page = None
   def __init__(self, page=None, **kwds):
     if page is None and kwds.get('params', [ ]):
       page = kwds.pop('params')[0] or 0
@@ -230,7 +313,7 @@ class ReadHistoryData(PumpCommand):
     if page is not None:
       self.page = int(page)
       kwds['params'] = [ self.page ]
-    super(type(self), self).__init__(**kwds)
+    super(ReadHistoryData, self).__init__(**kwds)
 
   def log_name(self, prefix=''):
     return prefix + '{}-page-{}.data'.format(self.__class__.__name__, self.page)
@@ -280,6 +363,7 @@ class ReadHistoryData(PumpCommand):
   def getData(self):
     data = self.data
     # log.info("XXX: READ HISTORY DATA!!:\n%s" % lib.hexdump(data))
+    return self.hexdump( )
     return data
 
 class ReadCurPageNumber(PumpCommand):
@@ -312,6 +396,7 @@ class ReadCurPageNumber(PumpCommand):
     return page
 
 
+# MMX22/	CMD_READ_CURRENT_GLUCOSE_HISTORY_PAGE_NUMBER	205	0xcd	('\xcd')	OK
 class ReadCurGlucosePageNumber(PumpCommand):
   """
   """
@@ -418,7 +503,44 @@ class ReadRemainingInsulin(PumpCommand):
     log.info("READ remaining insulin:\n%s" % lib.hexdump(data))
     return lib.BangInt(data[0:2])/10.0
 
+class ReadBasalTemp508 (PumpCommand):
+  """
+  """
 
+  code = 64
+  descr = "Read Temp Basal 508 (old)"
+  params = [ ]
+  retries = 2
+  maxRecords = 1
+
+  def getData(self):
+    data = self.data
+    rate = lib.BangInt(data[2:4])/40.0
+    duration = lib.BangInt(data[4:6])
+    log.info("READ temporary basal:\n%s" % lib.hexdump(data))
+    return { 'rate': rate, 'duration': duration }
+
+
+class ReadTodayTotals508 (PumpCommand):
+  """
+  """
+
+  code = 65
+  descr = "Read Totals Today"
+  params = [ ]
+  retries = 2
+  maxRecords = 1
+
+  def getData(self):
+    data = self.data
+    log.info("READ totals today:\n%s" % lib.hexdump(data))
+    totals = {
+      'today': lib.BangInt(data[0:2]) / 10.0,
+      'yesterday': lib.BangInt(data[2:4]) / 10.0
+    }
+    return totals
+
+# MMPump511/	ReadTotalsToday	121	0x79	('y')	OK
 class ReadTotalsToday(PumpCommand):
   """
   """
@@ -438,6 +560,46 @@ class ReadTotalsToday(PumpCommand):
     }
     return totals
 
+# MMPump511/	ReadProfiles_STD	122	0x7a	('z')	OK
+class ReadProfiles511_STD (PumpCommand):
+  code = 122
+# MMPump511/	ReadProfiles_A	123	0x7b	('{')	??
+class ReadProfiles511_A (PumpCommand):
+  code = 123
+# MMPump511/	ReadProfiles_B	124	0x7c	('|')	??
+class ReadProfiles511_B (PumpCommand):
+  code = 124
+# MMPump???/	CMD_?????	125	0x7d	('}')	??
+class Model511_ExperimentOP125 (PumpCommand):
+  code = 125
+# MMPump???/	CMD_?????	126	0x7e	('~')	??
+class Model511_ExperimentOP126 (PumpCommand):
+  code = 126
+# MMPump511/	ReadSettings	127	0x7f	DEL
+class ReadSettings511 (PumpCommand):
+  code = 127
+
+# MMPump511/	ReadPumpTrace	163	0xa3	('\xa3')	??
+class ReadPumpTrace (PumpCommand):
+  code = 163
+# MMPump511/	ReadDetailTrace	164	0xa4	('\xa4')	??
+class ReadDetailTrace (PumpCommand):
+  code = 164
+
+# MMPump11??/	CMD_????????????	165	0xa5	0xa5	??
+class Model511_Experiment_OP165 (PumpCommand):
+  code = 165
+
+# MMPump511/	ReadNewTraceAlarm	166	0xa6	('\xa6')	??
+class ReadNewTraceAlarm (PumpCommand):
+  code = 166
+# MMPump511/	ReadOldTraceAlarm	167	0xa7	('\xa7')	??
+class ReadOldTraceAlarm (PumpCommand):
+  code = 167
+
+# MMX22/	CMD_WRITE_GLUCOSE_HISTORY_TIMESTAMP	40	0x28	('(')	??
+class WriteGlucoseHistoryTimestamp (PumpCommand):
+  code = 40
 
 class ReadRadioCtrlACL(PumpCommand):
   """
@@ -458,6 +620,71 @@ class ReadRadioCtrlACL(PumpCommand):
     log.info("READ radio ACL:\n%s" % lib.hexdump(data))
     return ids
 
+# MMPump512/	CMD_READ_LANGUAGE	134	0x86	('\x86')	??
+class ReadLanguage (PumpCommand):
+  code = 134
+# MMPump512/	CMD_READ_BOLUS_WIZARD_SETUP_STATUS	135	0x87	('\x87')	??
+class ReadBolusWizardSetupStatus (PumpCommand):
+  code = 135
+# MMPump512/	CMD_READ_CARB_UNITS	136	0x88	('\x88')	OK
+class ReadCarbUnits (PumpCommand):
+  code = 136
+# MMPump512/	CMD_READ_BG_UNITS	137	0x89	('\x89')	??
+class ReadBGUnits (PumpCommand):
+  code = 137
+# MMPump512/	CMD_READ_CARB_RATIOS	138	0x8a	('\x8a')	OK
+class ReadCarbRatios (PumpCommand):
+  code = 138
+# MMPump512/	CMD_READ_INSULIN_SENSITIVITIES	139	0x8b	('\x8b')	OK
+class ReadInsulinSensitivities (PumpCommand):
+  code = 139
+  resp_1 = bytearray(b'\x01\x00-\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+
+  def getData (self):
+    data = self.data
+    isFast = data[17] == 0
+    if isFast:
+      return 'Fast'
+    return 'Regular'
+
+# MMPump512/	CMD_READ_BG_TARGETS	140	0x8c	('\x8c')	??
+class ReadBGTargets (PumpCommand):
+  code = 140
+
+# MMPump512/	CMD_READ_BG_ALARM_CLOCKS	142	0x8e	('\x8e')	??
+class ReadBGAlarmCLocks (PumpCommand):
+  code = 142
+# MMPump512/	CMD_READ_RESERVOIR_WARNING	143	0x8f	('\x8f')	??
+class ReadReservoirWarning (PumpCommand):
+  code = 143
+# MMPump512/	CMD_READ_BG_REMINDER_ENABLE	144	0x90	('\x90')	??
+class ReadBGReminderEnable (PumpCommand):
+  code = 144
+# MMPump512/	CMD_READ_SETTINGS	145	0x91	('\x91')	??
+class ReadSettings512 (PumpCommand):
+  code = 145
+# MMPump512/	CMD_READ_STD_PROFILES	146	0x92	('\x92')	??
+class ReadProfile_STD512 (PumpCommand):
+  code = 146
+# MMPump512/	CMD_READ_A_PROFILES	147	0x93	('\x93')	OK
+class ReadProfile_A512 (PumpCommand):
+  code = 147
+# MMPump512/	CMD_READ_B_PROFILES	148	0x94	('\x94')	OK
+class ReadProfile_B512 (PumpCommand):
+  code = 148
+# MMPump512/	CMD_READ_LOGIC_LINK_IDS	149	0x95	('\x95')	OK
+class ReadLogicLinkIDS (PumpCommand):
+  code = 149
+
+# MMPump512??/	CMD_????????????????	150	0x96	('\x96')	??
+class Model512Experiment_OP150 (PumpCommand):
+  code = 150
+
+# MMPump512/	CMD_READ_BG_ALARM_ENABLE	151	0x97	('\x97')	??
+class ReadBGAlarmEnable (PumpCommand):
+  code = 151
+
+# MMPump512/	CMD_READ_TEMP_BASAL	152	0x98	('\x98')	OK
 class ReadBasalTemp(PumpCommand):
   """
   MM511 - 120
@@ -478,21 +705,21 @@ class ReadBasalTemp(PumpCommand):
     log.info("READ temporary basal:\n%s" % lib.hexdump(data))
     return { 'rate': rate, 'duration': duration }
 
-class ReadContrast(PumpCommand):
-  """
-  """
-
-  code = 195
-  descr = "Read Contrast"
-  params = [ ]
-  retries = 2
-  maxRecords = 1
-
-  def getData(self):
-    data = self.data
-    log.info("READ contrast:\n%s" % lib.hexdump(data))
-    return data
-
+# MMGuardian3/	CMD_READ_SENSOR_SETTINGS	207	0xcf	('\xcf')	??
+class GuardianSensorSettings (PumpCommand):
+  code = 207
+# MMGuardian3/	CMD_READ_SENSOR_PREDICTIVE_ALERTS	209	0xd1	('\xd1')	??
+class GuardianSensorSettings (PumpCommand):
+  code = 209
+# MMGuardian3/	CMD_READ_SENSOR_DEMO_AND_GRAPH_TIMEOUT	210	0xd2	('\xd2')	??
+class GuardianSensorDemoGraphTimeout (PumpCommand):
+  code = 210
+# MMGuardian3/	CMD_READ_SENSOR_ALARM_SILENCE	211	0xd3	('\xd3')	??
+class GuardianSensorAlarmSilence (PumpCommand):
+  code = 211
+# MMGuardian3/	CMD_READ_SENSOR_RATE_OF_CHANGE_ALERTS	212	0xd4	('\xd4')	??
+class GuardianSensorRateChangeAlerts (PumpCommand):
+  code = 212
 
 class ReadSettings(PumpCommand):
   """
@@ -563,6 +790,39 @@ class ReadSettings(PumpCommand):
     values.pop('data')
 
     return values
+
+# MMX15/	CMD_READ_SAVED_SETTINGS_DATE	193	0xc1	('\xc1')	??
+class ReadSavedSettingsDate (PumpCommand):
+  code = 193
+
+class ReadContrast(PumpCommand):
+  """
+  """
+
+  code = 195
+  descr = "Read Contrast"
+  params = [ ]
+  retries = 2
+  maxRecords = 1
+
+  def getData(self):
+    data = self.data
+    log.info("READ contrast:\n%s" % lib.hexdump(data))
+    return data
+
+
+
+# MMX15/	CMD_READ_BOLUS_REMINDER_ENABLE	197	0xc5	('\xc5')	??
+class ReadBolusReminderEnable (PumpCommand):
+  code = 197
+
+# MMX15/	CMD_READ_BOLUS_REMINDERS	198	0xc6	('\xc6')	??
+class ReadBolusReminders (PumpCommand):
+  code = 198
+
+# MMX15/	CMD_READ_FACTORY_PARAMETERS	199	0xc7	('\xc7')	??
+class ReadFactoryParameters (PumpCommand):
+  code = 199
 
 class ReadPumpState(PumpCommand):
   """
@@ -656,15 +916,138 @@ def PushEASY (**kwds):
   return KeypadPush.EASY(**kwds)
 
 
-
-class ReadGlucoseHistory(PumpCommand):
+# MMX22/	CMD_READ_SENSOR_SETTINGS	153	0x99	('\x99')	??
+class ReadSensorSettings (PumpCommand):
   """
   """
-  descr = "Read glucose history"
-  code = 131
+  descr = "Read sensor settings"
+  code = 153
   params = [ ]
   retries = 2
 
+class ReadSensorHistoryData (ReadHistoryData):
+  def __init__(self, page=None, **kwds):
+    params = kwds.get('params', [ ])
+    if len(params) == 0:
+      params = [ lib.LowByte(page >> 24), lib.LowByte(page >> 16),
+                 lib.LowByte(page >>  8), lib.LowByte(page) ]
+
+    kwds['params'] = params
+    super(ReadSensorHistoryData, self).__init__(**kwds)
+
+# MMX22/	CMD_READ_GLUCOSE_HISTORY	154	0x9a	('\x9a')	??
+class ReadGlucoseHistory (ReadSensorHistoryData):
+  """
+  """
+  descr = "read glucose history"
+  code = 154
+  params = [ ]
+
+# MMX22/	CMD_READ_ISIG_HISTORY	155	0x9b	('\x9b')	??
+class ReadISIGHistory (ReadSensorHistoryData):
+  """
+  """
+  descr = "read ISIG history"
+  code = 155
+  params = [ ]
+  maxRecords = 32
+
+# MMX22/	CMD_READ_CALIBRATION_FACTOR	156	0x9c	('\x9c')	??
+class ReadCalibrationFactor (PumpCommand):
+  """
+  """
+  code = 156
+
+# MMX23/	CMD_READ_VCNTR_HISTORY	213	0xd5	('\xd5')	??
+class ReadVCNTRHistory (ReadSensorHistoryData):
+  code = 213
+
+# MMX23/	CMD_READ_OTHER_DEVICES_IDS	240	0xf0	('\xf0')	??
+class ReadOtherDevicesIDS (PumpCommand):
+  code = 240
+
+class FilterHistory (PumpCommand):
+  code = None
+  begin = None
+  end = None
+  __fields__ = PumpCommand.__fields__ + ['begin', 'end']
+
+  def __init__(self, begin=None, end=None, **kwds):
+    params = kwds.get('params', [ ])
+    if len(params) == 0:
+      params.extend(lib.format_filter_date(begin))
+      params.extend(lib.format_filter_date(end))
+
+    kwds['params'] = params
+    super(FilterHistory, self).__init__(**kwds)
+
+  def getData(self):
+    data = self.data
+    return bytearray(data)
+    begin = lib.BangInt(data[0:2])
+    end = lib.BangInt(data[2:4])
+    return dict(begin=begin, end=end)
+
+  @classmethod
+  def ISO (klass, begin=None, end=None, **kwds):
+    return klass(begin=lib.parse.date(begin), end=lib.parse.date(end), **kwds)
+
+# MMX22??/	CMD_FILTER_BG	168	0xa8	('\xa8')	??
+class FilterGlucoseHistory (FilterHistory):
+  code = 168
+
+# MMX22??/	CMD_FILTER_ISIG	169	0xa9	('\xa9')	??
+class FilterISIGHistory (FilterHistory):
+  code = 169
+
+class TweakAnotherCommand (ManualCommand):
+  @classmethod
+  def get_kwds (klass, Other, args):
+    kwds = { }
+    fields = list(set(Other.__fields__) - set(['serial', ]))
+    for k in fields:
+      value = getattr(args, k, None)
+      if value is not None:
+        kwds[k] = value
+    return kwds
+
+  @classmethod
+  def config_argparse (klass, parser):
+    parser.add_argument('--params', type=int, action="append",
+                        help="parameters to format into sent message"
+                       )
+    parser.add_argument('--descr', type=str,
+                        help="Description of command"
+                       )
+    parser.add_argument('--name', type=str,
+                        help="Proposed name of command"
+                       )
+    parser.add_argument('--save', action="store_true", default=False,
+                        help="Save response in a file."
+                       )
+    parser.add_argument('--effectTime', type=float,
+                        help="time to sleep before responding to message, float in seconds"
+                       )
+    parser.add_argument('--maxRecords', type=int,
+                        help="number of frames in a packet composing payload response"
+                       )
+    parser.add_argument('--bytesPerRecord', type=int,
+                        help="bytes per frame"
+                       )
+
+    parser.add_argument('--page', type=int,
+                        help="Page to fetch (for ReadHistoryData)"
+                       )
+
+    parser.add_argument('--begin', type=lib.parse.date,
+                        help="begin date for FilterHistory"
+                       )
+    parser.add_argument('--end', type=lib.parse.date,
+                        help="end date for FilterHistory"
+                       )
+
+
+    return parser
 
 
 class ReadPumpModel(PumpCommand):
@@ -779,7 +1162,67 @@ __all__ = [
   'ReadRTC', 'ReadRadioCtrlACL', 'ReadRemainingInsulin',
   'ReadSettings', 'ReadTotalsToday', 'SetSuspend',
   'PushEASY', 'PushUP', 'PushDOWN', 'PushACT', 'PushESC',
-  'TempBasal', 'ManualCommand', 'ReadCurGlucosePageNumber'
+  'TempBasal', 'ManualCommand', 'ReadCurGlucosePageNumber',
+  'ReadErrorStatus508',
+  'ReadBolusHistory',
+  'ReadDailyTotals',
+  'ReadPrimeBoluses',
+  'ReadAlarms',
+  'ReadProfileSets',
+  'ReadUserEvents',
+  'ReadRemoteControlID',
+  'Read128KMem',
+  'Read256KMem',
+  'ReadBasalTemp508',
+  'ReadTodayTotals508',
+  'ReadSensorSettings',
+  'ReadSensorHistoryData',
+  'ReadISIGHistory',
+  'FilterHistory',
+  'FilterGlucoseHistory',
+  'FilterISIGHistory',
+
+  'ReadProfiles511_STD',
+  'ReadProfiles511_A',
+  'ReadProfiles511_B',
+  'Model511_ExperimentOP125',
+  'Model511_ExperimentOP126',
+  'ReadSettings511',
+  'ReadPumpTrace',
+  'ReadDetailTrace',
+  'Model511_Experiment_OP165',
+  'ReadNewTraceAlarm',
+  'ReadOldTraceAlarm',
+  'WriteGlucoseHistoryTimestamp',
+  'ReadLanguage',
+  'ReadBolusWizardSetupStatus',
+  'ReadCarbUnits',
+  'ReadBGUnits',
+  'ReadCarbRatios',
+  'ReadInsulinSensitivities',
+  'ReadBGTargets',
+  'ReadBGAlarmCLocks',
+  'ReadReservoirWarning',
+  'ReadBGReminderEnable',
+  'ReadSettings512',
+  'ReadProfile_STD512',
+  'ReadProfile_A512',
+  'ReadProfile_B512',
+  'ReadLogicLinkIDS',
+  'Model512Experiment_OP150',
+  'ReadBGAlarmEnable',
+  'GuardianSensorSettings',
+  'GuardianSensorSettings',
+  'GuardianSensorDemoGraphTimeout',
+  'GuardianSensorAlarmSilence',
+  'GuardianSensorRateChangeAlerts',
+  'ReadSavedSettingsDate',
+  'ReadBolusReminderEnable',
+  'ReadBolusReminders',
+  'ReadFactoryParameters',
+  'ReadCalibrationFactor',
+  'ReadVCNTRHistory',
+  'ReadOtherDevicesIDS',
 ]
 
 if __name__ == '__main__':

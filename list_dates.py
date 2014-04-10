@@ -6,7 +6,6 @@ import textwrap
 from pprint import pprint, pformat
 from binascii import hexlify
 from datetime import datetime
-from scapy.all import *
 
 from decocare import lib
 

@@ -8,7 +8,7 @@ def readme():
         return f.read()
 
 setup(name='decocare',
-    version='0.0.5', # http://semver.org/
+    version='0.0.6', # http://semver.org/
     description='Audit, inspect, and command MM insulin pumps.',
     long_description=readme(),
     author="Ben West",
@@ -19,7 +19,12 @@ setup(name='decocare',
     install_requires = [
       'pyserial', 'python-dateutil', 'argcomplete'
     ],
-
+    scripts = [
+      'bin/mm-press-key.py',
+      'bin/mm-send-comm.py',
+      'bin/mm-set-suspend.py',
+      'bin/mm-temp-basals.py',
+    ],
     classifiers = [
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',

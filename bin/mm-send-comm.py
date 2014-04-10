@@ -188,7 +188,7 @@ def exec_request (pump, msg, args={},
   if render_decoded:
     print "#### decoded:"
     print "```python"
-    print response.getData( )
+    print repr(response.getData( ))
     print "```"
   if save:
     response.save(prefix=prefix)
@@ -220,6 +220,12 @@ class SendMsgApp(CommandApp):
                    dryrun=args.dryrun, render_hexdump=False, save=args.save, prefix=args.prefix_path)
     if args.command == "sleep":
       time.sleep(args.timeout)
+    if args.command == "tweak":
+      Other = getattr(commands, args.other)
+      kwds = commands.TweakAnotherCommand.get_kwds(Other, args)
+      print Other, kwds
+      resp = exec_request(self.pump, Other, args=kwds,
+                   dryrun=args.dryrun, save=args.save, prefix=args.prefix_path)
     if args.postfix:
       self.execute_list(args.postfix, args.saveall)
 
@@ -262,6 +268,12 @@ class SendMsgApp(CommandApp):
     sleep_parser.add_argument('timeout', type=float, default=0,
                               help="Sleep in between running --prefix and --postfix"
                               )
+    tweaker = subparsers.add_parser("tweak", help="Tweak a builtin command")
+    tweaker.add_argument('other',
+                        choices=choices,
+                        help="Command to tweak."
+                        )
+    commands.TweakAnotherCommand.config_argparse(tweaker)
     all_parser = subparsers.add_parser("ManualCommand", help="Customize a command")
     all_parser.add_argument('code', type=int,
                             help="The opcode to send to the pump."
