@@ -1217,7 +1217,6 @@ __all__ = [
   'GuardianSensorAlarmSilence',
   'GuardianSensorRateChangeAlerts',
   'ReadSavedSettingsDate',
-  'ReadContrast(PumpCommand):',
   'ReadBolusReminderEnable',
   'ReadBolusReminders',
   'ReadFactoryParameters',
