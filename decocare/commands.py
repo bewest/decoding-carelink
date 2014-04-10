@@ -641,6 +641,42 @@ class ReadRadioCtrlACL(PumpCommand):
     log.info("READ radio ACL:\n%s" % lib.hexdump(data))
     return ids
 
+class Model511_Experiment_OP119 (PumpCommand):
+  code = 119
+
+class Model511_Experiment_OP120 (PumpCommand):
+  code = 120
+
+class Model511_Experiment_OP121 (PumpCommand):
+  code = 121
+
+class Model511_Experiment_OP122 (PumpCommand):
+  code = 122
+
+class Model511_Experiment_OP123 (PumpCommand):
+  code = 123
+
+class Model511_Experiment_OP124 (PumpCommand):
+  code = 124
+
+class Model511_Experiment_OP125 (PumpCommand):
+  code = 125
+
+class Model511_Experiment_OP126 (PumpCommand):
+  code = 126
+
+class Model511_Experiment_OP127 (PumpCommand):
+  code = 127
+
+class Model511_Experiment_OP128 (PumpCommand):
+  code = 128
+
+class Model511_Experiment_OP129 (PumpCommand):
+  code = 129
+
+class Model511_Experiment_OP130 (PumpCommand):
+  code = 130
+
 # MMPump512/	CMD_READ_LANGUAGE	134	0x86	('\x86')	??
 class ReadLanguage (PumpCommand):
   code = 134
@@ -1249,6 +1285,18 @@ __all__ = [
   'PumpDisableDetailTrace',
   'Experiment_OP161',
   'Experiment_OP162',
+  'Model511_Experiment_OP119',
+  'Model511_Experiment_OP120',
+  'Model511_Experiment_OP121',
+  'Model511_Experiment_OP122',
+  'Model511_Experiment_OP123',
+  'Model511_Experiment_OP124',
+  'Model511_Experiment_OP125',
+  'Model511_Experiment_OP126',
+  'Model511_Experiment_OP127',
+  'Model511_Experiment_OP128',
+  'Model511_Experiment_OP129',
+  'Model511_Experiment_OP130',
 ]
 
 if __name__ == '__main__':
