@@ -189,6 +189,27 @@ class PowerControlOff(PowerControl):
   """
   params = [ 0x00, 0x00 ]
 
+# MMPump???/	CMD_????????	69	0x45	('E')	??
+class PumpExperiment_OP69 (PumpCommand):
+  code = 69
+
+# MMPump???/	CMD_????????	70	0x46	('F')	??
+class PumpExperiment_OP70 (PumpCommand):
+  code = 70
+
+# MMPump???/	CMD_????????	71	0x47	('G')	??
+class PumpExperiment_OP71 (PumpCommand):
+  code = 71
+
+# MMPump???/	CMD_????????	72	0x48	('H')	??
+class PumpExperiment_OP72 (PumpCommand):
+  code = 72
+
+# MMPump???/	CMD_????????	73	0x49	('I')	??
+class PumpExperiment_OP73 (PumpCommand):
+  code = 73
+
+# MMPump???/	SelectBasalProfile	74	0x4a	('J')	OK
 class SelectBasalProfile (PumpCommand):
   code = 74
 
@@ -200,6 +221,10 @@ class SelectBasalProfileA (SelectBasalProfile):
 
 class SelectBasalProfileB (SelectBasalProfile):
   params = [ 2 ]
+
+# MMPump???/	CMD_????????	75	0x4b	('K')	??
+class PumpExperiment_OP75 (PumpCommand):
+  code = 75
 
 class TempBasal(PumpCommand):
   """
@@ -1313,6 +1338,12 @@ __all__ = [
   'SelectBasalProfileSTD',
   'SelectBasalProfileA',
   'SelectBasalProfileB',
+  'PumpExperiment_OP69',
+  'PumpExperiment_OP70',
+  'PumpExperiment_OP71',
+  'PumpExperiment_OP72',
+  'PumpExperiment_OP73',
+  'PumpExperiment_OP75',
 ]
 
 if __name__ == '__main__':
