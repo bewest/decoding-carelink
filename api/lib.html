@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -64,7 +62,7 @@
 <span id="lib-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">lib</span></tt> Module<a class="headerlink" href="#module-decocare.lib" title="Permalink to this headline">¶</a></h2>
 <p>This module provides some basic helper/formatting utilities.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">hexdump</span><span class="p">(</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">[</span><span class="mh">0x00</span><span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
-<span class="go">&#39;0000   0x00                       .&#39;</span>
+<span class="go">&#39;0000   0x00                                       .&#39;</span>
 </pre></div>
 </div>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="mh">0x00</span> <span class="o">==</span> <span class="n">HighByte</span><span class="p">(</span> <span class="mh">0x0F</span> <span class="p">)</span>
@@ -154,6 +152,17 @@
 <tt class="descclassname">decocare.lib.</tt><tt class="descname">LowByte</tt><big>(</big><em>arg</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#LowByte"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.LowByte" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="class">
+<dt id="decocare.lib.Timer">
+<em class="property">class </em><tt class="descclassname">decocare.lib.</tt><tt class="descname">Timer</tt><a class="reference internal" href="../_modules/decocare/lib.html#Timer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.Timer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<dl class="method">
+<dt id="decocare.lib.Timer.millis">
+<tt class="descname">millis</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#Timer.millis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.Timer.millis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="function">
 <dt id="decocare.lib.decodeDC">
 <tt class="descclassname">decocare.lib.</tt><tt class="descname">decodeDC</tt><big>(</big><em>msg</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#decodeDC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.decodeDC" title="Permalink to this definition">¶</a></dt>
@@ -177,6 +186,20 @@
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">encodeDC</span><span class="p">(</span><span class="n">_enc_test_2</span><span class="p">)</span> <span class="o">==</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">_enc_result_2</span><span class="p">)</span>
 <span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="decocare.lib.filter_date_today">
+<tt class="descclassname">decocare.lib.</tt><tt class="descname">filter_date_today</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#filter_date_today"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.filter_date_today" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="decocare.lib.format_filter_date">
+<tt class="descclassname">decocare.lib.</tt><tt class="descname">format_filter_date</tt><big>(</big><em>date</em><big>)</big><a class="reference internal" href="../_modules/decocare/lib.html#format_filter_date"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.lib.format_filter_date" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">format_filter_date</span><span class="p">(</span><span class="n">parse</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="s">&#39;2014-04-09&#39;</span><span class="p">))</span>
+<span class="go">[7, 222, 4, 9]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -301,7 +324,7 @@ line.</p>
     </div>
     <div class="footer">
         &copy; Copyright 2013, Insulaudit contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

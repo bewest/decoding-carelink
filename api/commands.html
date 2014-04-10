@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -63,9 +61,9 @@
 of them respond to a suite of overlapping commands.  Here&#8217;s a
 discussion of some of the commands available.</p>
 <p>(There are many more.)</p>
-<div class="section" id="module-decocare.commands">
-<span id="commands-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">commands</span></tt> Module<a class="headerlink" href="#module-decocare.commands" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<div class="section" id="commands-module">
+<h2><tt class="xref py py-mod docutils literal"><span class="pre">commands</span></tt> Module<a class="headerlink" href="#commands-module" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-decocare.commands"></span><dl class="class">
 <dt id="decocare.commands.BaseCommand">
 <em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">BaseCommand</tt><big>(</big><em>code</em>, <em>descr</em>, <em>*args</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#BaseCommand"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.BaseCommand" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
@@ -97,6 +95,11 @@ discussion of some of the commands available.</p>
 <dl class="method">
 <dt id="decocare.commands.BaseCommand.format">
 <tt class="descname">format</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#BaseCommand.format"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.BaseCommand.format" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.commands.BaseCommand.hexdump">
+<tt class="descname">hexdump</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#BaseCommand.hexdump"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.BaseCommand.hexdump" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -131,10 +134,61 @@ discussion of some of the commands available.</p>
 
 </dd></dl>
 
-<dl class="function">
-<dt id="decocare.commands.CRC8">
-<tt class="descclassname">decocare.commands.</tt><tt class="descname">CRC8</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#CRC8"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.CRC8" title="Permalink to this definition">¶</a></dt>
+<dl class="class">
+<dt id="decocare.commands.KeypadPush">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">KeypadPush</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#KeypadPush"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.KeypadPush" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="classmethod">
+<dt id="decocare.commands.KeypadPush.ACT">
+<em class="property">classmethod </em><tt class="descname">ACT</tt><big>(</big><em>klass</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#KeypadPush.ACT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.KeypadPush.ACT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="decocare.commands.KeypadPush.DOWN">
+<em class="property">classmethod </em><tt class="descname">DOWN</tt><big>(</big><em>klass</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#KeypadPush.DOWN"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.KeypadPush.DOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="decocare.commands.KeypadPush.EASY">
+<em class="property">classmethod </em><tt class="descname">EASY</tt><big>(</big><em>klass</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#KeypadPush.EASY"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.KeypadPush.EASY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="decocare.commands.KeypadPush.ESC">
+<em class="property">classmethod </em><tt class="descname">ESC</tt><big>(</big><em>klass</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#KeypadPush.ESC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.KeypadPush.ESC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="decocare.commands.KeypadPush.UP">
+<em class="property">classmethod </em><tt class="descname">UP</tt><big>(</big><em>klass</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#KeypadPush.UP"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.KeypadPush.UP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.KeypadPush.code">
+<tt class="descname">code</tt><em class="property"> = 91</em><a class="headerlink" href="#decocare.commands.KeypadPush.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.KeypadPush.descr">
+<tt class="descname">descr</tt><em class="property"> = 'Press buttons on the keypad'</em><a class="headerlink" href="#decocare.commands.KeypadPush.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.KeypadPush.maxRecords">
+<tt class="descname">maxRecords</tt><em class="property"> = 0</em><a class="headerlink" href="#decocare.commands.KeypadPush.maxRecords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.KeypadPush.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.KeypadPush.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.KeypadPush.retries">
+<tt class="descname">retries</tt><em class="property"> = 1</em><a class="headerlink" href="#decocare.commands.KeypadPush.retries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
 
 <dl class="class">
 <dt id="decocare.commands.PowerControl">
@@ -183,7 +237,7 @@ discussion of some of the commands available.</p>
 <p>Here&#8217;s an example where arguments clearly modify behavior.</p>
 <dl class="attribute">
 <dt id="decocare.commands.PowerControlOff.params">
-<tt class="descname">params</tt><em class="property"> = [0, 10]</em><a class="headerlink" href="#decocare.commands.PowerControlOff.params" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">params</tt><em class="property"> = [0, 0]</em><a class="headerlink" href="#decocare.commands.PowerControlOff.params" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -255,6 +309,38 @@ discussion of some of the commands available.</p>
 <dl class="attribute">
 <dt id="decocare.commands.PumpCommand.serial">
 <tt class="descname">serial</tt><em class="property"> = '208850'</em><a class="headerlink" href="#decocare.commands.PumpCommand.serial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.PumpResume">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">PumpResume</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#PumpResume"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.PumpResume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.SetSuspend" title="decocare.commands.SetSuspend"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.SetSuspend</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.PumpResume.descr">
+<tt class="descname">descr</tt><em class="property"> = 'Resume pump (cancel suspend)'</em><a class="headerlink" href="#decocare.commands.PumpResume.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.PumpResume.params">
+<tt class="descname">params</tt><em class="property"> = [0]</em><a class="headerlink" href="#decocare.commands.PumpResume.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.PumpSuspend">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">PumpSuspend</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#PumpSuspend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.PumpSuspend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.SetSuspend" title="decocare.commands.SetSuspend"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.SetSuspend</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.PumpSuspend.descr">
+<tt class="descname">descr</tt><em class="property"> = 'Suspend pump'</em><a class="headerlink" href="#decocare.commands.PumpSuspend.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.PumpSuspend.params">
+<tt class="descname">params</tt><em class="property"> = [1]</em><a class="headerlink" href="#decocare.commands.PumpSuspend.params" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -489,26 +575,21 @@ MM512 and up - opcode 152
 
 <dl class="class">
 <dt id="decocare.commands.ReadGlucoseHistory">
-<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadGlucoseHistory</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadGlucoseHistory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadGlucoseHistory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadGlucoseHistory</tt><big>(</big><em>page=None</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadGlucoseHistory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadGlucoseHistory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.ReadHistoryData" title="decocare.commands.ReadHistoryData"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.ReadHistoryData</span></tt></a></p>
 <dl class="attribute">
 <dt id="decocare.commands.ReadGlucoseHistory.code">
-<tt class="descname">code</tt><em class="property"> = 131</em><a class="headerlink" href="#decocare.commands.ReadGlucoseHistory.code" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">code</tt><em class="property"> = 154</em><a class="headerlink" href="#decocare.commands.ReadGlucoseHistory.code" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="decocare.commands.ReadGlucoseHistory.descr">
-<tt class="descname">descr</tt><em class="property"> = 'Read glucose history'</em><a class="headerlink" href="#decocare.commands.ReadGlucoseHistory.descr" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">descr</tt><em class="property"> = 'read glucose history'</em><a class="headerlink" href="#decocare.commands.ReadGlucoseHistory.descr" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="decocare.commands.ReadGlucoseHistory.params">
 <tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.ReadGlucoseHistory.params" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="decocare.commands.ReadGlucoseHistory.retries">
-<tt class="descname">retries</tt><em class="property"> = 2</em><a class="headerlink" href="#decocare.commands.ReadGlucoseHistory.retries" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -559,6 +640,11 @@ MM512 and up - opcode 152
 <dl class="attribute">
 <dt id="decocare.commands.ReadHistoryData.maxRecords">
 <tt class="descname">maxRecords</tt><em class="property"> = 16</em><a class="headerlink" href="#decocare.commands.ReadHistoryData.maxRecords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadHistoryData.page">
+<tt class="descname">page</tt><em class="property"> = None</em><a class="headerlink" href="#decocare.commands.ReadHistoryData.page" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -685,6 +771,42 @@ MM512 and up - opcode 152
 <dl class="attribute">
 <dt id="decocare.commands.ReadPumpState.retries">
 <tt class="descname">retries</tt><em class="property"> = 2</em><a class="headerlink" href="#decocare.commands.ReadPumpState.retries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadPumpStatus">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadPumpStatus</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadPumpStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadPumpStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadPumpStatus.code">
+<tt class="descname">code</tt><em class="property"> = 206</em><a class="headerlink" href="#decocare.commands.ReadPumpStatus.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadPumpStatus.descr">
+<tt class="descname">descr</tt><em class="property"> = 'Read Pump Status'</em><a class="headerlink" href="#decocare.commands.ReadPumpStatus.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.commands.ReadPumpStatus.getData">
+<tt class="descname">getData</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadPumpStatus.getData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadPumpStatus.getData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadPumpStatus.maxRecords">
+<tt class="descname">maxRecords</tt><em class="property"> = 1</em><a class="headerlink" href="#decocare.commands.ReadPumpStatus.maxRecords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadPumpStatus.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.ReadPumpStatus.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadPumpStatus.retries">
+<tt class="descname">retries</tt><em class="property"> = 2</em><a class="headerlink" href="#decocare.commands.ReadPumpStatus.retries" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -842,6 +964,11 @@ MM512 and up - opcode 152
 <tt class="descname">retries</tt><em class="property"> = 2</em><a class="headerlink" href="#decocare.commands.ReadSettings.retries" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="method">
+<dt id="decocare.commands.ReadSettings.temp_basal_type">
+<tt class="descname">temp_basal_type</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadSettings.temp_basal_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadSettings.temp_basal_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -880,15 +1007,983 @@ MM512 and up - opcode 152
 
 </dd></dl>
 
+<dl class="class">
+<dt id="decocare.commands.SetSuspend">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">SetSuspend</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#SetSuspend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.SetSuspend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.SetSuspend.code">
+<tt class="descname">code</tt><em class="property"> = 77</em><a class="headerlink" href="#decocare.commands.SetSuspend.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.SetSuspend.descr">
+<tt class="descname">descr</tt><em class="property"> = 'Set Pump Suspend/Resume status'</em><a class="headerlink" href="#decocare.commands.SetSuspend.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.SetSuspend.maxRecords">
+<tt class="descname">maxRecords</tt><em class="property"> = 1</em><a class="headerlink" href="#decocare.commands.SetSuspend.maxRecords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.SetSuspend.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.SetSuspend.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.SetSuspend.retries">
+<tt class="descname">retries</tt><em class="property"> = 2</em><a class="headerlink" href="#decocare.commands.SetSuspend.retries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="function">
-<dt id="decocare.commands.do_commands">
-<tt class="descclassname">decocare.commands.</tt><tt class="descname">do_commands</tt><big>(</big><em>device</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#do_commands"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.do_commands" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.commands.PushEASY">
+<tt class="descclassname">decocare.commands.</tt><tt class="descname">PushEASY</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#PushEASY"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.PushEASY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="decocare.commands.get_pages">
-<tt class="descclassname">decocare.commands.</tt><tt class="descname">get_pages</tt><big>(</big><em>device</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#get_pages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.get_pages" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.commands.PushUP">
+<tt class="descclassname">decocare.commands.</tt><tt class="descname">PushUP</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#PushUP"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.PushUP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="function">
+<dt id="decocare.commands.PushDOWN">
+<tt class="descclassname">decocare.commands.</tt><tt class="descname">PushDOWN</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#PushDOWN"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.PushDOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="decocare.commands.PushACT">
+<tt class="descclassname">decocare.commands.</tt><tt class="descname">PushACT</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#PushACT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.PushACT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="decocare.commands.PushESC">
+<tt class="descclassname">decocare.commands.</tt><tt class="descname">PushESC</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#PushESC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.PushESC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.TempBasal">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">TempBasal</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#TempBasal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.TempBasal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.TempBasal.code">
+<tt class="descname">code</tt><em class="property"> = 76</em><a class="headerlink" href="#decocare.commands.TempBasal.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.TempBasal.descr">
+<tt class="descname">descr</tt><em class="property"> = 'Set temp basal'</em><a class="headerlink" href="#decocare.commands.TempBasal.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.TempBasal.params">
+<tt class="descname">params</tt><em class="property"> = [0, 0, 0]</em><a class="headerlink" href="#decocare.commands.TempBasal.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.TempBasal.retries">
+<tt class="descname">retries</tt><em class="property"> = 0</em><a class="headerlink" href="#decocare.commands.TempBasal.retries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ManualCommand">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ManualCommand</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ManualCommand"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ManualCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="method">
+<dt id="decocare.commands.ManualCommand.getData">
+<tt class="descname">getData</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ManualCommand.getData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ManualCommand.getData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.commands.ManualCommand.log_name">
+<tt class="descname">log_name</tt><big>(</big><em>prefix=''</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ManualCommand.log_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ManualCommand.log_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadCurGlucosePageNumber">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadCurGlucosePageNumber</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadCurGlucosePageNumber"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadCurGlucosePageNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadCurGlucosePageNumber.code">
+<tt class="descname">code</tt><em class="property"> = 205</em><a class="headerlink" href="#decocare.commands.ReadCurGlucosePageNumber.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadCurGlucosePageNumber.descr">
+<tt class="descname">descr</tt><em class="property"> = 'Read Cur Glucose Page Number'</em><a class="headerlink" href="#decocare.commands.ReadCurGlucosePageNumber.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.commands.ReadCurGlucosePageNumber.getData">
+<tt class="descname">getData</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadCurGlucosePageNumber.getData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadCurGlucosePageNumber.getData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadCurGlucosePageNumber.maxRecords">
+<tt class="descname">maxRecords</tt><em class="property"> = 1</em><a class="headerlink" href="#decocare.commands.ReadCurGlucosePageNumber.maxRecords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadCurGlucosePageNumber.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.ReadCurGlucosePageNumber.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadCurGlucosePageNumber.retries">
+<tt class="descname">retries</tt><em class="property"> = 2</em><a class="headerlink" href="#decocare.commands.ReadCurGlucosePageNumber.retries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadErrorStatus508">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadErrorStatus508</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadErrorStatus508"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadErrorStatus508" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadErrorStatus508.code">
+<tt class="descname">code</tt><em class="property"> = 38</em><a class="headerlink" href="#decocare.commands.ReadErrorStatus508.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadErrorStatus508.descr">
+<tt class="descname">descr</tt><em class="property"> = 'error status'</em><a class="headerlink" href="#decocare.commands.ReadErrorStatus508.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadErrorStatus508.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.ReadErrorStatus508.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadBolusHistory">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadBolusHistory</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadBolusHistory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadBolusHistory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadBolusHistory.code">
+<tt class="descname">code</tt><em class="property"> = 39</em><a class="headerlink" href="#decocare.commands.ReadBolusHistory.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadBolusHistory.descr">
+<tt class="descname">descr</tt><em class="property"> = 'bolus history'</em><a class="headerlink" href="#decocare.commands.ReadBolusHistory.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadBolusHistory.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.ReadBolusHistory.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadDailyTotals">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadDailyTotals</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadDailyTotals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadDailyTotals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadDailyTotals.code">
+<tt class="descname">code</tt><em class="property"> = 40</em><a class="headerlink" href="#decocare.commands.ReadDailyTotals.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadDailyTotals.descr">
+<tt class="descname">descr</tt><em class="property"> = '...'</em><a class="headerlink" href="#decocare.commands.ReadDailyTotals.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadDailyTotals.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.ReadDailyTotals.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadPrimeBoluses">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadPrimeBoluses</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadPrimeBoluses"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadPrimeBoluses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadPrimeBoluses.code">
+<tt class="descname">code</tt><em class="property"> = 41</em><a class="headerlink" href="#decocare.commands.ReadPrimeBoluses.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadPrimeBoluses.descr">
+<tt class="descname">descr</tt><em class="property"> = '...'</em><a class="headerlink" href="#decocare.commands.ReadPrimeBoluses.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadPrimeBoluses.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.ReadPrimeBoluses.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadAlarms">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadAlarms</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadAlarms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadAlarms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadAlarms.code">
+<tt class="descname">code</tt><em class="property"> = 42</em><a class="headerlink" href="#decocare.commands.ReadAlarms.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadAlarms.descr">
+<tt class="descname">descr</tt><em class="property"> = '...'</em><a class="headerlink" href="#decocare.commands.ReadAlarms.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadAlarms.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.ReadAlarms.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadProfileSets">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadProfileSets</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadProfileSets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadProfileSets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadProfileSets.code">
+<tt class="descname">code</tt><em class="property"> = 43</em><a class="headerlink" href="#decocare.commands.ReadProfileSets.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadProfileSets.descr">
+<tt class="descname">descr</tt><em class="property"> = '...'</em><a class="headerlink" href="#decocare.commands.ReadProfileSets.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadProfileSets.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.ReadProfileSets.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadUserEvents">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadUserEvents</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadUserEvents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadUserEvents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadUserEvents.code">
+<tt class="descname">code</tt><em class="property"> = 44</em><a class="headerlink" href="#decocare.commands.ReadUserEvents.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadUserEvents.descr">
+<tt class="descname">descr</tt><em class="property"> = '...'</em><a class="headerlink" href="#decocare.commands.ReadUserEvents.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadUserEvents.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.ReadUserEvents.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadRemoteControlID">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadRemoteControlID</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadRemoteControlID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadRemoteControlID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadRemoteControlID.code">
+<tt class="descname">code</tt><em class="property"> = 46</em><a class="headerlink" href="#decocare.commands.ReadRemoteControlID.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadRemoteControlID.descr">
+<tt class="descname">descr</tt><em class="property"> = '...'</em><a class="headerlink" href="#decocare.commands.ReadRemoteControlID.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadRemoteControlID.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.ReadRemoteControlID.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.Read128KMem">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">Read128KMem</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#Read128KMem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.Read128KMem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.Read128KMem.code">
+<tt class="descname">code</tt><em class="property"> = 55</em><a class="headerlink" href="#decocare.commands.Read128KMem.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.Read128KMem.descr">
+<tt class="descname">descr</tt><em class="property"> = '...'</em><a class="headerlink" href="#decocare.commands.Read128KMem.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.Read128KMem.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.Read128KMem.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.Read256KMem">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">Read256KMem</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#Read256KMem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.Read256KMem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.Read256KMem.code">
+<tt class="descname">code</tt><em class="property"> = 56</em><a class="headerlink" href="#decocare.commands.Read256KMem.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.Read256KMem.descr">
+<tt class="descname">descr</tt><em class="property"> = '...'</em><a class="headerlink" href="#decocare.commands.Read256KMem.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.Read256KMem.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.Read256KMem.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadBasalTemp508">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadBasalTemp508</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadBasalTemp508"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadBasalTemp508" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadBasalTemp508.code">
+<tt class="descname">code</tt><em class="property"> = 64</em><a class="headerlink" href="#decocare.commands.ReadBasalTemp508.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadBasalTemp508.descr">
+<tt class="descname">descr</tt><em class="property"> = 'Read Temp Basal 508 (old)'</em><a class="headerlink" href="#decocare.commands.ReadBasalTemp508.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.commands.ReadBasalTemp508.getData">
+<tt class="descname">getData</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadBasalTemp508.getData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadBasalTemp508.getData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadBasalTemp508.maxRecords">
+<tt class="descname">maxRecords</tt><em class="property"> = 1</em><a class="headerlink" href="#decocare.commands.ReadBasalTemp508.maxRecords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadBasalTemp508.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.ReadBasalTemp508.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadBasalTemp508.retries">
+<tt class="descname">retries</tt><em class="property"> = 2</em><a class="headerlink" href="#decocare.commands.ReadBasalTemp508.retries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadTodayTotals508">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadTodayTotals508</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadTodayTotals508"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadTodayTotals508" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadTodayTotals508.code">
+<tt class="descname">code</tt><em class="property"> = 65</em><a class="headerlink" href="#decocare.commands.ReadTodayTotals508.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadTodayTotals508.descr">
+<tt class="descname">descr</tt><em class="property"> = 'Read Totals Today'</em><a class="headerlink" href="#decocare.commands.ReadTodayTotals508.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.commands.ReadTodayTotals508.getData">
+<tt class="descname">getData</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadTodayTotals508.getData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadTodayTotals508.getData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadTodayTotals508.maxRecords">
+<tt class="descname">maxRecords</tt><em class="property"> = 1</em><a class="headerlink" href="#decocare.commands.ReadTodayTotals508.maxRecords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadTodayTotals508.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.ReadTodayTotals508.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadTodayTotals508.retries">
+<tt class="descname">retries</tt><em class="property"> = 2</em><a class="headerlink" href="#decocare.commands.ReadTodayTotals508.retries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadSensorSettings">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadSensorSettings</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadSensorSettings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadSensorSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadSensorSettings.code">
+<tt class="descname">code</tt><em class="property"> = 153</em><a class="headerlink" href="#decocare.commands.ReadSensorSettings.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadSensorSettings.descr">
+<tt class="descname">descr</tt><em class="property"> = 'Read sensor settings'</em><a class="headerlink" href="#decocare.commands.ReadSensorSettings.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadSensorSettings.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.ReadSensorSettings.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadSensorSettings.retries">
+<tt class="descname">retries</tt><em class="property"> = 2</em><a class="headerlink" href="#decocare.commands.ReadSensorSettings.retries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadSensorHistoryData">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadSensorHistoryData</tt><big>(</big><em>page=None</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadSensorHistoryData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadSensorHistoryData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.ReadHistoryData" title="decocare.commands.ReadHistoryData"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.ReadHistoryData</span></tt></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadISIGHistory">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadISIGHistory</tt><big>(</big><em>page=None</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadISIGHistory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadISIGHistory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.ReadHistoryData" title="decocare.commands.ReadHistoryData"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.ReadHistoryData</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadISIGHistory.code">
+<tt class="descname">code</tt><em class="property"> = 155</em><a class="headerlink" href="#decocare.commands.ReadISIGHistory.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadISIGHistory.descr">
+<tt class="descname">descr</tt><em class="property"> = 'read ISIG history'</em><a class="headerlink" href="#decocare.commands.ReadISIGHistory.descr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadISIGHistory.maxRecords">
+<tt class="descname">maxRecords</tt><em class="property"> = 32</em><a class="headerlink" href="#decocare.commands.ReadISIGHistory.maxRecords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadISIGHistory.params">
+<tt class="descname">params</tt><em class="property"> = []</em><a class="headerlink" href="#decocare.commands.ReadISIGHistory.params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.FilterHistory">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">FilterHistory</tt><big>(</big><em>begin=None</em>, <em>end=None</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#FilterHistory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.FilterHistory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="classmethod">
+<dt id="decocare.commands.FilterHistory.ISO">
+<em class="property">classmethod </em><tt class="descname">ISO</tt><big>(</big><em>klass</em>, <em>begin=None</em>, <em>end=None</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#FilterHistory.ISO"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.FilterHistory.ISO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.FilterHistory.begin">
+<tt class="descname">begin</tt><em class="property"> = None</em><a class="headerlink" href="#decocare.commands.FilterHistory.begin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.FilterHistory.code">
+<tt class="descname">code</tt><em class="property"> = None</em><a class="headerlink" href="#decocare.commands.FilterHistory.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.FilterHistory.end">
+<tt class="descname">end</tt><em class="property"> = None</em><a class="headerlink" href="#decocare.commands.FilterHistory.end" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.commands.FilterHistory.getData">
+<tt class="descname">getData</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#FilterHistory.getData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.FilterHistory.getData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.FilterGlucoseHistory">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">FilterGlucoseHistory</tt><big>(</big><em>begin=None</em>, <em>end=None</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#FilterGlucoseHistory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.FilterGlucoseHistory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.FilterHistory" title="decocare.commands.FilterHistory"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.FilterHistory</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.FilterGlucoseHistory.code">
+<tt class="descname">code</tt><em class="property"> = 168</em><a class="headerlink" href="#decocare.commands.FilterGlucoseHistory.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.FilterISIGHistory">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">FilterISIGHistory</tt><big>(</big><em>begin=None</em>, <em>end=None</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#FilterISIGHistory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.FilterISIGHistory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.FilterHistory" title="decocare.commands.FilterHistory"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.FilterHistory</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.FilterISIGHistory.code">
+<tt class="descname">code</tt><em class="property"> = 169</em><a class="headerlink" href="#decocare.commands.FilterISIGHistory.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadProfiles511_STD">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadProfiles511_STD</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadProfiles511_STD"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadProfiles511_STD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadProfiles511_STD.code">
+<tt class="descname">code</tt><em class="property"> = 122</em><a class="headerlink" href="#decocare.commands.ReadProfiles511_STD.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadProfiles511_A">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadProfiles511_A</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadProfiles511_A"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadProfiles511_A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadProfiles511_A.code">
+<tt class="descname">code</tt><em class="property"> = 123</em><a class="headerlink" href="#decocare.commands.ReadProfiles511_A.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadProfiles511_B">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadProfiles511_B</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadProfiles511_B"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadProfiles511_B" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadProfiles511_B.code">
+<tt class="descname">code</tt><em class="property"> = 124</em><a class="headerlink" href="#decocare.commands.ReadProfiles511_B.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.Model511_ExperimentOP125">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">Model511_ExperimentOP125</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#Model511_ExperimentOP125"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.Model511_ExperimentOP125" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.Model511_ExperimentOP125.code">
+<tt class="descname">code</tt><em class="property"> = 125</em><a class="headerlink" href="#decocare.commands.Model511_ExperimentOP125.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.Model511_ExperimentOP126">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">Model511_ExperimentOP126</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#Model511_ExperimentOP126"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.Model511_ExperimentOP126" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.Model511_ExperimentOP126.code">
+<tt class="descname">code</tt><em class="property"> = 126</em><a class="headerlink" href="#decocare.commands.Model511_ExperimentOP126.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadSettings511">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadSettings511</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadSettings511"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadSettings511" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadSettings511.code">
+<tt class="descname">code</tt><em class="property"> = 127</em><a class="headerlink" href="#decocare.commands.ReadSettings511.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadPumpTrace">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadPumpTrace</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadPumpTrace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadPumpTrace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadPumpTrace.code">
+<tt class="descname">code</tt><em class="property"> = 163</em><a class="headerlink" href="#decocare.commands.ReadPumpTrace.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadDetailTrace">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadDetailTrace</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadDetailTrace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadDetailTrace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadDetailTrace.code">
+<tt class="descname">code</tt><em class="property"> = 164</em><a class="headerlink" href="#decocare.commands.ReadDetailTrace.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.Model511_Experiment_OP165">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">Model511_Experiment_OP165</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#Model511_Experiment_OP165"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.Model511_Experiment_OP165" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.Model511_Experiment_OP165.code">
+<tt class="descname">code</tt><em class="property"> = 165</em><a class="headerlink" href="#decocare.commands.Model511_Experiment_OP165.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadNewTraceAlarm">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadNewTraceAlarm</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadNewTraceAlarm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadNewTraceAlarm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadNewTraceAlarm.code">
+<tt class="descname">code</tt><em class="property"> = 166</em><a class="headerlink" href="#decocare.commands.ReadNewTraceAlarm.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadOldTraceAlarm">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadOldTraceAlarm</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadOldTraceAlarm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadOldTraceAlarm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadOldTraceAlarm.code">
+<tt class="descname">code</tt><em class="property"> = 167</em><a class="headerlink" href="#decocare.commands.ReadOldTraceAlarm.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.WriteGlucoseHistoryTimestamp">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">WriteGlucoseHistoryTimestamp</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#WriteGlucoseHistoryTimestamp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.WriteGlucoseHistoryTimestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.WriteGlucoseHistoryTimestamp.code">
+<tt class="descname">code</tt><em class="property"> = 40</em><a class="headerlink" href="#decocare.commands.WriteGlucoseHistoryTimestamp.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadLanguage">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadLanguage</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadLanguage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadLanguage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadLanguage.code">
+<tt class="descname">code</tt><em class="property"> = 134</em><a class="headerlink" href="#decocare.commands.ReadLanguage.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadBolusWizardSetupStatus">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadBolusWizardSetupStatus</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadBolusWizardSetupStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadBolusWizardSetupStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadBolusWizardSetupStatus.code">
+<tt class="descname">code</tt><em class="property"> = 135</em><a class="headerlink" href="#decocare.commands.ReadBolusWizardSetupStatus.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadCarbUnits">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadCarbUnits</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadCarbUnits"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadCarbUnits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadCarbUnits.code">
+<tt class="descname">code</tt><em class="property"> = 136</em><a class="headerlink" href="#decocare.commands.ReadCarbUnits.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadBGUnits">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadBGUnits</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadBGUnits"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadBGUnits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadBGUnits.code">
+<tt class="descname">code</tt><em class="property"> = 137</em><a class="headerlink" href="#decocare.commands.ReadBGUnits.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadCarbRatios">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadCarbRatios</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadCarbRatios"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadCarbRatios" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadCarbRatios.code">
+<tt class="descname">code</tt><em class="property"> = 138</em><a class="headerlink" href="#decocare.commands.ReadCarbRatios.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadInsulinSensitivities">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadInsulinSensitivities</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadInsulinSensitivities"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadInsulinSensitivities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadInsulinSensitivities.code">
+<tt class="descname">code</tt><em class="property"> = 139</em><a class="headerlink" href="#decocare.commands.ReadInsulinSensitivities.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadBGTargets">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadBGTargets</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadBGTargets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadBGTargets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadBGTargets.code">
+<tt class="descname">code</tt><em class="property"> = 140</em><a class="headerlink" href="#decocare.commands.ReadBGTargets.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadBGAlarmCLocks">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadBGAlarmCLocks</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadBGAlarmCLocks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadBGAlarmCLocks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadBGAlarmCLocks.code">
+<tt class="descname">code</tt><em class="property"> = 142</em><a class="headerlink" href="#decocare.commands.ReadBGAlarmCLocks.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadReservoirWarning">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadReservoirWarning</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadReservoirWarning"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadReservoirWarning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadReservoirWarning.code">
+<tt class="descname">code</tt><em class="property"> = 143</em><a class="headerlink" href="#decocare.commands.ReadReservoirWarning.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadBGReminderEnable">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadBGReminderEnable</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadBGReminderEnable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadBGReminderEnable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadBGReminderEnable.code">
+<tt class="descname">code</tt><em class="property"> = 144</em><a class="headerlink" href="#decocare.commands.ReadBGReminderEnable.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadSettings512">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadSettings512</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadSettings512"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadSettings512" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadSettings512.code">
+<tt class="descname">code</tt><em class="property"> = 145</em><a class="headerlink" href="#decocare.commands.ReadSettings512.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadProfile_STD512">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadProfile_STD512</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadProfile_STD512"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadProfile_STD512" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadProfile_STD512.code">
+<tt class="descname">code</tt><em class="property"> = 146</em><a class="headerlink" href="#decocare.commands.ReadProfile_STD512.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadProfile_A512">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadProfile_A512</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadProfile_A512"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadProfile_A512" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadProfile_A512.code">
+<tt class="descname">code</tt><em class="property"> = 147</em><a class="headerlink" href="#decocare.commands.ReadProfile_A512.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadProfile_B512">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadProfile_B512</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadProfile_B512"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadProfile_B512" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadProfile_B512.code">
+<tt class="descname">code</tt><em class="property"> = 148</em><a class="headerlink" href="#decocare.commands.ReadProfile_B512.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadLogicLinkIDS">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadLogicLinkIDS</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadLogicLinkIDS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadLogicLinkIDS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadLogicLinkIDS.code">
+<tt class="descname">code</tt><em class="property"> = 149</em><a class="headerlink" href="#decocare.commands.ReadLogicLinkIDS.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.Model512Experiment_OP150">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">Model512Experiment_OP150</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#Model512Experiment_OP150"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.Model512Experiment_OP150" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.Model512Experiment_OP150.code">
+<tt class="descname">code</tt><em class="property"> = 150</em><a class="headerlink" href="#decocare.commands.Model512Experiment_OP150.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadBGAlarmEnable">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadBGAlarmEnable</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadBGAlarmEnable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadBGAlarmEnable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadBGAlarmEnable.code">
+<tt class="descname">code</tt><em class="property"> = 151</em><a class="headerlink" href="#decocare.commands.ReadBGAlarmEnable.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.GuardianSensorSettings">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">GuardianSensorSettings</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#GuardianSensorSettings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.GuardianSensorSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.GuardianSensorSettings.code">
+<tt class="descname">code</tt><em class="property"> = 209</em><a class="headerlink" href="#decocare.commands.GuardianSensorSettings.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt>
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">GuardianSensorSettings</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#GuardianSensorSettings"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt>
+<tt class="descname">code</tt><em class="property"> = 209</em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.GuardianSensorDemoGraphTimeout">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">GuardianSensorDemoGraphTimeout</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#GuardianSensorDemoGraphTimeout"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.GuardianSensorDemoGraphTimeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.GuardianSensorDemoGraphTimeout.code">
+<tt class="descname">code</tt><em class="property"> = 210</em><a class="headerlink" href="#decocare.commands.GuardianSensorDemoGraphTimeout.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.GuardianSensorAlarmSilence">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">GuardianSensorAlarmSilence</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#GuardianSensorAlarmSilence"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.GuardianSensorAlarmSilence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.GuardianSensorAlarmSilence.code">
+<tt class="descname">code</tt><em class="property"> = 211</em><a class="headerlink" href="#decocare.commands.GuardianSensorAlarmSilence.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.GuardianSensorRateChangeAlerts">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">GuardianSensorRateChangeAlerts</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#GuardianSensorRateChangeAlerts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.GuardianSensorRateChangeAlerts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.GuardianSensorRateChangeAlerts.code">
+<tt class="descname">code</tt><em class="property"> = 212</em><a class="headerlink" href="#decocare.commands.GuardianSensorRateChangeAlerts.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadSavedSettingsDate">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadSavedSettingsDate</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadSavedSettingsDate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadSavedSettingsDate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadSavedSettingsDate.code">
+<tt class="descname">code</tt><em class="property"> = 193</em><a class="headerlink" href="#decocare.commands.ReadSavedSettingsDate.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadBolusReminderEnable">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadBolusReminderEnable</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadBolusReminderEnable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadBolusReminderEnable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadBolusReminderEnable.code">
+<tt class="descname">code</tt><em class="property"> = 197</em><a class="headerlink" href="#decocare.commands.ReadBolusReminderEnable.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadBolusReminders">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadBolusReminders</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadBolusReminders"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadBolusReminders" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadBolusReminders.code">
+<tt class="descname">code</tt><em class="property"> = 198</em><a class="headerlink" href="#decocare.commands.ReadBolusReminders.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadFactoryParameters">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadFactoryParameters</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadFactoryParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadFactoryParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadFactoryParameters.code">
+<tt class="descname">code</tt><em class="property"> = 199</em><a class="headerlink" href="#decocare.commands.ReadFactoryParameters.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadCalibrationFactor">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadCalibrationFactor</tt><big>(</big><em>page=None</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadCalibrationFactor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadCalibrationFactor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.ReadHistoryData" title="decocare.commands.ReadHistoryData"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.ReadHistoryData</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadCalibrationFactor.code">
+<tt class="descname">code</tt><em class="property"> = 156</em><a class="headerlink" href="#decocare.commands.ReadCalibrationFactor.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadVCNTRHistory">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadVCNTRHistory</tt><big>(</big><em>page=None</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadVCNTRHistory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadVCNTRHistory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.ReadHistoryData" title="decocare.commands.ReadHistoryData"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.ReadHistoryData</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadVCNTRHistory.code">
+<tt class="descname">code</tt><em class="property"> = 213</em><a class="headerlink" href="#decocare.commands.ReadVCNTRHistory.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.commands.ReadOtherDevicesIDS">
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadOtherDevicesIDS</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadOtherDevicesIDS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadOtherDevicesIDS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
+<dl class="attribute">
+<dt id="decocare.commands.ReadOtherDevicesIDS.code">
+<tt class="descname">code</tt><em class="property"> = 240</em><a class="headerlink" href="#decocare.commands.ReadOtherDevicesIDS.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
 
 </div>
 </div>
@@ -902,7 +1997,7 @@ MM512 and up - opcode 152
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Commands</a><ul>
-<li><a class="reference internal" href="#module-decocare.commands"><tt class="docutils literal"><span class="pre">commands</span></tt> Module</a></li>
+<li><a class="reference internal" href="#commands-module"><tt class="docutils literal"><span class="pre">commands</span></tt> Module</a></li>
 </ul>
 </li>
 </ul>
@@ -956,7 +2051,7 @@ MM512 and up - opcode 152
     </div>
     <div class="footer">
         &copy; Copyright 2013, Insulaudit contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

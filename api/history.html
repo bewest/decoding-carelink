@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -64,58 +62,25 @@
 <p>This module provides some basic helper/formatting utilities,
 specifically targeted at decoding ReadHistoryData data.</p>
 <dl class="class">
-<dt id="decocare.history.Base">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">Base</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Base"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Base" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span> <span class="n">Base</span><span class="p">(</span> <span class="nb">bytearray</span><span class="p">([</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">])</span> <span class="p">)</span> <span class="p">)</span>
-<span class="go">&#39;Base unknown head[2], body[0] op[0x00]&#39;</span>
-</pre></div>
-</div>
-<p>Each record in the history seems to have a two byte head, possibly
-some arguments, then a 5 byte description of the datetime, then
-maybe a body.  The most reliable way to identify records so far,
-seems to be through the 2 byte head.</p>
+<dt id="decocare.history.BasalProfileStart">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">BasalProfileStart</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#BasalProfileStart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.BasalProfileStart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
-<dt id="decocare.history.Base.body_length">
-<tt class="descname">body_length</tt><em class="property"> = 0</em><a class="headerlink" href="#decocare.history.Base.body_length" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.BasalProfileStart.body_length">
+<tt class="descname">body_length</tt><em class="property"> = 3</em><a class="headerlink" href="#decocare.history.BasalProfileStart.body_length" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="decocare.history.Base.date_length">
-<tt class="descname">date_length</tt><em class="property"> = 5</em><a class="headerlink" href="#decocare.history.Base.date_length" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="decocare.history.Base.date_str">
-<tt class="descname">date_str</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Base.date_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Base.date_str" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="decocare.history.Base.decode">
-<tt class="descname">decode</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Base.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Base.decode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="decocare.history.Base.head_length">
-<tt class="descname">head_length</tt><em class="property"> = 2</em><a class="headerlink" href="#decocare.history.Base.head_length" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="decocare.history.Base.parse">
-<tt class="descname">parse</tt><big>(</big><em>bolus</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Base.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Base.parse" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="decocare.history.Base.pformat">
-<tt class="descname">pformat</tt><big>(</big><em>prefix=''</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Base.pformat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Base.pformat" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.BasalProfileStart.opcode">
+<tt class="descname">opcode</tt><em class="property"> = 123</em><a class="headerlink" href="#decocare.history.BasalProfileStart.opcode" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="decocare.history.Battery">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">Battery</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Battery"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Battery" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">Battery</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Battery"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Battery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.Battery.opcode">
 <tt class="descname">opcode</tt><em class="property"> = 26</em><a class="headerlink" href="#decocare.history.Battery.opcode" title="Permalink to this definition">¶</a></dt>
@@ -124,112 +89,12 @@ seems to be through the 2 byte head.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="decocare.history.Bolus">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">Bolus</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Bolus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Bolus" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rec</span> <span class="o">=</span> <span class="n">Bolus</span><span class="p">(</span><span class="n">Bolus</span><span class="o">.</span><span class="n">_test_1</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">decoded</span> <span class="o">=</span> <span class="n">rec</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Bolus</span><span class="o">.</span><span class="n">_test_1</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
-<span class="go">Bolus 2012-12-18T15:05:28 head[4], body[0] op[0x01]</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">pformat</span><span class="p">(</span><span class="n">decoded</span><span class="p">)</span>
-<span class="go">{&#39;amount&#39;: 5.6, &#39;dual_component&#39;: &#39;??&#39;, &#39;programmed&#39;: 5.6, &#39;type&#39;: &#39;??&#39;}</span>
-</pre></div>
-</div>
-<dl class="method">
-<dt id="decocare.history.Bolus.decode">
-<tt class="descname">decode</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Bolus.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Bolus.decode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="decocare.history.Bolus.head_length">
-<tt class="descname">head_length</tt><em class="property"> = 4</em><a class="headerlink" href="#decocare.history.Bolus.head_length" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="decocare.history.Bolus.opcode">
-<tt class="descname">opcode</tt><em class="property"> = 1</em><a class="headerlink" href="#decocare.history.Bolus.opcode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="decocare.history.BolusWizard">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">BolusWizard</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#BolusWizard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.BolusWizard" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
-<p>Decode/parse bolus wizard records.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rec</span> <span class="o">=</span> <span class="n">BolusWizard</span><span class="p">(</span><span class="n">BolusWizard</span><span class="o">.</span><span class="n">_test_1</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">decoded</span> <span class="o">=</span> <span class="n">rec</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">BolusWizard</span><span class="o">.</span><span class="n">_test_1</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
-<span class="go">BolusWizard 2013-01-20T13:07:45 head[2], body[13] op[0x5b]</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">pformat</span><span class="p">(</span><span class="n">decoded</span><span class="p">)</span>
-<span class="go">{&#39;_byte[5]&#39;: 0,</span>
-<span class="go"> &#39;_byte[7]&#39;: 0,</span>
-<span class="go"> &#39;bg&#39;: 108,</span>
-<span class="go"> &#39;bg_target_high&#39;: 125,</span>
-<span class="go"> &#39;bg_target_low&#39;: 106,</span>
-<span class="go"> &#39;bolus_estimate&#39;: 1.1,</span>
-<span class="go"> &#39;carb_input&#39;: 15,</span>
-<span class="go"> &#39;carb_ratio&#39;: 13,</span>
-<span class="go"> &#39;correction_estimate&#39;: 0.0,</span>
-<span class="go"> &#39;food_estimate&#39;: 1.1,</span>
-<span class="go"> &#39;sensitivity&#39;: 45,</span>
-<span class="go"> &#39;unabsorbed_insulin_count&#39;: &#39;??&#39;,</span>
-<span class="go"> &#39;unabsorbed_insulin_total&#39;: 4.8,</span>
-<span class="go"> &#39;unknown_byte[10]&#39;: 0,</span>
-<span class="go"> &#39;unknown_byte[8]&#39;: 0}</span>
-</pre></div>
-</div>
-<dl class="attribute">
-<dt id="decocare.history.BolusWizard.body_length">
-<tt class="descname">body_length</tt><em class="property"> = 13</em><a class="headerlink" href="#decocare.history.BolusWizard.body_length" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="decocare.history.BolusWizard.decode">
-<tt class="descname">decode</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#BolusWizard.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.BolusWizard.decode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="decocare.history.BolusWizard.opcode">
-<tt class="descname">opcode</tt><em class="property"> = 91</em><a class="headerlink" href="#decocare.history.BolusWizard.opcode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="decocare.history.CalBGForPH">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">CalBGForPH</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#CalBGForPH"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.CalBGForPH" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rec</span> <span class="o">=</span> <span class="n">CalBGForPH</span><span class="p">(</span> <span class="n">CalBGForPH</span><span class="o">.</span><span class="n">_test_1</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">rec</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span> <span class="n">CalBGForPH</span><span class="o">.</span><span class="n">_test_1</span> <span class="p">)</span>
-<span class="go">{&#39;amount&#39;: 139}</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
-<span class="go">CalBGForPH 2012-12-18T15:04:46 head[2], body[0] op[0x0a]</span>
-</pre></div>
-</div>
-<dl class="method">
-<dt id="decocare.history.CalBGForPH.decode">
-<tt class="descname">decode</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#CalBGForPH.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.CalBGForPH.decode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="decocare.history.CalBGForPH.opcode">
-<tt class="descname">opcode</tt><em class="property"> = 10</em><a class="headerlink" href="#decocare.history.CalBGForPH.opcode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
 <dt id="decocare.history.ChangeBasalProfile">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ChangeBasalProfile</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ChangeBasalProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ChangeBasalProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ChangeBasalProfile</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ChangeBasalProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ChangeBasalProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.ChangeBasalProfile.body_length">
-<tt class="descname">body_length</tt><em class="property"> = 42</em><a class="headerlink" href="#decocare.history.ChangeBasalProfile.body_length" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">body_length</tt><em class="property"> = 44</em><a class="headerlink" href="#decocare.history.ChangeBasalProfile.body_length" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -241,8 +106,8 @@ seems to be through the 2 byte head.</p>
 
 <dl class="class">
 <dt id="decocare.history.ChangeRemoteID">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ChangeRemoteID</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ChangeRemoteID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ChangeRemoteID" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ChangeRemoteID</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ChangeRemoteID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ChangeRemoteID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.ChangeRemoteID.opcode">
 <tt class="descname">opcode</tt><em class="property"> = 39</em><a class="headerlink" href="#decocare.history.ChangeRemoteID.opcode" title="Permalink to this definition">¶</a></dt>
@@ -252,8 +117,8 @@ seems to be through the 2 byte head.</p>
 
 <dl class="class">
 <dt id="decocare.history.ChangeTime">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ChangeTime</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ChangeTime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ChangeTime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ChangeTime</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ChangeTime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ChangeTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.ChangeTime.opcode">
 <tt class="descname">opcode</tt><em class="property"> = 23</em><a class="headerlink" href="#decocare.history.ChangeTime.opcode" title="Permalink to this definition">¶</a></dt>
@@ -263,8 +128,8 @@ seems to be through the 2 byte head.</p>
 
 <dl class="class">
 <dt id="decocare.history.ChangeTimeDisplay">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ChangeTimeDisplay</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ChangeTimeDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ChangeTimeDisplay" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ChangeTimeDisplay</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ChangeTimeDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ChangeTimeDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.ChangeTimeDisplay.opcode">
 <tt class="descname">opcode</tt><em class="property"> = 100</em><a class="headerlink" href="#decocare.history.ChangeTimeDisplay.opcode" title="Permalink to this definition">¶</a></dt>
@@ -274,8 +139,8 @@ seems to be through the 2 byte head.</p>
 
 <dl class="class">
 <dt id="decocare.history.ChangeUtility">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ChangeUtility</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ChangeUtility"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ChangeUtility" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ChangeUtility</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ChangeUtility"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ChangeUtility" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.ChangeUtility.opcode">
 <tt class="descname">opcode</tt><em class="property"> = 99</em><a class="headerlink" href="#decocare.history.ChangeUtility.opcode" title="Permalink to this definition">¶</a></dt>
@@ -285,8 +150,8 @@ seems to be through the 2 byte head.</p>
 
 <dl class="class">
 <dt id="decocare.history.ClearAlarm">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ClearAlarm</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ClearAlarm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ClearAlarm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ClearAlarm</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ClearAlarm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ClearAlarm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.ClearAlarm.opcode">
 <tt class="descname">opcode</tt><em class="property"> = 12</em><a class="headerlink" href="#decocare.history.ClearAlarm.opcode" title="Permalink to this definition">¶</a></dt>
@@ -296,8 +161,8 @@ seems to be through the 2 byte head.</p>
 
 <dl class="class">
 <dt id="decocare.history.EnableDisableRemote">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">EnableDisableRemote</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#EnableDisableRemote"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.EnableDisableRemote" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">EnableDisableRemote</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#EnableDisableRemote"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.EnableDisableRemote" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.EnableDisableRemote.body_length">
 <tt class="descname">body_length</tt><em class="property"> = 14</em><a class="headerlink" href="#decocare.history.EnableDisableRemote.body_length" title="Permalink to this definition">¶</a></dt>
@@ -311,41 +176,105 @@ seems to be through the 2 byte head.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="decocare.history.InvalidRecord">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">InvalidRecord</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#InvalidRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.InvalidRecord" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<dt id="decocare.history.Ian0B">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">Ian0B</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Ian0B"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Ian0B" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
+<dl class="attribute">
+<dt id="decocare.history.Ian0B.head_length">
+<tt class="descname">head_length</tt><em class="property"> = 3</em><a class="headerlink" href="#decocare.history.Ian0B.head_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.history.Ian0B.opcode">
+<tt class="descname">opcode</tt><em class="property"> = 11</em><a class="headerlink" href="#decocare.history.Ian0B.opcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
-<dt id="decocare.history.KnownRecord">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">KnownRecord</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#KnownRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.KnownRecord" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.Base" title="decocare.history.Base"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.Base</span></tt></a></p>
-<dl class="method">
-<dt id="decocare.history.KnownRecord.decode">
-<tt class="descname">decode</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#KnownRecord.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.KnownRecord.decode" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.Ian3F">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">Ian3F</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Ian3F"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Ian3F" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
+<dl class="attribute">
+<dt id="decocare.history.Ian3F.body_length">
+<tt class="descname">body_length</tt><em class="property"> = 3</em><a class="headerlink" href="#decocare.history.Ian3F.body_length" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="decocare.history.KnownRecord.decodes_date">
-<tt class="descname">decodes_date</tt><em class="property"> = True</em><a class="headerlink" href="#decocare.history.KnownRecord.decodes_date" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.Ian3F.opcode">
+<tt class="descname">opcode</tt><em class="property"> = 63</em><a class="headerlink" href="#decocare.history.Ian3F.opcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.history.Ian50">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">Ian50</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Ian50"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Ian50" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
+<dl class="attribute">
+<dt id="decocare.history.Ian50.body_length">
+<tt class="descname">body_length</tt><em class="property"> = 34</em><a class="headerlink" href="#decocare.history.Ian50.body_length" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="decocare.history.KnownRecord.opcode">
-<tt class="descname">opcode</tt><em class="property"> = 0</em><a class="headerlink" href="#decocare.history.KnownRecord.opcode" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.Ian50.opcode">
+<tt class="descname">opcode</tt><em class="property"> = 80</em><a class="headerlink" href="#decocare.history.Ian50.opcode" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="decocare.history.KnownRecord.parse_time">
-<tt class="descname">parse_time</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#KnownRecord.parse_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.KnownRecord.parse_time" title="Permalink to this definition">¶</a></dt>
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.history.Ian54">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">Ian54</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Ian54"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Ian54" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
+<dl class="attribute">
+<dt id="decocare.history.Ian54.body_length">
+<tt class="descname">body_length</tt><em class="property"> = 57</em><a class="headerlink" href="#decocare.history.Ian54.body_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.history.Ian54.opcode">
+<tt class="descname">opcode</tt><em class="property"> = 84</em><a class="headerlink" href="#decocare.history.Ian54.opcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.history.Ian69">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">Ian69</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Ian69"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Ian69" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
+<dl class="attribute">
+<dt id="decocare.history.Ian69.body_length">
+<tt class="descname">body_length</tt><em class="property"> = 2</em><a class="headerlink" href="#decocare.history.Ian69.body_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.history.Ian69.opcode">
+<tt class="descname">opcode</tt><em class="property"> = 105</em><a class="headerlink" href="#decocare.history.Ian69.opcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.history.IanA8">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">IanA8</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#IanA8"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.IanA8" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
+<dl class="attribute">
+<dt id="decocare.history.IanA8.head_length">
+<tt class="descname">head_length</tt><em class="property"> = 10</em><a class="headerlink" href="#decocare.history.IanA8.head_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.history.IanA8.opcode">
+<tt class="descname">opcode</tt><em class="property"> = 168</em><a class="headerlink" href="#decocare.history.IanA8.opcode" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="decocare.history.LowBattery">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">LowBattery</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#LowBattery"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.LowBattery" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">LowBattery</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#LowBattery"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.LowBattery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.LowBattery.opcode">
 <tt class="descname">opcode</tt><em class="property"> = 25</em><a class="headerlink" href="#decocare.history.LowBattery.opcode" title="Permalink to this definition">¶</a></dt>
@@ -355,8 +284,8 @@ seems to be through the 2 byte head.</p>
 
 <dl class="class">
 <dt id="decocare.history.LowReservoir">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">LowReservoir</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#LowReservoir"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.LowReservoir" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">LowReservoir</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#LowReservoir"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.LowReservoir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rec</span> <span class="o">=</span> <span class="n">LowReservoir</span><span class="p">(</span> <span class="n">LowReservoir</span><span class="o">.</span><span class="n">_test_1</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">decoded</span> <span class="o">=</span> <span class="n">rec</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">LowReservoir</span><span class="o">.</span><span class="n">_test_1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
@@ -380,35 +309,77 @@ seems to be through the 2 byte head.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="decocare.history.Mask">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">Mask</tt><a class="reference internal" href="../_modules/decocare/history.html#Mask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Mask" title="Permalink to this definition">¶</a></dt>
-<dd><p>Some useful bit masks.</p>
+<dt id="decocare.history.MResultTotals">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">MResultTotals</tt><big>(</big><em>head</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#MResultTotals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.MResultTotals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.InvalidRecord</span></tt></p>
+<p>On 722 this seems like two records.</p>
 <dl class="attribute">
-<dt id="decocare.history.Mask.day">
-<tt class="descname">day</tt><em class="property"> = 31</em><a class="headerlink" href="#decocare.history.Mask.day" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.MResultTotals.date_length">
+<tt class="descname">date_length</tt><em class="property"> = 2</em><a class="headerlink" href="#decocare.history.MResultTotals.date_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.history.MResultTotals.date_str">
+<tt class="descname">date_str</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#MResultTotals.date_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.MResultTotals.date_str" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="decocare.history.Mask.invert">
-<tt class="descname">invert</tt><em class="property"> = 63</em><a class="headerlink" href="#decocare.history.Mask.invert" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.MResultTotals.head_length">
+<tt class="descname">head_length</tt><em class="property"> = 5</em><a class="headerlink" href="#decocare.history.MResultTotals.head_length" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="decocare.history.Mask.time">
-<tt class="descname">time</tt><em class="property"> = 192</em><a class="headerlink" href="#decocare.history.Mask.time" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.MResultTotals.opcode">
+<tt class="descname">opcode</tt><em class="property"> = 7</em><a class="headerlink" href="#decocare.history.MResultTotals.opcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.history.MResultTotals.parse_time">
+<tt class="descname">parse_time</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#MResultTotals.parse_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.MResultTotals.parse_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.history.Model522ResultTotals">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">Model522ResultTotals</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Model522ResultTotals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Model522ResultTotals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
+<dl class="attribute">
+<dt id="decocare.history.Model522ResultTotals.body_length">
+<tt class="descname">body_length</tt><em class="property"> = 40</em><a class="headerlink" href="#decocare.history.Model522ResultTotals.body_length" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="decocare.history.Mask.year">
-<tt class="descname">year</tt><em class="property"> = 15</em><a class="headerlink" href="#decocare.history.Mask.year" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.Model522ResultTotals.date_length">
+<tt class="descname">date_length</tt><em class="property"> = 2</em><a class="headerlink" href="#decocare.history.Model522ResultTotals.date_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.history.Model522ResultTotals.date_str">
+<tt class="descname">date_str</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Model522ResultTotals.date_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Model522ResultTotals.date_str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.history.Model522ResultTotals.head_length">
+<tt class="descname">head_length</tt><em class="property"> = 1</em><a class="headerlink" href="#decocare.history.Model522ResultTotals.head_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.history.Model522ResultTotals.opcode">
+<tt class="descname">opcode</tt><em class="property"> = 109</em><a class="headerlink" href="#decocare.history.Model522ResultTotals.opcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.history.Model522ResultTotals.parse_time">
+<tt class="descname">parse_time</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Model522ResultTotals.parse_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Model522ResultTotals.parse_time" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="decocare.history.NewTimeSet">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">NewTimeSet</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#NewTimeSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.NewTimeSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">NewTimeSet</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#NewTimeSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.NewTimeSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.NewTimeSet.opcode">
 <tt class="descname">opcode</tt><em class="property"> = 24</em><a class="headerlink" href="#decocare.history.NewTimeSet.opcode" title="Permalink to this definition">¶</a></dt>
@@ -418,8 +389,8 @@ seems to be through the 2 byte head.</p>
 
 <dl class="class">
 <dt id="decocare.history.NoDelivery">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">NoDelivery</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#NoDelivery"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.NoDelivery" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">NoDelivery</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#NoDelivery"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.NoDelivery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.NoDelivery.head_length">
 <tt class="descname">head_length</tt><em class="property"> = 4</em><a class="headerlink" href="#decocare.history.NoDelivery.head_length" title="Permalink to this definition">¶</a></dt>
@@ -432,37 +403,10 @@ seems to be through the 2 byte head.</p>
 
 </dd></dl>
 
-<dl class="exception">
-<dt id="decocare.history.NotADate">
-<em class="property">exception </em><tt class="descclassname">decocare.history.</tt><tt class="descname">NotADate</tt><a class="reference internal" href="../_modules/decocare/history.html#NotADate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.NotADate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></tt></p>
-</dd></dl>
-
-<dl class="class">
-<dt id="decocare.history.Prime">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">Prime</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Prime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Prime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
-<dl class="method">
-<dt id="decocare.history.Prime.decode">
-<tt class="descname">decode</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Prime.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Prime.decode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="decocare.history.Prime.head_length">
-<tt class="descname">head_length</tt><em class="property"> = 5</em><a class="headerlink" href="#decocare.history.Prime.head_length" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="decocare.history.Prime.opcode">
-<tt class="descname">opcode</tt><em class="property"> = 3</em><a class="headerlink" href="#decocare.history.Prime.opcode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
 <dl class="class">
 <dt id="decocare.history.PumpResume">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">PumpResume</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#PumpResume"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.PumpResume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">PumpResume</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#PumpResume"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.PumpResume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.PumpResume.opcode">
 <tt class="descname">opcode</tt><em class="property"> = 31</em><a class="headerlink" href="#decocare.history.PumpResume.opcode" title="Permalink to this definition">¶</a></dt>
@@ -472,8 +416,8 @@ seems to be through the 2 byte head.</p>
 
 <dl class="class">
 <dt id="decocare.history.PumpSuspend">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">PumpSuspend</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#PumpSuspend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.PumpSuspend" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">PumpSuspend</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#PumpSuspend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.PumpSuspend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.PumpSuspend.opcode">
 <tt class="descname">opcode</tt><em class="property"> = 30</em><a class="headerlink" href="#decocare.history.PumpSuspend.opcode" title="Permalink to this definition">¶</a></dt>
@@ -482,30 +426,9 @@ seems to be through the 2 byte head.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="decocare.history.ResultTotals">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ResultTotals</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ResultTotals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ResultTotals" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
-<dl class="attribute">
-<dt id="decocare.history.ResultTotals.body_length">
-<tt class="descname">body_length</tt><em class="property"> = 41</em><a class="headerlink" href="#decocare.history.ResultTotals.body_length" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="decocare.history.ResultTotals.head_length">
-<tt class="descname">head_length</tt><em class="property"> = 5</em><a class="headerlink" href="#decocare.history.ResultTotals.head_length" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="decocare.history.ResultTotals.opcode">
-<tt class="descname">opcode</tt><em class="property"> = 7</em><a class="headerlink" href="#decocare.history.ResultTotals.opcode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
 <dt id="decocare.history.Rewind">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">Rewind</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Rewind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Rewind" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">Rewind</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Rewind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Rewind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.Rewind.opcode">
 <tt class="descname">opcode</tt><em class="property"> = 33</em><a class="headerlink" href="#decocare.history.Rewind.opcode" title="Permalink to this definition">¶</a></dt>
@@ -514,9 +437,26 @@ seems to be through the 2 byte head.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="decocare.history.Sara6E">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">Sara6E</tt><big>(</big><em>head</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#Sara6E"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.Sara6E" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.history.Model522ResultTotals" title="decocare.history.Model522ResultTotals"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.Model522ResultTotals</span></tt></a></p>
+<p>Seems specific to 722?</p>
+<dl class="attribute">
+<dt id="decocare.history.Sara6E.body_length">
+<tt class="descname">body_length</tt><em class="property"> = 48</em><a class="headerlink" href="#decocare.history.Sara6E.body_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.history.Sara6E.opcode">
+<tt class="descname">opcode</tt><em class="property"> = 110</em><a class="headerlink" href="#decocare.history.Sara6E.opcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="decocare.history.SelectBasalProfile">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">SelectBasalProfile</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#SelectBasalProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.SelectBasalProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">SelectBasalProfile</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#SelectBasalProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.SelectBasalProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.SelectBasalProfile.opcode">
 <tt class="descname">opcode</tt><em class="property"> = 20</em><a class="headerlink" href="#decocare.history.SelectBasalProfile.opcode" title="Permalink to this definition">¶</a></dt>
@@ -526,8 +466,8 @@ seems to be through the 2 byte head.</p>
 
 <dl class="class">
 <dt id="decocare.history.TempBasal">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">TempBasal</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#TempBasal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.TempBasal" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">TempBasal</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#TempBasal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.TempBasal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
 <dt id="decocare.history.TempBasal.body_length">
 <tt class="descname">body_length</tt><em class="property"> = 1</em><a class="headerlink" href="#decocare.history.TempBasal.body_length" title="Permalink to this definition">¶</a></dt>
@@ -547,8 +487,8 @@ seems to be through the 2 byte head.</p>
 
 <dl class="class">
 <dt id="decocare.history.TempBasalDuration">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">TempBasalDuration</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#TempBasalDuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.TempBasalDuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.KnownRecord" title="decocare.history.KnownRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.KnownRecord</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">TempBasalDuration</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#TempBasalDuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.TempBasalDuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="method">
 <dt id="decocare.history.TempBasalDuration.decode">
 <tt class="descname">decode</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#TempBasalDuration.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.TempBasalDuration.decode" title="Permalink to this definition">¶</a></dt>
@@ -559,55 +499,6 @@ seems to be through the 2 byte head.</p>
 <tt class="descname">opcode</tt><em class="property"> = 22</em><a class="headerlink" href="#decocare.history.TempBasalDuration.opcode" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</dd></dl>
-
-<dl class="class">
-<dt id="decocare.history.UnabsorbedInsulinBolus">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">UnabsorbedInsulinBolus</tt><big>(</big><em>head</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#UnabsorbedInsulinBolus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.UnabsorbedInsulinBolus" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.VariableHead" title="decocare.history.VariableHead"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.VariableHead</span></tt></a></p>
-<p>This data is not made available at the time of therapy in the pump
-UI, but could easily change my dosing decision.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rec</span> <span class="o">=</span> <span class="n">UnabsorbedInsulinBolus</span><span class="p">(</span> <span class="n">UnabsorbedInsulinBolus</span><span class="o">.</span><span class="n">_test_1</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
-<span class="go">UnabsorbedInsulinBolus unknown head[2], body[0] op[0x5c]</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">pformat</span><span class="p">(</span><span class="n">rec</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span> <span class="n">UnabsorbedInsulinBolus</span><span class="o">.</span><span class="n">_test_1</span> <span class="p">))</span>
-<span class="go">[{&#39;age&#39;: 78, &#39;amount&#39;: 1.25, &#39;curve&#39;: 4},</span>
-<span class="go"> {&#39;age&#39;: 88, &#39;amount&#39;: 0.95, &#39;curve&#39;: 4}]</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rec</span> <span class="o">=</span> <span class="n">UnabsorbedInsulinBolus</span><span class="p">(</span> <span class="n">UnabsorbedInsulinBolus</span><span class="o">.</span><span class="n">_test_2</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
-<span class="go">UnabsorbedInsulinBolus unknown head[2], body[0] op[0x5c]</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">pformat</span><span class="p">(</span><span class="n">rec</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span> <span class="n">UnabsorbedInsulinBolus</span><span class="o">.</span><span class="n">_test_2</span> <span class="p">))</span>
-<span class="go">[{&#39;age&#39;: 60, &#39;amount&#39;: 2.6, &#39;curve&#39;: 4},</span>
-<span class="go"> {&#39;age&#39;: 160, &#39;amount&#39;: 2.5, &#39;curve&#39;: 4}]</span>
-</pre></div>
-</div>
-<dl class="attribute">
-<dt id="decocare.history.UnabsorbedInsulinBolus.date_length">
-<tt class="descname">date_length</tt><em class="property"> = 0</em><a class="headerlink" href="#decocare.history.UnabsorbedInsulinBolus.date_length" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="decocare.history.UnabsorbedInsulinBolus.decode">
-<tt class="descname">decode</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#UnabsorbedInsulinBolus.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.UnabsorbedInsulinBolus.decode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="decocare.history.UnabsorbedInsulinBolus.opcode">
-<tt class="descname">opcode</tt><em class="property"> = 92</em><a class="headerlink" href="#decocare.history.UnabsorbedInsulinBolus.opcode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="decocare.history.VariableHead">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">VariableHead</tt><big>(</big><em>head</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#VariableHead"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.VariableHead" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.Base" title="decocare.history.Base"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.Base</span></tt></a></p>
 </dd></dl>
 
 <dl class="function">
@@ -636,191 +527,29 @@ UI, but could easily change my dosing decision.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="decocare.history.decode_unabsorbed">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">decode_unabsorbed</tt><big>(</big><em>amount</em>, <em>age</em>, <em>curve</em>, <em>strokes=40.0</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#decode_unabsorbed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.decode_unabsorbed" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.describe">
+<tt class="descclassname">decocare.history.</tt><tt class="descname">describe</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#describe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.describe" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.encode_minute">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">encode_minute</tt><big>(</big><em>minute=30</em>, <em>month=10</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#encode_minute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.encode_minute" title="Permalink to this definition">¶</a></dt>
-<dd><div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">quick_hex</span><span class="p">(</span><span class="n">encode_minute</span><span class="p">(</span> <span class="p">))</span>
-<span class="go">&#39;0x9e&#39;</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.encode_monthbyte">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">encode_monthbyte</tt><big>(</big><em>sec=18</em>, <em>minute=30</em>, <em>month=10</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#encode_monthbyte"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.encode_monthbyte" title="Permalink to this definition">¶</a></dt>
-<dd><div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">encode_monthbyte</span><span class="p">(</span> <span class="p">)</span> <span class="o">==</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">b</span><span class="s">&#39;&#39;</span><span class="p">)</span>
-<span class="go">True</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">quick_hex</span><span class="p">(</span><span class="n">encode_monthbyte</span><span class="p">(</span> <span class="p">))</span>
-<span class="go">&#39;0x92 0x9e&#39;</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">encode_monthbyte</span><span class="p">(</span><span class="n">sec</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">b</span><span class="s">&#39;&#39;</span><span class="p">)</span>
-<span class="go">True</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">encode_monthbyte</span><span class="p">(</span><span class="n">sec</span><span class="o">=</span><span class="mi">35</span><span class="p">)</span> <span class="o">==</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">b</span><span class="s">&#39;£&#39;</span><span class="p">)</span>
-<span class="go">True</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">encode_monthbyte</span><span class="p">(</span><span class="n">sec</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span> <span class="o">==</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">b</span><span class="s">&#39;²&#39;</span><span class="p">)</span>
-<span class="go">True</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">encode_monthbyte</span><span class="p">(</span><span class="n">minute</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">b</span><span class="s">&#39;&#39;</span><span class="p">)</span>
-<span class="go">True</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">encode_monthbyte</span><span class="p">(</span><span class="n">minute</span><span class="o">=</span><span class="mi">35</span><span class="p">)</span> <span class="o">==</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">b</span><span class="s">&#39;£&#39;</span><span class="p">)</span>
-<span class="go">True</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">encode_monthbyte</span><span class="p">(</span><span class="n">minute</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span> <span class="o">==</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">b</span><span class="s">&#39;²&#39;</span><span class="p">)</span>
-<span class="go">True</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.encode_second">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">encode_second</tt><big>(</big><em>sec=18</em>, <em>month=10</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#encode_second"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.encode_second" title="Permalink to this definition">¶</a></dt>
-<dd><div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">encode_second</span><span class="p">(</span> <span class="p">)</span> <span class="o">==</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">b</span><span class="s">&#39;&#39;</span><span class="p">)</span>
-<span class="go">True</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">quick_hex</span><span class="p">(</span><span class="n">encode_second</span><span class="p">(</span> <span class="p">))</span>
-<span class="go">&#39;0x92&#39;</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.encode_year">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">encode_year</tt><big>(</big><em>year</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#encode_year"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.encode_year" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.extra_hour_bits">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">extra_hour_bits</tt><big>(</big><em>value</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#extra_hour_bits"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.extra_hour_bits" title="Permalink to this definition">¶</a></dt>
-<dd><p>practice getting extra bits out of the hours bytes</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">extra_hour_bits</span><span class="p">(</span><span class="mh">0x28</span><span class="p">)</span>
-<span class="go">[0, 0, 1]</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">extra_hour_bits</span><span class="p">(</span><span class="mh">0x8</span><span class="p">)</span>
-<span class="go">[0, 0, 0]</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.extra_year_bits">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">extra_year_bits</tt><big>(</big><em>year=134</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#extra_year_bits"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.extra_year_bits" title="Permalink to this definition">¶</a></dt>
-<dd><p>practice getting some extra bits out of the year byte
-&gt;&gt;&gt; extra_year_bits( )
-[1, 0, 0, 0]</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">extra_year_bits</span><span class="p">(</span><span class="mh">0x06</span><span class="p">)</span>
-<span class="go">[0, 0, 0, 0]</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">extra_year_bits</span><span class="p">(</span><span class="mh">0x86</span><span class="p">)</span>
-<span class="go">[1, 0, 0, 0]</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">extra_year_bits</span><span class="p">(</span><span class="mh">0x46</span><span class="p">)</span>
-<span class="go">[0, 1, 0, 0]</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">extra_year_bits</span><span class="p">(</span><span class="mh">0x26</span><span class="p">)</span>
-<span class="go">[0, 0, 1, 0]</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">extra_year_bits</span><span class="p">(</span><span class="mh">0x16</span><span class="p">)</span>
-<span class="go">[0, 0, 0, 1]</span>
-</pre></div>
-</div>
-</dd></dl>
 
 <dl class="class">
-<dt id="decocare.history.hack1">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">hack1</tt><big>(</big><em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#hack1"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.hack1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.history.InvalidRecord" title="decocare.history.InvalidRecord"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.InvalidRecord</span></tt></a></p>
+<dt id="decocare.history.old6c">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">old6c</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#old6c"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.old6c" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.InvalidRecord</span></tt></p>
 <dl class="attribute">
-<dt id="decocare.history.hack1.head_length">
-<tt class="descname">head_length</tt><em class="property"> = 46</em><a class="headerlink" href="#decocare.history.hack1.head_length" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.old6c.body_length">
+<tt class="descname">body_length</tt><em class="property"> = 38</em><a class="headerlink" href="#decocare.history.old6c.body_length" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="decocare.history.hack1.opcode">
-<tt class="descname">opcode</tt><em class="property"> = 109</em><a class="headerlink" href="#decocare.history.hack1.opcode" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.old6c.opcode">
+<tt class="descname">opcode</tt><em class="property"> = 108</em><a class="headerlink" href="#decocare.history.old6c.opcode" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.parse_date">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">parse_date</tt><big>(</big><em>date</em>, <em>strict=False</em>, <em>loose=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#parse_date"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.parse_date" title="Permalink to this definition">¶</a></dt>
-<dd><p>Choose whether or not to throw an error if you get a bad date.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.parse_date_strict">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">parse_date_strict</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#parse_date_strict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.parse_date_strict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Apply strict datetime validation to extract a datetime from a series
-of bytes.
-Always throws an error for bad dates.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse_date</span><span class="p">(</span><span class="nb">bytearray</span><span class="p">(</span> <span class="p">[</span> <span class="mh">0x6f</span><span class="p">,</span> <span class="mh">0xd7</span><span class="p">,</span> <span class="mh">0x08</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x06</span> <span class="p">]</span> <span class="p">))</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span> <span class="p">)</span>
-<span class="go">&#39;2006-07-01T08:23:47&#39;</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.parse_day">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">parse_day</tt><big>(</big><em>day</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#parse_day"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.parse_day" title="Permalink to this definition">¶</a></dt>
-<dd><p>simple mask
-&gt;&gt;&gt; parse_day( 0x01 )
-1</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.parse_hours">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">parse_hours</tt><big>(</big><em>hours</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#parse_hours"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.parse_hours" title="Permalink to this definition">¶</a></dt>
-<dd><p>simple mask
-&gt;&gt;&gt; parse_hours(0x0b)
-11</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse_hours</span><span class="p">(</span><span class="mh">0x28</span><span class="p">)</span>
-<span class="go">8</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.parse_minutes">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">parse_minutes</tt><big>(</big><em>minutes</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#parse_minutes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.parse_minutes" title="Permalink to this definition">¶</a></dt>
-<dd><p>simple mask
-&gt;&gt;&gt; parse_minutes(0x9e)
-30</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.parse_months">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">parse_months</tt><big>(</big><em>seconds</em>, <em>minutes</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#parse_months"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.parse_months" title="Permalink to this definition">¶</a></dt>
-<dd><p>calculate from extra bits shaved off of seconds and minutes:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse_months</span><span class="p">(</span> <span class="mh">0x92</span><span class="p">,</span> <span class="mh">0x9e</span> <span class="p">)</span>
-<span class="go">10</span>
-</pre></div>
-</div>
 </dd></dl>
 
 <dl class="function">
 <dt id="decocare.history.parse_record">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">parse_record</tt><big>(</big><em>fd</em>, <em>head=bytearray(b'')</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#parse_record"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.parse_record" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">decocare.history.</tt><tt class="descname">parse_record</tt><big>(</big><em>fd</em>, <em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#parse_record"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.parse_record" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given a file-like object, and the head of a record, parse the rest
 of the record.
 Look up the type of record, read in just enough data to parse it,
@@ -828,67 +557,19 @@ return the result.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="decocare.history.parse_seconds">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">parse_seconds</tt><big>(</big><em>sec</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#parse_seconds"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.parse_seconds" title="Permalink to this definition">¶</a></dt>
-<dd><p>simple mask
-&gt;&gt;&gt; parse_seconds(0x92)
-18</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.parse_years">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">parse_years</tt><big>(</big><em>year</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#parse_years"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.parse_years" title="Permalink to this definition">¶</a></dt>
-<dd><p>simple mask plus correction
-&gt;&gt;&gt; parse_years(0x06)
-2006</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.parse_years_lax">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">parse_years_lax</tt><big>(</big><em>year</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#parse_years_lax"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.parse_years_lax" title="Permalink to this definition">¶</a></dt>
-<dd><p>simple mask plus correction</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.quick_hex">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">quick_hex</tt><big>(</big><em>bb</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#quick_hex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.quick_hex" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
 <dt id="decocare.history.suggest">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">suggest</tt><big>(</big><em>head</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#suggest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.suggest" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">decocare.history.</tt><tt class="descname">suggest</tt><big>(</big><em>head</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#suggest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.suggest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Look in the known table of commands to find a suitable record type
 for this opcode.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="decocare.history.test_time_encoders">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">test_time_encoders</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#test_time_encoders"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.test_time_encoders" title="Permalink to this definition">¶</a></dt>
-<dd><div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">test_time_encoders</span><span class="p">(</span> <span class="p">)</span>
-<span class="go">True</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.twos_comp">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">twos_comp</tt><big>(</big><em>val</em>, <em>bits</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#twos_comp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.twos_comp" title="Permalink to this definition">¶</a></dt>
-<dd><p>compute the 2&#8217;s compliment of int value val</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="decocare.history.unmask_date">
-<tt class="descclassname">decocare.history.</tt><tt class="descname">unmask_date</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#unmask_date"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.unmask_date" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.unmask_m_midnight">
+<tt class="descclassname">decocare.history.</tt><tt class="descname">unmask_m_midnight</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#unmask_m_midnight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.unmask_m_midnight" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract date values from a series of bytes.
-Always returns tuple given a bytearray of at least 5 bytes.</p>
+Always returns tuple given a bytearray of at least 3 bytes.</p>
 <p>Returns 6-tuple of scalar values year, month, day, hours, minutes,
-seconds.
-&gt;&gt;&gt; unmask_date(bytearray( [ 0x6f, 0xd7, 0x08, 0x01, 0x06 ] ))
-(2006, 7, 1, 8, 23, 47)</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">unmask_date</span><span class="p">(</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">[</span> <span class="mh">0x00</span> <span class="p">]</span> <span class="o">*</span> <span class="mi">5</span> <span class="p">))</span>
-<span class="go">(2000, 0, 0, 0, 0, 0)</span>
-</pre></div>
-</div>
+seconds.</p>
 </dd></dl>
 
 </div>
@@ -957,7 +638,7 @@ seconds.
     </div>
     <div class="footer">
         &copy; Copyright 2013, Insulaudit contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

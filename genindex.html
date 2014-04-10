@@ -1,7 +1,4 @@
 
-
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -17,7 +14,7 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
+        URL_ROOT:    './',
         VERSION:     '0.0.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -73,9 +70,7 @@
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
  | <a href="#U"><strong>U</strong></a>
- | <a href="#V"><strong>V</strong></a>
  | <a href="#W"><strong>W</strong></a>
- | <a href="#Y"><strong>Y</strong></a>
  
 </div>
 <h2 id="A">A</h2>
@@ -86,11 +81,15 @@
   </dt>
 
       
-  <dt><a href="api/commands.html#decocare.commands.ReadSettings.alarm">alarm() (decocare.commands.ReadSettings method)</a>
+  <dt><a href="api/commands.html#decocare.commands.KeypadPush.ACT">ACT() (decocare.commands.KeypadPush class method)</a>
   </dt>
 
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadSettings.alarm">alarm() (decocare.commands.ReadSettings method)</a>
+  </dt>
+
       
   <dt><a href="api/commands.html#decocare.commands.PumpCommand.allocateRawData">allocateRawData() (decocare.commands.PumpCommand method)</a>
   </dt>
@@ -118,32 +117,28 @@
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.Base">Base (class in decocare.history)</a>
+  <dt><a href="api/history.html#decocare.history.BasalProfileStart">BasalProfileStart (class in decocare.history)</a>
   </dt>
 
       
   <dt><a href="api/commands.html#decocare.commands.BaseCommand">BaseCommand (class in decocare.commands)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api/history.html#decocare.history.Battery">Battery (class in decocare.history)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="api/decocare.html#decocare.tests.big_days">big_days() (in module decocare.tests)</a>
+  <dt><a href="api/commands.html#decocare.commands.FilterHistory.begin">begin (decocare.commands.FilterHistory attribute)</a>
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.Base.body_length">body_length (decocare.history.Base attribute)</a>
+  <dt><a href="api/history.html#decocare.history.BasalProfileStart.body_length">body_length (decocare.history.BasalProfileStart attribute)</a>
   </dt>
 
       <dd><dl>
-        
-  <dt><a href="api/history.html#decocare.history.BolusWizard.body_length">(decocare.history.BolusWizard attribute)</a>
-  </dt>
-
         
   <dt><a href="api/history.html#decocare.history.ChangeBasalProfile.body_length">(decocare.history.ChangeBasalProfile attribute)</a>
   </dt>
@@ -153,22 +148,38 @@
   </dt>
 
         
-  <dt><a href="api/history.html#decocare.history.ResultTotals.body_length">(decocare.history.ResultTotals attribute)</a>
+  <dt><a href="api/history.html#decocare.history.Ian3F.body_length">(decocare.history.Ian3F attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/history.html#decocare.history.Ian50.body_length">(decocare.history.Ian50 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/history.html#decocare.history.Ian54.body_length">(decocare.history.Ian54 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/history.html#decocare.history.Ian69.body_length">(decocare.history.Ian69 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/history.html#decocare.history.Model522ResultTotals.body_length">(decocare.history.Model522ResultTotals attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/history.html#decocare.history.Sara6E.body_length">(decocare.history.Sara6E attribute)</a>
   </dt>
 
         
   <dt><a href="api/history.html#decocare.history.TempBasal.body_length">(decocare.history.TempBasal attribute)</a>
   </dt>
 
+        
+  <dt><a href="api/history.html#decocare.history.old6c.body_length">(decocare.history.old6c attribute)</a>
+  </dt>
+
       </dl></dd>
-      
-  <dt><a href="api/history.html#decocare.history.Bolus">Bolus (class in decocare.history)</a>
-  </dt>
-
-      
-  <dt><a href="api/history.html#decocare.history.BolusWizard">BolusWizard (class in decocare.history)</a>
-  </dt>
-
       
   <dt><a href="api/commands.html#decocare.commands.ReadSettings.byte_map">byte_map (decocare.commands.ReadSettings attribute)</a>
   </dt>
@@ -189,10 +200,6 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
-      
-  <dt><a href="api/history.html#decocare.history.CalBGForPH">CalBGForPH (class in decocare.history)</a>
-  </dt>
-
       
   <dt><a href="api/commands.html#decocare.commands.PumpCommand.calcRecordsRequired">calcRecordsRequired() (decocare.commands.PumpCommand method)</a>
   </dt>
@@ -243,7 +250,87 @@
 
       <dd><dl>
         
+  <dt><a href="api/commands.html#decocare.commands.FilterGlucoseHistory.code">(decocare.commands.FilterGlucoseHistory attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.FilterHistory.code">(decocare.commands.FilterHistory attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.FilterISIGHistory.code">(decocare.commands.FilterISIGHistory attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.GuardianSensorAlarmSilence.code">(decocare.commands.GuardianSensorAlarmSilence attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.GuardianSensorDemoGraphTimeout.code">(decocare.commands.GuardianSensorDemoGraphTimeout attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.GuardianSensorRateChangeAlerts.code">(decocare.commands.GuardianSensorRateChangeAlerts attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.GuardianSensorSettings.code">(decocare.commands.GuardianSensorSettings attribute)</a>, <a href="api/commands.html#decocare.commands.GuardianSensorSettings.code">[1]</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.KeypadPush.code">(decocare.commands.KeypadPush attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.Model511_ExperimentOP125.code">(decocare.commands.Model511_ExperimentOP125 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.Model511_ExperimentOP126.code">(decocare.commands.Model511_ExperimentOP126 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.Model511_Experiment_OP165.code">(decocare.commands.Model511_Experiment_OP165 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.Model512Experiment_OP150.code">(decocare.commands.Model512Experiment_OP150 attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.PowerControl.code">(decocare.commands.PowerControl attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.Read128KMem.code">(decocare.commands.Read128KMem attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.Read256KMem.code">(decocare.commands.Read256KMem attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadAlarms.code">(decocare.commands.ReadAlarms attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadBGAlarmCLocks.code">(decocare.commands.ReadBGAlarmCLocks attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadBGAlarmEnable.code">(decocare.commands.ReadBGAlarmEnable attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadBGReminderEnable.code">(decocare.commands.ReadBGReminderEnable attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadBGTargets.code">(decocare.commands.ReadBGTargets attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadBGUnits.code">(decocare.commands.ReadBGUnits attribute)</a>
   </dt>
 
         
@@ -251,7 +338,39 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadBasalTemp508.code">(decocare.commands.ReadBasalTemp508 attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadBatteryStatus.code">(decocare.commands.ReadBatteryStatus attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadBolusHistory.code">(decocare.commands.ReadBolusHistory attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadBolusReminderEnable.code">(decocare.commands.ReadBolusReminderEnable attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadBolusReminders.code">(decocare.commands.ReadBolusReminders attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadBolusWizardSetupStatus.code">(decocare.commands.ReadBolusWizardSetupStatus attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadCalibrationFactor.code">(decocare.commands.ReadCalibrationFactor attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadCarbRatios.code">(decocare.commands.ReadCarbRatios attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadCarbUnits.code">(decocare.commands.ReadCarbUnits attribute)</a>
   </dt>
 
         
@@ -259,11 +378,31 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadCurGlucosePageNumber.code">(decocare.commands.ReadCurGlucosePageNumber attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadCurPageNumber.code">(decocare.commands.ReadCurPageNumber attribute)</a>
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadDailyTotals.code">(decocare.commands.ReadDailyTotals attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadDetailTrace.code">(decocare.commands.ReadDetailTrace attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadErrorStatus.code">(decocare.commands.ReadErrorStatus attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadErrorStatus508.code">(decocare.commands.ReadErrorStatus508 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadFactoryParameters.code">(decocare.commands.ReadFactoryParameters attribute)</a>
   </dt>
 
         
@@ -279,6 +418,66 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadISIGHistory.code">(decocare.commands.ReadISIGHistory attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadInsulinSensitivities.code">(decocare.commands.ReadInsulinSensitivities attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadLanguage.code">(decocare.commands.ReadLanguage attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadLogicLinkIDS.code">(decocare.commands.ReadLogicLinkIDS attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadNewTraceAlarm.code">(decocare.commands.ReadNewTraceAlarm attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadOldTraceAlarm.code">(decocare.commands.ReadOldTraceAlarm attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadOtherDevicesIDS.code">(decocare.commands.ReadOtherDevicesIDS attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadPrimeBoluses.code">(decocare.commands.ReadPrimeBoluses attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadProfileSets.code">(decocare.commands.ReadProfileSets attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadProfile_A512.code">(decocare.commands.ReadProfile_A512 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadProfile_B512.code">(decocare.commands.ReadProfile_B512 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadProfile_STD512.code">(decocare.commands.ReadProfile_STD512 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadProfiles511_A.code">(decocare.commands.ReadProfiles511_A attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadProfiles511_B.code">(decocare.commands.ReadProfiles511_B attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadProfiles511_STD.code">(decocare.commands.ReadProfiles511_STD attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadPumpID.code">(decocare.commands.ReadPumpID attribute)</a>
   </dt>
 
@@ -288,6 +487,14 @@
 
         
   <dt><a href="api/commands.html#decocare.commands.ReadPumpState.code">(decocare.commands.ReadPumpState attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadPumpStatus.code">(decocare.commands.ReadPumpStatus attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadPumpTrace.code">(decocare.commands.ReadPumpTrace attribute)</a>
   </dt>
 
         
@@ -303,11 +510,59 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadRemoteControlID.code">(decocare.commands.ReadRemoteControlID attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadReservoirWarning.code">(decocare.commands.ReadReservoirWarning attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadSavedSettingsDate.code">(decocare.commands.ReadSavedSettingsDate attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadSensorSettings.code">(decocare.commands.ReadSensorSettings attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadSettings.code">(decocare.commands.ReadSettings attribute)</a>
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadSettings511.code">(decocare.commands.ReadSettings511 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadSettings512.code">(decocare.commands.ReadSettings512 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadTodayTotals508.code">(decocare.commands.ReadTodayTotals508 attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadTotalsToday.code">(decocare.commands.ReadTotalsToday attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadUserEvents.code">(decocare.commands.ReadUserEvents attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadVCNTRHistory.code">(decocare.commands.ReadVCNTRHistory attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.SetSuspend.code">(decocare.commands.SetSuspend attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.TempBasal.code">(decocare.commands.TempBasal attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.WriteGlucoseHistoryTimestamp.code">(decocare.commands.WriteGlucoseHistoryTimestamp attribute)</a>
   </dt>
 
         
@@ -366,15 +621,9 @@
   </dt>
 
       
-  <dt><a href="api/commands.html#decocare.commands.CRC8">CRC8() (in module decocare.commands)</a>
+  <dt><a href="api/stick.html#decocare.stick.CRC8">CRC8() (in module decocare.stick)</a>
   </dt>
 
-      <dd><dl>
-        
-  <dt><a href="api/stick.html#decocare.stick.CRC8">(in module decocare.stick)</a>
-  </dt>
-
-      </dl></dd>
   </dl></td>
 </tr></table>
 
@@ -396,23 +645,25 @@
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.Base.date_length">date_length (decocare.history.Base attribute)</a>
+  <dt><a href="api/history.html#decocare.history.Model522ResultTotals.date_length">date_length (decocare.history.Model522ResultTotals attribute)</a>
   </dt>
 
       <dd><dl>
         
-  <dt><a href="api/history.html#decocare.history.UnabsorbedInsulinBolus.date_length">(decocare.history.UnabsorbedInsulinBolus attribute)</a>
+  <dt><a href="api/history.html#decocare.history.MResultTotals.date_length">(decocare.history.MResultTotals attribute)</a>
   </dt>
 
       </dl></dd>
       
-  <dt><a href="api/history.html#decocare.history.Base.date_str">date_str() (decocare.history.Base method)</a>
+  <dt><a href="api/history.html#decocare.history.Model522ResultTotals.date_str">date_str() (decocare.history.Model522ResultTotals method)</a>
   </dt>
 
-      
-  <dt><a href="api/history.html#decocare.history.Mask.day">day (decocare.history.Mask attribute)</a>
+      <dd><dl>
+        
+  <dt><a href="api/history.html#decocare.history.MResultTotals.date_str">(decocare.history.MResultTotals method)</a>
   </dt>
 
+      </dl></dd>
       
   <dt><a href="api/decocare.html#module-decocare.__init__">decocare.__init__ (module)</a>
   </dt>
@@ -450,48 +701,16 @@
   </dt>
 
       
-  <dt><a href="api/decocare.html#module-decocare.tests">decocare.tests (module)</a>
-  </dt>
-
-      
-  <dt><a href="api/history.html#decocare.history.Base.decode">decode() (decocare.history.Base method)</a>
+  <dt><a href="api/history.html#decocare.history.LowReservoir.decode">decode() (decocare.history.LowReservoir method)</a>
   </dt>
 
       <dd><dl>
-        
-  <dt><a href="api/history.html#decocare.history.Bolus.decode">(decocare.history.Bolus method)</a>
-  </dt>
-
-        
-  <dt><a href="api/history.html#decocare.history.BolusWizard.decode">(decocare.history.BolusWizard method)</a>
-  </dt>
-
-        
-  <dt><a href="api/history.html#decocare.history.CalBGForPH.decode">(decocare.history.CalBGForPH method)</a>
-  </dt>
-
-        
-  <dt><a href="api/history.html#decocare.history.KnownRecord.decode">(decocare.history.KnownRecord method)</a>
-  </dt>
-
-        
-  <dt><a href="api/history.html#decocare.history.LowReservoir.decode">(decocare.history.LowReservoir method)</a>
-  </dt>
-
-        
-  <dt><a href="api/history.html#decocare.history.Prime.decode">(decocare.history.Prime method)</a>
-  </dt>
-
         
   <dt><a href="api/history.html#decocare.history.TempBasal.decode">(decocare.history.TempBasal method)</a>
   </dt>
 
         
   <dt><a href="api/history.html#decocare.history.TempBasalDuration.decode">(decocare.history.TempBasalDuration method)</a>
-  </dt>
-
-        
-  <dt><a href="api/history.html#decocare.history.UnabsorbedInsulinBolus.decode">(decocare.history.UnabsorbedInsulinBolus method)</a>
   </dt>
 
         
@@ -510,10 +729,6 @@
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.decode_unabsorbed">decode_unabsorbed() (in module decocare.history)</a>
-  </dt>
-
-      
   <dt><a href="api/lib.html#decocare.lib.decodeDC">decodeDC() (in module decocare.lib)</a>
   </dt>
 
@@ -526,10 +741,6 @@
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.KnownRecord.decodes_date">decodes_date (decocare.history.KnownRecord attribute)</a>
-  </dt>
-
-      
   <dt><a href="api/stick.html#decocare.stick.StickCommand.delay">delay (decocare.stick.StickCommand attribute)</a>
   </dt>
 
@@ -539,7 +750,31 @@
 
       <dd><dl>
         
+  <dt><a href="api/commands.html#decocare.commands.KeypadPush.descr">(decocare.commands.KeypadPush attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.PowerControl.descr">(decocare.commands.PowerControl attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.PumpResume.descr">(decocare.commands.PumpResume attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.PumpSuspend.descr">(decocare.commands.PumpSuspend attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.Read128KMem.descr">(decocare.commands.Read128KMem attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.Read256KMem.descr">(decocare.commands.Read256KMem attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadAlarms.descr">(decocare.commands.ReadAlarms attribute)</a>
   </dt>
 
         
@@ -547,7 +782,15 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadBasalTemp508.descr">(decocare.commands.ReadBasalTemp508 attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadBatteryStatus.descr">(decocare.commands.ReadBatteryStatus attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadBolusHistory.descr">(decocare.commands.ReadBolusHistory attribute)</a>
   </dt>
 
         
@@ -555,11 +798,23 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadCurGlucosePageNumber.descr">(decocare.commands.ReadCurGlucosePageNumber attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadCurPageNumber.descr">(decocare.commands.ReadCurPageNumber attribute)</a>
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadDailyTotals.descr">(decocare.commands.ReadDailyTotals attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadErrorStatus.descr">(decocare.commands.ReadErrorStatus attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadErrorStatus508.descr">(decocare.commands.ReadErrorStatus508 attribute)</a>
   </dt>
 
         
@@ -575,6 +830,18 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadISIGHistory.descr">(decocare.commands.ReadISIGHistory attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadPrimeBoluses.descr">(decocare.commands.ReadPrimeBoluses attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadProfileSets.descr">(decocare.commands.ReadProfileSets attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadPumpID.descr">(decocare.commands.ReadPumpID attribute)</a>
   </dt>
 
@@ -584,6 +851,10 @@
 
         
   <dt><a href="api/commands.html#decocare.commands.ReadPumpState.descr">(decocare.commands.ReadPumpState attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadPumpStatus.descr">(decocare.commands.ReadPumpStatus attribute)</a>
   </dt>
 
         
@@ -599,20 +870,44 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadRemoteControlID.descr">(decocare.commands.ReadRemoteControlID attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadSensorSettings.descr">(decocare.commands.ReadSensorSettings attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadSettings.descr">(decocare.commands.ReadSettings attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadTodayTotals508.descr">(decocare.commands.ReadTodayTotals508 attribute)</a>
   </dt>
 
         
   <dt><a href="api/commands.html#decocare.commands.ReadTotalsToday.descr">(decocare.commands.ReadTotalsToday attribute)</a>
   </dt>
 
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadUserEvents.descr">(decocare.commands.ReadUserEvents attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.SetSuspend.descr">(decocare.commands.SetSuspend attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.TempBasal.descr">(decocare.commands.TempBasal attribute)</a>
+  </dt>
+
       </dl></dd>
       
-  <dt><a href="api/stick.html#decocare.stick.ReadRadio.dl_size">dl_size (decocare.stick.ReadRadio attribute)</a>
+  <dt><a href="api/history.html#decocare.history.describe">describe() (in module decocare.history)</a>
   </dt>
 
       
-  <dt><a href="api/commands.html#decocare.commands.do_commands">do_commands() (in module decocare.commands)</a>
+  <dt><a href="api/stick.html#decocare.stick.ReadRadio.dl_size">dl_size (decocare.stick.ReadRadio attribute)</a>
   </dt>
 
       
@@ -625,6 +920,10 @@
   </dt>
 
       </dl></dd>
+      
+  <dt><a href="api/commands.html#decocare.commands.KeypadPush.DOWN">DOWN() (decocare.commands.KeypadPush class method)</a>
+  </dt>
+
       
   <dt><a href="api/download.html#decocare.download.Downloader.download">download() (decocare.download.Downloader method)</a>
   </dt>
@@ -662,6 +961,10 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
+  <dt><a href="api/commands.html#decocare.commands.KeypadPush.EASY">EASY() (decocare.commands.KeypadPush class method)</a>
+  </dt>
+
+      
   <dt><a href="api/commands.html#decocare.commands.BaseCommand.effectTime">effectTime (decocare.commands.BaseCommand attribute)</a>
   </dt>
 
@@ -684,29 +987,21 @@
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.encode_minute">encode_minute() (in module decocare.history)</a>
-  </dt>
-
-      
-  <dt><a href="api/history.html#decocare.history.encode_monthbyte">encode_monthbyte() (in module decocare.history)</a>
-  </dt>
-
-      
-  <dt><a href="api/history.html#decocare.history.encode_second">encode_second() (in module decocare.history)</a>
-  </dt>
-
-      
-  <dt><a href="api/history.html#decocare.history.encode_year">encode_year() (in module decocare.history)</a>
+  <dt><a href="api/lib.html#decocare.lib.encodeDC">encodeDC() (in module decocare.lib)</a>
   </dt>
 
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="api/lib.html#decocare.lib.encodeDC">encodeDC() (in module decocare.lib)</a>
+  <dt><a href="api/commands.html#decocare.commands.FilterHistory.end">end (decocare.commands.FilterHistory attribute)</a>
   </dt>
 
       
   <dt><a href="api/session.html#decocare.session.Session.end">end() (decocare.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.KeypadPush.ESC">ESC() (decocare.commands.KeypadPush class method)</a>
   </dt>
 
       
@@ -719,19 +1014,29 @@
   </dt>
 
       </dl></dd>
-      
-  <dt><a href="api/history.html#decocare.history.extra_hour_bits">extra_hour_bits() (in module decocare.history)</a>
-  </dt>
-
-      
-  <dt><a href="api/history.html#decocare.history.extra_year_bits">extra_year_bits() (in module decocare.history)</a>
-  </dt>
-
   </dl></td>
 </tr></table>
 
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="api/lib.html#decocare.lib.filter_date_today">filter_date_today() (in module decocare.lib)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.FilterGlucoseHistory">FilterGlucoseHistory (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.FilterHistory">FilterHistory (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.FilterISIGHistory">FilterISIGHistory (class in decocare.commands)</a>
+  </dt>
+
+  </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api/commands.html#decocare.commands.BaseCommand.format">format() (decocare.commands.BaseCommand method)</a>
@@ -755,10 +1060,12 @@
   </dt>
 
       </dl></dd>
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api/stick.html#decocare.stick.StickCommand.format_cl2">format_cl2() (decocare.stick.StickCommand method)</a>
+  </dt>
+
+      
+  <dt><a href="api/lib.html#decocare.lib.format_filter_date">format_filter_date() (in module decocare.lib)</a>
   </dt>
 
   </dl></td>
@@ -768,18 +1075,24 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="api/commands.html#decocare.commands.get_pages">get_pages() (in module decocare.commands)</a>
-  </dt>
-
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
-      
-  <dt><a href="api/commands.html#decocare.commands.PumpCommand.getData">getData() (decocare.commands.PumpCommand method)</a>
+  <dt><a href="api/commands.html#decocare.commands.FilterHistory.getData">getData() (decocare.commands.FilterHistory method)</a>
   </dt>
 
       <dd><dl>
         
+  <dt><a href="api/commands.html#decocare.commands.ManualCommand.getData">(decocare.commands.ManualCommand method)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.PumpCommand.getData">(decocare.commands.PumpCommand method)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadBasalTemp.getData">(decocare.commands.ReadBasalTemp method)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadBasalTemp508.getData">(decocare.commands.ReadBasalTemp508 method)</a>
   </dt>
 
         
@@ -788,6 +1101,10 @@
 
         
   <dt><a href="api/commands.html#decocare.commands.ReadContrast.getData">(decocare.commands.ReadContrast method)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadCurGlucosePageNumber.getData">(decocare.commands.ReadCurGlucosePageNumber method)</a>
   </dt>
 
         
@@ -811,6 +1128,10 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadPumpStatus.getData">(decocare.commands.ReadPumpStatus method)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadRTC.getData">(decocare.commands.ReadRTC method)</a>
   </dt>
 
@@ -827,10 +1148,32 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadTodayTotals508.getData">(decocare.commands.ReadTodayTotals508 method)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadTotalsToday.getData">(decocare.commands.ReadTotalsToday method)</a>
   </dt>
 
       </dl></dd>
+      
+  <dt><a href="api/commands.html#decocare.commands.GuardianSensorAlarmSilence">GuardianSensorAlarmSilence (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.GuardianSensorDemoGraphTimeout">GuardianSensorDemoGraphTimeout (class in decocare.commands)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="api/commands.html#decocare.commands.GuardianSensorRateChangeAlerts">GuardianSensorRateChangeAlerts (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.GuardianSensorSettings">GuardianSensorSettings (class in decocare.commands)</a>, <a href="api/commands.html#decocare.commands.GuardianSensorSettings">[1]</a>
+  </dt>
+
   </dl></td>
 </tr></table>
 
@@ -838,45 +1181,43 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="api/history.html#decocare.history.hack1">hack1 (class in decocare.history)</a>
-  </dt>
-
-      
   <dt><a href="api/stick.html#decocare.stick.TransmitPacket.head">head (decocare.stick.TransmitPacket attribute)</a>
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.Base.head_length">head_length (decocare.history.Base attribute)</a>
+  <dt><a href="api/history.html#decocare.history.Ian0B.head_length">head_length (decocare.history.Ian0B attribute)</a>
   </dt>
 
       <dd><dl>
         
-  <dt><a href="api/history.html#decocare.history.Bolus.head_length">(decocare.history.Bolus attribute)</a>
+  <dt><a href="api/history.html#decocare.history.IanA8.head_length">(decocare.history.IanA8 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/history.html#decocare.history.MResultTotals.head_length">(decocare.history.MResultTotals attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/history.html#decocare.history.Model522ResultTotals.head_length">(decocare.history.Model522ResultTotals attribute)</a>
   </dt>
 
         
   <dt><a href="api/history.html#decocare.history.NoDelivery.head_length">(decocare.history.NoDelivery attribute)</a>
   </dt>
 
-        
-  <dt><a href="api/history.html#decocare.history.Prime.head_length">(decocare.history.Prime attribute)</a>
-  </dt>
-
-        
-  <dt><a href="api/history.html#decocare.history.ResultTotals.head_length">(decocare.history.ResultTotals attribute)</a>
-  </dt>
-
-        
-  <dt><a href="api/history.html#decocare.history.hack1.head_length">(decocare.history.hack1 attribute)</a>
-  </dt>
-
       </dl></dd>
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="api/lib.html#decocare.lib.hexdump">hexdump() (in module decocare.lib)</a>
+  <dt><a href="api/commands.html#decocare.commands.BaseCommand.hexdump">hexdump() (decocare.commands.BaseCommand method)</a>
   </dt>
 
+      <dd><dl>
+        
+  <dt><a href="api/lib.html#decocare.lib.hexdump">(in module decocare.lib)</a>
+  </dt>
+
+      </dl></dd>
       
   <dt><a href="api/lib.html#decocare.lib.HighByte">HighByte() (in module decocare.lib)</a>
   </dt>
@@ -888,9 +1229,35 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
+  <dt><a href="api/history.html#decocare.history.Ian0B">Ian0B (class in decocare.history)</a>
+  </dt>
+
+      
+  <dt><a href="api/history.html#decocare.history.Ian3F">Ian3F (class in decocare.history)</a>
+  </dt>
+
+      
+  <dt><a href="api/history.html#decocare.history.Ian50">Ian50 (class in decocare.history)</a>
+  </dt>
+
+      
+  <dt><a href="api/history.html#decocare.history.Ian54">Ian54 (class in decocare.history)</a>
+  </dt>
+
+      
+  <dt><a href="api/history.html#decocare.history.Ian69">Ian69 (class in decocare.history)</a>
+  </dt>
+
+      
+  <dt><a href="api/history.html#decocare.history.IanA8">IanA8 (class in decocare.history)</a>
+  </dt>
+
+      
   <dt><a href="api/stick.html#decocare.stick.ProductInfo.iface_key">iface_key (decocare.stick.ProductInfo attribute)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api/session.html#decocare.session.Session.init">init() (decocare.session.Session method)</a>
   </dt>
@@ -903,8 +1270,6 @@
   <dt><a href="api/stick.html#decocare.stick.InterfaceStats.INTERFACE_IDX">INTERFACE_IDX (decocare.stick.InterfaceStats attribute)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api/stick.html#decocare.stick.Stick.interface_stats">interface_stats() (decocare.stick.Stick method)</a>
   </dt>
@@ -914,11 +1279,7 @@
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.InvalidRecord">InvalidRecord (class in decocare.history)</a>
-  </dt>
-
-      
-  <dt><a href="api/history.html#decocare.history.Mask.invert">invert (decocare.history.Mask attribute)</a>
+  <dt><a href="api/commands.html#decocare.commands.FilterHistory.ISO">ISO() (decocare.commands.FilterHistory class method)</a>
   </dt>
 
   </dl></td>
@@ -928,7 +1289,7 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="api/history.html#decocare.history.KnownRecord">KnownRecord (class in decocare.history)</a>
+  <dt><a href="api/commands.html#decocare.commands.KeypadPush">KeypadPush (class in decocare.commands)</a>
   </dt>
 
   </dl></td>
@@ -976,10 +1337,14 @@
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="api/commands.html#decocare.commands.PumpCommand.log_name">log_name() (decocare.commands.PumpCommand method)</a>
+  <dt><a href="api/commands.html#decocare.commands.ManualCommand.log_name">log_name() (decocare.commands.ManualCommand method)</a>
   </dt>
 
       <dd><dl>
+        
+  <dt><a href="api/commands.html#decocare.commands.PumpCommand.log_name">(decocare.commands.PumpCommand method)</a>
+  </dt>
+
         
   <dt><a href="api/commands.html#decocare.commands.ReadHistoryData.log_name">(decocare.commands.ReadHistoryData method)</a>
   </dt>
@@ -1018,16 +1383,18 @@
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.Mask">Mask (class in decocare.history)</a>
+  <dt><a href="api/commands.html#decocare.commands.ManualCommand">ManualCommand (class in decocare.commands)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api/commands.html#decocare.commands.BaseCommand.maxRecords">maxRecords (decocare.commands.BaseCommand attribute)</a>
   </dt>
 
       <dd><dl>
+        
+  <dt><a href="api/commands.html#decocare.commands.KeypadPush.maxRecords">(decocare.commands.KeypadPush attribute)</a>
+  </dt>
+
         
   <dt><a href="api/commands.html#decocare.commands.PowerControl.maxRecords">(decocare.commands.PowerControl attribute)</a>
   </dt>
@@ -1041,11 +1408,19 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadBasalTemp508.maxRecords">(decocare.commands.ReadBasalTemp508 attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadBatteryStatus.maxRecords">(decocare.commands.ReadBatteryStatus attribute)</a>
   </dt>
 
         
   <dt><a href="api/commands.html#decocare.commands.ReadContrast.maxRecords">(decocare.commands.ReadContrast attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadCurGlucosePageNumber.maxRecords">(decocare.commands.ReadCurGlucosePageNumber attribute)</a>
   </dt>
 
         
@@ -1065,6 +1440,10 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadISIGHistory.maxRecords">(decocare.commands.ReadISIGHistory attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadPumpID.maxRecords">(decocare.commands.ReadPumpID attribute)</a>
   </dt>
 
@@ -1074,6 +1453,10 @@
 
         
   <dt><a href="api/commands.html#decocare.commands.ReadPumpState.maxRecords">(decocare.commands.ReadPumpState attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadPumpStatus.maxRecords">(decocare.commands.ReadPumpStatus attribute)</a>
   </dt>
 
         
@@ -1093,10 +1476,48 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadTodayTotals508.maxRecords">(decocare.commands.ReadTodayTotals508 attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadTotalsToday.maxRecords">(decocare.commands.ReadTotalsToday attribute)</a>
   </dt>
 
+        
+  <dt><a href="api/commands.html#decocare.commands.SetSuspend.maxRecords">(decocare.commands.SetSuspend attribute)</a>
+  </dt>
+
       </dl></dd>
+      
+  <dt><a href="api/lib.html#decocare.lib.Timer.millis">millis() (decocare.lib.Timer method)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.Model511_Experiment_OP165">Model511_Experiment_OP165 (class in decocare.commands)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="api/commands.html#decocare.commands.Model511_ExperimentOP125">Model511_ExperimentOP125 (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.Model511_ExperimentOP126">Model511_ExperimentOP126 (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.Model512Experiment_OP150">Model512Experiment_OP150 (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/history.html#decocare.history.Model522ResultTotals">Model522ResultTotals (class in decocare.history)</a>
+  </dt>
+
+      
+  <dt><a href="api/history.html#decocare.history.MResultTotals">MResultTotals (class in decocare.history)</a>
+  </dt>
+
   </dl></td>
 </tr></table>
 
@@ -1107,14 +1528,10 @@
   <dt><a href="api/history.html#decocare.history.NewTimeSet">NewTimeSet (class in decocare.history)</a>
   </dt>
 
-      
-  <dt><a href="api/history.html#decocare.history.NoDelivery">NoDelivery (class in decocare.history)</a>
-  </dt>
-
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="api/history.html#decocare.history.NotADate">NotADate</a>
+  <dt><a href="api/history.html#decocare.history.NoDelivery">NoDelivery (class in decocare.history)</a>
   </dt>
 
   </dl></td>
@@ -1124,24 +1541,22 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="api/stick.html#decocare.stick.Stick.old_download_packet">old_download_packet() (decocare.stick.Stick method)</a>
+  <dt><a href="api/history.html#decocare.history.old6c">old6c (class in decocare.history)</a>
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.Battery.opcode">opcode (decocare.history.Battery attribute)</a>
+  <dt><a href="api/stick.html#decocare.stick.Stick.old_download_packet">old_download_packet() (decocare.stick.Stick method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="api/history.html#decocare.history.BasalProfileStart.opcode">opcode (decocare.history.BasalProfileStart attribute)</a>
   </dt>
 
       <dd><dl>
         
-  <dt><a href="api/history.html#decocare.history.Bolus.opcode">(decocare.history.Bolus attribute)</a>
-  </dt>
-
-        
-  <dt><a href="api/history.html#decocare.history.BolusWizard.opcode">(decocare.history.BolusWizard attribute)</a>
-  </dt>
-
-        
-  <dt><a href="api/history.html#decocare.history.CalBGForPH.opcode">(decocare.history.CalBGForPH attribute)</a>
+  <dt><a href="api/history.html#decocare.history.Battery.opcode">(decocare.history.Battery attribute)</a>
   </dt>
 
         
@@ -1173,7 +1588,27 @@
   </dt>
 
         
-  <dt><a href="api/history.html#decocare.history.KnownRecord.opcode">(decocare.history.KnownRecord attribute)</a>
+  <dt><a href="api/history.html#decocare.history.Ian0B.opcode">(decocare.history.Ian0B attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/history.html#decocare.history.Ian3F.opcode">(decocare.history.Ian3F attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/history.html#decocare.history.Ian50.opcode">(decocare.history.Ian50 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/history.html#decocare.history.Ian54.opcode">(decocare.history.Ian54 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/history.html#decocare.history.Ian69.opcode">(decocare.history.Ian69 attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/history.html#decocare.history.IanA8.opcode">(decocare.history.IanA8 attribute)</a>
   </dt>
 
         
@@ -1185,15 +1620,19 @@
   </dt>
 
         
+  <dt><a href="api/history.html#decocare.history.MResultTotals.opcode">(decocare.history.MResultTotals attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/history.html#decocare.history.Model522ResultTotals.opcode">(decocare.history.Model522ResultTotals attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/history.html#decocare.history.NewTimeSet.opcode">(decocare.history.NewTimeSet attribute)</a>
   </dt>
 
         
   <dt><a href="api/history.html#decocare.history.NoDelivery.opcode">(decocare.history.NoDelivery attribute)</a>
-  </dt>
-
-        
-  <dt><a href="api/history.html#decocare.history.Prime.opcode">(decocare.history.Prime attribute)</a>
   </dt>
 
         
@@ -1205,11 +1644,11 @@
   </dt>
 
         
-  <dt><a href="api/history.html#decocare.history.ResultTotals.opcode">(decocare.history.ResultTotals attribute)</a>
+  <dt><a href="api/history.html#decocare.history.Rewind.opcode">(decocare.history.Rewind attribute)</a>
   </dt>
 
         
-  <dt><a href="api/history.html#decocare.history.Rewind.opcode">(decocare.history.Rewind attribute)</a>
+  <dt><a href="api/history.html#decocare.history.Sara6E.opcode">(decocare.history.Sara6E attribute)</a>
   </dt>
 
         
@@ -1225,16 +1664,10 @@
   </dt>
 
         
-  <dt><a href="api/history.html#decocare.history.UnabsorbedInsulinBolus.opcode">(decocare.history.UnabsorbedInsulinBolus attribute)</a>
-  </dt>
-
-        
-  <dt><a href="api/history.html#decocare.history.hack1.opcode">(decocare.history.hack1 attribute)</a>
+  <dt><a href="api/history.html#decocare.history.old6c.opcode">(decocare.history.old6c attribute)</a>
   </dt>
 
       </dl></dd>
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api/link.html#decocare.link.Link.open">open() (decocare.link.Link method)</a>
   </dt>
@@ -1252,6 +1685,10 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
+  <dt><a href="api/commands.html#decocare.commands.ReadHistoryData.page">page (decocare.commands.ReadHistoryData attribute)</a>
+  </dt>
+
+      
   <dt><a href="api/download.html#decocare.download.PageDownloader">PageDownloader (class in decocare.download)</a>
   </dt>
 
@@ -1265,6 +1702,10 @@
 
       <dd><dl>
         
+  <dt><a href="api/commands.html#decocare.commands.KeypadPush.params">(decocare.commands.KeypadPush attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.PowerControl.params">(decocare.commands.PowerControl attribute)</a>
   </dt>
 
@@ -1277,7 +1718,31 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.PumpResume.params">(decocare.commands.PumpResume attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.PumpSuspend.params">(decocare.commands.PumpSuspend attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.Read128KMem.params">(decocare.commands.Read128KMem attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.Read256KMem.params">(decocare.commands.Read256KMem attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadAlarms.params">(decocare.commands.ReadAlarms attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadBasalTemp.params">(decocare.commands.ReadBasalTemp attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadBasalTemp508.params">(decocare.commands.ReadBasalTemp508 attribute)</a>
   </dt>
 
         
@@ -1285,7 +1750,15 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadBolusHistory.params">(decocare.commands.ReadBolusHistory attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadContrast.params">(decocare.commands.ReadContrast attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadCurGlucosePageNumber.params">(decocare.commands.ReadCurGlucosePageNumber attribute)</a>
   </dt>
 
         
@@ -1293,7 +1766,15 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadDailyTotals.params">(decocare.commands.ReadDailyTotals attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadErrorStatus.params">(decocare.commands.ReadErrorStatus attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadErrorStatus508.params">(decocare.commands.ReadErrorStatus508 attribute)</a>
   </dt>
 
         
@@ -1309,6 +1790,18 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadISIGHistory.params">(decocare.commands.ReadISIGHistory attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadPrimeBoluses.params">(decocare.commands.ReadPrimeBoluses attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadProfileSets.params">(decocare.commands.ReadProfileSets attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadPumpID.params">(decocare.commands.ReadPumpID attribute)</a>
   </dt>
 
@@ -1318,6 +1811,10 @@
 
         
   <dt><a href="api/commands.html#decocare.commands.ReadPumpState.params">(decocare.commands.ReadPumpState attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadPumpStatus.params">(decocare.commands.ReadPumpStatus attribute)</a>
   </dt>
 
         
@@ -1333,11 +1830,35 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadRemoteControlID.params">(decocare.commands.ReadRemoteControlID attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadSensorSettings.params">(decocare.commands.ReadSensorSettings attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadSettings.params">(decocare.commands.ReadSettings attribute)</a>
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadTodayTotals508.params">(decocare.commands.ReadTodayTotals508 attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadTotalsToday.params">(decocare.commands.ReadTotalsToday attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadUserEvents.params">(decocare.commands.ReadUserEvents attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.SetSuspend.params">(decocare.commands.SetSuspend attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.TempBasal.params">(decocare.commands.TempBasal attribute)</a>
   </dt>
 
       </dl></dd>
@@ -1346,14 +1867,10 @@
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.Base.parse">parse() (decocare.history.Base method)</a>
+  <dt><a href="api/stick.html#decocare.stick.InterfaceStats.parse">parse() (decocare.stick.InterfaceStats method)</a>
   </dt>
 
       <dd><dl>
-        
-  <dt><a href="api/stick.html#decocare.stick.InterfaceStats.parse">(decocare.stick.InterfaceStats method)</a>
-  </dt>
-
         
   <dt><a href="api/stick.html#decocare.stick.LinkStatus.parse">(decocare.stick.LinkStatus method)</a>
   </dt>
@@ -1380,55 +1897,19 @@
 
       </dl></dd>
       
-  <dt><a href="api/history.html#decocare.history.parse_date">parse_date() (in module decocare.history)</a>
-  </dt>
-
-      
-  <dt><a href="api/history.html#decocare.history.parse_date_strict">parse_date_strict() (in module decocare.history)</a>
-  </dt>
-
-      
-  <dt><a href="api/history.html#decocare.history.parse_day">parse_day() (in module decocare.history)</a>
-  </dt>
-
-      
-  <dt><a href="api/history.html#decocare.history.parse_hours">parse_hours() (in module decocare.history)</a>
-  </dt>
-
-      
-  <dt><a href="api/history.html#decocare.history.parse_minutes">parse_minutes() (in module decocare.history)</a>
-  </dt>
-
-      
-  <dt><a href="api/history.html#decocare.history.parse_months">parse_months() (in module decocare.history)</a>
-  </dt>
-
-      
   <dt><a href="api/history.html#decocare.history.parse_record">parse_record() (in module decocare.history)</a>
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.parse_seconds">parse_seconds() (in module decocare.history)</a>
+  <dt><a href="api/history.html#decocare.history.Model522ResultTotals.parse_time">parse_time() (decocare.history.Model522ResultTotals method)</a>
   </dt>
 
-      
-  <dt><a href="api/history.html#decocare.history.KnownRecord.parse_time">parse_time() (decocare.history.KnownRecord method)</a>
+      <dd><dl>
+        
+  <dt><a href="api/history.html#decocare.history.MResultTotals.parse_time">(decocare.history.MResultTotals method)</a>
   </dt>
 
-      
-  <dt><a href="api/history.html#decocare.history.parse_years">parse_years() (in module decocare.history)</a>
-  </dt>
-
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
-      
-  <dt><a href="api/history.html#decocare.history.parse_years_lax">parse_years_lax() (in module decocare.history)</a>
-  </dt>
-
-      
-  <dt><a href="api/history.html#decocare.history.Base.pformat">pformat() (decocare.history.Base method)</a>
-  </dt>
-
+      </dl></dd>
       
   <dt><a href="api/stick.html#decocare.stick.Stick.poll_size">poll_size() (decocare.stick.Stick method)</a>
   </dt>
@@ -1449,10 +1930,8 @@
   <dt><a href="api/commands.html#decocare.commands.PowerControlOff">PowerControlOff (class in decocare.commands)</a>
   </dt>
 
-      
-  <dt><a href="api/history.html#decocare.history.Prime">Prime (class in decocare.history)</a>
-  </dt>
-
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api/stick.html#decocare.stick.Stick.process">process() (decocare.stick.Stick method)</a>
   </dt>
@@ -1474,11 +1953,43 @@
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.PumpResume">PumpResume (class in decocare.history)</a>
+  <dt><a href="api/commands.html#decocare.commands.PumpResume">PumpResume (class in decocare.commands)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="api/history.html#decocare.history.PumpResume">(class in decocare.history)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="api/commands.html#decocare.commands.PumpSuspend">PumpSuspend (class in decocare.commands)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="api/history.html#decocare.history.PumpSuspend">(class in decocare.history)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="api/commands.html#decocare.commands.PushACT">PushACT() (in module decocare.commands)</a>
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.PumpSuspend">PumpSuspend (class in decocare.history)</a>
+  <dt><a href="api/commands.html#decocare.commands.PushDOWN">PushDOWN() (in module decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.PushEASY">PushEASY() (in module decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.PushESC">PushESC() (in module decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.PushUP">PushUP() (in module decocare.commands)</a>
   </dt>
 
   </dl></td>
@@ -1498,12 +2009,6 @@
 
       </dl></dd>
   </dl></td>
-  <td style="width: 33%" valign="top"><dl>
-      
-  <dt><a href="api/history.html#decocare.history.quick_hex">quick_hex() (in module decocare.history)</a>
-  </dt>
-
-  </dl></td>
 </tr></table>
 
 <h2 id="R">R</h2>
@@ -1519,6 +2024,14 @@
 
       
   <dt><a href="api/link.html#decocare.link.Link.read">read() (decocare.link.Link method)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.Read128KMem">Read128KMem (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.Read256KMem">Read256KMem (class in decocare.commands)</a>
   </dt>
 
       
@@ -1538,7 +2051,15 @@
   </dt>
 
       
+  <dt><a href="api/commands.html#decocare.commands.ReadAlarms">ReadAlarms (class in decocare.commands)</a>
+  </dt>
+
+      
   <dt><a href="api/commands.html#decocare.commands.ReadBasalTemp">ReadBasalTemp (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadBasalTemp508">ReadBasalTemp508 (class in decocare.commands)</a>
   </dt>
 
       
@@ -1546,7 +2067,59 @@
   </dt>
 
       
+  <dt><a href="api/commands.html#decocare.commands.ReadBGAlarmCLocks">ReadBGAlarmCLocks (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadBGAlarmEnable">ReadBGAlarmEnable (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadBGReminderEnable">ReadBGReminderEnable (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadBGTargets">ReadBGTargets (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadBGUnits">ReadBGUnits (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadBolusHistory">ReadBolusHistory (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadBolusReminderEnable">ReadBolusReminderEnable (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadBolusReminders">ReadBolusReminders (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadBolusWizardSetupStatus">ReadBolusWizardSetupStatus (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadCalibrationFactor">ReadCalibrationFactor (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadCarbRatios">ReadCarbRatios (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadCarbUnits">ReadCarbUnits (class in decocare.commands)</a>
+  </dt>
+
+      
   <dt><a href="api/commands.html#decocare.commands.ReadContrast">ReadContrast (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadCurGlucosePageNumber">ReadCurGlucosePageNumber (class in decocare.commands)</a>
   </dt>
 
       
@@ -1554,7 +2127,23 @@
   </dt>
 
       
+  <dt><a href="api/commands.html#decocare.commands.ReadDailyTotals">ReadDailyTotals (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadDetailTrace">ReadDetailTrace (class in decocare.commands)</a>
+  </dt>
+
+      
   <dt><a href="api/commands.html#decocare.commands.ReadErrorStatus">ReadErrorStatus (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadErrorStatus508">ReadErrorStatus508 (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadFactoryParameters">ReadFactoryParameters (class in decocare.commands)</a>
   </dt>
 
       
@@ -1570,6 +2159,18 @@
   </dt>
 
       
+  <dt><a href="api/commands.html#decocare.commands.ReadInsulinSensitivities">ReadInsulinSensitivities (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadISIGHistory">ReadISIGHistory (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadLanguage">ReadLanguage (class in decocare.commands)</a>
+  </dt>
+
+      
   <dt><a href="api/link.html#decocare.link.Link.readline">readline() (decocare.link.Link method)</a>
   </dt>
 
@@ -1580,6 +2181,54 @@
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
+  <dt><a href="api/commands.html#decocare.commands.ReadLogicLinkIDS">ReadLogicLinkIDS (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadNewTraceAlarm">ReadNewTraceAlarm (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadOldTraceAlarm">ReadOldTraceAlarm (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadOtherDevicesIDS">ReadOtherDevicesIDS (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadPrimeBoluses">ReadPrimeBoluses (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadProfile_A512">ReadProfile_A512 (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadProfile_B512">ReadProfile_B512 (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadProfile_STD512">ReadProfile_STD512 (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadProfiles511_A">ReadProfiles511_A (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadProfiles511_B">ReadProfiles511_B (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadProfiles511_STD">ReadProfiles511_STD (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadProfileSets">ReadProfileSets (class in decocare.commands)</a>
+  </dt>
+
+      
   <dt><a href="api/commands.html#decocare.commands.ReadPumpID">ReadPumpID (class in decocare.commands)</a>
   </dt>
 
@@ -1589,6 +2238,14 @@
 
       
   <dt><a href="api/commands.html#decocare.commands.ReadPumpState">ReadPumpState (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadPumpStatus">ReadPumpStatus (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadPumpTrace">ReadPumpTrace (class in decocare.commands)</a>
   </dt>
 
       
@@ -1604,7 +2261,27 @@
   </dt>
 
       
+  <dt><a href="api/commands.html#decocare.commands.ReadRemoteControlID">ReadRemoteControlID (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadReservoirWarning">ReadReservoirWarning (class in decocare.commands)</a>
+  </dt>
+
+      
   <dt><a href="api/commands.html#decocare.commands.ReadRTC">ReadRTC (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadSavedSettingsDate">ReadSavedSettingsDate (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadSensorHistoryData">ReadSensorHistoryData (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadSensorSettings">ReadSensorSettings (class in decocare.commands)</a>
   </dt>
 
       
@@ -1612,11 +2289,31 @@
   </dt>
 
       
+  <dt><a href="api/commands.html#decocare.commands.ReadSettings511">ReadSettings511 (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadSettings512">ReadSettings512 (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadTodayTotals508">ReadTodayTotals508 (class in decocare.commands)</a>
+  </dt>
+
+      
   <dt><a href="api/commands.html#decocare.commands.ReadTotalsToday">ReadTotalsToday (class in decocare.commands)</a>
   </dt>
 
       
-  <dt><a href="api/stick.html#decocare.stick.LinkStatus.reason">reason (decocare.stick.LinkStatus attribute)</a>
+  <dt><a href="api/commands.html#decocare.commands.ReadUserEvents">ReadUserEvents (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/commands.html#decocare.commands.ReadVCNTRHistory">ReadVCNTRHistory (class in decocare.commands)</a>
+  </dt>
+
+      
+  <dt><a href="api/stick.html#decocare.stick.LinkStatus.reasons">reasons (decocare.stick.LinkStatus attribute)</a>
   </dt>
 
       
@@ -1654,14 +2351,14 @@
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.ResultTotals">ResultTotals (class in decocare.history)</a>
-  </dt>
-
-      
   <dt><a href="api/commands.html#decocare.commands.BaseCommand.retries">retries (decocare.commands.BaseCommand attribute)</a>
   </dt>
 
       <dd><dl>
+        
+  <dt><a href="api/commands.html#decocare.commands.KeypadPush.retries">(decocare.commands.KeypadPush attribute)</a>
+  </dt>
+
         
   <dt><a href="api/commands.html#decocare.commands.PowerControl.retries">(decocare.commands.PowerControl attribute)</a>
   </dt>
@@ -1675,11 +2372,19 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadBasalTemp508.retries">(decocare.commands.ReadBasalTemp508 attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadBatteryStatus.retries">(decocare.commands.ReadBatteryStatus attribute)</a>
   </dt>
 
         
   <dt><a href="api/commands.html#decocare.commands.ReadContrast.retries">(decocare.commands.ReadContrast attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.ReadCurGlucosePageNumber.retries">(decocare.commands.ReadCurGlucosePageNumber attribute)</a>
   </dt>
 
         
@@ -1692,10 +2397,6 @@
 
         
   <dt><a href="api/commands.html#decocare.commands.ReadFirmwareVersion.retries">(decocare.commands.ReadFirmwareVersion attribute)</a>
-  </dt>
-
-        
-  <dt><a href="api/commands.html#decocare.commands.ReadGlucoseHistory.retries">(decocare.commands.ReadGlucoseHistory attribute)</a>
   </dt>
 
         
@@ -1715,6 +2416,10 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadPumpStatus.retries">(decocare.commands.ReadPumpStatus attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadRTC.retries">(decocare.commands.ReadRTC attribute)</a>
   </dt>
 
@@ -1727,11 +2432,27 @@
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadSensorSettings.retries">(decocare.commands.ReadSensorSettings attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadSettings.retries">(decocare.commands.ReadSettings attribute)</a>
   </dt>
 
         
+  <dt><a href="api/commands.html#decocare.commands.ReadTodayTotals508.retries">(decocare.commands.ReadTodayTotals508 attribute)</a>
+  </dt>
+
+        
   <dt><a href="api/commands.html#decocare.commands.ReadTotalsToday.retries">(decocare.commands.ReadTotalsToday attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.SetSuspend.retries">(decocare.commands.SetSuspend attribute)</a>
+  </dt>
+
+        
+  <dt><a href="api/commands.html#decocare.commands.TempBasal.retries">(decocare.commands.TempBasal attribute)</a>
   </dt>
 
       </dl></dd>
@@ -1749,6 +2470,10 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="api/history.html#decocare.history.Sara6E">Sara6E (class in decocare.history)</a>
+  </dt>
+
       
   <dt><a href="api/commands.html#decocare.commands.PumpCommand.save">save() (decocare.commands.PumpCommand method)</a>
   </dt>
@@ -1774,11 +2499,15 @@
   </dt>
 
       
-  <dt><a href="api/stick.html#decocare.stick.Stick.signal_strength">signal_strength() (decocare.stick.Stick method)</a>
+  <dt><a href="api/commands.html#decocare.commands.SetSuspend">SetSuspend (class in decocare.commands)</a>
   </dt>
 
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="api/stick.html#decocare.stick.Stick.signal_strength">signal_strength() (decocare.stick.Stick method)</a>
+  </dt>
+
       
   <dt><a href="api/stick.html#decocare.stick.SignalStrength">SignalStrength (class in decocare.stick)</a>
   </dt>
@@ -1820,19 +2549,21 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="api/history.html#decocare.history.TempBasal">TempBasal (class in decocare.history)</a>
+  <dt><a href="api/commands.html#decocare.commands.ReadSettings.temp_basal_type">temp_basal_type() (decocare.commands.ReadSettings method)</a>
   </dt>
 
+      
+  <dt><a href="api/commands.html#decocare.commands.TempBasal">TempBasal (class in decocare.commands)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="api/history.html#decocare.history.TempBasal">(class in decocare.history)</a>
+  </dt>
+
+      </dl></dd>
       
   <dt><a href="api/history.html#decocare.history.TempBasalDuration">TempBasalDuration (class in decocare.history)</a>
-  </dt>
-
-      
-  <dt><a href="api/history.html#decocare.history.test_time_encoders">test_time_encoders() (in module decocare.history)</a>
-  </dt>
-
-      
-  <dt><a href="api/history.html#decocare.history.Mask.time">time (decocare.history.Mask attribute)</a>
   </dt>
 
       
@@ -1841,6 +2572,10 @@
 
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="api/lib.html#decocare.lib.Timer">Timer (class in decocare.lib)</a>
+  </dt>
+
       
   <dt><a href="api/session.html#decocare.session.Session.transfer">transfer() (decocare.session.Session method)</a>
   </dt>
@@ -1853,10 +2588,6 @@
   <dt><a href="api/stick.html#decocare.stick.TransmitPacket">TransmitPacket (class in decocare.stick)</a>
   </dt>
 
-      
-  <dt><a href="api/history.html#decocare.history.twos_comp">twos_comp() (in module decocare.history)</a>
-  </dt>
-
   </dl></td>
 </tr></table>
 
@@ -1864,11 +2595,11 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="api/history.html#decocare.history.UnabsorbedInsulinBolus">UnabsorbedInsulinBolus (class in decocare.history)</a>
+  <dt><a href="api/history.html#decocare.history.unmask_m_midnight">unmask_m_midnight() (in module decocare.history)</a>
   </dt>
 
       
-  <dt><a href="api/history.html#decocare.history.unmask_date">unmask_date() (in module decocare.history)</a>
+  <dt><a href="api/commands.html#decocare.commands.KeypadPush.UP">UP() (decocare.commands.KeypadPush class method)</a>
   </dt>
 
   </dl></td>
@@ -1884,16 +2615,6 @@
   </dl></td>
 </tr></table>
 
-<h2 id="V">V</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%" valign="top"><dl>
-      
-  <dt><a href="api/history.html#decocare.history.VariableHead">VariableHead (class in decocare.history)</a>
-  </dt>
-
-  </dl></td>
-</tr></table>
-
 <h2 id="W">W</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
@@ -1902,13 +2623,9 @@
   </dt>
 
   </dl></td>
-</tr></table>
-
-<h2 id="Y">Y</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="api/history.html#decocare.history.Mask.year">year (decocare.history.Mask attribute)</a>
+  <dt><a href="api/commands.html#decocare.commands.WriteGlucoseHistoryTimestamp">WriteGlucoseHistoryTimestamp (class in decocare.commands)</a>
   </dt>
 
   </dl></td>
@@ -1955,7 +2672,7 @@
     </div>
     <div class="footer">
         &copy; Copyright 2013, Insulaudit contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

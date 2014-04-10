@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -55,7 +53,7 @@
 
 
 <span class="sd">&gt;&gt;&gt; hexdump( bytearray( [0x00] ) )</span>
-<span class="sd">&#39;0000   0x00                       .&#39;</span>
+<span class="sd">&#39;0000   0x00                                       .&#39;</span>
 
 <span class="sd">&gt;&gt;&gt; 0x00 == HighByte( 0x0F )</span>
 <span class="sd">True</span>
@@ -89,6 +87,7 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pformat</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
 <span class="kn">import</span> <span class="nn">dateutil.parser</span>
 
@@ -100,6 +99,27 @@
                     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bytez</span> <span class="p">]</span> <span class="p">)</span>
 
 
+<div class="viewcode-block" id="Timer"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.Timer">[docs]</a><span class="k">class</span> <span class="nc">Timer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">begin</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span> <span class="p">)</span>
+<div class="viewcode-block" id="Timer.millis"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.Timer.millis">[docs]</a>  <span class="k">def</span> <span class="nf">millis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">begin</span>
+    <span class="n">ms</span> <span class="o">=</span> <span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">+</span> <span class="n">dt</span><span class="o">.</span><span class="n">seconds</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">+</span> <span class="n">dt</span><span class="o">.</span><span class="n">microseconds</span> <span class="o">/</span> <span class="mf">1000.0</span>
+    <span class="k">return</span> <span class="n">ms</span>
+</div></div>
+<div class="viewcode-block" id="format_filter_date"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.format_filter_date">[docs]</a><span class="k">def</span> <span class="nf">format_filter_date</span> <span class="p">(</span><span class="n">date</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    &gt;&gt;&gt; format_filter_date(parse.date(&#39;2014-04-09&#39;))</span>
+<span class="sd">    [7, 222, 4, 9]</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">params</span> <span class="o">=</span> <span class="p">[</span> <span class="n">HighByte</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">),</span> <span class="n">LowByte</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">),</span>
+             <span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">date</span><span class="o">.</span><span class="n">day</span> <span class="p">]</span>
+  <span class="k">return</span> <span class="n">params</span>
+</div>
+<div class="viewcode-block" id="filter_date_today"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.filter_date_today">[docs]</a><span class="k">def</span> <span class="nf">filter_date_today</span> <span class="p">(</span> <span class="p">):</span>
+  <span class="k">return</span> <span class="n">format_filter_date</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span> <span class="p">))</span>
+</div>
 <div class="viewcode-block" id="parse"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.parse">[docs]</a><span class="k">class</span> <span class="nc">parse</span><span class="p">:</span>
   <span class="nd">@staticmethod</span>
 <div class="viewcode-block" id="parse.date"><a class="viewcode-back" href="../../api/lib.html#decocare.lib.parse.date">[docs]</a>  <span class="k">def</span> <span class="nf">date</span><span class="p">(</span> <span class="n">data</span> <span class="p">):</span>
@@ -441,7 +461,7 @@
     </div>
     <div class="footer">
         &copy; Copyright 2013, Insulaudit contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

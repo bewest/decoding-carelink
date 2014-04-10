@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -103,44 +101,8 @@ or command MM insulin pumps.  Tested with 515, and 522.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-decocare.tests">
-<span id="tests-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">tests</span></tt> Module<a class="headerlink" href="#module-decocare.tests" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="decocare.tests.big_days">
-<tt class="descclassname">decocare.tests.</tt><tt class="descname">big_days</tt><big>(</big><em>x=0</em><big>)</big><a class="reference internal" href="../_modules/decocare/tests.html#big_days"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.tests.big_days" title="Permalink to this definition">¶</a></dt>
-<dd><p># page 17, RECORD 11
-&gt;&gt;&gt; parse_date( big_days(0) ).isoformat( )
-&#8216;2012-11-20T21:53:41&#8217;</p>
-<p># page 17, ~ RECORD 12
-&gt;&gt;&gt; parse_date( big_days(1) ).isoformat( )
-&#8216;2012-11-20T22:07:38&#8217;</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse_date</span><span class="p">(</span> <span class="n">big_days</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span> <span class="p">)</span>
-<span class="go">&#39;2012-11-20T21:53:41&#39;</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse_date</span><span class="p">(</span> <span class="n">big_days</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span> <span class="p">)</span>
-<span class="go">&#39;2012-11-20T22:07:38&#39;</span>
-</pre></div>
-</div>
-<p># page 16, RECORD ~15
-&gt;&gt;&gt; parse_date( big_days(4) ).isoformat( )
-&#8216;2012-11-25T16:41:34&#8217;</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse_date</span><span class="p">(</span> <span class="n">big_days</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span> <span class="p">)</span>
-<span class="go">&#39;2012-11-25T13:54:32&#39;</span>
-</pre></div>
-</div>
-<p># page 15
-&gt;&gt;&gt; parse_date( big_days(6) ).isoformat( )
-&#8216;2012-11-29T20:25:37&#8217;</p>
-<p># page 0
-&gt;&gt;&gt; parse_date( big_days(7) ).isoformat( )
-&#8216;2012-12-20T14:59:02&#8217;</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse_date</span><span class="p">(</span> <span class="n">big_days</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span> <span class="p">)</span>
-<span class="go">&#39;2012-12-20T15:28:25&#39;</span>
-</pre></div>
-</div>
-</dd></dl>
-
+<div class="section" id="tests-module">
+<h2><tt class="xref py py-mod docutils literal"><span class="pre">tests</span></tt> Module<a class="headerlink" href="#tests-module" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -155,7 +117,7 @@ or command MM insulin pumps.  Tested with 515, and 522.</p>
 <li><a class="reference internal" href="#">decocare Package</a><ul>
 <li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">decocare</span></tt> Package</a></li>
 <li><a class="reference internal" href="#module-decocare.errors"><tt class="docutils literal"><span class="pre">errors</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-decocare.tests"><tt class="docutils literal"><span class="pre">tests</span></tt> Module</a></li>
+<li><a class="reference internal" href="#tests-module"><tt class="docutils literal"><span class="pre">tests</span></tt> Module</a></li>
 </ul>
 </li>
 </ul>
@@ -204,7 +166,7 @@ or command MM insulin pumps.  Tested with 515, and 522.</p>
     </div>
     <div class="footer">
         &copy; Copyright 2013, Insulaudit contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>
