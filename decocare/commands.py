@@ -953,13 +953,13 @@ class ReadISIGHistory (ReadSensorHistoryData):
   maxRecords = 32
 
 # MMX22/	CMD_READ_CALIBRATION_FACTOR	156	0x9c	('\x9c')	??
-class ReadCalibrationFactor (ReadHistoryData):
+class ReadCalibrationFactor (PumpCommand):
   """
   """
   code = 156
 
 # MMX23/	CMD_READ_VCNTR_HISTORY	213	0xd5	('\xd5')	??
-class ReadVCNTRHistory (ReadHistoryData):
+class ReadVCNTRHistory (ReadSensorHistoryData):
   code = 213
 
 # MMX23/	CMD_READ_OTHER_DEVICES_IDS	240	0xf0	('\xf0')	??
