@@ -944,7 +944,7 @@ class ReadGlucoseHistory (ReadSensorHistoryData):
   params = [ ]
 
 # MMX22/	CMD_READ_ISIG_HISTORY	155	0x9b	('\x9b')	??
-class ReadISIGHistory (ReadHistoryData):
+class ReadISIGHistory (ReadSensorHistoryData):
   """
   """
   descr = "read ISIG history"
