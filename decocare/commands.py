@@ -579,12 +579,30 @@ class Model511_ExperimentOP126 (PumpCommand):
 class ReadSettings511 (PumpCommand):
   code = 127
 
+# MMX11/	CMD_ENABLE_DISABLE_DETAIL_TRACE	160	0x9f	('\x9f')	??
+class PumpTraceSelect (PumpCommand):
+  code = 160
+
+class PumpEnableDetailTrace (PumpTraceSelect):
+  params = [ 1 ]
+
+class PumpDisableDetailTrace (PumpTraceSelect):
+  params = [ 0 ]
+
+class Experiment_OP161 (PumpCommand):
+  code = 161
+
+class Experiment_OP162 (PumpCommand):
+  code = 162
+
 # MMPump511/	ReadPumpTrace	163	0xa3	('\xa3')	??
 class ReadPumpTrace (PumpCommand):
   code = 163
+  maxRecords = 16
 # MMPump511/	ReadDetailTrace	164	0xa4	('\xa4')	??
 class ReadDetailTrace (PumpCommand):
   code = 164
+  maxRecords = 16
 
 # MMPump11??/	CMD_????????????	165	0xa5	0xa5	??
 class Model511_Experiment_OP165 (PumpCommand):
@@ -593,8 +611,11 @@ class Model511_Experiment_OP165 (PumpCommand):
 # MMPump511/	ReadNewTraceAlarm	166	0xa6	('\xa6')	??
 class ReadNewTraceAlarm (PumpCommand):
   code = 166
+  maxRecords = 16
+
 # MMPump511/	ReadOldTraceAlarm	167	0xa7	('\xa7')	??
 class ReadOldTraceAlarm (PumpCommand):
+  maxRecords = 16
   code = 167
 
 # MMX22/	CMD_WRITE_GLUCOSE_HISTORY_TIMESTAMP	40	0x28	('(')	??
@@ -1223,6 +1244,11 @@ __all__ = [
   'ReadCalibrationFactor',
   'ReadVCNTRHistory',
   'ReadOtherDevicesIDS',
+  'PumpTraceSelect',
+  'PumpEnableDetailTrace',
+  'PumpDisableDetailTrace',
+  'Experiment_OP161',
+  'Experiment_OP162',
 ]
 
 if __name__ == '__main__':
