@@ -2,7 +2,7 @@
 # PYTHON_ARGCOMPLETE_OK
 import argparse
 import sys, os
-from decocare import link, stick, session, commands, lib
+from decocare import link, stick, session, commands, lib, scan
 from pprint import pformat
 import logging
 import time
@@ -44,7 +44,7 @@ class CommandApp(object):
                         help="serial number of pump [default: %(default)s]")
     parser.add_argument('--port', type=str,
                         dest='port',
-                        default=conf.get('port', ''),
+                        default=conf.get('port', 'scan'),
                         help="Path to device [default: %(default)s]")
     parser.add_argument('--no-op',
                         dest='dryrun',
@@ -113,6 +113,8 @@ class CommandApp(object):
     print "using", "`", args, "`"
 
     print "```"
+    if args.port == 'scan' or args.port == "":
+      args.port = scan.scan( )
     uart = stick.Stick(link.Link(args.port, timeout=.400))
     print "```"
     print "```"
