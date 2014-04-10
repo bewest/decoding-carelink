@@ -687,8 +687,17 @@
 <span class="c"># MMPump512/	CMD_READ_INSULIN_SENSITIVITIES	139	0x8b	(&#39;\x8b&#39;)	OK</span>
 <span class="k">class</span> <span class="nc">ReadInsulinSensitivities</span> <span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div>
 <div class="viewcode-block" id="ReadInsulinSensitivities"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadInsulinSensitivities">[docs]</a>  <span class="n">code</span> <span class="o">=</span> <span class="mi">139</span>
+  <span class="n">resp_1</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">b</span><span class="s">&#39;</span><span class="se">\x01\x00</span><span class="s">-</span><span class="se">\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00</span><span class="s">&#39;</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">getData</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ReadInsulinSensitivities.getData"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadInsulinSensitivities.getData">[docs]</a>    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">isFast</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">isFast</span><span class="p">:</span>
+      <span class="k">return</span> <span class="s">&#39;Fast&#39;</span>
+    <span class="k">return</span> <span class="s">&#39;Regular&#39;</span>
+
 <span class="c"># MMPump512/	CMD_READ_BG_TARGETS	140	0x8c	(&#39;\x8c&#39;)	??</span>
-<span class="k">class</span> <span class="nc">ReadBGTargets</span> <span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div>
+<span class="k">class</span> <span class="nc">ReadBGTargets</span> <span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div></div>
 <div class="viewcode-block" id="ReadBGTargets"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadBGTargets">[docs]</a>  <span class="n">code</span> <span class="o">=</span> <span class="mi">140</span>
 
 <span class="c"># MMPump512/	CMD_READ_BG_ALARM_CLOCKS	142	0x8e	(&#39;\x8e&#39;)	??</span>
@@ -976,7 +985,7 @@
     <span class="nb">super</span><span class="p">(</span><span class="n">ReadSensorHistoryData</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 
 <span class="c"># MMX22/	CMD_READ_GLUCOSE_HISTORY	154	0x9a	(&#39;\x9a&#39;)	??</span>
-<span class="k">class</span> <span class="nc">ReadGlucoseHistory</span> <span class="p">(</span><span class="n">ReadHistoryData</span><span class="p">):</span></div>
+<span class="k">class</span> <span class="nc">ReadGlucoseHistory</span> <span class="p">(</span><span class="n">ReadSensorHistoryData</span><span class="p">):</span></div>
 <div class="viewcode-block" id="ReadGlucoseHistory"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadGlucoseHistory">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  &quot;&quot;&quot;</span>
   <span class="n">descr</span> <span class="o">=</span> <span class="s">&quot;read glucose history&quot;</span>
@@ -984,7 +993,7 @@
   <span class="n">params</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
 
 <span class="c"># MMX22/	CMD_READ_ISIG_HISTORY	155	0x9b	(&#39;\x9b&#39;)	??</span>
-<span class="k">class</span> <span class="nc">ReadISIGHistory</span> <span class="p">(</span><span class="n">ReadHistoryData</span><span class="p">):</span></div>
+<span class="k">class</span> <span class="nc">ReadISIGHistory</span> <span class="p">(</span><span class="n">ReadSensorHistoryData</span><span class="p">):</span></div>
 <div class="viewcode-block" id="ReadISIGHistory"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadISIGHistory">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  &quot;&quot;&quot;</span>
   <span class="n">descr</span> <span class="o">=</span> <span class="s">&quot;read ISIG history&quot;</span>
@@ -993,13 +1002,13 @@
   <span class="n">maxRecords</span> <span class="o">=</span> <span class="mi">32</span>
 
 <span class="c"># MMX22/	CMD_READ_CALIBRATION_FACTOR	156	0x9c	(&#39;\x9c&#39;)	??</span>
-<span class="k">class</span> <span class="nc">ReadCalibrationFactor</span> <span class="p">(</span><span class="n">ReadHistoryData</span><span class="p">):</span></div>
+<span class="k">class</span> <span class="nc">ReadCalibrationFactor</span> <span class="p">(</span><span class="n">PumpCommand</span><span class="p">):</span></div>
 <div class="viewcode-block" id="ReadCalibrationFactor"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadCalibrationFactor">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  &quot;&quot;&quot;</span>
   <span class="n">code</span> <span class="o">=</span> <span class="mi">156</span>
 
 <span class="c"># MMX23/	CMD_READ_VCNTR_HISTORY	213	0xd5	(&#39;\xd5&#39;)	??</span>
-<span class="k">class</span> <span class="nc">ReadVCNTRHistory</span> <span class="p">(</span><span class="n">ReadHistoryData</span><span class="p">):</span></div>
+<span class="k">class</span> <span class="nc">ReadVCNTRHistory</span> <span class="p">(</span><span class="n">ReadSensorHistoryData</span><span class="p">):</span></div>
 <div class="viewcode-block" id="ReadVCNTRHistory"><a class="viewcode-back" href="../../api/commands.html#decocare.commands.ReadVCNTRHistory">[docs]</a>  <span class="n">code</span> <span class="o">=</span> <span class="mi">213</span>
 
 <span class="c"># MMX23/	CMD_READ_OTHER_DEVICES_IDS	240	0xf0	(&#39;\xf0&#39;)	??</span>
@@ -1257,7 +1266,6 @@
   <span class="s">&#39;GuardianSensorAlarmSilence&#39;</span><span class="p">,</span>
   <span class="s">&#39;GuardianSensorRateChangeAlerts&#39;</span><span class="p">,</span>
   <span class="s">&#39;ReadSavedSettingsDate&#39;</span><span class="p">,</span>
-  <span class="s">&#39;ReadContrast(PumpCommand):&#39;</span><span class="p">,</span>
   <span class="s">&#39;ReadBolusReminderEnable&#39;</span><span class="p">,</span>
   <span class="s">&#39;ReadBolusReminders&#39;</span><span class="p">,</span>
   <span class="s">&#39;ReadFactoryParameters&#39;</span><span class="p">,</span>

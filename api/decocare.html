@@ -101,8 +101,140 @@ or command MM insulin pumps.  Tested with 515, and 522.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tests-module">
-<h2><tt class="xref py py-mod docutils literal"><span class="pre">tests</span></tt> Module<a class="headerlink" href="#tests-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-decocare.records.tests">
+<span id="tests-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">tests</span></tt> Module<a class="headerlink" href="#module-decocare.records.tests" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="decocare.records.tests.BW722">
+<em class="property">class </em><tt class="descclassname">decocare.records.tests.</tt><tt class="descname">BW722</tt><big>(</big><em>head</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/records/tests.html#BW722"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.records.tests.BW722" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.bolus.BolusWizard</span></tt></p>
+<dl class="method">
+<dt id="decocare.records.tests.BW722.decode">
+<tt class="descname">decode</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/records/tests.html#BW722.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.records.tests.BW722.decode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.records.tests.TestSaraBolus">
+<em class="property">class </em><tt class="descclassname">decocare.records.tests.</tt><tt class="descname">TestSaraBolus</tt><a class="reference internal" href="../_modules/decocare/records/tests.html#TestSaraBolus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.records.tests.TestSaraBolus" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="decocare.records.tests.TestSaraBolus.bolus_1_ok">
+<tt class="descname">bolus_1_ok</tt><em class="property"> = {'bg': 103, 'bg_target_low': 100, 'sensitivity': 60, 'bg_target_high': 120, 'unabsorbed_insulin_total': 0.5, 'correction_estimate': 0, 'unabsorbed_insulin_count': 2, 'carb_ratio': 12, 'food_estimate': 1, 'carb_input': 13, 'bolus_estimate': 1}</em><a class="headerlink" href="#decocare.records.tests.TestSaraBolus.bolus_1_ok" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.records.tests.TestSaraBolus.bw_1_bytes">
+<tt class="descname">bw_1_bytes</tt><em class="property"> = bytearray(b'[g\xa1Q\x0e\x04\r\rP\x00x&lt;d\x00\x00(\x00\x00\x14\x00(x')</em><a class="headerlink" href="#decocare.records.tests.TestSaraBolus.bw_1_bytes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.records.tests.TestSaraBolus.bw_2_bytes">
+<tt class="descname">bw_2_bytes</tt><em class="property"> = bytearray(b'[\xfc\xb7T\x0f\x04\r\x00P\x00x&lt;dX\x00\x00\x00\x00\x1c\x00&lt;x')</em><a class="headerlink" href="#decocare.records.tests.TestSaraBolus.bw_2_bytes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.records.tests.TestSaraBolus.cal_bg_bytes">
+<tt class="descname">cal_bg_bytes</tt><em class="property"> = bytearray(b'\n\xfc\xb4T/\x04\r')</em><a class="headerlink" href="#decocare.records.tests.TestSaraBolus.cal_bg_bytes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.records.tests.TestSaraBolus.csv_breakdown">
+<tt class="descname">csv_breakdown</tt><em class="property"> = '\n  9/4/13 14:17:33,,,,,,,Normal,1.0,1.0,,,,,,,,,,,,,,,,,,,,,BolusNormal\n    &quot;AMOUNT=1\n      CONCENTRATION=null\n      PROGRAMMED_AMOUNT=1\n      ACTION_REQUESTOR=pump\n      ENABLE=true\n      IS_DUAL_COMPONENT=false\n      UNABSORBED_INSULIN_TOTAL=0.5&quot;\n    11345487207,52554138,86,Paradigm Revel - 723\n\n  9/4/13 14:17:33,,,,,,,,,,,,,,,1.0,120,100,12,60,13,103,0,1,0.5,,,,,,BolusWizardBolusEstimate,&quot;BG_INPUT=103\n      BG_UNITS=mg dl\n      CARB_INPUT=13\n      CARB_UNITS=grams\n      CARB_RATIO=12\n      INSULIN_SENSITIVITY=60\n      BG_TARGET_LOW=100\n      BG_TARGET_HIGH=120\n      BOLUS_ESTIMATE=1\n      CORRECTION_ESTIMATE=0\n      FOOD_ESTIMATE=1\n      UNABSORBED_INSULIN_TOTAL=0.5\n      UNABSORBED_INSULIN_COUNT=2\n      ACTION_REQUESTOR=pump&quot;\n    11345487208,52554138,87,Paradigm Revel - 723\n\n  9/4/13 14:17:33,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,&quot;BOLUS_ESTIMATE_DATUM=11345487208\n      INDEX=0\n      AMOUNT=1.7\n      RECORD_AGE=121\n      INSULIN_TYPE=null\n      INSULIN_ACTION_CURVE=180&quot;\n    11345487209,52554138,88,Paradigm Revel - 723\n\n  9/4/13 14:17:33,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,&quot;BOLUS_ESTIMATE_DATUM=11345487208\n      INDEX=1\n      AMOUNT=1.5\n      RECORD_AGE=331\n      INSULIN_TYPE=null\n      INSULIN_ACTION_CURVE=180&quot;\n    11345487210,52554138,89,Paradigm Revel - 723\n\n  9/4/13 15:20:52,,,,,,,,,,,,,,,,,,,,,,,,,,252,,,,CalBGForPH,&quot;AMOUNT=252, ACTION_REQUESTOR=pump&quot;\n    11345487206,52554138,85,Paradigm Revel - 723\n\n  9/4/13 15:20:55,,,,,,,Normal,1.5,1.5,,,,,,,,,,,,,,,,,,,,,BolusNormal,&quot;AMOUNT=1.5\n      CONCENTRATION=null\n      PROGRAMMED_AMOUNT=1.5\n      ACTION_REQUESTOR=pump\n      ENABLE=true\n      IS_DUAL_COMPONENT=false\n      UNABSORBED_INSULIN_TOTAL=0.7&quot;\n    11345487201,52554138,80,Paradigm Revel - 723\n\n  9/4/13 15:20:55,,,,,,,,,,,,,,,1.5,120,100,12,60,0,252,2.2,0,0.7,,,,,,BolusWizardBolusEstimate,&quot;BG_INPUT=252\n      BG_UNITS=mg dl\n      CARB_INPUT=0\n      CARB_UNITS=grams\n      CARB_RATIO=12\n      INSULIN_SENSITIVITY=60\n      BG_TARGET_LOW=100\n      BG_TARGET_HIGH=120\n      BOLUS_ESTIMATE=1.5\n      CORRECTION_ESTIMATE=2.2\n      FOOD_ESTIMATE=0\n      UNABSORBED_INSULIN_TOTAL=0.7\n      UNABSORBED_INSULIN_COUNT=3\n      ACTION_REQUESTOR=pump&quot;\n    11345487202,52554138,81,Paradigm Revel - 723\n\n  9/4/13 15:20:55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,&quot;BOLUS_ESTIMATE_DATUM=11345487202\n      INDEX=0\n      AMOUNT=1\n      RECORD_AGE=64\n      INSULIN_TYPE=null\n      INSULIN_ACTION_CURVE=180&quot;\n    11345487203,52554138,82,Paradigm Revel - 723\n\n  9/4/13 15:20:55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,&quot;BOLUS_ESTIMATE_DATUM=11345487202\n      INDEX=1\n      AMOUNT=1.7\n      RECORD_AGE=184\n      INSULIN_TYPE=null\n      INSULIN_ACTION_CURVE=180&quot;\n    11345487204,52554138,83,Paradigm Revel - 723\n\n  9/4/13 15:20:55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,&quot;BOLUS_ESTIMATE_DATUM=11345487202\n      INDEX=2\n      AMOUNT=1.5\n      RECORD_AGE=394\n      INSULIN_TYPE=null\n      INSULIN_ACTION_CURVE=180&quot;\n    11345487205,52554138,84,Paradigm Revel - 723\n  9/4/13 16:11:57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorMissedDataTime,TIME=1800000,11345487185,52554138,64,Paradigm Revel - 723\n  '</em><a class="headerlink" href="#decocare.records.tests.TestSaraBolus.csv_breakdown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.records.tests.TestSaraBolus.hexdump">
+<tt class="descname">hexdump</tt><em class="property"> = '\n  5b 67\n    a1 51 0e 04 0d\n    0d 50 00 78\n  3c 64 00 00 28 00 00 14 00 28 78\n  5c 08 44 79 c0 3c 4b d0\n  01 00 28 00 28 00 14 00\n    a1 51 4e 04 0d\n  0a fc\n    b4 54 2f 04 0d\n  5b fc\n    b7 54 0f 04 0d\n    00 50 00 78\n  3c 64 58 00 00 00 00 1c 00 3c 78\n  5c 0b 28 40 c0 44 b8 c0 3c 8a d0\n  01 00 3c 00 3c 00 1c 00\n    b7 54 4f 04 0d\n  '</em><a class="headerlink" href="#decocare.records.tests.TestSaraBolus.hexdump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="decocare.records.tests.TestSaraBolus.test_cal_bg">
+<em class="property">classmethod </em><tt class="descname">test_cal_bg</tt><big>(</big><em>klass</em><big>)</big><a class="reference internal" href="../_modules/decocare/records/tests.html#TestSaraBolus.test_cal_bg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.records.tests.TestSaraBolus.test_cal_bg" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">TestSaraBolus</span><span class="o">.</span><span class="n">test_cal_bg</span><span class="p">(</span> <span class="p">)</span>
+<span class="go">CalBGForPH 2013-09-04T15:20:52 head[2], body[0] op[0x0a]</span>
+<span class="go">{</span>
+<span class="go">  &quot;amount&quot;: 252</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="decocare.records.tests.big_days">
+<tt class="descclassname">decocare.records.tests.</tt><tt class="descname">big_days</tt><big>(</big><em>x=0</em><big>)</big><a class="reference internal" href="../_modules/decocare/records/tests.html#big_days"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.records.tests.big_days" title="Permalink to this definition">¶</a></dt>
+<dd><p># page 17, RECORD 11
+&gt;&gt;&gt; parse_date( big_days(0) ).isoformat( )
+&#8216;2012-11-20T21:53:41&#8217;</p>
+<p># page 17, ~ RECORD 12
+&gt;&gt;&gt; parse_date( big_days(1) ).isoformat( )
+&#8216;2012-11-20T22:07:38&#8217;</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse_date</span><span class="p">(</span> <span class="n">big_days</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span> <span class="p">)</span>
+<span class="go">&#39;2012-11-20T21:53:41&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse_date</span><span class="p">(</span> <span class="n">big_days</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span> <span class="p">)</span>
+<span class="go">&#39;2012-11-20T22:07:38&#39;</span>
+</pre></div>
+</div>
+<p># page 16, RECORD ~15
+&gt;&gt;&gt; parse_date( big_days(4) ).isoformat( )
+&#8216;2012-11-25T16:41:34&#8217;</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse_date</span><span class="p">(</span> <span class="n">big_days</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span> <span class="p">)</span>
+<span class="go">&#39;2012-11-25T13:54:32&#39;</span>
+</pre></div>
+</div>
+<p># page 15
+&gt;&gt;&gt; parse_date( big_days(6) ).isoformat( )
+&#8216;2012-11-29T20:25:37&#8217;</p>
+<p># page 0
+&gt;&gt;&gt; parse_date( big_days(7) ).isoformat( )
+&#8216;2012-12-20T14:59:02&#8217;</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">parse_date</span><span class="p">(</span> <span class="n">big_days</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span> <span class="p">)</span>
+<span class="go">&#39;2012-12-20T15:28:25&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="decocare.records.tests.decode_wizard">
+<tt class="descclassname">decocare.records.tests.</tt><tt class="descname">decode_wizard</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/records/tests.html#decode_wizard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.records.tests.decode_wizard" title="Permalink to this definition">¶</a></dt>
+<dd><p>BYTE
+01:
+02:
+03:
+04:
+05:
+06:
+07:
+08:
+09:
+10:
+12:
+13:
+14:
+15:
+16:
+17:
+18:
+19:
+20:
+21:
+22:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="decocare.records.tests.dictlines">
+<tt class="descclassname">decocare.records.tests.</tt><tt class="descname">dictlines</tt><big>(</big><em>d</em><big>)</big><a class="reference internal" href="../_modules/decocare/records/tests.html#dictlines"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.records.tests.dictlines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="decocare.records.tests.unsolved_bolus_wizard">
+<tt class="descclassname">decocare.records.tests.</tt><tt class="descname">unsolved_bolus_wizard</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/records/tests.html#unsolved_bolus_wizard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.records.tests.unsolved_bolus_wizard" title="Permalink to this definition">¶</a></dt>
+<dd><p># &gt;&gt;&gt; unsolved_bolus_wizard( )</p>
+</dd></dl>
+
 </div>
 </div>
 
@@ -117,7 +249,7 @@ or command MM insulin pumps.  Tested with 515, and 522.</p>
 <li><a class="reference internal" href="#">decocare Package</a><ul>
 <li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">decocare</span></tt> Package</a></li>
 <li><a class="reference internal" href="#module-decocare.errors"><tt class="docutils literal"><span class="pre">errors</span></tt> Module</a></li>
-<li><a class="reference internal" href="#tests-module"><tt class="docutils literal"><span class="pre">tests</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-decocare.records.tests"><tt class="docutils literal"><span class="pre">tests</span></tt> Module</a></li>
 </ul>
 </li>
 </ul>

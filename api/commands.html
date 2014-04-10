@@ -61,9 +61,9 @@
 of them respond to a suite of overlapping commands.  Here&#8217;s a
 discussion of some of the commands available.</p>
 <p>(There are many more.)</p>
-<div class="section" id="commands-module">
-<h2><tt class="xref py py-mod docutils literal"><span class="pre">commands</span></tt> Module<a class="headerlink" href="#commands-module" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-decocare.commands"></span><dl class="class">
+<div class="section" id="module-decocare.commands">
+<span id="commands-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">commands</span></tt> Module<a class="headerlink" href="#module-decocare.commands" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
 <dt id="decocare.commands.BaseCommand">
 <em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">BaseCommand</tt><big>(</big><em>code</em>, <em>descr</em>, <em>*args</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#BaseCommand"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.BaseCommand" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
@@ -576,7 +576,7 @@ MM512 and up - opcode 152
 <dl class="class">
 <dt id="decocare.commands.ReadGlucoseHistory">
 <em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadGlucoseHistory</tt><big>(</big><em>page=None</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadGlucoseHistory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadGlucoseHistory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.commands.ReadHistoryData" title="decocare.commands.ReadHistoryData"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.ReadHistoryData</span></tt></a></p>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.ReadSensorHistoryData" title="decocare.commands.ReadSensorHistoryData"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.ReadSensorHistoryData</span></tt></a></p>
 <dl class="attribute">
 <dt id="decocare.commands.ReadGlucoseHistory.code">
 <tt class="descname">code</tt><em class="property"> = 154</em><a class="headerlink" href="#decocare.commands.ReadGlucoseHistory.code" title="Permalink to this definition">¶</a></dt>
@@ -1458,7 +1458,7 @@ MM512 and up - opcode 152
 <dl class="class">
 <dt id="decocare.commands.ReadISIGHistory">
 <em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadISIGHistory</tt><big>(</big><em>page=None</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadISIGHistory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadISIGHistory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.commands.ReadHistoryData" title="decocare.commands.ReadHistoryData"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.ReadHistoryData</span></tt></a></p>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.ReadSensorHistoryData" title="decocare.commands.ReadSensorHistoryData"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.ReadSensorHistoryData</span></tt></a></p>
 <dl class="attribute">
 <dt id="decocare.commands.ReadISIGHistory.code">
 <tt class="descname">code</tt><em class="property"> = 155</em><a class="headerlink" href="#decocare.commands.ReadISIGHistory.code" title="Permalink to this definition">¶</a></dt>
@@ -1730,6 +1730,16 @@ MM512 and up - opcode 152
 <tt class="descname">code</tt><em class="property"> = 139</em><a class="headerlink" href="#decocare.commands.ReadInsulinSensitivities.code" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="method">
+<dt id="decocare.commands.ReadInsulinSensitivities.getData">
+<tt class="descname">getData</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadInsulinSensitivities.getData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadInsulinSensitivities.getData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.commands.ReadInsulinSensitivities.resp_1">
+<tt class="descname">resp_1</tt><em class="property"> = bytearray(b'\x01\x00-\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')</em><a class="headerlink" href="#decocare.commands.ReadInsulinSensitivities.resp_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -1954,8 +1964,8 @@ MM512 and up - opcode 152
 
 <dl class="class">
 <dt id="decocare.commands.ReadCalibrationFactor">
-<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadCalibrationFactor</tt><big>(</big><em>page=None</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadCalibrationFactor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadCalibrationFactor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.commands.ReadHistoryData" title="decocare.commands.ReadHistoryData"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.ReadHistoryData</span></tt></a></p>
+<em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadCalibrationFactor</tt><big>(</big><em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadCalibrationFactor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadCalibrationFactor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.PumpCommand" title="decocare.commands.PumpCommand"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.PumpCommand</span></tt></a></p>
 <dl class="attribute">
 <dt id="decocare.commands.ReadCalibrationFactor.code">
 <tt class="descname">code</tt><em class="property"> = 156</em><a class="headerlink" href="#decocare.commands.ReadCalibrationFactor.code" title="Permalink to this definition">¶</a></dt>
@@ -1966,7 +1976,7 @@ MM512 and up - opcode 152
 <dl class="class">
 <dt id="decocare.commands.ReadVCNTRHistory">
 <em class="property">class </em><tt class="descclassname">decocare.commands.</tt><tt class="descname">ReadVCNTRHistory</tt><big>(</big><em>page=None</em>, <em>**kwds</em><big>)</big><a class="reference internal" href="../_modules/decocare/commands.html#ReadVCNTRHistory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.commands.ReadVCNTRHistory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#decocare.commands.ReadHistoryData" title="decocare.commands.ReadHistoryData"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.ReadHistoryData</span></tt></a></p>
+<dd><p>Bases: <a class="reference internal" href="#decocare.commands.ReadSensorHistoryData" title="decocare.commands.ReadSensorHistoryData"><tt class="xref py py-class docutils literal"><span class="pre">decocare.commands.ReadSensorHistoryData</span></tt></a></p>
 <dl class="attribute">
 <dt id="decocare.commands.ReadVCNTRHistory.code">
 <tt class="descname">code</tt><em class="property"> = 213</em><a class="headerlink" href="#decocare.commands.ReadVCNTRHistory.code" title="Permalink to this definition">¶</a></dt>
@@ -1997,7 +2007,7 @@ MM512 and up - opcode 152
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Commands</a><ul>
-<li><a class="reference internal" href="#commands-module"><tt class="docutils literal"><span class="pre">commands</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-decocare.commands"><tt class="docutils literal"><span class="pre">commands</span></tt> Module</a></li>
 </ul>
 </li>
 </ul>

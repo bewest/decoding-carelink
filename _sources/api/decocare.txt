@@ -31,7 +31,7 @@ decocare Package
 :mod:`tests` Module
 -------------------
 
-.. automodule:: decocare.tests
+.. automodule:: decocare.records.tests
     :members:
     :undoc-members:
     :show-inheritance:
