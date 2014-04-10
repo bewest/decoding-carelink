@@ -188,7 +188,7 @@ def exec_request (pump, msg, args={},
   if render_decoded:
     print "#### decoded:"
     print "```python"
-    print response.getData( )
+    print repr(response.getData( ))
     print "```"
   if save:
     response.save(prefix=prefix)
