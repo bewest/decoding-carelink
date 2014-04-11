@@ -43,14 +43,25 @@ your behalf:
 
 This only needs to be done once:
 
+## From source
 ```bash
 git clone https://github.com/bewest/decoding-carelink.git
 cd decoding-carelink
 sudo python ez_setup.py # only if you rarely use python
 sudo python setup.py develop
+```
+
+### Contribute your logs
+
+Fork the repo, create a new branch, send the results back to your branch.
+There will be a green "create pull request button."  Putting your logs back on
+github will allow more people to assist in decoding results.
+
+```bash
 git checkout -b myname/init # replace <myname> with your name
 # all done
 ```
+#### Find/Create serial device in the OS
 
 Congratulations, now you are ready for the demo:
 Plug in the carelink usb stick, and run this:
@@ -67,6 +78,7 @@ experiments.
 * on **windows** the `PORT` is called `COM1` or something
 * on **Linux** the `PORT` is called `/dev/ttyUSBx` or something
 
+### Get your logs
 ```bash
 python decocare/stick.py /dev/ttyUSB0 # on windows this is called COM1
 # should get a bunch of output, notably some counters called INTERFACE STATS
@@ -75,7 +87,9 @@ python decocare/stick.py /dev/ttyUSB0 # on windows this is called COM1
 ```
 
 Fantastic.
-Send me your results!
+Send me your results!  The following process uses git to store your
+recent results.  You can email me a bundle, or simply push your branch
+back to your fork on github.
 
 Do this every time, after you run some experiments:
 ```bash
@@ -195,13 +209,109 @@ therapy, and then send the data to their preferred auditing software.
 ## Tools
 ### `./bin/mm-send-comm.py`
 
-```bash
-
+##### `mm-send-comm.py -h`
+```
++ mm-send-comm.py -h
 usage: mm-send-comm.py [-h] [--serial SERIAL] [--port PORT] [--no-op]
                        [--skip-prelude] [--no-rf-prelude] [--skip-postlude]
                        [-v] [--init] [--prefix-path PREFIX_PATH] [--saveall]
-                       [--prefix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory,ReadProfiles511_STD,ReadProfiles511_A,ReadProfiles511_B,Model511_ExperimentOP125,Model511_ExperimentOP126,ReadSettings511,ReadPumpTrace,ReadDetailTrace,Model511_Experiment_OP165,ReadNewTraceAlarm,ReadOldTraceAlarm,WriteGlucoseHistoryTimestamp,ReadLanguage,ReadBolusWizardSetupStatus,ReadCarbUnits,ReadBGUnits,ReadCarbRatios,ReadInsulinSensitivities,ReadBGTargets,ReadBGAlarmCLocks,ReadReservoirWarning,ReadBGReminderEnable,ReadSettings512,ReadProfile_STD512,ReadProfile_A512,ReadProfile_B512,ReadLogicLinkIDS,Model512Experiment_OP150,ReadBGAlarmEnable,GuardianSensorSettings,GuardianSensorSettings,GuardianSensorDemoGraphTimeout,GuardianSensorAlarmSilence,GuardianSensorRateChangeAlerts,ReadSavedSettingsDate,ReadContrastPumpCommand):,ReadBolusReminderEnable,ReadBolusReminders,ReadFactoryParameters,ReadCalibrationFactor,ReadVCNTRHistory,ReadOtherDevicesIDS}]
-                       [--postfix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory,ReadProfiles511_STD,ReadProfiles511_A,ReadProfiles511_B,Model511_ExperimentOP125,Model511_ExperimentOP126,ReadSettings511,ReadPumpTrace,ReadDetailTrace,Model511_Experiment_OP165,ReadNewTraceAlarm,ReadOldTraceAlarm,WriteGlucoseHistoryTimestamp,ReadLanguage,ReadBolusWizardSetupStatus,ReadCarbUnits,ReadBGUnits,ReadCarbRatios,ReadInsulinSensitivities,ReadBGTargets,ReadBGAlarmCLocks,ReadReservoirWarning,ReadBGReminderEnable,ReadSettings512,ReadProfile_STD512,ReadProfile_A512,ReadProfile_B512,ReadLogicLinkIDS,Model512Experiment_OP150,ReadBGAlarmEnable,GuardianSensorSettings,GuardianSensorSettings,GuardianSensorDemoGraphTimeout,GuardianSensorAlarmSilence,GuardianSensorRateChangeAlerts,ReadSavedSettingsDate,ReadContrast(PumpCommand:,ReadBolusReminderEnable,ReadBolusReminders,ReadFactoryParameters,ReadCalibrationFactor,ReadVCNTRHistory,ReadOtherDevicesIDS}]
+                       [--prefix
+                       {BaseCommand, KeypadPush, PowerControl, PowerControlOff,
+                       PumpCommand, PumpResume, PumpSuspend, ReadBasalTemp,
+                       ReadBatteryStatus, ReadContrast, ReadCurPageNumber,
+                       ReadErrorStatus, ReadFirmwareVersion,
+                       ReadGlucoseHistory, ReadHistoryData, ReadPumpID,
+                       ReadPumpModel, ReadPumpState, ReadPumpStatus, ReadRTC,
+                       ReadRadioCtrlACL, ReadRemainingInsulin, ReadSettings,
+                       ReadTotalsToday, SetSuspend, PushEASY, PushUP, PushDOWN,
+                       PushACT, PushESC, TempBasal, ManualCommand,
+                       ReadCurGlucosePageNumber, ReadErrorStatus508,
+                       ReadBolusHistory, ReadDailyTotals, ReadPrimeBoluses,
+                       ReadAlarms, ReadProfileSets, ReadUserEvents,
+                       ReadRemoteControlID, Read128KMem, Read256KMem,
+                       ReadBasalTemp508, ReadTodayTotals508,
+                       ReadSensorSettings, ReadSensorHistoryData,
+                       ReadISIGHistory, FilterHistory, FilterGlucoseHistory,
+                       FilterISIGHistory, ReadProfiles511_STD,
+                       ReadProfiles511_A, ReadProfiles511_B,
+                       Model511_ExperimentOP125, Model511_ExperimentOP126,
+                       ReadSettings511, ReadPumpTrace, ReadDetailTrace,
+                       Model511_Experiment_OP165, ReadNewTraceAlarm,
+                       ReadOldTraceAlarm, WriteGlucoseHistoryTimestamp,
+                       ReadLanguage, ReadBolusWizardSetupStatus, ReadCarbUnits,
+                       ReadBGUnits, ReadCarbRatios, ReadInsulinSensitivities,
+                       ReadBGTargets, ReadBGAlarmCLocks, ReadReservoirWarning,
+                       ReadBGReminderEnable, ReadSettings512,
+                       ReadProfile_STD512, ReadProfile_A512, ReadProfile_B512,
+                       ReadLogicLinkIDS, Model512Experiment_OP150,
+                       ReadBGAlarmEnable, GuardianSensorSettings,
+                       GuardianSensorSettings, GuardianSensorDemoGraphTimeout,
+                       GuardianSensorAlarmSilence,
+                       GuardianSensorRateChangeAlerts, ReadSavedSettingsDate,
+                       ReadBolusReminderEnable, ReadBolusReminders,
+                       ReadFactoryParameters, ReadCalibrationFactor,
+                       ReadVCNTRHistory, ReadOtherDevicesIDS, PumpTraceSelect,
+                       PumpEnableDetailTrace, PumpDisableDetailTrace,
+                       Experiment_OP161, Experiment_OP162,
+                       Model511_Experiment_OP119, Model511_Experiment_OP120,
+                       Model511_Experiment_OP121, Model511_Experiment_OP122,
+                       Model511_Experiment_OP123, Model511_Experiment_OP124,
+                       Model511_Experiment_OP125, Model511_Experiment_OP126,
+                       Model511_Experiment_OP127, Model511_Experiment_OP128,
+                       Model511_Experiment_OP129, Model511_Experiment_OP130,
+                       SelectBasalProfile, SelectBasalProfileSTD,
+                       SelectBasalProfileA, SelectBasalProfileB,
+                       PumpExperiment_OP69, PumpExperiment_OP70,
+                       PumpExperiment_OP71, PumpExperiment_OP72,
+                       PumpExperiment_OP73, PumpExperiment_OP75}]
+                       [--postfix {BaseCommand, KeypadPush, PowerControl,
+                       PowerControlOff, PumpCommand, PumpResume, PumpSuspend,
+                       ReadBasalTemp, ReadBatteryStatus, ReadContrast,
+                       ReadCurPageNumber, ReadErrorStatus, ReadFirmwareVersion,
+                       ReadGlucoseHistory, ReadHistoryData, ReadPumpID,
+                       ReadPumpModel, ReadPumpState, ReadPumpStatus, ReadRTC,
+                       ReadRadioCtrlACL, ReadRemainingInsulin, ReadSettings,
+                       ReadTotalsToday, SetSuspend, PushEASY, PushUP, PushDOWN,
+                       PushACT, PushESC, TempBasal, ManualCommand,
+                       ReadCurGlucosePageNumber, ReadErrorStatus508,
+                       ReadBolusHistory, ReadDailyTotals, ReadPrimeBoluses,
+                       ReadAlarms, ReadProfileSets, ReadUserEvents,
+                       ReadRemoteControlID, Read128KMem, Read256KMem,
+                       ReadBasalTemp508, ReadTodayTotals508,
+                       ReadSensorSettings, ReadSensorHistoryData,
+                       ReadISIGHistory, FilterHistory, FilterGlucoseHistory,
+                       FilterISIGHistory, ReadProfiles511_STD,
+                       ReadProfiles511_A, ReadProfiles511_B,
+                       Model511_ExperimentOP125, Model511_ExperimentOP126,
+                       ReadSettings511, ReadPumpTrace, ReadDetailTrace,
+                       Model511_Experiment_OP165, ReadNewTraceAlarm,
+                       ReadOldTraceAlarm, WriteGlucoseHistoryTimestamp,
+                       ReadLanguage, ReadBolusWizardSetupStatus, ReadCarbUnits,
+                       ReadBGUnits, ReadCarbRatios, ReadInsulinSensitivities,
+                       ReadBGTargets, ReadBGAlarmCLocks, ReadReservoirWarning,
+                       ReadBGReminderEnable, ReadSettings512,
+                       ReadProfile_STD512, ReadProfile_A512, ReadProfile_B512,
+                       ReadLogicLinkIDS, Model512Experiment_OP150,
+                       ReadBGAlarmEnable, GuardianSensorSettings,
+                       GuardianSensorSettings, GuardianSensorDemoGraphTimeout,
+                       GuardianSensorAlarmSilence,
+                       GuardianSensorRateChangeAlerts, ReadSavedSettingsDate,
+                       ReadBolusReminderEnable, ReadBolusReminders,
+                       ReadFactoryParameters, ReadCalibrationFactor,
+                       ReadVCNTRHistory, ReadOtherDevicesIDS, PumpTraceSelect,
+                       PumpEnableDetailTrace, PumpDisableDetailTrace,
+                       Experiment_OP161, Experiment_OP162,
+                       Model511_Experiment_OP119, Model511_Experiment_OP120,
+                       Model511_Experiment_OP121, Model511_Experiment_OP122,
+                       Model511_Experiment_OP123, Model511_Experiment_OP124,
+                       Model511_Experiment_OP125, Model511_Experiment_OP126,
+                       Model511_Experiment_OP127, Model511_Experiment_OP128,
+                       Model511_Experiment_OP129, Model511_Experiment_OP130,
+                       SelectBasalProfile, SelectBasalProfileSTD,
+                       SelectBasalProfileA, SelectBasalProfileB,
+                       PumpExperiment_OP69, PumpExperiment_OP70,
+                       PumpExperiment_OP71, PumpExperiment_OP72,
+                       PumpExperiment_OP73, PumpExperiment_OP75}]
                        {sleep,tweak,ManualCommand} ...
 
 mm-send-comm.py - send messages to a compatible MM insulin pump
@@ -215,9 +325,8 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  --serial SERIAL       serial number of pump [default: 208850]
-  --port PORT           Path to device [default: /dev/serial/by-id/usb-
-                        0a21_8001-if00-port0]
+  --serial SERIAL       serial number of pump [default: ]
+  --port PORT           Path to device [default: ]
   --no-op               Dry run, don't do main function
   --skip-prelude        Don't do the normal prelude.
   --no-rf-prelude       Do the prelude, but don't query the pump.
@@ -228,154 +337,89 @@ optional arguments:
                         Prefix to store saved files when using --save or
                         --saveall.
   --saveall             Whether or not to save all responses.
-  --prefix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory,ReadProfiles511_STD,ReadProfiles511_A,ReadProfiles511_B,Model511_ExperimentOP125,Model511_ExperimentOP126,ReadSettings511,ReadPumpTrace,ReadDetailTrace,Model511_Experiment_OP165,ReadNewTraceAlarm,ReadOldTraceAlarm,WriteGlucoseHistoryTimestamp,ReadLanguage,ReadBolusWizardSetupStatus,ReadCarbUnits,ReadBGUnits,ReadCarbRatios,ReadInsulinSensitivities,ReadBGTargets,ReadBGAlarmCLocks,ReadReservoirWarning,ReadBGReminderEnable,ReadSettings512,ReadProfile_STD512,ReadProfile_A512,ReadProfile_B512,ReadLogicLinkIDS,Model512Experiment_OP150,ReadBGAlarmEnable,GuardianSensorSettings,GuardianSensorSettings,GuardianSensorDemoGraphTimeout,GuardianSensorAlarmSilence,GuardianSensorRateChangeAlerts,ReadSavedSettingsDate,ReadContrast(PumpCommand):,ReadBolusReminderEnable,ReadBolusReminders,ReadFactoryParameters,ReadCalibrationFactor,ReadVCNTRHistory,ReadOtherDevicesIDS}
+  --prefix {BaseCommand, KeypadPush, PowerControl, PowerControlOff,
+  PumpCommand, PumpResume, PumpSuspend, ReadBasalTemp, ReadBatteryStatus,
+  ReadContrast, ReadCurPageNumber, ReadErrorStatus, ReadFirmwareVersion,
+  ReadGlucoseHistory, ReadHistoryData, ReadPumpID, ReadPumpModel,
+  ReadPumpState, ReadPumpStatus, ReadRTC, ReadRadioCtrlACL,
+  ReadRemainingInsulin, ReadSettings, ReadTotalsToday, SetSuspend, PushEASY,
+  PushUP, PushDOWN, PushACT, PushESC, TempBasal, ManualCommand,
+  ReadCurGlucosePageNumber, ReadErrorStatus508, ReadBolusHistory,
+  ReadDailyTotals, ReadPrimeBoluses, ReadAlarms, ReadProfileSets,
+  ReadUserEvents, ReadRemoteControlID, Read128KMem, Read256KMem,
+  ReadBasalTemp508, ReadTodayTotals508, ReadSensorSettings,
+  ReadSensorHistoryData, ReadISIGHistory, FilterHistory, FilterGlucoseHistory,
+  FilterISIGHistory, ReadProfiles511_STD, ReadProfiles511_A, ReadProfiles511_B,
+  Model511_ExperimentOP125, Model511_ExperimentOP126, ReadSettings511,
+  ReadPumpTrace, ReadDetailTrace, Model511_Experiment_OP165, ReadNewTraceAlarm,
+  ReadOldTraceAlarm, WriteGlucoseHistoryTimestamp, ReadLanguage,
+  ReadBolusWizardSetupStatus, ReadCarbUnits, ReadBGUnits, ReadCarbRatios,
+  ReadInsulinSensitivities, ReadBGTargets, ReadBGAlarmCLocks,
+  ReadReservoirWarning, ReadBGReminderEnable, ReadSettings512,
+  ReadProfile_STD512, ReadProfile_A512, ReadProfile_B512, ReadLogicLinkIDS,
+  Model512Experiment_OP150, ReadBGAlarmEnable, GuardianSensorSettings,
+  GuardianSensorSettings, GuardianSensorDemoGraphTimeout,
+  GuardianSensorAlarmSilence, GuardianSensorRateChangeAlerts,
+  ReadSavedSettingsDate, ReadBolusReminderEnable, ReadBolusReminders,
+  ReadFactoryParameters, ReadCalibrationFactor, ReadVCNTRHistory,
+  ReadOtherDevicesIDS, PumpTraceSelect, PumpEnableDetailTrace,
+  PumpDisableDetailTrace, Experiment_OP161, Experiment_OP162,
+  Model511_Experiment_OP119, Model511_Experiment_OP120,
+  Model511_Experiment_OP121, Model511_Experiment_OP122,
+  Model511_Experiment_OP123, Model511_Experiment_OP124,
+  Model511_Experiment_OP125, Model511_Experiment_OP126,
+  Model511_Experiment_OP127, Model511_Experiment_OP128,
+  Model511_Experiment_OP129, Model511_Experiment_OP130, SelectBasalProfile,
+  SelectBasalProfileSTD, SelectBasalProfileA, SelectBasalProfileB,
+  PumpExperiment_OP69, PumpExperiment_OP70, PumpExperiment_OP71,
+  PumpExperiment_OP72, PumpExperiment_OP73, PumpExperiment_OP75}
                         Built-in commands to run before the main one.
-  --postfix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory,ReadProfiles511_STD,ReadProfiles511_A,ReadProfiles511_B,Model511_ExperimentOP125,Model511_ExperimentOP126,ReadSettings511,ReadPumpTrace,ReadDetailTrace,Model511_Experiment_OP165,ReadNewTraceAlarm,ReadOldTraceAlarm,WriteGlucoseHistoryTimestamp,ReadLanguage,ReadBolusWizardSetupStatus,ReadCarbUnits,ReadBGUnits,ReadCarbRatios,ReadInsulinSensitivities,ReadBGTargets,ReadBGAlarmCLocks,ReadReservoirWarning,ReadBGReminderEnable,ReadSettings512,ReadProfile_STD512,ReadProfile_A512,ReadProfile_B512,ReadLogicLinkIDS,Model512Experiment_OP150,ReadBGAlarmEnable,GuardianSensorSettings,GuardianSensorSettings,GuardianSensorDemoGraphTimeout,GuardianSensorAlarmSilence,GuardianSensorRateChangeAlerts,ReadSavedSettingsDate,ReadContrast(PumpCommand):,ReadBolusReminderEnable,ReadBolusReminders,ReadFactoryParameters,ReadCalibrationFactor,ReadVCNTRHistory,ReadOtherDevicesIDS}
+  --postfix {BaseCommand, KeypadPush, PowerControl, PowerControlOff,
+  PumpCommand, PumpResume, PumpSuspend, ReadBasalTemp, ReadBatteryStatus,
+  ReadContrast, ReadCurPageNumber, ReadErrorStatus, ReadFirmwareVersion,
+  ReadGlucoseHistory, ReadHistoryData, ReadPumpID, ReadPumpModel,
+  ReadPumpState, ReadPumpStatus, ReadRTC, ReadRadioCtrlACL,
+  ReadRemainingInsulin, ReadSettings, ReadTotalsToday, SetSuspend, PushEASY,
+  PushUP, PushDOWN, PushACT, PushESC, TempBasal, ManualCommand,
+  ReadCurGlucosePageNumber, ReadErrorStatus508, ReadBolusHistory,
+  ReadDailyTotals, ReadPrimeBoluses, ReadAlarms, ReadProfileSets,
+  ReadUserEvents, ReadRemoteControlID, Read128KMem, Read256KMem,
+  ReadBasalTemp508, ReadTodayTotals508, ReadSensorSettings,
+  ReadSensorHistoryData, ReadISIGHistory, FilterHistory, FilterGlucoseHistory,
+  FilterISIGHistory, ReadProfiles511_STD, ReadProfiles511_A, ReadProfiles511_B,
+  Model511_ExperimentOP125, Model511_ExperimentOP126, ReadSettings511,
+  ReadPumpTrace, ReadDetailTrace, Model511_Experiment_OP165, ReadNewTraceAlarm,
+  ReadOldTraceAlarm, WriteGlucoseHistoryTimestamp, ReadLanguage,
+  ReadBolusWizardSetupStatus, ReadCarbUnits, ReadBGUnits, ReadCarbRatios,
+  ReadInsulinSensitivities, ReadBGTargets, ReadBGAlarmCLocks,
+  ReadReservoirWarning, ReadBGReminderEnable, ReadSettings512,
+  ReadProfile_STD512, ReadProfile_A512, ReadProfile_B512, ReadLogicLinkIDS,
+  Model512Experiment_OP150, ReadBGAlarmEnable, GuardianSensorSettings,
+  GuardianSensorSettings, GuardianSensorDemoGraphTimeout,
+  GuardianSensorAlarmSilence, GuardianSensorRateChangeAlerts,
+  ReadSavedSettingsDate, ReadBolusReminderEnable, ReadBolusReminders,
+  ReadFactoryParameters, ReadCalibrationFactor, ReadVCNTRHistory,
+  ReadOtherDevicesIDS, PumpTraceSelect, PumpEnableDetailTrace,
+  PumpDisableDetailTrace, Experiment_OP161, Experiment_OP162,
+  Model511_Experiment_OP119, Model511_Experiment_OP120,
+  Model511_Experiment_OP121, Model511_Experiment_OP122,
+  Model511_Experiment_OP123, Model511_Experiment_OP124,
+  Model511_Experiment_OP125, Model511_Experiment_OP126,
+  Model511_Experiment_OP127, Model511_Experiment_OP128,
+  Model511_Experiment_OP129, Model511_Experiment_OP130, SelectBasalProfile,
+  SelectBasalProfileSTD, SelectBasalProfileA, SelectBasalProfileB,
+  PumpExperiment_OP69, PumpExperiment_OP70, PumpExperiment_OP71,
+  PumpExperiment_OP72, PumpExperiment_OP73, PumpExperiment_OP75}
                         Built-in commands to run after the main one.
 
 This tool is intended to help discover protocol behavior. Under no
 circumstance is it intended to deliver therapy.
+```
 
-usage: mm-send-comm.py sleep [-h] timeout
+##### `mm-send-comm.py ManualCommand -h`
 
-positional arguments:
-  timeout     Sleep in between running --prefix and --postfix
-
-optional arguments:
-  -h, --help  show this help message and exit
-
-usage: mm-send-comm.py tweak [-h] [--params PARAMS] [--descr DESCR]
-                             [--name NAME] [--save] [--effectTime EFFECTTIME]
-                             [--maxRecords MAXRECORDS]
-                             [--bytesPerRecord BYTESPERRECORD] [--page PAGE]
-                             [--begin BEGIN] [--end END]
-                             
-                             {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory,ReadProfiles511_STD,ReadProfiles511_A,ReadProfiles511_B,Model511_ExperimentOP125,Model511_ExperimentOP126,ReadSettings511,ReadPumpTrace,ReadDetailTrace,Model511_Experiment_OP165,ReadNewTraceAlarm,ReadOldTraceAlarm,WriteGlucoseHistoryTimestamp,ReadLanguage,ReadBolusWizardSetupStatus,ReadCarbUnits,ReadBGUnits,ReadCarbRatios,ReadInsulinSensitivities,ReadBGTargets,ReadBGAlarmCLocks,ReadReservoirWarning,ReadBGReminderEnable,ReadSettings512,ReadProfile_STD512,ReadProfile_A512,ReadProfile_B512,ReadLogicLinkIDS,Model512Experiment_OP150,ReadBGAlarmEnable,GuardianSensorSettings,GuardianSensorSettings,GuardianSensorDemoGraphTimeout,GuardianSensorAlarmSilence,GuardianSensorRateChangeAlerts,ReadSavedSettingsDate,ReadContrastPumpCommand:,ReadBolusReminderEnable,ReadBolusReminders,ReadFactoryParameters,ReadCalibrationFactor,ReadVCNTRHistory,ReadOtherDevicesIDS}
-
-positional arguments:
-  {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory,ReadProfiles511_STD,ReadProfiles511_A,ReadProfiles511_B,Model511_ExperimentOP125,Model511_ExperimentOP126,ReadSettings511,ReadPumpTrace,ReadDetailTrace,Model511_Experiment_OP165,ReadNewTraceAlarm,ReadOldTraceAlarm,WriteGlucoseHistoryTimestamp,ReadLanguage,ReadBolusWizardSetupStatus,ReadCarbUnits,ReadBGUnits,ReadCarbRatios,ReadInsulinSensitivities,ReadBGTargets,ReadBGAlarmCLocks,ReadReservoirWarning,ReadBGReminderEnable,ReadSettings512,ReadProfile_STD512,ReadProfile_A512,ReadProfile_B512,ReadLogicLinkIDS,Model512Experiment_OP150,ReadBGAlarmEnable,GuardianSensorSettings,GuardianSensorSettings,GuardianSensorDemoGraphTimeout,GuardianSensorAlarmSilence,GuardianSensorRateChangeAlerts,ReadSavedSettingsDate,ReadContrast(PumpCommand):,ReadBolusReminderEnable,ReadBolusReminders,ReadFactoryParameters,ReadCalibrationFactor,ReadVCNTRHistory,ReadOtherDevicesIDS}
-                        Command to tweak.
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --params PARAMS       parameters to format into sent message
-  --descr DESCR         Description of command
-  --name NAME           Proposed name of command
-  --save                Save response in a file.
-  --effectTime EFFECTTIME
-                        time to sleep before responding to message, float in
-                        seconds
-  --maxRecords MAXRECORDS
-                        number of frames in a packet composing payload
-                        response
-  --bytesPerRecord BYTESPERRECORD
-                        bytes per frame
-  --page PAGE           Page to fetch (for ReadHistoryData)
-  --begin BEGIN         begin date for FilterHistory
-  --end END             end date for FilterHistory
-
-usage: mm-send-comm.py ManualCommand [-h] [--params PARAMS] [--descr DESCR]
-                                     [--name NAME] [--save]
-                                     [--effectTime EFFECTTIME]
-                                     [--maxRecords MAXRECORDS]
-                                     [--bytesPerRecord BYTESPERRECORD]
-                                     code
-
-positional arguments:
-  code                  The opcode to send to the pump.
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --params PARAMS       parameters to format into sent message
-  --descr DESCR         Description of command
-  --name NAME           Proposed name of command
-  --save                Save response in a file.
-  --effectTime EFFECTTIME
-                        time to sleep before responding to message, float in
-                        seconds
-  --maxRecords MAXRECORDS
-                        number of frames in a packet composing payload
-                        response
-  --bytesPerRecord BYTESPERRECORD
-                        bytes per frame
-
-usage: mm-send-comm.py [-h] [--serial SERIAL] [--port PORT] [--no-op]
-                       [--skip-prelude] [--no-rf-prelude] [--skip-postlude]
-                       [-v] [--init] [--prefix-path PREFIX_PATH] [--saveall]
-                       [--prefix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory,ReadProfiles511_STD,ReadProfiles511_A,ReadProfiles511_B,Model511_ExperimentOP125,Model511_ExperimentOP126,ReadSettings511,ReadPumpTrace,ReadDetailTrace,Model511_Experiment_OP165,ReadNewTraceAlarm,ReadOldTraceAlarm,WriteGlucoseHistoryTimestamp,ReadLanguage,ReadBolusWizardSetupStatus,ReadCarbUnits,ReadBGUnits,ReadCarbRatios,ReadInsulinSensitivities,ReadBGTargets,ReadBGAlarmCLocks,ReadReservoirWarning,ReadBGReminderEnable,ReadSettings512,ReadProfile_STD512,ReadProfile_A512,ReadProfile_B512,ReadLogicLinkIDS,Model512Experiment_OP150,ReadBGAlarmEnable,GuardianSensorSettings,GuardianSensorSettings,GuardianSensorDemoGraphTimeout,GuardianSensorAlarmSilence,GuardianSensorRateChangeAlerts,ReadSavedSettingsDate,ReadContrastPumpCommand):,ReadBolusReminderEnable,ReadBolusReminders,ReadFactoryParameters,ReadCalibrationFactor,ReadVCNTRHistory,ReadOtherDevicesIDS}]
-                       [--postfix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory,ReadProfiles511_STD,ReadProfiles511_A,ReadProfiles511_B,Model511_ExperimentOP125,Model511_ExperimentOP126,ReadSettings511,ReadPumpTrace,ReadDetailTrace,Model511_Experiment_OP165,ReadNewTraceAlarm,ReadOldTraceAlarm,WriteGlucoseHistoryTimestamp,ReadLanguage,ReadBolusWizardSetupStatus,ReadCarbUnits,ReadBGUnits,ReadCarbRatios,ReadInsulinSensitivities,ReadBGTargets,ReadBGAlarmCLocks,ReadReservoirWarning,ReadBGReminderEnable,ReadSettings512,ReadProfile_STD512,ReadProfile_A512,ReadProfile_B512,ReadLogicLinkIDS,Model512Experiment_OP150,ReadBGAlarmEnable,GuardianSensorSettings,GuardianSensorSettings,GuardianSensorDemoGraphTimeout,GuardianSensorAlarmSilence,GuardianSensorRateChangeAlerts,ReadSavedSettingsDate,ReadContrast(PumpCommand:,ReadBolusReminderEnable,ReadBolusReminders,ReadFactoryParameters,ReadCalibrationFactor,ReadVCNTRHistory,ReadOtherDevicesIDS}]
-                       {sleep,tweak,ManualCommand} ...
-
-mm-send-comm.py - send messages to a compatible MM insulin pump
-
-positional arguments:
-  {sleep,tweak,ManualCommand}
-                        Main thing to do between --prefix and--postfix
-    sleep               Just sleep between command sets
-    tweak               Tweak a builtin command
-    ManualCommand       Customize a command
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --serial SERIAL       serial number of pump [default: 208850]
-  --port PORT           Path to device [default: /dev/serial/by-id/usb-
-                        0a21_8001-if00-port0]
-  --no-op               Dry run, don't do main function
-  --skip-prelude        Don't do the normal prelude.
-  --no-rf-prelude       Do the prelude, but don't query the pump.
-  --skip-postlude       Don't do the normal postlude.
-  -v, --verbose         Verbosity
-  --init                Send power ctrl to initialize RF session.
-  --prefix-path PREFIX_PATH
-                        Prefix to store saved files when using --save or
-                        --saveall.
-  --saveall             Whether or not to save all responses.
-  --prefix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory,ReadProfiles511_STD,ReadProfiles511_A,ReadProfiles511_B,Model511_ExperimentOP125,Model511_ExperimentOP126,ReadSettings511,ReadPumpTrace,ReadDetailTrace,Model511_Experiment_OP165,ReadNewTraceAlarm,ReadOldTraceAlarm,WriteGlucoseHistoryTimestamp,ReadLanguage,ReadBolusWizardSetupStatus,ReadCarbUnits,ReadBGUnits,ReadCarbRatios,ReadInsulinSensitivities,ReadBGTargets,ReadBGAlarmCLocks,ReadReservoirWarning,ReadBGReminderEnable,ReadSettings512,ReadProfile_STD512,ReadProfile_A512,ReadProfile_B512,ReadLogicLinkIDS,Model512Experiment_OP150,ReadBGAlarmEnable,GuardianSensorSettings,GuardianSensorSettings,GuardianSensorDemoGraphTimeout,GuardianSensorAlarmSilence,GuardianSensorRateChangeAlerts,ReadSavedSettingsDate,ReadContrast(PumpCommand):,ReadBolusReminderEnable,ReadBolusReminders,ReadFactoryParameters,ReadCalibrationFactor,ReadVCNTRHistory,ReadOtherDevicesIDS}
-                        Built-in commands to run before the main one.
-  --postfix {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory,ReadProfiles511_STD,ReadProfiles511_A,ReadProfiles511_B,Model511_ExperimentOP125,Model511_ExperimentOP126,ReadSettings511,ReadPumpTrace,ReadDetailTrace,Model511_Experiment_OP165,ReadNewTraceAlarm,ReadOldTraceAlarm,WriteGlucoseHistoryTimestamp,ReadLanguage,ReadBolusWizardSetupStatus,ReadCarbUnits,ReadBGUnits,ReadCarbRatios,ReadInsulinSensitivities,ReadBGTargets,ReadBGAlarmCLocks,ReadReservoirWarning,ReadBGReminderEnable,ReadSettings512,ReadProfile_STD512,ReadProfile_A512,ReadProfile_B512,ReadLogicLinkIDS,Model512Experiment_OP150,ReadBGAlarmEnable,GuardianSensorSettings,GuardianSensorSettings,GuardianSensorDemoGraphTimeout,GuardianSensorAlarmSilence,GuardianSensorRateChangeAlerts,ReadSavedSettingsDate,ReadContrast(PumpCommand):,ReadBolusReminderEnable,ReadBolusReminders,ReadFactoryParameters,ReadCalibrationFactor,ReadVCNTRHistory,ReadOtherDevicesIDS}
-                        Built-in commands to run after the main one.
-
-This tool is intended to help discover protocol behavior. Under no
-circumstance is it intended to deliver therapy.
-
-usage: mm-send-comm.py sleep [-h] timeout
-
-positional arguments:
-  timeout     Sleep in between running --prefix and --postfix
-
-optional arguments:
-  -h, --help  show this help message and exit
-
-usage: mm-send-comm.py tweak [-h] [--params PARAMS] [--descr DESCR]
-                             [--name NAME] [--save] [--effectTime EFFECTTIME]
-                             [--maxRecords MAXRECORDS]
-                             [--bytesPerRecord BYTESPERRECORD] [--page PAGE]
-                             [--begin BEGIN] [--end END]
-                             
-                             {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory,ReadProfiles511_STD,ReadProfiles511_A,ReadProfiles511_B,Model511_ExperimentOP125,Model511_ExperimentOP126,ReadSettings511,ReadPumpTrace,ReadDetailTrace,Model511_Experiment_OP165,ReadNewTraceAlarm,ReadOldTraceAlarm,WriteGlucoseHistoryTimestamp,ReadLanguage,ReadBolusWizardSetupStatus,ReadCarbUnits,ReadBGUnits,ReadCarbRatios,ReadInsulinSensitivities,ReadBGTargets,ReadBGAlarmCLocks,ReadReservoirWarning,ReadBGReminderEnable,ReadSettings512,ReadProfile_STD512,ReadProfile_A512,ReadProfile_B512,ReadLogicLinkIDS,Model512Experiment_OP150,ReadBGAlarmEnable,GuardianSensorSettings,GuardianSensorSettings,GuardianSensorDemoGraphTimeout,GuardianSensorAlarmSilence,GuardianSensorRateChangeAlerts,ReadSavedSettingsDate,ReadContrastPumpCommand:,ReadBolusReminderEnable,ReadBolusReminders,ReadFactoryParameters,ReadCalibrationFactor,ReadVCNTRHistory,ReadOtherDevicesIDS}
-
-positional arguments:
-  {BaseCommand,KeypadPush,PowerControl,PowerControlOff,PumpCommand,PumpResume,PumpSuspend,ReadBasalTemp,ReadBatteryStatus,ReadContrast,ReadCurPageNumber,ReadErrorStatus,ReadFirmwareVersion,ReadGlucoseHistory,ReadHistoryData,ReadPumpID,ReadPumpModel,ReadPumpState,ReadPumpStatus,ReadRTC,ReadRadioCtrlACL,ReadRemainingInsulin,ReadSettings,ReadTotalsToday,SetSuspend,PushEASY,PushUP,PushDOWN,PushACT,PushESC,TempBasal,ManualCommand,ReadCurGlucosePageNumber,ReadErrorStatus508,ReadBolusHistory,ReadDailyTotals,ReadPrimeBoluses,ReadAlarms,ReadProfileSets,ReadUserEvents,ReadRemoteControlID,Read128KMem,Read256KMem,ReadBasalTemp508,ReadTodayTotals508,ReadSensorSettings,ReadSensorHistoryData,ReadISIGHistory,FilterHistory,FilterGlucoseHistory,FilterISIGHistory,ReadProfiles511_STD,ReadProfiles511_A,ReadProfiles511_B,Model511_ExperimentOP125,Model511_ExperimentOP126,ReadSettings511,ReadPumpTrace,ReadDetailTrace,Model511_Experiment_OP165,ReadNewTraceAlarm,ReadOldTraceAlarm,WriteGlucoseHistoryTimestamp,ReadLanguage,ReadBolusWizardSetupStatus,ReadCarbUnits,ReadBGUnits,ReadCarbRatios,ReadInsulinSensitivities,ReadBGTargets,ReadBGAlarmCLocks,ReadReservoirWarning,ReadBGReminderEnable,ReadSettings512,ReadProfile_STD512,ReadProfile_A512,ReadProfile_B512,ReadLogicLinkIDS,Model512Experiment_OP150,ReadBGAlarmEnable,GuardianSensorSettings,GuardianSensorSettings,GuardianSensorDemoGraphTimeout,GuardianSensorAlarmSilence,GuardianSensorRateChangeAlerts,ReadSavedSettingsDate,ReadContrast(PumpCommand):,ReadBolusReminderEnable,ReadBolusReminders,ReadFactoryParameters,ReadCalibrationFactor,ReadVCNTRHistory,ReadOtherDevicesIDS}
-                        Command to tweak.
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --params PARAMS       parameters to format into sent message
-  --descr DESCR         Description of command
-  --name NAME           Proposed name of command
-  --save                Save response in a file.
-  --effectTime EFFECTTIME
-                        time to sleep before responding to message, float in
-                        seconds
-  --maxRecords MAXRECORDS
-                        number of frames in a packet composing payload
-                        response
-  --bytesPerRecord BYTESPERRECORD
-                        bytes per frame
-  --page PAGE           Page to fetch (for ReadHistoryData)
-  --begin BEGIN         begin date for FilterHistory
-  --end END             end date for FilterHistory
-
+```
++ mm-send-comm.py ManualCommand -h
 usage: mm-send-comm.py ManualCommand [-h] [--params PARAMS] [--descr DESCR]
                                      [--name NAME] [--save]
                                      [--effectTime EFFECTTIME]
@@ -401,6 +445,148 @@ optional arguments:
   --bytesPerRecord BYTESPERRECORD
                         bytes per frame
 ```
+
+#### `mm-send-comm.py sleep -h`
+```
+
++ mm-send-comm.py sleep -h
+usage: mm-send-comm.py sleep [-h] timeout
+
+positional arguments:
+  timeout     Sleep in between running --prefix and --postfix
+
+optional arguments:
+  -h, --help  show this help message and exit
+```
+
+#### `mm-send-comm.py tweak -h`
+
+```
++ mm-send-comm.py tweak -h
+usage: mm-send-comm.py tweak [-h] [--params PARAMS] [--descr DESCR]
+                             [--name NAME] [--save] [--effectTime EFFECTTIME]
+                             [--maxRecords MAXRECORDS]
+                             [--bytesPerRecord BYTESPERRECORD] [--page PAGE]
+                             [--begin BEGIN] [--end END]
+                             
+                             {BaseCommand, KeypadPush, PowerControl,
+                             PowerControlOff, PumpCommand, PumpResume,
+                             PumpSuspend, ReadBasalTemp, ReadBatteryStatus,
+                             ReadContrast, ReadCurPageNumber, ReadErrorStatus,
+                             ReadFirmwareVersion, ReadGlucoseHistory,
+                             ReadHistoryData, ReadPumpID, ReadPumpModel,
+                             ReadPumpState, ReadPumpStatus, ReadRTC,
+                             ReadRadioCtrlACL, ReadRemainingInsulin,
+                             ReadSettings, ReadTotalsToday, SetSuspend,
+                             PushEASY, PushUP, PushDOWN, PushACT, PushESC,
+                             TempBasal, ManualCommand,
+                             ReadCurGlucosePageNumber, ReadErrorStatus508,
+                             ReadBolusHistory, ReadDailyTotals,
+                             ReadPrimeBoluses, ReadAlarms, ReadProfileSets,
+                             ReadUserEvents, ReadRemoteControlID, Read128KMem,
+                             Read256KMem, ReadBasalTemp508, ReadTodayTotals508,
+                             ReadSensorSettings, ReadSensorHistoryData,
+                             ReadISIGHistory, FilterHistory,
+                             FilterGlucoseHistory, FilterISIGHistory,
+                             ReadProfiles511_STD, ReadProfiles511_A,
+                             ReadProfiles511_B, Model511_ExperimentOP125,
+                             Model511_ExperimentOP126, ReadSettings511,
+                             ReadPumpTrace, ReadDetailTrace,
+                             Model511_Experiment_OP165, ReadNewTraceAlarm,
+                             ReadOldTraceAlarm, WriteGlucoseHistoryTimestamp,
+                             ReadLanguage, ReadBolusWizardSetupStatus,
+                             ReadCarbUnits, ReadBGUnits, ReadCarbRatios,
+                             ReadInsulinSensitivities, ReadBGTargets,
+                             ReadBGAlarmCLocks, ReadReservoirWarning,
+                             ReadBGReminderEnable, ReadSettings512,
+                             ReadProfile_STD512, ReadProfile_A512,
+                             ReadProfile_B512, ReadLogicLinkIDS,
+                             Model512Experiment_OP150, ReadBGAlarmEnable,
+                             GuardianSensorSettings, GuardianSensorSettings,
+                             GuardianSensorDemoGraphTimeout,
+                             GuardianSensorAlarmSilence,
+                             GuardianSensorRateChangeAlerts,
+                             ReadSavedSettingsDate, ReadBolusReminderEnable,
+                             ReadBolusReminders, ReadFactoryParameters,
+                             ReadCalibrationFactor, ReadVCNTRHistory,
+                             ReadOtherDevicesIDS, PumpTraceSelect,
+                             PumpEnableDetailTrace, PumpDisableDetailTrace,
+                             Experiment_OP161, Experiment_OP162,
+                             Model511_Experiment_OP119,
+                             Model511_Experiment_OP120,
+                             Model511_Experiment_OP121,
+                             Model511_Experiment_OP122,
+                             Model511_Experiment_OP123,
+                             Model511_Experiment_OP124,
+                             Model511_Experiment_OP125,
+                             Model511_Experiment_OP126,
+                             Model511_Experiment_OP127,
+                             Model511_Experiment_OP128,
+                             Model511_Experiment_OP129,
+                             Model511_Experiment_OP130, SelectBasalProfile,
+                             SelectBasalProfileSTD, SelectBasalProfileA,
+                             SelectBasalProfileB, PumpExperiment_OP69,
+                             PumpExperiment_OP70, PumpExperiment_OP71,
+                             PumpExperiment_OP72, PumpExperiment_OP73,
+                             PumpExperiment_OP75}
+
+positional arguments:
+  {BaseCommand, KeypadPush, PowerControl, PowerControlOff, PumpCommand,
+  PumpResume, PumpSuspend, ReadBasalTemp, ReadBatteryStatus, ReadContrast,
+  ReadCurPageNumber, ReadErrorStatus, ReadFirmwareVersion, ReadGlucoseHistory,
+  ReadHistoryData, ReadPumpID, ReadPumpModel, ReadPumpState, ReadPumpStatus,
+  ReadRTC, ReadRadioCtrlACL, ReadRemainingInsulin, ReadSettings,
+  ReadTotalsToday, SetSuspend, PushEASY, PushUP, PushDOWN, PushACT, PushESC,
+  TempBasal, ManualCommand, ReadCurGlucosePageNumber, ReadErrorStatus508,
+  ReadBolusHistory, ReadDailyTotals, ReadPrimeBoluses, ReadAlarms,
+  ReadProfileSets, ReadUserEvents, ReadRemoteControlID, Read128KMem,
+  Read256KMem, ReadBasalTemp508, ReadTodayTotals508, ReadSensorSettings,
+  ReadSensorHistoryData, ReadISIGHistory, FilterHistory, FilterGlucoseHistory,
+  FilterISIGHistory, ReadProfiles511_STD, ReadProfiles511_A, ReadProfiles511_B,
+  Model511_ExperimentOP125, Model511_ExperimentOP126, ReadSettings511,
+  ReadPumpTrace, ReadDetailTrace, Model511_Experiment_OP165, ReadNewTraceAlarm,
+  ReadOldTraceAlarm, WriteGlucoseHistoryTimestamp, ReadLanguage,
+  ReadBolusWizardSetupStatus, ReadCarbUnits, ReadBGUnits, ReadCarbRatios,
+  ReadInsulinSensitivities, ReadBGTargets, ReadBGAlarmCLocks,
+  ReadReservoirWarning, ReadBGReminderEnable, ReadSettings512,
+  ReadProfile_STD512, ReadProfile_A512, ReadProfile_B512, ReadLogicLinkIDS,
+  Model512Experiment_OP150, ReadBGAlarmEnable, GuardianSensorSettings,
+  GuardianSensorSettings, GuardianSensorDemoGraphTimeout,
+  GuardianSensorAlarmSilence, GuardianSensorRateChangeAlerts,
+  ReadSavedSettingsDate, ReadBolusReminderEnable, ReadBolusReminders,
+  ReadFactoryParameters, ReadCalibrationFactor, ReadVCNTRHistory,
+  ReadOtherDevicesIDS, PumpTraceSelect, PumpEnableDetailTrace,
+  PumpDisableDetailTrace, Experiment_OP161, Experiment_OP162,
+  Model511_Experiment_OP119, Model511_Experiment_OP120,
+  Model511_Experiment_OP121, Model511_Experiment_OP122,
+  Model511_Experiment_OP123, Model511_Experiment_OP124,
+  Model511_Experiment_OP125, Model511_Experiment_OP126,
+  Model511_Experiment_OP127, Model511_Experiment_OP128,
+  Model511_Experiment_OP129, Model511_Experiment_OP130, SelectBasalProfile,
+  SelectBasalProfileSTD, SelectBasalProfileA, SelectBasalProfileB,
+  PumpExperiment_OP69, PumpExperiment_OP70, PumpExperiment_OP71,
+  PumpExperiment_OP72, PumpExperiment_OP73, PumpExperiment_OP75}
+                        Command to tweak.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --params PARAMS       parameters to format into sent message
+  --descr DESCR         Description of command
+  --name NAME           Proposed name of command
+  --save                Save response in a file.
+  --effectTime EFFECTTIME
+                        time to sleep before responding to message, float in
+                        seconds
+  --maxRecords MAXRECORDS
+                        number of frames in a packet composing payload
+                        response
+  --bytesPerRecord BYTESPERRECORD
+                        bytes per frame
+  --page PAGE           Page to fetch (for ReadHistoryData)
+  --begin BEGIN         begin date for FilterHistory
+  --end END             end date for FilterHistory
+```
+
 
 #### `./bin/mm-press-key.py`
 
