@@ -189,6 +189,43 @@ class PowerControlOff(PowerControl):
   """
   params = [ 0x00, 0x00 ]
 
+# MMPump???/	CMD_????????	69	0x45	('E')	??
+class PumpExperiment_OP69 (PumpCommand):
+  code = 69
+
+# MMPump???/	CMD_????????	70	0x46	('F')	??
+class PumpExperiment_OP70 (PumpCommand):
+  code = 70
+
+# MMPump???/	CMD_????????	71	0x47	('G')	??
+class PumpExperiment_OP71 (PumpCommand):
+  code = 71
+
+# MMPump???/	CMD_????????	72	0x48	('H')	??
+class PumpExperiment_OP72 (PumpCommand):
+  code = 72
+
+# MMPump???/	CMD_????????	73	0x49	('I')	??
+class PumpExperiment_OP73 (PumpCommand):
+  code = 73
+
+# MMPump???/	SelectBasalProfile	74	0x4a	('J')	OK
+class SelectBasalProfile (PumpCommand):
+  code = 74
+
+class SelectBasalProfileSTD (SelectBasalProfile):
+  params = [ 0 ]
+
+class SelectBasalProfileA (SelectBasalProfile):
+  params = [ 1 ]
+
+class SelectBasalProfileB (SelectBasalProfile):
+  params = [ 2 ]
+
+# MMPump???/	CMD_????????	75	0x4b	('K')	??
+class PumpExperiment_OP75 (PumpCommand):
+  code = 75
+
 class TempBasal(PumpCommand):
   """
 
@@ -200,6 +237,64 @@ class TempBasal(PumpCommand):
   retries = 0
   #maxRecords = 0
   #timeout = 1
+
+class SetSuspend(PumpCommand):
+  code = 77
+  descr = "Set Pump Suspend/Resume status"
+  params = [ ]
+  retries = 2
+  maxRecords = 1
+
+class PumpSuspend(SetSuspend):
+  descr = "Suspend pump"
+  params = [ 1 ]
+
+class PumpResume(SetSuspend):
+  descr = "Resume pump (cancel suspend)"
+  params = [ 0 ]
+
+class KeypadPush(PumpCommand):
+  code = 91
+  descr = "Press buttons on the keypad"
+  params = [ ]
+  retries = 1
+  maxRecords = 0
+
+  @classmethod
+  def ACT(klass, **kwds):
+    return klass(params=[0x02], **kwds)
+
+  @classmethod
+  def ESC(klass, **kwds):
+    return klass(params=[0x01], **kwds)
+
+  @classmethod
+  def DOWN(klass, **kwds):
+    return klass(params=[0x04], **kwds)
+
+  @classmethod
+  def UP(klass, **kwds):
+    return klass(params=[0x03], **kwds)
+
+  @classmethod
+  def EASY(klass, **kwds):
+    return klass(params=[0x00], **kwds)
+
+def PushACT (**kwds):
+  return KeypadPush.ACT(**kwds)
+
+def PushESC (**kwds):
+  return KeypadPush.ESC(**kwds)
+
+def PushDOWN (**kwds):
+  return KeypadPush.DOWN(**kwds)
+
+def PushUP (**kwds):
+  return KeypadPush.UP(**kwds)
+
+def PushEASY (**kwds):
+  return KeypadPush.EASY(**kwds)
+
 
 class ReadErrorStatus508 (PumpCommand):
   """
@@ -579,12 +674,30 @@ class Model511_ExperimentOP126 (PumpCommand):
 class ReadSettings511 (PumpCommand):
   code = 127
 
+# MMX11/	CMD_ENABLE_DISABLE_DETAIL_TRACE	160	0x9f	('\x9f')	??
+class PumpTraceSelect (PumpCommand):
+  code = 160
+
+class PumpEnableDetailTrace (PumpTraceSelect):
+  params = [ 1 ]
+
+class PumpDisableDetailTrace (PumpTraceSelect):
+  params = [ 0 ]
+
+class Experiment_OP161 (PumpCommand):
+  code = 161
+
+class Experiment_OP162 (PumpCommand):
+  code = 162
+
 # MMPump511/	ReadPumpTrace	163	0xa3	('\xa3')	??
 class ReadPumpTrace (PumpCommand):
   code = 163
+  maxRecords = 16
 # MMPump511/	ReadDetailTrace	164	0xa4	('\xa4')	??
 class ReadDetailTrace (PumpCommand):
   code = 164
+  maxRecords = 16
 
 # MMPump11??/	CMD_????????????	165	0xa5	0xa5	??
 class Model511_Experiment_OP165 (PumpCommand):
@@ -593,8 +706,11 @@ class Model511_Experiment_OP165 (PumpCommand):
 # MMPump511/	ReadNewTraceAlarm	166	0xa6	('\xa6')	??
 class ReadNewTraceAlarm (PumpCommand):
   code = 166
+  maxRecords = 16
+
 # MMPump511/	ReadOldTraceAlarm	167	0xa7	('\xa7')	??
 class ReadOldTraceAlarm (PumpCommand):
+  maxRecords = 16
   code = 167
 
 # MMX22/	CMD_WRITE_GLUCOSE_HISTORY_TIMESTAMP	40	0x28	('(')	??
@@ -619,6 +735,42 @@ class ReadRadioCtrlACL(PumpCommand):
     ids.append( str(data[12:18]) )
     log.info("READ radio ACL:\n%s" % lib.hexdump(data))
     return ids
+
+class Model511_Experiment_OP119 (PumpCommand):
+  code = 119
+
+class Model511_Experiment_OP120 (PumpCommand):
+  code = 120
+
+class Model511_Experiment_OP121 (PumpCommand):
+  code = 121
+
+class Model511_Experiment_OP122 (PumpCommand):
+  code = 122
+
+class Model511_Experiment_OP123 (PumpCommand):
+  code = 123
+
+class Model511_Experiment_OP124 (PumpCommand):
+  code = 124
+
+class Model511_Experiment_OP125 (PumpCommand):
+  code = 125
+
+class Model511_Experiment_OP126 (PumpCommand):
+  code = 126
+
+class Model511_Experiment_OP127 (PumpCommand):
+  code = 127
+
+class Model511_Experiment_OP128 (PumpCommand):
+  code = 128
+
+class Model511_Experiment_OP129 (PumpCommand):
+  code = 129
+
+class Model511_Experiment_OP130 (PumpCommand):
+  code = 130
 
 # MMPump512/	CMD_READ_LANGUAGE	134	0x86	('\x86')	??
 class ReadLanguage (PumpCommand):
@@ -856,64 +1008,6 @@ class ReadPumpStatus(PumpCommand):
                'suspended': data[2] == 1
              }
     return status
-
-
-class SetSuspend(PumpCommand):
-  code = 77
-  descr = "Set Pump Suspend/Resume status"
-  params = [ ]
-  retries = 2
-  maxRecords = 1
-
-class PumpSuspend(SetSuspend):
-  descr = "Suspend pump"
-  params = [ 1 ]
-
-class PumpResume(SetSuspend):
-  descr = "Resume pump (cancel suspend)"
-  params = [ 0 ]
-
-class KeypadPush(PumpCommand):
-  code = 91
-  descr = "Press buttons on the keypad"
-  params = [ ]
-  retries = 1
-  maxRecords = 0
-
-  @classmethod
-  def ACT(klass, **kwds):
-    return klass(params=[0x02], **kwds)
-
-  @classmethod
-  def ESC(klass, **kwds):
-    return klass(params=[0x01], **kwds)
-
-  @classmethod
-  def DOWN(klass, **kwds):
-    return klass(params=[0x04], **kwds)
-
-  @classmethod
-  def UP(klass, **kwds):
-    return klass(params=[0x03], **kwds)
-
-  @classmethod
-  def EASY(klass, **kwds):
-    return klass(params=[0x00], **kwds)
-
-def PushACT (**kwds):
-  return KeypadPush.ACT(**kwds)
-
-def PushESC (**kwds):
-  return KeypadPush.ESC(**kwds)
-
-def PushDOWN (**kwds):
-  return KeypadPush.DOWN(**kwds)
-
-def PushUP (**kwds):
-  return KeypadPush.UP(**kwds)
-
-def PushEASY (**kwds):
-  return KeypadPush.EASY(**kwds)
 
 
 # MMX22/	CMD_READ_SENSOR_SETTINGS	153	0x99	('\x99')	??
@@ -1223,6 +1317,33 @@ __all__ = [
   'ReadCalibrationFactor',
   'ReadVCNTRHistory',
   'ReadOtherDevicesIDS',
+  'PumpTraceSelect',
+  'PumpEnableDetailTrace',
+  'PumpDisableDetailTrace',
+  'Experiment_OP161',
+  'Experiment_OP162',
+  'Model511_Experiment_OP119',
+  'Model511_Experiment_OP120',
+  'Model511_Experiment_OP121',
+  'Model511_Experiment_OP122',
+  'Model511_Experiment_OP123',
+  'Model511_Experiment_OP124',
+  'Model511_Experiment_OP125',
+  'Model511_Experiment_OP126',
+  'Model511_Experiment_OP127',
+  'Model511_Experiment_OP128',
+  'Model511_Experiment_OP129',
+  'Model511_Experiment_OP130',
+  'SelectBasalProfile',
+  'SelectBasalProfileSTD',
+  'SelectBasalProfileA',
+  'SelectBasalProfileB',
+  'PumpExperiment_OP69',
+  'PumpExperiment_OP70',
+  'PumpExperiment_OP71',
+  'PumpExperiment_OP72',
+  'PumpExperiment_OP73',
+  'PumpExperiment_OP75',
 ]
 
 if __name__ == '__main__':
