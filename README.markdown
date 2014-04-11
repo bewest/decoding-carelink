@@ -36,6 +36,8 @@ your behalf:
   `./bin/mm-temp-basals.py`
 * press any button on the keypad, using
   `./bin/mm-press-key.py`
+* Investigate how any command works, make new commands, download any command
+  `./bin/mm-send-comm.py`
 
 ## Install first run
 
