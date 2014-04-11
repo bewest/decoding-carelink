@@ -43,7 +43,15 @@ your behalf:
 
 This only needs to be done once:
 
-## From source
+### From pypi
+
+```bash
+$ easy_install decocare
+# or
+$ pip install decocare
+```
+
+### From source
 ```bash
 git clone https://github.com/bewest/decoding-carelink.git
 cd decoding-carelink
