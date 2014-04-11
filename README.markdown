@@ -33,7 +33,7 @@ your behalf:
 * query pump status: normal, suspended, bolusing
   `./bin/mm-set-suspend.py`
 * set/edit/query temporary basal rates
-  `./bin/set_temp_rate.py`
+  `./bin/mm-temp-basals.py`
 * press any button on the keypad, using
   `./bin/mm-press-key.py`
 

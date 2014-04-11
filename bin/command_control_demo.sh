@@ -5,7 +5,7 @@ set -x
 # This is for educational/demonstration purposes only.
 
 PRESSKEY=./bin/mm-press-key.py
-TEMPBASAL=./bin/set_temp_rate.py
+TEMPBASAL=./bin/mm-temp-basals.py
 STATUS=./bin/mm-set-suspend.py
 INIT="$STATUS --init query"
 
