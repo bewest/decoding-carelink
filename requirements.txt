@@ -1,3 +1,4 @@
+.
 sphinx
 rst2pdf
 sphinxcontrib-blockdiag
