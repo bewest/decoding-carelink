@@ -32,8 +32,7 @@ setup(name='decocare',
         'Programming Language :: Python',
         'Topic :: Scientific/Engineering',
         'Topic :: Software Development :: Libraries'
-    ],
-    zip_safe=False,
+    ]
 )
 
 #####
