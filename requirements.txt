@@ -1,6 +1,3 @@
-.
-sphinx
-rst2pdf
 sphinxcontrib-blockdiag
 sphinxcontrib-actdiag
 sphinxcontrib-seqdiag
