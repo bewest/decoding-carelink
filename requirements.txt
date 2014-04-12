@@ -1,4 +1,3 @@
-setuptools
 sphinxcontrib-blockdiag
 sphinxcontrib-actdiag
 sphinxcontrib-seqdiag
