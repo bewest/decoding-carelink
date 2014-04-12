@@ -1,3 +1,5 @@
+setuptools
+distribute
 sphinxcontrib-blockdiag
 sphinxcontrib-actdiag
 sphinxcontrib-seqdiag
