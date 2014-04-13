@@ -1,0 +1,9 @@
+diff send-ReadSensorHistory.markdown send-page1-ReadSensorHistory.markdown 
+diff send-ReadSensorHistory.markdown send-page2-ReadSensorHistory.markdown 
+diff send-ReadSensorHistory.markdown send-page3-ReadSensorHistory.markdown 
+diff send-ReadSensorHistory.markdown send-page4-ReadSensorHistory.markdown 
+diff send-ReadSensorHistory.markdown send-page5-ReadSensorHistory.markdown 
+diff send-ReadSensorHistory.markdown send-page6-ReadSensorHistory.markdown 
+diff send-ReadSensorHistory.markdown send-page7-ReadSensorHistory.markdown 
+diff send-ReadSensorHistory.markdown send-page7-ReadSensorHistory.markdown 
+diff send-ReadSensorHistory.markdown send-page9-ReadSensorHistory.markdown 
