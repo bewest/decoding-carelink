@@ -1,0 +1,342 @@
+2c2
+< using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=False, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=18, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='analysis/send-comm-', save=True, saveall=False, serial='584923', verbose=None) `
+---
+> using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=True, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=1, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='logs/cgm-page-1-', save=True, saveall=False, serial='584923', verbose=None) `
+15,17c15,17
+<            'errors.timeouts': 3,
+<            'packets.received': 185L,
+<            'packets.transmit': 197L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 0L,
+>            'packets.transmit': 0L},
+22,23c22,23
+<          'packets.received': 338L,
+<          'packets.transmit': 344L}}
+---
+>          'packets.received': 3L,
+>          'packets.transmit': 9L}}
+25a26
+> PowerControl SERIAL 584923
+28c29
+< <class 'decocare.commands.ReadSensorHistoryData'> {'page': 18}
+---
+> <class 'decocare.commands.ReadSensorHistoryData'> {'page': 1}
+172,174c173,175
+<            'errors.timeouts': 3,
+<            'packets.received': 203L,
+<            'packets.transmit': 216L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 20L,
+>            'packets.transmit': 21L},
+179,180c180,181
+<          'packets.received': 364L,
+<          'packets.transmit': 370L}}
+---
+>          'packets.received': 30L,
+>          'packets.transmit': 36L}}
+2c2
+< using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=False, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=18, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='analysis/send-comm-', save=True, saveall=False, serial='584923', verbose=None) `
+---
+> using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=True, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=2, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='logs/cgm-page-2-', save=True, saveall=False, serial='584923', verbose=None) `
+15,17c15,17
+<            'errors.timeouts': 3,
+<            'packets.received': 185L,
+<            'packets.transmit': 197L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 20L,
+>            'packets.transmit': 21L},
+22,23c22,23
+<          'packets.received': 338L,
+<          'packets.transmit': 344L}}
+---
+>          'packets.received': 35L,
+>          'packets.transmit': 41L}}
+25a26
+> PowerControl SERIAL 584923
+28c29
+< <class 'decocare.commands.ReadSensorHistoryData'> {'page': 18}
+---
+> <class 'decocare.commands.ReadSensorHistoryData'> {'page': 2}
+172,174c173,175
+<            'errors.timeouts': 3,
+<            'packets.received': 203L,
+<            'packets.transmit': 216L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 40L,
+>            'packets.transmit': 42L},
+179,180c180,181
+<          'packets.received': 364L,
+<          'packets.transmit': 370L}}
+---
+>          'packets.received': 62L,
+>          'packets.transmit': 68L}}
+2c2
+< using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=False, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=18, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='analysis/send-comm-', save=True, saveall=False, serial='584923', verbose=None) `
+---
+> using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=True, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=3, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='logs/cgm-page-3-', save=True, saveall=False, serial='584923', verbose=None) `
+15,17c15,17
+<            'errors.timeouts': 3,
+<            'packets.received': 185L,
+<            'packets.transmit': 197L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 40L,
+>            'packets.transmit': 42L},
+22,23c22,23
+<          'packets.received': 338L,
+<          'packets.transmit': 344L}}
+---
+>          'packets.received': 67L,
+>          'packets.transmit': 73L}}
+25a26
+> PowerControl SERIAL 584923
+28c29
+< <class 'decocare.commands.ReadSensorHistoryData'> {'page': 18}
+---
+> <class 'decocare.commands.ReadSensorHistoryData'> {'page': 3}
+172,174c173,175
+<            'errors.timeouts': 3,
+<            'packets.received': 203L,
+<            'packets.transmit': 216L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 60L,
+>            'packets.transmit': 63L},
+179,180c180,181
+<          'packets.received': 364L,
+<          'packets.transmit': 370L}}
+---
+>          'packets.received': 94L,
+>          'packets.transmit': 100L}}
+2c2
+< using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=False, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=18, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='analysis/send-comm-', save=True, saveall=False, serial='584923', verbose=None) `
+---
+> using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=True, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=4, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='logs/cgm-page-4-', save=True, saveall=False, serial='584923', verbose=None) `
+15,17c15,17
+<            'errors.timeouts': 3,
+<            'packets.received': 185L,
+<            'packets.transmit': 197L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 60L,
+>            'packets.transmit': 63L},
+22,23c22,23
+<          'packets.received': 338L,
+<          'packets.transmit': 344L}}
+---
+>          'packets.received': 99L,
+>          'packets.transmit': 105L}}
+25a26
+> PowerControl SERIAL 584923
+28c29
+< <class 'decocare.commands.ReadSensorHistoryData'> {'page': 18}
+---
+> <class 'decocare.commands.ReadSensorHistoryData'> {'page': 4}
+172,174c173,175
+<            'errors.timeouts': 3,
+<            'packets.received': 203L,
+<            'packets.transmit': 216L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 80L,
+>            'packets.transmit': 84L},
+179,180c180,181
+<          'packets.received': 364L,
+<          'packets.transmit': 370L}}
+---
+>          'packets.received': 126L,
+>          'packets.transmit': 132L}}
+2c2
+< using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=False, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=18, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='analysis/send-comm-', save=True, saveall=False, serial='584923', verbose=None) `
+---
+> using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=True, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=5, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='logs/cgm-page-5-', save=True, saveall=False, serial='584923', verbose=None) `
+15,17c15,17
+<            'errors.timeouts': 3,
+<            'packets.received': 185L,
+<            'packets.transmit': 197L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 80L,
+>            'packets.transmit': 84L},
+22,23c22,23
+<          'packets.received': 338L,
+<          'packets.transmit': 344L}}
+---
+>          'packets.received': 131L,
+>          'packets.transmit': 137L}}
+25a26
+> PowerControl SERIAL 584923
+28c29
+< <class 'decocare.commands.ReadSensorHistoryData'> {'page': 18}
+---
+> <class 'decocare.commands.ReadSensorHistoryData'> {'page': 5}
+172,174c173,175
+<            'errors.timeouts': 3,
+<            'packets.received': 203L,
+<            'packets.transmit': 216L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 100L,
+>            'packets.transmit': 105L},
+179,180c180,181
+<          'packets.received': 364L,
+<          'packets.transmit': 370L}}
+---
+>          'packets.received': 160L,
+>          'packets.transmit': 166L}}
+2c2
+< using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=False, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=18, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='analysis/send-comm-', save=True, saveall=False, serial='584923', verbose=None) `
+---
+> using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=True, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=6, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='logs/cgm-page-6-', save=True, saveall=False, serial='584923', verbose=None) `
+15,17c15,17
+<            'errors.timeouts': 3,
+<            'packets.received': 185L,
+<            'packets.transmit': 197L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 100L,
+>            'packets.transmit': 105L},
+22,23c22,23
+<          'packets.received': 338L,
+<          'packets.transmit': 344L}}
+---
+>          'packets.received': 165L,
+>          'packets.transmit': 171L}}
+25a26
+> PowerControl SERIAL 584923
+28c29
+< <class 'decocare.commands.ReadSensorHistoryData'> {'page': 18}
+---
+> <class 'decocare.commands.ReadSensorHistoryData'> {'page': 6}
+172,174c173,175
+<            'errors.timeouts': 3,
+<            'packets.received': 203L,
+<            'packets.transmit': 216L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 120L,
+>            'packets.transmit': 126L},
+179,180c180,181
+<          'packets.received': 364L,
+<          'packets.transmit': 370L}}
+---
+>          'packets.received': 192L,
+>          'packets.transmit': 198L}}
+2c2
+< using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=False, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=18, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='analysis/send-comm-', save=True, saveall=False, serial='584923', verbose=None) `
+---
+> using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=True, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=7, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='logs/cgm-page-7-', save=True, saveall=False, serial='584923', verbose=None) `
+15,17c15,17
+<            'errors.timeouts': 3,
+<            'packets.received': 185L,
+<            'packets.transmit': 197L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 120L,
+>            'packets.transmit': 126L},
+22,23c22,23
+<          'packets.received': 338L,
+<          'packets.transmit': 344L}}
+---
+>          'packets.received': 197L,
+>          'packets.transmit': 203L}}
+25a26
+> PowerControl SERIAL 584923
+28c29
+< <class 'decocare.commands.ReadSensorHistoryData'> {'page': 18}
+---
+> <class 'decocare.commands.ReadSensorHistoryData'> {'page': 7}
+172,174c173,175
+<            'errors.timeouts': 3,
+<            'packets.received': 203L,
+<            'packets.transmit': 216L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 140L,
+>            'packets.transmit': 147L},
+179,180c180,181
+<          'packets.received': 364L,
+<          'packets.transmit': 370L}}
+---
+>          'packets.received': 224L,
+>          'packets.transmit': 230L}}
+2c2
+< using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=False, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=18, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='analysis/send-comm-', save=True, saveall=False, serial='584923', verbose=None) `
+---
+> using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=True, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=7, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='logs/cgm-page-7-', save=True, saveall=False, serial='584923', verbose=None) `
+15,17c15,17
+<            'errors.timeouts': 3,
+<            'packets.received': 185L,
+<            'packets.transmit': 197L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 120L,
+>            'packets.transmit': 126L},
+22,23c22,23
+<          'packets.received': 338L,
+<          'packets.transmit': 344L}}
+---
+>          'packets.received': 197L,
+>          'packets.transmit': 203L}}
+25a26
+> PowerControl SERIAL 584923
+28c29
+< <class 'decocare.commands.ReadSensorHistoryData'> {'page': 18}
+---
+> <class 'decocare.commands.ReadSensorHistoryData'> {'page': 7}
+172,174c173,175
+<            'errors.timeouts': 3,
+<            'packets.received': 203L,
+<            'packets.transmit': 216L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 140L,
+>            'packets.transmit': 147L},
+179,180c180,181
+<          'packets.received': 364L,
+<          'packets.transmit': 370L}}
+---
+>          'packets.received': 224L,
+>          'packets.transmit': 230L}}
+2c2
+< using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=False, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=18, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='analysis/send-comm-', save=True, saveall=False, serial='584923', verbose=None) `
+---
+> using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=True, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=9, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='logs/cgm-page-9-', save=True, saveall=False, serial='584923', verbose=None) `
+15,17c15,17
+<            'errors.timeouts': 3,
+<            'packets.received': 185L,
+<            'packets.transmit': 197L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 160L,
+>            'packets.transmit': 168L},
+22,23c22,23
+<          'packets.received': 338L,
+<          'packets.transmit': 344L}}
+---
+>          'packets.received': 261L,
+>          'packets.transmit': 267L}}
+25a26
+> PowerControl SERIAL 584923
+28c29
+< <class 'decocare.commands.ReadSensorHistoryData'> {'page': 18}
+---
+> <class 'decocare.commands.ReadSensorHistoryData'> {'page': 9}
+172,174c173,175
+<            'errors.timeouts': 3,
+<            'packets.received': 203L,
+<            'packets.transmit': 216L},
+---
+>            'errors.timeouts': 0,
+>            'packets.received': 180L,
+>            'packets.transmit': 189L},
+179,180c180,181
+<          'packets.received': 364L,
+<          'packets.transmit': 370L}}
+---
+>          'packets.received': 288L,
+>          'packets.transmit': 294L}}
