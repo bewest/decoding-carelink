@@ -1,5 +1,5 @@
 ## do stuff with an insulin pump over RF
-using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=False, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=1, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='logs/cgm-page-1-', save=True, saveall=False, serial='584923', verbose=None) `
+using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, dryrun=False, effectTime=None, end=None, init=False, maxRecords=None, name=None, no_postlude=False, no_prelude=False, no_rf_prelude=False, other='ReadSensorHistoryData', page=24, params=None, port='/dev/ttyUSB0', postfix=None, prefix=None, prefix_path='logs/cgm-page-24-', save=True, saveall=False, serial='584923', verbose=None) `
 ```
 ```
 ```
@@ -11,21 +11,21 @@ using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, 
 ```javascript
 {'radio': {'errors.crc': 0,
            'errors.naks': 0,
-           'errors.sequence': 0,
-           'errors.timeouts': 0,
-           'packets.received': 5L,
-           'packets.transmit': 5L},
+           'errors.sequence': 2,
+           'errors.timeouts': 6,
+           'packets.received': 420L,
+           'packets.transmit': 448L},
  'usb': {'errors.crc': 0,
          'errors.naks': 3,
          'errors.sequence': 0,
          'errors.timeouts': 0,
-         'packets.received': 61L,
-         'packets.transmit': 64L}}
+         'packets.received': 1003L,
+         'packets.transmit': 1006L}}
 ```
 ```
 ```
 ### PUMP MODEL: `ReadPumpModel:size[64]:data:'722'`
-<class 'decocare.commands.ReadSensorHistoryData'> {'page': 1}
+<class 'decocare.commands.ReadSensorHistoryData'> {'page': 24}
 response: ReadSensorHistoryData:size[1024]:[page][0]:data[1024]:
 hexdump:
 ```python
@@ -168,14 +168,14 @@ hexdump:
 ```javascript
 {'radio': {'errors.crc': 0,
            'errors.naks': 0,
-           'errors.sequence': 0,
-           'errors.timeouts': 0,
-           'packets.received': 23L,
-           'packets.transmit': 24L},
+           'errors.sequence': 2,
+           'errors.timeouts': 6,
+           'packets.received': 438L,
+           'packets.transmit': 467L},
  'usb': {'errors.crc': 0,
          'errors.naks': 3,
          'errors.sequence': 0,
          'errors.timeouts': 0,
-         'packets.received': 85L,
-         'packets.transmit': 88L}}
+         'packets.received': 1027L,
+         'packets.transmit': 1030L}}
 ```
