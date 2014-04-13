@@ -12,15 +12,15 @@ using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, 
 {'radio': {'errors.crc': 0,
            'errors.naks': 0,
            'errors.sequence': 2,
-           'errors.timeouts': 6,
-           'packets.received': 312L,
-           'packets.transmit': 334L},
+           'errors.timeouts': 10,
+           'packets.received': 782L,
+           'packets.transmit': 834L},
  'usb': {'errors.crc': 0,
          'errors.naks': 3,
          'errors.sequence': 0,
          'errors.timeouts': 0,
-         'packets.received': 825L,
-         'packets.transmit': 828L}}
+         'packets.received': 1700L,
+         'packets.transmit': 1703L}}
 ```
 ```
 ```
@@ -169,13 +169,13 @@ hexdump:
 {'radio': {'errors.crc': 0,
            'errors.naks': 0,
            'errors.sequence': 2,
-           'errors.timeouts': 6,
-           'packets.received': 330L,
-           'packets.transmit': 353L},
+           'errors.timeouts': 10,
+           'packets.received': 800L,
+           'packets.transmit': 853L},
  'usb': {'errors.crc': 0,
          'errors.naks': 3,
          'errors.sequence': 0,
          'errors.timeouts': 0,
-         'packets.received': 849L,
-         'packets.transmit': 852L}}
+         'packets.received': 1724L,
+         'packets.transmit': 1727L}}
 ```
