@@ -394,6 +394,18 @@ class ReadHistoryData(PumpCommand):
   """
     >>> ReadHistoryData(serial='208850', params=[ 0x03 ]).format() == ReadHistoryData._test_ok
     True
+    >>> ReadHistoryData(params=[ 0x01 ]).params
+    [1]
+    >>> ReadHistoryData(params=[ 0x02 ]).params
+    [2]
+    >>> ReadHistoryData(params=[ 0x03 ]).params
+    [3]
+    >>> ReadHistoryData(page=0x01).params
+    [1]
+    >>> ReadHistoryData(page=0x02).params
+    [2]
+    >>> ReadHistoryData(page=0x03).params
+    [3]
   """
   __fields__ = PumpCommand.__fields__ + ['page']
   _test_ok = bytearray([ 0x01, 0x00, 0xA7, 0x01, 0x20, 0x88, 0x50, 0x80,
@@ -1021,17 +1033,29 @@ class ReadSensorSettings (PumpCommand):
 
 class ReadSensorHistoryData (ReadHistoryData):
   def __init__(self, page=None, **kwds):
-    params = kwds.get('params', [ ])
-    if len(params) == 0:
+    params = kwds.pop('params', [ ])
+    if page is not None:
       params = [ lib.LowByte(page >> 24), lib.LowByte(page >> 16),
                  lib.LowByte(page >>  8), lib.LowByte(page) ]
 
-    kwds['params'] = params
-    super(ReadSensorHistoryData, self).__init__(**kwds)
+    super(ReadSensorHistoryData, self).__init__(params=params, **kwds)
+    self.params = params
 
 # MMX22/	CMD_READ_GLUCOSE_HISTORY	154	0x9a	('\x9a')	??
 class ReadGlucoseHistory (ReadSensorHistoryData):
   """
+    >>> ReadGlucoseHistory(page=1).params
+    [0, 0, 0, 1]
+    >>> ReadGlucoseHistory(page=2).params
+    [0, 0, 0, 2]
+    >>> ReadGlucoseHistory(page=3).params
+    [0, 0, 0, 3]
+    >>> ReadGlucoseHistory(params=[1]).params
+    [1]
+    >>> ReadGlucoseHistory(params=[2]).params
+    [2]
+    >>> ReadGlucoseHistory(params=[3]).params
+    [3]
   """
   descr = "read glucose history"
   code = 154
@@ -1040,6 +1064,15 @@ class ReadGlucoseHistory (ReadSensorHistoryData):
 # MMX22/	CMD_READ_ISIG_HISTORY	155	0x9b	('\x9b')	??
 class ReadISIGHistory (ReadSensorHistoryData):
   """
+    >>> ReadISIGHistory(page=0).params
+    [0, 0, 0, 0]
+
+    >>> ReadISIGHistory(page=1).params
+    [0, 0, 0, 1]
+
+    >>> ReadISIGHistory(page=2).params
+    [0, 0, 0, 2]
+
   """
   descr = "read ISIG history"
   code = 155
@@ -1061,6 +1094,9 @@ class ReadOtherDevicesIDS (PumpCommand):
   code = 240
 
 class FilterHistory (PumpCommand):
+  """
+
+  """
   code = None
   begin = None
   end = None
@@ -1077,7 +1113,8 @@ class FilterHistory (PumpCommand):
 
   def getData(self):
     data = self.data
-    return bytearray(data)
+    if len(data) < 4:
+      return bytearray(data)
     begin = lib.BangInt(data[0:2])
     end = lib.BangInt(data[2:4])
     return dict(begin=begin, end=end)
@@ -1088,10 +1125,19 @@ class FilterHistory (PumpCommand):
 
 # MMX22??/	CMD_FILTER_BG	168	0xa8	('\xa8')	??
 class FilterGlucoseHistory (FilterHistory):
+  """
+    >>> FilterGlucoseHistory.ISO(begin='2014-04-13', end='2014-04-14').params
+    [7, 222, 4, 13, 7, 222, 4, 14]
+  """
   code = 168
 
 # MMX22??/	CMD_FILTER_ISIG	169	0xa9	('\xa9')	??
 class FilterISIGHistory (FilterHistory):
+  """
+    >>> FilterISIGHistory.ISO(begin='2014-04-13', end='2014-04-14').params
+    [7, 222, 4, 13, 7, 222, 4, 14]
+
+  """
   code = 169
 
 class TweakAnotherCommand (ManualCommand):
