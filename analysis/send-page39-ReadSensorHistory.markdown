@@ -11,16 +11,16 @@ using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, 
 ```javascript
 {'radio': {'errors.crc': 0,
            'errors.naks': 0,
-           'errors.sequence': 2,
-           'errors.timeouts': 7,
-           'packets.received': 690L,
-           'packets.transmit': 734L},
+           'errors.sequence': 4,
+           'errors.timeouts': 13,
+           'packets.received': 1478L,
+           'packets.transmit': 1571L},
  'usb': {'errors.crc': 0,
          'errors.naks': 3,
          'errors.sequence': 0,
          'errors.timeouts': 0,
-         'packets.received': 1456L,
-         'packets.transmit': 1459L}}
+         'packets.received': 3090L,
+         'packets.transmit': 3093L}}
 ```
 ```
 ```
@@ -168,14 +168,14 @@ hexdump:
 ```javascript
 {'radio': {'errors.crc': 0,
            'errors.naks': 0,
-           'errors.sequence': 2,
-           'errors.timeouts': 7,
-           'packets.received': 708L,
-           'packets.transmit': 753L},
+           'errors.sequence': 4,
+           'errors.timeouts': 13,
+           'packets.received': 1496L,
+           'packets.transmit': 1590L},
  'usb': {'errors.crc': 0,
          'errors.naks': 3,
          'errors.sequence': 0,
          'errors.timeouts': 0,
-         'packets.received': 1480L,
-         'packets.transmit': 1483L}}
+         'packets.received': 3114L,
+         'packets.transmit': 3117L}}
 ```

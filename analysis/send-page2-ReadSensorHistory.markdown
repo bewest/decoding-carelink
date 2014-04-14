@@ -11,22 +11,21 @@ using ` Namespace(begin=None, bytesPerRecord=None, command='tweak', descr=None, 
 ```javascript
 {'radio': {'errors.crc': 0,
            'errors.naks': 0,
-           'errors.sequence': 0,
-           'errors.timeouts': 0,
-           'packets.received': 23L,
-           'packets.transmit': 24L},
+           'errors.sequence': 2,
+           'errors.timeouts': 10,
+           'packets.received': 823L,
+           'packets.transmit': 877L},
  'usb': {'errors.crc': 0,
          'errors.naks': 3,
          'errors.sequence': 0,
          'errors.timeouts': 0,
-         'packets.received': 90L,
-         'packets.transmit': 93L}}
+         'packets.received': 1777L,
+         'packets.transmit': 1780L}}
 ```
 ```
 ```
 ### PUMP MODEL: `ReadPumpModel:size[64]:data:'722'`
 <class 'decocare.commands.ReadSensorHistoryData'> {'page': 2}
-WARNING:decocare.stick:bad zero CRC?
 response: ReadSensorHistoryData:size[1024]:[page][0]:data[1024]:
 hexdump:
 ```python
@@ -169,14 +168,14 @@ hexdump:
 ```javascript
 {'radio': {'errors.crc': 0,
            'errors.naks': 0,
-           'errors.sequence': 0,
-           'errors.timeouts': 1,
-           'packets.received': 41L,
-           'packets.transmit': 44L},
+           'errors.sequence': 2,
+           'errors.timeouts': 10,
+           'packets.received': 841L,
+           'packets.transmit': 896L},
  'usb': {'errors.crc': 0,
          'errors.naks': 3,
          'errors.sequence': 0,
          'errors.timeouts': 0,
-         'packets.received': 128L,
-         'packets.transmit': 131L}}
+         'packets.received': 1801L,
+         'packets.transmit': 1804L}}
 ```
