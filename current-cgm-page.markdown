@@ -11,6 +11,7 @@ using ` Namespace(command='sleep', dryrun=False, init=True, no_postlude=False, n
 ```javascript
 {'radio': {'errors.crc': 0,
            'errors.naks': 0,
+<<<<<<< HEAD
            'errors.sequence': 0,
            'errors.timeouts': 0,
            'packets.received': 51L,
@@ -21,6 +22,18 @@ using ` Namespace(command='sleep', dryrun=False, init=True, no_postlude=False, n
          'errors.timeouts': 0,
          'packets.received': 118L,
          'packets.transmit': 124L}}
+=======
+           'errors.sequence': 2,
+           'errors.timeouts': 10,
+           'packets.received': 777L,
+           'packets.transmit': 829L},
+ 'usb': {'errors.crc': 0,
+         'errors.naks': 3,
+         'errors.sequence': 0,
+         'errors.timeouts': 0,
+         'packets.received': 1681L,
+         'packets.transmit': 1684L}}
+>>>>>>> 6a884cff54ebd2eff5ea802055e7af0281b44421
 ```
 ```
 PowerControl SERIAL 584923
@@ -44,6 +57,7 @@ response: ReadCurGlucosePageNumber:size[64]:data:{'isig': 14, 'page': 13L, 'gluc
 ```javascript
 {'radio': {'errors.crc': 0,
            'errors.naks': 0,
+<<<<<<< HEAD
            'errors.sequence': 0,
            'errors.timeouts': 0,
            'packets.received': 56L,
@@ -54,4 +68,16 @@ response: ReadCurGlucosePageNumber:size[64]:data:{'isig': 14, 'page': 13L, 'gluc
          'errors.timeouts': 0,
          'packets.received': 132L,
          'packets.transmit': 138L}}
+=======
+           'errors.sequence': 2,
+           'errors.timeouts': 10,
+           'packets.received': 782L,
+           'packets.transmit': 834L},
+ 'usb': {'errors.crc': 0,
+         'errors.naks': 3,
+         'errors.sequence': 0,
+         'errors.timeouts': 0,
+         'packets.received': 1695L,
+         'packets.transmit': 1698L}}
+>>>>>>> 6a884cff54ebd2eff5ea802055e7af0281b44421
 ```
