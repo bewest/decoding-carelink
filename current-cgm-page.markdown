@@ -11,16 +11,16 @@ using ` Namespace(command='sleep', dryrun=False, init=True, no_postlude=False, n
 ```javascript
 {'radio': {'errors.crc': 0,
            'errors.naks': 0,
-           'errors.sequence': 2,
-           'errors.timeouts': 10,
-           'packets.received': 777L,
-           'packets.transmit': 829L},
+           'errors.sequence': 0,
+           'errors.timeouts': 0,
+           'packets.received': 51L,
+           'packets.transmit': 53L},
  'usb': {'errors.crc': 0,
-         'errors.naks': 3,
+         'errors.naks': 6,
          'errors.sequence': 0,
          'errors.timeouts': 0,
-         'packets.received': 1681L,
-         'packets.transmit': 1684L}}
+         'packets.received': 118L,
+         'packets.transmit': 124L}}
 ```
 ```
 PowerControl SERIAL 584923
@@ -44,14 +44,14 @@ response: ReadCurGlucosePageNumber:size[64]:data:{'isig': 14, 'page': 13L, 'gluc
 ```javascript
 {'radio': {'errors.crc': 0,
            'errors.naks': 0,
-           'errors.sequence': 2,
-           'errors.timeouts': 10,
-           'packets.received': 782L,
-           'packets.transmit': 834L},
+           'errors.sequence': 0,
+           'errors.timeouts': 0,
+           'packets.received': 56L,
+           'packets.transmit': 58L},
  'usb': {'errors.crc': 0,
-         'errors.naks': 3,
+         'errors.naks': 6,
          'errors.sequence': 0,
          'errors.timeouts': 0,
-         'packets.received': 1695L,
-         'packets.transmit': 1698L}}
+         'packets.received': 132L,
+         'packets.transmit': 138L}}
 ```
