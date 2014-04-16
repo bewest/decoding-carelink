@@ -47,6 +47,7 @@ class SendMsgApp(CommandApp):
 
   def customize_parser (self, parser):
     choices = commands.__all__
+    choices.sort( )
     parser.add_argument('--prefix-path',
                         dest="prefix_path",
                         type=str,

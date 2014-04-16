@@ -1,119 +1,40 @@
 #!/usr/bin/env python
 # PYTHON_ARGCOMPLETE_OK
-import argcomplete, argparse
-import sys, os
-from decocare import link, stick, session, commands, lib
-from pprint import pformat
-import logging
-log = logging.getLogger( ).getChild(__name__)
+from decocare import commands
 
-def parse_env ( ):
-  return {
-   "serial": os.environ.get('SERIAL', ''),
-   "port": os.environ.get('PORT', '')
-  }
+from decocare.helpers import cli
 
-def get_parser ( ):
-  conf = parse_env( )
-  parser = argparse.ArgumentParser( )
-  parser.add_argument('--serial', type=str,
-                      dest='serial',
-                      default=conf.get('serial', ''),
-                      help="serial number of pump [default: %(default)s]")
-  parser.add_argument('--port', type=str,
-                      dest='port',
-                      default=conf.get('port', ''),
-                      help="Path to device [default: %(default)s]")
-  parser.add_argument('--no-op',
-                      dest='dryrun',
-                      action='store_true', default=False,
-                      help="Dry run, don't do main function"
-                      )
-  parser.add_argument('-v', '--verbose',
-                      dest='verbose',
-                      action='append_const', const=1,
-                      help="Verbosity"
-                      )
-  parser.add_argument('--init',
-                      dest='init',
-                      action='store_true', default=False,
-                      help="Send power ctrl to initialize RF session."
-                      )
-  parser.add_argument('commands',
-                      nargs="+",
-                      #dest='status',
-                      choices=['act', 'esc', 'up', 'down', 'easy' ],
-                      default='act',
-                      help="buttons to press [default: %(default)s)]"
-                      )
-  argcomplete.autocomplete(parser)
-  return parser
+class PressKeysApp (cli.CommandApp):
+  """%(prog)s - Simulate presses on the keypad.
+
+
+  Press keys on the keypad.
+  """
+  def customize_parser (self, parser):
+    parser.add_argument('commands',
+                        nargs="+",
+                        choices=['act', 'esc', 'up', 'down', 'easy' ],
+                        # default='act',
+                        help="buttons to press [default: %(default)s)]"
+                        )
+    return parser
+
+  def exec_request (self, pump, msg, **kwds):
+    msg = lookup_command(msg)
+    super(PressKeysApp, self).exec_request(pump, msg, **kwds)
 
 command_map = {
-    'easy': commands.KeypadPush.EASY,
-    'esc': commands.KeypadPush.ESC,
-    'act': commands.KeypadPush.ACT,
-    'down': commands.KeypadPush.DOWN,
-    'up': commands.KeypadPush.UP,
+    'easy': commands.PushEASY,
+    'esc': commands.PushESC,
+    'act': commands.PushACT,
+    'down': commands.PushDOWN,
+    'up': commands.PushUP
 }
 
-def exec_request (pump, request):
-  msg = command_map.get(request)
-  response = pump.query(msg)
-  print "response: %s" % response
-  print "hexdump:"
-  print "```"
-  print lib.hexdump(response.data)
-  print "```"
-  print "##### decoded:\n```python\n", repr(response.getData( )), "\n```"
-
-def main (args):
-  print "## press keys on a pump"
-  print "using", "`", args, "`"
-
-  print "```"
-  uart = stick.Stick(link.Link(args.port, timeout=.400))
-  print "```"
-  print "```"
-  uart.open( )
-  print "```"
-  print "```"
-  pump = session.Pump(uart, args.serial)
-  print "```"
-  print "```"
-  stats = uart.interface_stats( )
-  print "```"
-  print "```javascript"
-  print pformat(stats)
-  print "```"
-  print "```"
-  if args.init:
-    pump.power_control( )
-  model = pump.read_model( )
-  print "```"
-  print '### PUMP MODEL: `%s`' % model
-
-  for flow in args.commands:
-    print '### ', flow
-    if args.dryrun:
-      print "#### dry run, no action taken"
-    else:
-      exec_request(pump, flow)
-
-  print "### end stats"
-  print "```"
-  stats = uart.interface_stats( )
-  print "```"
-  print "```javascript"
-  print pformat(stats)
-  print "```"
+def lookup_command (name):
+  return command_map.get(name)
 
 if __name__ == '__main__':
-  parser = get_parser( )
-  args = parser.parse_args( )
-  level = None
-  if args.verbose > 0:
-    level = args.verbose > 1 and logging.DEBUG or logging.INFO
-  logging.basicConfig(stream=sys.stdout, level=level)
-  main(args)
+  app = PressKeysApp( )
+  app.run(None)
 
