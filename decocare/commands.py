@@ -725,6 +725,9 @@ class ReadOldTraceAlarm (PumpCommand):
   maxRecords = 16
   code = 167
 
+# MMPump???/	CMD_?????	36	0x24	('$')	??
+class PumpExperimentSelfCheck_OP36 (PumpCommand):
+  code = 36
 # MMX22/	CMD_WRITE_GLUCOSE_HISTORY_TIMESTAMP	40	0x28	('(')	??
 class WriteGlucoseHistoryTimestamp (PumpCommand):
   code = 40
