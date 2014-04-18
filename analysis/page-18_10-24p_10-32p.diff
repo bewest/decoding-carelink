@@ -1,0 +1,26 @@
+16,17c16,17
+<            'packets.received': 56L,
+<            'packets.transmit': 58L},
+---
+>            'packets.received': 33L,
+>            'packets.transmit': 34L},
+22,23c22,23
+<          'packets.received': 137L,
+<          'packets.transmit': 143L}}
+---
+>          'packets.received': 89L,
+>          'packets.transmit': 95L}}
+29d28
+< WARNING:decocare.stick:bad zero CRC?
+174,175c173,174
+<            'packets.received': 74L,
+<            'packets.transmit': 77L},
+---
+>            'packets.received': 51L,
+>            'packets.transmit': 53L},
+180,181c179,180
+<          'packets.received': 163L,
+<          'packets.transmit': 169L}}
+---
+>          'packets.received': 113L,
+>          'packets.transmit': 119L}}
