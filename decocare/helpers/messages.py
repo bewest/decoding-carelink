@@ -1,3 +1,4 @@
+import time
 from pprint import pformat
 from cli import CommandApp
 from decocare import link, stick, session, commands, lib, scan
