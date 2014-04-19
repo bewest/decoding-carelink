@@ -1042,16 +1042,24 @@ class ReadSensorHistoryData (ReadHistoryData):
       params = [ lib.LowByte(page >> 24), lib.LowByte(page >> 16),
                  lib.LowByte(page >>  8), lib.LowByte(page) ]
 
+      self.page = page
     super(ReadSensorHistoryData, self).__init__(params=params, **kwds)
     self.params = params
+    self.page = page
 
 # MMX22/	CMD_READ_GLUCOSE_HISTORY	154	0x9a	('\x9a')	??
 class ReadGlucoseHistory (ReadSensorHistoryData):
   """
     >>> ReadGlucoseHistory(page=1).params
     [0, 0, 0, 1]
+    >>> list(ReadGlucoseHistory(page=1).format( ))
+    [1, 0, 167, 1, 32, 136, 80, 128, 4, 0, 2, 2, 0, 154, 34, 0, 0, 0, 1, 155]
     >>> ReadGlucoseHistory(page=2).params
     [0, 0, 0, 2]
+    >>> ReadGlucoseHistory(page=3)
+    <ReadGlucoseHistory:size[1024]:[page][3]:data[0]:>
+    >>> list(ReadGlucoseHistory(page=3).format( ))
+    [1, 0, 167, 1, 32, 136, 80, 128, 4, 0, 2, 2, 0, 154, 34, 0, 0, 0, 3, 54]
     >>> ReadGlucoseHistory(page=3).params
     [0, 0, 0, 3]
     >>> ReadGlucoseHistory(params=[1]).params
