@@ -1,8 +1,12 @@
+#### latest-activity `./bin/mm-latest.py`
+
+
+
+```bash
 + ./bin/mm-latest.py 1000
+```
 ## do stuff with an insulin pump over RF
 using ` Namespace(basal=True, clock=True, dryrun=False, init=False, minutes=1000, no_postlude=False, no_prelude=False, no_rf_prelude=False, port='', reservoir=True, serial='665455', status=True, temp=True, verbose=None) `
-```
-```
 ```
 ```
 ```
