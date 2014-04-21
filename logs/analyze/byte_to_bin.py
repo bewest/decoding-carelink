@@ -7,7 +7,7 @@
 # inputs :
 # argv[1] = file input name
 # argv[2] = output type (bin=pure binary, hex=hexidecimal)
-# argv[3] = with new characters (true or false)
+# argv[3] = with new line characters (true or false)
 ##############################################################################
 
 import sys
