@@ -1,0 +1,24 @@
+16,17c16,17
+<            'packets.received': 33L,
+<            'packets.transmit': 34L},
+---
+>            'packets.received': 10L,
+>            'packets.transmit': 10L},
+22,23c22,23
+<          'packets.received': 89L,
+<          'packets.transmit': 95L}}
+---
+>          'packets.received': 41L,
+>          'packets.transmit': 47L}}
+173,174c173,174
+<            'packets.received': 51L,
+<            'packets.transmit': 53L},
+---
+>            'packets.received': 28L,
+>            'packets.transmit': 29L},
+179,180c179,180
+<          'packets.received': 113L,
+<          'packets.transmit': 119L}}
+---
+>          'packets.received': 65L,
+>          'packets.transmit': 71L}}

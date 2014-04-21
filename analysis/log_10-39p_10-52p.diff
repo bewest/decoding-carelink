@@ -1,0 +1,604 @@
+diff log_14-4-13_10-39/send-page10-ReadSensorHistory.markdown log_14-4-13_10-56/send-page10-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 241L,
+<            'packets.transmit': 253L},
+---
+>            'packets.received': 678L,
+>            'packets.transmit': 714L},
+22,23c22,23
+<          'packets.received': 448L,
+<          'packets.transmit': 454L}}
+---
+>          'packets.received': 1166L,
+>          'packets.transmit': 1172L}}
+173,174c173,174
+<            'packets.received': 259L,
+<            'packets.transmit': 272L},
+---
+>            'packets.received': 696L,
+>            'packets.transmit': 733L},
+179,180c179,180
+<          'packets.received': 472L,
+<          'packets.transmit': 478L}}
+---
+>          'packets.received': 1190L,
+>          'packets.transmit': 1196L}}
+diff log_14-4-13_10-39/send-page11-ReadSensorHistory.markdown log_14-4-13_10-56/send-page11-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 259L,
+<            'packets.transmit': 272L},
+---
+>            'packets.received': 696L,
+>            'packets.transmit': 733L},
+22,23c22,23
+<          'packets.received': 477L,
+<          'packets.transmit': 483L}}
+---
+>          'packets.received': 1195L,
+>          'packets.transmit': 1201L}}
+173,174c173,174
+<            'packets.received': 277L,
+<            'packets.transmit': 291L},
+---
+>            'packets.received': 714L,
+>            'packets.transmit': 752L},
+179,180c179,180
+<          'packets.received': 501L,
+<          'packets.transmit': 507L}}
+---
+>          'packets.received': 1219L,
+>          'packets.transmit': 1225L}}
+diff log_14-4-13_10-39/send-page12-ReadSensorHistory.markdown log_14-4-13_10-56/send-page12-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 277L,
+<            'packets.transmit': 291L},
+---
+>            'packets.received': 714L,
+>            'packets.transmit': 752L},
+22,23c22,23
+<          'packets.received': 506L,
+<          'packets.transmit': 512L}}
+---
+>          'packets.received': 1224L,
+>          'packets.transmit': 1230L}}
+173,174c173,174
+<            'packets.received': 295L,
+<            'packets.transmit': 310L},
+---
+>            'packets.received': 732L,
+>            'packets.transmit': 771L},
+179,180c179,180
+<          'packets.received': 530L,
+<          'packets.transmit': 536L}}
+---
+>          'packets.received': 1248L,
+>          'packets.transmit': 1254L}}
+diff log_14-4-13_10-39/send-page13-ReadSensorHistory.markdown log_14-4-13_10-56/send-page13-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 295L,
+<            'packets.transmit': 310L},
+---
+>            'packets.received': 732L,
+>            'packets.transmit': 771L},
+22,23c22,23
+<          'packets.received': 535L,
+<          'packets.transmit': 541L}}
+---
+>          'packets.received': 1253L,
+>          'packets.transmit': 1259L}}
+173,174c173,174
+<            'packets.received': 313L,
+<            'packets.transmit': 329L},
+---
+>            'packets.received': 750L,
+>            'packets.transmit': 790L},
+179,180c179,180
+<          'packets.received': 559L,
+<          'packets.transmit': 565L}}
+---
+>          'packets.received': 1277L,
+>          'packets.transmit': 1283L}}
+diff log_14-4-13_10-39/send-page14-ReadSensorHistory.markdown log_14-4-13_10-56/send-page14-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 313L,
+<            'packets.transmit': 329L},
+---
+>            'packets.received': 750L,
+>            'packets.transmit': 790L},
+22,23c22,23
+<          'packets.received': 564L,
+<          'packets.transmit': 570L}}
+---
+>          'packets.received': 1282L,
+>          'packets.transmit': 1288L}}
+173,174c173,174
+<            'packets.received': 331L,
+<            'packets.transmit': 348L},
+---
+>            'packets.received': 768L,
+>            'packets.transmit': 809L},
+179,180c179,180
+<          'packets.received': 589L,
+<          'packets.transmit': 595L}}
+---
+>          'packets.received': 1306L,
+>          'packets.transmit': 1312L}}
+diff log_14-4-13_10-39/send-page15-ReadSensorHistory.markdown log_14-4-13_10-56/send-page15-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 331L,
+<            'packets.transmit': 348L},
+---
+>            'packets.received': 768L,
+>            'packets.transmit': 809L},
+22,23c22,23
+<          'packets.received': 594L,
+<          'packets.transmit': 600L}}
+---
+>          'packets.received': 1311L,
+>          'packets.transmit': 1317L}}
+173,174c173,174
+<            'packets.received': 349L,
+<            'packets.transmit': 367L},
+---
+>            'packets.received': 786L,
+>            'packets.transmit': 828L},
+179,180c179,180
+<          'packets.received': 618L,
+<          'packets.transmit': 624L}}
+---
+>          'packets.received': 1335L,
+>          'packets.transmit': 1341L}}
+diff log_14-4-13_10-39/send-page16-ReadSensorHistory.markdown log_14-4-13_10-56/send-page16-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 349L,
+<            'packets.transmit': 367L},
+---
+>            'packets.received': 786L,
+>            'packets.transmit': 828L},
+22,23c22,23
+<          'packets.received': 623L,
+<          'packets.transmit': 629L}}
+---
+>          'packets.received': 1340L,
+>          'packets.transmit': 1346L}}
+173,174c173,174
+<            'packets.received': 367L,
+<            'packets.transmit': 386L},
+---
+>            'packets.received': 804L,
+>            'packets.transmit': 847L},
+179,180c179,180
+<          'packets.received': 647L,
+<          'packets.transmit': 653L}}
+---
+>          'packets.received': 1364L,
+>          'packets.transmit': 1370L}}
+diff log_14-4-13_10-39/send-page17-ReadSensorHistory.markdown log_14-4-13_10-56/send-page17-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 367L,
+<            'packets.transmit': 386L},
+---
+>            'packets.received': 804L,
+>            'packets.transmit': 847L},
+22,23c22,23
+<          'packets.received': 652L,
+<          'packets.transmit': 658L}}
+---
+>          'packets.received': 1369L,
+>          'packets.transmit': 1375L}}
+173,174c173,174
+<            'packets.received': 385L,
+<            'packets.transmit': 405L},
+---
+>            'packets.received': 822L,
+>            'packets.transmit': 866L},
+179,180c179,180
+<          'packets.received': 676L,
+<          'packets.transmit': 682L}}
+---
+>          'packets.received': 1393L,
+>          'packets.transmit': 1399L}}
+diff log_14-4-13_10-39/send-page18-ReadSensorHistory.markdown log_14-4-13_10-56/send-page18-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 385L,
+<            'packets.transmit': 405L},
+---
+>            'packets.received': 822L,
+>            'packets.transmit': 866L},
+22,23c22,23
+<          'packets.received': 681L,
+<          'packets.transmit': 687L}}
+---
+>          'packets.received': 1398L,
+>          'packets.transmit': 1404L}}
+173,174c173,174
+<            'packets.received': 403L,
+<            'packets.transmit': 424L},
+---
+>            'packets.received': 840L,
+>            'packets.transmit': 885L},
+179,180c179,180
+<          'packets.received': 705L,
+<          'packets.transmit': 711L}}
+---
+>          'packets.received': 1422L,
+>          'packets.transmit': 1428L}}
+diff log_14-4-13_10-39/send-page19-ReadSensorHistory.markdown log_14-4-13_10-56/send-page19-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 403L,
+<            'packets.transmit': 424L},
+---
+>            'packets.received': 840L,
+>            'packets.transmit': 885L},
+22,23c22,23
+<          'packets.received': 710L,
+<          'packets.transmit': 716L}}
+---
+>          'packets.received': 1427L,
+>          'packets.transmit': 1433L}}
+173,174c173,174
+<            'packets.received': 421L,
+<            'packets.transmit': 443L},
+---
+>            'packets.received': 858L,
+>            'packets.transmit': 904L},
+179,180c179,180
+<          'packets.received': 734L,
+<          'packets.transmit': 740L}}
+---
+>          'packets.received': 1451L,
+>          'packets.transmit': 1457L}}
+diff log_14-4-13_10-39/send-page1-ReadSensorHistory.markdown log_14-4-13_10-56/send-page1-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 79L,
+<            'packets.transmit': 82L},
+---
+>            'packets.received': 516L,
+>            'packets.transmit': 543L},
+22,23c22,23
+<          'packets.received': 187L,
+<          'packets.transmit': 193L}}
+---
+>          'packets.received': 905L,
+>          'packets.transmit': 911L}}
+173,174c173,174
+<            'packets.received': 97L,
+<            'packets.transmit': 101L},
+---
+>            'packets.received': 534L,
+>            'packets.transmit': 562L},
+179,180c179,180
+<          'packets.received': 211L,
+<          'packets.transmit': 217L}}
+---
+>          'packets.received': 929L,
+>          'packets.transmit': 935L}}
+diff log_14-4-13_10-39/send-page20-ReadSensorHistory.markdown log_14-4-13_10-56/send-page20-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 421L,
+<            'packets.transmit': 443L},
+---
+>            'packets.received': 858L,
+>            'packets.transmit': 904L},
+22,23c22,23
+<          'packets.received': 739L,
+<          'packets.transmit': 745L}}
+---
+>          'packets.received': 1456L,
+>          'packets.transmit': 1462L}}
+173,174c173,174
+<            'packets.received': 439L,
+<            'packets.transmit': 462L},
+---
+>            'packets.received': 876L,
+>            'packets.transmit': 923L},
+179,180c179,180
+<          'packets.received': 763L,
+<          'packets.transmit': 769L}}
+---
+>          'packets.received': 1480L,
+>          'packets.transmit': 1486L}}
+diff log_14-4-13_10-39/send-page21-ReadSensorHistory.markdown log_14-4-13_10-56/send-page21-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 439L,
+<            'packets.transmit': 462L},
+---
+>            'packets.received': 876L,
+>            'packets.transmit': 923L},
+22,23c22,23
+<          'packets.received': 768L,
+<          'packets.transmit': 774L}}
+---
+>          'packets.received': 1485L,
+>          'packets.transmit': 1491L}}
+29d28
+< WARNING:decocare.stick:bad zero CRC?
+174,175c173,174
+<            'packets.received': 457L,
+<            'packets.transmit': 481L},
+---
+>            'packets.received': 894L,
+>            'packets.transmit': 942L},
+180,181c179,180
+<          'packets.received': 794L,
+<          'packets.transmit': 800L}}
+---
+>          'packets.received': 1509L,
+>          'packets.transmit': 1515L}}
+diff log_14-4-13_10-39/send-page22-ReadSensorHistory.markdown log_14-4-13_10-56/send-page22-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 457L,
+<            'packets.transmit': 481L},
+---
+>            'packets.received': 894L,
+>            'packets.transmit': 942L},
+22,23c22,23
+<          'packets.received': 799L,
+<          'packets.transmit': 805L}}
+---
+>          'packets.received': 1514L,
+>          'packets.transmit': 1520L}}
+173,174c173,174
+<            'packets.received': 475L,
+<            'packets.transmit': 500L},
+---
+>            'packets.received': 912L,
+>            'packets.transmit': 961L},
+179,180c179,180
+<          'packets.received': 823L,
+<          'packets.transmit': 829L}}
+---
+>          'packets.received': 1538L,
+>          'packets.transmit': 1544L}}
+diff log_14-4-13_10-39/send-page23-ReadSensorHistory.markdown log_14-4-13_10-56/send-page23-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 475L,
+<            'packets.transmit': 500L},
+---
+>            'packets.received': 912L,
+>            'packets.transmit': 961L},
+22,23c22,23
+<          'packets.received': 828L,
+<          'packets.transmit': 834L}}
+---
+>          'packets.received': 1543L,
+>          'packets.transmit': 1549L}}
+173,174c173,174
+<            'packets.received': 493L,
+<            'packets.transmit': 519L},
+---
+>            'packets.received': 930L,
+>            'packets.transmit': 980L},
+179,180c179,180
+<          'packets.received': 852L,
+<          'packets.transmit': 858L}}
+---
+>          'packets.received': 1567L,
+>          'packets.transmit': 1573L}}
+diff log_14-4-13_10-39/send-page24-ReadSensorHistory.markdown log_14-4-13_10-56/send-page24-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 493L,
+<            'packets.transmit': 519L},
+---
+>            'packets.received': 930L,
+>            'packets.transmit': 980L},
+22,23c22,23
+<          'packets.received': 857L,
+<          'packets.transmit': 863L}}
+---
+>          'packets.received': 1572L,
+>          'packets.transmit': 1578L}}
+173,174c173,174
+<            'packets.received': 511L,
+<            'packets.transmit': 538L},
+---
+>            'packets.received': 948L,
+>            'packets.transmit': 999L},
+179,180c179,180
+<          'packets.received': 881L,
+<          'packets.transmit': 887L}}
+---
+>          'packets.received': 1596L,
+>          'packets.transmit': 1602L}}
+diff log_14-4-13_10-39/send-page2-ReadSensorHistory.markdown log_14-4-13_10-56/send-page2-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 97L,
+<            'packets.transmit': 101L},
+---
+>            'packets.received': 534L,
+>            'packets.transmit': 562L},
+22,23c22,23
+<          'packets.received': 216L,
+<          'packets.transmit': 222L}}
+---
+>          'packets.received': 934L,
+>          'packets.transmit': 940L}}
+173,174c173,174
+<            'packets.received': 115L,
+<            'packets.transmit': 120L},
+---
+>            'packets.received': 552L,
+>            'packets.transmit': 581L},
+179,180c179,180
+<          'packets.received': 240L,
+<          'packets.transmit': 246L}}
+---
+>          'packets.received': 958L,
+>          'packets.transmit': 964L}}
+diff log_14-4-13_10-39/send-page3-ReadSensorHistory.markdown log_14-4-13_10-56/send-page3-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 115L,
+<            'packets.transmit': 120L},
+---
+>            'packets.received': 552L,
+>            'packets.transmit': 581L},
+22,23c22,23
+<          'packets.received': 245L,
+<          'packets.transmit': 251L}}
+---
+>          'packets.received': 963L,
+>          'packets.transmit': 969L}}
+173,174c173,174
+<            'packets.received': 133L,
+<            'packets.transmit': 139L},
+---
+>            'packets.received': 570L,
+>            'packets.transmit': 600L},
+179,180c179,180
+<          'packets.received': 269L,
+<          'packets.transmit': 275L}}
+---
+>          'packets.received': 987L,
+>          'packets.transmit': 993L}}
+diff log_14-4-13_10-39/send-page4-ReadSensorHistory.markdown log_14-4-13_10-56/send-page4-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 133L,
+<            'packets.transmit': 139L},
+---
+>            'packets.received': 570L,
+>            'packets.transmit': 600L},
+22,23c22,23
+<          'packets.received': 274L,
+<          'packets.transmit': 280L}}
+---
+>          'packets.received': 992L,
+>          'packets.transmit': 998L}}
+173,174c173,174
+<            'packets.received': 151L,
+<            'packets.transmit': 158L},
+---
+>            'packets.received': 588L,
+>            'packets.transmit': 619L},
+179,180c179,180
+<          'packets.received': 298L,
+<          'packets.transmit': 304L}}
+---
+>          'packets.received': 1016L,
+>          'packets.transmit': 1022L}}
+diff log_14-4-13_10-39/send-page5-ReadSensorHistory.markdown log_14-4-13_10-56/send-page5-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 151L,
+<            'packets.transmit': 158L},
+---
+>            'packets.received': 588L,
+>            'packets.transmit': 619L},
+22,23c22,23
+<          'packets.received': 303L,
+<          'packets.transmit': 309L}}
+---
+>          'packets.received': 1021L,
+>          'packets.transmit': 1027L}}
+173,174c173,174
+<            'packets.received': 169L,
+<            'packets.transmit': 177L},
+---
+>            'packets.received': 606L,
+>            'packets.transmit': 638L},
+179,180c179,180
+<          'packets.received': 327L,
+<          'packets.transmit': 333L}}
+---
+>          'packets.received': 1045L,
+>          'packets.transmit': 1051L}}
+diff log_14-4-13_10-39/send-page6-ReadSensorHistory.markdown log_14-4-13_10-56/send-page6-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 169L,
+<            'packets.transmit': 177L},
+---
+>            'packets.received': 606L,
+>            'packets.transmit': 638L},
+22,23c22,23
+<          'packets.received': 332L,
+<          'packets.transmit': 338L}}
+---
+>          'packets.received': 1050L,
+>          'packets.transmit': 1056L}}
+173,174c173,174
+<            'packets.received': 187L,
+<            'packets.transmit': 196L},
+---
+>            'packets.received': 624L,
+>            'packets.transmit': 657L},
+179,180c179,180
+<          'packets.received': 356L,
+<          'packets.transmit': 362L}}
+---
+>          'packets.received': 1074L,
+>          'packets.transmit': 1080L}}
+diff log_14-4-13_10-39/send-page7-ReadSensorHistory.markdown log_14-4-13_10-56/send-page7-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 187L,
+<            'packets.transmit': 196L},
+---
+>            'packets.received': 624L,
+>            'packets.transmit': 657L},
+22,23c22,23
+<          'packets.received': 361L,
+<          'packets.transmit': 367L}}
+---
+>          'packets.received': 1079L,
+>          'packets.transmit': 1085L}}
+29d28
+< WARNING:decocare.stick:bad zero CRC?
+174,175c173,174
+<            'packets.received': 205L,
+<            'packets.transmit': 215L},
+---
+>            'packets.received': 642L,
+>            'packets.transmit': 676L},
+180,181c179,180
+<          'packets.received': 385L,
+<          'packets.transmit': 391L}}
+---
+>          'packets.received': 1103L,
+>          'packets.transmit': 1109L}}
+diff log_14-4-13_10-39/send-page8-ReadSensorHistory.markdown log_14-4-13_10-56/send-page8-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 205L,
+<            'packets.transmit': 215L},
+---
+>            'packets.received': 642L,
+>            'packets.transmit': 676L},
+22,23c22,23
+<          'packets.received': 390L,
+<          'packets.transmit': 396L}}
+---
+>          'packets.received': 1108L,
+>          'packets.transmit': 1114L}}
+173,174c173,174
+<            'packets.received': 223L,
+<            'packets.transmit': 234L},
+---
+>            'packets.received': 660L,
+>            'packets.transmit': 695L},
+179,180c179,180
+<          'packets.received': 414L,
+<          'packets.transmit': 420L}}
+---
+>          'packets.received': 1132L,
+>          'packets.transmit': 1138L}}
+diff log_14-4-13_10-39/send-page9-ReadSensorHistory.markdown log_14-4-13_10-56/send-page9-ReadSensorHistory.markdown
+16,17c16,17
+<            'packets.received': 223L,
+<            'packets.transmit': 234L},
+---
+>            'packets.received': 660L,
+>            'packets.transmit': 695L},
+22,23c22,23
+<          'packets.received': 419L,
+<          'packets.transmit': 425L}}
+---
+>          'packets.received': 1137L,
+>          'packets.transmit': 1143L}}
+173,174c173,174
+<            'packets.received': 241L,
+<            'packets.transmit': 253L},
+---
+>            'packets.received': 678L,
+>            'packets.transmit': 714L},
+179,180c179,180
+<          'packets.received': 443L,
+<          'packets.transmit': 449L}}
+---
+>          'packets.received': 1161L,
+>          'packets.transmit': 1167L}}
