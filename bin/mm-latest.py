@@ -1,7 +1,14 @@
 #!/usr/bin/env python
 # PYTHON_ARGCOMPLETE_OK
 from decocare import commands
+import io
+import json
 
+from datetime import datetime
+from dateutil import relativedelta
+
+from decocare import lib
+from decocare.history import parse_record
 from decocare.helpers import cli
 
 class LatestActivity (cli.CommandApp):
@@ -29,6 +36,12 @@ class LatestActivity (cli.CommandApp):
             default=True,
             help="Also report temp basal rates."
           )
+    parser.add_argument('--no-reservoir',
+            dest="reservoir",
+            action="store_false",
+            default=True,
+            help="Also report remaining insulin in reservoir."
+          )
     parser.add_argument('--no-status',
             dest="status",
             action="store_false",
@@ -46,7 +59,8 @@ class LatestActivity (cli.CommandApp):
 
   def report_clock (self):
     self.clock = self.exec_request(self.pump, commands.ReadRTC)
-    self.time = self.clock.getData( )
+    self.time = lib.parse.date(self.clock.getData( ))
+    self.since = self.time - self.delta
 
   def report_status (self):
     status = self.exec_request(self.pump, commands.ReadPumpStatus)
@@ -60,6 +74,10 @@ class LatestActivity (cli.CommandApp):
     settings = self.exec_request(self.pump, commands.ReadSettings)
     self.settings = settings.getData( )
 
+  def report_reservoir (self):
+    reservoir = self.exec_request(self.pump, commands.ReadRemainingInsulin)
+    self.reservoir = reservoir.getData( )
+
   def report_basal (self):
     profile = self.settings['selected_pattern']
     query = { 0: commands.ReadProfile_STD512
@@ -69,7 +87,54 @@ class LatestActivity (cli.CommandApp):
     basals = self.exec_request(self.pump, query[profile])
     self.basals = basals.getData( )
 
+  def download_page (self, number):
+    kwds = dict(page=number)
+    page = self.exec_request(self.pump, commands.ReadHistoryData, args=kwds)
+    return page
+
+  def find_records (self, page, larger=None):
+    if larger is None:
+      larger = int(self.pump.model.getData( )[1:]) > 22
+    stream = io.BytesIO(page)
+    records = [ ]
+    for B in iter(lambda: bytearray(stream.read(2)), bytearray("")):
+      if B == bytearray( [ 0x00, 0x00 ] ):
+        break
+      record = parse_record( stream, B, larger=larger )
+      data = record.decode( )
+      print "  * found record", record, record.datetime
+      if record.datetime:
+        if record.datetime < self.since:
+          self.enough_history = True
+          records.append(record)
+        if record.datetime > self.since:
+          self.records.append(record)
+    return records
+
+  def download_history (self):
+    i = 0
+    print "find records since", self.since.isoformat( )
+    self.enough_history = False
+    self.records = [ ]
+    while not self.enough_history:
+      history = self.download_page(i)
+      remainder = self.find_records(history.data)
+      i = i + 1
+    results = [ ]
+    for record in self.records:
+      rec = dict(timestamp=record.datetime.isoformat( ),
+                 _type=str(record.__class__.__name__),
+                 _description=str(record))
+      data = record.decode( )
+      if data:
+        rec.update(data)
+        results.append(rec)
+    print "```json"
+    print json.dumps(results, indent=2)
+    print "```"
+
   def main (self, args):
+    self.delta = relativedelta.relativedelta(minutes=args.minutes)
     self.report_settings( )
     if args.clock:
       self.report_clock( )
@@ -79,6 +144,9 @@ class LatestActivity (cli.CommandApp):
       self.report_temp( )
     if args.basal:
       self.report_basal( )
+    if args.reservoir:
+      self.report_reservoir( )
+    self.download_history( )
 
 if __name__ == '__main__':
   app = LatestActivity( )
