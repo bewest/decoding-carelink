@@ -47,9 +47,11 @@ class LatestActivity (cli.CommandApp):
   def report_clock (self):
     self.clock = self.exec_request(self.pump, commands.ReadRTC)
     self.time = self.clock.getData( )
+
   def report_status (self):
     status = self.exec_request(self.pump, commands.ReadPumpStatus)
     self.status = status.getData( )
+
   def report_temp (self):
     temp = self.exec_request(self.pump, commands.ReadBasalTemp)
     self.temp = temp.getData( )
@@ -57,6 +59,7 @@ class LatestActivity (cli.CommandApp):
   def report_settings (self):
     settings = self.exec_request(self.pump, commands.ReadSettings)
     self.settings = settings.getData( )
+
   def report_basal (self):
     profile = self.settings['selected_pattern']
     query = { 0: commands.ReadProfile_STD512
@@ -65,6 +68,7 @@ class LatestActivity (cli.CommandApp):
             }
     basals = self.exec_request(self.pump, query[profile])
     self.basals = basals.getData( )
+
   def main (self, args):
     self.report_settings( )
     if args.clock:
