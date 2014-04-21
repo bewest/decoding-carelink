@@ -11,42 +11,49 @@ class LatestActivity (cli.CommandApp):
   Query pump for latest activity.
   """
   def customize_parser (self, parser):
-    parser.add_argument('--clock',
-            action="store_true",
-            default=False,
+    parser.add_argument('--no-clock',
+            dest="clock",
+            action="store_false",
+            default=True,
             help="Also report current time on pump."
           )
-    parser.add_argument('--basal',
-            action="store_true",
-            default=False,
+    parser.add_argument('--no-basal',
+            dest="basal",
+            action="store_false",
+            default=True,
             help="Also report basal rates."
           )
-    parser.add_argument('--temp',
-            action="store_true",
-            default=False,
+    parser.add_argument('--no-temp',
+            dest="temp",
+            action="store_false",
+            default=True,
             help="Also report temp basal rates."
           )
-    parser.add_argument('--status',
-            action="store_true",
-            default=False,
+    parser.add_argument('--no-status',
+            dest="status",
+            action="store_false",
+            default=True,
             help="Also report current suspend/bolus status."
           )
     parser.add_argument('minutes',
-                        type=int,
-                        nargs="?",
-                        # choices=['act', 'esc', 'up', 'down', 'easy' ],
-                        default=30,
-                        help="[default: %(default)s)]"
-                        )
+            type=int,
+            nargs="?",
+            default=30,
+            help="[default: %(default)s)]"
+          )
     return parser
 
 
   def report_clock (self):
     self.clock = self.exec_request(self.pump, commands.ReadRTC)
+    self.time = self.clock.getData( )
   def report_status (self):
-    self.status = self.exec_request(self.pump, commands.ReadPumpStatus)
+    status = self.exec_request(self.pump, commands.ReadPumpStatus)
+    self.status = status.getData( )
   def report_temp (self):
-    self.temp = self.exec_request(self.pump, commands.ReadBasalTemp)
+    temp = self.exec_request(self.pump, commands.ReadBasalTemp)
+    self.temp = temp.getData( )
+    
   def report_settings (self):
     settings = self.exec_request(self.pump, commands.ReadSettings)
     self.settings = settings.getData( )
@@ -57,6 +64,7 @@ class LatestActivity (cli.CommandApp):
             , 2: commands.ReadProfile_B512
             }
     basals = self.exec_request(self.pump, query[profile])
+    self.basals = basals.getData( )
   def main (self, args):
     self.report_settings( )
     if args.clock:
