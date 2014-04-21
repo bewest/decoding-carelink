@@ -880,10 +880,10 @@ class ReadProfile_STD512 (PumpCommand):
   def getData (self):
     return self.decode(self.data)
 # MMPump512/	CMD_READ_A_PROFILES	147	0x93	('\x93')	OK
-class ReadProfile_A512 (PumpCommand):
+class ReadProfile_A512 (ReadProfile_STD512):
   code = 147
 # MMPump512/	CMD_READ_B_PROFILES	148	0x94	('\x94')	OK
-class ReadProfile_B512 (PumpCommand):
+class ReadProfile_B512 (ReadProfile_STD512):
   code = 148
 # MMPump512/	CMD_READ_LOGIC_LINK_IDS	149	0x95	('\x95')	OK
 class ReadLogicLinkIDS (PumpCommand):
