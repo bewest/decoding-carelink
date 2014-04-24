@@ -37,9 +37,11 @@ True
 """
 
 from pprint import pformat
+from datetime import time as clocks
 from datetime import datetime
 
 import dateutil.parser
+from dateutil import relativedelta
 
 def _fmt_hex( bytez ):
   return ' '.join( [ '%#04x' % x for x in list( bytez ) ] )
@@ -48,6 +50,11 @@ def _fmt_txt( bytez ):
   return ''.join( [ chr( x ) if 0x20 <= x < 0x7F else '.' \
                     for x in bytez ] )
 
+def basal_time (raw):
+  midnight = clocks(0, 0)
+  offset = relativedelta.relativedelta(minutes=30*raw)
+  start = midnight.replace(hour=offset.hours, minute=offset.minutes)
+  return start
 
 class Timer(object):
   def __init__(self):

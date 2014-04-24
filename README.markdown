@@ -595,6 +595,39 @@ optional arguments:
   --end END             end date for FilterHistory
 ```
 
+##### `mm-latest.py -h`
+
+```bash
+usage: mm-latest.py [-h] [--serial SERIAL] [--port PORT] [--no-op]
+                    [--skip-prelude] [--no-rf-prelude] [--skip-postlude] [-v]
+                    [--init] [--no-clock] [--no-basal] [--no-temp]
+                    [--no-reservoir] [--no-status]
+                    [minutes]
+
+mm-latest.py - Grab latest activity
+
+positional arguments:
+  minutes          [default: 30)]
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --serial SERIAL  serial number of pump [default: ]
+  --port PORT      Path to device [default: ]
+  --no-op          Dry run, don't do main function
+  --skip-prelude   Don't do the normal prelude.
+  --no-rf-prelude  Do the prelude, but don't query the pump.
+  --skip-postlude  Don't do the normal postlude.
+  -v, --verbose    Verbosity
+  --init           Send power ctrl to initialize RF session.
+  --no-clock       Also report current time on pump.
+  --no-basal       Also report basal rates.
+  --no-temp        Also report temp basal rates.
+  --no-reservoir   Also report remaining insulin in reservoir.
+  --no-status      Also report current suspend/bolus status.
+
+Query pump for latest activity.
+```
+
 
 #### `./bin/mm-press-key.py`
 

@@ -725,6 +725,10 @@ class ReadOldTraceAlarm (PumpCommand):
   maxRecords = 16
   code = 167
 
+# MMPump???/	CMD_?????	36	0x24	('$')	??
+class PumpExperimentSelfCheck_OP36 (PumpCommand):
+  code = 36
+
 # MMX22/	CMD_WRITE_GLUCOSE_HISTORY_TIMESTAMP	40	0x28	('(')	??
 class WriteGlucoseHistoryTimestamp (PumpCommand):
   code = 40
@@ -829,12 +833,57 @@ class ReadSettings512 (PumpCommand):
   code = 145
 # MMPump512/	CMD_READ_STD_PROFILES	146	0x92	('\x92')	??
 class ReadProfile_STD512 (PumpCommand):
+  """
+    >>> import json
+    >>> schedule = ReadProfile_STD512.decode(ReadProfile_STD512._test_result_1)
+    >>> len(schedule)
+    4
+    >>> print json.dumps(schedule[0])
+    {"start": "00:00:00", "rate": 0.8}
+    >>> print json.dumps(schedule[1])
+    {"start": "06:30:00", "rate": 0.9500000000000001}
+    >>> print json.dumps(schedule[2])
+    {"start": "09:30:00", "rate": 1.1}
+    >>> print json.dumps(schedule[3])
+    {"start": "14:00:00", "rate": 0.9500000000000001}
+
+  """
+  _test_result_1 = bytearray([
+    32, 0, 0,
+    38, 0, 13,
+    44, 0, 19,
+    38, 0, 28,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0
+  ])
+  _test_schedule = {'total': 22.50, 'schedule': [
+    { 'start': '12:00A', 'rate': 0.80 },
+    { 'start': '6:30A', 'rate': 0.95 },
+    { 'start': '9:30A', 'rate': 1.10 },
+    { 'start': '2:00P', 'rate': 0.95 },
+  ]}
   code = 146
+  @staticmethod
+  def decode (data):
+    i = 0
+    schedule = [ ]
+    end = [ 0, 0, 0 ]
+    none = [ 0, 0, 0x3F ]
+    for i in xrange(len(data)/3):
+      off = i*3
+      r, z, m = data[off : off + 3]
+      if [r,z,m] in [end, none]:
+        break
+      schedule.append(dict(start=str(lib.basal_time(m)), rate=r*.025))
+    return schedule
+  def getData (self):
+    return self.decode(self.data)
 # MMPump512/	CMD_READ_A_PROFILES	147	0x93	('\x93')	OK
-class ReadProfile_A512 (PumpCommand):
+class ReadProfile_A512 (ReadProfile_STD512):
   code = 147
 # MMPump512/	CMD_READ_B_PROFILES	148	0x94	('\x94')	OK
-class ReadProfile_B512 (PumpCommand):
+class ReadProfile_B512 (ReadProfile_STD512):
   code = 148
 # MMPump512/	CMD_READ_LOGIC_LINK_IDS	149	0x95	('\x95')	OK
 class ReadLogicLinkIDS (PumpCommand):
@@ -1038,16 +1087,24 @@ class ReadSensorHistoryData (ReadHistoryData):
       params = [ lib.LowByte(page >> 24), lib.LowByte(page >> 16),
                  lib.LowByte(page >>  8), lib.LowByte(page) ]
 
+      self.page = page
     super(ReadSensorHistoryData, self).__init__(params=params, **kwds)
     self.params = params
+    self.page = page
 
 # MMX22/	CMD_READ_GLUCOSE_HISTORY	154	0x9a	('\x9a')	??
 class ReadGlucoseHistory (ReadSensorHistoryData):
   """
     >>> ReadGlucoseHistory(page=1).params
     [0, 0, 0, 1]
+    >>> list(ReadGlucoseHistory(page=1).format( ))
+    [1, 0, 167, 1, 32, 136, 80, 128, 4, 0, 2, 2, 0, 154, 34, 0, 0, 0, 1, 155]
     >>> ReadGlucoseHistory(page=2).params
     [0, 0, 0, 2]
+    >>> ReadGlucoseHistory(page=3)
+    <ReadGlucoseHistory:size[1024]:[page][3]:data[0]:>
+    >>> list(ReadGlucoseHistory(page=3).format( ))
+    [1, 0, 167, 1, 32, 136, 80, 128, 4, 0, 2, 2, 0, 154, 34, 0, 0, 0, 3, 54]
     >>> ReadGlucoseHistory(page=3).params
     [0, 0, 0, 3]
     >>> ReadGlucoseHistory(params=[1]).params
