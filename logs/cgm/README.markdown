@@ -107,6 +107,25 @@ Here are some likely candidates:
 
     00001c8: 16 10 4a 0e 3b 3a 4c e3  ..J.;:L.
 
+###### maybe `4/22/14 07:25:00`
+Is it possible that this is:
+
+```csv
+14602,4/22/14,07:25:00,4/22/14 07:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorTimestamp,TIMESTAMP_TYPE=gap,12877293906,53165772,453,Paradigm 722
+
+```
+```python
+>>> print "{0:#04x} {0:08b} {0:d}".format( 0x16 )
+0x16 00010110 22
+>>> print "{0:#04x} {0:08b} {0:d}".format( 0x10 )
+0x10 00010000 16
+>>> print "{0:#04x} {0:08b} {0:d}".format( 0x4a )
+0x4a 01001010 74
+>>> print "{0:#04x} {0:08b} {0:d}".format( 0x0e )
+0x0e 00001110 14
+```
+
+
 ##### candidate `16 10 4a 0e`
 
     00001d0: 1b 0e 16 1f 4a 0f 4e 4e  ....J.NN
@@ -124,7 +143,6 @@ Here are some likely candidates:
     0000230: 39 3a 3b 3b 38 35 32 2d  9:;;852-
     0000238: 2b 2b 2d 2c 29 26 13 02  ++-,)&..
     0000240: 01 00 00 00 00 00 00 00  ........
-
 
 
 ##### these records are probably in there
