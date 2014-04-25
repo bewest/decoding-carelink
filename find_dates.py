@@ -56,10 +56,11 @@ def dump_one (byte):
   template = "{0:#04x} {0:08b} {0:d}"
   return template.format(byte)
 
-def dump_four (byte):
+def dump_four (byte, indent=0):
   lines = [ ]
+  spaces = ''.join([' '] * indent)
   for x in range(4):
-    lines.append(dump_one(byte[x]))
+    lines.append(spaces + dump_one(byte[x]))
   return "\n".join(lines)
 
 class TimeExperiment (object):
@@ -92,7 +93,7 @@ class TimeExperiment (object):
         print lib.hexdump(candidate, indent=4)
         print ""
         found = dict(timestamp=date, blob=bolus)
-        print dump_four(candidate)
+        print dump_four(candidate, indent=4)
         # print lib.hexdump(bolus)
         records.append(found)
         bolus = bytearray( )
