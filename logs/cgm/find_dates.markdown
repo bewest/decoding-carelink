@@ -1,3 +1,15 @@
+## caveats
+
+This is output from:
+```bash
+$ python find_dates.py logs/20140421_030133-ReadGlucoseHistory-page-16.data  | grep -A 16 2014 
+```
+
+The times are incorrect, the hours and dates are notably incorrect.
+However, several months, days and years are correct.
+The notable one is when `2014-04-21` turns to `2014-04-20`.
+
+
 ### FOUND  2014-04-21T01:07:00  @  44 0x00002c
 #### previous
     0000   0x13 0x65 0x13 0x64 0x13 0x64 0x13 0x64    .e.d.d.d
