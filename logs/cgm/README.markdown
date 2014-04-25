@@ -135,5 +135,10 @@ Here are some likely candidates:
 14370,4/21/14,12:40:42,4/21/14 12:40:42,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Weak Signal (112),,,,,AlarmSensor,"ALARM_TYPE=112, AMOUNT=0, ACTION_REQUESTOR=sensor",12877293534,53165772,74,Paradigm 722
 14462,4/21/14,20:06:00,4/21/14 20:06:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCalFactor,CAL_FACTOR=5.597,12877294045,53165772,592,Paradigm 722
 14505,4/21/14,23:30:00,4/21/14 23:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCalFactor,CAL_FACTOR=5.581,12877294002,53165772,549,Paradigm 722
+
+14602,4/22/14,07:25:00,4/22/14 07:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorTimestamp,TIMESTAMP_TYPE=gap,12877293906,53165772,453,Paradigm 722
+14603,4/22/14,07:27:12,4/22/14 07:27:12,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Weak Signal (112),,,,,AlarmSensor,"ALARM_TYPE=112, AMOUNT=0, ACTION_REQUESTOR=sensor",12877293531,53165772,71,Paradigm 722
+14645,4/22/14,10:31:00,4/22/14 10:31:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCalFactor,CAL_FACTOR=7.139,12877293866,53165772,413,Paradigm 722
+14789,4/22/14,22:16:00,4/22/14 22:16:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCalFactor,CAL_FACTOR=8.902,12877293723,53165772,270,Paradigm 722
 ```
 
