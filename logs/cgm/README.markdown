@@ -102,6 +102,9 @@ Here are some likely candidates:
     00001b0: 44 44 42 40 3d 39 38 38  DDB@=988
     00001b8: 38 38 38 38 38 39 3a 3c  888889:<
     00001c0: b8 0e 16 10 4a 0e b8 0e  ....J...
+
+##### candidate `16 10 4a 0e`
+
     00001c8: 16 10 4a 0e 3b 3a 4c e3  ..J.;:L.
 
 ##### candidate `16 10 4a 0e`
@@ -136,6 +139,7 @@ Here are some likely candidates:
 14462,4/21/14,20:06:00,4/21/14 20:06:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCalFactor,CAL_FACTOR=5.597,12877294045,53165772,592,Paradigm 722
 14505,4/21/14,23:30:00,4/21/14 23:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCalFactor,CAL_FACTOR=5.581,12877294002,53165772,549,Paradigm 722
 
+# there is a duplicate 7:25 timestamp for a GlucoseSensorData entry
 14602,4/22/14,07:25:00,4/22/14 07:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorTimestamp,TIMESTAMP_TYPE=gap,12877293906,53165772,453,Paradigm 722
 14603,4/22/14,07:27:12,4/22/14 07:27:12,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Weak Signal (112),,,,,AlarmSensor,"ALARM_TYPE=112, AMOUNT=0, ACTION_REQUESTOR=sensor",12877293531,53165772,71,Paradigm 722
 14645,4/22/14,10:31:00,4/22/14 10:31:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCalFactor,CAL_FACTOR=7.139,12877293866,53165772,413,Paradigm 722
