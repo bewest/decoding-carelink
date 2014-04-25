@@ -7,6 +7,7 @@ from pprint import pprint, pformat
 from binascii import hexlify
 from datetime import datetime
 
+from datetime import datetime
 from decocare import lib
 from decocare.records import times
 
@@ -23,12 +24,33 @@ def get_opt_parser( ):
                       help="Write records here.")
   return parser
 
+def parse_date (data):
+  data = data[:]
+  seconds = 0
+  minutes = 0
+  hours   = 0
+
+  day     = data[0]
+  minutes = times.parse_minutes(data[1])
+  hours   = times.parse_hours(data[0])
+  year    = times.parse_years(data[3])
+
+  month   = times.parse_months( data[2], data[1] )
+
+  try:
+    date = datetime(year, month, day, hours, minutes, seconds)
+    return date
+  except ValueError, e:
+    pass
+  return None
+
 def find_dates(stream):
   records = [ ]
   bolus = bytearray(stream.read(4))
   dates = [ ]
   extra = bytearray( )
   everything = bolus
+  SIZE = 4
   opcode = ''
   last = 0
   for B in iter(lambda: stream.read(1), ""):
@@ -36,14 +58,14 @@ def find_dates(stream):
     bolus.append(h)
     bolus.extend(t)
     everything.extend(B)
-    if len(everything) < 5:
+    if len(everything) < SIZE:
       continue
-    candidate = everything[-5:]
-    date = times.parse_date(candidate)
+    candidate = everything[-SIZE:]
+    date = parse_date(candidate)
     if date is not None:
       last = stream.tell( )
       # last = len(everything)
-      start = last - 5
+      start = last - SIZE
       print "### FOUND ", date.isoformat( ), ' @ ', start, "%#08x" % start
       print "#### previous"
       print lib.hexdump(bolus, indent=4)
