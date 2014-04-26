@@ -1,6 +1,7 @@
 
 ### @erobinson ran several experiments
 
+We expect to see timestamps on `2014-04-26` between `8am` and `11am.`
 
 ```
 first consecutive pages were read to get a good baseline
@@ -93,6 +94,8 @@ Here are some interesting results:
 -00003f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 75 7a  ..............uz
 +00003f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 cd bc  ................
 ```
+Theory is that these glucose records were added:
+* `0x77 * 2` = `238`
 
 ```diff
 --- 20140426_114607-ReadGlucoseHistory-page-0.data.hexdump	2014-04-26 12:56:12.755432453 -0700
@@ -113,6 +116,9 @@ Here are some interesting results:
 -00003f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 cd bc  ................
 +00003f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 7f e2  ................
 ```
+Theory is that these glucose records were added:
+* `0x76 * 2` = `236`
+
 
 ```diff
 --- 20140426_115239-ReadGlucoseHistory-page-0.data.hexdump	2014-04-26 12:56:12.755432453 -0700
@@ -133,6 +139,9 @@ Here are some interesting results:
 -00003f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 7f e2  ................
 +00003f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 e8 a3  ................
 ```
+Theory is that these glucose records were added:
+* `0x76 * 2` = `236`
+
 
 None of these look like our four byte dates yet, just individual glucose
 records being appended.
@@ -156,6 +165,9 @@ records being appended.
 -00003f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 e8 a3  ................
 +00003f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 15 27  ...............'
 ```
+Theory is that these glucose records were added:
+* `0x7A * 2` = `244`
+
 
 ###### some dates
 
@@ -182,6 +194,15 @@ records being appended.
 -00003f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 15 27  ...............'
 +00003f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 f8 8f  ................
 ```
+This chunk was added:
+```diff
++0000070: 69 68 6c 13 72 74 74 76 77 76 76 7a
++...                                          7e 0e 5a 05  ihl.rttvwvvz~.Z.
++0000080: 48 08 0e 1a 0a 48 0b 0e 3a 0a 48 0b 0e 3a 0b 48  H....H..:.H..:.H
++0000090: 0d 00 03 e7 0e 1a 0c 48 0e 13 02 01 00 00 00 00  .......H........
+```
+
+Theory is that records with the following timestamps were recorded:
 
 ```
 05 48 08 0e
