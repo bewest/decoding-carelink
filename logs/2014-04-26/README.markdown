@@ -218,6 +218,7 @@ Theory is that these glucose records were added:
 320,4/26/14,08:10:00,4/26/14 08:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorStatus,STATUS_TYPE=off,12895559828,53172199,254,Paradigm 722
 321,4/26/14,08:10:00,4/26/14 08:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=meter_bg_now, ISIG=49.52, VCNTR=null, BACKFILL_INDICATOR=null",12895559825,53172199,251,Paradigm 722
 322,4/26/14,08:10:00,4/26/14 08:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorStatus,STATUS_TYPE=on,12895559827,53172199,253,Paradigm 722
+329,4/26/14,08:11:00,4/26/14 08:11:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorSync,SYNC_TYPE=new,12895559826,53172199,252,Paradigm 722
 ```
 
 Theory is that records with the following timestamps were recorded:
@@ -232,6 +233,10 @@ Theory is that records with the following timestamps were recorded:
 0a 48 0b 0e [3a 0b 48 0d 00 03 e7 0e]
 1a 0c 48 0e [13 02 01]
 ```
+```csv
+333,4/26/14,08:15:00,4/26/14 08:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorTimestamp,TIMESTAMP_TYPE=gap,12895559822,53172199,248,Paradigm 722
+```
+
 
 ```diff
 --- 20140426_121924-ReadGlucoseHistory-page-0.data.hexdump	2014-04-26 12:56:12.759432453 -0700
@@ -256,11 +261,29 @@ Theory is that records with the following timestamps were recorded:
 -00003f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 f8 8f  ................
 +00003f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 63 0c  ..............c.
 ```
+new data
+```
+                                           0e 5a 0f 48 08  .......H....Z.H.
+00000a0: 0e 1a 14 48 0b 0e 3a 14 48 0b 0e 3a 14 48 0d 01  ...H..:.H..:.H..
+00000b0: 03 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+```
+```csv
+334,4/26/14,08:15:00,4/26/14 08:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorWeakSignal,,12895559823,53172199,249,Paradigm 722
+335,4/26/14,08:20:00,4/26/14 08:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=waiting, ISIG=50.36, VCNTR=null, BACKFILL_INDICATOR=null",12895559818,53172199,244,Paradigm 722
+```
+
+###### probably `2014-04-26T08:20:00`
 
 ```
 0f 48 08 0e
 [1a] 14 48 0b 0e
 [3a] 14 48 0b 0e
+```
+
+```csv
+336,4/26/14,08:20:00,4/26/14 08:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorSync,SYNC_TYPE=new,12895559819,53172199,245,Paradigm 722
+337,4/26/14,08:20:00,4/26/14 08:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorStatus,STATUS_TYPE=on,12895559820,53172199,246,Paradigm 722
+338,4/26/14,08:20:00,4/26/14 08:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorStatus,STATUS_TYPE=off,12895559821,53172199,247,Paradigm 722
 ```
 
 ###### two dates
@@ -284,6 +307,7 @@ Theory is that records with the following timestamps were recorded:
 +00003f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 95 cd  ................
 ```
 
+
 ```
 +00000b0: 03 e6 0e 1a 17 48 0e e7 0e 1a 19 48 0e 01 03 01  .....H.....H....
 [01] 03 e6 0e
@@ -295,39 +319,16 @@ e7 0e
 ```
 
 ```csv
-323,4/26/14,08:10:47,4/26/14 08:10:47,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeSensorSetupConfig,"IS_SENSOR_ENABLED=false, BG_UNITS=mg dl, HIGH_GLUCOSE_ALARM_ENABLE=false, HIGH_GLUCOSE_LIMIT=200, HIGH_GLUCOSE_SNOOZE_TIME=3600000, LOW_GLUCOSE_ALARM_ENABLE=false, LOW_GLUCOSE_LIMIT=50, LOW_GLUCOSE_SNOOZE_TIME=1200000, CAL_REMINDER_ENABLE=true, CAL_REMINDER_TIME=900000, ALARM_SNOOZE_TIME=1800000, MISSED_DATA_TIME=1800000, TRANSMITTER_ID=2426474",12895559656,53172199,78,Paradigm 722
-324,4/26/14,08:10:47,4/26/14 08:10:47,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeSensorSetupConfig,"IS_SENSOR_ENABLED=true, BG_UNITS=mg dl, HIGH_GLUCOSE_ALARM_ENABLE=false, HIGH_GLUCOSE_LIMIT=200, HIGH_GLUCOSE_SNOOZE_TIME=3600000, LOW_GLUCOSE_ALARM_ENABLE=false, LOW_GLUCOSE_LIMIT=50, LOW_GLUCOSE_SNOOZE_TIME=1200000, CAL_REMINDER_ENABLE=true, CAL_REMINDER_TIME=900000, ALARM_SNOOZE_TIME=1800000, MISSED_DATA_TIME=1800000, TRANSMITTER_ID=2426474",12895559657,53172199,79,Paradigm 722
-325,4/26/14,08:10:47,4/26/14 08:10:47,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeSensorSetup,"NEW_CONFIG_DATUM=12895559656, OLD_CONFIG_DATUM=12895559657, ACTION_REQUESTOR=pump",12895559658,53172199,80,Paradigm 722
-```
-
-```csv
-326,4/26/14,08:10:55,4/26/14 08:10:55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeSensorSetupConfig,"IS_SENSOR_ENABLED=false, BG_UNITS=mg dl, HIGH_GLUCOSE_ALARM_ENABLE=false, HIGH_GLUCOSE_LIMIT=200, HIGH_GLUCOSE_SNOOZE_TIME=3600000, LOW_GLUCOSE_ALARM_ENABLE=false, LOW_GLUCOSE_LIMIT=50, LOW_GLUCOSE_SNOOZE_TIME=1200000, CAL_REMINDER_ENABLE=true, CAL_REMINDER_TIME=900000, ALARM_SNOOZE_TIME=1800000, MISSED_DATA_TIME=1800000, TRANSMITTER_ID=2426474",12895559654,53172199,75,Paradigm 722
-327,4/26/14,08:10:55,4/26/14 08:10:55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeSensorSetup,"NEW_CONFIG_DATUM=12895559653, OLD_CONFIG_DATUM=12895559654, ACTION_REQUESTOR=pump",12895559655,53172199,76,Paradigm 722
-328,4/26/14,08:10:55,4/26/14 08:10:55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeSensorSetupConfig,"IS_SENSOR_ENABLED=true, BG_UNITS=mg dl, HIGH_GLUCOSE_ALARM_ENABLE=false, HIGH_GLUCOSE_LIMIT=200, HIGH_GLUCOSE_SNOOZE_TIME=3600000, LOW_GLUCOSE_ALARM_ENABLE=false, LOW_GLUCOSE_LIMIT=50, LOW_GLUCOSE_SNOOZE_TIME=1200000, CAL_REMINDER_ENABLE=true, CAL_REMINDER_TIME=900000, ALARM_SNOOZE_TIME=1800000, MISSED_DATA_TIME=1800000, TRANSMITTER_ID=2426474",12895559653,53172199,74,Paradigm 722
-```
-
-```csv
-329,4/26/14,08:11:00,4/26/14 08:11:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorSync,SYNC_TYPE=new,12895559826,53172199,252,Paradigm 722
-330,4/26/14,08:11:35,4/26/14 08:11:35,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Meter BG Now (104),,,,,AlarmSensor,"ALARM_TYPE=104, AMOUNT=0, ACTION_REQUESTOR=sensor",12895559652,53172199,72,Paradigm 722
-```
-
-```csv
-333,4/26/14,08:15:00,4/26/14 08:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorTimestamp,TIMESTAMP_TYPE=gap,12895559822,53172199,248,Paradigm 722
-334,4/26/14,08:15:00,4/26/14 08:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorWeakSignal,,12895559823,53172199,249,Paradigm 722
-335,4/26/14,08:20:00,4/26/14 08:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=waiting, ISIG=50.36, VCNTR=null, BACKFILL_INDICATOR=null",12895559818,53172199,244,Paradigm 722
-```
-
-```csv
-336,4/26/14,08:20:00,4/26/14 08:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorSync,SYNC_TYPE=new,12895559819,53172199,245,Paradigm 722
-337,4/26/14,08:20:00,4/26/14 08:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorStatus,STATUS_TYPE=on,12895559820,53172199,246,Paradigm 722
-338,4/26/14,08:20:00,4/26/14 08:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorStatus,STATUS_TYPE=off,12895559821,53172199,247,Paradigm 722
-```
-
-```csv
-
 341,4/26/14,08:25:00,4/26/14 08:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=waiting, ISIG=50.54, VCNTR=null, BACKFILL_INDICATOR=null",12895559815,53172199,241,Paradigm 722
 
 344,4/26/14,08:30:00,4/26/14 08:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=waiting, ISIG=50.64, VCNTR=null, BACKFILL_INDICATOR=null",12895559814,53172199,240,Paradigm 722
+```
+
+
+
+
+```csv
+
 345,4/26/14,08:35:00,4/26/14 08:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,230,49.99,,GlucoseSensorData,"AMOUNT=230, ISIG=49.99, VCNTR=null, BACKFILL_INDICATOR=null",12895559813,53172199,239,Paradigm 722
 346,4/26/14,08:35:00,4/26/14 08:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCalFactor,CAL_FACTOR=4.591,12895559812,53172199,238,Paradigm 722
 349,4/26/14,08:40:00,4/26/14 08:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,224,47.12,,GlucoseSensorData,"AMOUNT=224, ISIG=47.12, VCNTR=null, BACKFILL_INDICATOR=null",12895559810,53172199,236,Paradigm 722
