@@ -19,4 +19,26 @@
      87 => 135 * 2 = 270
 5:06 - download
 
+---------- take 4 --------------
+did a simple test with write history command to see if it would appear in the cgm history
+
+
+---------- take 5 --------------
+-- testing out the write history command
+11:03 - downloaded
+11:04 - write history
+11:04 - download
+11:05 - write history - didn't look quite right
+
+11:05 - download - didn't download Glucose - 
+     second download to get glucose - thus there will be 2 isig pages for 1 glucose
+     11:07 for second download
+
+11:07 - write - output looks good
+11:08 - download
+11:08 - write - output looks good
+11:09 - download
+
+11:05 - cgm reading 98 - so there will probably be an extra 0x31 in the data
+
 
