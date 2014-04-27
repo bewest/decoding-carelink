@@ -209,16 +209,19 @@ Theory is that records with the following timestamps were recorded:
 
 ###### probably `2014-04-26 08:10:00`
 ```
-0e 5a
-05 48 08 0e       2014-04-26T08:05:00 SensorTimestamp
-[1a] 0a 48 0b 0e  2014-04-26T08:10:00 SensorStatus
-[3a] 0a 48 0b 0e  2014-04-26T08:10:00 SensorCal
+[7e]
+   0e 5a 05 48    2014-04-26T08:05:00 SensorTimestamp
+08 0e 1a 0a 48
+                  2014-04-26T08:10:00 SensorStatus
+0b 0e 3a 0a 48    2014-04-26T08:10:00 SensorCal
                   2014-04-26T08:10:00 SensorStatus??
-[3a] 0b 48 0d 00  2014-04-26T08:11:00 SensorSync
-[03 e7 0e]
-1a 0c 48 0e
-[13]
-02 [01]
+0b 0e 3a 0b 48    2014-04-26T08:11:00 SensorSync
+0d 00
+03
+e7 0e 1a 0c 48
+0e 13
+02
+[01]
 
 ```
 
@@ -256,11 +259,13 @@ new data
 ###### probably `2014-04-26T08:20:00`
 
 ```
-[0e 5a]           2014-04-26T08:15:00 SensorTimestamp
-     0f 48 08 0e  2014-04-26T08:15:00 SensorWeakSignal
-[1a] 14 48 0b 0e  2014-04-26T08:20:00 SensorCal
-[3a] 14 48 0b 0e  2014-04-26T08:20:00 SensorSync
-[3a] 14 48 0d 01  2014-04-26T08:20:00 SensorStatus?
+   0e 5a 0f 48    2014-04-26T08:15:00 SensorTimestamp
+                  2014-04-26T08:15:00 SensorWeakSignal
+08 0e 1a 14 48    2014-04-26T08:20:00 SensorCal
+0b 0e 3a 14 48    2014-04-26T08:20:00 SensorSync
+0b 0e 3a 14 48    2014-04-26T08:20:00 SensorStatus?
+
+0d 01
 (03 01)
 ```
 
@@ -289,8 +294,10 @@ new data
 
 ```
 (03)
-[e6 0e] 1a 17 48 0e  2014-04-26T08:25:00 SensorCal
-[e7 0e] 1a 19 48 0e  2014-04-26T08:30:00 SensorCal
+e6 0e 1a 17 48       2014-04-26T08:25:00 SensorCal
+0e
+e7 0e 1a 19 48       2014-04-26T08:30:00 SensorCal
+0e
 01 03 01
 ```
 

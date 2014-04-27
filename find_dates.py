@@ -68,8 +68,8 @@ def parse_date (data):
   hours   = parse_hours(data[3])
   #hours   = parse_hours(data[1])
 
-  month   = times.parse_months( data[2], data[1] )
-  month   = 4
+  month   = times.parse_months( data[3], data[1] )
+  # month   = 4
 
   try:
     date = datetime(year, month, day, hours, minutes, seconds)
