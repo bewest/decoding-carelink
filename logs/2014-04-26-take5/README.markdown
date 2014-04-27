@@ -47,5 +47,26 @@
 > 000003f0  00 00 00 00 00 00 00 00  00 00 00 00 00 00 80 a9  |................|
 ```
  
-```diff
+```
+33                2014-04-26T22:55:00 Glucose 102
+32                2014-04-26T23:00:00 Glucose 100
+   0e 1a 00 57    2014-04-26T23:00:00 SensorTimestamp
+08 0e 1a 00 57    2014-04-26T23:00:00 SensorTimestamp type=last_rf
+08
+
+[01]
+31                2014-04-26T23:05:00 Glucose 98
+
+[01]
+
+   0e 1a 05 57    2014-04-26T23:05:00 SensorTimestamp type=last_rf
+08 0e 1a 05 57    2014-04-26T23:05:00 SensorTimestamp type=last_rf
+
+08
+[01]
+
+   0e 1a 05 57    2014-04-26T23:05:00 SensorTimestamp type=last_rf
+08 0e 1a 05 57    2014-04-26T23:05:00 SensorTimestamp type=last_rf
+08
+01
 ```

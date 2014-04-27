@@ -65,9 +65,8 @@ def parse_date (data):
   minutes = parse_minutes(data[2])
   minute_mask   = 0b00011111
   invert_minute = 0b11100000
-  extra = data[3] & invert_minute
-  print "{0:#04x} {0:010b} {0:d}  ".format(extra)
 
+  # print dump_four(data, newline='::')
   # minutes = times.parse_minutes(data[1])
   hours   = parse_hours(data[3])
   #hours   = parse_hours(data[1])
@@ -86,12 +85,12 @@ def dump_one (byte):
   template = "{0:#04x} {0:08b} {0:d}"
   return template.format(byte)
 
-def dump_four (byte, indent=0):
+def dump_four (byte, indent=0, newline="\n"):
   lines = [ ]
   spaces = ''.join([' '] * indent)
   for x in range(4):
     lines.append(spaces + dump_one(byte[x]))
-  return "\n".join(lines)
+  return newline.join(lines)
 
 class TimeExperiment (object):
   def find_dates(self, stream):

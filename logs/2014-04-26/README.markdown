@@ -294,9 +294,10 @@ new data
 
 ```
 (03)
-e6 0e 1a 17 48       2014-04-26T08:25:00 SensorCal
+e6 0e 1a 17 48
 0e
-e7 0e 1a 19 48       2014-04-26T08:30:00 SensorCal
+e7 0e 1a 19 48       2014-04-26T08:25:00 SensorCal
+                     2014-04-26T08:30:00 SensorCal
 0e
 01 03 01
 ```
