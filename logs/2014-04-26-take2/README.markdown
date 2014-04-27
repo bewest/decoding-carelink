@@ -65,8 +65,8 @@ Looks like some glucose data at the top.
 ##### analysis
 
 ```
-04 0e 3a 2d 50 0e
-13 02
+04 0e 3a 2d 50
+0e 13 02
 [01]
 
 ```
@@ -93,7 +93,8 @@ Looks like some glucose data at the top.
 ```
 ##### data
 ```
-04 0e 3a 32 50 0e
+04 0e 3a 32 50
+0e
 [01]
 ```
 
@@ -112,7 +113,8 @@ Looks like some glucose data at the top.
 
 ```
 83                 0x83 * 2 == 262
-04 0e 3a 33 50 0e
+04 0e 3a 33 50
+0e
 [01]
 ```
 
@@ -128,7 +130,8 @@ Looks like some glucose data at the top.
 ```
 
 ```
-04 0e 3a 35 50 0e
+04 0e 3a 35 50
+0e
 [01]
 ```
 

@@ -25,14 +25,17 @@ def get_opt_parser( ):
   return parser
 
 def parse_minutes (one):
-  minute = (one & 0x1F )
+  minute = (one & 0xFF )
   return minute
 
 def parse_hours (one):
-  return (one & 0x7F )
+  return (one & 0x1F )
 
 def parse_day (one):
   return one & 0x7F
+
+def parse_month (one):
+  return one & 0x1F
 
 import binascii
 def dehex (hexstr):
@@ -43,28 +46,6 @@ def cgm_timestamp (data):
   """
 
     # >>> cgm_timestamp(dehex(''))
-    >>> cgm_timestamp(dehex('05 48 08 0e'))
-    2014-04-26T08:05:00
-
-    >>> cgm_timestamp(dehex('0a 48 0b 0e'))
-    2014-04-26T08:10:00
-
-    >>> cgm_timestamp(dehex('0b 48 0d 00'))
-    2014-04-26T08:11:00
-    >>> cgm_timestamp(dehex('1a 0c 48 0e'))
-    2014-04-26T08:15:00
-
-    #>>> cgm_timestamp(bytearray([0x3a,0x32,0x50, 0x0e]))
-    2014-04-26
-
-    #>>> cgm_timestamp(dehex('3a 32 50 0e' ))
-    2014-04-26
-
-    #>>> cgm_timestamp(dehex('3a 33 50 0e' ))
-    2014-04-26
-
-    #>>> cgm_timestamp(dehex('1a 04 51 0e' ))
-    2014-04-26
   """
   result = parse_date(data)
   if result is not None:
@@ -79,14 +60,16 @@ def parse_date (data):
   minutes = 0
   hours   = 0
 
-  # minutes = times.parse_minutes(data[1])
-  minutes = parse_minutes(data[0])
+  year    = times.parse_years(data[0])
   day     = parse_day(data[1])
-  hours   = parse_hours(data[1])
+  minutes = parse_minutes(data[2])
+
+  # minutes = times.parse_minutes(data[1])
+  hours   = parse_hours(data[3])
   #hours   = parse_hours(data[1])
-  year    = times.parse_years(data[3])
 
   month   = times.parse_months( data[2], data[1] )
+  month   = 4
 
   try:
     date = datetime(year, month, day, hours, minutes, seconds)
