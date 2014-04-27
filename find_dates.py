@@ -63,6 +63,10 @@ def parse_date (data):
   year    = times.parse_years(data[0])
   day     = parse_day(data[1])
   minutes = parse_minutes(data[2])
+  minute_mask   = 0b00011111
+  invert_minute = 0b11100000
+  extra = data[3] & invert_minute
+  print "{0:#04x} {0:010b} {0:d}  ".format(extra)
 
   # minutes = times.parse_minutes(data[1])
   hours   = parse_hours(data[3])
