@@ -32,7 +32,7 @@ def parse_hours (one):
   return (one & 0x1F )
 
 def parse_day (one):
-  return one & 0x7F
+  return one & 0x1F
 
 def parse_month (one):
   return one & 0x1F
@@ -44,6 +44,7 @@ def dehex (hexstr):
 
 def cgm_timestamp (data):
   """
+    # >>> cgm_timestamp(dehex(''))
 
     # >>> cgm_timestamp(dehex(''))
   """
