@@ -64,16 +64,10 @@ def parse_date (data):
   year    = times.parse_years(data[0])
   day     = parse_day(data[1])
   minutes = parse_minutes(data[2])
-  minute_mask   = 0b00011111
-  invert_minute = 0b11100000
 
-  # print dump_four(data, newline='::')
-  # minutes = times.parse_minutes(data[1])
   hours   = parse_hours(data[3])
-  #hours   = parse_hours(data[1])
 
   month   = parse_months(data[3])
-  # month   = 4
 
   try:
     date = datetime(year, month, day, hours, minutes, seconds)
