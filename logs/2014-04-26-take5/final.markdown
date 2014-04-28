@@ -66,21 +66,42 @@ And reformatted manually:
 61 60 5f 61 63 69 6d 6c
 69 68 6c 13 72 74 74 76
 77 76 76 7a
-7e 0e 5a 05 48     2014-05-26T08:05:00 SensorTimestamp type=gap
-08 0e 1a 0a 48     2014-04-26T08:10:00
-0b 0e 3a 0a 48     2014-04-26T08:10:00
-0b 0e 3a 0b 48     2014-04-26T08:11:00 SensorSync type=new
-0d 00 03
-e7 0e 1a 0c 48     2014-04-26T08:12:00 CalBGForGH amount=231, origin=manual
-0e 13
-02 0e 5a 0f 48     2014-05-26T08:15:00 SensorTimestamp type=gap
-08 0e 1a 14 48     2014-04-26T08:20:00 SensorSync type=new
-0b 0e 3a 14 48     2014-04-26T08:20:00 SensorStatus type=off
-0b 0e 3a 14 48     2014-04-26T08:20:00 SensorStatus type=on
-0d 01
-03
+7e
+
+   0e 5a 05 48     2014-05-26T08:05:00 SensorTimestamp type=gap
+08
+
+   0e 1a 0a 48     2014-04-26T08:10:00
+0b
+
+   0e 3a 0a 48     2014-04-26T08:10:00
+0b
+
+   0e 3a 0b 48     2014-04-26T08:11:00 SensorSync type=new
+0d
+00 03
+
+e7
+   0e 1a 0c 48     2014-04-26T08:12:00 CalBGForGH amount=231, origin=manual
+0e
+
+13 02
+   0e 5a 0f 48     2014-05-26T08:15:00 SensorTimestamp type=gap
+08
+
+   0e 1a 14 48     2014-04-26T08:20:00 SensorStatus type=off
+0b
+
+   0e 3a 14 48     2014-04-26T08:20:00 SensorStatus type=on
+0b
+
+   0e 3a 14 48     2014-04-26T08:20:00 SensorSync type=new
+0d
+01 03
+
 e6 0e 1a 17 48     2014-04-26T08:23:00 CalBGForGH amount=230
 0e
+
 e7 0e 1a 19 48     2014-04-26T08:25:00 CalBGForGH amount=231
 0e
 01 03 01 03
@@ -89,55 +110,89 @@ e7 0e 1a 19 48     2014-04-26T08:25:00 CalBGForGH amount=231
 ef 11
    0e 1a 23 48     2014-04-26T08:35:00 SensorCalFactor factor=4.591
 0f
-e2 0e 1a 25 48     2014-04-26T08:37:00 CalBGForGH amount=226, origin=manual
+
+e2
+   0e 1a 25 48     2014-04-26T08:37:00 CalBGForGH amount=226, origin=manual
 0e
+
 70
 6c 6c
 93 12
    0e 1a 33 48    2014-04-26T08:51:00 SensorCalFactor factor=4.755
-0f 69 65 61 5c 59 59 59
+0f
+69 65 61 5c 59 59 59
 57 51 4b 47 43 42 42 43
 44 44 44 44 44 43 42 3f
 40 42 44 45 45 46 47 48
 4a 4c
-a2 0e 1a 26 4b    2014-04-26T11:38:00 CalBGForGH amount=162, origin=manual
+
+a2
+   0e 1a 26 4b    2014-04-26T11:38:00 CalBGForGH amount=162, origin=manual
 0e
+
 4f 55 57
 
 e5 11
    0e 1a 32 4b    2014-04-26T11:50:00 SensorCalFactor factor=4.581
-0f 5b 5c 5b 59 57 57
+0f
+
+5b 5c 5b 59 57 57
 59 5c 5b 58 54 52 51 50
 4f 4f 50 50 51 52 53 56
 59 5a 5a 59 58 57 56 58
 59 5b 5e 61 64 66 68 69
 6b 6a 6a 6b 6d 6e 70
-73 0e 1a 28 4f    2014-04-26T15:40:00 SensorTimestamp type=last_rf
+73
+
+   0e 1a 28 4f    2014-04-26T15:40:00 SensorTimestamp type=last_rf
 08
+
 75 77 79
 79 79 7a 7e 82 85 87 86
-04 0e 3a 27 50    2014-04-26T16:39:00 CalBGForGH amount=260, origin=manual
+
+04
+   0e 3a 27 50    2014-04-26T16:39:00 CalBGForGH amount=260, origin=manual
 0e
-04 0e 3a 28 50    2014-04-26T16:40:00 CalBGForGH amount=260, origin=manual
+
+04
+   0e 3a 28 50    2014-04-26T16:40:00 CalBGForGH amount=260, origin=manual
 0e
+
 85
-04 0e 3a 29 50    2014-04-26T16:41:00 CalBGForGH amount=260, origin=manual
+
+04
+   0e 3a 29 50    2014-04-26T16:41:00 CalBGForGH amount=260, origin=manual
 0e
-04 0e 3a 2d 50    2014-04-26T16:45:00 CalBGForGH amount=260, origin=manual
+
+04
+   0e 3a 2d 50    2014-04-26T16:45:00 CalBGForGH amount=260, origin=manual
 0e
+
 13 83
-04 0e 3a 32 50    2014-04-26T16:50:00 CalBGForGH amount=260, origin=manual
+
+04
+   0e 3a 32 50    2014-04-26T16:50:00 CalBGForGH amount=260, origin=manual
 0e
+
 83
-04 0e 3a 33 50    2014-04-26T16:51:00 CalBGForGH amount=260, origin=manual
+
+04
+   0e 3a 33 50    2014-04-26T16:51:00 CalBGForGH amount=260, origin=manual
 0e
-04 0e 3a 35 50    2014-04-26T16:53:00 CalBGForGH amount=260, origin=manual
+
+04
+   0e 3a 35 50    2014-04-26T16:53:00 CalBGForGH amount=260, origin=manual
 0e
 84 86
-fa 0e 1a 04 51    2014-04-26T17:04:00 CalBGForGH amount=250, origin=manual
+
+fa
+   0e 1a 04 51    2014-04-26T17:04:00 CalBGForGH amount=250, origin=manual
 0e
-fa 0e 1a 05 51    2014-04-26T17:05:00 CalBGForGH amount=250, origin=manual
+
+fa
+   0e 1a 05 51    2014-04-26T17:05:00 CalBGForGH amount=250, origin=manual
 0e
+
 87
 88
 81
@@ -145,6 +200,7 @@ fa 0e 1a 05 51    2014-04-26T17:05:00 CalBGForGH amount=250, origin=manual
 07 11
    0e 1a 0f 51    2014-04-26T17:15:00 SensorCalFactor factor=4.359
 0f
+
 80 13
 7f 13
 7d 13
@@ -160,16 +216,19 @@ fa 0e 1a 05 51    2014-04-26T17:05:00 CalBGForGH amount=250, origin=manual
 74
 72
 70
-07 0e 3a 30 52    2014-04-26T18:48:00 CalBGForGH amount=263
+
+07
+   0e 3a 30 52    2014-04-26T18:48:00 CalBGForGH amount=263
 0e
+
 6c                2014-04-26T18:50:00 Glucose 216
 65                2014-04-26T18:55:00 Glucose 202
 6b                2014-04-26T19:00:00 Glucose 214
 
 24 13
    0e 1a 00 53    2014-04-26T19:00:00 SensorCalFactor factor=4.901
-
 0f
+
 65                2014-04-26T19:10:00 Glucose 202
 60                2014-04-26T19:10:00 Glucose 192
 5a                2014-04-26T19:15:00 Glucose 180
@@ -196,8 +255,10 @@ fa 0e 1a 05 51    2014-04-26T17:05:00 CalBGForGH amount=250, origin=manual
 4f                2014-04-26T21:00:00 Glucose 158
 4c                2014-04-26T21:05:00 Glucose 152
 
-89 0e 1a 09 55    2014-04-26T21:09:00 CalBGForGH amount=137
+89
+   0e 1a 09 55    2014-04-26T21:09:00 CalBGForGH amount=137
 0e
+
 4a                2014-04-26T21:10:00 Glucose 148
 47                2014-04-26T21:15:00 Glucose 142
 44                2014-04-26T21:20:00 Glucose 136
@@ -205,6 +266,7 @@ fa 0e 1a 05 51    2014-04-26T17:05:00 CalBGForGH amount=250, origin=manual
 25 13
    0e 1a 14 55    2014-04-26T21:20:00 SensorCalFactor factor=4.901
 0f
+
 41                2014-04-26T21:25:00 Glucose 130
 3d                2014-04-26T21:30:00 Glucose 122
 3a                2014-04-26T21:35:00 Glucose 116
@@ -223,20 +285,34 @@ fa 0e 1a 05 51    2014-04-26T17:05:00 CalBGForGH amount=250, origin=manual
 38                2014-04-26T22:40:00 Glucose 112
 36                2014-04-26T22:45:00 Glucose 108
 35                2014-04-26T22:50:00 Glucose 106
+
    0e 1a 32 56    2014-04-26T22:50:00 SensorTimestamp type=last_rf
-08 0e 1a 32 56    2014-04-26T22:50:00 SensorTimestamp type=last_rf
+08
+
+   0e 1a 32 56    2014-04-26T22:50:00 SensorTimestamp type=last_rf
 08
 33                2014-04-26T22:55:00 Glucose 102
+
 32                2014-04-26T23:00:00 Glucose 100
    0e 1a 00 57    2014-04-26T23:00:00 SensorTimestamp type=last_rf
-08 0e 1a 00 57    2014-04-26T23:00:00 SensorTimestamp type=last_rf
+08
+
+   0e 1a 00 57    2014-04-26T23:00:00 SensorTimestamp type=last_rf
 08
 31                2014-04-26T23:05:00 Glucose 98
+
    0e 1a 05 57    2014-04-26T23:05:00 SensorTimestamp type=last_rf
-08 0e 1a 05 57    2014-04-26T23:05:00 SensorTimestamp type=last_rf
-08 0e 1a 05 57    2014-04-26T23:05:00 SensorTimestamp type=last_rf
-08 0e 1a 05 57    2014-04-26T23:05:00 SensorTimestamp type=last_rf
-08 01
+08
+
+   0e 1a 05 57    2014-04-26T23:05:00 SensorTimestamp type=last_rf
+08
+
+   0e 1a 05 57    2014-04-26T23:05:00 SensorTimestamp type=last_rf
+08
+
+   0e 1a 05 57    2014-04-26T23:05:00 SensorTimestamp type=last_rf
+08
+01
 ```
 
 
