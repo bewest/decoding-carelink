@@ -84,60 +84,66 @@ e6 0e 1a 17 48     2014-04-26T08:23:00 CalBGForGH amount=230
 e7 0e 1a 19 48     2014-04-26T08:25:00 CalBGForGH amount=231
 0e
 01 03 01 03
-73 ef
-11 0e 1a 23 48     2014-04-26T08:30:00 ??
+73
+
+ef 11
+   0e 1a 23 48     2014-04-26T08:35:00 SensorCalFactor factor=4.591
 0f
-e2 0e 1a 25 48     2014-04-26T08:35:00 ??
+e2 0e 1a 25 48     2014-04-26T08:37:00 CalBGForGH amount=226, origin=manual
 0e
 70
-6c 6c 93
-12 0e 1a 33 48
+6c 6c
+93 12
+   0e 1a 33 48    2014-04-26T08:51:00 SensorCalFactor factor=4.755
 0f 69 65 61 5c 59 59 59
 57 51 4b 47 43 42 42 43
 44 44 44 44 44 43 42 3f
 40 42 44 45 45 46 47 48
 4a 4c
-a2 0e 1a 26 4b
-   0e 4f 55 57
-e5
-11 0e 1a 32 4b
+a2 0e 1a 26 4b    2014-04-26T11:38:00 CalBGForGH amount=162, origin=manual
+0e
+4f 55 57
+
+e5 11
+   0e 1a 32 4b    2014-04-26T11:50:00 SensorCalFactor factor=4.581
 0f 5b 5c 5b 59 57 57
 59 5c 5b 58 54 52 51 50
 4f 4f 50 50 51 52 53 56
 59 5a 5a 59 58 57 56 58
 59 5b 5e 61 64 66 68 69
 6b 6a 6a 6b 6d 6e 70
-73 0e 1a 28 4f
+73 0e 1a 28 4f    2014-04-26T15:40:00 SensorTimestamp type=last_rf
 08
 75 77 79
 79 79 7a 7e 82 85 87 86
-04 0e 3a 27 50
+04 0e 3a 27 50    2014-04-26T16:39:00 CalBGForGH amount=260, origin=manual
 0e
-04 0e 3a 28 50
+04 0e 3a 28 50    2014-04-26T16:40:00 CalBGForGH amount=260, origin=manual
 0e
 85
-04 0e 3a 29 50
+04 0e 3a 29 50    2014-04-26T16:41:00 CalBGForGH amount=260, origin=manual
 0e
-04 0e 3a 2d 50
+04 0e 3a 2d 50    2014-04-26T16:45:00 CalBGForGH amount=260, origin=manual
 0e
 13 83
-04 0e 3a 32 50
+04 0e 3a 32 50    2014-04-26T16:50:00 CalBGForGH amount=260, origin=manual
 0e
 83
-04 0e 3a 33 50
+04 0e 3a 33 50    2014-04-26T16:51:00 CalBGForGH amount=260, origin=manual
 0e
-04 0e 3a 35 50
+04 0e 3a 35 50    2014-04-26T16:53:00 CalBGForGH amount=260, origin=manual
 0e
 84 86
-fa 0e 1a 04 51
+fa 0e 1a 04 51    2014-04-26T17:04:00 CalBGForGH amount=250, origin=manual
 0e
-fa 0e 1a 05 51
+fa 0e 1a 05 51    2014-04-26T17:05:00 CalBGForGH amount=250, origin=manual
 0e
 87
 88
 81
-07
-11 0e 1a 0f 51
+
+07 11
+   0e 1a 0f 51    2014-04-26T17:15:00 SensorCalFactor factor=4.359
 0f
 80 13
 7f 13

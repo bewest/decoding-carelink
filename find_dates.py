@@ -25,7 +25,7 @@ def get_opt_parser( ):
   return parser
 
 def parse_minutes (one):
-  minute = (one & 0x1F )
+  minute = (one & 0x7F )
   return minute
 
 def parse_hours (one):
