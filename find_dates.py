@@ -34,8 +34,8 @@ def parse_hours (one):
 def parse_day (one):
   return one & 0x1F
 
-def parse_month (one):
-  return one & 0x1F
+def parse_months (one):
+  return one >> 4
 
 import binascii
 def dehex (hexstr):
@@ -72,7 +72,7 @@ def parse_date (data):
   hours   = parse_hours(data[3])
   #hours   = parse_hours(data[1])
 
-  month   = times.parse_months( data[3], data[1] )
+  month   = parse_months(data[3])
   # month   = 4
 
   try:
