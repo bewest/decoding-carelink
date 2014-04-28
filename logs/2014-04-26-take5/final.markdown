@@ -20,7 +20,7 @@ And reformatted manually:
 50 13
 51 13
 52
-   0e 5a 05 40
+   0e 5a 05 40    2014-05-26T00:05:00 SensorTimestamp type=gap
 08
 13 53
 54 13
@@ -66,22 +66,22 @@ And reformatted manually:
 61 60 5f 61 63 69 6d 6c
 69 68 6c 13 72 74 74 76
 77 76 76 7a
-7e 0e 5a 05 48
-08 0e 1a 0a 48
-0b 0e 3a 0a 48
-0b 0e 3a 0b 48
+7e 0e 5a 05 48     2014-05-26T08:05:00 SensorTimestamp type=gap
+08 0e 1a 0a 48     2014-04-26T08:10:00
+0b 0e 3a 0a 48     2014-04-26T08:10:00
+0b 0e 3a 0b 48     2014-04-26T08:11:00 SensorSync type=new
 0d 00 03
-e7 0e 1a 0c 48
+e7 0e 1a 0c 48     2014-04-26T08:12:00 CalBGForGH amount=231, origin=manual
 0e 13
-02 0e 5a 0f 48
-08 0e 1a 14 48
-0b 0e 3a 14 48
-0b 0e 3a 14 48
+02 0e 5a 0f 48     2014-05-26T08:15:00 SensorTimestamp type=gap
+08 0e 1a 14 48     2014-04-26T08:20:00 SensorSync type=new
+0b 0e 3a 14 48     2014-04-26T08:20:00 SensorStatus type=off
+0b 0e 3a 14 48     2014-04-26T08:20:00 SensorStatus type=on
 0d 01
 03
-e6 0e 1a 17 48
+e6 0e 1a 17 48     2014-04-26T08:23:00 CalBGForGH amount=230
 0e
-e7 0e 1a 19 48
+e7 0e 1a 19 48     2014-04-26T08:25:00 CalBGForGH amount=231
 0e
 01 03 01 03
 73 ef
@@ -154,7 +154,7 @@ fa 0e 1a 05 51
 74
 72
 70
-07 0e 3a 30 52    2014-04-26T18:48 CalBGForGH amount=263
+07 0e 3a 30 52    2014-04-26T18:48:00 CalBGForGH amount=263
 0e
 6c                2014-04-26T18:50:00 Glucose 216
 65                2014-04-26T18:55:00 Glucose 202
