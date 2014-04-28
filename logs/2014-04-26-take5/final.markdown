@@ -5,6 +5,8 @@
 $ xxd -p -a -g 1 -c 8 logs/2014-04-26-take5/20140427_030926-ReadGlucoseHistory-page-0.data  | cut -c 1-2,3-4,5-6,7-8,9-10,11-12,13-14,15-16,17-18,19-20 --output-delimiter=' ' | tee -a logs/2014-04-26-take5/final.markdown
 ```
 
+These records line up very well with [the day's csv data](./day.csv).
+
 And reformatted manually:
 
 ```
