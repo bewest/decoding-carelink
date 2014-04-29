@@ -3,6 +3,8 @@
 + python list_cgm.py logs/2014-04-26-take5/20140427_030650-ReadGlucoseHistory-page-0.data
 ```
 
+
+
 ```javascript
 [
   {
@@ -616,7 +618,6 @@
   {
     "date": "2014-05-26T23:00:00", 
     "prefix": [
-      1, 
       49
     ], 
     "cgm": [], 

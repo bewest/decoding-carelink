@@ -73,13 +73,6 @@ class PagedData (object):
     self.data = self.eat_nulls(data)
     self.stream = io.BufferedReader(io.BytesIO(self.data))
 
-  def map_glucose (self, values, start=None):
-    cgms = [ ]
-    for x in list(values):
-      if x > 20:
-        x = int(x) * 2
-      cgms.append(x)
-    return cgms
   def eat_nulls (self, data):
     i = 0
     while data[i] == 0x00:
@@ -102,31 +95,78 @@ class PagedData (object):
   def collect_glucose (self):
     glucose = bytearray( )
     for B in iter(lambda: bytearray(self.stream.peek(1)), ""):
-      if self.suggest(B[0]) is None:
+      if self.suggest(B[0]) is None and B[0] > 0x0F:
         glucose.extend(self.stream.read(1))
       else:
         break
     return glucose
   def decode (self):
+    """
+      XXX: buggy code
+
+        * fails to acknowledge gaps in time
+        * fails to acknowledge SensorSync
+    """
     records = [ ]
     prefix = bytearray( )
     for B in iter(lambda: self.stream.read(1), ""):
       B = bytearray(B)
+      if B[0] == 0x01:
+        prefix.extend(B)
+        continue
+      # if B[0] == 0x03:
       suggestion = self.suggest(B[0])
       if suggestion is None:
         prefix.extend(bytearray(B))
       else:
         op = B[0]
+        # print "LOOKING AT OP", " {0:#04x}".format(op)
+        # print lib.hexdump(prefix + B)
         body = bytearray(self.stream.read(suggestion))
+        # print "date/body"
         date, body = body[:4], body[4:]
+        # print lib.hexdump(date)
+        # print lib.hexdump(body)
         date.reverse( )
         date = parse_date(date)
         glucose = self.collect_glucose( )
+        cgm = glucose[:]
+        # cgm.reverse( )
+        cgm = self.map_glucose(cgm, start=date, delta=self.delta_ago( ))
+        # cgm.reverse( )
+        prior = prefix[:]
+        prior = self.map_glucose(prior, start=date, delta=self.delta_ago(reverse=True))
+        prior.reverse( )
+        records.extend(prior)
+        records.extend(cgm)
         records.append(self.to_dict(op, body, date, glucose, prefix))
         prefix = bytearray( )
     records.reverse( )
     self.records = records
     return records
+
+  def map_glucose (self, values, start=None, delta=None):
+    cgms = [ ]
+    last = start
+    if delta is None:
+      delta = self.delta_ago( )
+    for x in list(values):
+      i = len(cgms)
+      date = last
+      record = dict(date=date.isoformat( ), name='GlucoseSensorData', op=x, amount='??')
+      if x > 20:
+        x = int(x) * 2
+        record.update(amount=x)
+      cgms.append(record)
+      last = last - delta
+    return cgms
+
+  def delta_ago (self, reverse=False, offset=1):
+    delta = relativedelta(minutes=5*offset)
+    if reverse:
+      delta = relativedelta(minutes=-5*offset)
+    return delta
+
   def to_dict (self, op=None, body=None, date=None, glucose=None, prefix=None):
     names = {
       0x0e: 'CalBGForGH'
@@ -136,7 +176,7 @@ class PagedData (object):
     , 0x0f: 'SensorCalFactor'
     }
     name = names.get(op, 'ERROR')
-    record = dict(op=op, date=date.isoformat( ), cgm=self.map_glucose(glucose), name=name, prefix=list(prefix))
+    record = dict(op=op, date=date.isoformat( ), cgm=list(glucose), name=name, prefix=list(prefix))
     if name == 'SensorCalFactor':
       factor = lib.BangInt([ body[0], body[1] ]) / 1000.0
       record.update(factor=factor)
@@ -149,10 +189,12 @@ class PagedData (object):
 
     return record
 
+from dateutil.relativedelta import relativedelta
+
+import json
 class ListCGM (object):
 
   def print_records (self, records, opts={}):
-    import json
     print json.dumps(records, indent=2)
   def main(self):
     parser = get_opt_parser( )
