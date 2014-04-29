@@ -1,4 +1,9 @@
+### `python list_cgm.py logs/2014-04-26-take5/20140427_030650-ReadGlucoseHistory-page-0.data`
+```bash
 + python list_cgm.py logs/2014-04-26-take5/20140427_030650-ReadGlucoseHistory-page-0.data
+```
+
+```javascript
 [
   {
     "date": "2014-04-26T00:05:00", 
@@ -619,3 +624,4 @@
     "op": 8
   }
 ]
+```
