@@ -1,5 +1,6 @@
 import sys
 import argparse
+import io
 
 from pprint import pprint, pformat
 from binascii import hexlify
@@ -59,69 +60,96 @@ def parse_date (data):
     pass
   return None
 
-class Records (object):
-  raw = bytearray( )
-  opcodes = {
-    0x0e: 'CalBGForGH'
-  , 0x08: 'SensorTimestamp'
-  , 0x0b: 'SensorStatus'
-  , 0x0f: 'SensorCalFactor'
-  }
-  def __init__ (self):
-    self.raw = bytearray( )
-  def append (self, data):
-    self.raw.extend(data)
-  def has_records (self):
-    if len(self.raw) > 4:
-      last = self.raw[-1]
-      if last < 32:
-        if last == 0x0d or self.raw[-2] == 0x0d:
-          return False
-        if self.raw[-3] == 0x0d or self.opcodes.get(last, False):
-          if parse_date(self.raw[-5:]):
-            return True
-    return False
-  def list (self):
+class PagedData (object):
+
+  def __init__ (self, stream):
+    raw = bytearray(stream.read(1024))
+    data, crc = raw[0:1022], raw[1022:]
+    computed = lib.CRC16CCITT.compute(bytearray(data))
+    if lib.BangInt(crc) != computed:
+      assert lib.BangInt(crc) == computed, "CRC does not match page data"
+    
+    data.reverse( )
+    self.data = self.eat_nulls(data)
+    self.stream = io.BufferedReader(io.BytesIO(self.data))
+
+  def map_glucose (self, values, start=None):
+    cgms = [ ]
+    for x in list(values):
+      if x > 20:
+        x = int(x) * 2
+      cgms.append(x)
+    return cgms
+  def eat_nulls (self, data):
+    i = 0
+    while data[i] == 0x00:
+      i = i+1
+    return data[i:]
+  def suggest (self, op):
+    sizes = {
+    #  0x01: 1
+    #, 0x03: 1
+      0x08: 4
+    , 0x0b: 4
+    , 0x0d: 4
+    , 0x0f: 6
+    , 0x0e: 5
+    }
+    if op > 0 and op < 32:
+      return sizes.get(op, None)
+    return None
+
+  def collect_glucose (self):
+    glucose = bytearray( )
+    for B in iter(lambda: bytearray(self.stream.peek(1)), ""):
+      if self.suggest(B[0]) is None:
+        glucose.extend(self.stream.read(1))
+      else:
+        break
+    return glucose
+  def decode (self):
     records = [ ]
-    last = self.raw[-1]
-    opcode = self.opcodes.get(last, False)
-    date = parse_date(self.raw[-5:-1])
-    if date:
-      date = date.isoformat( )
-    prefix = self.raw[:-5]
-    curr = False
-    if opcode == 'CalBGForGH':
-      amount = int(prefix[0])
+    prefix = bytearray( )
+    for B in iter(lambda: self.stream.read(1), ""):
+      B = bytearray(B)
+      suggestion = self.suggest(B[0])
+      if suggestion is None:
+        prefix.extend(bytearray(B))
+      else:
+        op = B[0]
+        body = bytearray(self.stream.read(suggestion))
+        date, body = body[:4], body[4:]
+        date.reverse( )
+        date = parse_date(date)
+        glucose = self.collect_glucose( )
+        records.append(self.to_dict(op, body, date, glucose, prefix))
+        prefix = bytearray( )
+    records.reverse( )
+    self.records = records
+    return records
+  def to_dict (self, op=None, body=None, date=None, glucose=None, prefix=None):
+    names = {
+      0x0e: 'CalBGForGH'
+    , 0x08: 'SensorTimestamp'
+    , 0x0d: 'SensorSync'
+    , 0x0b: 'SensorStatus'
+    , 0x0f: 'SensorCalFactor'
+    }
+    name = names.get(op, 'ERROR')
+    record = dict(op=op, date=date.isoformat( ), cgm=self.map_glucose(glucose), name=name, prefix=list(prefix))
+    if name == 'SensorCalFactor':
+      factor = lib.BangInt([ body[0], body[1] ]) / 1000.0
+      record.update(factor=factor)
+
+    if name == 'CalBGForGH':
+      amount = int(body[0])
       if amount < 32:
         amount = 0x100 + amount
-      curr = dict(date=date, prefix=lib.hexdump(prefix), name=opcode, amount=amount)
-    if opcode == 'SensorTimestamp':
-      cgms = [ ]
-      for x in list(prefix):
-        glucose = int(x) * 2
-        cgms.append(glucose)
-      curr = dict(date=date, prefix=lib.hexdump(prefix), name=opcode, glucose=cgms)
-    if opcode == 'SensorCalFactor':
-      factor = lib.BangInt([ prefix[1], prefix[0] ]) / 1000.0
-      curr = dict(date=date, prefix=lib.hexdump(prefix), name=opcode, factor=factor)
-    if opcode == 'SensorStatus':
-      curr = dict(date=date, prefix=lib.hexdump(prefix), name=opcode)
-      pass
-    if curr:
-      records.append(curr)
-    return records
+      record.update(amount=amount)
+
+    return record
 
 class ListCGM (object):
-  def list_records (self, stream):
-    records = [ ]
-    batch = Records( )
-    for B in iter(lambda: stream.read(1), ""):
-      batch.append(B)
-      if batch.has_records( ):
-        records.extend(batch.list( ))
-        batch = Records( )
-    return records
-
 
   def print_records (self, records, opts={}):
     import json
@@ -131,7 +159,8 @@ class ListCGM (object):
     opts = parser.parse_args( )
     self.records = [ ]
     for stream in opts.infile:
-      self.records.extend(self.list_records(stream))
+      page = PagedData(stream)
+      self.records.extend(page.decode( ))
 
     self.print_records(self.records)
 
