@@ -6,7 +6,7 @@
 ```
 
 This model erroneously accounts for time gaps:
-* [matching csv(https://github.com/bewest/decoding-carelink/blob/erobinson/cgm-decode/logs/2014-04-26-take5/day.csv)
+* [matching csv](https://github.com/bewest/decoding-carelink/blob/erobinson/cgm-decode/logs/2014-04-26-take5/day.csv)
 * [rendered hexdump](https://github.com/bewest/decoding-carelink/blob/erobinson/cgm-decode/logs/2014-04-26-take5/final.markdown)
 
 ```tsv
