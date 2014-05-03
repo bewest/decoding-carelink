@@ -99,7 +99,7 @@ class PagedData (object):
     , 0x0d: 4
     , 0x0f: 6
     , 0x0e: 5
-    , 0x10: 4
+    , 0x10: 7
     , 0x0c: 4
     }
     if op > 0 and op < 32:
@@ -204,6 +204,8 @@ class PagedData (object):
     }
     name = names.get(op, 'ERROR')
     record = dict(op=op, date=date.isoformat( ), cgm=list(glucose), name=name, prefix=list(prefix))
+    if name == 'ERROR':
+      record.update(name='ERROR_{0:#04x}'.format(op), prefix=list(body+glucose))
     if name == 'SensorCalFactor':
       factor = lib.BangInt([ body[0], body[1] ]) / 1000.0
       record.update(factor=factor)
