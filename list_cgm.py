@@ -4,7 +4,6 @@ import io
 
 from pprint import pprint, pformat
 from binascii import hexlify
-from datetime import datetime
 
 from datetime import datetime
 from decocare import lib
@@ -25,7 +24,7 @@ def get_opt_parser( ):
 
 
 def parse_minutes (one):
-  minute = (one & 0x7F )
+  minute = (one & 0b111111 )
   return minute
 
 def parse_hours (one):
@@ -37,7 +36,7 @@ def parse_day (one):
 def parse_months (one):
   return one >> 4
 
-def parse_date (data):
+def parse_date (data, unmask=False, theory_1=False, strict=False):
   """
   """
   data = data[:]
@@ -47,16 +46,29 @@ def parse_date (data):
 
   year    = times.parse_years(data[0])
   day     = parse_day(data[1])
+  # XXX: minutes is suspect, what to do when > 59?
   minutes = parse_minutes(data[2])
 
   hours   = parse_hours(data[3])
 
   month   = parse_months(data[3])
+  if theory_1:
+    # XXX: incorrect and hacky and bad code
+    if minutes > 59:
+      month = month - 1
+      minutes = (minutes & 0x0F) + 1
+    if month < 1:
+      month = (month + 12) % 12 + 1
+
 
   try:
     date = datetime(year, month, day, hours, minutes, seconds)
     return date
   except ValueError, e:
+    if strict:
+      raise
+    if unmask:
+      return (year, month, day, hours, minutes, seconds)
     pass
   return None
 
@@ -87,6 +99,8 @@ class PagedData (object):
     , 0x0d: 4
     , 0x0f: 6
     , 0x0e: 5
+    , 0x10: 4
+    , 0x0c: 4
     }
     if op > 0 and op < 32:
       return sizes.get(op, None)
@@ -122,14 +136,27 @@ class PagedData (object):
         op = B[0]
         # print "LOOKING AT OP", " {0:#04x}".format(op)
         # print lib.hexdump(prefix + B)
-        body = bytearray(self.stream.read(suggestion))
+        raw = bytearray(self.stream.read(suggestion))
         # print "date/body"
-        date, body = body[:4], body[4:]
+        date, body = raw[:4], raw[4:]
         # print lib.hexdump(date)
         # print lib.hexdump(body)
         date.reverse( )
         date = parse_date(date)
         glucose = self.collect_glucose( )
+        if date is None:
+          print "COULD NOT DECODE", " {0:#04x}".format(op), ' @ byte {0}'.format(self.stream.tell( ))
+          print lib.hexdump(prefix)
+          print lib.hexdump(B)
+          print lib.hexdump(raw)
+          expected_date = raw[:4]
+          expected_date.reverse( )
+          print "expected a date", parse_date(expected_date, unmask=True, theory_1=True)
+          print lib.hexdump(glucose)
+          date = parse_date(expected_date, theory_1=True, strict=True)
+          print "ATTEMPTING", date
+
+
         cgm = glucose[:]
         # cgm.reverse( )
         cgm = self.map_glucose(cgm, start=date, delta=self.delta_ago( ))
