@@ -1,0 +1,6091 @@
+[
+  {
+    "prefix": [], 
+    "cgm": [
+      58, 
+      65, 
+      70, 
+      74, 
+      76, 
+      78, 
+      81, 
+      19, 
+      83, 
+      19, 
+      85, 
+      87, 
+      88, 
+      91, 
+      93, 
+      95, 
+      96, 
+      97, 
+      98, 
+      99, 
+      100, 
+      100, 
+      99, 
+      97, 
+      96, 
+      97, 
+      98, 
+      99, 
+      100, 
+      19, 
+      100, 
+      19, 
+      100, 
+      19, 
+      101, 
+      19, 
+      102, 
+      19, 
+      102, 
+      103, 
+      102, 
+      102
+    ], 
+    "name": "CalBGForGH", 
+    "date": "2014-04-21T08:01:00", 
+    "amount": 176, 
+    "op": 14
+  }, 
+  {
+    "date": "2014-04-21T05:11:00", 
+    "amount": 204, 
+    "name": "GlucoseSensorData", 
+    "op": 102
+  }, 
+  {
+    "date": "2014-04-21T05:16:00", 
+    "amount": 204, 
+    "name": "GlucoseSensorData", 
+    "op": 102
+  }, 
+  {
+    "date": "2014-04-21T05:21:00", 
+    "amount": 206, 
+    "name": "GlucoseSensorData", 
+    "op": 103
+  }, 
+  {
+    "date": "2014-04-21T05:26:00", 
+    "amount": 204, 
+    "name": "GlucoseSensorData", 
+    "op": 102
+  }, 
+  {
+    "date": "2014-04-21T05:26:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-21T05:31:00", 
+    "amount": 204, 
+    "name": "GlucoseSensorData", 
+    "op": 102
+  }, 
+  {
+    "date": "2014-04-21T05:31:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-21T05:36:00", 
+    "amount": 202, 
+    "name": "GlucoseSensorData", 
+    "op": 101
+  }, 
+  {
+    "date": "2014-04-21T05:36:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-21T05:41:00", 
+    "amount": 200, 
+    "name": "GlucoseSensorData", 
+    "op": 100
+  }, 
+  {
+    "date": "2014-04-21T05:41:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-21T05:46:00", 
+    "amount": 200, 
+    "name": "GlucoseSensorData", 
+    "op": 100
+  }, 
+  {
+    "date": "2014-04-21T05:46:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-21T05:51:00", 
+    "amount": 200, 
+    "name": "GlucoseSensorData", 
+    "op": 100
+  }, 
+  {
+    "date": "2014-04-21T05:56:00", 
+    "amount": 198, 
+    "name": "GlucoseSensorData", 
+    "op": 99
+  }, 
+  {
+    "date": "2014-04-21T06:01:00", 
+    "amount": 196, 
+    "name": "GlucoseSensorData", 
+    "op": 98
+  }, 
+  {
+    "date": "2014-04-21T06:06:00", 
+    "amount": 194, 
+    "name": "GlucoseSensorData", 
+    "op": 97
+  }, 
+  {
+    "date": "2014-04-21T06:11:00", 
+    "amount": 192, 
+    "name": "GlucoseSensorData", 
+    "op": 96
+  }, 
+  {
+    "date": "2014-04-21T06:16:00", 
+    "amount": 194, 
+    "name": "GlucoseSensorData", 
+    "op": 97
+  }, 
+  {
+    "date": "2014-04-21T06:21:00", 
+    "amount": 198, 
+    "name": "GlucoseSensorData", 
+    "op": 99
+  }, 
+  {
+    "date": "2014-04-21T06:26:00", 
+    "amount": 200, 
+    "name": "GlucoseSensorData", 
+    "op": 100
+  }, 
+  {
+    "date": "2014-04-21T06:31:00", 
+    "amount": 200, 
+    "name": "GlucoseSensorData", 
+    "op": 100
+  }, 
+  {
+    "date": "2014-04-21T06:36:00", 
+    "amount": 198, 
+    "name": "GlucoseSensorData", 
+    "op": 99
+  }, 
+  {
+    "date": "2014-04-21T06:41:00", 
+    "amount": 196, 
+    "name": "GlucoseSensorData", 
+    "op": 98
+  }, 
+  {
+    "date": "2014-04-21T06:46:00", 
+    "amount": 194, 
+    "name": "GlucoseSensorData", 
+    "op": 97
+  }, 
+  {
+    "date": "2014-04-21T06:51:00", 
+    "amount": 192, 
+    "name": "GlucoseSensorData", 
+    "op": 96
+  }, 
+  {
+    "date": "2014-04-21T06:56:00", 
+    "amount": 190, 
+    "name": "GlucoseSensorData", 
+    "op": 95
+  }, 
+  {
+    "date": "2014-04-21T07:01:00", 
+    "amount": 186, 
+    "name": "GlucoseSensorData", 
+    "op": 93
+  }, 
+  {
+    "date": "2014-04-21T07:06:00", 
+    "amount": 182, 
+    "name": "GlucoseSensorData", 
+    "op": 91
+  }, 
+  {
+    "date": "2014-04-21T07:11:00", 
+    "amount": 176, 
+    "name": "GlucoseSensorData", 
+    "op": 88
+  }, 
+  {
+    "date": "2014-04-21T07:16:00", 
+    "amount": 174, 
+    "name": "GlucoseSensorData", 
+    "op": 87
+  }, 
+  {
+    "date": "2014-04-21T07:21:00", 
+    "amount": 170, 
+    "name": "GlucoseSensorData", 
+    "op": 85
+  }, 
+  {
+    "date": "2014-04-21T07:21:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-21T07:26:00", 
+    "amount": 166, 
+    "name": "GlucoseSensorData", 
+    "op": 83
+  }, 
+  {
+    "date": "2014-04-21T07:26:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-21T07:31:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-04-21T07:36:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-04-21T07:41:00", 
+    "amount": 152, 
+    "name": "GlucoseSensorData", 
+    "op": 76
+  }, 
+  {
+    "date": "2014-04-21T07:46:00", 
+    "amount": 148, 
+    "name": "GlucoseSensorData", 
+    "op": 74
+  }, 
+  {
+    "date": "2014-04-21T07:51:00", 
+    "amount": 140, 
+    "name": "GlucoseSensorData", 
+    "op": 70
+  }, 
+  {
+    "date": "2014-04-21T07:56:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-04-21T08:01:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      60, 
+      49, 
+      52
+    ], 
+    "name": "SensorCalFactor", 
+    "factor": 4.317, 
+    "date": "2014-04-21T08:16:00", 
+    "op": 15
+  }, 
+  {
+    "date": "2014-04-21T08:06:00", 
+    "amount": 104, 
+    "name": "GlucoseSensorData", 
+    "op": 52
+  }, 
+  {
+    "date": "2014-04-21T08:11:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-04-21T08:16:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      57, 
+      61, 
+      64, 
+      67, 
+      68, 
+      69, 
+      72, 
+      75, 
+      76, 
+      19, 
+      75, 
+      72, 
+      70, 
+      70, 
+      68, 
+      64, 
+      59, 
+      58, 
+      61, 
+      65, 
+      67, 
+      66, 
+      65, 
+      66, 
+      66, 
+      62, 
+      57, 
+      54, 
+      54, 
+      58, 
+      63, 
+      65, 
+      66, 
+      63, 
+      59, 
+      56, 
+      57, 
+      60, 
+      60
+    ], 
+    "name": "CalBGForGH", 
+    "date": "2014-04-21T11:28:00", 
+    "amount": 122, 
+    "op": 14
+  }, 
+  {
+    "date": "2014-04-21T08:23:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-04-21T08:28:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-04-21T08:33:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-04-21T08:38:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-04-21T08:43:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-04-21T08:48:00", 
+    "amount": 126, 
+    "name": "GlucoseSensorData", 
+    "op": 63
+  }, 
+  {
+    "date": "2014-04-21T08:53:00", 
+    "amount": 132, 
+    "name": "GlucoseSensorData", 
+    "op": 66
+  }, 
+  {
+    "date": "2014-04-21T08:58:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-04-21T09:03:00", 
+    "amount": 126, 
+    "name": "GlucoseSensorData", 
+    "op": 63
+  }, 
+  {
+    "date": "2014-04-21T09:08:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-04-21T09:13:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-04-21T09:18:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-04-21T09:23:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-04-21T09:28:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-04-21T09:33:00", 
+    "amount": 132, 
+    "name": "GlucoseSensorData", 
+    "op": 66
+  }, 
+  {
+    "date": "2014-04-21T09:38:00", 
+    "amount": 132, 
+    "name": "GlucoseSensorData", 
+    "op": 66
+  }, 
+  {
+    "date": "2014-04-21T09:43:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-04-21T09:48:00", 
+    "amount": 132, 
+    "name": "GlucoseSensorData", 
+    "op": 66
+  }, 
+  {
+    "date": "2014-04-21T09:53:00", 
+    "amount": 134, 
+    "name": "GlucoseSensorData", 
+    "op": 67
+  }, 
+  {
+    "date": "2014-04-21T09:58:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-04-21T10:03:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-04-21T10:08:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-04-21T10:13:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-04-21T10:18:00", 
+    "amount": 128, 
+    "name": "GlucoseSensorData", 
+    "op": 64
+  }, 
+  {
+    "date": "2014-04-21T10:23:00", 
+    "amount": 136, 
+    "name": "GlucoseSensorData", 
+    "op": 68
+  }, 
+  {
+    "date": "2014-04-21T10:28:00", 
+    "amount": 140, 
+    "name": "GlucoseSensorData", 
+    "op": 70
+  }, 
+  {
+    "date": "2014-04-21T10:33:00", 
+    "amount": 140, 
+    "name": "GlucoseSensorData", 
+    "op": 70
+  }, 
+  {
+    "date": "2014-04-21T10:38:00", 
+    "amount": 144, 
+    "name": "GlucoseSensorData", 
+    "op": 72
+  }, 
+  {
+    "date": "2014-04-21T10:43:00", 
+    "amount": 150, 
+    "name": "GlucoseSensorData", 
+    "op": 75
+  }, 
+  {
+    "date": "2014-04-21T10:43:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-21T10:48:00", 
+    "amount": 152, 
+    "name": "GlucoseSensorData", 
+    "op": 76
+  }, 
+  {
+    "date": "2014-04-21T10:53:00", 
+    "amount": 150, 
+    "name": "GlucoseSensorData", 
+    "op": 75
+  }, 
+  {
+    "date": "2014-04-21T10:58:00", 
+    "amount": 144, 
+    "name": "GlucoseSensorData", 
+    "op": 72
+  }, 
+  {
+    "date": "2014-04-21T11:03:00", 
+    "amount": 138, 
+    "name": "GlucoseSensorData", 
+    "op": 69
+  }, 
+  {
+    "date": "2014-04-21T11:08:00", 
+    "amount": 136, 
+    "name": "GlucoseSensorData", 
+    "op": 68
+  }, 
+  {
+    "date": "2014-04-21T11:13:00", 
+    "amount": 134, 
+    "name": "GlucoseSensorData", 
+    "op": 67
+  }, 
+  {
+    "date": "2014-04-21T11:18:00", 
+    "amount": 128, 
+    "name": "GlucoseSensorData", 
+    "op": 64
+  }, 
+  {
+    "date": "2014-04-21T11:23:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-04-21T11:28:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      55, 
+      49, 
+      52
+    ], 
+    "name": "SensorCalFactor", 
+    "factor": 4.667, 
+    "date": "2014-04-21T11:41:00", 
+    "op": 15
+  }, 
+  {
+    "date": "2014-04-21T11:31:00", 
+    "amount": 104, 
+    "name": "GlucoseSensorData", 
+    "op": 52
+  }, 
+  {
+    "date": "2014-04-21T11:36:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-04-21T11:41:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-04-21T12:40:00", 
+    "prefix": [], 
+    "cgm": [
+      59, 
+      19, 
+      57, 
+      19, 
+      59, 
+      19, 
+      61, 
+      19, 
+      60, 
+      19, 
+      59, 
+      19, 
+      57, 
+      55, 
+      55, 
+      57, 
+      57, 
+      56
+    ], 
+    "name": "SensorTimestamp", 
+    "op": 8
+  }, 
+  {
+    "date": "2014-04-21T11:45:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-04-21T11:50:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-04-21T11:55:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-04-21T12:00:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-04-21T12:05:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-04-21T12:10:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-04-21T12:10:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-21T12:15:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-04-21T12:15:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-21T12:20:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-04-21T12:20:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-21T12:25:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-04-21T12:25:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-21T12:30:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-04-21T12:30:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-21T12:35:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-04-21T12:35:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-21T12:40:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      53, 
+      54, 
+      57, 
+      60, 
+      65, 
+      19, 
+      69, 
+      19, 
+      71, 
+      74, 
+      19, 
+      78, 
+      19, 
+      83, 
+      19, 
+      90, 
+      19, 
+      93, 
+      19, 
+      93, 
+      93, 
+      95, 
+      19, 
+      95, 
+      92, 
+      85, 
+      78, 
+      69, 
+      60, 
+      60, 
+      61, 
+      61, 
+      58, 
+      53, 
+      47, 
+      45, 
+      45, 
+      49, 
+      54, 
+      60, 
+      63, 
+      65, 
+      67, 
+      67, 
+      67, 
+      64, 
+      65, 
+      67, 
+      68, 
+      70, 
+      72, 
+      75, 
+      77, 
+      75, 
+      72, 
+      71, 
+      68, 
+      65, 
+      61, 
+      57, 
+      54, 
+      49, 
+      42, 
+      37, 
+      34, 
+      34, 
+      35, 
+      38, 
+      40, 
+      40, 
+      41, 
+      42, 
+      42, 
+      42, 
+      42, 
+      41, 
+      40, 
+      39, 
+      43, 
+      44, 
+      41, 
+      40, 
+      40, 
+      40, 
+      39, 
+      40, 
+      40, 
+      39, 
+      40, 
+      44, 
+      49, 
+      54, 
+      58, 
+      19, 
+      59, 
+      19
+    ], 
+    "name": "CalBGForGH", 
+    "date": "2014-05-21T19:53:00", 
+    "amount": 163, 
+    "op": 14
+  }, 
+  {
+    "date": "2014-05-21T12:43:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-21T12:48:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-05-21T12:48:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-21T12:53:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-05-21T12:58:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-05-21T13:03:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-05-21T13:08:00", 
+    "amount": 88, 
+    "name": "GlucoseSensorData", 
+    "op": 44
+  }, 
+  {
+    "date": "2014-05-21T13:13:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-05-21T13:18:00", 
+    "amount": 78, 
+    "name": "GlucoseSensorData", 
+    "op": 39
+  }, 
+  {
+    "date": "2014-05-21T13:23:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-05-21T13:28:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-05-21T13:33:00", 
+    "amount": 78, 
+    "name": "GlucoseSensorData", 
+    "op": 39
+  }, 
+  {
+    "date": "2014-05-21T13:38:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-05-21T13:43:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-05-21T13:48:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-05-21T13:53:00", 
+    "amount": 82, 
+    "name": "GlucoseSensorData", 
+    "op": 41
+  }, 
+  {
+    "date": "2014-05-21T13:58:00", 
+    "amount": 88, 
+    "name": "GlucoseSensorData", 
+    "op": 44
+  }, 
+  {
+    "date": "2014-05-21T14:03:00", 
+    "amount": 86, 
+    "name": "GlucoseSensorData", 
+    "op": 43
+  }, 
+  {
+    "date": "2014-05-21T14:08:00", 
+    "amount": 78, 
+    "name": "GlucoseSensorData", 
+    "op": 39
+  }, 
+  {
+    "date": "2014-05-21T14:13:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-05-21T14:18:00", 
+    "amount": 82, 
+    "name": "GlucoseSensorData", 
+    "op": 41
+  }, 
+  {
+    "date": "2014-05-21T14:23:00", 
+    "amount": 84, 
+    "name": "GlucoseSensorData", 
+    "op": 42
+  }, 
+  {
+    "date": "2014-05-21T14:28:00", 
+    "amount": 84, 
+    "name": "GlucoseSensorData", 
+    "op": 42
+  }, 
+  {
+    "date": "2014-05-21T14:33:00", 
+    "amount": 84, 
+    "name": "GlucoseSensorData", 
+    "op": 42
+  }, 
+  {
+    "date": "2014-05-21T14:38:00", 
+    "amount": 84, 
+    "name": "GlucoseSensorData", 
+    "op": 42
+  }, 
+  {
+    "date": "2014-05-21T14:43:00", 
+    "amount": 82, 
+    "name": "GlucoseSensorData", 
+    "op": 41
+  }, 
+  {
+    "date": "2014-05-21T14:48:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-05-21T14:53:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-05-21T14:58:00", 
+    "amount": 76, 
+    "name": "GlucoseSensorData", 
+    "op": 38
+  }, 
+  {
+    "date": "2014-05-21T15:03:00", 
+    "amount": 70, 
+    "name": "GlucoseSensorData", 
+    "op": 35
+  }, 
+  {
+    "date": "2014-05-21T15:08:00", 
+    "amount": 68, 
+    "name": "GlucoseSensorData", 
+    "op": 34
+  }, 
+  {
+    "date": "2014-05-21T15:13:00", 
+    "amount": 68, 
+    "name": "GlucoseSensorData", 
+    "op": 34
+  }, 
+  {
+    "date": "2014-05-21T15:18:00", 
+    "amount": 74, 
+    "name": "GlucoseSensorData", 
+    "op": 37
+  }, 
+  {
+    "date": "2014-05-21T15:23:00", 
+    "amount": 84, 
+    "name": "GlucoseSensorData", 
+    "op": 42
+  }, 
+  {
+    "date": "2014-05-21T15:28:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-05-21T15:33:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-05-21T15:38:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-05-21T15:43:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-05-21T15:48:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-05-21T15:53:00", 
+    "amount": 136, 
+    "name": "GlucoseSensorData", 
+    "op": 68
+  }, 
+  {
+    "date": "2014-05-21T15:58:00", 
+    "amount": 142, 
+    "name": "GlucoseSensorData", 
+    "op": 71
+  }, 
+  {
+    "date": "2014-05-21T16:03:00", 
+    "amount": 144, 
+    "name": "GlucoseSensorData", 
+    "op": 72
+  }, 
+  {
+    "date": "2014-05-21T16:08:00", 
+    "amount": 150, 
+    "name": "GlucoseSensorData", 
+    "op": 75
+  }, 
+  {
+    "date": "2014-05-21T16:13:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-05-21T16:18:00", 
+    "amount": 150, 
+    "name": "GlucoseSensorData", 
+    "op": 75
+  }, 
+  {
+    "date": "2014-05-21T16:23:00", 
+    "amount": 144, 
+    "name": "GlucoseSensorData", 
+    "op": 72
+  }, 
+  {
+    "date": "2014-05-21T16:28:00", 
+    "amount": 140, 
+    "name": "GlucoseSensorData", 
+    "op": 70
+  }, 
+  {
+    "date": "2014-05-21T16:33:00", 
+    "amount": 136, 
+    "name": "GlucoseSensorData", 
+    "op": 68
+  }, 
+  {
+    "date": "2014-05-21T16:38:00", 
+    "amount": 134, 
+    "name": "GlucoseSensorData", 
+    "op": 67
+  }, 
+  {
+    "date": "2014-05-21T16:43:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-05-21T16:48:00", 
+    "amount": 128, 
+    "name": "GlucoseSensorData", 
+    "op": 64
+  }, 
+  {
+    "date": "2014-05-21T16:53:00", 
+    "amount": 134, 
+    "name": "GlucoseSensorData", 
+    "op": 67
+  }, 
+  {
+    "date": "2014-05-21T16:58:00", 
+    "amount": 134, 
+    "name": "GlucoseSensorData", 
+    "op": 67
+  }, 
+  {
+    "date": "2014-05-21T17:03:00", 
+    "amount": 134, 
+    "name": "GlucoseSensorData", 
+    "op": 67
+  }, 
+  {
+    "date": "2014-05-21T17:08:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-05-21T17:13:00", 
+    "amount": 126, 
+    "name": "GlucoseSensorData", 
+    "op": 63
+  }, 
+  {
+    "date": "2014-05-21T17:18:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-05-21T17:23:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-05-21T17:28:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-05-21T17:33:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-05-21T17:38:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-05-21T17:43:00", 
+    "amount": 94, 
+    "name": "GlucoseSensorData", 
+    "op": 47
+  }, 
+  {
+    "date": "2014-05-21T17:48:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-05-21T17:53:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-05-21T17:58:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-05-21T18:03:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-05-21T18:08:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-05-21T18:13:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-05-21T18:18:00", 
+    "amount": 138, 
+    "name": "GlucoseSensorData", 
+    "op": 69
+  }, 
+  {
+    "date": "2014-05-21T18:23:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-05-21T18:28:00", 
+    "amount": 170, 
+    "name": "GlucoseSensorData", 
+    "op": 85
+  }, 
+  {
+    "date": "2014-05-21T18:33:00", 
+    "amount": 184, 
+    "name": "GlucoseSensorData", 
+    "op": 92
+  }, 
+  {
+    "date": "2014-05-21T18:38:00", 
+    "amount": 190, 
+    "name": "GlucoseSensorData", 
+    "op": 95
+  }, 
+  {
+    "date": "2014-05-21T18:38:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-21T18:43:00", 
+    "amount": 190, 
+    "name": "GlucoseSensorData", 
+    "op": 95
+  }, 
+  {
+    "date": "2014-05-21T18:48:00", 
+    "amount": 186, 
+    "name": "GlucoseSensorData", 
+    "op": 93
+  }, 
+  {
+    "date": "2014-05-21T18:53:00", 
+    "amount": 186, 
+    "name": "GlucoseSensorData", 
+    "op": 93
+  }, 
+  {
+    "date": "2014-05-21T18:53:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-21T18:58:00", 
+    "amount": 186, 
+    "name": "GlucoseSensorData", 
+    "op": 93
+  }, 
+  {
+    "date": "2014-05-21T18:58:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-21T19:03:00", 
+    "amount": 180, 
+    "name": "GlucoseSensorData", 
+    "op": 90
+  }, 
+  {
+    "date": "2014-05-21T19:03:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-21T19:08:00", 
+    "amount": 166, 
+    "name": "GlucoseSensorData", 
+    "op": 83
+  }, 
+  {
+    "date": "2014-05-21T19:08:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-21T19:13:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-05-21T19:13:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-21T19:18:00", 
+    "amount": 148, 
+    "name": "GlucoseSensorData", 
+    "op": 74
+  }, 
+  {
+    "date": "2014-05-21T19:23:00", 
+    "amount": 142, 
+    "name": "GlucoseSensorData", 
+    "op": 71
+  }, 
+  {
+    "date": "2014-05-21T19:23:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-21T19:28:00", 
+    "amount": 138, 
+    "name": "GlucoseSensorData", 
+    "op": 69
+  }, 
+  {
+    "date": "2014-05-21T19:28:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-21T19:33:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-05-21T19:38:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-05-21T19:43:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-05-21T19:48:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-05-21T19:53:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      72, 
+      58, 
+      56
+    ], 
+    "name": "SensorCalFactor", 
+    "factor": 5.597, 
+    "date": "2014-05-21T20:06:00", 
+    "op": 15
+  }, 
+  {
+    "date": "2014-05-21T19:56:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-05-21T20:01:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-05-21T20:06:00", 
+    "amount": 144, 
+    "name": "GlucoseSensorData", 
+    "op": 72
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      123, 
+      123, 
+      123, 
+      121, 
+      116, 
+      109, 
+      110, 
+      19, 
+      110, 
+      105, 
+      98, 
+      90, 
+      84, 
+      82, 
+      78, 
+      71, 
+      66, 
+      62, 
+      60, 
+      57, 
+      53, 
+      49, 
+      47, 
+      46, 
+      46, 
+      47, 
+      51, 
+      53, 
+      53, 
+      52, 
+      53, 
+      53, 
+      54, 
+      53, 
+      51, 
+      55, 
+      61, 
+      70
+    ], 
+    "name": "CalBGForGH", 
+    "date": "2014-05-21T23:15:00", 
+    "amount": 212, 
+    "op": 14
+  }, 
+  {
+    "date": "2014-05-21T20:15:00", 
+    "amount": 140, 
+    "name": "GlucoseSensorData", 
+    "op": 70
+  }, 
+  {
+    "date": "2014-05-21T20:20:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-05-21T20:25:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-05-21T20:30:00", 
+    "amount": 102, 
+    "name": "GlucoseSensorData", 
+    "op": 51
+  }, 
+  {
+    "date": "2014-05-21T20:35:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-05-21T20:40:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-05-21T20:45:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-05-21T20:50:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-05-21T20:55:00", 
+    "amount": 104, 
+    "name": "GlucoseSensorData", 
+    "op": 52
+  }, 
+  {
+    "date": "2014-05-21T21:00:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-05-21T21:05:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-05-21T21:10:00", 
+    "amount": 102, 
+    "name": "GlucoseSensorData", 
+    "op": 51
+  }, 
+  {
+    "date": "2014-05-21T21:15:00", 
+    "amount": 94, 
+    "name": "GlucoseSensorData", 
+    "op": 47
+  }, 
+  {
+    "date": "2014-05-21T21:20:00", 
+    "amount": 92, 
+    "name": "GlucoseSensorData", 
+    "op": 46
+  }, 
+  {
+    "date": "2014-05-21T21:25:00", 
+    "amount": 92, 
+    "name": "GlucoseSensorData", 
+    "op": 46
+  }, 
+  {
+    "date": "2014-05-21T21:30:00", 
+    "amount": 94, 
+    "name": "GlucoseSensorData", 
+    "op": 47
+  }, 
+  {
+    "date": "2014-05-21T21:35:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-05-21T21:40:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-05-21T21:45:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-05-21T21:50:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-05-21T21:55:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-05-21T22:00:00", 
+    "amount": 132, 
+    "name": "GlucoseSensorData", 
+    "op": 66
+  }, 
+  {
+    "date": "2014-05-21T22:05:00", 
+    "amount": 142, 
+    "name": "GlucoseSensorData", 
+    "op": 71
+  }, 
+  {
+    "date": "2014-05-21T22:10:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-05-21T22:15:00", 
+    "amount": 164, 
+    "name": "GlucoseSensorData", 
+    "op": 82
+  }, 
+  {
+    "date": "2014-05-21T22:20:00", 
+    "amount": 168, 
+    "name": "GlucoseSensorData", 
+    "op": 84
+  }, 
+  {
+    "date": "2014-05-21T22:25:00", 
+    "amount": 180, 
+    "name": "GlucoseSensorData", 
+    "op": 90
+  }, 
+  {
+    "date": "2014-05-21T22:30:00", 
+    "amount": 196, 
+    "name": "GlucoseSensorData", 
+    "op": 98
+  }, 
+  {
+    "date": "2014-05-21T22:35:00", 
+    "amount": 210, 
+    "name": "GlucoseSensorData", 
+    "op": 105
+  }, 
+  {
+    "date": "2014-05-21T22:40:00", 
+    "amount": 220, 
+    "name": "GlucoseSensorData", 
+    "op": 110
+  }, 
+  {
+    "date": "2014-05-21T22:40:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-21T22:45:00", 
+    "amount": 220, 
+    "name": "GlucoseSensorData", 
+    "op": 110
+  }, 
+  {
+    "date": "2014-05-21T22:50:00", 
+    "amount": 218, 
+    "name": "GlucoseSensorData", 
+    "op": 109
+  }, 
+  {
+    "date": "2014-05-21T22:55:00", 
+    "amount": 232, 
+    "name": "GlucoseSensorData", 
+    "op": 116
+  }, 
+  {
+    "date": "2014-05-21T23:00:00", 
+    "amount": 242, 
+    "name": "GlucoseSensorData", 
+    "op": 121
+  }, 
+  {
+    "date": "2014-05-21T23:05:00", 
+    "amount": 246, 
+    "name": "GlucoseSensorData", 
+    "op": 123
+  }, 
+  {
+    "date": "2014-05-21T23:10:00", 
+    "amount": 246, 
+    "name": "GlucoseSensorData", 
+    "op": 123
+  }, 
+  {
+    "date": "2014-05-21T23:15:00", 
+    "amount": 246, 
+    "name": "GlucoseSensorData", 
+    "op": 123
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      110, 
+      113, 
+      118, 
+      123
+    ], 
+    "name": "SensorCalFactor", 
+    "factor": 5.581, 
+    "date": "2014-05-21T23:30:00", 
+    "op": 15
+  }, 
+  {
+    "date": "2014-05-21T23:15:00", 
+    "amount": 246, 
+    "name": "GlucoseSensorData", 
+    "op": 123
+  }, 
+  {
+    "date": "2014-05-21T23:20:00", 
+    "amount": 236, 
+    "name": "GlucoseSensorData", 
+    "op": 118
+  }, 
+  {
+    "date": "2014-05-21T23:25:00", 
+    "amount": 226, 
+    "name": "GlucoseSensorData", 
+    "op": 113
+  }, 
+  {
+    "date": "2014-05-21T23:30:00", 
+    "amount": 220, 
+    "name": "GlucoseSensorData", 
+    "op": 110
+  }, 
+  {
+    "date": "2014-04-22T07:25:00", 
+    "prefix": [], 
+    "cgm": [
+      89, 
+      19, 
+      87, 
+      19, 
+      84, 
+      19, 
+      81, 
+      19, 
+      77, 
+      19, 
+      73, 
+      19, 
+      70, 
+      66, 
+      62, 
+      55, 
+      46, 
+      40, 
+      35, 
+      31, 
+      29, 
+      27, 
+      27, 
+      28, 
+      28, 
+      29, 
+      30, 
+      31, 
+      33, 
+      36, 
+      19, 
+      38, 
+      19, 
+      39, 
+      40, 
+      39, 
+      39, 
+      37, 
+      36, 
+      36, 
+      37, 
+      38, 
+      39, 
+      40, 
+      40, 
+      39, 
+      39, 
+      40, 
+      41, 
+      42, 
+      43, 
+      45, 
+      45, 
+      45, 
+      45, 
+      45, 
+      46, 
+      48, 
+      50, 
+      19, 
+      52, 
+      19, 
+      52, 
+      53, 
+      54, 
+      54, 
+      55, 
+      55, 
+      55, 
+      55, 
+      54, 
+      54, 
+      54, 
+      55, 
+      56, 
+      56, 
+      57, 
+      58, 
+      58, 
+      59, 
+      61, 
+      63, 
+      66, 
+      68, 
+      71, 
+      74, 
+      77, 
+      81, 
+      84, 
+      88, 
+      91, 
+      93, 
+      95, 
+      96, 
+      99, 
+      101, 
+      104, 
+      105, 
+      107, 
+      108, 
+      111, 
+      112, 
+      112, 
+      111, 
+      109
+    ], 
+    "name": "SensorTimestamp", 
+    "op": 8
+  }, 
+  {
+    "date": "2014-04-21T23:35:00", 
+    "amount": 218, 
+    "name": "GlucoseSensorData", 
+    "op": 109
+  }, 
+  {
+    "date": "2014-04-21T23:40:00", 
+    "amount": 222, 
+    "name": "GlucoseSensorData", 
+    "op": 111
+  }, 
+  {
+    "date": "2014-04-21T23:45:00", 
+    "amount": 224, 
+    "name": "GlucoseSensorData", 
+    "op": 112
+  }, 
+  {
+    "date": "2014-04-21T23:50:00", 
+    "amount": 224, 
+    "name": "GlucoseSensorData", 
+    "op": 112
+  }, 
+  {
+    "date": "2014-04-21T23:55:00", 
+    "amount": 222, 
+    "name": "GlucoseSensorData", 
+    "op": 111
+  }, 
+  {
+    "date": "2014-04-22T00:00:00", 
+    "amount": 216, 
+    "name": "GlucoseSensorData", 
+    "op": 108
+  }, 
+  {
+    "date": "2014-04-22T00:05:00", 
+    "amount": 214, 
+    "name": "GlucoseSensorData", 
+    "op": 107
+  }, 
+  {
+    "date": "2014-04-22T00:10:00", 
+    "amount": 210, 
+    "name": "GlucoseSensorData", 
+    "op": 105
+  }, 
+  {
+    "date": "2014-04-22T00:15:00", 
+    "amount": 208, 
+    "name": "GlucoseSensorData", 
+    "op": 104
+  }, 
+  {
+    "date": "2014-04-22T00:20:00", 
+    "amount": 202, 
+    "name": "GlucoseSensorData", 
+    "op": 101
+  }, 
+  {
+    "date": "2014-04-22T00:25:00", 
+    "amount": 198, 
+    "name": "GlucoseSensorData", 
+    "op": 99
+  }, 
+  {
+    "date": "2014-04-22T00:30:00", 
+    "amount": 192, 
+    "name": "GlucoseSensorData", 
+    "op": 96
+  }, 
+  {
+    "date": "2014-04-22T00:35:00", 
+    "amount": 190, 
+    "name": "GlucoseSensorData", 
+    "op": 95
+  }, 
+  {
+    "date": "2014-04-22T00:40:00", 
+    "amount": 186, 
+    "name": "GlucoseSensorData", 
+    "op": 93
+  }, 
+  {
+    "date": "2014-04-22T00:45:00", 
+    "amount": 182, 
+    "name": "GlucoseSensorData", 
+    "op": 91
+  }, 
+  {
+    "date": "2014-04-22T00:50:00", 
+    "amount": 176, 
+    "name": "GlucoseSensorData", 
+    "op": 88
+  }, 
+  {
+    "date": "2014-04-22T00:55:00", 
+    "amount": 168, 
+    "name": "GlucoseSensorData", 
+    "op": 84
+  }, 
+  {
+    "date": "2014-04-22T01:00:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-04-22T01:05:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-04-22T01:10:00", 
+    "amount": 148, 
+    "name": "GlucoseSensorData", 
+    "op": 74
+  }, 
+  {
+    "date": "2014-04-22T01:15:00", 
+    "amount": 142, 
+    "name": "GlucoseSensorData", 
+    "op": 71
+  }, 
+  {
+    "date": "2014-04-22T01:20:00", 
+    "amount": 136, 
+    "name": "GlucoseSensorData", 
+    "op": 68
+  }, 
+  {
+    "date": "2014-04-22T01:25:00", 
+    "amount": 132, 
+    "name": "GlucoseSensorData", 
+    "op": 66
+  }, 
+  {
+    "date": "2014-04-22T01:30:00", 
+    "amount": 126, 
+    "name": "GlucoseSensorData", 
+    "op": 63
+  }, 
+  {
+    "date": "2014-04-22T01:35:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-04-22T01:40:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-04-22T01:45:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-04-22T01:50:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-04-22T01:55:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-04-22T02:00:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-04-22T02:05:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-04-22T02:10:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-04-22T02:15:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-04-22T02:20:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-04-22T02:25:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-04-22T02:30:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-04-22T02:35:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-04-22T02:40:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-04-22T02:45:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-04-22T02:50:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-04-22T02:55:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-04-22T03:00:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-04-22T03:05:00", 
+    "amount": 104, 
+    "name": "GlucoseSensorData", 
+    "op": 52
+  }, 
+  {
+    "date": "2014-04-22T03:05:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-22T03:10:00", 
+    "amount": 104, 
+    "name": "GlucoseSensorData", 
+    "op": 52
+  }, 
+  {
+    "date": "2014-04-22T03:10:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-22T03:15:00", 
+    "amount": 100, 
+    "name": "GlucoseSensorData", 
+    "op": 50
+  }, 
+  {
+    "date": "2014-04-22T03:20:00", 
+    "amount": 96, 
+    "name": "GlucoseSensorData", 
+    "op": 48
+  }, 
+  {
+    "date": "2014-04-22T03:25:00", 
+    "amount": 92, 
+    "name": "GlucoseSensorData", 
+    "op": 46
+  }, 
+  {
+    "date": "2014-04-22T03:30:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-04-22T03:35:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-04-22T03:40:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-04-22T03:45:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-04-22T03:50:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-04-22T03:55:00", 
+    "amount": 86, 
+    "name": "GlucoseSensorData", 
+    "op": 43
+  }, 
+  {
+    "date": "2014-04-22T04:00:00", 
+    "amount": 84, 
+    "name": "GlucoseSensorData", 
+    "op": 42
+  }, 
+  {
+    "date": "2014-04-22T04:05:00", 
+    "amount": 82, 
+    "name": "GlucoseSensorData", 
+    "op": 41
+  }, 
+  {
+    "date": "2014-04-22T04:10:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-04-22T04:15:00", 
+    "amount": 78, 
+    "name": "GlucoseSensorData", 
+    "op": 39
+  }, 
+  {
+    "date": "2014-04-22T04:20:00", 
+    "amount": 78, 
+    "name": "GlucoseSensorData", 
+    "op": 39
+  }, 
+  {
+    "date": "2014-04-22T04:25:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-04-22T04:30:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-04-22T04:35:00", 
+    "amount": 78, 
+    "name": "GlucoseSensorData", 
+    "op": 39
+  }, 
+  {
+    "date": "2014-04-22T04:40:00", 
+    "amount": 76, 
+    "name": "GlucoseSensorData", 
+    "op": 38
+  }, 
+  {
+    "date": "2014-04-22T04:45:00", 
+    "amount": 74, 
+    "name": "GlucoseSensorData", 
+    "op": 37
+  }, 
+  {
+    "date": "2014-04-22T04:50:00", 
+    "amount": 72, 
+    "name": "GlucoseSensorData", 
+    "op": 36
+  }, 
+  {
+    "date": "2014-04-22T04:55:00", 
+    "amount": 72, 
+    "name": "GlucoseSensorData", 
+    "op": 36
+  }, 
+  {
+    "date": "2014-04-22T05:00:00", 
+    "amount": 74, 
+    "name": "GlucoseSensorData", 
+    "op": 37
+  }, 
+  {
+    "date": "2014-04-22T05:05:00", 
+    "amount": 78, 
+    "name": "GlucoseSensorData", 
+    "op": 39
+  }, 
+  {
+    "date": "2014-04-22T05:10:00", 
+    "amount": 78, 
+    "name": "GlucoseSensorData", 
+    "op": 39
+  }, 
+  {
+    "date": "2014-04-22T05:15:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-04-22T05:20:00", 
+    "amount": 78, 
+    "name": "GlucoseSensorData", 
+    "op": 39
+  }, 
+  {
+    "date": "2014-04-22T05:20:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-22T05:25:00", 
+    "amount": 76, 
+    "name": "GlucoseSensorData", 
+    "op": 38
+  }, 
+  {
+    "date": "2014-04-22T05:25:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-22T05:30:00", 
+    "amount": 72, 
+    "name": "GlucoseSensorData", 
+    "op": 36
+  }, 
+  {
+    "date": "2014-04-22T05:35:00", 
+    "amount": 66, 
+    "name": "GlucoseSensorData", 
+    "op": 33
+  }, 
+  {
+    "date": "2014-04-22T05:40:00", 
+    "amount": 62, 
+    "name": "GlucoseSensorData", 
+    "op": 31
+  }, 
+  {
+    "date": "2014-04-22T05:45:00", 
+    "amount": 60, 
+    "name": "GlucoseSensorData", 
+    "op": 30
+  }, 
+  {
+    "date": "2014-04-22T05:50:00", 
+    "amount": 58, 
+    "name": "GlucoseSensorData", 
+    "op": 29
+  }, 
+  {
+    "date": "2014-04-22T05:55:00", 
+    "amount": 56, 
+    "name": "GlucoseSensorData", 
+    "op": 28
+  }, 
+  {
+    "date": "2014-04-22T06:00:00", 
+    "amount": 56, 
+    "name": "GlucoseSensorData", 
+    "op": 28
+  }, 
+  {
+    "date": "2014-04-22T06:05:00", 
+    "amount": 54, 
+    "name": "GlucoseSensorData", 
+    "op": 27
+  }, 
+  {
+    "date": "2014-04-22T06:10:00", 
+    "amount": 54, 
+    "name": "GlucoseSensorData", 
+    "op": 27
+  }, 
+  {
+    "date": "2014-04-22T06:15:00", 
+    "amount": 58, 
+    "name": "GlucoseSensorData", 
+    "op": 29
+  }, 
+  {
+    "date": "2014-04-22T06:20:00", 
+    "amount": 62, 
+    "name": "GlucoseSensorData", 
+    "op": 31
+  }, 
+  {
+    "date": "2014-04-22T06:25:00", 
+    "amount": 70, 
+    "name": "GlucoseSensorData", 
+    "op": 35
+  }, 
+  {
+    "date": "2014-04-22T06:30:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-04-22T06:35:00", 
+    "amount": 92, 
+    "name": "GlucoseSensorData", 
+    "op": 46
+  }, 
+  {
+    "date": "2014-04-22T06:40:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-04-22T06:45:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-04-22T06:50:00", 
+    "amount": 132, 
+    "name": "GlucoseSensorData", 
+    "op": 66
+  }, 
+  {
+    "date": "2014-04-22T06:55:00", 
+    "amount": 140, 
+    "name": "GlucoseSensorData", 
+    "op": 70
+  }, 
+  {
+    "date": "2014-04-22T06:55:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-22T07:00:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-04-22T07:00:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-22T07:05:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-04-22T07:05:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-22T07:10:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-04-22T07:10:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-22T07:15:00", 
+    "amount": 168, 
+    "name": "GlucoseSensorData", 
+    "op": 84
+  }, 
+  {
+    "date": "2014-04-22T07:15:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-22T07:20:00", 
+    "amount": 174, 
+    "name": "GlucoseSensorData", 
+    "op": 87
+  }, 
+  {
+    "date": "2014-04-22T07:20:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-22T07:25:00", 
+    "amount": 178, 
+    "name": "GlucoseSensorData", 
+    "op": 89
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      60, 
+      58, 
+      57, 
+      56, 
+      56, 
+      56, 
+      56, 
+      56, 
+      56, 
+      56, 
+      57, 
+      61, 
+      64, 
+      66, 
+      68, 
+      68, 
+      69, 
+      69, 
+      66, 
+      64, 
+      69, 
+      73, 
+      73, 
+      78, 
+      78, 
+      76, 
+      75, 
+      85, 
+      93, 
+      91, 
+      90, 
+      91, 
+      93, 
+      92, 
+      19
+    ], 
+    "name": "CalBGForGH", 
+    "date": "2014-04-22T10:16:00", 
+    "amount": 184, 
+    "op": 14
+  }, 
+  {
+    "date": "2014-04-22T07:26:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-22T07:31:00", 
+    "amount": 184, 
+    "name": "GlucoseSensorData", 
+    "op": 92
+  }, 
+  {
+    "date": "2014-04-22T07:36:00", 
+    "amount": 186, 
+    "name": "GlucoseSensorData", 
+    "op": 93
+  }, 
+  {
+    "date": "2014-04-22T07:41:00", 
+    "amount": 182, 
+    "name": "GlucoseSensorData", 
+    "op": 91
+  }, 
+  {
+    "date": "2014-04-22T07:46:00", 
+    "amount": 180, 
+    "name": "GlucoseSensorData", 
+    "op": 90
+  }, 
+  {
+    "date": "2014-04-22T07:51:00", 
+    "amount": 182, 
+    "name": "GlucoseSensorData", 
+    "op": 91
+  }, 
+  {
+    "date": "2014-04-22T07:56:00", 
+    "amount": 186, 
+    "name": "GlucoseSensorData", 
+    "op": 93
+  }, 
+  {
+    "date": "2014-04-22T08:01:00", 
+    "amount": 170, 
+    "name": "GlucoseSensorData", 
+    "op": 85
+  }, 
+  {
+    "date": "2014-04-22T08:06:00", 
+    "amount": 150, 
+    "name": "GlucoseSensorData", 
+    "op": 75
+  }, 
+  {
+    "date": "2014-04-22T08:11:00", 
+    "amount": 152, 
+    "name": "GlucoseSensorData", 
+    "op": 76
+  }, 
+  {
+    "date": "2014-04-22T08:16:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-04-22T08:21:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-04-22T08:26:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-04-22T08:31:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-04-22T08:36:00", 
+    "amount": 138, 
+    "name": "GlucoseSensorData", 
+    "op": 69
+  }, 
+  {
+    "date": "2014-04-22T08:41:00", 
+    "amount": 128, 
+    "name": "GlucoseSensorData", 
+    "op": 64
+  }, 
+  {
+    "date": "2014-04-22T08:46:00", 
+    "amount": 132, 
+    "name": "GlucoseSensorData", 
+    "op": 66
+  }, 
+  {
+    "date": "2014-04-22T08:51:00", 
+    "amount": 138, 
+    "name": "GlucoseSensorData", 
+    "op": 69
+  }, 
+  {
+    "date": "2014-04-22T08:56:00", 
+    "amount": 138, 
+    "name": "GlucoseSensorData", 
+    "op": 69
+  }, 
+  {
+    "date": "2014-04-22T09:01:00", 
+    "amount": 136, 
+    "name": "GlucoseSensorData", 
+    "op": 68
+  }, 
+  {
+    "date": "2014-04-22T09:06:00", 
+    "amount": 136, 
+    "name": "GlucoseSensorData", 
+    "op": 68
+  }, 
+  {
+    "date": "2014-04-22T09:11:00", 
+    "amount": 132, 
+    "name": "GlucoseSensorData", 
+    "op": 66
+  }, 
+  {
+    "date": "2014-04-22T09:16:00", 
+    "amount": 128, 
+    "name": "GlucoseSensorData", 
+    "op": 64
+  }, 
+  {
+    "date": "2014-04-22T09:21:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-04-22T09:26:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-04-22T09:31:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-04-22T09:36:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-04-22T09:41:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-04-22T09:46:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-04-22T09:51:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-04-22T09:56:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-04-22T10:01:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-04-22T10:06:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-04-22T10:11:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-04-22T10:16:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-04-22T10:16:00", 
+    "amount": 184, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      76, 
+      58, 
+      59
+    ], 
+    "name": "SensorCalFactor", 
+    "factor": 7.139, 
+    "date": "2014-04-22T10:31:00", 
+    "op": 15
+  }, 
+  {
+    "date": "2014-04-22T10:21:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-04-22T10:26:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-04-22T10:31:00", 
+    "amount": 152, 
+    "name": "GlucoseSensorData", 
+    "op": 76
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      69, 
+      65, 
+      62, 
+      60, 
+      58, 
+      54, 
+      54, 
+      54, 
+      54, 
+      55, 
+      53, 
+      49, 
+      45, 
+      41, 
+      40, 
+      40, 
+      41, 
+      40, 
+      37, 
+      36, 
+      19, 
+      38, 
+      41, 
+      43, 
+      45, 
+      19, 
+      46, 
+      19, 
+      44, 
+      42, 
+      42, 
+      43, 
+      44, 
+      43, 
+      39, 
+      37, 
+      37, 
+      19, 
+      38, 
+      41, 
+      44, 
+      45, 
+      43, 
+      43, 
+      45, 
+      50, 
+      53, 
+      56, 
+      59, 
+      59, 
+      58, 
+      57, 
+      56, 
+      58, 
+      59, 
+      60, 
+      61, 
+      61, 
+      59, 
+      56, 
+      53, 
+      51, 
+      50, 
+      49, 
+      49, 
+      50, 
+      52, 
+      19, 
+      54, 
+      52, 
+      49, 
+      49, 
+      51, 
+      54, 
+      55, 
+      58, 
+      61, 
+      65, 
+      65, 
+      65, 
+      66, 
+      67, 
+      68, 
+      70, 
+      73, 
+      78, 
+      82, 
+      87, 
+      91, 
+      94, 
+      95, 
+      97, 
+      97, 
+      93, 
+      88, 
+      82, 
+      78, 
+      73, 
+      70, 
+      71, 
+      72, 
+      72, 
+      71, 
+      72, 
+      74, 
+      77, 
+      80, 
+      80, 
+      81, 
+      81, 
+      80, 
+      77, 
+      74, 
+      73, 
+      72, 
+      71, 
+      71, 
+      69, 
+      68, 
+      65, 
+      60, 
+      56, 
+      54, 
+      54, 
+      55, 
+      56, 
+      59, 
+      61, 
+      63, 
+      65, 
+      68, 
+      72, 
+      74, 
+      73, 
+      73, 
+      75, 
+      75, 
+      75, 
+      76, 
+      77, 
+      78, 
+      78
+    ], 
+    "name": "CalBGForGH", 
+    "date": "2014-05-22T22:00:00", 
+    "amount": 187, 
+    "op": 14
+  }, 
+  {
+    "date": "2014-05-22T10:40:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-05-22T10:45:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-05-22T10:50:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-05-22T10:55:00", 
+    "amount": 152, 
+    "name": "GlucoseSensorData", 
+    "op": 76
+  }, 
+  {
+    "date": "2014-05-22T11:00:00", 
+    "amount": 150, 
+    "name": "GlucoseSensorData", 
+    "op": 75
+  }, 
+  {
+    "date": "2014-05-22T11:05:00", 
+    "amount": 150, 
+    "name": "GlucoseSensorData", 
+    "op": 75
+  }, 
+  {
+    "date": "2014-05-22T11:10:00", 
+    "amount": 150, 
+    "name": "GlucoseSensorData", 
+    "op": 75
+  }, 
+  {
+    "date": "2014-05-22T11:15:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-05-22T11:20:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-05-22T11:25:00", 
+    "amount": 148, 
+    "name": "GlucoseSensorData", 
+    "op": 74
+  }, 
+  {
+    "date": "2014-05-22T11:30:00", 
+    "amount": 144, 
+    "name": "GlucoseSensorData", 
+    "op": 72
+  }, 
+  {
+    "date": "2014-05-22T11:35:00", 
+    "amount": 136, 
+    "name": "GlucoseSensorData", 
+    "op": 68
+  }, 
+  {
+    "date": "2014-05-22T11:40:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-05-22T11:45:00", 
+    "amount": 126, 
+    "name": "GlucoseSensorData", 
+    "op": 63
+  }, 
+  {
+    "date": "2014-05-22T11:50:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-05-22T11:55:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-05-22T12:00:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-05-22T12:05:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-05-22T12:10:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-05-22T12:15:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-05-22T12:20:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-05-22T12:25:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-05-22T12:30:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-05-22T12:35:00", 
+    "amount": 136, 
+    "name": "GlucoseSensorData", 
+    "op": 68
+  }, 
+  {
+    "date": "2014-05-22T12:40:00", 
+    "amount": 138, 
+    "name": "GlucoseSensorData", 
+    "op": 69
+  }, 
+  {
+    "date": "2014-05-22T12:45:00", 
+    "amount": 142, 
+    "name": "GlucoseSensorData", 
+    "op": 71
+  }, 
+  {
+    "date": "2014-05-22T12:50:00", 
+    "amount": 142, 
+    "name": "GlucoseSensorData", 
+    "op": 71
+  }, 
+  {
+    "date": "2014-05-22T12:55:00", 
+    "amount": 144, 
+    "name": "GlucoseSensorData", 
+    "op": 72
+  }, 
+  {
+    "date": "2014-05-22T13:00:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-05-22T13:05:00", 
+    "amount": 148, 
+    "name": "GlucoseSensorData", 
+    "op": 74
+  }, 
+  {
+    "date": "2014-05-22T13:10:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-05-22T13:15:00", 
+    "amount": 160, 
+    "name": "GlucoseSensorData", 
+    "op": 80
+  }, 
+  {
+    "date": "2014-05-22T13:20:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-05-22T13:25:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-05-22T13:30:00", 
+    "amount": 160, 
+    "name": "GlucoseSensorData", 
+    "op": 80
+  }, 
+  {
+    "date": "2014-05-22T13:35:00", 
+    "amount": 160, 
+    "name": "GlucoseSensorData", 
+    "op": 80
+  }, 
+  {
+    "date": "2014-05-22T13:40:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-05-22T13:45:00", 
+    "amount": 148, 
+    "name": "GlucoseSensorData", 
+    "op": 74
+  }, 
+  {
+    "date": "2014-05-22T13:50:00", 
+    "amount": 144, 
+    "name": "GlucoseSensorData", 
+    "op": 72
+  }, 
+  {
+    "date": "2014-05-22T13:55:00", 
+    "amount": 142, 
+    "name": "GlucoseSensorData", 
+    "op": 71
+  }, 
+  {
+    "date": "2014-05-22T14:00:00", 
+    "amount": 144, 
+    "name": "GlucoseSensorData", 
+    "op": 72
+  }, 
+  {
+    "date": "2014-05-22T14:05:00", 
+    "amount": 144, 
+    "name": "GlucoseSensorData", 
+    "op": 72
+  }, 
+  {
+    "date": "2014-05-22T14:10:00", 
+    "amount": 142, 
+    "name": "GlucoseSensorData", 
+    "op": 71
+  }, 
+  {
+    "date": "2014-05-22T14:15:00", 
+    "amount": 140, 
+    "name": "GlucoseSensorData", 
+    "op": 70
+  }, 
+  {
+    "date": "2014-05-22T14:20:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-05-22T14:25:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-05-22T14:30:00", 
+    "amount": 164, 
+    "name": "GlucoseSensorData", 
+    "op": 82
+  }, 
+  {
+    "date": "2014-05-22T14:35:00", 
+    "amount": 176, 
+    "name": "GlucoseSensorData", 
+    "op": 88
+  }, 
+  {
+    "date": "2014-05-22T14:40:00", 
+    "amount": 186, 
+    "name": "GlucoseSensorData", 
+    "op": 93
+  }, 
+  {
+    "date": "2014-05-22T14:45:00", 
+    "amount": 194, 
+    "name": "GlucoseSensorData", 
+    "op": 97
+  }, 
+  {
+    "date": "2014-05-22T14:50:00", 
+    "amount": 194, 
+    "name": "GlucoseSensorData", 
+    "op": 97
+  }, 
+  {
+    "date": "2014-05-22T14:55:00", 
+    "amount": 190, 
+    "name": "GlucoseSensorData", 
+    "op": 95
+  }, 
+  {
+    "date": "2014-05-22T15:00:00", 
+    "amount": 188, 
+    "name": "GlucoseSensorData", 
+    "op": 94
+  }, 
+  {
+    "date": "2014-05-22T15:05:00", 
+    "amount": 182, 
+    "name": "GlucoseSensorData", 
+    "op": 91
+  }, 
+  {
+    "date": "2014-05-22T15:10:00", 
+    "amount": 174, 
+    "name": "GlucoseSensorData", 
+    "op": 87
+  }, 
+  {
+    "date": "2014-05-22T15:15:00", 
+    "amount": 164, 
+    "name": "GlucoseSensorData", 
+    "op": 82
+  }, 
+  {
+    "date": "2014-05-22T15:20:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-05-22T15:25:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-05-22T15:30:00", 
+    "amount": 140, 
+    "name": "GlucoseSensorData", 
+    "op": 70
+  }, 
+  {
+    "date": "2014-05-22T15:35:00", 
+    "amount": 136, 
+    "name": "GlucoseSensorData", 
+    "op": 68
+  }, 
+  {
+    "date": "2014-05-22T15:40:00", 
+    "amount": 134, 
+    "name": "GlucoseSensorData", 
+    "op": 67
+  }, 
+  {
+    "date": "2014-05-22T15:45:00", 
+    "amount": 132, 
+    "name": "GlucoseSensorData", 
+    "op": 66
+  }, 
+  {
+    "date": "2014-05-22T15:50:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-05-22T15:55:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-05-22T16:00:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-05-22T16:05:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-05-22T16:10:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-05-22T16:15:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-05-22T16:20:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-05-22T16:25:00", 
+    "amount": 102, 
+    "name": "GlucoseSensorData", 
+    "op": 51
+  }, 
+  {
+    "date": "2014-05-22T16:30:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-05-22T16:35:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-05-22T16:40:00", 
+    "amount": 104, 
+    "name": "GlucoseSensorData", 
+    "op": 52
+  }, 
+  {
+    "date": "2014-05-22T16:45:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-05-22T16:45:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-22T16:50:00", 
+    "amount": 104, 
+    "name": "GlucoseSensorData", 
+    "op": 52
+  }, 
+  {
+    "date": "2014-05-22T16:55:00", 
+    "amount": 100, 
+    "name": "GlucoseSensorData", 
+    "op": 50
+  }, 
+  {
+    "date": "2014-05-22T17:00:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-05-22T17:05:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-05-22T17:10:00", 
+    "amount": 100, 
+    "name": "GlucoseSensorData", 
+    "op": 50
+  }, 
+  {
+    "date": "2014-05-22T17:15:00", 
+    "amount": 102, 
+    "name": "GlucoseSensorData", 
+    "op": 51
+  }, 
+  {
+    "date": "2014-05-22T17:20:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-05-22T17:25:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-05-22T17:30:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-05-22T17:35:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-05-22T17:40:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-05-22T17:45:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-05-22T17:50:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-05-22T17:55:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-05-22T18:00:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-05-22T18:05:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-05-22T18:10:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-05-22T18:15:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-05-22T18:20:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-05-22T18:25:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-05-22T18:30:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-05-22T18:35:00", 
+    "amount": 100, 
+    "name": "GlucoseSensorData", 
+    "op": 50
+  }, 
+  {
+    "date": "2014-05-22T18:40:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-05-22T18:45:00", 
+    "amount": 86, 
+    "name": "GlucoseSensorData", 
+    "op": 43
+  }, 
+  {
+    "date": "2014-05-22T18:50:00", 
+    "amount": 86, 
+    "name": "GlucoseSensorData", 
+    "op": 43
+  }, 
+  {
+    "date": "2014-05-22T18:55:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-05-22T19:00:00", 
+    "amount": 88, 
+    "name": "GlucoseSensorData", 
+    "op": 44
+  }, 
+  {
+    "date": "2014-05-22T19:05:00", 
+    "amount": 82, 
+    "name": "GlucoseSensorData", 
+    "op": 41
+  }, 
+  {
+    "date": "2014-05-22T19:10:00", 
+    "amount": 76, 
+    "name": "GlucoseSensorData", 
+    "op": 38
+  }, 
+  {
+    "date": "2014-05-22T19:10:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-22T19:15:00", 
+    "amount": 74, 
+    "name": "GlucoseSensorData", 
+    "op": 37
+  }, 
+  {
+    "date": "2014-05-22T19:20:00", 
+    "amount": 74, 
+    "name": "GlucoseSensorData", 
+    "op": 37
+  }, 
+  {
+    "date": "2014-05-22T19:25:00", 
+    "amount": 78, 
+    "name": "GlucoseSensorData", 
+    "op": 39
+  }, 
+  {
+    "date": "2014-05-22T19:30:00", 
+    "amount": 86, 
+    "name": "GlucoseSensorData", 
+    "op": 43
+  }, 
+  {
+    "date": "2014-05-22T19:35:00", 
+    "amount": 88, 
+    "name": "GlucoseSensorData", 
+    "op": 44
+  }, 
+  {
+    "date": "2014-05-22T19:40:00", 
+    "amount": 86, 
+    "name": "GlucoseSensorData", 
+    "op": 43
+  }, 
+  {
+    "date": "2014-05-22T19:45:00", 
+    "amount": 84, 
+    "name": "GlucoseSensorData", 
+    "op": 42
+  }, 
+  {
+    "date": "2014-05-22T19:50:00", 
+    "amount": 84, 
+    "name": "GlucoseSensorData", 
+    "op": 42
+  }, 
+  {
+    "date": "2014-05-22T19:55:00", 
+    "amount": 88, 
+    "name": "GlucoseSensorData", 
+    "op": 44
+  }, 
+  {
+    "date": "2014-05-22T19:55:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-22T20:00:00", 
+    "amount": 92, 
+    "name": "GlucoseSensorData", 
+    "op": 46
+  }, 
+  {
+    "date": "2014-05-22T20:00:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-22T20:05:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-05-22T20:10:00", 
+    "amount": 86, 
+    "name": "GlucoseSensorData", 
+    "op": 43
+  }, 
+  {
+    "date": "2014-05-22T20:15:00", 
+    "amount": 82, 
+    "name": "GlucoseSensorData", 
+    "op": 41
+  }, 
+  {
+    "date": "2014-05-22T20:20:00", 
+    "amount": 76, 
+    "name": "GlucoseSensorData", 
+    "op": 38
+  }, 
+  {
+    "date": "2014-05-22T20:20:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-22T20:25:00", 
+    "amount": 72, 
+    "name": "GlucoseSensorData", 
+    "op": 36
+  }, 
+  {
+    "date": "2014-05-22T20:30:00", 
+    "amount": 74, 
+    "name": "GlucoseSensorData", 
+    "op": 37
+  }, 
+  {
+    "date": "2014-05-22T20:35:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-05-22T20:40:00", 
+    "amount": 82, 
+    "name": "GlucoseSensorData", 
+    "op": 41
+  }, 
+  {
+    "date": "2014-05-22T20:45:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-05-22T20:50:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-05-22T20:55:00", 
+    "amount": 82, 
+    "name": "GlucoseSensorData", 
+    "op": 41
+  }, 
+  {
+    "date": "2014-05-22T21:00:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-05-22T21:05:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-05-22T21:10:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-05-22T21:15:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-05-22T21:20:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-05-22T21:25:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-05-22T21:30:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-05-22T21:35:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-05-22T21:40:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-05-22T21:45:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-05-22T21:50:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-05-22T21:55:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-05-22T22:00:00", 
+    "amount": 138, 
+    "name": "GlucoseSensorData", 
+    "op": 69
+  }, 
+  {
+    "prefix": [
+      5, 
+      1, 
+      106, 
+      104, 
+      103, 
+      103, 
+      104, 
+      107, 
+      109, 
+      110, 
+      108, 
+      103, 
+      94, 
+      81, 
+      74, 
+      75, 
+      77, 
+      79, 
+      82, 
+      85, 
+      89, 
+      92, 
+      94, 
+      96, 
+      101, 
+      107, 
+      112, 
+      116, 
+      122, 
+      129, 
+      133, 
+      134, 
+      134, 
+      133, 
+      133, 
+      131, 
+      130, 
+      129, 
+      128, 
+      125, 
+      119, 
+      115, 
+      113, 
+      114, 
+      115, 
+      115, 
+      115, 
+      109, 
+      105, 
+      107, 
+      108, 
+      111, 
+      115, 
+      121, 
+      125, 
+      125, 
+      124, 
+      122, 
+      118, 
+      113, 
+      108, 
+      103, 
+      100, 
+      99, 
+      99, 
+      95, 
+      88, 
+      81, 
+      82, 
+      89, 
+      90, 
+      91, 
+      93, 
+      95, 
+      97, 
+      101, 
+      99, 
+      95, 
+      93, 
+      90
+    ], 
+    "cgm": [
+      86, 
+      72, 
+      74, 
+      73
+    ], 
+    "name": "SensorCalFactor", 
+    "factor": 8.902, 
+    "date": "2014-05-22T22:16:00", 
+    "op": 15
+  }, 
+  {
+    "date": "2014-05-22T22:01:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-05-22T22:06:00", 
+    "amount": 148, 
+    "name": "GlucoseSensorData", 
+    "op": 74
+  }, 
+  {
+    "date": "2014-05-22T22:11:00", 
+    "amount": 144, 
+    "name": "GlucoseSensorData", 
+    "op": 72
+  }, 
+  {
+    "date": "2014-05-22T22:16:00", 
+    "amount": 172, 
+    "name": "GlucoseSensorData", 
+    "op": 86
+  }, 
+  {
+    "date": "2014-05-22T22:16:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 5
+  }, 
+  {
+    "date": "2014-05-22T22:21:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 1
+  }, 
+  {
+    "date": "2014-05-22T22:26:00", 
+    "amount": 212, 
+    "name": "GlucoseSensorData", 
+    "op": 106
+  }, 
+  {
+    "date": "2014-05-22T22:31:00", 
+    "amount": 208, 
+    "name": "GlucoseSensorData", 
+    "op": 104
+  }, 
+  {
+    "date": "2014-05-22T22:36:00", 
+    "amount": 206, 
+    "name": "GlucoseSensorData", 
+    "op": 103
+  }, 
+  {
+    "date": "2014-05-22T22:41:00", 
+    "amount": 206, 
+    "name": "GlucoseSensorData", 
+    "op": 103
+  }, 
+  {
+    "date": "2014-05-22T22:46:00", 
+    "amount": 208, 
+    "name": "GlucoseSensorData", 
+    "op": 104
+  }, 
+  {
+    "date": "2014-05-22T22:51:00", 
+    "amount": 214, 
+    "name": "GlucoseSensorData", 
+    "op": 107
+  }, 
+  {
+    "date": "2014-05-22T22:56:00", 
+    "amount": 218, 
+    "name": "GlucoseSensorData", 
+    "op": 109
+  }, 
+  {
+    "date": "2014-05-22T23:01:00", 
+    "amount": 220, 
+    "name": "GlucoseSensorData", 
+    "op": 110
+  }, 
+  {
+    "date": "2014-05-22T23:06:00", 
+    "amount": 216, 
+    "name": "GlucoseSensorData", 
+    "op": 108
+  }, 
+  {
+    "date": "2014-05-22T23:11:00", 
+    "amount": 206, 
+    "name": "GlucoseSensorData", 
+    "op": 103
+  }, 
+  {
+    "date": "2014-05-22T23:16:00", 
+    "amount": 188, 
+    "name": "GlucoseSensorData", 
+    "op": 94
+  }, 
+  {
+    "date": "2014-05-22T23:21:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-05-22T23:26:00", 
+    "amount": 148, 
+    "name": "GlucoseSensorData", 
+    "op": 74
+  }, 
+  {
+    "date": "2014-05-22T23:31:00", 
+    "amount": 150, 
+    "name": "GlucoseSensorData", 
+    "op": 75
+  }, 
+  {
+    "date": "2014-05-22T23:36:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-05-22T23:41:00", 
+    "amount": 158, 
+    "name": "GlucoseSensorData", 
+    "op": 79
+  }, 
+  {
+    "date": "2014-05-22T23:46:00", 
+    "amount": 164, 
+    "name": "GlucoseSensorData", 
+    "op": 82
+  }, 
+  {
+    "date": "2014-05-22T23:51:00", 
+    "amount": 170, 
+    "name": "GlucoseSensorData", 
+    "op": 85
+  }, 
+  {
+    "date": "2014-05-22T23:56:00", 
+    "amount": 178, 
+    "name": "GlucoseSensorData", 
+    "op": 89
+  }, 
+  {
+    "date": "2014-05-23T00:01:00", 
+    "amount": 184, 
+    "name": "GlucoseSensorData", 
+    "op": 92
+  }, 
+  {
+    "date": "2014-05-23T00:06:00", 
+    "amount": 188, 
+    "name": "GlucoseSensorData", 
+    "op": 94
+  }, 
+  {
+    "date": "2014-05-23T00:11:00", 
+    "amount": 192, 
+    "name": "GlucoseSensorData", 
+    "op": 96
+  }, 
+  {
+    "date": "2014-05-23T00:16:00", 
+    "amount": 202, 
+    "name": "GlucoseSensorData", 
+    "op": 101
+  }, 
+  {
+    "date": "2014-05-23T00:21:00", 
+    "amount": 214, 
+    "name": "GlucoseSensorData", 
+    "op": 107
+  }, 
+  {
+    "date": "2014-05-23T00:26:00", 
+    "amount": 224, 
+    "name": "GlucoseSensorData", 
+    "op": 112
+  }, 
+  {
+    "date": "2014-05-23T00:31:00", 
+    "amount": 232, 
+    "name": "GlucoseSensorData", 
+    "op": 116
+  }, 
+  {
+    "date": "2014-05-23T00:36:00", 
+    "amount": 244, 
+    "name": "GlucoseSensorData", 
+    "op": 122
+  }, 
+  {
+    "date": "2014-05-23T00:41:00", 
+    "amount": 258, 
+    "name": "GlucoseSensorData", 
+    "op": 129
+  }, 
+  {
+    "date": "2014-05-23T00:46:00", 
+    "amount": 266, 
+    "name": "GlucoseSensorData", 
+    "op": 133
+  }, 
+  {
+    "date": "2014-05-23T00:51:00", 
+    "amount": 268, 
+    "name": "GlucoseSensorData", 
+    "op": 134
+  }, 
+  {
+    "date": "2014-05-23T00:56:00", 
+    "amount": 268, 
+    "name": "GlucoseSensorData", 
+    "op": 134
+  }, 
+  {
+    "date": "2014-05-23T01:01:00", 
+    "amount": 266, 
+    "name": "GlucoseSensorData", 
+    "op": 133
+  }, 
+  {
+    "date": "2014-05-23T01:06:00", 
+    "amount": 266, 
+    "name": "GlucoseSensorData", 
+    "op": 133
+  }, 
+  {
+    "date": "2014-05-23T01:11:00", 
+    "amount": 262, 
+    "name": "GlucoseSensorData", 
+    "op": 131
+  }, 
+  {
+    "date": "2014-05-23T01:16:00", 
+    "amount": 260, 
+    "name": "GlucoseSensorData", 
+    "op": 130
+  }, 
+  {
+    "date": "2014-05-23T01:21:00", 
+    "amount": 258, 
+    "name": "GlucoseSensorData", 
+    "op": 129
+  }, 
+  {
+    "date": "2014-05-23T01:26:00", 
+    "amount": 256, 
+    "name": "GlucoseSensorData", 
+    "op": 128
+  }, 
+  {
+    "date": "2014-05-23T01:31:00", 
+    "amount": 250, 
+    "name": "GlucoseSensorData", 
+    "op": 125
+  }, 
+  {
+    "date": "2014-05-23T01:36:00", 
+    "amount": 238, 
+    "name": "GlucoseSensorData", 
+    "op": 119
+  }, 
+  {
+    "date": "2014-05-23T01:41:00", 
+    "amount": 230, 
+    "name": "GlucoseSensorData", 
+    "op": 115
+  }, 
+  {
+    "date": "2014-05-23T01:46:00", 
+    "amount": 226, 
+    "name": "GlucoseSensorData", 
+    "op": 113
+  }, 
+  {
+    "date": "2014-05-23T01:51:00", 
+    "amount": 228, 
+    "name": "GlucoseSensorData", 
+    "op": 114
+  }, 
+  {
+    "date": "2014-05-23T01:56:00", 
+    "amount": 230, 
+    "name": "GlucoseSensorData", 
+    "op": 115
+  }, 
+  {
+    "date": "2014-05-23T02:01:00", 
+    "amount": 230, 
+    "name": "GlucoseSensorData", 
+    "op": 115
+  }, 
+  {
+    "date": "2014-05-23T02:06:00", 
+    "amount": 230, 
+    "name": "GlucoseSensorData", 
+    "op": 115
+  }, 
+  {
+    "date": "2014-05-23T02:11:00", 
+    "amount": 218, 
+    "name": "GlucoseSensorData", 
+    "op": 109
+  }, 
+  {
+    "date": "2014-05-23T02:16:00", 
+    "amount": 210, 
+    "name": "GlucoseSensorData", 
+    "op": 105
+  }, 
+  {
+    "date": "2014-05-23T02:21:00", 
+    "amount": 214, 
+    "name": "GlucoseSensorData", 
+    "op": 107
+  }, 
+  {
+    "date": "2014-05-23T02:26:00", 
+    "amount": 216, 
+    "name": "GlucoseSensorData", 
+    "op": 108
+  }, 
+  {
+    "date": "2014-05-23T02:31:00", 
+    "amount": 222, 
+    "name": "GlucoseSensorData", 
+    "op": 111
+  }, 
+  {
+    "date": "2014-05-23T02:36:00", 
+    "amount": 230, 
+    "name": "GlucoseSensorData", 
+    "op": 115
+  }, 
+  {
+    "date": "2014-05-23T02:41:00", 
+    "amount": 242, 
+    "name": "GlucoseSensorData", 
+    "op": 121
+  }, 
+  {
+    "date": "2014-05-23T02:46:00", 
+    "amount": 250, 
+    "name": "GlucoseSensorData", 
+    "op": 125
+  }, 
+  {
+    "date": "2014-05-23T02:51:00", 
+    "amount": 250, 
+    "name": "GlucoseSensorData", 
+    "op": 125
+  }, 
+  {
+    "date": "2014-05-23T02:56:00", 
+    "amount": 248, 
+    "name": "GlucoseSensorData", 
+    "op": 124
+  }, 
+  {
+    "date": "2014-05-23T03:01:00", 
+    "amount": 244, 
+    "name": "GlucoseSensorData", 
+    "op": 122
+  }, 
+  {
+    "date": "2014-05-23T03:06:00", 
+    "amount": 236, 
+    "name": "GlucoseSensorData", 
+    "op": 118
+  }, 
+  {
+    "date": "2014-05-23T03:11:00", 
+    "amount": 226, 
+    "name": "GlucoseSensorData", 
+    "op": 113
+  }, 
+  {
+    "date": "2014-05-23T03:16:00", 
+    "amount": 216, 
+    "name": "GlucoseSensorData", 
+    "op": 108
+  }, 
+  {
+    "date": "2014-05-23T03:21:00", 
+    "amount": 206, 
+    "name": "GlucoseSensorData", 
+    "op": 103
+  }, 
+  {
+    "date": "2014-05-23T03:26:00", 
+    "amount": 200, 
+    "name": "GlucoseSensorData", 
+    "op": 100
+  }, 
+  {
+    "date": "2014-05-23T03:31:00", 
+    "amount": 198, 
+    "name": "GlucoseSensorData", 
+    "op": 99
+  }, 
+  {
+    "date": "2014-05-23T03:36:00", 
+    "amount": 198, 
+    "name": "GlucoseSensorData", 
+    "op": 99
+  }, 
+  {
+    "date": "2014-05-23T03:41:00", 
+    "amount": 190, 
+    "name": "GlucoseSensorData", 
+    "op": 95
+  }, 
+  {
+    "date": "2014-05-23T03:46:00", 
+    "amount": 176, 
+    "name": "GlucoseSensorData", 
+    "op": 88
+  }, 
+  {
+    "date": "2014-05-23T03:51:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-05-23T03:56:00", 
+    "amount": 164, 
+    "name": "GlucoseSensorData", 
+    "op": 82
+  }, 
+  {
+    "date": "2014-05-23T04:01:00", 
+    "amount": 178, 
+    "name": "GlucoseSensorData", 
+    "op": 89
+  }, 
+  {
+    "date": "2014-05-23T04:06:00", 
+    "amount": 180, 
+    "name": "GlucoseSensorData", 
+    "op": 90
+  }, 
+  {
+    "date": "2014-05-23T04:11:00", 
+    "amount": 182, 
+    "name": "GlucoseSensorData", 
+    "op": 91
+  }, 
+  {
+    "date": "2014-05-23T04:16:00", 
+    "amount": 186, 
+    "name": "GlucoseSensorData", 
+    "op": 93
+  }, 
+  {
+    "date": "2014-05-23T04:21:00", 
+    "amount": 190, 
+    "name": "GlucoseSensorData", 
+    "op": 95
+  }, 
+  {
+    "date": "2014-05-23T04:26:00", 
+    "amount": 194, 
+    "name": "GlucoseSensorData", 
+    "op": 97
+  }, 
+  {
+    "date": "2014-05-23T04:31:00", 
+    "amount": 202, 
+    "name": "GlucoseSensorData", 
+    "op": 101
+  }, 
+  {
+    "date": "2014-05-23T04:36:00", 
+    "amount": 198, 
+    "name": "GlucoseSensorData", 
+    "op": 99
+  }, 
+  {
+    "date": "2014-05-23T04:41:00", 
+    "amount": 190, 
+    "name": "GlucoseSensorData", 
+    "op": 95
+  }, 
+  {
+    "date": "2014-05-23T04:46:00", 
+    "amount": 186, 
+    "name": "GlucoseSensorData", 
+    "op": 93
+  }, 
+  {
+    "date": "2014-05-23T04:51:00", 
+    "amount": 180, 
+    "name": "GlucoseSensorData", 
+    "op": 90
+  }, 
+  {
+    "date": "2014-04-23T04:50:00", 
+    "prefix": [], 
+    "cgm": [], 
+    "name": "SensorTimestamp", 
+    "op": 8
+  }, 
+  {
+    "date": "2014-04-23T04:50:00", 
+    "prefix": [], 
+    "cgm": [], 
+    "name": "SensorStatus", 
+    "op": 11
+  }, 
+  {
+    "date": "2014-04-23T04:50:00", 
+    "prefix": [], 
+    "cgm": [], 
+    "name": "SensorTimestamp", 
+    "op": 8
+  }, 
+  {
+    "date": "2014-04-25T07:37:00", 
+    "prefix": [
+      3, 
+      3, 
+      4, 
+      2
+    ], 
+    "cgm": [], 
+    "name": "SensorSync", 
+    "op": 13
+  }, 
+  {
+    "date": "2014-04-25T07:37:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 3
+  }, 
+  {
+    "date": "2014-04-25T07:42:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 3
+  }, 
+  {
+    "date": "2014-04-25T07:47:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T07:52:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T07:42:00", 
+    "prefix": [
+      4, 
+      2, 
+      4, 
+      2, 
+      4, 
+      2, 
+      4, 
+      2, 
+      4, 
+      2, 
+      4, 
+      2, 
+      4, 
+      2, 
+      4, 
+      2, 
+      4, 
+      2, 
+      4, 
+      2, 
+      4, 
+      2, 
+      4, 
+      2, 
+      4, 
+      2, 
+      4, 
+      2, 
+      4, 
+      2, 
+      4, 
+      2, 
+      4, 
+      2
+    ], 
+    "cgm": [], 
+    "name": "SensorTimestamp", 
+    "op": 8
+  }, 
+  {
+    "date": "2014-04-25T07:42:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T07:47:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T07:52:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T07:57:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T08:02:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T08:07:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T08:12:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T08:17:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T08:22:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T08:27:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T08:32:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T08:37:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T08:42:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T08:47:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T08:52:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T08:57:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T09:02:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T09:07:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T09:12:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T09:17:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T09:22:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T09:27:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T09:32:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T09:37:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T09:42:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T09:47:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T09:52:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T09:57:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T10:02:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T10:07:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T10:12:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T10:17:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "date": "2014-04-25T10:22:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 4
+  }, 
+  {
+    "date": "2014-04-25T10:27:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 2
+  }, 
+  {
+    "prefix": [
+      3, 
+      1, 
+      3, 
+      1
+    ], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-04-25T09:08:00", 
+    "amount": 42, 
+    "op": 14
+  }, 
+  {
+    "date": "2014-04-25T09:08:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 3
+  }, 
+  {
+    "date": "2014-04-25T09:13:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 1
+  }, 
+  {
+    "date": "2014-04-25T09:18:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 3
+  }, 
+  {
+    "date": "2014-04-25T09:23:00", 
+    "amount": "??", 
+    "name": "GlucoseSensorData", 
+    "op": 1
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      149
+    ], 
+    "name": "SensorCalFactor", 
+    "factor": 6.424, 
+    "date": "2014-04-25T09:23:00", 
+    "op": 15
+  }, 
+  {
+    "date": "2014-04-25T09:23:00", 
+    "amount": 298, 
+    "name": "GlucoseSensorData", 
+    "op": 149
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      33, 
+      34, 
+      35, 
+      36, 
+      37, 
+      39, 
+      42, 
+      44, 
+      45, 
+      47, 
+      48, 
+      48, 
+      46, 
+      45, 
+      44, 
+      45, 
+      47, 
+      50, 
+      56, 
+      64, 
+      72, 
+      80, 
+      85, 
+      88, 
+      92, 
+      97, 
+      103, 
+      109, 
+      116, 
+      122, 
+      129, 
+      135, 
+      139, 
+      143, 
+      146
+    ], 
+    "name": "CalBGForGH", 
+    "date": "2014-04-25T12:19:00", 
+    "amount": 91, 
+    "op": 14
+  }, 
+  {
+    "date": "2014-04-25T09:29:00", 
+    "amount": 292, 
+    "name": "GlucoseSensorData", 
+    "op": 146
+  }, 
+  {
+    "date": "2014-04-25T09:34:00", 
+    "amount": 286, 
+    "name": "GlucoseSensorData", 
+    "op": 143
+  }, 
+  {
+    "date": "2014-04-25T09:39:00", 
+    "amount": 278, 
+    "name": "GlucoseSensorData", 
+    "op": 139
+  }, 
+  {
+    "date": "2014-04-25T09:44:00", 
+    "amount": 270, 
+    "name": "GlucoseSensorData", 
+    "op": 135
+  }, 
+  {
+    "date": "2014-04-25T09:49:00", 
+    "amount": 258, 
+    "name": "GlucoseSensorData", 
+    "op": 129
+  }, 
+  {
+    "date": "2014-04-25T09:54:00", 
+    "amount": 244, 
+    "name": "GlucoseSensorData", 
+    "op": 122
+  }, 
+  {
+    "date": "2014-04-25T09:59:00", 
+    "amount": 232, 
+    "name": "GlucoseSensorData", 
+    "op": 116
+  }, 
+  {
+    "date": "2014-04-25T10:04:00", 
+    "amount": 218, 
+    "name": "GlucoseSensorData", 
+    "op": 109
+  }, 
+  {
+    "date": "2014-04-25T10:09:00", 
+    "amount": 206, 
+    "name": "GlucoseSensorData", 
+    "op": 103
+  }, 
+  {
+    "date": "2014-04-25T10:14:00", 
+    "amount": 194, 
+    "name": "GlucoseSensorData", 
+    "op": 97
+  }, 
+  {
+    "date": "2014-04-25T10:19:00", 
+    "amount": 184, 
+    "name": "GlucoseSensorData", 
+    "op": 92
+  }, 
+  {
+    "date": "2014-04-25T10:24:00", 
+    "amount": 176, 
+    "name": "GlucoseSensorData", 
+    "op": 88
+  }, 
+  {
+    "date": "2014-04-25T10:29:00", 
+    "amount": 170, 
+    "name": "GlucoseSensorData", 
+    "op": 85
+  }, 
+  {
+    "date": "2014-04-25T10:34:00", 
+    "amount": 160, 
+    "name": "GlucoseSensorData", 
+    "op": 80
+  }, 
+  {
+    "date": "2014-04-25T10:39:00", 
+    "amount": 144, 
+    "name": "GlucoseSensorData", 
+    "op": 72
+  }, 
+  {
+    "date": "2014-04-25T10:44:00", 
+    "amount": 128, 
+    "name": "GlucoseSensorData", 
+    "op": 64
+  }, 
+  {
+    "date": "2014-04-25T10:49:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-04-25T10:54:00", 
+    "amount": 100, 
+    "name": "GlucoseSensorData", 
+    "op": 50
+  }, 
+  {
+    "date": "2014-04-25T10:59:00", 
+    "amount": 94, 
+    "name": "GlucoseSensorData", 
+    "op": 47
+  }, 
+  {
+    "date": "2014-04-25T11:04:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-04-25T11:09:00", 
+    "amount": 88, 
+    "name": "GlucoseSensorData", 
+    "op": 44
+  }, 
+  {
+    "date": "2014-04-25T11:14:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-04-25T11:19:00", 
+    "amount": 92, 
+    "name": "GlucoseSensorData", 
+    "op": 46
+  }, 
+  {
+    "date": "2014-04-25T11:24:00", 
+    "amount": 96, 
+    "name": "GlucoseSensorData", 
+    "op": 48
+  }, 
+  {
+    "date": "2014-04-25T11:29:00", 
+    "amount": 96, 
+    "name": "GlucoseSensorData", 
+    "op": 48
+  }, 
+  {
+    "date": "2014-04-25T11:34:00", 
+    "amount": 94, 
+    "name": "GlucoseSensorData", 
+    "op": 47
+  }, 
+  {
+    "date": "2014-04-25T11:39:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-04-25T11:44:00", 
+    "amount": 88, 
+    "name": "GlucoseSensorData", 
+    "op": 44
+  }, 
+  {
+    "date": "2014-04-25T11:49:00", 
+    "amount": 84, 
+    "name": "GlucoseSensorData", 
+    "op": 42
+  }, 
+  {
+    "date": "2014-04-25T11:54:00", 
+    "amount": 78, 
+    "name": "GlucoseSensorData", 
+    "op": 39
+  }, 
+  {
+    "date": "2014-04-25T11:59:00", 
+    "amount": 74, 
+    "name": "GlucoseSensorData", 
+    "op": 37
+  }, 
+  {
+    "date": "2014-04-25T12:04:00", 
+    "amount": 72, 
+    "name": "GlucoseSensorData", 
+    "op": 36
+  }, 
+  {
+    "date": "2014-04-25T12:09:00", 
+    "amount": 70, 
+    "name": "GlucoseSensorData", 
+    "op": 35
+  }, 
+  {
+    "date": "2014-04-25T12:14:00", 
+    "amount": 68, 
+    "name": "GlucoseSensorData", 
+    "op": 34
+  }, 
+  {
+    "date": "2014-04-25T12:19:00", 
+    "amount": 66, 
+    "name": "GlucoseSensorData", 
+    "op": 33
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      43, 
+      40, 
+      19, 
+      38, 
+      35
+    ], 
+    "name": "SensorCalFactor", 
+    "factor": 6.523, 
+    "date": "2014-04-25T12:38:00", 
+    "op": 15
+  }, 
+  {
+    "date": "2014-04-25T12:23:00", 
+    "amount": 70, 
+    "name": "GlucoseSensorData", 
+    "op": 35
+  }, 
+  {
+    "date": "2014-04-25T12:28:00", 
+    "amount": 76, 
+    "name": "GlucoseSensorData", 
+    "op": 38
+  }, 
+  {
+    "date": "2014-04-25T12:28:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-04-25T12:33:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-04-25T12:38:00", 
+    "amount": 86, 
+    "name": "GlucoseSensorData", 
+    "op": 43
+  }, 
+  {
+    "date": "2014-05-25T19:27:00", 
+    "prefix": [], 
+    "cgm": [
+      73, 
+      74, 
+      19, 
+      77, 
+      78, 
+      77, 
+      73, 
+      73, 
+      73, 
+      74, 
+      75, 
+      76, 
+      76, 
+      77, 
+      79, 
+      82, 
+      85, 
+      90, 
+      95, 
+      100, 
+      103, 
+      105, 
+      107, 
+      110, 
+      112, 
+      113, 
+      114, 
+      113, 
+      113, 
+      112, 
+      112, 
+      109, 
+      106, 
+      102, 
+      100, 
+      99, 
+      98, 
+      97, 
+      95, 
+      93, 
+      90, 
+      89, 
+      89, 
+      91, 
+      92, 
+      90, 
+      87, 
+      81, 
+      79, 
+      77, 
+      77, 
+      77, 
+      78, 
+      79, 
+      81, 
+      83, 
+      84, 
+      83, 
+      81, 
+      77, 
+      72, 
+      67, 
+      63, 
+      59, 
+      57, 
+      56, 
+      53, 
+      49, 
+      46, 
+      44, 
+      19, 
+      43, 
+      43, 
+      44, 
+      45, 
+      45, 
+      46, 
+      47, 
+      47, 
+      46, 
+      46, 
+      47, 
+      48, 
+      47
+    ], 
+    "name": "SensorTimestamp", 
+    "op": 8
+  }, 
+  {
+    "date": "2014-05-25T12:42:00", 
+    "amount": 94, 
+    "name": "GlucoseSensorData", 
+    "op": 47
+  }, 
+  {
+    "date": "2014-05-25T12:47:00", 
+    "amount": 96, 
+    "name": "GlucoseSensorData", 
+    "op": 48
+  }, 
+  {
+    "date": "2014-05-25T12:52:00", 
+    "amount": 94, 
+    "name": "GlucoseSensorData", 
+    "op": 47
+  }, 
+  {
+    "date": "2014-05-25T12:57:00", 
+    "amount": 92, 
+    "name": "GlucoseSensorData", 
+    "op": 46
+  }, 
+  {
+    "date": "2014-05-25T13:02:00", 
+    "amount": 92, 
+    "name": "GlucoseSensorData", 
+    "op": 46
+  }, 
+  {
+    "date": "2014-05-25T13:07:00", 
+    "amount": 94, 
+    "name": "GlucoseSensorData", 
+    "op": 47
+  }, 
+  {
+    "date": "2014-05-25T13:12:00", 
+    "amount": 94, 
+    "name": "GlucoseSensorData", 
+    "op": 47
+  }, 
+  {
+    "date": "2014-05-25T13:17:00", 
+    "amount": 92, 
+    "name": "GlucoseSensorData", 
+    "op": 46
+  }, 
+  {
+    "date": "2014-05-25T13:22:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-05-25T13:27:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-05-25T13:32:00", 
+    "amount": 88, 
+    "name": "GlucoseSensorData", 
+    "op": 44
+  }, 
+  {
+    "date": "2014-05-25T13:37:00", 
+    "amount": 86, 
+    "name": "GlucoseSensorData", 
+    "op": 43
+  }, 
+  {
+    "date": "2014-05-25T13:42:00", 
+    "amount": 86, 
+    "name": "GlucoseSensorData", 
+    "op": 43
+  }, 
+  {
+    "date": "2014-05-25T13:42:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-25T13:47:00", 
+    "amount": 88, 
+    "name": "GlucoseSensorData", 
+    "op": 44
+  }, 
+  {
+    "date": "2014-05-25T13:52:00", 
+    "amount": 92, 
+    "name": "GlucoseSensorData", 
+    "op": 46
+  }, 
+  {
+    "date": "2014-05-25T13:57:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-05-25T14:02:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-05-25T14:07:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-05-25T14:12:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-05-25T14:17:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-05-25T14:22:00", 
+    "amount": 126, 
+    "name": "GlucoseSensorData", 
+    "op": 63
+  }, 
+  {
+    "date": "2014-05-25T14:27:00", 
+    "amount": 134, 
+    "name": "GlucoseSensorData", 
+    "op": 67
+  }, 
+  {
+    "date": "2014-05-25T14:32:00", 
+    "amount": 144, 
+    "name": "GlucoseSensorData", 
+    "op": 72
+  }, 
+  {
+    "date": "2014-05-25T14:37:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-05-25T14:42:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-05-25T14:47:00", 
+    "amount": 166, 
+    "name": "GlucoseSensorData", 
+    "op": 83
+  }, 
+  {
+    "date": "2014-05-25T14:52:00", 
+    "amount": 168, 
+    "name": "GlucoseSensorData", 
+    "op": 84
+  }, 
+  {
+    "date": "2014-05-25T14:57:00", 
+    "amount": 166, 
+    "name": "GlucoseSensorData", 
+    "op": 83
+  }, 
+  {
+    "date": "2014-05-25T15:02:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-05-25T15:07:00", 
+    "amount": 158, 
+    "name": "GlucoseSensorData", 
+    "op": 79
+  }, 
+  {
+    "date": "2014-05-25T15:12:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-05-25T15:17:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-05-25T15:22:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-05-25T15:27:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-05-25T15:32:00", 
+    "amount": 158, 
+    "name": "GlucoseSensorData", 
+    "op": 79
+  }, 
+  {
+    "date": "2014-05-25T15:37:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-05-25T15:42:00", 
+    "amount": 174, 
+    "name": "GlucoseSensorData", 
+    "op": 87
+  }, 
+  {
+    "date": "2014-05-25T15:47:00", 
+    "amount": 180, 
+    "name": "GlucoseSensorData", 
+    "op": 90
+  }, 
+  {
+    "date": "2014-05-25T15:52:00", 
+    "amount": 184, 
+    "name": "GlucoseSensorData", 
+    "op": 92
+  }, 
+  {
+    "date": "2014-05-25T15:57:00", 
+    "amount": 182, 
+    "name": "GlucoseSensorData", 
+    "op": 91
+  }, 
+  {
+    "date": "2014-05-25T16:02:00", 
+    "amount": 178, 
+    "name": "GlucoseSensorData", 
+    "op": 89
+  }, 
+  {
+    "date": "2014-05-25T16:07:00", 
+    "amount": 178, 
+    "name": "GlucoseSensorData", 
+    "op": 89
+  }, 
+  {
+    "date": "2014-05-25T16:12:00", 
+    "amount": 180, 
+    "name": "GlucoseSensorData", 
+    "op": 90
+  }, 
+  {
+    "date": "2014-05-25T16:17:00", 
+    "amount": 186, 
+    "name": "GlucoseSensorData", 
+    "op": 93
+  }, 
+  {
+    "date": "2014-05-25T16:22:00", 
+    "amount": 190, 
+    "name": "GlucoseSensorData", 
+    "op": 95
+  }, 
+  {
+    "date": "2014-05-25T16:27:00", 
+    "amount": 194, 
+    "name": "GlucoseSensorData", 
+    "op": 97
+  }, 
+  {
+    "date": "2014-05-25T16:32:00", 
+    "amount": 196, 
+    "name": "GlucoseSensorData", 
+    "op": 98
+  }, 
+  {
+    "date": "2014-05-25T16:37:00", 
+    "amount": 198, 
+    "name": "GlucoseSensorData", 
+    "op": 99
+  }, 
+  {
+    "date": "2014-05-25T16:42:00", 
+    "amount": 200, 
+    "name": "GlucoseSensorData", 
+    "op": 100
+  }, 
+  {
+    "date": "2014-05-25T16:47:00", 
+    "amount": 204, 
+    "name": "GlucoseSensorData", 
+    "op": 102
+  }, 
+  {
+    "date": "2014-05-25T16:52:00", 
+    "amount": 212, 
+    "name": "GlucoseSensorData", 
+    "op": 106
+  }, 
+  {
+    "date": "2014-05-25T16:57:00", 
+    "amount": 218, 
+    "name": "GlucoseSensorData", 
+    "op": 109
+  }, 
+  {
+    "date": "2014-05-25T17:02:00", 
+    "amount": 224, 
+    "name": "GlucoseSensorData", 
+    "op": 112
+  }, 
+  {
+    "date": "2014-05-25T17:07:00", 
+    "amount": 224, 
+    "name": "GlucoseSensorData", 
+    "op": 112
+  }, 
+  {
+    "date": "2014-05-25T17:12:00", 
+    "amount": 226, 
+    "name": "GlucoseSensorData", 
+    "op": 113
+  }, 
+  {
+    "date": "2014-05-25T17:17:00", 
+    "amount": 226, 
+    "name": "GlucoseSensorData", 
+    "op": 113
+  }, 
+  {
+    "date": "2014-05-25T17:22:00", 
+    "amount": 228, 
+    "name": "GlucoseSensorData", 
+    "op": 114
+  }, 
+  {
+    "date": "2014-05-25T17:27:00", 
+    "amount": 226, 
+    "name": "GlucoseSensorData", 
+    "op": 113
+  }, 
+  {
+    "date": "2014-05-25T17:32:00", 
+    "amount": 224, 
+    "name": "GlucoseSensorData", 
+    "op": 112
+  }, 
+  {
+    "date": "2014-05-25T17:37:00", 
+    "amount": 220, 
+    "name": "GlucoseSensorData", 
+    "op": 110
+  }, 
+  {
+    "date": "2014-05-25T17:42:00", 
+    "amount": 214, 
+    "name": "GlucoseSensorData", 
+    "op": 107
+  }, 
+  {
+    "date": "2014-05-25T17:47:00", 
+    "amount": 210, 
+    "name": "GlucoseSensorData", 
+    "op": 105
+  }, 
+  {
+    "date": "2014-05-25T17:52:00", 
+    "amount": 206, 
+    "name": "GlucoseSensorData", 
+    "op": 103
+  }, 
+  {
+    "date": "2014-05-25T17:57:00", 
+    "amount": 200, 
+    "name": "GlucoseSensorData", 
+    "op": 100
+  }, 
+  {
+    "date": "2014-05-25T18:02:00", 
+    "amount": 190, 
+    "name": "GlucoseSensorData", 
+    "op": 95
+  }, 
+  {
+    "date": "2014-05-25T18:07:00", 
+    "amount": 180, 
+    "name": "GlucoseSensorData", 
+    "op": 90
+  }, 
+  {
+    "date": "2014-05-25T18:12:00", 
+    "amount": 170, 
+    "name": "GlucoseSensorData", 
+    "op": 85
+  }, 
+  {
+    "date": "2014-05-25T18:17:00", 
+    "amount": 164, 
+    "name": "GlucoseSensorData", 
+    "op": 82
+  }, 
+  {
+    "date": "2014-05-25T18:22:00", 
+    "amount": 158, 
+    "name": "GlucoseSensorData", 
+    "op": 79
+  }, 
+  {
+    "date": "2014-05-25T18:27:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-05-25T18:32:00", 
+    "amount": 152, 
+    "name": "GlucoseSensorData", 
+    "op": 76
+  }, 
+  {
+    "date": "2014-05-25T18:37:00", 
+    "amount": 152, 
+    "name": "GlucoseSensorData", 
+    "op": 76
+  }, 
+  {
+    "date": "2014-05-25T18:42:00", 
+    "amount": 150, 
+    "name": "GlucoseSensorData", 
+    "op": 75
+  }, 
+  {
+    "date": "2014-05-25T18:47:00", 
+    "amount": 148, 
+    "name": "GlucoseSensorData", 
+    "op": 74
+  }, 
+  {
+    "date": "2014-05-25T18:52:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-05-25T18:57:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-05-25T19:02:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-05-25T19:07:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-05-25T19:12:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-05-25T19:17:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-05-25T19:17:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-25T19:22:00", 
+    "amount": 148, 
+    "name": "GlucoseSensorData", 
+    "op": 74
+  }, 
+  {
+    "date": "2014-05-25T19:27:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "ERROR_0x0c", 
+    "date": "2014-05-25T19:29:00", 
+    "op": 12
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "ERROR_0x0c", 
+    "date": "2014-05-25T19:32:00", 
+    "op": 12
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      78, 
+      78, 
+      75, 
+      74
+    ], 
+    "name": "CalBGForGH", 
+    "date": "2014-05-25T19:55:00", 
+    "amount": 112, 
+    "op": 14
+  }, 
+  {
+    "date": "2014-05-25T19:40:00", 
+    "amount": 148, 
+    "name": "GlucoseSensorData", 
+    "op": 74
+  }, 
+  {
+    "date": "2014-05-25T19:45:00", 
+    "amount": 150, 
+    "name": "GlucoseSensorData", 
+    "op": 75
+  }, 
+  {
+    "date": "2014-05-25T19:50:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-05-25T19:55:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      65, 
+      75, 
+      76, 
+      77
+    ], 
+    "name": "SensorCalFactor", 
+    "factor": 5.665, 
+    "date": "2014-05-25T20:11:00", 
+    "op": 15
+  }, 
+  {
+    "date": "2014-05-25T19:56:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-05-25T20:01:00", 
+    "amount": 152, 
+    "name": "GlucoseSensorData", 
+    "op": 76
+  }, 
+  {
+    "date": "2014-05-25T20:06:00", 
+    "amount": 150, 
+    "name": "GlucoseSensorData", 
+    "op": 75
+  }, 
+  {
+    "date": "2014-05-25T20:11:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      56, 
+      60, 
+      64, 
+      66, 
+      66, 
+      63, 
+      61, 
+      61, 
+      61, 
+      19, 
+      61, 
+      63
+    ], 
+    "name": "CalBGForGH", 
+    "date": "2014-05-25T21:08:00", 
+    "amount": 77, 
+    "op": 14
+  }, 
+  {
+    "date": "2014-05-25T20:18:00", 
+    "amount": 126, 
+    "name": "GlucoseSensorData", 
+    "op": 63
+  }, 
+  {
+    "date": "2014-05-25T20:23:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-05-25T20:23:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-25T20:28:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-05-25T20:33:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-05-25T20:38:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-05-25T20:43:00", 
+    "amount": 126, 
+    "name": "GlucoseSensorData", 
+    "op": 63
+  }, 
+  {
+    "date": "2014-05-25T20:48:00", 
+    "amount": 132, 
+    "name": "GlucoseSensorData", 
+    "op": 66
+  }, 
+  {
+    "date": "2014-05-25T20:53:00", 
+    "amount": 132, 
+    "name": "GlucoseSensorData", 
+    "op": 66
+  }, 
+  {
+    "date": "2014-05-25T20:58:00", 
+    "amount": 128, 
+    "name": "GlucoseSensorData", 
+    "op": 64
+  }, 
+  {
+    "date": "2014-05-25T21:03:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-05-25T21:08:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      45, 
+      49, 
+      52
+    ], 
+    "name": "SensorCalFactor", 
+    "factor": 5.4, 
+    "date": "2014-05-25T21:20:00", 
+    "op": 15
+  }, 
+  {
+    "date": "2014-05-25T21:10:00", 
+    "amount": 104, 
+    "name": "GlucoseSensorData", 
+    "op": 52
+  }, 
+  {
+    "date": "2014-05-25T21:15:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-05-25T21:20:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-05-25T23:05:00", 
+    "prefix": [], 
+    "cgm": [
+      64, 
+      64, 
+      19, 
+      63, 
+      62, 
+      19, 
+      62, 
+      19, 
+      62, 
+      19, 
+      61, 
+      19, 
+      62, 
+      62, 
+      61, 
+      61, 
+      62, 
+      60, 
+      55, 
+      51, 
+      48, 
+      45, 
+      42, 
+      42, 
+      43, 
+      45
+    ], 
+    "name": "SensorTimestamp", 
+    "op": 8
+  }, 
+  {
+    "date": "2014-05-25T21:25:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-05-25T21:30:00", 
+    "amount": 86, 
+    "name": "GlucoseSensorData", 
+    "op": 43
+  }, 
+  {
+    "date": "2014-05-25T21:35:00", 
+    "amount": 84, 
+    "name": "GlucoseSensorData", 
+    "op": 42
+  }, 
+  {
+    "date": "2014-05-25T21:40:00", 
+    "amount": 84, 
+    "name": "GlucoseSensorData", 
+    "op": 42
+  }, 
+  {
+    "date": "2014-05-25T21:45:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-05-25T21:50:00", 
+    "amount": 96, 
+    "name": "GlucoseSensorData", 
+    "op": 48
+  }, 
+  {
+    "date": "2014-05-25T21:55:00", 
+    "amount": 102, 
+    "name": "GlucoseSensorData", 
+    "op": 51
+  }, 
+  {
+    "date": "2014-05-25T22:00:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-05-25T22:05:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-05-25T22:10:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-05-25T22:15:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-05-25T22:20:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-05-25T22:25:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-05-25T22:30:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-05-25T22:30:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-25T22:35:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-05-25T22:35:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-25T22:40:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-05-25T22:40:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-25T22:45:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-05-25T22:45:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-25T22:50:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-05-25T22:55:00", 
+    "amount": 126, 
+    "name": "GlucoseSensorData", 
+    "op": 63
+  }, 
+  {
+    "date": "2014-05-25T22:55:00", 
+    "amount": "gap", 
+    "name": "SensorTimestamp", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-05-25T23:00:00", 
+    "amount": 128, 
+    "name": "GlucoseSensorData", 
+    "op": 64
+  }, 
+  {
+    "date": "2014-05-25T23:05:00", 
+    "amount": 128, 
+    "name": "GlucoseSensorData", 
+    "op": 64
+  }
+]

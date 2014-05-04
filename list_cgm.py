@@ -184,8 +184,13 @@ class PagedData (object):
       if x > 20:
         x = int(x) * 2
         record.update(amount=x)
+      if x == 02:
+        record = dict(date=date.isoformat( ), name='SensorWeakSignal', op=x, amount='none')
+      if x == 19:
+        record = dict(date=date.isoformat( ), name='Not Sure, cannot find in csv', op=x, amount='gap')
       cgms.append(record)
-      last = last - delta
+      if x != 19:
+        last = last - delta
     return cgms
 
   def delta_ago (self, reverse=False, offset=1):
