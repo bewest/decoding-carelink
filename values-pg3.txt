@@ -1,0 +1,3812 @@
+COULD NOT DECODE  0x08  @ byte 112
+
+0000   0x08                                       .
+0000   0x07 0x89 0x32 0x0e                        ..2.
+expected a date 2014-01-18 07:09:00
+0000   0x6e 0x6b 0x67 0x64 0x68 0x6c 0x71 0x74    nkgdhlqt
+0008   0x73 0x73 0x73 0x73 0x72 0x71 0x6f 0x6c    ssssrqol
+0010   0x66 0x62 0x65 0x67 0x6a 0x6e 0x73 0x76    fbegjnsv
+0018   0x76 0x76 0x76 0x76 0x75 0x74 0x71 0x6c    vvvvutql
+0020   0x63 0x60 0x60 0x62 0x66 0x6c 0x70 0x70    c``bflpp
+0028   0x6d 0x6d 0x6f 0x71 0x71 0x71 0x70 0x6f    mmoqqqpo
+0030   0x6e 0x6d 0x6c 0x6b 0x69 0x67 0x64 0x5f    nmlkigd_
+0038   0x58 0x52 0x51 0x50 0x4f 0x50 0x51 0x52    XRQPOPQR
+0040   0x51 0x50 0x50 0x4f 0x4e 0x4e 0x4e 0x4f    QPPONNNO
+0048   0x4f 0x51 0x51 0x51 0x51 0x51 0x50 0x4f    OQQQQQPO
+0050   0x4e 0x4d 0x4c 0x4a 0x49 0x48 0x46 0x45    NMLJIHFE
+0058   0x44 0x43 0x41 0x40 0x3f 0x3e 0x3d 0x3d    DCA@?>==
+0060   0x3c 0x3c 0x3d 0x3e 0x41 0x41 0x40 0x3d    <<=>AA@=
+0068   0x3b 0x3d 0x3c                             ;=<
+ATTEMPTING 2014-01-18 07:09:00
+COULD NOT DECODE  0x0f  @ byte 325
+
+0000   0x0f                                       .
+0000   0x08 0x93 0x11 0x0e 0x13 0x08              ......
+expected a date 2014-01-17 08:19:00
+0000   0x35 0x3c 0x3c                             5<<
+ATTEMPTING 2014-01-17 08:19:00
+COULD NOT DECODE  0x0e  @ byte 331
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 337
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 343
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 349
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 355
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 361
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 367
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 373
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 379
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 385
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 391
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 397
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 403
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 409
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 415
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 421
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 427
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 433
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 439
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 445
+
+0000   0x0e                                       .
+0000   0x08 0x87 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:07:00
+
+ATTEMPTING 2014-01-17 08:07:00
+COULD NOT DECODE  0x0e  @ byte 451
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 457
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 463
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 469
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 475
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 481
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 487
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 493
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 499
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 505
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 511
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 517
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 523
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 529
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 535
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 541
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 547
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 553
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 559
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 565
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 571
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 577
+
+0000   0x0e                                       .
+0000   0x08 0x86 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:06:00
+
+ATTEMPTING 2014-01-17 08:06:00
+COULD NOT DECODE  0x0e  @ byte 583
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 589
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 595
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 601
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 607
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 613
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 619
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 625
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 631
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 637
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 643
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 649
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 655
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 661
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 667
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 673
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 679
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 685
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 691
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 698
+
+0000   0x0e                                       .
+0000   0x08 0x85 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:05:00
+0000   0x3f                                       ?
+ATTEMPTING 2014-01-17 08:05:00
+COULD NOT DECODE  0x0e  @ byte 704
+
+0000   0x0e                                       .
+0000   0x08 0x84 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:04:00
+
+ATTEMPTING 2014-01-17 08:04:00
+COULD NOT DECODE  0x0e  @ byte 710
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 716
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 722
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 728
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 734
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 740
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 746
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 752
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 758
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 764
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 770
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 776
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 782
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 788
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 794
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 800
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 806
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 812
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 818
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 824
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 830
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 836
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 842
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 848
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 854
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 860
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 866
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 872
+
+0000   0x0e                                       .
+0000   0x08 0x83 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:03:00
+
+ATTEMPTING 2014-01-17 08:03:00
+COULD NOT DECODE  0x0e  @ byte 878
+
+0000   0x0e                                       .
+0000   0x08 0x82 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:02:00
+
+ATTEMPTING 2014-01-17 08:02:00
+COULD NOT DECODE  0x0e  @ byte 884
+
+0000   0x0e                                       .
+0000   0x08 0x82 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:02:00
+
+ATTEMPTING 2014-01-17 08:02:00
+COULD NOT DECODE  0x0e  @ byte 890
+
+0000   0x0e                                       .
+0000   0x08 0x82 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:02:00
+
+ATTEMPTING 2014-01-17 08:02:00
+COULD NOT DECODE  0x0e  @ byte 896
+
+0000   0x0e                                       .
+0000   0x08 0x82 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:02:00
+
+ATTEMPTING 2014-01-17 08:02:00
+COULD NOT DECODE  0x0e  @ byte 902
+
+0000   0x0e                                       .
+0000   0x08 0x82 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:02:00
+
+ATTEMPTING 2014-01-17 08:02:00
+COULD NOT DECODE  0x0e  @ byte 908
+
+0000   0x0e                                       .
+0000   0x08 0x82 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:02:00
+
+ATTEMPTING 2014-01-17 08:02:00
+COULD NOT DECODE  0x0e  @ byte 914
+
+0000   0x0e                                       .
+0000   0x08 0x81 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:01:00
+
+ATTEMPTING 2014-01-17 08:01:00
+COULD NOT DECODE  0x0e  @ byte 920
+
+0000   0x0e                                       .
+0000   0x08 0x81 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:01:00
+
+ATTEMPTING 2014-01-17 08:01:00
+COULD NOT DECODE  0x0e  @ byte 926
+
+0000   0x0e                                       .
+0000   0x08 0x81 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:01:00
+
+ATTEMPTING 2014-01-17 08:01:00
+COULD NOT DECODE  0x0e  @ byte 932
+
+0000   0x0e                                       .
+0000   0x08 0x81 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:01:00
+
+ATTEMPTING 2014-01-17 08:01:00
+COULD NOT DECODE  0x0e  @ byte 938
+
+0000   0x0e                                       .
+0000   0x08 0x81 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:01:00
+
+ATTEMPTING 2014-01-17 08:01:00
+COULD NOT DECODE  0x0e  @ byte 944
+
+0000   0x0e                                       .
+0000   0x08 0x81 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:01:00
+
+ATTEMPTING 2014-01-17 08:01:00
+COULD NOT DECODE  0x0e  @ byte 950
+
+0000   0x0e                                       .
+0000   0x08 0x81 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:01:00
+
+ATTEMPTING 2014-01-17 08:01:00
+COULD NOT DECODE  0x0e  @ byte 956
+
+0000   0x0e                                       .
+0000   0x08 0x81 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:01:00
+
+ATTEMPTING 2014-01-17 08:01:00
+COULD NOT DECODE  0x0e  @ byte 962
+
+0000   0x0e                                       .
+0000   0x08 0x81 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:01:00
+
+ATTEMPTING 2014-01-17 08:01:00
+COULD NOT DECODE  0x0e  @ byte 968
+
+0000   0x0e                                       .
+0000   0x08 0x81 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:01:00
+
+ATTEMPTING 2014-01-17 08:01:00
+COULD NOT DECODE  0x0e  @ byte 974
+
+0000   0x0e                                       .
+0000   0x08 0x81 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:01:00
+
+ATTEMPTING 2014-01-17 08:01:00
+COULD NOT DECODE  0x0e  @ byte 980
+
+0000   0x0e                                       .
+0000   0x08 0x81 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:01:00
+
+ATTEMPTING 2014-01-17 08:01:00
+COULD NOT DECODE  0x0e  @ byte 986
+
+0000   0x0e                                       .
+0000   0x08 0x81 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:01:00
+
+ATTEMPTING 2014-01-17 08:01:00
+COULD NOT DECODE  0x0e  @ byte 992
+
+0000   0x0e                                       .
+0000   0x08 0x81 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:01:00
+
+ATTEMPTING 2014-01-17 08:01:00
+COULD NOT DECODE  0x0e  @ byte 998
+
+0000   0x0e                                       .
+0000   0x08 0x81 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:01:00
+
+ATTEMPTING 2014-01-17 08:01:00
+COULD NOT DECODE  0x0e  @ byte 1004
+
+0000   0x0e                                       .
+0000   0x08 0x80 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:00:00
+
+ATTEMPTING 2014-01-17 08:00:00
+COULD NOT DECODE  0x0e  @ byte 1010
+
+0000   0x0e                                       .
+0000   0x08 0x80 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:00:00
+
+ATTEMPTING 2014-01-17 08:00:00
+COULD NOT DECODE  0x0e  @ byte 1016
+
+0000   0x0e                                       .
+0000   0x08 0x80 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:00:00
+
+ATTEMPTING 2014-01-17 08:00:00
+COULD NOT DECODE  0x0e  @ byte 1022
+
+0000   0x0e                                       .
+0000   0x08 0x80 0x11 0x0e 0x63                   ....c
+expected a date 2014-01-17 08:00:00
+
+ATTEMPTING 2014-01-17 08:00:00
+[
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:00:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:00:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:00:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:00:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:01:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:01:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:01:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:01:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:01:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:01:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:01:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:01:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:01:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:01:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:01:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:01:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:01:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:01:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:01:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:02:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:02:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:02:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:02:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:02:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:02:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:03:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:04:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      63
+    ], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "date": "2014-01-17T08:05:00", 
+    "amount": 126, 
+    "name": "GlucoseSensorData", 
+    "op": 63
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:05:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:06:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T08:07:00", 
+    "amount": 99, 
+    "op": 14
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      53, 
+      60, 
+      60
+    ], 
+    "name": "SensorCalFactor", 
+    "factor": 4.872, 
+    "date": "2014-01-17T08:19:00", 
+    "op": 15
+  }, 
+  {
+    "date": "2014-01-17T08:09:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-01-17T08:14:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-01-17T08:19:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      50, 
+      49, 
+      48, 
+      48, 
+      48, 
+      49, 
+      49, 
+      51, 
+      53, 
+      54, 
+      56, 
+      57, 
+      58, 
+      58, 
+      59, 
+      59, 
+      60, 
+      62, 
+      62, 
+      62, 
+      62, 
+      62, 
+      63, 
+      65, 
+      67, 
+      69, 
+      71, 
+      71, 
+      73, 
+      75, 
+      77, 
+      78, 
+      78, 
+      80, 
+      80, 
+      78, 
+      77, 
+      76, 
+      77, 
+      78, 
+      80, 
+      83, 
+      86, 
+      87, 
+      88, 
+      89, 
+      88, 
+      86, 
+      85, 
+      83, 
+      80, 
+      77, 
+      75, 
+      73, 
+      72, 
+      73, 
+      76, 
+      78, 
+      80, 
+      19, 
+      82, 
+      84, 
+      84, 
+      82, 
+      80, 
+      76, 
+      73, 
+      73, 
+      19, 
+      70, 
+      19, 
+      66, 
+      61, 
+      55, 
+      49, 
+      44, 
+      42, 
+      41, 
+      41, 
+      41, 
+      40, 
+      39, 
+      40, 
+      41, 
+      40, 
+      38, 
+      37, 
+      36, 
+      35, 
+      36, 
+      37, 
+      39, 
+      40, 
+      42, 
+      43, 
+      44, 
+      44, 
+      44, 
+      45, 
+      46, 
+      47, 
+      48, 
+      49, 
+      49, 
+      49, 
+      50, 
+      52, 
+      53, 
+      55, 
+      56, 
+      57, 
+      58, 
+      58, 
+      57, 
+      56, 
+      54, 
+      53, 
+      51, 
+      49, 
+      48, 
+      45, 
+      41, 
+      38, 
+      37, 
+      37, 
+      38, 
+      39, 
+      40, 
+      41, 
+      42, 
+      43, 
+      44, 
+      46, 
+      48, 
+      50, 
+      51, 
+      53, 
+      53, 
+      54, 
+      55, 
+      55, 
+      55
+    ], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T19:59:00", 
+    "amount": 117, 
+    "op": 14
+  }, 
+  {
+    "date": "2014-01-17T08:29:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-01-17T08:34:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-01-17T08:39:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-01-17T08:44:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-01-17T08:49:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-01-17T08:54:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-01-17T08:59:00", 
+    "amount": 102, 
+    "name": "GlucoseSensorData", 
+    "op": 51
+  }, 
+  {
+    "date": "2014-01-17T09:04:00", 
+    "amount": 100, 
+    "name": "GlucoseSensorData", 
+    "op": 50
+  }, 
+  {
+    "date": "2014-01-17T09:09:00", 
+    "amount": 96, 
+    "name": "GlucoseSensorData", 
+    "op": 48
+  }, 
+  {
+    "date": "2014-01-17T09:14:00", 
+    "amount": 92, 
+    "name": "GlucoseSensorData", 
+    "op": 46
+  }, 
+  {
+    "date": "2014-01-17T09:19:00", 
+    "amount": 88, 
+    "name": "GlucoseSensorData", 
+    "op": 44
+  }, 
+  {
+    "date": "2014-01-17T09:24:00", 
+    "amount": 86, 
+    "name": "GlucoseSensorData", 
+    "op": 43
+  }, 
+  {
+    "date": "2014-01-17T09:29:00", 
+    "amount": 84, 
+    "name": "GlucoseSensorData", 
+    "op": 42
+  }, 
+  {
+    "date": "2014-01-17T09:34:00", 
+    "amount": 82, 
+    "name": "GlucoseSensorData", 
+    "op": 41
+  }, 
+  {
+    "date": "2014-01-17T09:39:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-01-17T09:44:00", 
+    "amount": 78, 
+    "name": "GlucoseSensorData", 
+    "op": 39
+  }, 
+  {
+    "date": "2014-01-17T09:49:00", 
+    "amount": 76, 
+    "name": "GlucoseSensorData", 
+    "op": 38
+  }, 
+  {
+    "date": "2014-01-17T09:54:00", 
+    "amount": 74, 
+    "name": "GlucoseSensorData", 
+    "op": 37
+  }, 
+  {
+    "date": "2014-01-17T09:59:00", 
+    "amount": 74, 
+    "name": "GlucoseSensorData", 
+    "op": 37
+  }, 
+  {
+    "date": "2014-01-17T10:04:00", 
+    "amount": 76, 
+    "name": "GlucoseSensorData", 
+    "op": 38
+  }, 
+  {
+    "date": "2014-01-17T10:09:00", 
+    "amount": 82, 
+    "name": "GlucoseSensorData", 
+    "op": 41
+  }, 
+  {
+    "date": "2014-01-17T10:14:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-01-17T10:19:00", 
+    "amount": 96, 
+    "name": "GlucoseSensorData", 
+    "op": 48
+  }, 
+  {
+    "date": "2014-01-17T10:24:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-01-17T10:29:00", 
+    "amount": 102, 
+    "name": "GlucoseSensorData", 
+    "op": 51
+  }, 
+  {
+    "date": "2014-01-17T10:34:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-01-17T10:39:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-01-17T10:44:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-01-17T10:49:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-01-17T10:54:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-01-17T10:59:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-01-17T11:04:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-01-17T11:09:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-01-17T11:14:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-01-17T11:19:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-01-17T11:24:00", 
+    "amount": 104, 
+    "name": "GlucoseSensorData", 
+    "op": 52
+  }, 
+  {
+    "date": "2014-01-17T11:29:00", 
+    "amount": 100, 
+    "name": "GlucoseSensorData", 
+    "op": 50
+  }, 
+  {
+    "date": "2014-01-17T11:34:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-01-17T11:39:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-01-17T11:44:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-01-17T11:49:00", 
+    "amount": 96, 
+    "name": "GlucoseSensorData", 
+    "op": 48
+  }, 
+  {
+    "date": "2014-01-17T11:54:00", 
+    "amount": 94, 
+    "name": "GlucoseSensorData", 
+    "op": 47
+  }, 
+  {
+    "date": "2014-01-17T11:59:00", 
+    "amount": 92, 
+    "name": "GlucoseSensorData", 
+    "op": 46
+  }, 
+  {
+    "date": "2014-01-17T12:04:00", 
+    "amount": 90, 
+    "name": "GlucoseSensorData", 
+    "op": 45
+  }, 
+  {
+    "date": "2014-01-17T12:09:00", 
+    "amount": 88, 
+    "name": "GlucoseSensorData", 
+    "op": 44
+  }, 
+  {
+    "date": "2014-01-17T12:14:00", 
+    "amount": 88, 
+    "name": "GlucoseSensorData", 
+    "op": 44
+  }, 
+  {
+    "date": "2014-01-17T12:19:00", 
+    "amount": 88, 
+    "name": "GlucoseSensorData", 
+    "op": 44
+  }, 
+  {
+    "date": "2014-01-17T12:24:00", 
+    "amount": 86, 
+    "name": "GlucoseSensorData", 
+    "op": 43
+  }, 
+  {
+    "date": "2014-01-17T12:29:00", 
+    "amount": 84, 
+    "name": "GlucoseSensorData", 
+    "op": 42
+  }, 
+  {
+    "date": "2014-01-17T12:34:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-01-17T12:39:00", 
+    "amount": 78, 
+    "name": "GlucoseSensorData", 
+    "op": 39
+  }, 
+  {
+    "date": "2014-01-17T12:44:00", 
+    "amount": 74, 
+    "name": "GlucoseSensorData", 
+    "op": 37
+  }, 
+  {
+    "date": "2014-01-17T12:49:00", 
+    "amount": 72, 
+    "name": "GlucoseSensorData", 
+    "op": 36
+  }, 
+  {
+    "date": "2014-01-17T12:54:00", 
+    "amount": 70, 
+    "name": "GlucoseSensorData", 
+    "op": 35
+  }, 
+  {
+    "date": "2014-01-17T12:59:00", 
+    "amount": 72, 
+    "name": "GlucoseSensorData", 
+    "op": 36
+  }, 
+  {
+    "date": "2014-01-17T13:04:00", 
+    "amount": 74, 
+    "name": "GlucoseSensorData", 
+    "op": 37
+  }, 
+  {
+    "date": "2014-01-17T13:09:00", 
+    "amount": 76, 
+    "name": "GlucoseSensorData", 
+    "op": 38
+  }, 
+  {
+    "date": "2014-01-17T13:14:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-01-17T13:19:00", 
+    "amount": 82, 
+    "name": "GlucoseSensorData", 
+    "op": 41
+  }, 
+  {
+    "date": "2014-01-17T13:24:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-01-17T13:29:00", 
+    "amount": 78, 
+    "name": "GlucoseSensorData", 
+    "op": 39
+  }, 
+  {
+    "date": "2014-01-17T13:34:00", 
+    "amount": 80, 
+    "name": "GlucoseSensorData", 
+    "op": 40
+  }, 
+  {
+    "date": "2014-01-17T13:39:00", 
+    "amount": 82, 
+    "name": "GlucoseSensorData", 
+    "op": 41
+  }, 
+  {
+    "date": "2014-01-17T13:44:00", 
+    "amount": 82, 
+    "name": "GlucoseSensorData", 
+    "op": 41
+  }, 
+  {
+    "date": "2014-01-17T13:49:00", 
+    "amount": 82, 
+    "name": "GlucoseSensorData", 
+    "op": 41
+  }, 
+  {
+    "date": "2014-01-17T13:54:00", 
+    "amount": 84, 
+    "name": "GlucoseSensorData", 
+    "op": 42
+  }, 
+  {
+    "date": "2014-01-17T13:59:00", 
+    "amount": 88, 
+    "name": "GlucoseSensorData", 
+    "op": 44
+  }, 
+  {
+    "date": "2014-01-17T14:04:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-01-17T14:09:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-01-17T14:14:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-01-17T14:19:00", 
+    "amount": 132, 
+    "name": "GlucoseSensorData", 
+    "op": 66
+  }, 
+  {
+    "date": "2014-01-17T14:19:00", 
+    "amount": "gap", 
+    "name": "Not Sure, cannot find in csv", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-01-17T14:24:00", 
+    "amount": 140, 
+    "name": "GlucoseSensorData", 
+    "op": 70
+  }, 
+  {
+    "date": "2014-01-17T14:24:00", 
+    "amount": "gap", 
+    "name": "Not Sure, cannot find in csv", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-01-17T14:29:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-01-17T14:34:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-01-17T14:39:00", 
+    "amount": 152, 
+    "name": "GlucoseSensorData", 
+    "op": 76
+  }, 
+  {
+    "date": "2014-01-17T14:44:00", 
+    "amount": 160, 
+    "name": "GlucoseSensorData", 
+    "op": 80
+  }, 
+  {
+    "date": "2014-01-17T14:49:00", 
+    "amount": 164, 
+    "name": "GlucoseSensorData", 
+    "op": 82
+  }, 
+  {
+    "date": "2014-01-17T14:54:00", 
+    "amount": 168, 
+    "name": "GlucoseSensorData", 
+    "op": 84
+  }, 
+  {
+    "date": "2014-01-17T14:59:00", 
+    "amount": 168, 
+    "name": "GlucoseSensorData", 
+    "op": 84
+  }, 
+  {
+    "date": "2014-01-17T15:04:00", 
+    "amount": 164, 
+    "name": "GlucoseSensorData", 
+    "op": 82
+  }, 
+  {
+    "date": "2014-01-17T15:04:00", 
+    "amount": "gap", 
+    "name": "Not Sure, cannot find in csv", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-01-17T15:09:00", 
+    "amount": 160, 
+    "name": "GlucoseSensorData", 
+    "op": 80
+  }, 
+  {
+    "date": "2014-01-17T15:14:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-01-17T15:19:00", 
+    "amount": 152, 
+    "name": "GlucoseSensorData", 
+    "op": 76
+  }, 
+  {
+    "date": "2014-01-17T15:24:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-01-17T15:29:00", 
+    "amount": 144, 
+    "name": "GlucoseSensorData", 
+    "op": 72
+  }, 
+  {
+    "date": "2014-01-17T15:34:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-01-17T15:39:00", 
+    "amount": 150, 
+    "name": "GlucoseSensorData", 
+    "op": 75
+  }, 
+  {
+    "date": "2014-01-17T15:44:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-01-17T15:49:00", 
+    "amount": 160, 
+    "name": "GlucoseSensorData", 
+    "op": 80
+  }, 
+  {
+    "date": "2014-01-17T15:54:00", 
+    "amount": 166, 
+    "name": "GlucoseSensorData", 
+    "op": 83
+  }, 
+  {
+    "date": "2014-01-17T15:59:00", 
+    "amount": 170, 
+    "name": "GlucoseSensorData", 
+    "op": 85
+  }, 
+  {
+    "date": "2014-01-17T16:04:00", 
+    "amount": 172, 
+    "name": "GlucoseSensorData", 
+    "op": 86
+  }, 
+  {
+    "date": "2014-01-17T16:09:00", 
+    "amount": 176, 
+    "name": "GlucoseSensorData", 
+    "op": 88
+  }, 
+  {
+    "date": "2014-01-17T16:14:00", 
+    "amount": 178, 
+    "name": "GlucoseSensorData", 
+    "op": 89
+  }, 
+  {
+    "date": "2014-01-17T16:19:00", 
+    "amount": 176, 
+    "name": "GlucoseSensorData", 
+    "op": 88
+  }, 
+  {
+    "date": "2014-01-17T16:24:00", 
+    "amount": 174, 
+    "name": "GlucoseSensorData", 
+    "op": 87
+  }, 
+  {
+    "date": "2014-01-17T16:29:00", 
+    "amount": 172, 
+    "name": "GlucoseSensorData", 
+    "op": 86
+  }, 
+  {
+    "date": "2014-01-17T16:34:00", 
+    "amount": 166, 
+    "name": "GlucoseSensorData", 
+    "op": 83
+  }, 
+  {
+    "date": "2014-01-17T16:39:00", 
+    "amount": 160, 
+    "name": "GlucoseSensorData", 
+    "op": 80
+  }, 
+  {
+    "date": "2014-01-17T16:44:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-01-17T16:49:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-01-17T16:54:00", 
+    "amount": 152, 
+    "name": "GlucoseSensorData", 
+    "op": 76
+  }, 
+  {
+    "date": "2014-01-17T16:59:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-01-17T17:04:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-01-17T17:09:00", 
+    "amount": 160, 
+    "name": "GlucoseSensorData", 
+    "op": 80
+  }, 
+  {
+    "date": "2014-01-17T17:14:00", 
+    "amount": 160, 
+    "name": "GlucoseSensorData", 
+    "op": 80
+  }, 
+  {
+    "date": "2014-01-17T17:19:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-01-17T17:24:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-01-17T17:29:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-01-17T17:34:00", 
+    "amount": 150, 
+    "name": "GlucoseSensorData", 
+    "op": 75
+  }, 
+  {
+    "date": "2014-01-17T17:39:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-01-17T17:44:00", 
+    "amount": 142, 
+    "name": "GlucoseSensorData", 
+    "op": 71
+  }, 
+  {
+    "date": "2014-01-17T17:49:00", 
+    "amount": 142, 
+    "name": "GlucoseSensorData", 
+    "op": 71
+  }, 
+  {
+    "date": "2014-01-17T17:54:00", 
+    "amount": 138, 
+    "name": "GlucoseSensorData", 
+    "op": 69
+  }, 
+  {
+    "date": "2014-01-17T17:59:00", 
+    "amount": 134, 
+    "name": "GlucoseSensorData", 
+    "op": 67
+  }, 
+  {
+    "date": "2014-01-17T18:04:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-01-17T18:09:00", 
+    "amount": 126, 
+    "name": "GlucoseSensorData", 
+    "op": 63
+  }, 
+  {
+    "date": "2014-01-17T18:14:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-01-17T18:19:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-01-17T18:24:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-01-17T18:29:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-01-17T18:34:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-01-17T18:39:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-01-17T18:44:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-01-17T18:49:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-01-17T18:54:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-01-17T18:59:00", 
+    "amount": 116, 
+    "name": "GlucoseSensorData", 
+    "op": 58
+  }, 
+  {
+    "date": "2014-01-17T19:04:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-01-17T19:09:00", 
+    "amount": 112, 
+    "name": "GlucoseSensorData", 
+    "op": 56
+  }, 
+  {
+    "date": "2014-01-17T19:14:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-01-17T19:19:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-01-17T19:24:00", 
+    "amount": 102, 
+    "name": "GlucoseSensorData", 
+    "op": 51
+  }, 
+  {
+    "date": "2014-01-17T19:29:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-01-17T19:34:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-01-17T19:39:00", 
+    "amount": 96, 
+    "name": "GlucoseSensorData", 
+    "op": 48
+  }, 
+  {
+    "date": "2014-01-17T19:44:00", 
+    "amount": 96, 
+    "name": "GlucoseSensorData", 
+    "op": 48
+  }, 
+  {
+    "date": "2014-01-17T19:49:00", 
+    "amount": 96, 
+    "name": "GlucoseSensorData", 
+    "op": 48
+  }, 
+  {
+    "date": "2014-01-17T19:54:00", 
+    "amount": 98, 
+    "name": "GlucoseSensorData", 
+    "op": 49
+  }, 
+  {
+    "date": "2014-01-17T19:59:00", 
+    "amount": 100, 
+    "name": "GlucoseSensorData", 
+    "op": 50
+  }, 
+  {
+    "date": "2014-01-17T20:14:00", 
+    "prefix": [], 
+    "cgm": [
+      57, 
+      19, 
+      52, 
+      51, 
+      50
+    ], 
+    "name": "SensorTimestamp", 
+    "op": 8
+  }, 
+  {
+    "date": "2014-01-17T19:59:00", 
+    "amount": 100, 
+    "name": "GlucoseSensorData", 
+    "op": 50
+  }, 
+  {
+    "date": "2014-01-17T20:04:00", 
+    "amount": 102, 
+    "name": "GlucoseSensorData", 
+    "op": 51
+  }, 
+  {
+    "date": "2014-01-17T20:09:00", 
+    "amount": 104, 
+    "name": "GlucoseSensorData", 
+    "op": 52
+  }, 
+  {
+    "date": "2014-01-17T20:09:00", 
+    "amount": "gap", 
+    "name": "Not Sure, cannot find in csv", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-01-17T20:14:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      57, 
+      57, 
+      19
+    ], 
+    "name": "SensorCalFactor", 
+    "factor": 5.248, 
+    "date": "2014-01-17T20:25:00", 
+    "op": 15
+  }, 
+  {
+    "date": "2014-01-17T20:15:00", 
+    "amount": "gap", 
+    "name": "Not Sure, cannot find in csv", 
+    "op": 19
+  }, 
+  {
+    "date": "2014-01-17T20:20:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "date": "2014-01-17T20:25:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      57, 
+      55, 
+      55, 
+      55, 
+      54, 
+      54, 
+      54, 
+      53, 
+      53, 
+      53, 
+      55, 
+      59, 
+      63, 
+      67, 
+      70, 
+      70, 
+      67, 
+      64, 
+      61
+    ], 
+    "name": "CalBGForGH", 
+    "date": "2014-01-17T22:04:00", 
+    "amount": 114, 
+    "op": 14
+  }, 
+  {
+    "date": "2014-01-17T20:34:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-01-17T20:39:00", 
+    "amount": 128, 
+    "name": "GlucoseSensorData", 
+    "op": 64
+  }, 
+  {
+    "date": "2014-01-17T20:44:00", 
+    "amount": 134, 
+    "name": "GlucoseSensorData", 
+    "op": 67
+  }, 
+  {
+    "date": "2014-01-17T20:49:00", 
+    "amount": 140, 
+    "name": "GlucoseSensorData", 
+    "op": 70
+  }, 
+  {
+    "date": "2014-01-17T20:54:00", 
+    "amount": 140, 
+    "name": "GlucoseSensorData", 
+    "op": 70
+  }, 
+  {
+    "date": "2014-01-17T20:59:00", 
+    "amount": 134, 
+    "name": "GlucoseSensorData", 
+    "op": 67
+  }, 
+  {
+    "date": "2014-01-17T21:04:00", 
+    "amount": 126, 
+    "name": "GlucoseSensorData", 
+    "op": 63
+  }, 
+  {
+    "date": "2014-01-17T21:09:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-01-17T21:14:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-01-17T21:19:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-01-17T21:24:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-01-17T21:29:00", 
+    "amount": 106, 
+    "name": "GlucoseSensorData", 
+    "op": 53
+  }, 
+  {
+    "date": "2014-01-17T21:34:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-01-17T21:39:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-01-17T21:44:00", 
+    "amount": 108, 
+    "name": "GlucoseSensorData", 
+    "op": 54
+  }, 
+  {
+    "date": "2014-01-17T21:49:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-01-17T21:54:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-01-17T21:59:00", 
+    "amount": 110, 
+    "name": "GlucoseSensorData", 
+    "op": 55
+  }, 
+  {
+    "date": "2014-01-17T22:04:00", 
+    "amount": 114, 
+    "name": "GlucoseSensorData", 
+    "op": 57
+  }, 
+  {
+    "prefix": [], 
+    "cgm": [
+      59, 
+      61, 
+      59
+    ], 
+    "name": "SensorCalFactor", 
+    "factor": 4.98, 
+    "date": "2014-01-17T22:14:00", 
+    "op": 15
+  }, 
+  {
+    "date": "2014-01-17T22:04:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-01-17T22:09:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-01-17T22:14:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-01-18T07:09:00", 
+    "prefix": [], 
+    "cgm": [
+      110, 
+      107, 
+      103, 
+      100, 
+      104, 
+      108, 
+      113, 
+      116, 
+      115, 
+      115, 
+      115, 
+      115, 
+      114, 
+      113, 
+      111, 
+      108, 
+      102, 
+      98, 
+      101, 
+      103, 
+      106, 
+      110, 
+      115, 
+      118, 
+      118, 
+      118, 
+      118, 
+      118, 
+      117, 
+      116, 
+      113, 
+      108, 
+      99, 
+      96, 
+      96, 
+      98, 
+      102, 
+      108, 
+      112, 
+      112, 
+      109, 
+      109, 
+      111, 
+      113, 
+      113, 
+      113, 
+      112, 
+      111, 
+      110, 
+      109, 
+      108, 
+      107, 
+      105, 
+      103, 
+      100, 
+      95, 
+      88, 
+      82, 
+      81, 
+      80, 
+      79, 
+      80, 
+      81, 
+      82, 
+      81, 
+      80, 
+      80, 
+      79, 
+      78, 
+      78, 
+      78, 
+      79, 
+      79, 
+      81, 
+      81, 
+      81, 
+      81, 
+      81, 
+      80, 
+      79, 
+      78, 
+      77, 
+      76, 
+      74, 
+      73, 
+      72, 
+      70, 
+      69, 
+      68, 
+      67, 
+      65, 
+      64, 
+      63, 
+      62, 
+      61, 
+      61, 
+      60, 
+      60, 
+      61, 
+      62, 
+      65, 
+      65, 
+      64, 
+      61, 
+      59, 
+      61, 
+      60
+    ], 
+    "name": "SensorTimestamp", 
+    "op": 8
+  }, 
+  {
+    "date": "2014-01-17T22:19:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-01-17T22:24:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-01-17T22:29:00", 
+    "amount": 118, 
+    "name": "GlucoseSensorData", 
+    "op": 59
+  }, 
+  {
+    "date": "2014-01-17T22:34:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-01-17T22:39:00", 
+    "amount": 128, 
+    "name": "GlucoseSensorData", 
+    "op": 64
+  }, 
+  {
+    "date": "2014-01-17T22:44:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-01-17T22:49:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-01-17T22:54:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-01-17T22:59:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-01-17T23:04:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-01-17T23:09:00", 
+    "amount": 120, 
+    "name": "GlucoseSensorData", 
+    "op": 60
+  }, 
+  {
+    "date": "2014-01-17T23:14:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-01-17T23:19:00", 
+    "amount": 122, 
+    "name": "GlucoseSensorData", 
+    "op": 61
+  }, 
+  {
+    "date": "2014-01-17T23:24:00", 
+    "amount": 124, 
+    "name": "GlucoseSensorData", 
+    "op": 62
+  }, 
+  {
+    "date": "2014-01-17T23:29:00", 
+    "amount": 126, 
+    "name": "GlucoseSensorData", 
+    "op": 63
+  }, 
+  {
+    "date": "2014-01-17T23:34:00", 
+    "amount": 128, 
+    "name": "GlucoseSensorData", 
+    "op": 64
+  }, 
+  {
+    "date": "2014-01-17T23:39:00", 
+    "amount": 130, 
+    "name": "GlucoseSensorData", 
+    "op": 65
+  }, 
+  {
+    "date": "2014-01-17T23:44:00", 
+    "amount": 134, 
+    "name": "GlucoseSensorData", 
+    "op": 67
+  }, 
+  {
+    "date": "2014-01-17T23:49:00", 
+    "amount": 136, 
+    "name": "GlucoseSensorData", 
+    "op": 68
+  }, 
+  {
+    "date": "2014-01-17T23:54:00", 
+    "amount": 138, 
+    "name": "GlucoseSensorData", 
+    "op": 69
+  }, 
+  {
+    "date": "2014-01-17T23:59:00", 
+    "amount": 140, 
+    "name": "GlucoseSensorData", 
+    "op": 70
+  }, 
+  {
+    "date": "2014-01-18T00:04:00", 
+    "amount": 144, 
+    "name": "GlucoseSensorData", 
+    "op": 72
+  }, 
+  {
+    "date": "2014-01-18T00:09:00", 
+    "amount": 146, 
+    "name": "GlucoseSensorData", 
+    "op": 73
+  }, 
+  {
+    "date": "2014-01-18T00:14:00", 
+    "amount": 148, 
+    "name": "GlucoseSensorData", 
+    "op": 74
+  }, 
+  {
+    "date": "2014-01-18T00:19:00", 
+    "amount": 152, 
+    "name": "GlucoseSensorData", 
+    "op": 76
+  }, 
+  {
+    "date": "2014-01-18T00:24:00", 
+    "amount": 154, 
+    "name": "GlucoseSensorData", 
+    "op": 77
+  }, 
+  {
+    "date": "2014-01-18T00:29:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-01-18T00:34:00", 
+    "amount": 158, 
+    "name": "GlucoseSensorData", 
+    "op": 79
+  }, 
+  {
+    "date": "2014-01-18T00:39:00", 
+    "amount": 160, 
+    "name": "GlucoseSensorData", 
+    "op": 80
+  }, 
+  {
+    "date": "2014-01-18T00:44:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-01-18T00:49:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-01-18T00:54:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-01-18T00:59:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-01-18T01:04:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-01-18T01:09:00", 
+    "amount": 158, 
+    "name": "GlucoseSensorData", 
+    "op": 79
+  }, 
+  {
+    "date": "2014-01-18T01:14:00", 
+    "amount": 158, 
+    "name": "GlucoseSensorData", 
+    "op": 79
+  }, 
+  {
+    "date": "2014-01-18T01:19:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-01-18T01:24:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-01-18T01:29:00", 
+    "amount": 156, 
+    "name": "GlucoseSensorData", 
+    "op": 78
+  }, 
+  {
+    "date": "2014-01-18T01:34:00", 
+    "amount": 158, 
+    "name": "GlucoseSensorData", 
+    "op": 79
+  }, 
+  {
+    "date": "2014-01-18T01:39:00", 
+    "amount": 160, 
+    "name": "GlucoseSensorData", 
+    "op": 80
+  }, 
+  {
+    "date": "2014-01-18T01:44:00", 
+    "amount": 160, 
+    "name": "GlucoseSensorData", 
+    "op": 80
+  }, 
+  {
+    "date": "2014-01-18T01:49:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-01-18T01:54:00", 
+    "amount": 164, 
+    "name": "GlucoseSensorData", 
+    "op": 82
+  }, 
+  {
+    "date": "2014-01-18T01:59:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-01-18T02:04:00", 
+    "amount": 160, 
+    "name": "GlucoseSensorData", 
+    "op": 80
+  }, 
+  {
+    "date": "2014-01-18T02:09:00", 
+    "amount": 158, 
+    "name": "GlucoseSensorData", 
+    "op": 79
+  }, 
+  {
+    "date": "2014-01-18T02:14:00", 
+    "amount": 160, 
+    "name": "GlucoseSensorData", 
+    "op": 80
+  }, 
+  {
+    "date": "2014-01-18T02:19:00", 
+    "amount": 162, 
+    "name": "GlucoseSensorData", 
+    "op": 81
+  }, 
+  {
+    "date": "2014-01-18T02:24:00", 
+    "amount": 164, 
+    "name": "GlucoseSensorData", 
+    "op": 82
+  }, 
+  {
+    "date": "2014-01-18T02:29:00", 
+    "amount": 176, 
+    "name": "GlucoseSensorData", 
+    "op": 88
+  }, 
+  {
+    "date": "2014-01-18T02:34:00", 
+    "amount": 190, 
+    "name": "GlucoseSensorData", 
+    "op": 95
+  }, 
+  {
+    "date": "2014-01-18T02:39:00", 
+    "amount": 200, 
+    "name": "GlucoseSensorData", 
+    "op": 100
+  }, 
+  {
+    "date": "2014-01-18T02:44:00", 
+    "amount": 206, 
+    "name": "GlucoseSensorData", 
+    "op": 103
+  }, 
+  {
+    "date": "2014-01-18T02:49:00", 
+    "amount": 210, 
+    "name": "GlucoseSensorData", 
+    "op": 105
+  }, 
+  {
+    "date": "2014-01-18T02:54:00", 
+    "amount": 214, 
+    "name": "GlucoseSensorData", 
+    "op": 107
+  }, 
+  {
+    "date": "2014-01-18T02:59:00", 
+    "amount": 216, 
+    "name": "GlucoseSensorData", 
+    "op": 108
+  }, 
+  {
+    "date": "2014-01-18T03:04:00", 
+    "amount": 218, 
+    "name": "GlucoseSensorData", 
+    "op": 109
+  }, 
+  {
+    "date": "2014-01-18T03:09:00", 
+    "amount": 220, 
+    "name": "GlucoseSensorData", 
+    "op": 110
+  }, 
+  {
+    "date": "2014-01-18T03:14:00", 
+    "amount": 222, 
+    "name": "GlucoseSensorData", 
+    "op": 111
+  }, 
+  {
+    "date": "2014-01-18T03:19:00", 
+    "amount": 224, 
+    "name": "GlucoseSensorData", 
+    "op": 112
+  }, 
+  {
+    "date": "2014-01-18T03:24:00", 
+    "amount": 226, 
+    "name": "GlucoseSensorData", 
+    "op": 113
+  }, 
+  {
+    "date": "2014-01-18T03:29:00", 
+    "amount": 226, 
+    "name": "GlucoseSensorData", 
+    "op": 113
+  }, 
+  {
+    "date": "2014-01-18T03:34:00", 
+    "amount": 226, 
+    "name": "GlucoseSensorData", 
+    "op": 113
+  }, 
+  {
+    "date": "2014-01-18T03:39:00", 
+    "amount": 222, 
+    "name": "GlucoseSensorData", 
+    "op": 111
+  }, 
+  {
+    "date": "2014-01-18T03:44:00", 
+    "amount": 218, 
+    "name": "GlucoseSensorData", 
+    "op": 109
+  }, 
+  {
+    "date": "2014-01-18T03:49:00", 
+    "amount": 218, 
+    "name": "GlucoseSensorData", 
+    "op": 109
+  }, 
+  {
+    "date": "2014-01-18T03:54:00", 
+    "amount": 224, 
+    "name": "GlucoseSensorData", 
+    "op": 112
+  }, 
+  {
+    "date": "2014-01-18T03:59:00", 
+    "amount": 224, 
+    "name": "GlucoseSensorData", 
+    "op": 112
+  }, 
+  {
+    "date": "2014-01-18T04:04:00", 
+    "amount": 216, 
+    "name": "GlucoseSensorData", 
+    "op": 108
+  }, 
+  {
+    "date": "2014-01-18T04:09:00", 
+    "amount": 204, 
+    "name": "GlucoseSensorData", 
+    "op": 102
+  }, 
+  {
+    "date": "2014-01-18T04:14:00", 
+    "amount": 196, 
+    "name": "GlucoseSensorData", 
+    "op": 98
+  }, 
+  {
+    "date": "2014-01-18T04:19:00", 
+    "amount": 192, 
+    "name": "GlucoseSensorData", 
+    "op": 96
+  }, 
+  {
+    "date": "2014-01-18T04:24:00", 
+    "amount": 192, 
+    "name": "GlucoseSensorData", 
+    "op": 96
+  }, 
+  {
+    "date": "2014-01-18T04:29:00", 
+    "amount": 198, 
+    "name": "GlucoseSensorData", 
+    "op": 99
+  }, 
+  {
+    "date": "2014-01-18T04:34:00", 
+    "amount": 216, 
+    "name": "GlucoseSensorData", 
+    "op": 108
+  }, 
+  {
+    "date": "2014-01-18T04:39:00", 
+    "amount": 226, 
+    "name": "GlucoseSensorData", 
+    "op": 113
+  }, 
+  {
+    "date": "2014-01-18T04:44:00", 
+    "amount": 232, 
+    "name": "GlucoseSensorData", 
+    "op": 116
+  }, 
+  {
+    "date": "2014-01-18T04:49:00", 
+    "amount": 234, 
+    "name": "GlucoseSensorData", 
+    "op": 117
+  }, 
+  {
+    "date": "2014-01-18T04:54:00", 
+    "amount": 236, 
+    "name": "GlucoseSensorData", 
+    "op": 118
+  }, 
+  {
+    "date": "2014-01-18T04:59:00", 
+    "amount": 236, 
+    "name": "GlucoseSensorData", 
+    "op": 118
+  }, 
+  {
+    "date": "2014-01-18T05:04:00", 
+    "amount": 236, 
+    "name": "GlucoseSensorData", 
+    "op": 118
+  }, 
+  {
+    "date": "2014-01-18T05:09:00", 
+    "amount": 236, 
+    "name": "GlucoseSensorData", 
+    "op": 118
+  }, 
+  {
+    "date": "2014-01-18T05:14:00", 
+    "amount": 236, 
+    "name": "GlucoseSensorData", 
+    "op": 118
+  }, 
+  {
+    "date": "2014-01-18T05:19:00", 
+    "amount": 230, 
+    "name": "GlucoseSensorData", 
+    "op": 115
+  }, 
+  {
+    "date": "2014-01-18T05:24:00", 
+    "amount": 220, 
+    "name": "GlucoseSensorData", 
+    "op": 110
+  }, 
+  {
+    "date": "2014-01-18T05:29:00", 
+    "amount": 212, 
+    "name": "GlucoseSensorData", 
+    "op": 106
+  }, 
+  {
+    "date": "2014-01-18T05:34:00", 
+    "amount": 206, 
+    "name": "GlucoseSensorData", 
+    "op": 103
+  }, 
+  {
+    "date": "2014-01-18T05:39:00", 
+    "amount": 202, 
+    "name": "GlucoseSensorData", 
+    "op": 101
+  }, 
+  {
+    "date": "2014-01-18T05:44:00", 
+    "amount": 196, 
+    "name": "GlucoseSensorData", 
+    "op": 98
+  }, 
+  {
+    "date": "2014-01-18T05:49:00", 
+    "amount": 204, 
+    "name": "GlucoseSensorData", 
+    "op": 102
+  }, 
+  {
+    "date": "2014-01-18T05:54:00", 
+    "amount": 216, 
+    "name": "GlucoseSensorData", 
+    "op": 108
+  }, 
+  {
+    "date": "2014-01-18T05:59:00", 
+    "amount": 222, 
+    "name": "GlucoseSensorData", 
+    "op": 111
+  }, 
+  {
+    "date": "2014-01-18T06:04:00", 
+    "amount": 226, 
+    "name": "GlucoseSensorData", 
+    "op": 113
+  }, 
+  {
+    "date": "2014-01-18T06:09:00", 
+    "amount": 228, 
+    "name": "GlucoseSensorData", 
+    "op": 114
+  }, 
+  {
+    "date": "2014-01-18T06:14:00", 
+    "amount": 230, 
+    "name": "GlucoseSensorData", 
+    "op": 115
+  }, 
+  {
+    "date": "2014-01-18T06:19:00", 
+    "amount": 230, 
+    "name": "GlucoseSensorData", 
+    "op": 115
+  }, 
+  {
+    "date": "2014-01-18T06:24:00", 
+    "amount": 230, 
+    "name": "GlucoseSensorData", 
+    "op": 115
+  }, 
+  {
+    "date": "2014-01-18T06:29:00", 
+    "amount": 230, 
+    "name": "GlucoseSensorData", 
+    "op": 115
+  }, 
+  {
+    "date": "2014-01-18T06:34:00", 
+    "amount": 232, 
+    "name": "GlucoseSensorData", 
+    "op": 116
+  }, 
+  {
+    "date": "2014-01-18T06:39:00", 
+    "amount": 226, 
+    "name": "GlucoseSensorData", 
+    "op": 113
+  }, 
+  {
+    "date": "2014-01-18T06:44:00", 
+    "amount": 216, 
+    "name": "GlucoseSensorData", 
+    "op": 108
+  }, 
+  {
+    "date": "2014-01-18T06:49:00", 
+    "amount": 208, 
+    "name": "GlucoseSensorData", 
+    "op": 104
+  }, 
+  {
+    "date": "2014-01-18T06:54:00", 
+    "amount": 200, 
+    "name": "GlucoseSensorData", 
+    "op": 100
+  }, 
+  {
+    "date": "2014-01-18T06:59:00", 
+    "amount": 206, 
+    "name": "GlucoseSensorData", 
+    "op": 103
+  }, 
+  {
+    "date": "2014-01-18T07:04:00", 
+    "amount": 214, 
+    "name": "GlucoseSensorData", 
+    "op": 107
+  }, 
+  {
+    "date": "2014-01-18T07:09:00", 
+    "amount": 220, 
+    "name": "GlucoseSensorData", 
+    "op": 110
+  }
+]
