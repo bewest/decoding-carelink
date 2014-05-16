@@ -36,8 +36,10 @@ def parse_day (one):
 def parse_months (one):
   return one >> 4
 
-def parse_date (data, unmask=False, theory_1=False, strict=False):
+def parse_date (data, unmask=False, theory_1=False, strict=False, minute_specific=False):
   """
+  Some dates are formatted/stored down to the second (Sensor CalBGForPH) while
+    others are stored down to the minute (CGM SensorTimestamp dates).
   """
   data = data[:]
   seconds = 0
@@ -92,15 +94,24 @@ class PagedData (object):
     return data[i:]
   def suggest (self, op):
     sizes = {
+# x01 - used to mark the end of data in the file/page
     #  0x01: 1
+# x02 - weak signal    
+    #  0x02: 1
+# x03 - not sure
     #, 0x03: 1
+# x08 - timestamp (looks like it's used to start a sensor and also when setting the time)
       0x08: 4
     , 0x0b: 4
-    , 0x0d: 4
-    , 0x0f: 6
-    , 0x0e: 5
-    , 0x10: 7
+# x0c - looks like it is used to mark time changes (possibly size 8)
     , 0x0c: 4
+    , 0x0d: 4
+# x0e - CalBGForGH/CalBGForPH    
+    , 0x0e: 5
+# x0f - sensor cal factor
+    , 0x0f: 6 
+    , 0x10: 7
+    
     }
     if op > 0 and op < 32:
       return sizes.get(op, None)
@@ -201,7 +212,7 @@ class PagedData (object):
 
   def to_dict (self, op=None, body=None, date=None, glucose=None, prefix=None):
     names = {
-      0x0e: 'CalBGForGH'
+      0x0e: 'CalBGForPH'
     , 0x08: 'SensorTimestamp'
     , 0x0d: 'SensorSync'
     , 0x0b: 'SensorStatus'
