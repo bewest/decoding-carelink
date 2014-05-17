@@ -77,7 +77,7 @@ class OpCodeFinder:
   
   def pretty_print(self):
     print "****START****\n\n"
-    print "Searched (" + self.fileInName + ") for '" + self.op_code + "' of length (" + self.pack_len + ")"
+    print "Searched (" + self.fileInName + ") for '" + self.op_code + "' of length (" + str(self.pack_len) + ")"
     for i in range(0, len(self.found)):
       packet = self.found[i]
       print "At "+str(packet['start_point'])+" found : ["+packet['hex_str']+"] ["+packet['bin_str']+"]"

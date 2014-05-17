@@ -33,8 +33,14 @@ def parse_hours (one):
 def parse_day (one):
   return one & 0x1F
 
-def parse_months (one):
-  return one >> 4
+#def parse_months (one):
+#  return one >> 4
+
+def parse_months (first_byte, second_byte):
+  first_two_bits  = first_byte  >> 4
+  second_two_bits = second_byte >> 4
+  return (first_two_bits << 2) + second_two_bits
+  
 
 def parse_date (data, unmask=False, theory_1=False, strict=False, minute_specific=False):
   """
@@ -53,7 +59,7 @@ def parse_date (data, unmask=False, theory_1=False, strict=False, minute_specifi
 
   hours   = parse_hours(data[3])
 
-  month   = parse_months(data[3])
+  month   = parse_months(data[3], data[2])
   if theory_1:
     # XXX: incorrect and hacky and bad code
     if minutes > 59:
@@ -103,7 +109,7 @@ class PagedData (object):
 # x08 - timestamp (looks like it's used to start a sensor and also when setting the time)
       0x08: 4
     , 0x0b: 4
-# x0c - looks like it is used to mark time changes (possibly size 8)
+# x0c - looks like it is used to mark time changes (possibly size 14 packet)
     , 0x0c: 4
     , 0x0d: 4
 # x0e - CalBGForGH/CalBGForPH    

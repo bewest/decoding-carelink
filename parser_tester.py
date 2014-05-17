@@ -17,10 +17,13 @@ from find_print_op_codes import OpCodeFinder
 
 class ParserTest:
   
-  def main(self, packets, bin_to_read_start, bin_to_read_end):
+  def main(self, packets, bin_to_read_start, bin_to_read_end, reverse):
     self.packets = packets
     for i in range(0, len(self.packets)):
-      packet = self.packets[i]
+      if reverse:
+        packet = self.packets[len(self.packets) - i - 1]
+      else:
+        packet = self.packets[i]
       bin = packet['bin_str_raw'][bin_to_read_start:bin_to_read_end]
       dec = int(bin, 2)
       print_str = "At "+str(packet['start_point'])+":  "
@@ -45,7 +48,7 @@ if __name__ == '__main__':
   op_code_finder = OpCodeFinder(fileInName, op_code, pack_len, reverse)
   packets = op_code_finder.find()
   parser = ParserTest()
-  parser.main(packets, bin_to_read_start, bin_to_read_end)
+  parser.main(packets, bin_to_read_start, bin_to_read_end, reverse)
   
   
 #####
