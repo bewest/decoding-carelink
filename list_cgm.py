@@ -37,8 +37,8 @@ def parse_day (one):
 #  return one >> 4
 
 def parse_months (first_byte, second_byte):
-  first_two_bits  = first_byte  >> 4
-  second_two_bits = second_byte >> 4
+  first_two_bits  = first_byte  >> 6
+  second_two_bits = second_byte >> 6
   return (first_two_bits << 2) + second_two_bits
   
 
@@ -104,13 +104,13 @@ class PagedData (object):
     #  0x01: 1
 # x02 - weak signal    
     #  0x02: 1
-# x03 - not sure
+# 0x03 may be SensorCal packet: 0x00=waiting 0x01=waiting , no datetime stamp
     #, 0x03: 1
 # x08 - timestamp (looks like it's used to start a sensor and also when setting the time)
       0x08: 4
     , 0x0b: 4
-# x0c - looks like it is used to mark time changes (possibly size 14 packet)
-    , 0x0c: 4
+# x0c - looks like it is used to mark time changes (possibly size 14 packet or 4 bytes in packet)
+    , 0x0c: 14
     , 0x0d: 4
 # x0e - CalBGForGH/CalBGForPH    
     , 0x0e: 5
@@ -160,7 +160,6 @@ class PagedData (object):
         # print lib.hexdump(body)
         date.reverse( )
         date = parse_date(date)
-        glucose = self.collect_glucose( )
         if date is None:
           print "COULD NOT DECODE", " {0:#04x}".format(op), ' @ byte {0}'.format(self.stream.tell( ))
           print lib.hexdump(prefix)
@@ -173,18 +172,28 @@ class PagedData (object):
           date = parse_date(expected_date, theory_1=True, strict=True)
           print "ATTEMPTING", date
 
-
-        cgm = glucose[:]
-        # cgm.reverse( )
-        cgm = self.map_glucose(cgm, start=date, delta=self.delta_ago( ))
-        # cgm.reverse( )
-        prior = prefix[:]
-        prior = self.map_glucose(prior, start=date, delta=self.delta_ago(reverse=True))
-        prior.reverse( )
-        records.extend(prior)
-        records.extend(cgm)
-        records.append(self.to_dict(op, body, date, glucose, prefix))
-        prefix = bytearray( )
+        if op == 0x08 or op == 0x0f:
+#         glucose = self.collect_glucose( )
+          glucose = None
+#         cgm = glucose[:]
+#         cgm.reverse( )
+#         cgm = self.map_glucose(cgm, start=date, delta=self.delta_ago( ))
+#         cgm.reverse( )
+        # only map data that has come before
+        # take the timestamp and map data that comes after as CGM
+          prior = prefix[:]
+          prior.reverse()
+          records.append(self.to_dict(op, body, date, glucose, prefix))
+#          if op == 0x0f:
+          date = date + self.delta_ago(reverse=False)
+          prior = self.map_glucose(prior, start=date, delta=self.delta_ago(reverse=True))
+          prior.reverse( )
+          records.extend(prior)
+          prefix = bytearray()
+#          records.extend(cgm)
+        else:
+          records.append(self.to_dict(op, body, date, glucose, prefix))
+#        prefix = bytearray( )
     records.reverse( )
     self.records = records
     return records
@@ -218,14 +227,16 @@ class PagedData (object):
 
   def to_dict (self, op=None, body=None, date=None, glucose=None, prefix=None):
     names = {
-      0x0e: 'CalBGForPH'
+      0x0e: 'CalBGForGH'
     , 0x08: 'SensorTimestamp'
     , 0x0d: 'SensorSync'
     , 0x0b: 'SensorStatus'
     , 0x0f: 'SensorCalFactor'
+    # 0x03 may be SensorCal packet: 0x00=waiting 0x01=waiting
     }
     name = names.get(op, 'ERROR')
-    record = dict(op=op, date=date.isoformat( ), cgm=list(glucose), name=name, prefix=list(prefix))
+    record = dict(op=op, date=date.isoformat( ), name=name, prefix=list(prefix))
+#    record = dict(op=op, date=date.isoformat( ), cgm=list(glucose), name=name, prefix=list(prefix))
     if name == 'ERROR':
       record.update(name='ERROR_{0:#04x}'.format(op), prefix=list(body+glucose))
     if name == 'SensorCalFactor':
