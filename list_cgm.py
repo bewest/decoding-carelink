@@ -164,6 +164,10 @@ class PagedData (object):
     for B in iter(lambda: self.stream.read(1), ""):
       B = bytearray(B)
       record = self.suggest(B[0])
+      # read packet if needed
+      if not record is None and record[packet_size] > 0:
+        raw_packet = bytearray(self.stream.read(record[packet_size])
+
       if record[name] == 'DataEnd':
 #      if B[0] == 0x01:
         prefix.extend(B)
