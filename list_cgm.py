@@ -99,28 +99,49 @@ class PagedData (object):
       i = i+1
     return data[i:]
   def suggest (self, op):
-    sizes = {
-# x01 - used to mark the end of data in the file/page
-    #  0x01: 1
-# x02 - weak signal    
-    #  0x02: 1
-# 0x03 may be SensorCal packet: 0x00=waiting 0x01=waiting , no datetime stamp
-    #, 0x03: 1
-# x08 - timestamp (looks like it's used to start a sensor and also when setting the time)
-      0x08: 4
-    , 0x0b: 4
-# x0c - looks like it is used to mark time changes (possibly size 14 packet or 4 bytes in packet)
-    , 0x0c: 14
-    , 0x0d: 4
-# x0e - CalBGForGH/CalBGForPH    
-    , 0x0e: 5
-# x0f - sensor cal factor
-    , 0x0f: 6 
-    , 0x10: 7
+    """
+    return a partially filled in acket/opcode
+     info: name, packet size, date_type, op
+     some info will be added later when the record is parsed:
+       GlucoseSensorData, cal factor. amount, prefix, data
+    """
     
+    records = {
+      0x01: dict(name='DataEnd',packet_size=0,date_type='none',op=0x01),
+      0x02: dict(name='SensorWeakSignal',packet_size=0,date_type='prevTimestamp',op=0x02),
+      0x03: dict(name='SensorCalFactor',packet_size=1,date_type='prevTimestamp',op=0x03),
+      0x08: dict(name='SensorTimestamp',packet_size=4,date_type='minSpecific',op=0x08),
+      0x0b: dict(name='SensorStatus',packet_size=4,date_type='minSpecific',op=0x0b),
+      0x0c: dict(name='DateTimeChange',packet_size=14,date_type='secSpecific',op=0x0c),
+      0x0d: dict(name='SensorSync',packet_size=4,date_type='minSpecific',op=0x0d),
+      0x0e: dict(name='CalBGForGH',packet_size=5,date_type='minSpecific',op=0x0e),
+      0x0f: dict(name='SensorCalFactor',packet_size=6,date_type='minSpecific',op=0x0f),
+      0x10: dict(name='10-Something',packet_size=7,date_type='minSpecific',op=0x10),
     }
+#    sizes = {
+## x01 - used to mark the end of data in the file/page
+#    #  0x01: 1
+## x02 - weak signal    
+#    #  0x02: 1
+## 0x03 may be SensorCal packet: 0x00=waiting 0x01=waiting , no datetime stamp
+#    #, 0x03: 1
+## x08 - timestamp (looks like it's used to start a sensor and also when setting the time)
+#      0x08: 4
+#    , 0x0b: 4
+## x0c - looks like it is used to mark time changes (possibly size 14 packet or 4 bytes in packet)
+#    , 0x0c: 14
+#    , 0x0d: 4
+## x0e - CalBGForGH/CalBGForPH    
+#    , 0x0e: 5
+## x0f - sensor cal factor
+#    , 0x0f: 6 
+#    , 0x10: 7
+#    
+#    }
     if op > 0 and op < 32:
-      return sizes.get(op, None)
+      return records.get(op, None)
+    else:
+      return dict(name='GlucoseSensorData',packet_size=0,date_type='prevTimestamp',op=op)
     return None
 
   def collect_glucose (self):
@@ -142,13 +163,33 @@ class PagedData (object):
     prefix = bytearray( )
     for B in iter(lambda: self.stream.read(1), ""):
       B = bytearray(B)
-      if B[0] == 0x01:
+      record = self.suggest(B[0])
+      if record[name] == 'DataEnd':
+#      if B[0] == 0x01:
         prefix.extend(B)
         continue
       # if B[0] == 0x03:
-      suggestion = self.suggest(B[0])
-      if suggestion is None:
+#      suggestion = self.suggest(B[0])
+      
+      elif record[name] == 'SensorCalFactor' or record[name] == 'GlucoseSensorData'\
+                      or record[name] == 'SensorWeakSignal':
+        # add to previxed records to add to the next sensor minute timestamped record
+
+      elif record[name] == 'SensorTimestamp' or record[name] == 'SensorCalFactor'\
+                      or record[name] == 'CalBGForGH':
+        # these are sensor minute timestamped records thus create the record
+        # and map prefixed elements based on the timedelta
+
+      elif record[name] == 'SensorStatus' or record[name] == 'DateTimeChange'\
+                      or record[name] == 'SensorSync' or record[name] == '10-Something':
+        # independent record => parse and add to records
+
+      else:
+        # could not decode
+
+      else:
         prefix.extend(bytearray(B))
+      
       else:
         op = B[0]
         # print "LOOKING AT OP", " {0:#04x}".format(op)
@@ -225,6 +266,7 @@ class PagedData (object):
       delta = relativedelta(minutes=-5*offset)
     return delta
 
+# to_dict should not be needed with changes made to suggest
   def to_dict (self, op=None, body=None, date=None, glucose=None, prefix=None):
     names = {
       0x0e: 'CalBGForGH'
@@ -272,4 +314,3 @@ if __name__ == '__main__':
   app = ListCGM( )
   app.main( )
 #####
-# EOF
