@@ -141,8 +141,9 @@ class PagedData (object):
     if op > 0 and op < 32:
       return records.get(op, None)
     else:
-      return dict(name='GlucoseSensorData',packet_size=0,date_type='prevTimestamp',op=op)
-    return None
+      record = dict(name='GlucoseSensorData',packet_size=0,date_type='prevTimestamp',op=op)
+      record.update(sgv=(op * 2))
+      return record
 
   def collect_glucose (self):
     glucose = bytearray( )
@@ -152,6 +153,7 @@ class PagedData (object):
       else:
         break
     return glucose
+
   def decode (self):
     """
       XXX: buggy code
@@ -177,8 +179,13 @@ class PagedData (object):
       
       elif record[name] == 'SensorCalFactor' or record[name] == 'GlucoseSensorData'\
                       or record[name] == 'SensorWeakSignal':
-        # add to previxed records to add to the next sensor minute timestamped record
-
+        # add to prefixed records to add to the next sensor minute timestamped record
+        if record[name] == 'SensorCalFactor':
+          body = raw_packet
+          # update sensor cal factor
+          factor = lib.BangInt([ body[0], body[1] ]) / 1000.0
+          record.update(factor=factor)
+        prefix.extend(record)
       elif record[name] == 'SensorTimestamp' or record[name] == 'SensorCalFactor'\
                       or record[name] == 'CalBGForGH':
         # these are sensor minute timestamped records thus create the record
@@ -186,10 +193,13 @@ class PagedData (object):
 
       elif record[name] == 'SensorStatus' or record[name] == 'DateTimeChange'\
                       or record[name] == 'SensorSync' or record[name] == '10-Something':
-        # independent record => parse and add to records
+        # independent record => parse and add to records list
 
       else:
         # could not decode
+
+
+
 
       else:
         prefix.extend(bytearray(B))
