@@ -51,7 +51,7 @@ def parse_date (data, unmask=False, theory_1=False, strict=False, minute_specifi
   seconds = 0
   minutes = 0
   hours   = 0
-
+  
   year    = times.parse_years(data[0])
   day     = parse_day(data[1])
   # XXX: minutes is suspect, what to do when > 59?
@@ -60,13 +60,13 @@ def parse_date (data, unmask=False, theory_1=False, strict=False, minute_specifi
   hours   = parse_hours(data[3])
 
   month   = parse_months(data[3], data[2])
-  if theory_1:
-    # XXX: incorrect and hacky and bad code
-    if minutes > 59:
-      month = month - 1
-      minutes = (minutes & 0x0F) + 1
-    if month < 1:
-      month = (month + 12) % 12 + 1
+#  if theory_1:
+#    # XXX: incorrect and hacky and bad code
+#    if minutes > 59:
+#      month = month - 1
+#      minutes = (minutes & 0x0F) + 1
+#    if month < 1:
+#      month = (month + 12) % 12 + 1
 
 
   try:
@@ -107,16 +107,17 @@ class PagedData (object):
     """
     
     records = {
-      0x01: dict(name='DataEnd',packet_size=0,date_type='none',op=0x01),
-      0x02: dict(name='SensorWeakSignal',packet_size=0,date_type='prevTimestamp',op=0x02),
-      0x03: dict(name='SensorCalFactor',packet_size=1,date_type='prevTimestamp',op=0x03),
-      0x08: dict(name='SensorTimestamp',packet_size=4,date_type='minSpecific',op=0x08),
-      0x0b: dict(name='SensorStatus',packet_size=4,date_type='minSpecific',op=0x0b),
-      0x0c: dict(name='DateTimeChange',packet_size=14,date_type='secSpecific',op=0x0c),
-      0x0d: dict(name='SensorSync',packet_size=4,date_type='minSpecific',op=0x0d),
-      0x0e: dict(name='CalBGForGH',packet_size=5,date_type='minSpecific',op=0x0e),
-      0x0f: dict(name='SensorCalFactor',packet_size=6,date_type='minSpecific',op=0x0f),
-      0x10: dict(name='10-Something',packet_size=7,date_type='minSpecific',op=0x10),
+      0x01: dict(name='DataEnd',packet_size=0,date_type='none',op='0x01'),
+      0x02: dict(name='SensorWeakSignal',packet_size=0,date_type='prevTimestamp',op='0x02'),
+      0x03: dict(name='SensorCal',packet_size=1,date_type='prevTimestamp',op='0x03'),
+      0x08: dict(name='SensorTimestamp',packet_size=4,date_type='minSpecific',op='0x08'),
+      0x0b: dict(name='SensorStatus',packet_size=4,date_type='minSpecific',op='0x0b'),
+      0x0c: dict(name='DateTimeChange',packet_size=14,date_type='secSpecific',op='0x0c'),
+      0x0d: dict(name='SensorSync',packet_size=4,date_type='minSpecific',op='0x0d'),
+      0x0e: dict(name='CalBGForGH',packet_size=5,date_type='minSpecific',op='0x0e'),
+      0x0f: dict(name='SensorCalFactor',packet_size=6,date_type='minSpecific',op='0x0f'),
+      0x10: dict(name='10-Something',packet_size=7,date_type='minSpecific',op='0x10'),
+      0x13: dict(name='19-Something',packet_size=0,date_type='prevTimestamp',op='0x13')
     }
 #    sizes = {
 ## x01 - used to mark the end of data in the file/page
@@ -138,21 +139,26 @@ class PagedData (object):
 #    , 0x10: 7
 #    
 #    }
-    if op > 0 and op < 32:
-      return records.get(op, None)
+#    if op > 0 and op < 32:
+    if op > 0 and op < 40:
+      record = records.get(op, None)
+      if record is None:
+        return dict(name='Could Not Decode',packet_size=0,op=op)
+      else:
+        return record
     else:
       record = dict(name='GlucoseSensorData',packet_size=0,date_type='prevTimestamp',op=op)
-      record.update(sgv=(op * 2))
+      record.update(sgv=(int(op) * 2))
       return record
 
-  def collect_glucose (self):
-    glucose = bytearray( )
-    for B in iter(lambda: bytearray(self.stream.peek(1)), ""):
-      if self.suggest(B[0]) is None and B[0] > 0x0F:
-        glucose.extend(self.stream.read(1))
-      else:
-        break
-    return glucose
+#  def collect_glucose (self):
+#    glucose = bytearray( )
+#    for B in iter(lambda: bytearray(self.stream.peek(1)), ""):
+#      if self.suggest(B[0]) is None and B[0] > 0x0F:
+#        glucose.extend(self.stream.read(1))
+#      else:
+#        break
+#    return glucose
 
   def decode (self):
     """
@@ -162,117 +168,168 @@ class PagedData (object):
         * fails to acknowledge SensorSync
     """
     records = [ ]
-    prefix = bytearray( )
+    prefix_records = []
+#    prefix = bytearray( )
     for B in iter(lambda: self.stream.read(1), ""):
       B = bytearray(B)
       record = self.suggest(B[0])
       # read packet if needed
-      if not record is None and record[packet_size] > 0:
-        raw_packet = bytearray(self.stream.read(record[packet_size])
+      if not record is None and record['packet_size'] > 0:
+        raw_packet = bytearray(self.stream.read(record['packet_size']))
+#        raw_packet.reverse()
 
-      if record[name] == 'DataEnd':
-#      if B[0] == 0x01:
-        prefix.extend(B)
+      if record['name'] == 'DataEnd':
+        prefix_records.append(record)
+#        prefix.extend(B)
         continue
-      # if B[0] == 0x03:
-#      suggestion = self.suggest(B[0])
       
-      elif record[name] == 'SensorCalFactor' or record[name] == 'GlucoseSensorData'\
-                      or record[name] == 'SensorWeakSignal':
+      elif record['name'] == 'GlucoseSensorData' or record['name'] == 'SensorWeakSignal' \
+        or record['name'] == 'SensorCal' or record['name'] == '19-Something':
         # add to prefixed records to add to the next sensor minute timestamped record
-        if record[name] == 'SensorCalFactor':
-          body = raw_packet
-          # update sensor cal factor
-          factor = lib.BangInt([ body[0], body[1] ]) / 1000.0
-          record.update(factor=factor)
-        prefix.extend(record)
-      elif record[name] == 'SensorTimestamp' or record[name] == 'SensorCalFactor'\
-                      or record[name] == 'CalBGForGH':
+        if record['name'] == 'SensorCal':
+          record.update(raw=self.byte_to_str(raw_packet))
+          if int(raw_packet[0]) == 1:
+            record.update(waiting='waiting')
+          else:
+            record.update(waiting='meter_bg_now')
+        prefix_records.append(record)
+
+      elif record['name'] == 'SensorTimestamp' or record['name'] == 'SensorCalFactor':
         # these are sensor minute timestamped records thus create the record
         # and map prefixed elements based on the timedelta
+        record.update(raw=self.byte_to_str(raw_packet))
+        date, body = raw_packet[:4], raw_packet[4:]  
+        date.reverse()
+        date = parse_date(date)
+        record.update(date=date.isoformat())
+        prefix_records.reverse()
+        mapped_glucose_records = self.map_glucose(prefix_records, start=date, delta=self.delta_ago(reverse=True))
+#       mapped_glucose_records.reverse()
+        # Update sensor cal factor
+        if record['name'] == 'SensorCalFactor': 
+          factor = lib.BangInt([ body[0], body[1] ]) / 1000.0
+          record.update(factor=factor) 
+        records.append(mapped_glucose_records)
+        records.append(record)
+        prefix_records = []
 
-      elif record[name] == 'SensorStatus' or record[name] == 'DateTimeChange'\
-                      or record[name] == 'SensorSync' or record[name] == '10-Something':
+      elif record['name'] == 'SensorStatus' or record['name'] == 'DateTimeChange' \
+        or record['name'] == 'SensorSync' or record['name'] == '10-Something' \
+        or record['name'] == 'CalBGForGH' :
         # independent record => parse and add to records list
-
+        record.update(raw=self.byte_to_str(raw_packet))
+        if record['name'] == 'SensorStatus' or record['name'] == 'SensorSync'\
+        or record['name'] == 'CalBGForGH' :
+          date, body = raw_packet[:4], raw_packet[4:]
+          date.reverse()
+          date = parse_date(date)
+          record.update(date=date.isoformat())
+          record.update(body=self.byte_to_str(body))
+          # Update cal amount
+          if record['name'] == 'CalBGForGH':
+            amount = int(body[0])
+            if amount < 32:
+              amount = 0x100 + amount
+            record.update(body=self.byte_to_str(body))
+            record.update(amount=amount)
+        records.append(record)
       else:
         # could not decode
-
-
-
-
-      else:
-        prefix.extend(bytearray(B))
-      
-      else:
-        op = B[0]
-        # print "LOOKING AT OP", " {0:#04x}".format(op)
-        # print lib.hexdump(prefix + B)
-        raw = bytearray(self.stream.read(suggestion))
-        # print "date/body"
-        date, body = raw[:4], raw[4:]
-        # print lib.hexdump(date)
-        # print lib.hexdump(body)
-        date.reverse( )
-        date = parse_date(date)
-        if date is None:
-          print "COULD NOT DECODE", " {0:#04x}".format(op), ' @ byte {0}'.format(self.stream.tell( ))
-          print lib.hexdump(prefix)
-          print lib.hexdump(B)
-          print lib.hexdump(raw)
-          expected_date = raw[:4]
-          expected_date.reverse( )
-          print "expected a date", parse_date(expected_date, unmask=True, theory_1=True)
-          print lib.hexdump(glucose)
-          date = parse_date(expected_date, theory_1=True, strict=True)
-          print "ATTEMPTING", date
-
-        if op == 0x08 or op == 0x0f:
-#         glucose = self.collect_glucose( )
-          glucose = None
-#         cgm = glucose[:]
-#         cgm.reverse( )
-#         cgm = self.map_glucose(cgm, start=date, delta=self.delta_ago( ))
-#         cgm.reverse( )
-        # only map data that has come before
-        # take the timestamp and map data that comes after as CGM
-          prior = prefix[:]
-          prior.reverse()
-          records.append(self.to_dict(op, body, date, glucose, prefix))
-#          if op == 0x0f:
-          date = date + self.delta_ago(reverse=False)
-          prior = self.map_glucose(prior, start=date, delta=self.delta_ago(reverse=True))
-          prior.reverse( )
-          records.extend(prior)
-          prefix = bytearray()
-#          records.extend(cgm)
-        else:
-          records.append(self.to_dict(op, body, date, glucose, prefix))
-#        prefix = bytearray( )
-    records.reverse( )
+        records.append(record)
+      # End For  
+    records.reverse()
     self.records = records
-    return records
+    return self.records
+
+# old decoding
+#else:
+#        prefix.extend(bytearray(B))
+#      
+#      else:
+#        op = B[0]
+#        # print "LOOKING AT OP", " {0:#04x}".format(op)
+#        # print lib.hexdump(prefix + B)
+#        raw = bytearray(self.stream.read(suggestion))
+#        # print "date/body"
+#        date, body = raw[:4], raw[4:]
+#        # print lib.hexdump(date)
+#        # print lib.hexdump(body)
+#        date.reverse( )
+#        date = parse_date(date)
+#        if date is None:
+#          print "COULD NOT DECODE", " {0:#04x}".format(op), ' @ byte {0}'.format(self.stream.tell( ))
+#          print lib.hexdump(prefix)
+#          print lib.hexdump(B)
+#          print lib.hexdump(raw)
+#          expected_date = raw[:4]
+#          expected_date.reverse( )
+#          print "expected a date", parse_date(expected_date, unmask=True, theory_1=True)
+#          print lib.hexdump(glucose)
+#          date = parse_date(expected_date, theory_1=True, strict=True)
+#          print "ATTEMPTING", date
+
+#        if op == 0x08 or op == 0x0f:
+##         glucose = self.collect_glucose( )
+#          glucose = None
+##         cgm = glucose[:]
+##         cgm.reverse( )
+##         cgm = self.map_glucose(cgm, start=date, delta=self.delta_ago( ))
+##         cgm.reverse( )
+#        # only map data that has come before
+#        # take the timestamp and map data that comes after as CGM
+#          prior = prefix[:]
+#          prior.reverse()
+#          records.append(self.to_dict(op, body, date, glucose, prefix))
+##          if op == 0x0f:
+#          date = date + self.delta_ago(reverse=False)
+#          prior = self.map_glucose(prior, start=date, delta=self.delta_ago(reverse=True))
+#          prior.reverse( )
+#          records.extend(prior)
+#          prefix = bytearray()
+##          records.extend(cgm)
+#        else:
+#          records.append(self.to_dict(op, body, date, glucose, prefix))
+##        prefix = bytearray( )
+#    records.reverse( )
+#    self.records = records
+#    return records
+
+  def byte_to_str (self, byte_array):
+    # convert byte array to a string
+    hex_bytes = []
+    for i in range(0, len(byte_array)):
+      hex_bytes.append('{0:02x}'.format(byte_array[i]))
+    return '-'.join(hex_bytes)
 
   def map_glucose (self, values, start=None, delta=None):
-    cgms = [ ]
     last = start
     if delta is None:
-      delta = self.delta_ago( )
+      delta = self.delta_ago()
     for x in list(values):
-      i = len(cgms)
-      date = last
-      record = dict(date=date.isoformat( ), name='GlucoseSensorData', op=x, amount='??')
-      if x > 20:
-        x = int(x) * 2
-        record.update(amount=x)
-      if x == 02:
-        record = dict(date=date.isoformat( ), name='SensorWeakSignal', op=x, amount='none')
-      if x == 19:
-        record = dict(date=date.isoformat( ), name='Not Sure, cannot find in csv', op=x, amount='gap')
-      cgms.append(record)
-      if x != 19:
+      if x['name'] != '19-Something':
         last = last - delta
-    return cgms
+      x.update(date=last.isoformat())
+    return values
+          
+#    cgms = [ ]
+#    last = start
+#    if delta is None:
+#      delta = self.delta_ago( )
+#    for x in list(values):
+#      i = len(cgms)
+#      date = last
+#      record = dict(date=date.isoformat( ), name='GlucoseSensorData', op=x, amount='??')
+#      if x > 20:
+#        x = int(x) * 2
+#        record.update(amount=x)
+#      if x == 02:
+#        record = dict(date=date.isoformat( ), name='SensorWeakSignal', op=x, amount='none')
+#      if x == 19:
+#        record = dict(date=date.isoformat( ), name='Not Sure, cannot find in csv', op=x, amount='gap')
+#      cgms.append(record)
+#      if x != 19:
+#        last = last - delta
+#    return cgms
 
   def delta_ago (self, reverse=False, offset=1):
     delta = relativedelta(minutes=5*offset)
@@ -280,32 +337,32 @@ class PagedData (object):
       delta = relativedelta(minutes=-5*offset)
     return delta
 
-# to_dict should not be needed with changes made to suggest
-  def to_dict (self, op=None, body=None, date=None, glucose=None, prefix=None):
-    names = {
-      0x0e: 'CalBGForGH'
-    , 0x08: 'SensorTimestamp'
-    , 0x0d: 'SensorSync'
-    , 0x0b: 'SensorStatus'
-    , 0x0f: 'SensorCalFactor'
-    # 0x03 may be SensorCal packet: 0x00=waiting 0x01=waiting
-    }
-    name = names.get(op, 'ERROR')
-    record = dict(op=op, date=date.isoformat( ), name=name, prefix=list(prefix))
-#    record = dict(op=op, date=date.isoformat( ), cgm=list(glucose), name=name, prefix=list(prefix))
-    if name == 'ERROR':
-      record.update(name='ERROR_{0:#04x}'.format(op), prefix=list(body+glucose))
-    if name == 'SensorCalFactor':
-      factor = lib.BangInt([ body[0], body[1] ]) / 1000.0
-      record.update(factor=factor)
-
-    if name == 'CalBGForGH':
-      amount = int(body[0])
-      if amount < 32:
-        amount = 0x100 + amount
-      record.update(amount=amount)
-
-    return record
+## to_dict should not be needed with changes made to suggest
+#  def to_dict (self, op=None, body=None, date=None, glucose=None, prefix=None):
+#    names = {
+#      0x0e: 'CalBGForGH'
+#    , 0x08: 'SensorTimestamp'
+#    , 0x0d: 'SensorSync'
+#    , 0x0b: 'SensorStatus'
+#    , 0x0f: 'SensorCalFactor'
+#    # 0x03 may be SensorCal packet: 0x00=waiting 0x01=waiting
+#    }
+#    name = names.get(op, 'ERROR')
+#    record = dict(op=op, date=date.isoformat( ), name=name, prefix=list(prefix))
+##    record = dict(op=op, date=date.isoformat( ), cgm=list(glucose), name=name, prefix=list(prefix))
+#    if name == 'ERROR':
+#      record.update(name='ERROR_{0:#04x}'.format(op), prefix=list(body+glucose))
+#    if name == 'SensorCalFactor':
+#      factor = lib.BangInt([ body[0], body[1] ]) / 1000.0
+#      record.update(factor=factor)
+#
+#    if name == 'CalBGForGH':
+#      amount = int(body[0])
+#      if amount < 32:
+#        amount = 0x100 + amount
+#      record.update(amount=amount)
+#
+#    return record
 
 from dateutil.relativedelta import relativedelta
 
