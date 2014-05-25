@@ -140,7 +140,7 @@ class PagedData (object):
 #    
 #    }
 #    if op > 0 and op < 32:
-    if op > 0 and op < 40:
+    if op > 0 and op < 20:
       record = records.get(op, None)
       if record is None:
         return dict(name='Could Not Decode',packet_size=0,op=op)
