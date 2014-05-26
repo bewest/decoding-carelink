@@ -1,0 +1,44 @@
+---------- take 2 --------------
+4:49 - download
+4:50 - cal 260 -                04 0e 3a 32 50  0e
+4:50 - download
+4:51 - cal 260 - 83            04 0e 3a 33 50 0e
+     83 => 131 * 2 = 262 cgm reading
+4:51:55 - download
+4:53 - cal 260 -                04 0e 3a 35 50 0e
+4:53:23 - download
+
+
+---------- take 3 --------------
+5:03 - download
+5:04 - cal 250 - fa 0e 1a 04 51 0e
+5:04 - download
+5:05 - cal 250 - fa 0e 1a 05 51 0e 
+     fa => 250  - !!!!!!! looks like the first byte is the bg value
+		but probably has another bit somewhere too b/c 04 from take 2 is obviously not 260
+     87 => 135 * 2 = 270
+5:06 - download
+
+---------- take 4 --------------
+did a simple test with write history command to see if it would appear in the cgm history
+
+
+---------- take 5 --------------
+-- testing out the write history command
+11:03 - downloaded
+11:04 - write history
+11:04 - download
+11:05 - write history - didn't look quite right
+
+11:05 - download - didn't download Glucose - 
+     second download to get glucose - thus there will be 2 isig pages for 1 glucose
+     11:07 for second download
+
+11:07 - write - output looks good
+11:08 - download
+11:08 - write - output looks good
+11:09 - download
+
+11:05 - cgm reading 98 - so there will probably be an extra 0x31 in the data
+
+

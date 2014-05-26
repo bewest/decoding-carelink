@@ -1,7 +1,10 @@
 
-sudo ./bin/mm-send-comm.py  --init --port /dev/ttyUSB0  --serial 584923  --prefix  ReadCurPageNumber --prefix ReadCurGlucosePageNumber  sleep 0 | tee current-cgm-page.markdown
+#for ((i=0; i<=4; i++ ))
+#do
 
-sleep 5
-
-sudo ./bin/mm-send-comm.py --prefix-path logs/cgm-page-18- --serial 584923 --port /dev/ttyUSB0 tweak ReadSensorHistoryData --page 18 --save | tee analysis/send-page18-ReadSensorHistory.markdown
+dt=$(date +%Y%m%d_%H%M%S)
+sudo ./bin/mm-send-comm.py --prefix-path logs/$dt- --serial 584923 --port /dev/ttyUSB0 tweak ReadGlucoseHistory --page 17 --save | tee analysis/pg-17-$dt-ReadGlucoseHistory.markdown
+sudo ./bin/mm-send-comm.py --prefix-path logs/$dt- --serial 584923 --port /dev/ttyUSB0 tweak ReadISIGHistory --page 17 --save | tee analysis/pg-17-$dt-ReadISIGHistory.markdown
+#sleep 300
+#done
 

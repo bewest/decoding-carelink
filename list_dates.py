@@ -46,6 +46,7 @@ def opcode_read_ahead(opcode, fd=None):
     #0x1f: 22,
     #0x1f: 8,
   }
+  TABLE = { }
   return TABLE.get(opcode, 0)
   if TABLE.get(opcode) is not None:
     #print "special opcode %#04x, read:%s" % (opcode, TABLE[opcode])

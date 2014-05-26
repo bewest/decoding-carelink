@@ -1,0 +1,109 @@
+commit fb01f0070168e7ec252dd51807e961ccb3e92700
+Author: Edward Robinson <edward.r.robinson@gmail.com>
+Date:   Mon Apr 21 03:19:13 2014 +0000
+
+    download the current page and store it with a date
+
+diff --git a/current-cgm-page.markdown b/current-cgm-page.markdown
+deleted file mode 100644
+index 7e29d6e..0000000
+--- a/current-cgm-page.markdown
++++ /dev/null
+@@ -1,83 +0,0 @@
+-## do stuff with an insulin pump over RF
+-using ` Namespace(command='sleep', dryrun=False, init=True, no_postlude=False, no_prelude=False, no_rf_prelude=False, port='/dev/ttyUSB0', postfix=None, prefix=['ReadCurPageNumber', 'ReadCurGlucosePageNumber'], prefix_path='', saveall=False, serial='584923', timeout=0.0, verbose=None) `
+-```
+-```
+-```
+-```
+-```
+-```
+-```
+-```
+-```javascript
+-{'radio': {'errors.crc': 0,
+-           'errors.naks': 0,
+-<<<<<<< HEAD
+-           'errors.sequence': 0,
+-           'errors.timeouts': 0,
+-           'packets.received': 51L,
+-           'packets.transmit': 53L},
+- 'usb': {'errors.crc': 0,
+-         'errors.naks': 6,
+-         'errors.sequence': 0,
+-         'errors.timeouts': 0,
+-         'packets.received': 118L,
+-         'packets.transmit': 124L}}
+-=======
+-           'errors.sequence': 2,
+-           'errors.timeouts': 10,
+-           'packets.received': 777L,
+-           'packets.transmit': 829L},
+- 'usb': {'errors.crc': 0,
+-         'errors.naks': 3,
+-         'errors.sequence': 0,
+-         'errors.timeouts': 0,
+-         'packets.received': 1681L,
+-         'packets.transmit': 1684L}}
+->>>>>>> 6a884cff54ebd2eff5ea802055e7af0281b44421
+-```
+-```
+-PowerControl SERIAL 584923
+-```
+-### PUMP MODEL: `ReadPumpModel:size[64]:data:'722'`
+-###### sending `<class 'decocare.commands.ReadCurPageNumber'>`
+-response: ReadCurPageNumber:pages:18
+-#### decoded:
+-```python
+-18L
+-```
+-###### sending `<class 'decocare.commands.ReadCurGlucosePageNumber'>`
+-response: ReadCurGlucosePageNumber:size[64]:data:{'isig': 14, 'page': 13L, 'glucose': 14}
+-#### decoded:
+-```python
+-{'isig': 14, 'page': 13L, 'glucose': 14}
+-```
+-### end stats
+-```
+-```
+-```javascript
+-{'radio': {'errors.crc': 0,
+-           'errors.naks': 0,
+-<<<<<<< HEAD
+-           'errors.sequence': 0,
+-           'errors.timeouts': 0,
+-           'packets.received': 56L,
+-           'packets.transmit': 58L},
+- 'usb': {'errors.crc': 0,
+-         'errors.naks': 6,
+-         'errors.sequence': 0,
+-         'errors.timeouts': 0,
+-         'packets.received': 132L,
+-         'packets.transmit': 138L}}
+-=======
+-           'errors.sequence': 2,
+-           'errors.timeouts': 10,
+-           'packets.received': 782L,
+-           'packets.transmit': 834L},
+- 'usb': {'errors.crc': 0,
+-         'errors.naks': 3,
+-         'errors.sequence': 0,
+-         'errors.timeouts': 0,
+-         'packets.received': 1695L,
+-         'packets.transmit': 1698L}}
+->>>>>>> 6a884cff54ebd2eff5ea802055e7af0281b44421
+-```
+diff --git a/download-cgm-18.sh b/download-cgm-18.sh
+index 1d53a39..7fc0afb 100755
+--- a/download-cgm-18.sh
++++ b/download-cgm-18.sh
+@@ -1,7 +1,4 @@
+ 
+-sudo ./bin/mm-send-comm.py  --init --port /dev/ttyUSB0  --serial 584923  --prefix  ReadCurPageNumber --prefix ReadCurGlucosePageNumber  sleep 0 | tee current-cgm-page.markdown
+-
+-sleep 5
+-
+-sudo ./bin/mm-send-comm.py --prefix-path logs/cgm-page-18- --serial 584923 --port /dev/ttyUSB0 tweak ReadSensorHistoryData --page 18 --save | tee analysis/send-page18-ReadSensorHistory.markdown
++dt=$(date +%Y%m%d_%H%M%S)
++sudo ./bin/mm-send-comm.py --init --prefix-path logs/$dt- --serial 584923 --port /dev/ttyUSB0 tweak ReadGlucoseHistory --page 16 --save | tee analysis/pg-16-$dt-ReadGlucoseHistory.markdown
+ 
