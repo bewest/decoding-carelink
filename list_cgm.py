@@ -1,27 +1,25 @@
 import sys
 import argparse
-import io
 
+# TODO: should probably be able to remove this stuff
 from pprint import pprint, pformat
 from binascii import hexlify
 
+# TODO: all this stuff could be refactored into re-usable and tested
+# module.
+import io
 from datetime import datetime
+from dateutil.relativedelta import relativedelta
+
 from decocare import lib
 from decocare.records import times
 
-def get_opt_parser( ):
-  parser = argparse.ArgumentParser( )
-  parser.add_argument('infile', nargs="+",
-                      default=sys.stdin,
-                      type=argparse.FileType('r'),
-                      help="Find dates in this file.")
-
-  parser.add_argument('--out',
-                      default=sys.stdout,
-                      type=argparse.FileType('w'),
-                      help="Write records here.")
-  return parser
-
+###################
+#
+# Time parser
+# TODO: document
+# TODO: tests, ideally ones showing bits flip over
+###################
 
 def parse_minutes (one):
   minute = (one & 0b111111 )
@@ -32,9 +30,6 @@ def parse_hours (one):
 
 def parse_day (one):
   return one & 0x1F
-
-#def parse_months (one):
-#  return one >> 4
 
 def parse_months (first_byte, second_byte):
   first_two_bits  = first_byte  >> 6
@@ -54,7 +49,6 @@ def parse_date (data, unmask=False, strict=False, minute_specific=False):
   
   year    = times.parse_years(data[0])
   day     = parse_day(data[1])
-  # XXX: minutes is suspect, what to do when > 59?
   minutes = parse_minutes(data[2])
 
   hours   = parse_hours(data[3])
@@ -73,6 +67,9 @@ def parse_date (data, unmask=False, strict=False, minute_specific=False):
   return None
 
 class PagedData (object):
+  """
+    PagedData - context for parsing a page of cgm data.
+  """
 
   def __init__ (self, stream):
     raw = bytearray(stream.read(1024))
@@ -97,7 +94,10 @@ class PagedData (object):
      some info will be added later when the record is parsed:
        GlucoseSensorData, cal factor. amount, prefix, data
     """
-    
+    # TODO: would it be possible to turn these into classes which know hwo
+    # to decode time and describe themselves to PagedData?
+    # that way we can write tests for each type individually and tests for
+    # the thing as a whole easily.
     records = {
       0x01: dict(name='DataEnd',packet_size=0,date_type='none',op='0x01'),
       0x02: dict(name='SensorWeakSignal',packet_size=0,date_type='prevTimestamp',op='0x02'),
@@ -155,6 +155,7 @@ class PagedData (object):
         prefix_records.append(record)
 
       elif record['name'] == 'SensorTimestamp' or record['name'] == 'SensorCalFactor':
+        # TODO: maybe this is like a ResetGlucose base command
         # these are sensor minute timestamped records thus create the record
         # and map prefixed elements based on the timedelta
         record.update(raw=self.byte_to_str(raw_packet))
@@ -165,6 +166,7 @@ class PagedData (object):
         prefix_records.reverse()
         mapped_glucose_records = self.map_glucose(prefix_records, start=date, delta=self.delta_ago(reverse=True))
 #       mapped_glucose_records.reverse()
+        # And this ResetGlucose has a payload indicating calibration factor
         # Update sensor cal factor
         if record['name'] == 'SensorCalFactor': 
           factor = lib.BangInt([ body[0], body[1] ]) / 1000.0
@@ -225,7 +227,20 @@ class PagedData (object):
       delta = relativedelta(minutes=-5*offset)
     return delta
 
-from dateutil.relativedelta import relativedelta
+# this stuff will stay
+def get_opt_parser( ):
+  parser = argparse.ArgumentParser( )
+  parser.add_argument('infile', nargs="+",
+                      default=sys.stdin,
+                      type=argparse.FileType('r'),
+                      help="Find dates in this file.")
+
+  parser.add_argument('--out',
+                      default=sys.stdout,
+                      type=argparse.FileType('w'),
+                      help="Write records here.")
+  return parser
+
 
 import json
 class ListCGM (object):
