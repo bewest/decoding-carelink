@@ -82,6 +82,13 @@ class MResultTotals(InvalidRecord):
 class ChangeBasalProfile(KnownRecord):
   opcode = 0x08
   body_length = 44
+  def __init__(self, head, larger=False):
+    super(type(self), self).__init__(head, larger)
+    if larger:
+      self.body_length = 145
+class DanaScott0x09 (KnownRecord):
+  opcode = 0x09
+  body_length = 145
 class ClearAlarm(KnownRecord):
   opcode = 0x0C
 class SelectBasalProfile(KnownRecord):
@@ -153,6 +160,8 @@ _confirmed = [ Bolus, Prime, NoDelivery, MResultTotals, ChangeBasalProfile,
                PumpResume, CalBGForPH, Rewind, EnableDisableRemote,
                ChangeRemoteID, TempBasal, LowReservoir, BolusWizard,
                UnabsorbedInsulinBolus, ChangeUtility, ChangeTimeDisplay ]
+
+_confirmed.append(DanaScott0x09)
 
 class Ian69(KnownRecord):
   opcode = 0x69
