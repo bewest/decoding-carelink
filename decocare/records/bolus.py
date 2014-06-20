@@ -35,6 +35,7 @@ class Bolus(KnownRecord):
       dose = { 'amount': self.head[4]/40.0,
                'programmed': self.head[2]/40.0,
                'type': '??',
+               'unabsorbed': self.head[6] / 40.0,
                'dual_component': '??',
              }
     return dose

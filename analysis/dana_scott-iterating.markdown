@@ -305,7 +305,11 @@ reading more to debug 0x00
 #### RECORD 7 Bolus 2014-06-15T10:07:36 head[8], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 0.5, 'dual_component': '??', 'programmed': 0.5, 'type': '??'}
+{'amount': 0.5,
+ 'dual_component': '??',
+ 'programmed': 0.5,
+ 'type': '??',
+ 'unabsorbed': 0.0}
 ```
     op hex (8)
     0000   0x01 0x00 0x14 0x00 0x14 0x00 0x00 0x00    ........
@@ -318,7 +322,11 @@ reading more to debug 0x00
 #### RECORD 8 Bolus 2014-06-15T10:15:53 head[8], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 0.5, 'dual_component': '??', 'programmed': 0.5, 'type': '??'}
+{'amount': 0.5,
+ 'dual_component': '??',
+ 'programmed': 0.5,
+ 'type': '??',
+ 'unabsorbed': 0.5}
 ```
     op hex (8)
     0000   0x01 0x00 0x14 0x00 0x14 0x00 0x14 0x00    ........
@@ -348,7 +356,11 @@ reading more to debug 0x00
 #### RECORD 10 Bolus 2014-06-15T10:40:38 head[8], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 3.0, 'dual_component': '??', 'programmed': 3.0, 'type': '??'}
+{'amount': 3.0,
+ 'dual_component': '??',
+ 'programmed': 3.0,
+ 'type': '??',
+ 'unabsorbed': 1.0}
 ```
     op hex (8)
     0000   0x01 0x00 0x78 0x00 0x78 0x00 0x28 0x00    ..x.x.(.
@@ -361,7 +373,11 @@ reading more to debug 0x00
 #### RECORD 11 Bolus 2014-06-15T11:15:12 head[8], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 0.5, 'dual_component': '??', 'programmed': 0.5, 'type': '??'}
+{'amount': 0.5,
+ 'dual_component': '??',
+ 'programmed': 0.5,
+ 'type': '??',
+ 'unabsorbed': 3.6}
 ```
     op hex (8)
     0000   0x01 0x00 0x14 0x00 0x14 0x00 0x90 0x00    ........
@@ -374,7 +390,11 @@ reading more to debug 0x00
 #### RECORD 12 Bolus 2014-06-15T11:26:43 head[8], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 0.5, 'dual_component': '??', 'programmed': 0.5, 'type': '??'}
+{'amount': 0.5,
+ 'dual_component': '??',
+ 'programmed': 0.5,
+ 'type': '??',
+ 'unabsorbed': 3.9}
 ```
     op hex (8)
     0000   0x01 0x00 0x14 0x00 0x14 0x00 0x9c 0x00    ........
@@ -387,7 +407,11 @@ reading more to debug 0x00
 #### RECORD 13 Bolus 2014-06-15T11:27:31 head[8], body[0] op[0x01]
 ###### DECODED
 ```python
-{'amount': 0.5, 'dual_component': '??', 'programmed': 0.5, 'type': '??'}
+{'amount': 0.5,
+ 'dual_component': '??',
+ 'programmed': 0.5,
+ 'type': '??',
+ 'unabsorbed': 4.4}
 ```
     op hex (8)
     0000   0x01 0x00 0x14 0x00 0x14 0x00 0xb0 0x00    ........
