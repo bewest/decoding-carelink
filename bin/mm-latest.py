@@ -97,6 +97,7 @@ class LatestActivity (cli.CommandApp):
       larger = int(self.pump.model.getData( )[1:]) > 22
     stream = io.BytesIO(page)
     records = [ ]
+    print "SINCE", self.since.isoformat( )
     for B in iter(lambda: bytearray(stream.read(2)), bytearray("")):
       if B == bytearray( [ 0x00, 0x00 ] ):
         break
@@ -126,7 +127,7 @@ class LatestActivity (cli.CommandApp):
                  _type=str(record.__class__.__name__),
                  _description=str(record))
       data = record.decode( )
-      if data:
+      if data is not None:
         rec.update(data)
         results.append(rec)
     print "```json"
