@@ -68,8 +68,8 @@ class MResultTotals(InvalidRecord):
       print "ERROR", e, mid, lib.hexdump(self.date)
       pass
     return mid
-      
-    
+
+
   def date_str(self):
     result = 'unknown'
     if self.datetime is not None:
@@ -86,9 +86,38 @@ class ChangeBasalProfile(KnownRecord):
     super(type(self), self).__init__(head, larger)
     if larger:
       self.body_length = 145
+  def decode (self):
+    self.parse_time( )
+    rates = [ ]
+    i = 0
+    for x in range(47):
+      start = x * 3
+      end = start + 3
+      (offset, rate, q) = self.body[start:end]
+      if [offset, rate, q] == [ 0x00, 0x00, 0x00]:
+        break
+      rates.append(describe_rate(offset, rate, q))
+    return rates
+
+def describe_rate (offset, rate, q):
+  return (dict(offset=(30*1000*60)*offset, rate=rate*0.025))
+
+
 class DanaScott0x09 (KnownRecord):
   opcode = 0x09
   body_length = 145
+  def decode (self):
+    self.parse_time( )
+    rates = [ ]
+    i = 0
+    for x in range(47):
+      start = x * 3
+      end = start + 3
+      (offset, rate, q) = self.body[start:end]
+      if [offset, rate, q] == [ 0x00, 0x00, 0x00]:
+        break
+      rates.append(describe_rate(offset, rate, q))
+    return rates
 class ClearAlarm(KnownRecord):
   opcode = 0x0C
 class SelectBasalProfile(KnownRecord):
@@ -197,6 +226,9 @@ _confirmed.append(IanA8)
 class BasalProfileStart(KnownRecord):
   opcode = 0x7b
   body_length = 3
+  def decode (self):
+    self.parse_time( )
+    return describe_rate(*self.body)
 _confirmed.append(BasalProfileStart)
 
 class old6c(InvalidRecord):

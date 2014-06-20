@@ -21,6 +21,7 @@ class Bolus(KnownRecord):
   head_length = 4
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
+    self.larger = larger
     if larger:
       self.head_length = 8
   def decode(self):
@@ -30,6 +31,12 @@ class Bolus(KnownRecord):
              'type': '??',
              'dual_component': '??',
            }
+    if self.larger:
+      dose = { 'amount': self.head[4]/40.0,
+               'programmed': self.head[2]/40.0,
+               'type': '??',
+               'dual_component': '??',
+             }
     return dose
 
 class BolusWizard(KnownRecord):
