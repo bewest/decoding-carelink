@@ -848,6 +848,7 @@ class Stick(object):
     """
     Open and get signal strength so everything is ready to go.
     """
+    self.link.baudrate = 9600
     self.timer = lib.Timer( )
     for attempt in xrange( 3 ):
       try:

@@ -114,7 +114,7 @@ class CommandApp(object):
     print "```"
     if args.port == 'scan' or args.port == "":
       args.port = scan.scan( )
-    uart = stick.Stick(link.Link(args.port, timeout=.400))
+    uart = stick.Stick(link.Link(args.port))
     print "```"
     print "```"
     uart.open( )

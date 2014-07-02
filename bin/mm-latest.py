@@ -112,7 +112,7 @@ class LatestActivity (cli.CommandApp):
           self.records.append(record)
     return records
 
-  def download_history (self):
+  def download_history (self, args):
     i = 0
     print "find records since", self.since.isoformat( )
     self.enough_history = False
@@ -147,7 +147,7 @@ class LatestActivity (cli.CommandApp):
       self.report_basal( )
     if args.reservoir:
       self.report_reservoir( )
-    self.download_history( )
+    self.download_history(args)
 
 if __name__ == '__main__':
   app = LatestActivity( )
