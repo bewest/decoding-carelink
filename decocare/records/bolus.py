@@ -26,8 +26,9 @@ class Bolus(KnownRecord):
       self.head_length = 8
   def decode(self):
     self.parse_time( )
-    dose = { 'amount': self.head[1]/10.0,
-             'programmed': self.head[2]/10.0,
+    dose = {
+             'amount': self.head[2]/10.0,
+             'programmed': self.head[1]/10.0,
              'type': '??',
              'dual_component': '??',
            }
