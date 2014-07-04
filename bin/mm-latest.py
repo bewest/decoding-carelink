@@ -3,6 +3,7 @@
 from decocare import commands
 import io
 import json
+import argparse
 
 from datetime import datetime
 from dateutil import relativedelta
@@ -47,6 +48,12 @@ class LatestActivity (cli.CommandApp):
             action="store_false",
             default=True,
             help="Also report current suspend/bolus status."
+          )
+    parser.add_argument('--parser-out',
+            dest="parsed_data",
+            default='-',
+            type=argparse.FileType('w'),
+            help="Put history json in this file"
           )
     parser.add_argument('minutes',
             type=int,
@@ -131,7 +138,8 @@ class LatestActivity (cli.CommandApp):
         rec.update(data)
         results.append(rec)
     print "```json"
-    print json.dumps(results, indent=2)
+    args.parsed_data.write(json.dumps(results, indent=2))
+    print ''
     print "```"
 
   def main (self, args):
