@@ -113,7 +113,7 @@ class BolusWizard(KnownRecord):
              }
 
     if self.larger:
-      correction = ( twos_comp( self.body[7], 8 ) ) / 40.0
+      correction = ( twos_comp( self.body[6], 8 ) ) / 40.0
                    # + twos_comp( self.body[9] & 0x0f, 8 ) ) / 40.0
       wizard = { 'bg': bg, 'carb_input': carb_input,
                  'carb_ratio': int(self.body[14])/ 10.0,
