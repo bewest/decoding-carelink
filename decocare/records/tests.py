@@ -460,14 +460,14 @@ def _test_bolus( ):
   """
   >>> rec = Bolus( _bolus[0][:2] )
   >>> print pformat(rec.parse( _bolus[0] ))
-  {'amount': 2.6, 'dual_component': '??', 'programmed': 2.6, 'type': '??'}
+  {'amount': 2.6, 'duration': 0, 'programmed': 2.6, 'type': 'normal'}
 
   >>> print str(rec)
   Bolus 2013-01-19T21:50:15 head[4], body[0] op[0x01]
 
   >>> rec = Bolus( _bolus[1][:2] )
   >>> print pformat(rec.parse( _bolus[1] ))
-  {'amount': 1.7, 'dual_component': '??', 'programmed': 1.7, 'type': '??'}
+  {'amount': 1.7, 'duration': 0, 'programmed': 1.7, 'type': 'normal'}
   >>> print str(rec)
   Bolus 2013-01-15T15:57:16 head[4], body[0] op[0x01]
 
