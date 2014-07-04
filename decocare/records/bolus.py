@@ -114,7 +114,6 @@ class BolusWizard(KnownRecord):
 
     if self.larger:
       correction = ( twos_comp( self.body[6], 8 ) ) / 40.0
-                   # + twos_comp( self.body[9] & 0x0f, 8 ) ) / 40.0
       wizard = { 'bg': bg, 'carb_input': carb_input,
                  'carb_ratio': int(self.body[14])/ 10.0,
                  'sensitivity': int(self.body[4]),
@@ -127,7 +126,7 @@ class BolusWizard(KnownRecord):
 
                  'food_estimate': int(self.body[8])/40.0,
                  'unabsorbed_insulin_total': int(self.body[11])/40.0,
-                 'unknown_bytes': map(int, list(self.body)),
+                 # 'unknown_bytes': map(int, list(self.body)),
                }
 
     return wizard
