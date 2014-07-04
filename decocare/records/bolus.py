@@ -29,15 +29,16 @@ class Bolus(KnownRecord):
     dose = {
              'amount': self.head[2]/10.0,
              'programmed': self.head[1]/10.0,
-             'type': '??',
-             'dual_component': '??',
+             'duration': self.head[3] * 30,
+             'type': self.head[3] > 0 and 'square' or 'normal'
            }
     if self.larger:
+      duration = self.head[7] * 30
       dose = { 'amount': self.head[4]/40.0,
                'programmed': self.head[2]/40.0,
-               'type': '??',
                'unabsorbed': self.head[6] / 40.0,
-               'dual_component': '??',
+               'duration': duration,
+               'type': duration > 0 and 'square' or 'normal',
              }
     return dose
 
@@ -82,6 +83,7 @@ class BolusWizard(KnownRecord):
   body_length = 13
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
+    self.larger = larger
     if larger:
       self.body_length = 15
   def decode(self):
@@ -109,6 +111,30 @@ class BolusWizard(KnownRecord):
                # 'unabsorbed_insulin_total': int(self.body[9])/10.0,
                # 'food_estimate': int(self.body[0]),
              }
+
+    if self.larger:
+      correction = ( twos_comp( self.body[8], 8 )
+                   + twos_comp( self.body[5] & 0x0f, 8 ) ) / 10.0
+      wizard = { 'bg': bg, 'carb_input': carb_input,
+                 'carb_ratio': int(self.body[2]),
+                 'sensitivity': int(self.body[4]),
+                 'bg_target_low': int(self.body[14]),
+                 'bg_target_high': int(self.body[3]),
+                 'food_estimate': int(self.body[6])/40.0,
+                 'bolus_estimate': int(self.body[13])/40.0,
+                 'unabsorbed_insulin_total': int(self.body[9])/40.0,
+                 'unabsorbed_insulin_count': '??',
+                 # 5, 7
+                 'correction_estimate': correction,
+                 '_byte[5]': self.body[5],
+                 '_byte[7]': int(self.body[7]), #
+                 'unknown_byte[8]': self.body[8],
+                 'unknown_byte[10]': self.body[10],
+                 # '??': '??',
+                 # 'unabsorbed_insulin_total': int(self.body[9])/10.0,
+                 # 'food_estimate': int(self.body[0]),
+               }
+
     return wizard
 
 def twos_comp(val, bits):
