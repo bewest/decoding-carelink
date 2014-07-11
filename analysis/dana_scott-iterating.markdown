@@ -306,9 +306,9 @@ reading more to debug 0x00
 ###### DECODED
 ```python
 {'amount': 0.5,
- 'dual_component': '??',
+ 'duration': 0,
  'programmed': 0.5,
- 'type': '??',
+ 'type': 'normal',
  'unabsorbed': 0.0}
 ```
     op hex (8)
@@ -323,9 +323,9 @@ reading more to debug 0x00
 ###### DECODED
 ```python
 {'amount': 0.5,
- 'dual_component': '??',
+ 'duration': 0,
  'programmed': 0.5,
- 'type': '??',
+ 'type': 'normal',
  'unabsorbed': 0.5}
 ```
     op hex (8)
@@ -357,9 +357,9 @@ reading more to debug 0x00
 ###### DECODED
 ```python
 {'amount': 3.0,
- 'dual_component': '??',
+ 'duration': 0,
  'programmed': 3.0,
- 'type': '??',
+ 'type': 'normal',
  'unabsorbed': 1.0}
 ```
     op hex (8)
@@ -374,9 +374,9 @@ reading more to debug 0x00
 ###### DECODED
 ```python
 {'amount': 0.5,
- 'dual_component': '??',
+ 'duration': 0,
  'programmed': 0.5,
- 'type': '??',
+ 'type': 'normal',
  'unabsorbed': 3.6}
 ```
     op hex (8)
@@ -391,9 +391,9 @@ reading more to debug 0x00
 ###### DECODED
 ```python
 {'amount': 0.5,
- 'dual_component': '??',
+ 'duration': 0,
  'programmed': 0.5,
- 'type': '??',
+ 'type': 'normal',
  'unabsorbed': 3.9}
 ```
     op hex (8)
@@ -408,9 +408,9 @@ reading more to debug 0x00
 ###### DECODED
 ```python
 {'amount': 0.5,
- 'dual_component': '??',
+ 'duration': 0,
  'programmed': 0.5,
- 'type': '??',
+ 'type': 'normal',
  'unabsorbed': 4.4}
 ```
     op hex (8)
