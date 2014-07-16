@@ -105,9 +105,11 @@ def main( ):
       if getattr(record, 'pformat', None):
         print record.pformat(prefix)
       else:
-        print json.dumps(record, indent=2)
+        json.dumps(record, indent=2)
       i += 1
     print "`end %s: %s records`" % (stream.name, len(records))
+    if opts.collate:
+      opts.out.write(json.dumps(records, indent=2))
     stream.close( )
 
 if __name__ == '__main__':
