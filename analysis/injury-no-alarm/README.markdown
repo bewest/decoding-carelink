@@ -11,8 +11,8 @@ it out.
 ![kinked canula profile](http://i.imgur.com/gvICsXM.png)
 ![kinked canula birds eye](http://i.imgur.com/lk0oBcc.png)
 
-The insulin is not the problem because I dosed 6 units and immediately observed
-the glucose levels dropping.
+The insulin is not the problem because I dosed 6 units via syringe and
+immediately observed the glucose levels dropping.
 
 I wonder if Medtronic can explain under what circumstances the NoDelivery alarm
 is designed to work.
