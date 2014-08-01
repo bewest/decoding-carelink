@@ -7,10 +7,11 @@ from pprint import pprint, pformat
 from binascii import hexlify
 # from datetime import datetime
 # from scapy.all import *
+import json
 
 from decocare import lib, history
 
-from decocare.history import parse_record
+from decocare.history import parse_record, HistoryPage
 
 def get_opt_parser( ):
   parser = argparse.ArgumentParser( )
@@ -18,6 +19,11 @@ def get_opt_parser( ):
                       default=sys.stdin,
                       type=argparse.FileType('r'),
                       help="Find dates in this file.")
+
+  parser.add_argument('--collate',
+                      dest='collate',
+                      default=False,
+                      action='store_true')
 
   parser.add_argument('--larger',
                       dest='larger', action='store_true')
@@ -86,14 +92,24 @@ def main( ):
   wrapper = textwrap.TextWrapper(**tw_opts)
   for stream in opts.infile:
     print "## START %s" % (stream.name)
-    records = find_records(stream, opts)
+    records = [ ]
+    if opts.collate:
+      page = HistoryPage(bytearray(stream.read( )))
+      records.extend(page.decode( ))
+    else:
+      records = find_records(stream, opts)
     i = 0
     for record in records:
 
       prefix = '#### RECORD {} {}'.format(i, str(record))
-      print record.pformat(prefix)
+      if getattr(record, 'pformat', None):
+        print record.pformat(prefix)
+      else:
+        json.dumps(record, indent=2)
       i += 1
     print "`end %s: %s records`" % (stream.name, len(records))
+    if opts.collate:
+      opts.out.write(json.dumps(records, indent=2))
     stream.close( )
 
 if __name__ == '__main__':

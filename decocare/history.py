@@ -4,7 +4,7 @@ This module provides some basic helper/formatting utilities,
 specifically targeted at decoding ReadHistoryData data.
 
 """
-import sys
+import io
 from binascii import hexlify
 
 import lib
@@ -68,8 +68,8 @@ class MResultTotals(InvalidRecord):
       print "ERROR", e, mid, lib.hexdump(self.date)
       pass
     return mid
-      
-    
+
+
   def date_str(self):
     result = 'unknown'
     if self.datetime is not None:
@@ -82,6 +82,42 @@ class MResultTotals(InvalidRecord):
 class ChangeBasalProfile(KnownRecord):
   opcode = 0x08
   body_length = 44
+  def __init__(self, head, larger=False):
+    super(type(self), self).__init__(head, larger)
+    if larger:
+      self.body_length = 145
+  def decode (self):
+    self.parse_time( )
+    rates = [ ]
+    i = 0
+    for x in range(47):
+      start = x * 3
+      end = start + 3
+      (offset, rate, q) = self.body[start:end]
+      if [offset, rate, q] == [ 0x00, 0x00, 0x00]:
+        break
+      rates.append(describe_rate(offset, rate, q))
+    return rates
+
+def describe_rate (offset, rate, q):
+  return (dict(offset=(30*1000*60)*offset, rate=rate*0.025))
+
+
+class DanaScott0x09 (KnownRecord):
+  opcode = 0x09
+  body_length = 145
+  def decode (self):
+    self.parse_time( )
+    rates = [ ]
+    i = 0
+    for x in range(47):
+      start = x * 3
+      end = start + 3
+      (offset, rate, q) = self.body[start:end]
+      if [offset, rate, q] == [ 0x00, 0x00, 0x00]:
+        break
+      rates.append(describe_rate(offset, rate, q))
+    return rates
 class ClearAlarm(KnownRecord):
   opcode = 0x0C
 class SelectBasalProfile(KnownRecord):
@@ -154,6 +190,8 @@ _confirmed = [ Bolus, Prime, NoDelivery, MResultTotals, ChangeBasalProfile,
                ChangeRemoteID, TempBasal, LowReservoir, BolusWizard,
                UnabsorbedInsulinBolus, ChangeUtility, ChangeTimeDisplay ]
 
+_confirmed.append(DanaScott0x09)
+
 class Ian69(KnownRecord):
   opcode = 0x69
   body_length = 2
@@ -188,6 +226,9 @@ _confirmed.append(IanA8)
 class BasalProfileStart(KnownRecord):
   opcode = 0x7b
   body_length = 3
+  def decode (self):
+    self.parse_time( )
+    return describe_rate(*self.body)
 _confirmed.append(BasalProfileStart)
 
 class old6c(InvalidRecord):
@@ -316,7 +357,63 @@ def describe( ):
     out.append(_known[k].describe( ))
   return out
 
-    
+class PagedData (object):
+  """
+    PagedData - context for parsing a page of cgm data.
+  """
+
+  def __init__ (self, raw):
+    data, crc = raw[0:1022], raw[1022:]
+    computed = lib.CRC16CCITT.compute(bytearray(data))
+    if lib.BangInt(crc) != computed:
+      assert lib.BangInt(crc) == computed, "CRC does not match page data"
+
+    self.raw = raw
+    self.clean(data)
+
+  def clean (self, data):
+    data.reverse( )
+    self.data = self.eat_nulls(data)
+    self.stream = io.BufferedReader(io.BytesIO(self.data))
+
+  def eat_nulls (self, data):
+    i = 0
+    while data[i] == 0x00:
+      i = i+1
+    return data[i:]
+
+class HistoryPage (PagedData):
+  def clean (self, data):
+    data.reverse( )
+    self.data = self.eat_nulls(data)
+    self.data.reverse( )
+    self.stream = io.BufferedReader(io.BytesIO(self.data))
+  def decode (self, larger=False):
+    records = [ ]
+    skipped = [ ]
+    for B in iter(lambda: bytearray(self.stream.read(2)), bytearray("")):
+      if B == bytearray( [ 0x00, 0x00 ] ):
+        break
+      record = parse_record(self.stream, B, larger=larger )
+      if record.datetime:
+        rec = dict(timestamp=record.datetime.isoformat( ),
+                   _type=str(record.__class__.__name__),
+                   _description=str(record))
+        data = record.decode( )
+        if data is not None:
+          rec.update(data)
+          if skipped:
+            rec.update(appended=skipped)
+            skipped = [ ]
+          records.append(rec)
+      else:
+        rec = dict(_type=str(record.__class__.__name__),
+                   _description=str(record))
+        data = record.decode( )
+        if data is not None:
+          rec.update(data=data)
+        skipped.append(rec)
+    return records
 
 if __name__ == '__main__':
   import doctest

@@ -12,7 +12,7 @@ class Bolus(KnownRecord):
   Bolus 2012-12-18T15:05:28 head[4], body[0] op[0x01]
 
   >>> print pformat(decoded)
-  {'amount': 5.6, 'dual_component': '??', 'programmed': 5.6, 'type': '??'}
+  {'amount': 5.6, 'duration': 0, 'programmed': 5.6, 'type': 'normal'}
 
   """
   _test_1 = bytearray([ 0x01, 0x38, 0x38, 0x00,
@@ -21,15 +21,25 @@ class Bolus(KnownRecord):
   head_length = 4
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
+    self.larger = larger
     if larger:
       self.head_length = 8
   def decode(self):
     self.parse_time( )
-    dose = { 'amount': self.head[1]/10.0,
-             'programmed': self.head[2]/10.0,
-             'type': '??',
-             'dual_component': '??',
+    dose = {
+             'amount': self.head[2]/10.0,
+             'programmed': self.head[1]/10.0,
+             'duration': self.head[3] * 30,
+             'type': self.head[3] > 0 and 'square' or 'normal'
            }
+    if self.larger:
+      duration = self.head[7] * 30
+      dose = { 'amount': self.head[4]/40.0,
+               'programmed': self.head[2]/40.0,
+               'unabsorbed': self.head[6] / 40.0,
+               'duration': duration,
+               'type': duration > 0 and 'square' or 'normal',
+             }
     return dose
 
 class BolusWizard(KnownRecord):
@@ -73,6 +83,7 @@ class BolusWizard(KnownRecord):
   body_length = 13
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
+    self.larger = larger
     if larger:
       self.body_length = 15
   def decode(self):
@@ -100,6 +111,24 @@ class BolusWizard(KnownRecord):
                # 'unabsorbed_insulin_total': int(self.body[9])/10.0,
                # 'food_estimate': int(self.body[0]),
              }
+
+    if self.larger:
+      correction = ( twos_comp( self.body[6], 8 ) ) / 40.0
+      wizard = { 'bg': bg, 'carb_input': carb_input,
+                 'carb_ratio': int(self.body[14])/ 10.0,
+                 'sensitivity': int(self.body[4]),
+                 'bg_target_low': int(self.body[5]),
+                 'bg_target_high': int(self.body[3]),
+                 'bolus_estimate': int(self.body[13])/40.0,
+
+                 # 'correction_estimate': int(self.body[6])/40.0,
+                 'correction_estimate': correction,
+
+                 'food_estimate': int(self.body[8])/40.0,
+                 'unabsorbed_insulin_total': int(self.body[11])/40.0,
+                 # 'unknown_bytes': map(int, list(self.body)),
+               }
+
     return wizard
 
 def twos_comp(val, bits):

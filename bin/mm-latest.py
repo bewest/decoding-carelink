@@ -3,6 +3,7 @@
 from decocare import commands
 import io
 import json
+import argparse
 
 from datetime import datetime
 from dateutil import relativedelta
@@ -47,6 +48,12 @@ class LatestActivity (cli.CommandApp):
             action="store_false",
             default=True,
             help="Also report current suspend/bolus status."
+          )
+    parser.add_argument('--parser-out',
+            dest="parsed_data",
+            default='-',
+            type=argparse.FileType('w'),
+            help="Put history json in this file"
           )
     parser.add_argument('minutes',
             type=int,
@@ -97,6 +104,7 @@ class LatestActivity (cli.CommandApp):
       larger = int(self.pump.model.getData( )[1:]) > 22
     stream = io.BytesIO(page)
     records = [ ]
+    print "SINCE", self.since.isoformat( )
     for B in iter(lambda: bytearray(stream.read(2)), bytearray("")):
       if B == bytearray( [ 0x00, 0x00 ] ):
         break
@@ -111,7 +119,7 @@ class LatestActivity (cli.CommandApp):
           self.records.append(record)
     return records
 
-  def download_history (self):
+  def download_history (self, args):
     i = 0
     print "find records since", self.since.isoformat( )
     self.enough_history = False
@@ -126,11 +134,12 @@ class LatestActivity (cli.CommandApp):
                  _type=str(record.__class__.__name__),
                  _description=str(record))
       data = record.decode( )
-      if data:
+      if data is not None:
         rec.update(data)
         results.append(rec)
     print "```json"
-    print json.dumps(results, indent=2)
+    args.parsed_data.write(json.dumps(results, indent=2))
+    print ''
     print "```"
 
   def main (self, args):
@@ -146,7 +155,7 @@ class LatestActivity (cli.CommandApp):
       self.report_basal( )
     if args.reservoir:
       self.report_reservoir( )
-    self.download_history( )
+    self.download_history(args)
 
 if __name__ == '__main__':
   app = LatestActivity( )
