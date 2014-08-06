@@ -376,6 +376,17 @@ class Read256KMem (PumpCommand):
   descr = "..."
   params = [ ]
 
+class Bolus (PumpCommand):
+  """
+  Bolus some insulin.
+
+  XXX: Be careful please.
+  Best trying this not connected to the pump until you trust it.
+  """
+  code = 66
+  descr = "Bolus"
+  params = [ ]
+
 
 class ReadErrorStatus(PumpCommand):
   """
@@ -1360,6 +1371,7 @@ __all__ = [
   'ReadSettings', 'ReadTotalsToday', 'SetSuspend',
   'PushEASY', 'PushUP', 'PushDOWN', 'PushACT', 'PushESC',
   'TempBasal', 'ManualCommand', 'ReadCurGlucosePageNumber',
+  'Bolus',
   'ReadErrorStatus508',
   'ReadBolusHistory',
   'ReadDailyTotals',
