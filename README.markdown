@@ -38,6 +38,8 @@ your behalf:
   `./bin/mm-press-key.py`
 * Investigate how any command works, make new commands, download any command
   `./bin/mm-send-comm.py`
+* Bolus
+  `./bin/mm-bolus.py`
 
 ## Install first run
 
@@ -215,6 +217,40 @@ over the internet, allowing anyone to independently audit their
 therapy, and then send the data to their preferred auditing software.
 
 ## Tools
+### `./bin/mm-bolus.py`
+```
+usage: mm-bolus.py [-h] [--serial SERIAL] [--port PORT] [--no-op]
+                   [--skip-prelude] [--no-rf-prelude] [--skip-postlude] [-v]
+                   [--init] (--515 | --strokes STROKES_PER_UNIT)
+                   [--units UNITS]
+
+mm-bolus.py - Send bolus command to a pump.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --serial SERIAL       serial number of pump [default: 208850]
+  --port PORT           Path to device [default: ]
+  --no-op               Dry run, don't do main function
+  --skip-prelude        Don't do the normal prelude.
+  --no-rf-prelude       Do the prelude, but don't query the pump.
+  --skip-postlude       Don't do the normal postlude.
+  -v, --verbose         Verbosity
+  --init                Send power ctrl to initialize RF session.
+  --515
+  --strokes STROKES_PER_UNIT
+  --units UNITS         Amount of insulin to bolus. [default: None)]
+
+XXX: Be careful please. Units might be wrong. Keep disconnected from pump
+until you trust it by observing the right amount first.
+
+$ ./bin/mm-bolus.py
+usage: mm-bolus.py [-h] [--serial SERIAL] [--port PORT] [--no-op]
+                   [--skip-prelude] [--no-rf-prelude] [--skip-postlude] [-v]
+                   [--init] (--515 | --strokes STROKES_PER_UNIT)
+                   [--units UNITS]
+mm-bolus.py: error: one of the arguments --515 --strokes is required
+```
+
 ### `./bin/mm-send-comm.py`
 
 ##### `mm-send-comm.py -h`
