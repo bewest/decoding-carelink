@@ -8,7 +8,7 @@ install:
 	udevadm control --reload-rules
 
 docs:
-	(cd docs; make)
+	(cd doc; make)
 travis: test
 	# do the travis dance
 
