@@ -49,7 +49,7 @@ class BolusApp (cli.CommandApp):
 
 def fmt_params (args):
   strokes = int(float(args.units) * args.strokes_per_unit)
-  if (args.store_const > 10):
+  if (args.strokes_per_unit > 10):
     return [lib.HighByte(strokes), lib.LowByte(strokes)]
   return [strokes]
 
