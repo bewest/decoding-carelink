@@ -219,16 +219,20 @@ therapy, and then send the data to their preferred auditing software.
 ## Tools
 ### `./bin/mm-bolus.py`
 ```
++ ./bin/mm-bolus.py --help
 usage: mm-bolus.py [-h] [--serial SERIAL] [--port PORT] [--no-op]
                    [--skip-prelude] [--no-rf-prelude] [--skip-postlude] [-v]
                    [--init] (--515 | --strokes STROKES_PER_UNIT)
-                   [--units UNITS]
+                   units
 
 mm-bolus.py - Send bolus command to a pump.
 
+positional arguments:
+  units                 Amount of insulin to bolus.
+
 optional arguments:
   -h, --help            show this help message and exit
-  --serial SERIAL       serial number of pump [default: 208850]
+  --serial SERIAL       serial number of pump [default: ]
   --port PORT           Path to device [default: ]
   --no-op               Dry run, don't do main function
   --skip-prelude        Don't do the normal prelude.
@@ -238,17 +242,31 @@ optional arguments:
   --init                Send power ctrl to initialize RF session.
   --515
   --strokes STROKES_PER_UNIT
-  --units UNITS         Amount of insulin to bolus. [default: None)]
 
-XXX: Be careful please. Units might be wrong. Keep disconnected from pump
+XXX: Be careful please! Units might be wrong. Keep disconnected from pump
 until you trust it by observing the right amount first.
-
-$ ./bin/mm-bolus.py
++ ./bin/mm-bolus.py
 usage: mm-bolus.py [-h] [--serial SERIAL] [--port PORT] [--no-op]
                    [--skip-prelude] [--no-rf-prelude] [--skip-postlude] [-v]
                    [--init] (--515 | --strokes STROKES_PER_UNIT)
-                   [--units UNITS]
-mm-bolus.py: error: one of the arguments --515 --strokes is required
+                   units
+mm-bolus.py: error: too few arguments
+
+
++ ./bin/mm-bolus.py --515
+usage: mm-bolus.py [-h] [--serial SERIAL] [--port PORT] [--no-op]
+                   [--skip-prelude] [--no-rf-prelude] [--skip-postlude] [-v]
+                   [--init] (--515 | --strokes STROKES_PER_UNIT)
+                   units
+mm-bolus.py: error: too few arguments
+
+
++ ./bin/mm-bolus.py --strokes 10
+usage: mm-bolus.py [-h] [--serial SERIAL] [--port PORT] [--no-op]
+                   [--skip-prelude] [--no-rf-prelude] [--skip-postlude] [-v]
+                   [--init] (--515 | --strokes STROKES_PER_UNIT)
+                   units
+mm-bolus.py: error: too few arguments
 ```
 
 ### `./bin/mm-send-comm.py`
