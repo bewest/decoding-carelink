@@ -231,6 +231,16 @@ class BasalProfileStart(KnownRecord):
     return describe_rate(*self.body)
 _confirmed.append(BasalProfileStart)
 
+# 123, 143
+class OldBolusWizardChange (KnownRecord):
+  opcode = 0x5a
+  body_length = 117
+_confirmed.append(OldBolusWizardChange)
+
+class BigBolusWizardChange (KnownRecord):
+  opcode = 0x5a
+  body_length = 143
+  
 class old6c(InvalidRecord):
   opcode = 0x6c
   #head_length = 45
