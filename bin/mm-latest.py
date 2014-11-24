@@ -9,7 +9,7 @@ from datetime import datetime
 from dateutil import relativedelta
 
 from decocare import lib
-from decocare.history import parse_record
+from decocare.history import parse_record, HistoryPage
 from decocare.helpers import cli
 
 class LatestActivity (cli.CommandApp):
@@ -102,20 +102,16 @@ class LatestActivity (cli.CommandApp):
   def find_records (self, page, larger=None):
     if larger is None:
       larger = int(self.pump.model.getData( )[1:]) > 22
-    stream = io.BytesIO(page)
-    records = [ ]
+    decoder = HistoryPage(page)
+    records = decoder.decode( )
     print "SINCE", self.since.isoformat( )
-    for B in iter(lambda: bytearray(stream.read(2)), bytearray("")):
-      if B == bytearray( [ 0x00, 0x00 ] ):
-        break
-      record = parse_record( stream, B, larger=larger )
-      data = record.decode( )
-      print "  * found record", record, record.datetime
-      if record.datetime:
-        if record.datetime < self.since:
+    for record in records:
+      print "  * found record", record['_type'], record.get('timestamp')
+      print "  * should quit", record['timestamp'] < self.since.isoformat( ), self.enough_history
+      if record['timestamp']:
+        if record['timestamp'] < self.since.isoformat( ):
           self.enough_history = True
-          records.append(record)
-        if record.datetime > self.since:
+        if record['timestamp'] < self.since.isoformat( ):
           self.records.append(record)
     return records
 
@@ -128,15 +124,7 @@ class LatestActivity (cli.CommandApp):
       history = self.download_page(i)
       remainder = self.find_records(history.data)
       i = i + 1
-    results = [ ]
-    for record in self.records:
-      rec = dict(timestamp=record.datetime.isoformat( ),
-                 _type=str(record.__class__.__name__),
-                 _description=str(record))
-      data = record.decode( )
-      if data is not None:
-        rec.update(data)
-        results.append(rec)
+    results = self.records
     print "```json"
     args.parsed_data.write(json.dumps(results, indent=2))
     print ''

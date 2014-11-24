@@ -375,9 +375,9 @@ def decodeDCByte(B):
 
 
 def epochize (dt):
-  epoch = datetime.datetime.utcfromtimestamp(0)
+  epoch = datetime.utcfromtimestamp(0)
   delta = dt - epoch
-  return delta.total_seconds( ) * 1000.0
+  return delta.total_seconds( ) * 1000
 
 if __name__ == '__main__':
   import doctest
