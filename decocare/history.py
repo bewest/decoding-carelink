@@ -407,6 +407,7 @@ class HistoryPage (PagedData):
       record = parse_record(self.stream, B, larger=larger )
       if record.datetime:
         rec = dict(timestamp=record.datetime.isoformat( ),
+                   date=lib.epochize(record.datetime),
                    _type=str(record.__class__.__name__),
                    _description=str(record))
         data = record.decode( )
