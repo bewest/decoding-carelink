@@ -375,7 +375,7 @@ def decodeDCByte(B):
 
 
 def epochize (dt):
-  epoch = datetime.utcfromtimestamp(0)
+  epoch = datetime.fromtimestamp(0)
   delta = dt - epoch
   return delta.total_seconds( ) * 1000
 
