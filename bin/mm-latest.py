@@ -103,7 +103,7 @@ class LatestActivity (cli.CommandApp):
     if larger is None:
       larger = int(self.pump.model.getData( )[1:]) > 22
     decoder = HistoryPage(page)
-    records = decoder.decode( )
+    records = decoder.decode(larger=larger)
     print "SINCE", self.since.isoformat( )
     for record in records:
       print "  * found record", record['_type'], record.get('timestamp')
