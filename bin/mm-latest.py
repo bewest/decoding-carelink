@@ -111,7 +111,7 @@ class LatestActivity (cli.CommandApp):
       if record['timestamp']:
         if record['timestamp'] < self.since.isoformat( ):
           self.enough_history = True
-        if record['timestamp'] < self.since.isoformat( ):
+        if record['timestamp'] >= self.since.isoformat( ):
           self.records.append(record)
     return records
 
