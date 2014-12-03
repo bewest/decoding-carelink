@@ -226,7 +226,7 @@ _confirmed.append(IanA8)
 class BasalProfileStart(KnownRecord):
   opcode = 0x7b
   body_length = 3
-  def decode (self):
+  def decode (self, larger=False):
     self.parse_time( )
     return describe_rate(*self.body)
 _confirmed.append(BasalProfileStart)
