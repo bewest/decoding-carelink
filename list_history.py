@@ -95,7 +95,7 @@ def main( ):
     records = [ ]
     if opts.collate:
       page = HistoryPage(bytearray(stream.read( )))
-      records.extend(page.decode( ))
+      records.extend(page.decode(larger=opts.larger ))
     else:
       records = find_records(stream, opts)
     i = 0
