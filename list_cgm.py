@@ -71,10 +71,11 @@ class PagedData (object):
     PagedData - context for parsing a page of cgm data.
   """
 
-  def __init__ (self, stream):
+  def __init__ (self, stream, larger=False):
     raw = bytearray(stream.read(1024))
     data, crc = raw[0:1022], raw[1022:]
     computed = lib.CRC16CCITT.compute(bytearray(data))
+    self.larger = larger
     if lib.BangInt(crc) != computed:
       assert lib.BangInt(crc) == computed, "CRC does not match page data"
     
@@ -111,6 +112,9 @@ class PagedData (object):
       0x10: dict(name='10-Something',packet_size=7,date_type='minSpecific',op='0x10'),
       0x13: dict(name='19-Something',packet_size=0,date_type='prevTimestamp',op='0x13')
     }
+    if self.larger:
+      # record[08][]
+      pass
 
     if op > 0 and op < 20:
       record = records.get(op, None)
@@ -162,7 +166,14 @@ class PagedData (object):
         date, body = raw_packet[:4], raw_packet[4:]  
         date.reverse()
         date = parse_date(date)
-        record.update(date=date.isoformat())
+        if date:
+          record.update(date=date.isoformat())
+        else:
+          print "@@@", self.stream.tell( )
+          pprint(dict(raw=hexlify(raw_packet)))
+          pprint(dict(date=hexlify(date or bytearray( ))))
+          pprint(dict(body=hexlify(body)))
+          break
         prefix_records.reverse()
         mapped_glucose_records = self.map_glucose(prefix_records, start=date, delta=self.delta_ago(reverse=True))
 #       mapped_glucose_records.reverse()
@@ -239,6 +250,11 @@ def get_opt_parser( ):
                       default=sys.stdout,
                       type=argparse.FileType('w'),
                       help="Write records here.")
+  parser.add_argument('--larger',
+                      dest='larger', action='store_true')
+  parser.add_argument('--no-larger',
+                      dest='larger', action='store_false')
+
   return parser
 
 
@@ -252,7 +268,7 @@ class ListCGM (object):
     opts = parser.parse_args( )
     self.records = [ ]
     for stream in opts.infile:
-      page = PagedData(stream)
+      page = PagedData(stream, larger=opts.larger)
       self.records.extend(page.decode( ))
 
     self.print_records(self.records)
