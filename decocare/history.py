@@ -96,7 +96,11 @@ class ChangeBasalProfile(KnownRecord):
       (offset, rate, q) = self.body[start:end]
       if [offset, rate, q] == [ 0x00, 0x00, 0x00]:
         break
-      rates.append(describe_rate(offset, rate, q))
+      try:
+        rates.append(describe_rate(offset, rate, q))
+      except TypeError, e:
+        remainder = [ offset, rate, q ]
+        rates.append(remainder)
     return rates
 
 def describe_rate (offset, rate, q):
@@ -228,7 +232,10 @@ class BasalProfileStart(KnownRecord):
   body_length = 3
   def decode (self):
     self.parse_time( )
-    return describe_rate(*self.body)
+    if (len(self.body) % 3 == 0):
+      return describe_rate(*self.body)
+    else:
+      return dict(raw=hexlify(self.body))
 _confirmed.append(BasalProfileStart)
 
 # 123, 143
@@ -397,6 +404,11 @@ class HistoryPage (PagedData):
     data.reverse( )
     self.data = self.eat_nulls(data)
     self.data.reverse( )
+    # XXX: under some circumstances, zero is the correct value and
+    # eat_nulls actually eats valid data.  This ugly hack restores two
+    # nulls back ot the end.
+    self.data.append(0x00)
+    self.data.append(0x00)
     self.stream = io.BufferedReader(io.BytesIO(self.data))
   def decode (self, larger=False):
     records = [ ]
@@ -407,6 +419,7 @@ class HistoryPage (PagedData):
       record = parse_record(self.stream, B, larger=larger )
       if record.datetime:
         rec = dict(timestamp=record.datetime.isoformat( ),
+                   date=lib.epochize(record.datetime),
                    _type=str(record.__class__.__name__),
                    _description=str(record))
         data = record.decode( )

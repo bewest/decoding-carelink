@@ -373,6 +373,12 @@ def decodeDCByte(B):
   return ENCODE_TABLE.index(B)
 
 
+
+def epochize (dt):
+  epoch = datetime.fromtimestamp(0)
+  delta = dt - epoch
+  return delta.total_seconds( ) * 1000
+
 if __name__ == '__main__':
   import doctest
   doctest.testmod( )
