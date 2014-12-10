@@ -182,6 +182,11 @@ class PowerControl(PumpCommand):
   #timeout = 1
   # effectTime = 7
   effectTime = 17
+  def __init__(self, minutes=None, **kwds):
+    if minutes is not None:
+      self.minutes = int(minutes)
+      kwds['params'] = [ 0x01, self.minutes ]
+    super(PowerControl, self).__init__(**kwds)
 
 class PowerControlOff(PowerControl):
   """

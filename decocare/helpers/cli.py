@@ -70,6 +70,11 @@ class CommandApp(object):
                         action='append_const', const=1,
                         help="Verbosity"
                         )
+    parser.add_argument('--rf-minutes',
+                        dest='session_life',
+                        type=int, default=10,
+                        help="How long RF sessions should last"
+                        )
     parser.add_argument('--init',
                         dest='init',
                         action='store_true', default=False,
@@ -136,7 +141,7 @@ class CommandApp(object):
       return
     print "```"
     if args.init:
-      pump.power_control( )
+      pump.power_control(minutes=args.session_life)
     model = pump.read_model( )
     self.model = model
     print "```"
