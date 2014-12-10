@@ -70,10 +70,16 @@ class LatestActivity (cli.CommandApp):
     return parser
 
 
-  def report_clock (self):
+  def report_clock (self, args):
     self.clock = self.exec_request(self.pump, commands.ReadRTC)
     self.time = lib.parse.date(self.clock.getData( ))
     self.since = self.time - self.delta
+    results = dict(now=self.time.isoformat( ))
+
+    print "```json"
+    args.rtc_archive.write(json.dumps(results, indent=2))
+    print ''
+    print "```"
 
   def report_status (self):
     status = self.exec_request(self.pump, commands.ReadPumpStatus)
@@ -140,7 +146,7 @@ class LatestActivity (cli.CommandApp):
     self.delta = relativedelta.relativedelta(minutes=args.minutes)
     self.report_settings( )
     if args.clock:
-      self.report_clock( )
+      self.report_clock(args )
     if args.status:
       self.report_status( )
     if args.temp:
