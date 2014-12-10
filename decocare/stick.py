@@ -700,6 +700,7 @@ class Stick(object):
     """
     eod = False
     results = bytearray( )
+    ailing = 0
     i = 0
     log_head = 'download(attempts[{}])'
     expecting = 'download(attempts[{}],expect[{}])'
@@ -734,8 +735,13 @@ class Stick(object):
       if size == 0 and i > 1:
         log.warn("%s:BAD AILING" % (stats.format(self, i, size,
                                         len(results), len(data))))
+        ailing = ailing + 1
+        if ailing > 5:
+          break
         continue
           # break
+      elif ailing > 0:
+        ailing = ailing - 1
 
       log.info("%s:proceed to download packet" % (stats.format(self, i, size,
                                                   len(results), len(data))))
