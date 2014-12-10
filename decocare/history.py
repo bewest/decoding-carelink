@@ -81,7 +81,10 @@ class MResultTotals(InvalidRecord):
 
 class ChangeBasalProfile(KnownRecord):
   opcode = 0x08
-  body_length = 44
+  # old/bad
+  # body_length = 46
+  # XXX: on LeDanaScott's, 522, this seems right
+  body_length = 145
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
     if larger:

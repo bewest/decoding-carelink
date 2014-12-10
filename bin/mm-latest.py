@@ -55,6 +55,12 @@ class LatestActivity (cli.CommandApp):
             type=argparse.FileType('w'),
             help="Put history json in this file"
           )
+    parser.add_argument('--rtc-out',
+            dest="rtc_archive",
+            default='-',
+            type=argparse.FileType('w'),
+            help="Put clock json in this file"
+          )
     parser.add_argument('minutes',
             type=int,
             nargs="?",
