@@ -84,7 +84,7 @@ class LatestActivity (cli.CommandApp):
     self.timezone = args.timezone
     self.since = self.time - self.delta
     results = dict(now=self.time.isoformat( )
-              , observed_at=datetime.now( ).isoformat( )
+              , observed_at=datetime.now(args.timezone).isoformat( )
               , model=self.pump.model.getData( )
               , _type='RTC')
 
