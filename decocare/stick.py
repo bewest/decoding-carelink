@@ -411,6 +411,7 @@ class TransmitPacket(StickCommand):
     #self.checkAck(results)
 
 
+
 class Stick(object):
   """
   The carelink usb stick acts like a buffer.
@@ -871,6 +872,13 @@ class Stick(object):
       except AckError, e:
         log.info('failed:(%s):\n%s' % (attempt, e))
     
+  @staticmethod
+  def decode_hex (msg, Candidate):
+    candidate = Candidate( )
+    raw = lib.hexbytes(msg)
+    ack, resp = candidate.respond(raw)
+    result = candidate.parse(resp)
+    return result
 
 if __name__ == '__main__':
   import doctest
