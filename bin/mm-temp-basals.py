@@ -50,7 +50,7 @@ class TempBasalApp (cli.CommandApp):
   def main (self, args):
     basals = self.query_temp(args)
     if args.command == "query":
-      return
+      pass
     if args.command == "set":
       params = format_params(args)
       kwds = dict(params=params)
