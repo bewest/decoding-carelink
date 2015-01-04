@@ -510,14 +510,14 @@
   <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  &gt;&gt;&gt; rec = Bolus( _bolus[0][:2] )</span>
 <span class="sd">  &gt;&gt;&gt; print pformat(rec.parse( _bolus[0] ))</span>
-<span class="sd">  {&#39;amount&#39;: 2.6, &#39;dual_component&#39;: &#39;??&#39;, &#39;programmed&#39;: 2.6, &#39;type&#39;: &#39;??&#39;}</span>
+<span class="sd">  {&#39;amount&#39;: 2.6, &#39;duration&#39;: 0, &#39;programmed&#39;: 2.6, &#39;type&#39;: &#39;normal&#39;}</span>
 
 <span class="sd">  &gt;&gt;&gt; print str(rec)</span>
 <span class="sd">  Bolus 2013-01-19T21:50:15 head[4], body[0] op[0x01]</span>
 
 <span class="sd">  &gt;&gt;&gt; rec = Bolus( _bolus[1][:2] )</span>
 <span class="sd">  &gt;&gt;&gt; print pformat(rec.parse( _bolus[1] ))</span>
-<span class="sd">  {&#39;amount&#39;: 1.7, &#39;dual_component&#39;: &#39;??&#39;, &#39;programmed&#39;: 1.7, &#39;type&#39;: &#39;??&#39;}</span>
+<span class="sd">  {&#39;amount&#39;: 1.7, &#39;duration&#39;: 0, &#39;programmed&#39;: 1.7, &#39;type&#39;: &#39;normal&#39;}</span>
 <span class="sd">  &gt;&gt;&gt; print str(rec)</span>
 <span class="sd">  Bolus 2013-01-15T15:57:16 head[4], body[0] op[0x01]</span>
 

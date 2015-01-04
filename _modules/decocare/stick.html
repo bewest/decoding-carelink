@@ -460,6 +460,7 @@
     <span class="c">#self.checkAck(results)</span>
 
 
+
 <span class="k">class</span> <span class="nc">Stick</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span></div></div>
 <div class="viewcode-block" id="Stick"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick">[docs]</a>  <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  The carelink usb stick acts like a buffer.</span>
@@ -749,6 +750,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">eod</span> <span class="o">=</span> <span class="bp">False</span>
     <span class="n">results</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">)</span>
+    <span class="n">ailing</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">log_head</span> <span class="o">=</span> <span class="s">&#39;download(attempts[{}])&#39;</span>
     <span class="n">expecting</span> <span class="o">=</span> <span class="s">&#39;download(attempts[{}],expect[{}])&#39;</span>
@@ -783,8 +785,13 @@
       <span class="k">if</span> <span class="n">size</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:BAD AILING&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span>
                                         <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))))</span>
+        <span class="n">ailing</span> <span class="o">=</span> <span class="n">ailing</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">ailing</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+          <span class="k">break</span>
         <span class="k">continue</span>
           <span class="c"># break</span>
+      <span class="k">elif</span> <span class="n">ailing</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">ailing</span> <span class="o">=</span> <span class="n">ailing</span> <span class="o">-</span> <span class="mi">1</span>
 
       <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">:proceed to download packet&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span>
                                                   <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))))</span>
@@ -897,6 +904,7 @@
 <div class="viewcode-block" id="Stick.open"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.open">[docs]</a>    <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Open and get signal strength so everything is ready to go.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">baudrate</span> <span class="o">=</span> <span class="mi">9600</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span> <span class="p">)</span>
     <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span> <span class="mi">3</span> <span class="p">):</span>
       <span class="k">try</span><span class="p">:</span>
@@ -913,6 +921,13 @@
       <span class="k">except</span> <span class="n">AckError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
         <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;failed:(</span><span class="si">%s</span><span class="s">):</span><span class="se">\n</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">attempt</span><span class="p">,</span> <span class="n">e</span><span class="p">))</span>
     
+  <span class="nd">@staticmethod</span></div>
+  <span class="k">def</span> <span class="nf">decode_hex</span> <span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">Candidate</span><span class="p">):</span>
+<div class="viewcode-block" id="Stick.decode_hex"><a class="viewcode-back" href="../../api/stick.html#decocare.stick.Stick.decode_hex">[docs]</a>    <span class="n">candidate</span> <span class="o">=</span> <span class="n">Candidate</span><span class="p">(</span> <span class="p">)</span>
+    <span class="n">raw</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexbytes</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="n">ack</span><span class="p">,</span> <span class="n">resp</span> <span class="o">=</span> <span class="n">candidate</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">candidate</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span></div></div>
   <span class="kn">import</span> <span class="nn">doctest</span>

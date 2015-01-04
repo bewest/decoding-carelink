@@ -54,7 +54,7 @@
 <span class="sd">specifically targeted at decoding ReadHistoryData data.</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">io</span>
 <span class="kn">from</span> <span class="nn">binascii</span> <span class="kn">import</span> <span class="n">hexlify</span>
 
 <span class="kn">import</span> <span class="nn">lib</span>
@@ -118,8 +118,8 @@
       <span class="k">print</span> <span class="s">&quot;ERROR&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="n">lib</span><span class="o">.</span><span class="n">hexdump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
       <span class="k">pass</span>
     <span class="k">return</span> <span class="n">mid</span>
-      
-    </div>
+
+</div>
 <div class="viewcode-block" id="MResultTotals.date_str"><a class="viewcode-back" href="../../api/history.html#decocare.history.MResultTotals.date_str">[docs]</a>  <span class="k">def</span> <span class="nf">date_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s">&#39;unknown&#39;</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">datetime</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
@@ -129,9 +129,52 @@
         <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">unmask_m_midnight</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">date</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">result</span>
 </div></div>
-<div class="viewcode-block" id="ChangeBasalProfile"><a class="viewcode-back" href="../../api/history.html#decocare.history.ChangeBasalProfile">[docs]</a><span class="k">class</span> <span class="nc">ChangeBasalProfile</span><span class="p">(</span><span class="n">KnownRecord</span><span class="p">):</span>
+<div class="viewcode-block" id="ChangeBasalProfile_old_profile"><a class="viewcode-back" href="../../api/history.html#decocare.history.ChangeBasalProfile_old_profile">[docs]</a><span class="k">class</span> <span class="nc">ChangeBasalProfile_old_profile</span> <span class="p">(</span><span class="n">KnownRecord</span><span class="p">):</span>
   <span class="n">opcode</span> <span class="o">=</span> <span class="mh">0x08</span>
-  <span class="n">body_length</span> <span class="o">=</span> <span class="mi">44</span></div>
+  <span class="c"># old/bad</span>
+  <span class="c"># body_length = 46</span>
+  <span class="c"># XXX: on LeDanaScott&#39;s, 522, this seems right</span>
+  <span class="n">body_length</span> <span class="o">=</span> <span class="mi">145</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">,</span> <span class="n">larger</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="nb">super</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">larger</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">larger</span><span class="p">:</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">body_length</span> <span class="o">=</span> <span class="mi">145</span>
+<div class="viewcode-block" id="ChangeBasalProfile_old_profile.decode"><a class="viewcode-back" href="../../api/history.html#decocare.history.ChangeBasalProfile_old_profile.decode">[docs]</a>  <span class="k">def</span> <span class="nf">decode</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">parse_time</span><span class="p">(</span> <span class="p">)</span>
+    <span class="n">rates</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">47</span><span class="p">):</span>
+      <span class="n">start</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">3</span>
+      <span class="n">end</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">3</span>
+      <span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
+      <span class="k">if</span> <span class="p">[</span><span class="n">offset</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">q</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">]:</span>
+        <span class="k">break</span>
+      <span class="k">try</span><span class="p">:</span>
+        <span class="n">rates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">describe_rate</span><span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">q</span><span class="p">))</span>
+      <span class="k">except</span> <span class="ne">TypeError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">remainder</span> <span class="o">=</span> <span class="p">[</span> <span class="n">offset</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">q</span> <span class="p">]</span>
+        <span class="n">rates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">remainder</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rates</span>
+</div></div>
+<div class="viewcode-block" id="describe_rate"><a class="viewcode-back" href="../../api/history.html#decocare.history.describe_rate">[docs]</a><span class="k">def</span> <span class="nf">describe_rate</span> <span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+  <span class="k">return</span> <span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="o">*</span><span class="mi">1000</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span><span class="o">*</span><span class="n">offset</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">rate</span><span class="o">*</span><span class="mf">0.025</span><span class="p">))</span>
+
+</div>
+<div class="viewcode-block" id="ChangeBasalProfile_new_profile"><a class="viewcode-back" href="../../api/history.html#decocare.history.ChangeBasalProfile_new_profile">[docs]</a><span class="k">class</span> <span class="nc">ChangeBasalProfile_new_profile</span> <span class="p">(</span><span class="n">KnownRecord</span><span class="p">):</span>
+  <span class="n">opcode</span> <span class="o">=</span> <span class="mh">0x09</span>
+  <span class="n">body_length</span> <span class="o">=</span> <span class="mi">145</span>
+<div class="viewcode-block" id="ChangeBasalProfile_new_profile.decode"><a class="viewcode-back" href="../../api/history.html#decocare.history.ChangeBasalProfile_new_profile.decode">[docs]</a>  <span class="k">def</span> <span class="nf">decode</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">parse_time</span><span class="p">(</span> <span class="p">)</span>
+    <span class="n">rates</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">47</span><span class="p">):</span>
+      <span class="n">start</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">3</span>
+      <span class="n">end</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">3</span>
+      <span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
+      <span class="k">if</span> <span class="p">[</span><span class="n">offset</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">q</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">]:</span>
+        <span class="k">break</span>
+      <span class="n">rates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">describe_rate</span><span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">q</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">rates</span></div></div>
 <div class="viewcode-block" id="ClearAlarm"><a class="viewcode-back" href="../../api/history.html#decocare.history.ClearAlarm">[docs]</a><span class="k">class</span> <span class="nc">ClearAlarm</span><span class="p">(</span><span class="n">KnownRecord</span><span class="p">):</span>
   <span class="n">opcode</span> <span class="o">=</span> <span class="mh">0x0C</span></div>
 <div class="viewcode-block" id="SelectBasalProfile"><a class="viewcode-back" href="../../api/history.html#decocare.history.SelectBasalProfile">[docs]</a><span class="k">class</span> <span class="nc">SelectBasalProfile</span><span class="p">(</span><span class="n">KnownRecord</span><span class="p">):</span>
@@ -197,12 +240,16 @@
 <div class="viewcode-block" id="ChangeTimeDisplay"><a class="viewcode-back" href="../../api/history.html#decocare.history.ChangeTimeDisplay">[docs]</a><span class="k">class</span> <span class="nc">ChangeTimeDisplay</span><span class="p">(</span><span class="n">KnownRecord</span><span class="p">):</span>
   <span class="n">opcode</span> <span class="o">=</span> <span class="mh">0x64</span>
 </div>
-<span class="n">_confirmed</span> <span class="o">=</span> <span class="p">[</span> <span class="n">Bolus</span><span class="p">,</span> <span class="n">Prime</span><span class="p">,</span> <span class="n">NoDelivery</span><span class="p">,</span> <span class="n">MResultTotals</span><span class="p">,</span> <span class="n">ChangeBasalProfile</span><span class="p">,</span>
+<span class="n">_confirmed</span> <span class="o">=</span> <span class="p">[</span> <span class="n">Bolus</span><span class="p">,</span> <span class="n">Prime</span><span class="p">,</span> <span class="n">NoDelivery</span><span class="p">,</span> <span class="n">MResultTotals</span><span class="p">,</span>
+               <span class="n">ChangeBasalProfile_old_profile</span><span class="p">,</span>
+               <span class="n">ChangeBasalProfile_new_profile</span><span class="p">,</span>
                <span class="n">ClearAlarm</span><span class="p">,</span> <span class="n">SelectBasalProfile</span><span class="p">,</span> <span class="n">TempBasalDuration</span><span class="p">,</span> <span class="n">ChangeTime</span><span class="p">,</span>
                <span class="n">NewTimeSet</span><span class="p">,</span> <span class="n">LowBattery</span><span class="p">,</span> <span class="n">Battery</span><span class="p">,</span> <span class="n">PumpSuspend</span><span class="p">,</span>
                <span class="n">PumpResume</span><span class="p">,</span> <span class="n">CalBGForPH</span><span class="p">,</span> <span class="n">Rewind</span><span class="p">,</span> <span class="n">EnableDisableRemote</span><span class="p">,</span>
                <span class="n">ChangeRemoteID</span><span class="p">,</span> <span class="n">TempBasal</span><span class="p">,</span> <span class="n">LowReservoir</span><span class="p">,</span> <span class="n">BolusWizard</span><span class="p">,</span>
                <span class="n">UnabsorbedInsulinBolus</span><span class="p">,</span> <span class="n">ChangeUtility</span><span class="p">,</span> <span class="n">ChangeTimeDisplay</span> <span class="p">]</span>
+
+<span class="c"># _confirmed.append(DanaScott0x09)</span>
 
 <div class="viewcode-block" id="Ian69"><a class="viewcode-back" href="../../api/history.html#decocare.history.Ian69">[docs]</a><span class="k">class</span> <span class="nc">Ian69</span><span class="p">(</span><span class="n">KnownRecord</span><span class="p">):</span>
   <span class="n">opcode</span> <span class="o">=</span> <span class="mh">0x69</span>
@@ -237,9 +284,25 @@
 
 <div class="viewcode-block" id="BasalProfileStart"><a class="viewcode-back" href="../../api/history.html#decocare.history.BasalProfileStart">[docs]</a><span class="k">class</span> <span class="nc">BasalProfileStart</span><span class="p">(</span><span class="n">KnownRecord</span><span class="p">):</span>
   <span class="n">opcode</span> <span class="o">=</span> <span class="mh">0x7b</span>
-  <span class="n">body_length</span> <span class="o">=</span> <span class="mi">3</span></div>
+  <span class="n">body_length</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="viewcode-block" id="BasalProfileStart.decode"><a class="viewcode-back" href="../../api/history.html#decocare.history.BasalProfileStart.decode">[docs]</a>  <span class="k">def</span> <span class="nf">decode</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">parse_time</span><span class="p">(</span> <span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">)</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+      <span class="k">return</span> <span class="n">describe_rate</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">raw</span><span class="o">=</span><span class="n">hexlify</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">))</span></div></div>
 <span class="n">_confirmed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">BasalProfileStart</span><span class="p">)</span>
 
+<span class="c"># 123, 143</span>
+<div class="viewcode-block" id="OldBolusWizardChange"><a class="viewcode-back" href="../../api/history.html#decocare.history.OldBolusWizardChange">[docs]</a><span class="k">class</span> <span class="nc">OldBolusWizardChange</span> <span class="p">(</span><span class="n">KnownRecord</span><span class="p">):</span>
+  <span class="n">opcode</span> <span class="o">=</span> <span class="mh">0x5a</span>
+  <span class="n">body_length</span> <span class="o">=</span> <span class="mi">117</span></div>
+<span class="n">_confirmed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">OldBolusWizardChange</span><span class="p">)</span>
+
+<div class="viewcode-block" id="BigBolusWizardChange"><a class="viewcode-back" href="../../api/history.html#decocare.history.BigBolusWizardChange">[docs]</a><span class="k">class</span> <span class="nc">BigBolusWizardChange</span> <span class="p">(</span><span class="n">KnownRecord</span><span class="p">):</span>
+  <span class="n">opcode</span> <span class="o">=</span> <span class="mh">0x5a</span>
+  <span class="n">body_length</span> <span class="o">=</span> <span class="mi">143</span>
+  </div>
 <div class="viewcode-block" id="old6c"><a class="viewcode-back" href="../../api/history.html#decocare.history.old6c">[docs]</a><span class="k">class</span> <span class="nc">old6c</span><span class="p">(</span><span class="n">InvalidRecord</span><span class="p">):</span>
   <span class="n">opcode</span> <span class="o">=</span> <span class="mh">0x6c</span>
   <span class="c">#head_length = 45</span>
@@ -365,9 +428,71 @@
   <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
     <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_known</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span> <span class="p">))</span>
   <span class="k">return</span> <span class="n">out</span>
-
-    
 </div>
+<div class="viewcode-block" id="PagedData"><a class="viewcode-back" href="../../api/history.html#decocare.history.PagedData">[docs]</a><span class="k">class</span> <span class="nc">PagedData</span> <span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    PagedData - context for parsing a page of cgm data.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="k">def</span> <span class="nf">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw</span><span class="p">):</span>
+    <span class="n">data</span><span class="p">,</span> <span class="n">crc</span> <span class="o">=</span> <span class="n">raw</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1022</span><span class="p">],</span> <span class="n">raw</span><span class="p">[</span><span class="mi">1022</span><span class="p">:]</span>
+    <span class="n">computed</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">CRC16CCITT</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="nb">bytearray</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">lib</span><span class="o">.</span><span class="n">BangInt</span><span class="p">(</span><span class="n">crc</span><span class="p">)</span> <span class="o">!=</span> <span class="n">computed</span><span class="p">:</span>
+      <span class="k">assert</span> <span class="n">lib</span><span class="o">.</span><span class="n">BangInt</span><span class="p">(</span><span class="n">crc</span><span class="p">)</span> <span class="o">==</span> <span class="n">computed</span><span class="p">,</span> <span class="s">&quot;CRC does not match page data&quot;</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">raw</span> <span class="o">=</span> <span class="n">raw</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">clean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<div class="viewcode-block" id="PagedData.clean"><a class="viewcode-back" href="../../api/history.html#decocare.history.PagedData.clean">[docs]</a>  <span class="k">def</span> <span class="nf">clean</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">reverse</span><span class="p">(</span> <span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eat_nulls</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">stream</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BufferedReader</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="PagedData.eat_nulls"><a class="viewcode-back" href="../../api/history.html#decocare.history.PagedData.eat_nulls">[docs]</a>  <span class="k">def</span> <span class="nf">eat_nulls</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mh">0x00</span><span class="p">:</span>
+      <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">:]</span>
+</div></div>
+<div class="viewcode-block" id="HistoryPage"><a class="viewcode-back" href="../../api/history.html#decocare.history.HistoryPage">[docs]</a><span class="k">class</span> <span class="nc">HistoryPage</span> <span class="p">(</span><span class="n">PagedData</span><span class="p">):</span>
+<div class="viewcode-block" id="HistoryPage.clean"><a class="viewcode-back" href="../../api/history.html#decocare.history.HistoryPage.clean">[docs]</a>  <span class="k">def</span> <span class="nf">clean</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">reverse</span><span class="p">(</span> <span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eat_nulls</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">reverse</span><span class="p">(</span> <span class="p">)</span>
+    <span class="c"># XXX: under some circumstances, zero is the correct value and</span>
+    <span class="c"># eat_nulls actually eats valid data.  This ugly hack restores two</span>
+    <span class="c"># nulls back ot the end.</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mh">0x00</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mh">0x00</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">stream</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BufferedReader</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">))</span></div>
+<div class="viewcode-block" id="HistoryPage.decode"><a class="viewcode-back" href="../../api/history.html#decocare.history.HistoryPage.decode">[docs]</a>  <span class="k">def</span> <span class="nf">decode</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">larger</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="n">records</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+    <span class="n">skipped</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+    <span class="k">for</span> <span class="n">B</span> <span class="ow">in</span> <span class="nb">iter</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="nb">bytearray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">)),</span> <span class="nb">bytearray</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)):</span>
+      <span class="k">if</span> <span class="n">B</span> <span class="o">==</span> <span class="nb">bytearray</span><span class="p">(</span> <span class="p">[</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span> <span class="p">]</span> <span class="p">):</span>
+        <span class="k">break</span>
+      <span class="n">record</span> <span class="o">=</span> <span class="n">parse_record</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">larger</span><span class="o">=</span><span class="n">larger</span> <span class="p">)</span>
+      <span class="k">if</span> <span class="n">record</span><span class="o">.</span><span class="n">datetime</span><span class="p">:</span>
+        <span class="n">rec</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">timestamp</span><span class="o">=</span><span class="n">record</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span> <span class="p">),</span>
+                   <span class="n">date</span><span class="o">=</span><span class="n">lib</span><span class="o">.</span><span class="n">epochize</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">datetime</span><span class="p">),</span>
+                   <span class="n">_type</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">),</span>
+                   <span class="n">_description</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">record</span><span class="p">))</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span> <span class="p">)</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+          <span class="n">rec</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+          <span class="k">if</span> <span class="n">skipped</span><span class="p">:</span>
+            <span class="n">rec</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">appended</span><span class="o">=</span><span class="n">skipped</span><span class="p">)</span>
+            <span class="n">skipped</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+          <span class="n">records</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
+      <span class="k">else</span><span class="p">:</span>
+        <span class="n">rec</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">_type</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">),</span>
+                   <span class="n">_description</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">record</span><span class="p">))</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span> <span class="p">)</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+          <span class="n">rec</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">skipped</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">records</span>
+</div></div>
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
   <span class="kn">import</span> <span class="nn">doctest</span>
   <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span> <span class="p">)</span>

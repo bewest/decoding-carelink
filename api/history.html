@@ -70,6 +70,11 @@ specifically targeted at decoding ReadHistoryData data.</p>
 <tt class="descname">body_length</tt><em class="property"> = 3</em><a class="headerlink" href="#decocare.history.BasalProfileStart.body_length" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="method">
+<dt id="decocare.history.BasalProfileStart.decode">
+<tt class="descname">decode</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#BasalProfileStart.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.BasalProfileStart.decode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="attribute">
 <dt id="decocare.history.BasalProfileStart.opcode">
 <tt class="descname">opcode</tt><em class="property"> = 123</em><a class="headerlink" href="#decocare.history.BasalProfileStart.opcode" title="Permalink to this definition">¶</a></dt>
@@ -89,17 +94,59 @@ specifically targeted at decoding ReadHistoryData data.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="decocare.history.ChangeBasalProfile">
-<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ChangeBasalProfile</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ChangeBasalProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ChangeBasalProfile" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.BigBolusWizardChange">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">BigBolusWizardChange</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#BigBolusWizardChange"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.BigBolusWizardChange" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
 <dl class="attribute">
-<dt id="decocare.history.ChangeBasalProfile.body_length">
-<tt class="descname">body_length</tt><em class="property"> = 44</em><a class="headerlink" href="#decocare.history.ChangeBasalProfile.body_length" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.BigBolusWizardChange.body_length">
+<tt class="descname">body_length</tt><em class="property"> = 143</em><a class="headerlink" href="#decocare.history.BigBolusWizardChange.body_length" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="decocare.history.ChangeBasalProfile.opcode">
-<tt class="descname">opcode</tt><em class="property"> = 8</em><a class="headerlink" href="#decocare.history.ChangeBasalProfile.opcode" title="Permalink to this definition">¶</a></dt>
+<dt id="decocare.history.BigBolusWizardChange.opcode">
+<tt class="descname">opcode</tt><em class="property"> = 90</em><a class="headerlink" href="#decocare.history.BigBolusWizardChange.opcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.history.ChangeBasalProfile_new_profile">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ChangeBasalProfile_new_profile</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ChangeBasalProfile_new_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ChangeBasalProfile_new_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
+<dl class="attribute">
+<dt id="decocare.history.ChangeBasalProfile_new_profile.body_length">
+<tt class="descname">body_length</tt><em class="property"> = 145</em><a class="headerlink" href="#decocare.history.ChangeBasalProfile_new_profile.body_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.history.ChangeBasalProfile_new_profile.decode">
+<tt class="descname">decode</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ChangeBasalProfile_new_profile.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ChangeBasalProfile_new_profile.decode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.history.ChangeBasalProfile_new_profile.opcode">
+<tt class="descname">opcode</tt><em class="property"> = 9</em><a class="headerlink" href="#decocare.history.ChangeBasalProfile_new_profile.opcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.history.ChangeBasalProfile_old_profile">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">ChangeBasalProfile_old_profile</tt><big>(</big><em>head</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ChangeBasalProfile_old_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ChangeBasalProfile_old_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
+<dl class="attribute">
+<dt id="decocare.history.ChangeBasalProfile_old_profile.body_length">
+<tt class="descname">body_length</tt><em class="property"> = 145</em><a class="headerlink" href="#decocare.history.ChangeBasalProfile_old_profile.body_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.history.ChangeBasalProfile_old_profile.decode">
+<tt class="descname">decode</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#ChangeBasalProfile_old_profile.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.ChangeBasalProfile_old_profile.decode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.history.ChangeBasalProfile_old_profile.opcode">
+<tt class="descname">opcode</tt><em class="property"> = 8</em><a class="headerlink" href="#decocare.history.ChangeBasalProfile_old_profile.opcode" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -171,6 +218,22 @@ specifically targeted at decoding ReadHistoryData data.</p>
 <dl class="attribute">
 <dt id="decocare.history.EnableDisableRemote.opcode">
 <tt class="descname">opcode</tt><em class="property"> = 38</em><a class="headerlink" href="#decocare.history.EnableDisableRemote.opcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.history.HistoryPage">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">HistoryPage</tt><big>(</big><em>raw</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#HistoryPage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.HistoryPage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#decocare.history.PagedData" title="decocare.history.PagedData"><tt class="xref py py-class docutils literal"><span class="pre">decocare.history.PagedData</span></tt></a></p>
+<dl class="method">
+<dt id="decocare.history.HistoryPage.clean">
+<tt class="descname">clean</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#HistoryPage.clean"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.HistoryPage.clean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.history.HistoryPage.decode">
+<tt class="descname">decode</tt><big>(</big><em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#HistoryPage.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.HistoryPage.decode" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -404,6 +467,39 @@ specifically targeted at decoding ReadHistoryData data.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="decocare.history.OldBolusWizardChange">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">OldBolusWizardChange</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#OldBolusWizardChange"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.OldBolusWizardChange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
+<dl class="attribute">
+<dt id="decocare.history.OldBolusWizardChange.body_length">
+<tt class="descname">body_length</tt><em class="property"> = 117</em><a class="headerlink" href="#decocare.history.OldBolusWizardChange.body_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="decocare.history.OldBolusWizardChange.opcode">
+<tt class="descname">opcode</tt><em class="property"> = 90</em><a class="headerlink" href="#decocare.history.OldBolusWizardChange.opcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="decocare.history.PagedData">
+<em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">PagedData</tt><big>(</big><em>raw</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#PagedData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.PagedData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>PagedData - context for parsing a page of cgm data.</p>
+<dl class="method">
+<dt id="decocare.history.PagedData.clean">
+<tt class="descname">clean</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#PagedData.clean"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.PagedData.clean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="decocare.history.PagedData.eat_nulls">
+<tt class="descname">eat_nulls</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#PagedData.eat_nulls"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.PagedData.eat_nulls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="decocare.history.PumpResume">
 <em class="property">class </em><tt class="descclassname">decocare.history.</tt><tt class="descname">PumpResume</tt><big>(</big><em>head=bytearray(b'')</em>, <em>larger=False</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#PumpResume"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.PumpResume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">decocare.records.base.KnownRecord</span></tt></p>
@@ -529,6 +625,11 @@ specifically targeted at decoding ReadHistoryData data.</p>
 <dl class="function">
 <dt id="decocare.history.describe">
 <tt class="descclassname">decocare.history.</tt><tt class="descname">describe</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#describe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.describe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="decocare.history.describe_rate">
+<tt class="descclassname">decocare.history.</tt><tt class="descname">describe_rate</tt><big>(</big><em>offset</em>, <em>rate</em>, <em>q</em><big>)</big><a class="reference internal" href="../_modules/decocare/history.html#describe_rate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decocare.history.describe_rate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
