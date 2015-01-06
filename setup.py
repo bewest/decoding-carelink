@@ -24,6 +24,7 @@ setup(name='decocare',
       'bin/mm-send-comm.py',
       'bin/mm-set-suspend.py',
       'bin/mm-temp-basals.py',
+      'bin/mm-decode-history-page.py',
       './bin/mm-latest.py',
     ],
     classifiers = [

@@ -414,6 +414,10 @@ class HistoryPage (PagedData):
     # nulls back ot the end.
     self.data.append(0x00)
     self.data.append(0x00)
+    self.data.append(0x00)
+    self.data.append(0x00)
+    self.data.append(0x00)
+    self.data.append(0x00)
     self.stream = io.BufferedReader(io.BytesIO(self.data))
   def decode (self, larger=False):
     records = [ ]
