@@ -79,9 +79,12 @@ class MResultTotals(InvalidRecord):
         result = "{}".format(unmask_m_midnight(self.date))
     return result
 
-class ChangeBasalProfile(KnownRecord):
+class ChangeBasalProfile_old_profile (KnownRecord):
   opcode = 0x08
-  body_length = 44
+  # old/bad
+  # body_length = 46
+  # XXX: on LeDanaScott's, 522, this seems right
+  body_length = 145
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
     if larger:
@@ -107,7 +110,7 @@ def describe_rate (offset, rate, q):
   return (dict(offset=(30*1000*60)*offset, rate=rate*0.025))
 
 
-class DanaScott0x09 (KnownRecord):
+class ChangeBasalProfile_new_profile (KnownRecord):
   opcode = 0x09
   body_length = 145
   def decode (self):
@@ -187,14 +190,16 @@ class ChangeUtility(KnownRecord):
 class ChangeTimeDisplay(KnownRecord):
   opcode = 0x64
 
-_confirmed = [ Bolus, Prime, NoDelivery, MResultTotals, ChangeBasalProfile,
+_confirmed = [ Bolus, Prime, NoDelivery, MResultTotals,
+               ChangeBasalProfile_old_profile,
+               ChangeBasalProfile_new_profile,
                ClearAlarm, SelectBasalProfile, TempBasalDuration, ChangeTime,
                NewTimeSet, LowBattery, Battery, PumpSuspend,
                PumpResume, CalBGForPH, Rewind, EnableDisableRemote,
                ChangeRemoteID, TempBasal, LowReservoir, BolusWizard,
                UnabsorbedInsulinBolus, ChangeUtility, ChangeTimeDisplay ]
 
-_confirmed.append(DanaScott0x09)
+# _confirmed.append(DanaScott0x09)
 
 class Ian69(KnownRecord):
   opcode = 0x69
@@ -407,6 +412,10 @@ class HistoryPage (PagedData):
     # XXX: under some circumstances, zero is the correct value and
     # eat_nulls actually eats valid data.  This ugly hack restores two
     # nulls back ot the end.
+    self.data.append(0x00)
+    self.data.append(0x00)
+    self.data.append(0x00)
+    self.data.append(0x00)
     self.data.append(0x00)
     self.data.append(0x00)
     self.stream = io.BufferedReader(io.BytesIO(self.data))

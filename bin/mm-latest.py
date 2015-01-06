@@ -7,6 +7,8 @@ import argparse
 
 from datetime import datetime
 from dateutil import relativedelta
+from dateutil.parser import parse
+from dateutil.tz import gettz
 
 from decocare import lib
 from decocare.history import parse_record, HistoryPage
@@ -55,6 +57,17 @@ class LatestActivity (cli.CommandApp):
             type=argparse.FileType('w'),
             help="Put history json in this file"
           )
+    parser.add_argument('--rtc-out',
+            dest="rtc_archive",
+            default='-',
+            type=argparse.FileType('w'),
+            help="Put clock json in this file"
+          )
+    parser.add_argument('--timezone',
+            default=gettz( ),
+            type=gettz,
+            help="Timezone to use"
+          )
     parser.add_argument('minutes',
             type=int,
             nargs="?",
@@ -64,10 +77,21 @@ class LatestActivity (cli.CommandApp):
     return parser
 
 
-  def report_clock (self):
+  def report_clock (self, args):
     self.clock = self.exec_request(self.pump, commands.ReadRTC)
     self.time = lib.parse.date(self.clock.getData( ))
+    self.time = self.time.replace(tzinfo=args.timezone)
+    self.timezone = args.timezone
     self.since = self.time - self.delta
+    results = dict(now=self.time.isoformat( )
+              , observed_at=datetime.now(args.timezone).isoformat( )
+              , model=self.pump.model.getData( )
+              , _type='RTC')
+
+    print "```json"
+    args.rtc_archive.write(json.dumps(results, indent=2))
+    print ''
+    print "```"
 
   def report_status (self):
     status = self.exec_request(self.pump, commands.ReadPumpStatus)
@@ -109,6 +133,9 @@ class LatestActivity (cli.CommandApp):
       print "  * found record", record['_type'], record.get('timestamp')
       print "  * should quit", record['timestamp'] < self.since.isoformat( ), self.enough_history
       if record['timestamp']:
+        dt = parse(record['timestamp'])
+        dt = dt.replace(tzinfo=self.timezone)
+        record.update(timestamp=dt.isoformat( ))
         if record['timestamp'] < self.since.isoformat( ):
           self.enough_history = True
         if record['timestamp'] >= self.since.isoformat( ):
@@ -134,7 +161,7 @@ class LatestActivity (cli.CommandApp):
     self.delta = relativedelta.relativedelta(minutes=args.minutes)
     self.report_settings( )
     if args.clock:
-      self.report_clock( )
+      self.report_clock(args )
     if args.status:
       self.report_status( )
     if args.temp:

@@ -42,6 +42,7 @@ from datetime import datetime
 
 import dateutil.parser
 from dateutil import relativedelta
+from binascii import unhexlify
 
 def _fmt_hex( bytez ):
   return ' '.join( [ '%#04x' % x for x in list( bytez ) ] )
@@ -378,6 +379,9 @@ def epochize (dt):
   epoch = datetime.fromtimestamp(0)
   delta = dt - epoch
   return delta.total_seconds( ) * 1000
+
+def hexbytes (hexstr):
+    return bytearray(unhexlify(hexstr))
 
 if __name__ == '__main__':
   import doctest
