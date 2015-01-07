@@ -92,8 +92,17 @@ experiments.
 ```bash
 python decocare/stick.py /dev/ttyUSB0 # on windows this is called COM1
 # should get a bunch of output, notably some counters called INTERFACE STATS
-# run all experiments:
-./status-quo.sh /dev/ttyUSB0 <pump-serial> # use your pump's serial number
+
+export SERIAL=208850
+# Turn RF POWER ON for 10 minutes
+# You have ten minutes to talk with the pump.
+# should say hello, and print serial number
+mm-send-comm.py --init sleep 0
+# print serial number
+mm-send-comm.py sleep 0
+# get logs
+mm-latest.py 
+
 ```
 
 Fantastic.
