@@ -109,7 +109,8 @@ class PagedData (object):
       0x0d: dict(name='SensorSync',packet_size=4,date_type='minSpecific',op='0x0d'),
       0x0e: dict(name='CalBGForGH',packet_size=5,date_type='minSpecific',op='0x0e'),
       0x0f: dict(name='SensorCalFactor',packet_size=6,date_type='minSpecific',op='0x0f'),
-      0x10: dict(name='10-Something',packet_size=7,date_type='minSpecific',op='0x10'),
+      # 0x10: dict(name='10-Something',packet_size=7,date_type='minSpecific',op='0x10'),
+      0x10: dict(name='10-Something',packet_size=4,date_type='minSpecific',op='0x10'),
       0x13: dict(name='19-Something',packet_size=0,date_type='prevTimestamp',op='0x13')
     }
     if self.larger:
@@ -158,7 +159,7 @@ class PagedData (object):
             record.update(waiting='meter_bg_now')
         prefix_records.append(record)
 
-      elif record['name'] == 'SensorTimestamp' or record['name'] == 'SensorCalFactor':
+      elif record['name'] == 'SensorTimestamp' or record['name'] == 'SensorCalFactor' or record['name'] in ['10-Something' ]:
         # TODO: maybe this is like a ResetGlucose base command
         # these are sensor minute timestamped records thus create the record
         # and map prefixed elements based on the timedelta
