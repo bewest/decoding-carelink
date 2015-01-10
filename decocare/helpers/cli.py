@@ -157,11 +157,14 @@ class CommandApp(object):
 
   def autoinit (self, args):
     for n in xrange(3):
+      print "AUTO INIT", n
       self.sniff_model( )
       if len(self.model.getData( )) != 3:
-        print "SENDING POWER ON", model
+        self.stats
+        print "SENDING POWER ON", n
         self.pump.power_control(minutes=args.session_life)
       else:
+        print '### PUMP MODEL: `%s`' % self.model
         break
   def sniff_model (self):
     model = self.pump.read_model( )
@@ -172,6 +175,8 @@ class CommandApp(object):
       print "##### skipping postlude"
       return
     print "### end stats"
+    self.stats( )
+  def stats (self):
     print "```"
     stats = self.uart.interface_stats( )
     print "```"
