@@ -7,9 +7,10 @@
 ATTRS{idVendor}=="0a21", ATTRS{idProduct}=="8001", \
   ENV{ID_MM_DEVICE_IGNORE}="1"
 
-# ACTION=="add", SUBSYSTEM=="usb",                  \
-#  ATTR{idVendor}=="0a21", ATTR{idProduct}=="8001", \
-#  RUN+="/sbin/modprobe usbserial vendor=0x0a21 product=0x8001"
+# when linux 3.18 becomes normal, comment this out
+ACTION=="add", SUBSYSTEM=="usb",                  \
+ATTR{idVendor}=="0a21", ATTR{idProduct}=="8001", \
+RUN+="/sbin/modprobe usbserial vendor=0x0a21 product=0x8001"
 
 # create a symlink to the ttyUSB device created automatically above
 ACTION=="add",                                       \
