@@ -630,6 +630,10 @@ class Stick(object):
     msg = ':'.join(['PROCESS', 'START'
            ] + map(str, [ self.timer.millis( ), self.command]))
     log.info(msg)
+    if size == 0:
+      log.info('Download Size is ZERO, returning nothing')
+      return bytearray( )
+      
     raw = self.send_force_read( )
     # return
     # packet = self.process( )

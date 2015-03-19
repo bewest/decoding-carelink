@@ -1278,6 +1278,8 @@ class ReadPumpModel(PumpCommand):
 
   def getData(self):
     data = self.data
+    if len(data) == 0:
+      return ''
     length = data[0]
     msg = data[1:1+length]
     self.model = msg

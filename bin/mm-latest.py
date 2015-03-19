@@ -63,6 +63,30 @@ class LatestActivity (cli.CommandApp):
             type=argparse.FileType('w'),
             help="Put clock json in this file"
           )
+    parser.add_argument('--reservoir-out',
+            dest="reservoir_archive",
+            default='-',
+            type=argparse.FileType('w'),
+            help="Put reservoir json in this file"
+          )
+    parser.add_argument('--settings-out',
+            dest="settings",
+            default='-',
+            type=argparse.FileType('w'),
+            help="Put settings json in this file"
+          )
+    parser.add_argument('--temp-basal-status-out',
+            dest="tempbasal",
+            default='-',
+            type=argparse.FileType('w'),
+            help="Put temp basal status json in this file"
+          )
+    parser.add_argument('--basals-out',
+            dest="basals",
+            default='-',
+            type=argparse.FileType('w'),
+            help="Put basal schedules json in this file"
+          )
     parser.add_argument('--timezone',
             default=gettz( ),
             type=gettz,
@@ -93,23 +117,26 @@ class LatestActivity (cli.CommandApp):
     print ''
     print "```"
 
-  def report_status (self):
+  def report_status (self, args):
     status = self.exec_request(self.pump, commands.ReadPumpStatus)
     self.status = status.getData( )
 
-  def report_temp (self):
+  def report_temp (self, args):
     temp = self.exec_request(self.pump, commands.ReadBasalTemp)
     self.temp = temp.getData( )
+    args.tempbasal.write(json.dumps(self.temp, indent=2))
     
-  def report_settings (self):
+  def report_settings (self, args):
     settings = self.exec_request(self.pump, commands.ReadSettings)
     self.settings = settings.getData( )
+    args.settings.write(json.dumps(self.settings, indent=2))
 
-  def report_reservoir (self):
+  def report_reservoir (self, args):
     reservoir = self.exec_request(self.pump, commands.ReadRemainingInsulin)
     self.reservoir = reservoir.getData( )
+    args.reservoir_archive.write(json.dumps(self.reservoir, indent=2))
 
-  def report_basal (self):
+  def report_basal (self, args):
     profile = self.settings['selected_pattern']
     query = { 0: commands.ReadProfile_STD512
             , 1: commands.ReadProfile_A512
@@ -117,6 +144,7 @@ class LatestActivity (cli.CommandApp):
             }
     basals = self.exec_request(self.pump, query[profile])
     self.basals = basals.getData( )
+    args.basals.write(json.dumps(self.basals, indent=2))
 
   def download_page (self, number):
     kwds = dict(page=number)
@@ -159,17 +187,17 @@ class LatestActivity (cli.CommandApp):
 
   def main (self, args):
     self.delta = relativedelta.relativedelta(minutes=args.minutes)
-    self.report_settings( )
+    self.report_settings(args)
     if args.clock:
       self.report_clock(args )
     if args.status:
-      self.report_status( )
+      self.report_status(args)
     if args.temp:
-      self.report_temp( )
+      self.report_temp(args)
     if args.basal:
-      self.report_basal( )
+      self.report_basal(args)
     if args.reservoir:
-      self.report_reservoir( )
+      self.report_reservoir(args)
     self.download_history(args)
 
 if __name__ == '__main__':

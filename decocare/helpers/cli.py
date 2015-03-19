@@ -75,6 +75,11 @@ class CommandApp(object):
                         type=int, default=10,
                         help="How long RF sessions should last"
                         )
+    parser.add_argument('--auto-init',
+                        dest='autoinit',
+                        action='store_true', default=False,
+                        help="Send power ctrl to initialize RF session."
+                        )
     parser.add_argument('--init',
                         dest='init',
                         action='store_true', default=False,
@@ -140,18 +145,38 @@ class CommandApp(object):
       print "##### skipping normal RF preludes"
       return
     print "```"
-    if args.init:
-      pump.power_control(minutes=args.session_life)
-    model = pump.read_model( )
-    self.model = model
+    if not args.autoinit:
+      if args.init:
+        pump.power_control(minutes=args.session_life)
+      model = pump.read_model( )
+      self.model = model
+    else:
+      self.autoinit(args)
     print "```"
-    print '### PUMP MODEL: `%s`' % model
+    print '### PUMP MODEL: `%s`' % self.model
 
+  def autoinit (self, args):
+    for n in xrange(3):
+      print "AUTO INIT", n
+      self.sniff_model( )
+      if len(self.model.getData( )) != 3:
+        self.stats
+        print "SENDING POWER ON", n
+        self.pump.power_control(minutes=args.session_life)
+      else:
+        print '### PUMP MODEL: `%s`' % self.model
+        break
+  def sniff_model (self):
+    model = self.pump.read_model( )
+    print "GOT MODEL", model
+    self.model = model
   def postlude (self, args):
     if args.no_postlude:
       print "##### skipping postlude"
       return
     print "### end stats"
+    self.stats( )
+  def stats (self):
     print "```"
     stats = self.uart.interface_stats( )
     print "```"
