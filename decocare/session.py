@@ -93,7 +93,7 @@ class Pump(Session):
     log.info("read HISTORY DATA")
     comm = commands.ReadHistoryData(serial=self.serial, page=0)
     self.execute(comm)
-    log.info('comm:READ history data page!!!:\n%s' % (lib.hexdump(comm.getData( ))))
+    log.info('comm:READ history data page!!!:\n%s' % (comm.getData( )))
 
   def execute(self, command):
     command.serial = self.serial
@@ -131,6 +131,6 @@ if __name__ == '__main__':
   log.info(pformat(stick.interface_stats( )))
   log.info("howdy! all done looking at pump")
   # stick.open( )
-  
+
 #####
 # EOF

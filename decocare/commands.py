@@ -446,7 +446,7 @@ class ReadHistoryData(PumpCommand):
                     ':size[%s]:' % self.size,
                     '[page][%s]' % self.page ])
     return '{}:data[{}]:'.format(base, len(self.data))
-  
+
   def done(self):
     eod = False
     found = len(self.data or [ ])
@@ -487,7 +487,6 @@ class ReadHistoryData(PumpCommand):
     data = self.data
     # log.info("XXX: READ HISTORY DATA!!:\n%s" % lib.hexdump(data))
     return self.hexdump( )
-    return data
 
 class ReadCurPageNumber(PumpCommand):
   """
@@ -979,7 +978,7 @@ class ReadSettings(PumpCommand):
   def getData(self):
     data = self.data
     log.info("READ pump settings:\n%s" % lib.hexdump(data))
-    
+
     if len(data) < 2:
       log.info("pump settings: unsupported version, sorry")
       return data
@@ -990,7 +989,7 @@ class ReadSettings(PumpCommand):
     audio_bolus_size = 0
     if audio_bolus_enable:
       audio_bolus_size = data[3] / 10.0
-    variable_bolus_enable = data[4] == 1  
+    variable_bolus_enable = data[4] == 1
     #MM23 is different
     maxBolus = data[5]/ 10.0
     # MM512 and up
@@ -1350,7 +1349,7 @@ def do_commands(device):
   log.info("read HISTORY DATA")
   comm = ReadHistoryData(serial=device.serial, page=0)
   device.execute(comm)
-  log.info('comm:READ history data page!!!:\n%s' % (lib.hexdump(comm.getData( ))))
+  log.info('comm:READ history data page!!!:\n%s' % (comm.getData( )))
 
 def get_pages(device):
   log.info("read cur page number")
@@ -1496,4 +1495,4 @@ if __name__ == '__main__':
   #log.info(pformat(stick.interface_stats( )))
   log.info("howdy! we downloaded a lot of pump info successfully.")
   # stick.open( )
-  
+
