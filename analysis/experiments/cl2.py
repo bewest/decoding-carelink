@@ -108,7 +108,7 @@ class Link( link.Link ):
     info   = self.decodeProductInfo(result)
     log.info('product info: %s' % pformat(info))
     # decodeInterface stats
-      
+
   def decodeProductInfo(self, data):
     return ProductInfo.decode(data)
 
@@ -311,7 +311,7 @@ class Device(object):
       if res and len(res) > 0:
         return res
       return False
-      
+
     result = retry(fetch_status)
     if not result:
       raise RFFailed("rf read header indicates failure %s" % lib.hexdump(result))
@@ -440,7 +440,7 @@ def get_pages(device):
     comm = ReadHistoryData( params=[ x ] )
     device.execute(comm)
     page = comm.getData( )
-    log.info("XXX: READ HISTORY DATA!!:\n%s" % lib.hexdump(page))
+    log.info("XXX: READ HISTORY DATA!!:\n%s" % page)
   #log.info('comm:READ history data!!!: %r' % (comm.getData( )))
 
 def shutdownDevice(device):
@@ -460,7 +460,7 @@ if __name__ == '__main__':
   except IndexError, e:
     print "usage:\n%s /dev/ttyUSB0" % sys.argv[0]
     sys.exit(1)
-    
+
   link = Link(port)
   link.initUSBComms()
   device = initDevice(link)

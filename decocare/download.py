@@ -22,7 +22,7 @@ class Downloader(object):
     log.info("read HISTORY DATA")
     comm = commands.ReadHistoryData(serial=self.device.serial, page=0)
     self.device.execute(comm)
-    log.info('comm:READ history data page!!!:\n%s' % (lib.hexdump(comm.getData( ))))
+    log.info('comm:READ history data page!!!:\n%s' % (comm.getData( )))
     comm.save(prefix=self.log_format)
 
 class PageDownloader(Downloader):
@@ -49,7 +49,7 @@ class PageDownloader(Downloader):
     self.device.execute(comm)
     page = comm.getData( )
     comm.save(prefix=self.log_format)
-    log.info("XXX: READ HISTORY DATA page number %r!!:\n%s" % (x, lib.hexdump(page)))
+    log.info("XXX: READ HISTORY DATA page number %r!!:\n%s" % (x, page))
     time.sleep(.100)
 
   def download(self):
