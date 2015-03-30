@@ -188,13 +188,11 @@ class PagedData (object):
         records.append(record)
         prefix_records = []
 
-      elif record['name'] == 'SensorStatus' or record['name'] == 'DateTimeChange' \
-        or record['name'] == 'SensorSync' or record['name'] == '10-Something' \
-        or record['name'] == 'CalBGForGH' :
+
+      elif record['name'] in ['SensorStatus', 'DateTimeChange', 'SensorSync', '10-Something', 'CalBGForGH', 'BatteryChange' ]:
         # independent record => parse and add to records list
         record.update(raw=self.byte_to_str(raw_packet))
-        if record['name'] == 'SensorStatus' or record['name'] == 'SensorSync'\
-        or record['name'] == 'CalBGForGH' :
+        if record['name'] in ['SensorStatus', 'SensorSync', 'CalBGForGH', 'BatteryChange']:
           date, body = raw_packet[:4], raw_packet[4:]
           date.reverse()
           date = parse_date(date)
