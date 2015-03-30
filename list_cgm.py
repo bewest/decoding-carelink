@@ -104,6 +104,7 @@ class PagedData (object):
       0x02: dict(name='SensorWeakSignal',packet_size=0,date_type='prevTimestamp',op='0x02'),
       0x03: dict(name='SensorCal',packet_size=1,date_type='prevTimestamp',op='0x03'),
       0x08: dict(name='SensorTimestamp',packet_size=4,date_type='minSpecific',op='0x08'),
+      0x0a: dict(name='BatteryChange',packet_size=4,date_type='minSpecific',op='0x0a'),
       0x0b: dict(name='SensorStatus',packet_size=4,date_type='minSpecific',op='0x0b'),
       0x0c: dict(name='DateTimeChange',packet_size=14,date_type='secSpecific',op='0x0c'),
       0x0d: dict(name='SensorSync',packet_size=4,date_type='minSpecific',op='0x0d'),
