@@ -235,6 +235,12 @@ _confirmed.append(IanA8)
 class BasalProfileStart(KnownRecord):
   opcode = 0x7b
   body_length = 3
+  def __init__(self, head, larger=False):
+    super(type(self), self).__init__(head, larger)
+    if larger:
+      # body_length = 1
+      pass
+      # self.body_length = 48
   def decode (self):
     self.parse_time( )
     if (len(self.body) % 3 == 0):
@@ -412,8 +418,6 @@ class HistoryPage (PagedData):
     # XXX: under some circumstances, zero is the correct value and
     # eat_nulls actually eats valid data.  This ugly hack restores two
     # nulls back ot the end.
-    self.data.append(0x00)
-    self.data.append(0x00)
     self.data.append(0x00)
     self.data.append(0x00)
     self.data.append(0x00)

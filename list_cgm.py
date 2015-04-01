@@ -104,6 +104,7 @@ class PagedData (object):
       0x02: dict(name='SensorWeakSignal',packet_size=0,date_type='prevTimestamp',op='0x02'),
       0x03: dict(name='SensorCal',packet_size=1,date_type='prevTimestamp',op='0x03'),
       0x08: dict(name='SensorTimestamp',packet_size=4,date_type='minSpecific',op='0x08'),
+      0x0a: dict(name='BatteryChange',packet_size=4,date_type='minSpecific',op='0x0a'),
       0x0b: dict(name='SensorStatus',packet_size=4,date_type='minSpecific',op='0x0b'),
       0x0c: dict(name='DateTimeChange',packet_size=14,date_type='secSpecific',op='0x0c'),
       0x0d: dict(name='SensorSync',packet_size=4,date_type='minSpecific',op='0x0d'),
@@ -187,13 +188,11 @@ class PagedData (object):
         records.append(record)
         prefix_records = []
 
-      elif record['name'] == 'SensorStatus' or record['name'] == 'DateTimeChange' \
-        or record['name'] == 'SensorSync' or record['name'] == '10-Something' \
-        or record['name'] == 'CalBGForGH' :
+
+      elif record['name'] in ['SensorStatus', 'DateTimeChange', 'SensorSync', '10-Something', 'CalBGForGH', 'BatteryChange' ]:
         # independent record => parse and add to records list
         record.update(raw=self.byte_to_str(raw_packet))
-        if record['name'] == 'SensorStatus' or record['name'] == 'SensorSync'\
-        or record['name'] == 'CalBGForGH' :
+        if record['name'] in ['SensorStatus', 'SensorSync', 'CalBGForGH', 'BatteryChange']:
           date, body = raw_packet[:4], raw_packet[4:]
           date.reverse()
           date = parse_date(date)
