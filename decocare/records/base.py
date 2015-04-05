@@ -79,6 +79,7 @@ class Base(object):
                          "    hex", lib.hexdump(self.body, indent=4),
                          "    decimal", lib.int_dump(self.body, indent=11) ])
     extra = [ ]
+    """
     hour_bits = self.date[1:] and extra_hour_bits(self.date[1]) or [ ]
     year_bits = self.date[4:] and extra_year_bits(self.date[4]) or [ ]
     day_bits  = self.date[3:] and extra_hour_bits(self.date[3]) or [ ]
@@ -88,6 +89,7 @@ class Base(object):
       extra.append("DAY BITS: {}".format(str(day_bits)))
     if 1 in year_bits:
       extra.append("YEAR BITS: {}".format(str(year_bits)))
+    """
     decoded = None
     if len(self.head + self.date + self.body) >= self.min_length( ):
       decoded = self.decode( )

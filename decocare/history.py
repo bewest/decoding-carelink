@@ -85,6 +85,7 @@ class ChangeBasalProfile_old_profile (KnownRecord):
   # body_length = 46
   # XXX: on LeDanaScott's, 522, this seems right
   body_length = 145
+  # head_length = 3 # XXX: # for 554!?
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
     if larger:
@@ -113,6 +114,8 @@ def describe_rate (offset, rate, q):
 class ChangeBasalProfile_new_profile (KnownRecord):
   opcode = 0x09
   body_length = 145
+  # body_length = 144 # XXX: # for 554!?
+  # head_length = 3 # XXX: # for 554!?
   def decode (self):
     self.parse_time( )
     rates = [ ]
@@ -144,8 +147,11 @@ class PumpResume(KnownRecord):
 
 class Rewind(KnownRecord):
   opcode = 0x21
+
 class EnableDisableRemote(KnownRecord):
   opcode = 0x26
+  # body_length = 14
+  # head_length = 3 # XXX: for 554
   body_length = 14
 class ChangeRemoteID(KnownRecord):
   opcode = 0x27
@@ -253,6 +259,11 @@ _confirmed.append(BasalProfileStart)
 class OldBolusWizardChange (KnownRecord):
   opcode = 0x5a
   body_length = 117
+  def __init__(self, head, larger=False):
+    super(type(self), self).__init__(head, larger)
+    if larger:
+      self.body_length = 117 + 17 + 3
+      pass
 _confirmed.append(OldBolusWizardChange)
 
 class BigBolusWizardChange (KnownRecord):
@@ -273,6 +284,58 @@ class old6c(InvalidRecord):
   body_length = 38
   # body_length = 34
 _confirmed.append(old6c)
+
+class hack83 (KnownRecord):
+  opcode = 0x83
+  # body_length = 1
+_confirmed.append(hack83)
+
+class hack53 (KnownRecord):
+  opcode = 0x53
+  body_length = 1
+_confirmed.append(hack53)
+
+class hack52 (KnownRecord):
+  opcode = 0x52
+  # body_length = 1
+_confirmed.append(hack52)
+
+class hack51 (KnownRecord):
+  opcode = 0x51
+  # body_length = 1
+_confirmed.append(hack51)
+
+class hack55 (KnownRecord):
+  opcode = 0x55
+  # body_length = 1 + 47
+  # body_length = 2 + 46
+  def __init__(self, head, larger=False):
+    super(type(self), self).__init__(head, larger)
+    self.larger = larger
+    self.body_length = (self.head[1] - 1) * 3
+_confirmed.append(hack55)
+
+
+class hack56 (KnownRecord):
+  opcode = 0x56
+  body_length = 5
+_confirmed.append(hack56)
+
+class hack62 (KnownRecord):
+  opcode = 0x62
+  # body_length = 1
+_confirmed.append(hack62)
+
+class hack82 (KnownRecord):
+  opcode = 0x82
+  body_length = 5
+_confirmed.append(hack82)
+
+class hack7d (KnownRecord):
+  opcode = 0x7d
+  body_length = 30
+_confirmed.append(hack7d)
+
 
 class Model522ResultTotals(KnownRecord):
   opcode = 0x6d
@@ -420,16 +483,20 @@ class PagedData (object):
 
 class HistoryPage (PagedData):
   def clean (self, data):
-    data.reverse( )
-    self.data = self.eat_nulls(data)
-    self.data.reverse( )
+    # data.reverse( )
+    # self.data = self.eat_nulls(data)
+    #self.data.reverse( )
     # XXX: under some circumstances, zero is the correct value and
     # eat_nulls actually eats valid data.  This ugly hack restores two
     # nulls back ot the end.
+    self.data = data[:]
+    """
     self.data.append(0x00)
     self.data.append(0x00)
     self.data.append(0x00)
     self.data.append(0x00)
+    self.data.append(0x00)
+    """
     self.stream = io.BufferedReader(io.BytesIO(self.data))
   def decode (self, larger=False):
     records = [ ]
@@ -455,6 +522,9 @@ class HistoryPage (PagedData):
           records.append(rec)
       else:
         rec = dict(_type=str(record.__class__.__name__),
+                   _body=lib.hexlify(record.body),
+                   _head=lib.hexlify(record.head),
+                   _date=lib.hexlify(record.date),
                    _description=str(record))
         data = record.decode( )
         if data is not None:
