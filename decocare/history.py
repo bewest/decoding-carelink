@@ -258,7 +258,15 @@ _confirmed.append(OldBolusWizardChange)
 class BigBolusWizardChange (KnownRecord):
   opcode = 0x5a
   body_length = 143
-  
+
+class SetAutoOff (KnownRecord):
+  opcode = 0x1b
+_confirmed.append(SetAutoOff)
+
+class SetEasyBolusEnabled (KnownRecord):
+  opcode = 0x5f
+_confirmed.append(SetEasyBolusEnabled)
+
 class old6c(InvalidRecord):
   opcode = 0x6c
   #head_length = 45
