@@ -258,6 +258,29 @@ class PumpResume(SetSuspend):
   descr = "Resume pump (cancel suspend)"
   params = [ 0 ]
 
+class SetAutoOff (PumpCommand):
+  code = 78
+  maxRecords = 0
+
+class SetEnabledEasyBolus (PumpCommand):
+  code = 79
+  maxRecords = 0
+
+class SetBasalType (PumpCommand):
+  code = 104
+
+class TempBasalPercent (PumpCommand):
+  """
+
+  """
+
+  code = 105
+  descr = "Set temp basal by percent"
+  params = [ 0x00, 0x00 ]
+  retries = 0
+  #maxRecords = 0
+  #timeout = 1
+
 class KeypadPush(PumpCommand):
   code = 91
   descr = "Press buttons on the keypad"
@@ -1377,6 +1400,7 @@ __all__ = [
   'ReadSettings', 'ReadTotalsToday', 'SetSuspend',
   'PushEASY', 'PushUP', 'PushDOWN', 'PushACT', 'PushESC',
   'TempBasal', 'ManualCommand', 'ReadCurGlucosePageNumber',
+  'TempBasalPercent',
   'Bolus',
   'ReadErrorStatus508',
   'ReadBolusHistory',

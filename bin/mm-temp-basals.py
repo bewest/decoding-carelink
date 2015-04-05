@@ -12,7 +12,7 @@ class TempBasalApp (cli.CommandApp):
   """
   def customize_parser (self, parser):
     parser.add_argument('command',
-                        choices=['query', 'set', ],
+                        choices=['query', 'set', 'percent'],
                         default='query',
                         help="Set or query pump status [default: %(default)s)]"
                         )
@@ -51,6 +51,13 @@ class TempBasalApp (cli.CommandApp):
     basals = self.query_temp(args)
     if args.command == "query":
       pass
+    if args.command == "percent":
+      params = format_percent_params(args)
+      kwds = dict(params=params)
+      msg = commands.TempBasalPercent
+      resp = self.exec_request(self.pump, msg, args=kwds,
+                   dryrun=args.dryrun, render_hexdump=True )
+      basals = self.query_temp(args)
     if args.command == "set":
       params = format_params(args)
       kwds = dict(params=params)
@@ -69,6 +76,12 @@ class TempBasalApp (cli.CommandApp):
                  dryrun=args.dryrun, render_hexdump=False)
     results = resp.getData( )
     return results;
+
+def format_percent_params (args):
+  duration = int(args.duration / 30)
+  rate = int(args.rate)
+  params = [rate, duration]
+  return params
 
 def format_params (args):
   duration = args.duration / 30
