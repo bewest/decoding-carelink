@@ -442,6 +442,9 @@ class HistoryPage (PagedData):
         rec = dict(timestamp=record.datetime.isoformat( ),
                    date=lib.epochize(record.datetime),
                    _type=str(record.__class__.__name__),
+                   _body=lib.hexlify(record.body),
+                   _head=lib.hexlify(record.head),
+                   _date=lib.hexlify(record.date),
                    _description=str(record))
         data = record.decode( )
         if data is not None:
