@@ -503,6 +503,9 @@ class HistoryPage (PagedData):
     skipped = [ ]
     for B in iter(lambda: bytearray(self.stream.read(2)), bytearray("")):
       if B == bytearray( [ 0x00, 0x00 ] ):
+        if skipped:
+          records.extend(skipped)
+          skipped = [ ]
         break
       record = parse_record(self.stream, B, larger=larger )
       if record.datetime:
