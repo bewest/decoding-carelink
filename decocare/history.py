@@ -336,6 +336,71 @@ class hack7d (KnownRecord):
   body_length = 30
 _confirmed.append(hack7d)
 
+class SettingSomething2d (KnownRecord):
+  opcode = 0x2d
+  # body_length = 1
+_confirmed.append(SettingSomething2d)
+
+
+class SettingSomething57 (KnownRecord):
+  opcode = 0x57
+  # body_length = 1
+_confirmed.append(SettingSomething57)
+
+class questionable2c (KnownRecord):
+  opcode = 0x2c
+_confirmed.append(questionable2c)
+
+class questionable22 (KnownRecord):
+  opcode = 0x22
+_confirmed.append(questionable22)
+
+class questionable23 (KnownRecord):
+  opcode = 0x23
+_confirmed.append(questionable23)
+
+class questionable24 (KnownRecord):
+  opcode = 0x24
+_confirmed.append(questionable24)
+
+class questionable60 (KnownRecord):
+  opcode = 0x60
+_confirmed.append(questionable60)
+
+class questionable61 (KnownRecord):
+  opcode = 0x61
+_confirmed.append(questionable61)
+
+class questionable62 (KnownRecord):
+  opcode = 0x62
+_confirmed.append(questionable62)
+
+
+class questionable65 (KnownRecord):
+  opcode = 0x65
+_confirmed.append(questionable65)
+
+class questionable66 (KnownRecord):
+  opcode = 0x66
+_confirmed.append(questionable66)
+
+class questionable6f (KnownRecord):
+  opcode = 0x6f
+_confirmed.append(questionable6f)
+
+class questionable5e (KnownRecord):
+  opcode = 0x5e
+_confirmed.append(questionable5e)
+
+class questionable3c (KnownRecord):
+  opcode = 0x3c
+  body_length = 14
+_confirmed.append(questionable3c)
+
+
+class questionable7c (KnownRecord):
+  opcode = 0x7c
+_confirmed.append(questionable7c)
 
 class Model522ResultTotals(KnownRecord):
   opcode = 0x6d
