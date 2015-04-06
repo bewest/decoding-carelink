@@ -223,15 +223,22 @@ class Ian54(KnownRecord):
   body_length = 57
 _confirmed.append(Ian54)
 
-class Ian0B(KnownRecord):
+class SensorAlert (KnownRecord):
   opcode = 0x0B
   head_length = 3
-_confirmed.append(Ian0B)
+  def decode (self):
+    self.parse_time( )
+    amount = self.head[2]
+    return dict(alarm_type=self.head[1], amount_maybe=amount)
+_confirmed.append(SensorAlert)
 
-class Ian3F(KnownRecord):
+class BGReceived (KnownRecord):
   opcode = 0x3F
   body_length = 3
-_confirmed.append(Ian3F)
+  def decode (self):
+    self.parse_time( )
+    return dict(link=str(self.body).encode('hex'), amount='???')
+_confirmed.append(BGReceived)
 
 class IanA8(KnownRecord):
   opcode = 0xA8

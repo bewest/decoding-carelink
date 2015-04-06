@@ -33,8 +33,11 @@ reading more to debug 0x00
               0    0    6    0    0    0    0    0
               0
 
-#### RECORD 1 Ian0B 2015-03-24T00:12:38 head[3], body[0] op[0x0b]
-
+#### RECORD 1 SensorAlert 2015-03-24T00:12:38 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 115, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x73 0x00                             .s.
     decimal
@@ -43,8 +46,11 @@ reading more to debug 0x00
     0000   0x26 0xcc 0x20 0xb8 0x0f                   &. ..
     body (0)
 
-#### RECORD 2 Ian0B 2015-03-24T00:16:32 head[3], body[0] op[0x0b]
-
+#### RECORD 2 SensorAlert 2015-03-24T00:16:32 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 102, 'amount_maybe': 77}
+```
     op hex (3)
     0000   0x0b 0x66 0x4d                             .fM
     decimal
@@ -53,8 +59,11 @@ reading more to debug 0x00
     0000   0x20 0xd0 0x20 0xb8 0x0f                    . ..
     body (0)
 
-#### RECORD 3 Ian0B 2015-03-24T00:46:30 head[3], body[0] op[0x0b]
-
+#### RECORD 3 SensorAlert 2015-03-24T00:46:30 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 102, 'amount_maybe': 61}
+```
     op hex (3)
     0000   0x0b 0x66 0x3d                             .f=
     decimal
@@ -63,8 +72,11 @@ reading more to debug 0x00
     0000   0x1e 0xee 0x20 0xb8 0x0f                   .. ..
     body (0)
 
-#### RECORD 4 Ian0B 2015-03-24T01:17:59 head[3], body[0] op[0x0b]
-
+#### RECORD 4 SensorAlert 2015-03-24T01:17:59 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 102, 'amount_maybe': 60}
+```
     op hex (3)
     0000   0x0b 0x66 0x3c                             .f<
     decimal
@@ -73,8 +85,11 @@ reading more to debug 0x00
     0000   0x3b 0xd1 0x21 0xb8 0x0f                   ;.!..
     body (0)
 
-#### RECORD 5 Ian0B 2015-03-24T01:47:11 head[3], body[0] op[0x0b]
-
+#### RECORD 5 SensorAlert 2015-03-24T01:47:11 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 102, 'amount_maybe': 74}
+```
     op hex (3)
     0000   0x0b 0x66 0x4a                             .fJ
     decimal
@@ -117,8 +132,11 @@ reading more to debug 0x00
     decimal
               8   38    0
 
-#### RECORD 8 Ian0B 2015-03-24T04:02:47 head[3], body[0] op[0x0b]
-
+#### RECORD 8 SensorAlert 2015-03-24T04:02:47 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 114, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
     decimal
@@ -144,8 +162,11 @@ reading more to debug 0x00
     0000   0x13 0xcc 0x44 0x78 0x0f                   ..Dx.
     body (0)
 
-#### RECORD 10 Ian0B 2015-03-24T04:16:32 head[3], body[0] op[0x0b]
-
+#### RECORD 10 SensorAlert 2015-03-24T04:16:32 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 101, 'amount_maybe': 181}
+```
     op hex (3)
     0000   0x0b 0x65 0xb5                             .e.
     decimal
@@ -154,8 +175,11 @@ reading more to debug 0x00
     0000   0x20 0xd0 0x24 0xb8 0x0f                    .$..
     body (0)
 
-#### RECORD 11 Ian0B 2015-03-24T05:41:49 head[3], body[0] op[0x0b]
-
+#### RECORD 11 SensorAlert 2015-03-24T05:41:49 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 114, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
     decimal
@@ -164,8 +188,11 @@ reading more to debug 0x00
     0000   0x31 0xe9 0x25 0xb8 0x0f                   1.%..
     body (0)
 
-#### RECORD 12 Ian0B 2015-03-24T05:47:11 head[3], body[0] op[0x0b]
-
+#### RECORD 12 SensorAlert 2015-03-24T05:47:11 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 101, 'amount_maybe': 180}
+```
     op hex (3)
     0000   0x0b 0x65 0xb4                             .e.
     decimal
@@ -218,8 +245,11 @@ reading more to debug 0x00
     0000   0x31 0xd1 0x07 0x18 0x0f                   1....
     body (0)
 
-#### RECORD 16 Ian0B 2015-03-24T07:17:59 head[3], body[0] op[0x0b]
-
+#### RECORD 16 SensorAlert 2015-03-24T07:17:59 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 101, 'amount_maybe': 216}
+```
     op hex (3)
     0000   0x0b 0x65 0xd8                             .e.
     decimal
@@ -272,7 +302,7 @@ reading more to debug 0x00
 ###### DECODED
 ```python
 {'bg': 0,
- 'bg_target_high': 100,
+ 'bg_target_high': 120,
  'bg_target_low': 90,
  'bolus_estimate': 4.0,
  'carb_input': 40,
@@ -347,8 +377,11 @@ reading more to debug 0x00
     0000   0x16 0xcf 0x88 0x78 0x0f                   ...x.
     body (0)
 
-#### RECORD 24 Ian0B 2015-03-24T08:46:47 head[3], body[0] op[0x0b]
-
+#### RECORD 24 SensorAlert 2015-03-24T08:46:47 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 101, 'amount_maybe': 205}
+```
     op hex (3)
     0000   0x0b 0x65 0xcd                             .e.
     decimal
@@ -357,8 +390,11 @@ reading more to debug 0x00
     0000   0x2f 0xee 0x28 0xb8 0x0f                   /.(..
     body (0)
 
-#### RECORD 25 Ian0B 2015-03-24T09:30:00 head[3], body[0] op[0x0b]
-
+#### RECORD 25 SensorAlert 2015-03-24T09:30:00 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 105, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x69 0x00                             .i.
     decimal
@@ -384,8 +420,11 @@ reading more to debug 0x00
     decimal
              20   35    0
 
-#### RECORD 27 Ian0B 2015-03-24T10:30:00 head[3], body[0] op[0x0b]
-
+#### RECORD 27 SensorAlert 2015-03-24T10:30:00 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 104, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x68 0x00                             .h.
     decimal
@@ -407,8 +446,11 @@ reading more to debug 0x00
     0000   0x01 0xdf 0x2a 0x78 0x0f                   ..*x.
     body (0)
 
-#### RECORD 29 Ian3F 2015-03-24T10:31:01 head[2], body[3] op[0x3f]
-
+#### RECORD 29 BGReceived 2015-03-24T10:31:01 head[2], body[3] op[0x3f]
+###### DECODED
+```python
+{'amount': '???', 'link': '783436'}
+```
     op hex (2)
     0000   0x3f 0x14                                  ?.
     decimal
@@ -421,8 +463,11 @@ reading more to debug 0x00
     decimal
             120   52   54
 
-#### RECORD 30 Ian0B 2015-03-24T10:56:32 head[3], body[0] op[0x0b]
-
+#### RECORD 30 SensorAlert 2015-03-24T10:56:32 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 114, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
     decimal
@@ -431,8 +476,11 @@ reading more to debug 0x00
     0000   0x20 0xf8 0x2a 0xb8 0x0f                    .*..
     body (0)
 
-#### RECORD 31 Ian0B 2015-03-24T11:22:47 head[3], body[0] op[0x0b]
-
+#### RECORD 31 SensorAlert 2015-03-24T11:22:47 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 101, 'amount_maybe': 180}
+```
     op hex (3)
     0000   0x0b 0x65 0xb4                             .e.
     decimal
@@ -458,8 +506,11 @@ reading more to debug 0x00
     decimal
              24   30    0
 
-#### RECORD 33 Ian0B 2015-03-24T12:52:38 head[3], body[0] op[0x0b]
-
+#### RECORD 33 SensorAlert 2015-03-24T12:52:38 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 101, 'amount_maybe': 213}
+```
     op hex (3)
     0000   0x0b 0x65 0xd5                             .e.
     decimal
@@ -472,7 +523,7 @@ reading more to debug 0x00
 ###### DECODED
 ```python
 {'bg': 0,
- 'bg_target_high': 80,
+ 'bg_target_high': 120,
  'bg_target_low': 90,
  'bolus_estimate': 0.1,
  'carb_input': 52,
@@ -581,8 +632,11 @@ reading more to debug 0x00
     decimal
              30   32    0
 
-#### RECORD 40 Ian0B 2015-03-24T16:37:59 head[3], body[0] op[0x0b]
-
+#### RECORD 40 SensorAlert 2015-03-24T16:37:59 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 114, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
     decimal
@@ -591,8 +645,11 @@ reading more to debug 0x00
     0000   0x3b 0xe5 0x30 0xb8 0x0f                   ;.0..
     body (0)
 
-#### RECORD 41 Ian0B 2015-03-24T17:01:49 head[3], body[0] op[0x0b]
-
+#### RECORD 41 SensorAlert 2015-03-24T17:01:49 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 101, 'amount_maybe': 180}
+```
     op hex (3)
     0000   0x0b 0x65 0xb4                             .e.
     decimal
@@ -601,8 +658,11 @@ reading more to debug 0x00
     0000   0x31 0xc1 0x31 0xb8 0x0f                   1.1..
     body (0)
 
-#### RECORD 42 Ian0B 2015-03-24T18:33:06 head[3], body[0] op[0x0b]
-
+#### RECORD 42 SensorAlert 2015-03-24T18:33:06 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 101, 'amount_maybe': 220}
+```
     op hex (3)
     0000   0x0b 0x65 0xdc                             .e.
     decimal
@@ -632,7 +692,7 @@ reading more to debug 0x00
 ###### DECODED
 ```python
 {'bg': 0,
- 'bg_target_high': 60,
+ 'bg_target_high': 120,
  'bg_target_low': 90,
  'bolus_estimate': 5.0,
  'carb_input': 30,
@@ -699,8 +759,11 @@ reading more to debug 0x00
     0000   0x29 0xd1 0x54 0x78 0x0f                   ).Tx.
     body (0)
 
-#### RECORD 47 Ian0B 2015-03-24T20:27:11 head[3], body[0] op[0x0b]
-
+#### RECORD 47 SensorAlert 2015-03-24T20:27:11 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 114, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
     decimal
@@ -709,8 +772,11 @@ reading more to debug 0x00
     0000   0x0b 0xdb 0x34 0xb8 0x0f                   ..4..
     body (0)
 
-#### RECORD 48 Ian0B 2015-03-24T21:31:00 head[3], body[0] op[0x0b]
-
+#### RECORD 48 SensorAlert 2015-03-24T21:31:00 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 105, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x69 0x00                             .i.
     decimal
@@ -736,8 +802,11 @@ reading more to debug 0x00
     decimal
              44   36    0
 
-#### RECORD 50 Ian0B 2015-03-24T22:21:49 head[3], body[0] op[0x0b]
-
+#### RECORD 50 SensorAlert 2015-03-24T22:21:49 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 114, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
     decimal
@@ -763,8 +832,11 @@ reading more to debug 0x00
     0000   0x06 0xd6 0x56 0x78 0x0f                   ..Vx.
     body (0)
 
-#### RECORD 52 Ian0B 2015-03-24T22:31:00 head[3], body[0] op[0x0b]
-
+#### RECORD 52 SensorAlert 2015-03-24T22:31:00 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 104, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x68 0x00                             .h.
     decimal
@@ -790,8 +862,11 @@ reading more to debug 0x00
     0000   0x1a 0xe0 0x56 0x78 0x0f                   ..Vx.
     body (0)
 
-#### RECORD 54 Ian0B 2015-03-24T23:01:00 head[3], body[0] op[0x0b]
-
+#### RECORD 54 SensorAlert 2015-03-24T23:01:00 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 104, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x68 0x00                             .h.
     decimal
@@ -813,8 +888,11 @@ reading more to debug 0x00
     0000   0x19 0xd5 0x37 0x78 0x0f                   ..7x.
     body (0)
 
-#### RECORD 56 Ian3F 2015-03-24T23:21:25 head[2], body[3] op[0x3f]
-
+#### RECORD 56 BGReceived 2015-03-24T23:21:25 head[2], body[3] op[0x3f]
+###### DECODED
+```python
+{'amount': '???', 'link': '783436'}
+```
     op hex (2)
     0000   0x3f 0x19                                  ?.
     decimal
@@ -917,8 +995,11 @@ reading more to debug 0x00
     0000   0x28 0xd9 0x57 0x78 0x0f                   (.Wx.
     body (0)
 
-#### RECORD 64 Ian0B 2015-03-24T23:36:32 head[3], body[0] op[0x0b]
-
+#### RECORD 64 SensorAlert 2015-03-24T23:36:32 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 101, 'amount_maybe': 202}
+```
     op hex (3)
     0000   0x0b 0x65 0xca                             .e.
     decimal
@@ -984,8 +1065,11 @@ reading more to debug 0x00
               0    4    9    1    0    0    0    0
               0
 
-#### RECORD 68 Ian0B 2015-03-25T01:07:11 head[3], body[0] op[0x0b]
-
+#### RECORD 68 SensorAlert 2015-03-25T01:07:11 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 101, 'amount_maybe': 246}
+```
     op hex (3)
     0000   0x0b 0x65 0xf6                             .e.
     decimal
@@ -1028,8 +1112,11 @@ reading more to debug 0x00
     0000   0x00 0xed 0x41 0x79 0x0f                   ..Ay.
     body (0)
 
-#### RECORD 71 Ian0B 2015-03-25T02:37:58 head[3], body[0] op[0x0b]
-
+#### RECORD 71 SensorAlert 2015-03-25T02:37:58 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 101, 'amount_maybe': 232}
+```
     op hex (3)
     0000   0x0b 0x65 0xe8                             .e.
     decimal
@@ -1055,8 +1142,11 @@ reading more to debug 0x00
     decimal
               8   38    0
 
-#### RECORD 73 Ian0B 2015-03-25T04:06:29 head[3], body[0] op[0x0b]
-
+#### RECORD 73 SensorAlert 2015-03-25T04:06:29 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 114, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
     decimal
@@ -1065,8 +1155,11 @@ reading more to debug 0x00
     0000   0x1d 0xc6 0x24 0xb9 0x0f                   ..$..
     body (0)
 
-#### RECORD 74 Ian0B 2015-03-25T04:33:05 head[3], body[0] op[0x0b]
-
+#### RECORD 74 SensorAlert 2015-03-25T04:33:05 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 101, 'amount_maybe': 182}
+```
     op hex (3)
     0000   0x0b 0x65 0xb6                             .e.
     decimal
@@ -1075,8 +1168,11 @@ reading more to debug 0x00
     0000   0x05 0xe1 0x24 0xb9 0x0f                   ..$..
     body (0)
 
-#### RECORD 75 Ian0B 2015-03-25T06:02:46 head[3], body[0] op[0x0b]
-
+#### RECORD 75 SensorAlert 2015-03-25T06:02:46 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 101, 'amount_maybe': 182}
+```
     op hex (3)
     0000   0x0b 0x65 0xb6                             .e.
     decimal
@@ -1143,7 +1239,7 @@ reading more to debug 0x00
 ###### DECODED
 ```python
 {'bg': 0,
- 'bg_target_high': 100,
+ 'bg_target_high': 120,
  'bg_target_low': 90,
  'bolus_estimate': 6.0,
  'carb_input': 60,
@@ -1214,8 +1310,11 @@ reading more to debug 0x00
     0000   0x1a 0xed 0x87 0x79 0x0f                   ...y.
     body (0)
 
-#### RECORD 84 Ian0B 2015-03-25T09:01:48 head[3], body[0] op[0x0b]
-
+#### RECORD 84 SensorAlert 2015-03-25T09:01:48 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 115, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x73 0x00                             .s.
     decimal
@@ -1241,8 +1340,11 @@ reading more to debug 0x00
     decimal
              20   35    0
 
-#### RECORD 86 Ian0B 2015-03-25T10:21:00 head[3], body[0] op[0x0b]
-
+#### RECORD 86 SensorAlert 2015-03-25T10:21:00 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 105, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x69 0x00                             .i.
     decimal
@@ -1251,8 +1353,11 @@ reading more to debug 0x00
     0000   0x00 0xd5 0x2a 0xb9 0x0f                   ..*..
     body (0)
 
-#### RECORD 87 Ian0B 2015-03-25T11:21:00 head[3], body[0] op[0x0b]
-
+#### RECORD 87 SensorAlert 2015-03-25T11:21:00 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 104, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x68 0x00                             .h.
     decimal
@@ -1261,8 +1366,11 @@ reading more to debug 0x00
     0000   0x00 0xd5 0x2b 0xb9 0x0f                   ..+..
     body (0)
 
-#### RECORD 88 Ian0B 2015-03-25T11:51:00 head[3], body[0] op[0x0b]
-
+#### RECORD 88 SensorAlert 2015-03-25T11:51:00 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 104, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x68 0x00                             .h.
     decimal
@@ -1288,8 +1396,11 @@ reading more to debug 0x00
     decimal
              24   30    0
 
-#### RECORD 90 Ian0B 2015-03-25T12:21:00 head[3], body[0] op[0x0b]
-
+#### RECORD 90 SensorAlert 2015-03-25T12:21:00 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 104, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x68 0x00                             .h.
     decimal
