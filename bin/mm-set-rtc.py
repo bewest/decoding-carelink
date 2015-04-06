@@ -74,7 +74,6 @@ class SetRTCApp (cli.CommandApp):
     if args.dryrun:
       print args.set
       print lib.hexdump(bytearray(commands.SetRTC.fmt_datetime(args.set)))
-      # clocked = lib.parse.date(self.clock.getData( ))
       return
     clock = self.report_clock(args)
     if args.command == "query":
@@ -86,7 +85,6 @@ class SetRTCApp (cli.CommandApp):
       time.sleep(1)
       clock = self.report_clock(args)
 
-      # (serial=pump.serial, params=params)
     args.out.write(json.dumps(clock, indent=2))
 
 if __name__ == '__main__':
