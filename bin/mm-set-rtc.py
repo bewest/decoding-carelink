@@ -89,14 +89,6 @@ class SetRTCApp (cli.CommandApp):
       # (serial=pump.serial, params=params)
     args.out.write(json.dumps(clock, indent=2))
 
-  def query_temp (self, args):
-    query = commands.ReadBasalTemp
-
-    resp = self.exec_request(self.pump, query,
-                 dryrun=args.dryrun, render_hexdump=False)
-    results = resp.getData( )
-    return results;
-
 if __name__ == '__main__':
   app = SetRTCApp( )
   app.run(None)
