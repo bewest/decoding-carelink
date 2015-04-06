@@ -305,12 +305,5 @@
     "_head": "7b00", 
     "rate": 1.0, 
     "_date": "5a0717040f"
-  }, 
-  {
-    "_body": "", 
-    "_head": "2200", 
-    "_type": "Base", 
-    "_date": "400d0b050f", 
-    "_description": "Base (2015, 4, 5, 11, 13, 0) head[2], body[0] op[0x22]"
   }
 ]

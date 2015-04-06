@@ -1,0 +1,53 @@
+[
+  {
+    "_type": "Prime", 
+    "_description": "Prime 2015-04-04T19:42:10 head[5], body[0] op[0x03]", 
+    "timestamp": "2015-04-04T19:42:10", 
+    "_body": "", 
+    "appended": [
+      {
+        "_body": "000000", 
+        "_head": "0700000000", 
+        "_type": "MResultTotals", 
+        "_date": "3f8f", 
+        "_description": "MResultTotals (2015, 3, 32, 0, 0, 0) head[5], body[3] op[0x07]"
+      }, 
+      {
+        "_body": "05000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", 
+        "_head": "6e", 
+        "_type": "Sara6E", 
+        "_date": "3f8f", 
+        "_description": "Sara6E (2015, 3, 32, 0, 0, 0) head[1], body[49] op[0x6e]"
+      }
+    ], 
+    "_head": "030000000a", 
+    "amount": 1.0, 
+    "date": 1428205330000.0, 
+    "fixed": 0.0, 
+    "type": "manual", 
+    "_date": "4a2a33040f"
+  }, 
+  {
+    "_type": "BasalProfileStart", 
+    "_description": "BasalProfileStart 2015-04-04T19:42:23 head[2], body[3] op[0x7b]", 
+    "date": 1428205343000.0, 
+    "timestamp": "2015-04-04T19:42:23", 
+    "_body": "000400", 
+    "offset": 0, 
+    "_head": "7b00", 
+    "rate": 0.1, 
+    "_date": "572a13040f"
+  }, 
+  {
+    "_type": "Prime", 
+    "type": "fixed", 
+    "_description": "Prime 2015-04-04T19:42:21 head[5], body[0] op[0x03]", 
+    "date": 1428205341000.0, 
+    "timestamp": "2015-04-04T19:42:21", 
+    "_body": "", 
+    "fixed": 0.1, 
+    "_head": "0300010001", 
+    "amount": 0.1, 
+    "_date": "552a13040f"
+  }
+]

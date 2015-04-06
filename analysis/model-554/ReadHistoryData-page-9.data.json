@@ -1,0 +1,28 @@
+[
+  {
+    "_type": "LowReservoir", 
+    "_description": "LowReservoir 2015-01-04T10:15:01 head[2], body[0] op[0x34]", 
+    "date": 1420395301000.0, 
+    "timestamp": "2015-01-04T10:15:01", 
+    "_body": "", 
+    "appended": [
+      {
+        "_body": "000000", 
+        "_head": "0700000060", 
+        "_type": "MResultTotals", 
+        "_date": "df0e", 
+        "_description": "MResultTotals (2014, 12, 32, 0, 0, 0) head[5], body[3] op[0x07]"
+      }, 
+      {
+        "_body": "05000000000000000060006064000000000000000000000000000000000000000000000000000000000000000000000000", 
+        "_head": "6e", 
+        "_type": "Sara6E", 
+        "_date": "df0e", 
+        "_description": "Sara6E (2014, 12, 32, 0, 0, 0) head[1], body[49] op[0x6e]"
+      }
+    ], 
+    "_head": "34c8", 
+    "amount": 20.0, 
+    "_date": "014f0a040f"
+  }
+]

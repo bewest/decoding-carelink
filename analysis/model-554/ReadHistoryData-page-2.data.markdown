@@ -101,113 +101,113 @@ reading more to debug 0x00
     0000   0x00 0x40 0x00 0x81 0x08                   .@...
     body (0)
 
-#### RECORD 6 Base (2008, 1, 1, 0, 0, 0) head[2], body[0] op[0x2c]
+#### RECORD 6 questionable2c 2008-01-01T00:00:00 head[2], body[0] op[0x2c]
 
     op hex (2)
     0000   0x2c 0x50                                  ,P
     decimal
              44   80
-    datetime ((2008, 1, 1, 0, 0, 0))
+    datetime (2008-01-01T00:00:00)
     0000   0x00 0x40 0x00 0x81 0x08                   .@...
     body (0)
 
-#### RECORD 7 Base (2008, 1, 1, 0, 0, 0) head[2], body[0] op[0x24]
+#### RECORD 7 questionable24 2008-01-01T00:00:00 head[2], body[0] op[0x24]
 
     op hex (2)
     0000   0x24 0x0c                                  $.
     decimal
              36   12
-    datetime ((2008, 1, 1, 0, 0, 0))
+    datetime (2008-01-01T00:00:00)
     0000   0x00 0x40 0x80 0x81 0x08                   .@...
     body (0)
 
-#### RECORD 8 Base (2008, 1, 1, 0, 0, 0) head[2], body[0] op[0x57]
+#### RECORD 8 SettingSomething57 2008-01-01T00:00:00 head[2], body[0] op[0x57]
 
     op hex (2)
     0000   0x57 0x64                                  Wd
     decimal
              87  100
-    datetime ((2008, 1, 1, 0, 0, 0))
+    datetime (2008-01-01T00:00:00)
     0000   0x00 0x40 0x00 0x81 0x08                   .@...
     body (0)
 
-#### RECORD 9 Base (2008, 1, 1, 0, 0, 0) head[2], body[0] op[0x61]
+#### RECORD 9 questionable61 2008-01-01T00:00:00 head[2], body[0] op[0x61]
 
     op hex (2)
     0000   0x61 0x00                                  a.
     decimal
              97    0
-    datetime ((2008, 1, 1, 0, 0, 0))
+    datetime (2008-01-01T00:00:00)
     0000   0x00 0x40 0x00 0x81 0x08                   .@...
     body (0)
 
-#### RECORD 10 Base (2008, 1, 1, 0, 0, 0) head[2], body[0] op[0x60]
+#### RECORD 10 questionable60 2008-01-01T00:00:00 head[2], body[0] op[0x60]
 
     op hex (2)
     0000   0x60 0x00                                  `.
     decimal
              96    0
-    datetime ((2008, 1, 1, 0, 0, 0))
+    datetime (2008-01-01T00:00:00)
     0000   0x00 0x40 0x00 0x81 0x08                   .@...
     body (0)
 
-#### RECORD 11 Base (2008, 1, 1, 0, 0, 0) head[2], body[0] op[0x23]
+#### RECORD 11 questionable23 2008-01-01T00:00:00 head[2], body[0] op[0x23]
 
     op hex (2)
     0000   0x23 0x00                                  #.
     decimal
              35    0
-    datetime ((2008, 1, 1, 0, 0, 0))
+    datetime (2008-01-01T00:00:00)
     0000   0x00 0x40 0x00 0x81 0x08                   .@...
     body (0)
 
-#### RECORD 12 Base (2008, 1, 1, 0, 0, 0) head[2], body[0] op[0x66]
+#### RECORD 12 questionable66 2008-01-01T00:00:00 head[2], body[0] op[0x66]
 
     op hex (2)
     0000   0x66 0x00                                  f.
     decimal
             102    0
-    datetime ((2008, 1, 1, 0, 0, 0))
+    datetime (2008-01-01T00:00:00)
     0000   0x00 0x40 0x00 0x81 0x08                   .@...
     body (0)
 
-#### RECORD 13 Base (2008, 1, 1, 0, 0, 0) head[2], body[0] op[0x5e]
+#### RECORD 13 questionable5e 2008-01-01T00:00:00 head[2], body[0] op[0x5e]
 
     op hex (2)
     0000   0x5e 0x00                                  ^.
     decimal
              94    0
-    datetime ((2008, 1, 1, 0, 0, 0))
+    datetime (2008-01-01T00:00:00)
     0000   0x00 0x40 0x00 0x81 0x08                   .@...
     body (0)
 
-#### RECORD 14 Base (2008, 1, 1, 0, 0, 0) head[2], body[0] op[0x2d]
+#### RECORD 14 SettingSomething2d 2008-01-01T00:00:00 head[2], body[0] op[0x2d]
 
     op hex (2)
     0000   0x2d 0x00                                  -.
     decimal
              45    0
-    datetime ((2008, 1, 1, 0, 0, 0))
+    datetime (2008-01-01T00:00:00)
     0000   0x00 0x40 0x00 0x81 0x08                   .@...
     body (0)
 
-#### RECORD 15 Base (2008, 1, 1, 0, 0, 0) head[2], body[0] op[0x65]
+#### RECORD 15 questionable65 2008-01-01T00:00:00 head[2], body[0] op[0x65]
 
     op hex (2)
     0000   0x65 0x50                                  eP
     decimal
             101   80
-    datetime ((2008, 1, 1, 0, 0, 0))
+    datetime (2008-01-01T00:00:00)
     0000   0x00 0x40 0x00 0x81 0x08                   .@...
     body (0)
 
-#### RECORD 16 Base (2008, 1, 1, 0, 0, 0) head[2], body[0] op[0x7c]
+#### RECORD 16 questionable7c 2008-01-01T00:00:00 head[2], body[0] op[0x7c]
 
     op hex (2)
     0000   0x7c 0x00                                  |.
     decimal
             124    0
-    datetime ((2008, 1, 1, 0, 0, 0))
+    datetime (2008-01-01T00:00:00)
     0000   0x00 0x40 0x00 0x81 0x08                   .@...
     body (0)
 
@@ -241,37 +241,23 @@ reading more to debug 0x00
     0000   0x00 0x40 0x00 0x81 0x08                   .@...
     body (0)
 
-#### RECORD 20 Base (2008, 1, 1, 0, 0, 0) head[2], body[0] op[0x3c]
+#### RECORD 20 questionable3c 2008-01-01T00:00:00 head[2], body[14] op[0x3c]
 
     op hex (2)
     0000   0x3c 0x00                                  <.
     decimal
              60    0
-    datetime ((2008, 1, 1, 0, 0, 0))
+    datetime (2008-01-01T00:00:00)
     0000   0x00 0x40 0x00 0x81 0x08                   .@...
-    body (0)
-
-#### RECORD 21 Base (2000, 0, 0, 0, 0, 0) head[2], body[0] op[0x3d]
-
-    op hex (2)
-    0000   0x3d 0x00                                  =.
+    body (14)
+    hex
+    0000   0x3d 0x00 0x00 0x00 0x00 0x00 0x00 0x3e    =......>
+    0008   0x00 0x00 0x00 0x00 0x00 0x00              ......
     decimal
-             61    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
+             61    0    0    0    0    0    0   62
+              0    0    0    0    0    0
 
-#### RECORD 22 Base (2000, 0, 0, 0, 0, 0) head[2], body[0] op[0x3e]
-
-    op hex (2)
-    0000   0x3e 0x00                                  >.
-    decimal
-             62    0
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
-    body (0)
-
-#### RECORD 23 SetEasyBolusEnabled 2008-01-01T00:00:00 head[2], body[0] op[0x5f]
+#### RECORD 21 SetEasyBolusEnabled 2008-01-01T00:00:00 head[2], body[0] op[0x5f]
 
     op hex (2)
     0000   0x5f 0x05                                  _.
@@ -281,7 +267,7 @@ reading more to debug 0x00
     0000   0x00 0x40 0x00 0x81 0x08                   .@...
     body (0)
 
-#### RECORD 24 OldBolusWizardChange 2008-01-01T00:00:00 head[2], body[137] op[0x5a]
+#### RECORD 22 OldBolusWizardChange 2008-01-01T00:00:00 head[2], body[137] op[0x5a]
 
     op hex (2)
     0000   0x5a 0x00                                  Z.
@@ -329,17 +315,17 @@ reading more to debug 0x00
               0    0    0    0    0    0    0    0
             111
 
-#### RECORD 25 Base (2008, 1, 1, 0, 0, 0) head[2], body[0] op[0x6f]
+#### RECORD 23 questionable6f 2008-01-01T00:00:00 head[2], body[0] op[0x6f]
 
     op hex (2)
     0000   0x6f 0x01                                  o.
     decimal
             111    1
-    datetime ((2008, 1, 1, 0, 0, 0))
+    datetime (2008-01-01T00:00:00)
     0000   0x00 0x40 0x00 0x81 0x08                   .@...
     body (0)
 
-#### RECORD 26 ChangeBasalProfile_old_profile 2008-01-01T00:00:00 head[2], body[145] op[0x08]
+#### RECORD 24 ChangeBasalProfile_old_profile 2008-01-01T00:00:00 head[2], body[145] op[0x08]
 ###### DECODED
 ```python
 [{'offset': 0, 'rate': 1.0}]
@@ -392,7 +378,7 @@ reading more to debug 0x00
               0    0    0    0    0    0    0    0
               0
 
-#### RECORD 27 ChangeBasalProfile_new_profile 2008-01-01T00:00:00 head[2], body[145] op[0x09]
+#### RECORD 25 ChangeBasalProfile_new_profile 2008-01-01T00:00:00 head[2], body[145] op[0x09]
 ###### DECODED
 ```python
 []
@@ -445,7 +431,7 @@ reading more to debug 0x00
               0    0    0    0    0    0    0    0
               0
 
-#### RECORD 28 ChangeBasalProfile_old_profile 2008-01-01T00:00:00 head[2], body[145] op[0x08]
+#### RECORD 26 ChangeBasalProfile_old_profile 2008-01-01T00:00:00 head[2], body[145] op[0x08]
 ###### DECODED
 ```python
 [{'offset': 113400000, 'rate': 0.0}]
@@ -498,7 +484,7 @@ reading more to debug 0x00
               0    0    0    0    0    0    0    0
               0
 
-#### RECORD 29 ChangeBasalProfile_new_profile 2008-01-01T00:00:00 head[2], body[145] op[0x09]
+#### RECORD 27 ChangeBasalProfile_new_profile 2008-01-01T00:00:00 head[2], body[145] op[0x09]
 ###### DECODED
 ```python
 [{'offset': 113400000, 'rate': 0.0}]
@@ -551,4 +537,4 @@ reading more to debug 0x00
               0    0    0    0    0    0    0    0
               0
 
-`end analysis/model-554/ReadHistoryData-page-2.data: 30 records`
+`end analysis/model-554/ReadHistoryData-page-2.data: 28 records`

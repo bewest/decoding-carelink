@@ -1099,13 +1099,13 @@ reading more to debug 0x00
              39    6  118   77    0    0    0   40
               0    0    0    0    0    0
 
-#### RECORD 81 Base (2015, 4, 5, 11, 13, 0) head[2], body[0] op[0x22]
+#### RECORD 81 questionable22 2015-04-05T11:13:00 head[2], body[0] op[0x22]
 
     op hex (2)
     0000   0x22 0x00                                  ".
     decimal
              34    0
-    datetime ((2015, 4, 5, 11, 13, 0))
+    datetime (2015-04-05T11:13:00)
     0000   0x40 0x0d 0x0b 0x05 0x0f                   @....
     body (0)
 
