@@ -27,6 +27,7 @@ setup(name='decocare',
       'bin/mm-decode-history-page.py',
       'bin/mm-latest.py',
       'bin/mm-bolus.py',
+      'bin/mm-set-rtc.py',
     ],
     classifiers = [
         'Development Status :: 3 - Alpha',
