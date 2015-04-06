@@ -579,11 +579,33 @@ class ReadRTC(PumpCommand):
       'minute': int(data[1]),
       'second': int(data[2]),
       # XXX
-      'year'  : 2000 + (data[4] & 0x0F),
+      'year'  : lib.BangInt([data[3], data[4]]),
       'month' : int(data[5]),
       'day'   : int(data[6]),
     }
-    return "%(year)s-%(month)s-%(day)sT%(hour)s:%(minute)s:%(second)s" % (d)
+    return "{year:#04}-{month:#02}-{day:#02}T{hour:#02}:{minute:#02}:{second:#02}".format(**d)
+
+class SetRTC (PumpCommand):
+  """
+  Set clock
+  """
+  code = 64
+  descr = "Set RTC"
+  retries = 2
+  maxRecords = 0
+
+  __fields__ = PumpCommand.__fields__ + ['clock']
+  def __init__(self, clock=None, **kwds):
+    params = kwds.get('params', [ ])
+    self.clock = kwds.get('clock', None)
+    if len(params) == 0:
+      params.extend(SetRTC.fmt_datetime(clock))
+
+    kwds['params'] = params
+    super(SetRTC, self).__init__(**kwds)
+  @classmethod
+  def fmt_datetime (klass, dt):
+    return [dt.hour, dt.minute, dt.second, lib.HighByte(dt.year), lib.LowByte(dt.year), dt.month, dt.day]
 
 class ReadPumpID(PumpCommand):
   """
