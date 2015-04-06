@@ -43,20 +43,6 @@ class SetRTCApp (cli.CommandApp):
             type=argparse.FileType('w'),
             help="Put basal in this file"
           )
-    """
-    subparsers = parser.add_subparsers(help="Main thing to do", dest="command")
-    basals_parser = subparsers.add_parser("set", help="Just basals between command sets")
-    basals_parser.add_argument('--duration',
-                        dest='duration',
-                        type=int, default=0,
-                        help="Duration of temp rate [default: %(default)s)]"
-                        )
-    basals_parser.add_argument('--rate',
-                        dest='rate',
-                        type=float, default=0,
-                        help="Rate of temp basal [default: %(default)s)]"
-                        )
-    """
     return parser
   def report_clock (self, args):
     self.clock = self.exec_request(self.pump, commands.ReadRTC)
