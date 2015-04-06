@@ -321,11 +321,6 @@ class hack56 (KnownRecord):
   body_length = 5
 _confirmed.append(hack56)
 
-class hack62 (KnownRecord):
-  opcode = 0x62
-  # body_length = 1
-_confirmed.append(hack62)
-
 class hack82 (KnownRecord):
   opcode = 0x82
   body_length = 5
@@ -371,10 +366,10 @@ class questionable61 (KnownRecord):
   opcode = 0x61
 _confirmed.append(questionable61)
 
-class questionable62 (KnownRecord):
+class hack62 (KnownRecord):
   opcode = 0x62
-_confirmed.append(questionable62)
-
+  # body_length = 1
+_confirmed.append(hack62)
 
 class questionable65 (KnownRecord):
   opcode = 0x65
