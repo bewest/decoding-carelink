@@ -297,12 +297,12 @@ reading more to debug 0x00
 ###### DECODED
 ```python
 {'bg': 93,
- 'bg_target_high': 100,
+ 'bg_target_high': 120,
  'bg_target_low': 80,
  'bolus_estimate': 5.3,
  'carb_input': 117,
- 'carb_ratio': 12.0,
- 'correction_estimate': 0.0,
+ 'carb_ratio': 8.0,
+ 'correction_maybe_estimate': 0.0,
  'food_estimate': 5.3,
  'sensitivity': 70,
  'unabsorbed_insulin_total': 0.0}
@@ -379,12 +379,12 @@ reading more to debug 0x00
 ###### DECODED
 ```python
 {'bg': 93,
- 'bg_target_high': 100,
+ 'bg_target_high': 120,
  'bg_target_low': 80,
  'bolus_estimate': 1.1,
  'carb_input': 11,
- 'carb_ratio': 12.0,
- 'correction_estimate': 0.0,
+ 'carb_ratio': 8.0,
+ 'correction_maybe_estimate': 0.0,
  'food_estimate': 1.1,
  'sensitivity': 70,
  'unabsorbed_insulin_total': 1.5}
@@ -420,12 +420,12 @@ reading more to debug 0x00
 ###### DECODED
 ```python
 {'bg': 93,
- 'bg_target_high': 100,
+ 'bg_target_high': 120,
  'bg_target_low': 80,
  'bolus_estimate': 4.5,
  'carb_input': 45,
- 'carb_ratio': 12.0,
- 'correction_estimate': 0.0,
+ 'carb_ratio': 8.0,
+ 'correction_maybe_estimate': 0.0,
  'food_estimate': 4.5,
  'sensitivity': 70,
  'unabsorbed_insulin_total': 1.5}
@@ -522,12 +522,12 @@ reading more to debug 0x00
 ###### DECODED
 ```python
 {'bg': 93,
- 'bg_target_high': 100,
+ 'bg_target_high': 120,
  'bg_target_low': 80,
  'bolus_estimate': 0.0,
  'carb_input': 0,
- 'carb_ratio': 12.0,
- 'correction_estimate': 0.0,
+ 'carb_ratio': 8.0,
+ 'correction_maybe_estimate': 0.0,
  'food_estimate': 0.0,
  'sensitivity': 70,
  'unabsorbed_insulin_total': 5.8}
@@ -581,12 +581,12 @@ reading more to debug 0x00
 ###### DECODED
 ```python
 {'bg': 93,
- 'bg_target_high': 100,
+ 'bg_target_high': 120,
  'bg_target_low': 80,
  'bolus_estimate': 0.0,
  'carb_input': 0,
- 'carb_ratio': 12.0,
- 'correction_estimate': 0.0,
+ 'carb_ratio': 8.0,
+ 'correction_maybe_estimate': 0.0,
  'food_estimate': 0.0,
  'sensitivity': 70,
  'unabsorbed_insulin_total': 0.8}

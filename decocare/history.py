@@ -9,6 +9,7 @@ from binascii import hexlify
 
 import lib
 from records import *
+import models
 
 _remote_ids = [
   bytearray([ 0x01, 0xe2, 0x40 ]),
@@ -271,7 +272,70 @@ class OldBolusWizardChange (KnownRecord):
     if larger:
       self.body_length = 117 + 17 + 3
       pass
+  def decode (self):
+    self.parse_time( )
+    half = (self.body_length - 1) / 2
+    stale = self.body[0:half]
+    changed = self.body[half:-1]
+    tail = self.body[-1]
+    return dict(stale=decode_wizard_settings(stale)
+    # , _changed=changed
+    , changed=decode_wizard_settings(changed)
+    , tail=tail
+    )
+
 _confirmed.append(OldBolusWizardChange)
+def decode_wizard_settings (data, num=8):
+  head = data[0:2]
+  tail = data[len(head):]
+  carb_ratios = tail[0:num*3]
+  tail = tail[num*3:]
+  insulin_sensitivies = tail[0:(num*2)]
+  tail = tail[num*2:]
+  bg_targets = tail[0:(num*3)]
+  return dict(head=str(head).encode('hex')
+  , carb_ratios=decode_carb_ratios(carb_ratios)
+  # , _carb_ratios=str(carb_ratios).encode('hex')
+  # , cr_len=len(carb_ratios)
+  , insulin_sensitivies=decode_insulin_sensitivies(insulin_sensitivies)
+  # , _insulin_sensitivies=str(insulin_sensitivies).encode('hex')
+  # , is_len=len(insulin_sensitivies)
+  # , bg_len=len(bg_targets)
+  , bg_targets=decode_bg_targets(bg_targets)
+  # , _o_len=len(data)
+  # , _bg_targets=str(bg_targets).encode('hex')
+  )
+
+def decode_carb_ratios (data):
+  ratios = [ ]
+  for x in range(8):
+    start = x * 3
+    end = start + 3
+    (offset, q, ratio) = data[start:end]
+    ratios.append(dict(i=x, offset=offset*30, q=q, _offset=offset,
+                       ratio=ratio/10.0, _ratio=ratio))
+  return ratios
+
+def decode_insulin_sensitivies (data):
+  sensitivities = [ ]
+  for x in range(8):
+    start = x * 2
+    end = start + 2
+    (offset, sensitivity) = data[start:end]
+    sensitivities.append(dict(i=x, offset=offset*30, _offset=offset,
+                       sensitivity=sensitivity))
+  return sensitivities
+
+def decode_bg_targets (data):
+  targets = [ ]
+  for x in range(8):
+    start = x * 3
+    end = start + 3
+    (low, high, offset) = data[start:end]
+    targets.append(dict(i=x, offset=offset*30, _offset=offset,
+                       _raw=str(data[start:end]).encode('hex'),
+                       low=low, high=high))
+  return targets 
 
 class BigBolusWizardChange (KnownRecord):
   opcode = 0x5a
@@ -338,10 +402,12 @@ class hack7d (KnownRecord):
   body_length = 30
 _confirmed.append(hack7d)
 
-class SettingSomething2d (KnownRecord):
+class SetBolusWizardEnabled (KnownRecord):
   opcode = 0x2d
-  # body_length = 1
-_confirmed.append(SettingSomething2d)
+  def decode (self):
+    self.parse_time( )
+    return dict(enabled=self.head[1] is 1)
+_confirmed.append(SetBolusWizardEnabled)
 
 
 class SettingSomething57 (KnownRecord):
@@ -483,7 +549,7 @@ for x in _confirmed:
 
 del x
 
-def suggest(head, larger=False):
+def suggest(head, larger=False, model=None):
   """
   Look in the known table of commands to find a suitable record type
   for this opcode.
@@ -492,7 +558,7 @@ def suggest(head, larger=False):
   record = klass(head, larger)
   return record
 
-def parse_record(fd, head=bytearray( ), larger=False):
+def parse_record(fd, head=bytearray( ), larger=False, model=None):
   """
   Given a file-like object, and the head of a record, parse the rest
   of the record.

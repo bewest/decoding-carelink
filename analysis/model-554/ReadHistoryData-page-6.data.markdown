@@ -637,12 +637,12 @@ ERROR day is out of range for month 0000   0x3c 0x0f                            
 ###### DECODED
 ```python
 {'bg': 85,
- 'bg_target_high': 100,
+ 'bg_target_high': 120,
  'bg_target_low': 80,
  'bolus_estimate': 5.0,
  'carb_input': 50,
- 'carb_ratio': 12.0,
- 'correction_estimate': 0.0,
+ 'carb_ratio': 8.0,
+ 'correction_maybe_estimate': 0.0,
  'food_estimate': 5.0,
  'sensitivity': 70,
  'unabsorbed_insulin_total': 3.3}

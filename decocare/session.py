@@ -4,6 +4,7 @@ import time
 log = logging.getLogger( ).getChild(__name__)
 import commands
 import lib
+import models
 from errors import StickError, AckError, BadDeviceCommError
 
 
@@ -86,7 +87,9 @@ class Pump(Session):
 
   def read_model(self):
     model = self.query(commands.ReadPumpModel)
-    self.model = model
+    if len(model.getData( )) != 3:
+      self.modelNumber = model.getData( )
+      self.model = models.lookup(self.modelNumber)
     return model
 
   def read_history_0(self):

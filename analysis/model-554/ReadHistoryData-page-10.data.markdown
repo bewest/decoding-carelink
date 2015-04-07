@@ -187,8 +187,11 @@ reading more to debug 0x00
     0000   0xc0 0x02 0x16 0x08 0x0e                   .....
     body (0)
 
-#### RECORD 18 Ian0B 2014-12-08T22:02:00 head[3], body[0] op[0x0b]
-
+#### RECORD 18 SensorAlert 2014-12-08T22:02:00 head[3], body[0] op[0x0b]
+###### DECODED
+```python
+{'alarm_type': 113, 'amount_maybe': 0}
+```
     op hex (3)
     0000   0x0b 0x71 0x00                             .q.
     decimal

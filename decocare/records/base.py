@@ -17,7 +17,7 @@ class Base(object):
   head_length = 2
   body_length = 0
   date_length = 5
-  def __init__(self, head=bytearray( ), larger=False):
+  def __init__(self, head=bytearray( ), larger=False, model=None):
     self._larger = larger
     self.bolus = bytearray( )
     self.opcode = head[0]
