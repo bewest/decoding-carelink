@@ -869,11 +869,17 @@ class ReadInsulinSensitivities (PumpCommand):
   resp_1 = bytearray(b'\x01\x00-\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
 
   def getData (self):
-    data = self.data
-    isFast = data[17] == 0
-    if isFast:
-      return 'Fast'
-    return 'Regular'
+    # isFast = data[17] == 0
+    isFast = self.data[0] is 1
+    data = self.data[1:1+16]
+    schedule = [ ]
+    for x in range(8):
+      start = x * 2
+      end = start + 2
+      (i, sensitivity) = data[start:end]
+      schedule.append(dict(x=x, i=i, offset=i*30, sensitivity=sensitivity))
+    labels = { True: 'Fast', False: 'Regular' }
+    return dict(sensitivities=schedule, first=self.data[0], action_type=labels[isFast])
 
 # MMPump512/	CMD_READ_BG_TARGETS	140	0x8c	('\x8c')	??
 class ReadBGTargets (PumpCommand):
