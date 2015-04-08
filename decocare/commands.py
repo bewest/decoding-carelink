@@ -854,15 +854,40 @@ class ReadLanguage (PumpCommand):
 # MMPump512/	CMD_READ_BOLUS_WIZARD_SETUP_STATUS	135	0x87	('\x87')	??
 class ReadBolusWizardSetupStatus (PumpCommand):
   code = 135
+
 # MMPump512/	CMD_READ_CARB_UNITS	136	0x88	('\x88')	OK
 class ReadCarbUnits (PumpCommand):
   code = 136
+  def getData (self):
+    labels = { 1 : 'grams', 2: 'exchanges' }
+    return dict(carb_units=labels.get(self.data[0], self.data[0]))
+
 # MMPump512/	CMD_READ_BG_UNITS	137	0x89	('\x89')	??
 class ReadBGUnits (PumpCommand):
   code = 137
+  def getData (self):
+    labels = { 1 : 'mg/dL', 2: 'mmol/L' }
+    return dict(bg_units=labels.get(self.data[0], self.data[0]))
+
 # MMPump512/	CMD_READ_CARB_RATIOS	138	0x8a	('\x8a')	OK
 class ReadCarbRatios (PumpCommand):
   code = 138
+  def getData (self):
+    units = self.data[0]
+    labels = { 1 : 'grams', 2: 'exchanges' }
+    fixed = self.data[1]
+    data = self.data[2:2+(fixed *3)]
+    schedule = [ ]
+    for x in range(8):
+      start = x * 3
+      end = start + 3
+      (i, q, r) = data[start:end]
+      ratio = r/10.0
+      if q:
+        ratio = lib.BangInt([q, r]) / 1000.0
+      schedule.append(dict(x=x, i=i, offset=i*30, q=q, ratio=ratio, r=r))
+    return dict(schedule=schedule, units=labels.get(units), first=self.data[0])
+
 # MMPump512/	CMD_READ_INSULIN_SENSITIVITIES	139	0x8b	('\x8b')	OK
 class ReadInsulinSensitivities (PumpCommand):
   code = 139
@@ -884,6 +909,22 @@ class ReadInsulinSensitivities (PumpCommand):
 # MMPump512/	CMD_READ_BG_TARGETS	140	0x8c	('\x8c')	??
 class ReadBGTargets (PumpCommand):
   code = 140
+class ReadBGTargets515 (PumpCommand):
+  code = 159
+  def getData (self):
+    units = self.data[0]
+    labels = { 1 : 'mg/dL', 2: 'mmol/L' }
+    data = self.data[1:1+24]
+    schedule = [ ]
+    for x in range(8):
+      start = x * 3
+      end = start + 3
+      (i, low, high) = data[start:end]
+      if units is 2:
+        low = low / 10.0
+        high = high / 10.0
+      schedule.append(dict(x=x, i=i, offset=i*30, low=low, high=high))
+    return dict(targets=schedule, units=labels.get(units), first=self.data[0])
 
 # MMPump512/	CMD_READ_BG_ALARM_CLOCKS	142	0x8e	('\x8e')	??
 class ReadBGAlarmCLocks (PumpCommand):
@@ -1471,6 +1512,7 @@ __all__ = [
   'ReadCarbRatios',
   'ReadInsulinSensitivities',
   'ReadBGTargets',
+  'ReadBGTargets515',
   'ReadBGAlarmCLocks',
   'ReadReservoirWarning',
   'ReadBGReminderEnable',

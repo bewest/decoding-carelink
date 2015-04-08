@@ -292,7 +292,12 @@ def decode_wizard_settings (data, num=8):
   tail = tail[num*3:]
   insulin_sensitivies = tail[0:(num*2)]
   tail = tail[num*2:]
-  bg_targets = tail[0:(num*3)]
+  isMg = head[0] & 0b00000100
+  isMmol = head[0] & 0b00001000
+  bg_units = 1
+  if isMmol and not isMg:
+    bg_units = 2
+  bg_targets = tail[0:(num*3)+2]
   return dict(head=str(head).encode('hex')
   , carb_ratios=decode_carb_ratios(carb_ratios)
   # , _carb_ratios=str(carb_ratios).encode('hex')
@@ -301,9 +306,10 @@ def decode_wizard_settings (data, num=8):
   # , _insulin_sensitivies=str(insulin_sensitivies).encode('hex')
   # , is_len=len(insulin_sensitivies)
   # , bg_len=len(bg_targets)
-  , bg_targets=decode_bg_targets(bg_targets)
+  , bg_targets=decode_bg_targets(bg_targets, bg_units)
   # , _o_len=len(data)
   # , _bg_targets=str(bg_targets).encode('hex')
+  , _head = "{0:#010b} {1:#010b}".format(*head)
   )
 
 def decode_carb_ratios (data):
@@ -311,9 +317,12 @@ def decode_carb_ratios (data):
   for x in range(8):
     start = x * 3
     end = start + 3
-    (offset, q, ratio) = data[start:end]
+    (offset, q, r) = data[start:end]
+    ratio = r/10.0
+    if q:
+      ratio = lib.BangInt([q, r]) / 1000.0
     ratios.append(dict(i=x, offset=offset*30, q=q, _offset=offset,
-                       ratio=ratio/10.0, _ratio=ratio))
+                       ratio=ratio, r=r))
   return ratios
 
 def decode_insulin_sensitivies (data):
@@ -326,14 +335,20 @@ def decode_insulin_sensitivies (data):
                        sensitivity=sensitivity))
   return sensitivities
 
-def decode_bg_targets (data):
+def decode_bg_targets (data, bg_units):
+  data = data[2:]
   targets = [ ]
   for x in range(8):
     start = x * 3
     end = start + 3
-    (low, high, offset) = data[start:end]
-    targets.append(dict(i=x, offset=offset*30, _offset=offset,
-                       _raw=str(data[start:end]).encode('hex'),
+    # (low, high, offset) = data[start:end]
+    (offset, low, high) = data[start:end]
+    if bg_units is 2:
+      low = low / 10.0
+      high = high / 10.0
+    targets.append(dict( #i=x,
+                       offset=offset*30, _offset=offset,
+                       # _raw=str(data[start:end]).encode('hex'),
                        low=low, high=high))
   return targets 
 
