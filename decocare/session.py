@@ -85,6 +85,11 @@ class Pump(Session):
     log.info("ENDING manual download:\n%s" % lib.hexdump(data))
     return data
 
+  def setModel (self, model=None, number=None):
+    if number:
+      self.model = models.lookup(number, self)
+    if model:
+      self.model = model
   def read_model(self):
     model = self.query(commands.ReadPumpModel)
     if len(model.getData( )) == 3:

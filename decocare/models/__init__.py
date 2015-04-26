@@ -3,16 +3,32 @@ from decocare import commands
 import types
 
 class Task (object):
-  def __init__ (self, msg, **kwargs):
+  def __init__ (self, msg, handler=None, **kwargs):
     self.msg = msg
-    pass
+    if handler:
+      self.func = handler
   def __get__ (self, obj, objtype=None):
+    print "__get__", self, obj, objtype
     if obj is None:
       return self
     else:
       return types.MethodType(self, obj)
+  def func (self, response):
+    print "default inner func"
+    return response.getData( )
   def __call__ (self, inst):
-    return inst.session.query(self.msg).getData( )
+    # print "__calll__", inst, self.func
+    # self.func( )
+    self.response = inst.session.query(self.msg)
+    return types.MethodType(self.func, inst)(self.response)
+    # return self.response.getData( )
+
+  @classmethod
+  def handler (klass, msg, **kwargs):
+    def closure (func):
+      return Task(msg, handler=func, **kwargs)
+    return closure
+
 
 class PumpModel (object):
   bolus_strokes = 20
@@ -25,6 +41,12 @@ class PumpModel (object):
   read_temp_basal = Task(commands.ReadBasalTemp)
   read_settings = Task(commands.ReadSettings)
   read_reservoir = Task(commands.ReadRemainingInsulin)
+
+  @Task.handler(commands.ReadSettings)
+  def my_read_settings (self, response):
+    self.settings = response
+    print "inner  handler"
+    return response
 
 class Model508 (PumpModel):
   pass
