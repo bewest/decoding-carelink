@@ -87,9 +87,9 @@ class Pump(Session):
 
   def read_model(self):
     model = self.query(commands.ReadPumpModel)
-    if len(model.getData( )) != 3:
+    if len(model.getData( )) == 3:
       self.modelNumber = model.getData( )
-      self.model = models.lookup(self.modelNumber)
+      self.model = models.lookup(self.modelNumber, self)
     return model
 
   def read_history_0(self):

@@ -9,7 +9,7 @@ def scan (prefix='/dev/serial/by-id/usb-', postfix='*'):
   usb_id = "%04x_%04x" % (ID.VENDOR, ID.PRODUCT)
   candidate = ''.join([prefix, usb_id, postfix])
   results = glob.glob(candidate)
-  return results.pop( )
+  return (results[0:1] or ['']).pop( )
 
 if __name__ == '__main__':
   candidate = scan( )

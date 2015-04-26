@@ -1,10 +1,30 @@
 
+from decocare import commands
+import types
+
+class Task (object):
+  def __init__ (self, msg, **kwargs):
+    self.msg = msg
+    pass
+  def __get__ (self, obj, objtype=None):
+    if obj is None:
+      return self
+    else:
+      return types.MethodType(self, obj)
+  def __call__ (self, inst):
+    return inst.session.query(self.msg).getData( )
 
 class PumpModel (object):
   bolus_strokes = 20
   basal_strokes = 40
-  def __init__(self, model):
+  def __init__(self, model, session):
     self.model = model
+    self.session = session
+
+  read_status = Task(commands.ReadPumpStatus)
+  read_temp_basal = Task(commands.ReadBasalTemp)
+  read_settings = Task(commands.ReadSettings)
+  read_reservoir = Task(commands.ReadRemainingInsulin)
 
 class Model508 (PumpModel):
   pass
@@ -45,7 +65,7 @@ known = {
 , '554': Model554
 }
 
-def lookup (model):
+def lookup (model, session):
   klass = known.get(model, PumpModel)
-  return klass(model)
+  return klass(model, session)
 
