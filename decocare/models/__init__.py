@@ -1,5 +1,6 @@
 
 from decocare import commands
+from decocare import lib
 import types
 
 class Task (object):
@@ -8,15 +9,14 @@ class Task (object):
     if handler:
       self.func = handler
   def __get__ (self, obj, objtype=None):
-    print "__get__", self, obj, objtype
     if obj is None:
       return self
     else:
       return types.MethodType(self, obj)
+  @staticmethod
   def func (self, response):
-    print "default inner func"
     return response.getData( )
-  def __call__ (self, inst):
+  def __call__ (self, inst, **kwds):
     # print "__calll__", inst, self.func
     # self.func( )
     self.response = inst.session.query(self.msg)
@@ -44,9 +44,13 @@ class PumpModel (object):
 
   @Task.handler(commands.ReadSettings)
   def my_read_settings (self, response):
-    self.settings = response
-    print "inner  handler"
-    return response
+    self.settings = response.getData( )
+    return self.settings
+
+  @Task.handler(commands.ReadRTC)
+  def read_clock (self, response):
+    clock = lib.parse.date(response.getData( ))
+    return clock
 
 class Model508 (PumpModel):
   pass
