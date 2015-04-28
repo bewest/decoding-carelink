@@ -1,5 +1,5 @@
 
-from decocare import commands
+from decocare import commands, history
 from decocare import lib
 import types
 
@@ -19,7 +19,7 @@ class Task (object):
   def __call__ (self, inst, **kwds):
     # print "__calll__", inst, self.func
     # self.func( )
-    self.response = inst.session.query(self.msg)
+    self.response = inst.session.query(self.msg, **kwds)
     return types.MethodType(self.func, inst)(self.response)
     # return self.response.getData( )
 
@@ -42,6 +42,13 @@ class PumpModel (object):
   read_temp_basal = Task(commands.ReadBasalTemp)
   read_settings = Task(commands.ReadSettings)
   read_reservoir = Task(commands.ReadRemainingInsulin)
+
+  # read_history_data = Task(commands.ReadHistoryData)
+  @Task.handler(commands.ReadHistoryData)
+  def read_history_data (self, response):
+    decoder = history.HistoryPage(response.data, self)
+    records = decoder.decode( )
+    return records
 
   @Task.handler(commands.ReadSettings)
   def my_read_settings (self, response):
