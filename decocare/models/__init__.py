@@ -1,5 +1,5 @@
 
-from decocare import commands, history
+from decocare import commands, history, cgm
 from decocare import lib
 import types
 
@@ -42,12 +42,21 @@ class PumpModel (object):
   read_temp_basal = Task(commands.ReadBasalTemp)
   read_settings = Task(commands.ReadSettings)
   read_reservoir = Task(commands.ReadRemainingInsulin)
+  read_carb_ratios = Task(commands.ReadCarbRatios)
+  read_current_glucose_pages = Task(commands.ReadCurGlucosePageNumber)
+  read_current_history_pages = Task(commands.ReadCurPageNumber)
 
-  # read_history_data = Task(commands.ReadHistoryData)
   @Task.handler(commands.ReadHistoryData)
   def read_history_data (self, response):
     decoder = history.HistoryPage(response.data, self)
     records = decoder.decode( )
+    return records
+
+  @Task.handler(commands.ReadGlucoseHistory)
+  def read_glucose_data (self, response):
+    records = [ ]
+    page = cgm.PagedData.Data(response.data, larger=self.larger)
+    records.extend(page.decode( ))
     return records
 
   @Task.handler(commands.ReadSettings)
