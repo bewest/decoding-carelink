@@ -21,8 +21,8 @@ class Bolus(KnownRecord):
   head_length = 4
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
-    self.larger = larger
-    if larger:
+    # self.larger = larger
+    if self.larger:
       self.head_length = 8
   def decode(self):
     self.parse_time( )
@@ -83,8 +83,8 @@ class BolusWizard(KnownRecord):
   body_length = 13
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
-    self.larger = larger
-    if larger:
+    # self.larger = larger
+    if self.larger:
       self.body_length = 15
   def decode(self):
     self.parse_time( )

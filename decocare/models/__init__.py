@@ -33,6 +33,7 @@ class Task (object):
 class PumpModel (object):
   bolus_strokes = 20
   basal_strokes = 40
+  larger = False
   def __init__(self, model, session):
     self.model = model
     self.session = session
@@ -68,6 +69,7 @@ class Model522 (Model515):
   pass
 
 class Model523 (Model522):
+  larger = True
   pass
 
 class Model530 (Model523):

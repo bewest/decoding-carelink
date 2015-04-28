@@ -58,7 +58,7 @@ class MResultTotals(InvalidRecord):
   #body_length = 2
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
-    if larger:
+    if self.larger:
       self.body_length = 3
   def parse_time(self):
     mid = unmask_m_midnight(self.date)
@@ -89,7 +89,7 @@ class ChangeBasalProfile_old_profile (KnownRecord):
   # head_length = 3 # XXX: # for 554!?
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
-    if larger:
+    if self.larger:
       self.body_length = 145
   def decode (self):
     self.parse_time( )
@@ -251,7 +251,7 @@ class BasalProfileStart(KnownRecord):
   body_length = 3
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
-    if larger:
+    if self.larger:
       # body_length = 1
       pass
       # self.body_length = 48
@@ -269,7 +269,7 @@ class OldBolusWizardChange (KnownRecord):
   body_length = 117
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
-    if larger:
+    if self.larger:
       self.body_length = 117 + 17 + 3
       pass
   def decode (self):
@@ -397,7 +397,7 @@ class hack55 (KnownRecord):
   # body_length = 2 + 46
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
-    self.larger = larger
+    # self.larger = larger
     self.body_length = (self.head[1] - 1) * 3
 _confirmed.append(hack55)
 
@@ -551,7 +551,7 @@ class Sara6E(Model522ResultTotals):
   #body_length = 0
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
-    if larger:
+    if self.larger:
       self.body_length = 48
 _confirmed.append(Sara6E)
 
@@ -570,7 +570,7 @@ def suggest(head, larger=False, model=None):
   for this opcode.
   """
   klass = _known.get(head[0], Base)
-  record = klass(head, larger)
+  record = klass(head, model)
   return record
 
 def parse_record(fd, head=bytearray( ), larger=False, model=None):
@@ -583,7 +583,7 @@ def parse_record(fd, head=bytearray( ), larger=False, model=None):
   # head    = bytearray(fd.read(2))
   date    = bytearray( )
   body    = bytearray( )
-  record  = suggest(head, larger)
+  record  = suggest(head, larger, model=model)
   remaining = record.head_length - len(head)
   if remaining > 0:
     head.extend(bytearray(fd.read(remaining)))
@@ -609,7 +609,8 @@ class PagedData (object):
     PagedData - context for parsing a page of cgm data.
   """
 
-  def __init__ (self, raw):
+  def __init__ (self, raw, model):
+    self.model = model
     data, crc = raw[0:1022], raw[1022:]
     computed = lib.CRC16CCITT.compute(bytearray(data))
     if lib.BangInt(crc) != computed:
@@ -655,7 +656,7 @@ class HistoryPage (PagedData):
           records.extend(skipped)
           skipped = [ ]
         break
-      record = parse_record(self.stream, B, larger=larger )
+      record = parse_record(self.stream, B, larger=larger, model=self.model)
       if record.datetime:
         rec = dict(timestamp=record.datetime.isoformat( ),
                    date=lib.epochize(record.datetime),
