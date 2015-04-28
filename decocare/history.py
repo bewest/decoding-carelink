@@ -9,7 +9,6 @@ from binascii import hexlify
 
 import lib
 from records import *
-import models
 
 _remote_ids = [
   bytearray([ 0x01, 0xe2, 0x40 ]),
