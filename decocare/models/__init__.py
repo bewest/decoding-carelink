@@ -103,7 +103,6 @@ class PumpModel (object):
     Info = commands.ReadCurPageNumber
     Page = commands.ReadHistoryData
     def range (self, info):
-      print info
       start = 0
       end = int(info)
       return xrange(start, end)
