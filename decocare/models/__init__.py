@@ -29,6 +29,46 @@ class Task (object):
       return Task(msg, handler=func, **kwargs)
     return closure
 
+class Cursor (object):
+  # Info
+  # Page
+  def __init__ (self, inst, **kwds):
+    self.inst = inst
+    self.kwds = kwds
+  def get_page_info (self):
+    self.info = self.inst.session.query(self.Info)
+  def download_page (self, num):
+    page = self.inst.session.query(self.Page, page=num)
+    for record in self.find_records(page):
+      yield record
+  def range (self, info):
+    raise NotImplemented( )
+  def find_records (self, response):
+    raise NotImplemented( )
+  def iter (self):
+    self.get_page_info( )
+    for n in self.range(self.info.getData( )):
+      yield self.download_page(n)
+
+class PageIterator (Task):
+
+  def __init__ (self, Cursor=None, handler=None):
+    self.Cursor = Cursor
+    if handler:
+      self.func = handler
+
+  def __call__ (self, inst, **kwds):
+    self.pager = self.Cursor(inst, **kwds)
+    for page in self.pager.iter( ):
+      for record in page:
+        yield record
+
+  @classmethod
+  def handler (klass, **kwargs):
+    def closure (func):
+      return klass(func, **kwargs)
+    return closure
+
 
 class PumpModel (object):
   bolus_strokes = 20
@@ -45,6 +85,32 @@ class PumpModel (object):
   read_carb_ratios = Task(commands.ReadCarbRatios)
   read_current_glucose_pages = Task(commands.ReadCurGlucosePageNumber)
   read_current_history_pages = Task(commands.ReadCurPageNumber)
+
+  @PageIterator.handler( )
+  class iter_glucose_pages (Cursor):
+    Info = commands.ReadCurGlucosePageNumber
+    Page = commands.ReadGlucoseHistory
+    def range (self, info):
+      start = int(info['page'])
+      end = start - int(info['glucose'])
+      return xrange(start, end, -1)
+    def find_records (self, response):
+      page = cgm.PagedData.Data(response.data, larger=self.inst.larger)
+      return page.decode( )
+
+  @PageIterator.handler( )
+  class iter_history_pages (Cursor):
+    Info = commands.ReadCurPageNumber
+    Page = commands.ReadHistoryData
+    def range (self, info):
+      print info
+      start = 0
+      end = int(info)
+      return xrange(start, end)
+    def find_records (self, response):
+      decoder = history.HistoryPage(response.data, self.inst)
+      records = decoder.decode( )
+      return records
 
   @Task.handler(commands.ReadHistoryData)
   def read_history_data (self, response):
@@ -68,6 +134,7 @@ class PumpModel (object):
   def read_clock (self, response):
     clock = lib.parse.date(response.getData( ))
     return clock
+
 
 class Model508 (PumpModel):
   pass
