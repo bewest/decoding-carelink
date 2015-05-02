@@ -15,7 +15,7 @@ setup(name='decocare',
     author_email="bewest+insulaudit@gmail.com",
     url="https://github.com/bewest/decoding-carelink",
     #namespace_packages = ['insulaudit'],
-    packages=['decocare'],
+    packages=find_packages( ),
     install_requires = [
       'pyserial', 'python-dateutil', 'argcomplete'
     ],
