@@ -136,6 +136,7 @@ class PumpModel (object):
 
 
 class Model508 (PumpModel):
+  old6cBody = 31
   pass
 
 class Model511 (Model508):
@@ -148,6 +149,7 @@ class Model515 (Model512):
   pass
 
 class Model522 (Model515):
+  old6cBody = 38
   pass
 
 class Model523 (Model522):

@@ -366,8 +366,14 @@ _confirmed.append(SetEasyBolusEnabled)
 class old6c(InvalidRecord):
   opcode = 0x6c
   #head_length = 45
-  body_length = 38
+  #xxx non 515
+  # body_length = 38
   # body_length = 34
+  # XXX: 515 only?
+  # body_length = 31
+  def __init__ (self, head, model, **kwds):
+    super(old6c, self).__init__(head, model, **kwds)
+    self.body_length = model.old6cBody
 _confirmed.append(old6c)
 
 class hack83 (KnownRecord):
