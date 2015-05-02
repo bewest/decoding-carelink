@@ -258,6 +258,29 @@ class PumpResume(SetSuspend):
   descr = "Resume pump (cancel suspend)"
   params = [ 0 ]
 
+class SetAutoOff (PumpCommand):
+  code = 78
+  maxRecords = 0
+
+class SetEnabledEasyBolus (PumpCommand):
+  code = 79
+  maxRecords = 0
+
+class SetBasalType (PumpCommand):
+  code = 104
+
+class TempBasalPercent (PumpCommand):
+  """
+
+  """
+
+  code = 105
+  descr = "Set temp basal by percent"
+  params = [ 0x00, 0x00 ]
+  retries = 0
+  #maxRecords = 0
+  #timeout = 1
+
 class KeypadPush(PumpCommand):
   code = 91
   descr = "Press buttons on the keypad"
@@ -556,11 +579,33 @@ class ReadRTC(PumpCommand):
       'minute': int(data[1]),
       'second': int(data[2]),
       # XXX
-      'year'  : 2000 + (data[4] & 0x0F),
+      'year'  : lib.BangInt([data[3], data[4]]),
       'month' : int(data[5]),
       'day'   : int(data[6]),
     }
-    return "%(year)s-%(month)s-%(day)sT%(hour)s:%(minute)s:%(second)s" % (d)
+    return "{year:#04}-{month:#02}-{day:#02}T{hour:#02}:{minute:#02}:{second:#02}".format(**d)
+
+class SetRTC (PumpCommand):
+  """
+  Set clock
+  """
+  code = 64
+  descr = "Set RTC"
+  retries = 2
+  maxRecords = 0
+
+  __fields__ = PumpCommand.__fields__ + ['clock']
+  def __init__(self, clock=None, **kwds):
+    params = kwds.get('params', [ ])
+    self.clock = kwds.get('clock', None)
+    if len(params) == 0:
+      params.extend(SetRTC.fmt_datetime(clock))
+
+    kwds['params'] = params
+    super(SetRTC, self).__init__(**kwds)
+  @classmethod
+  def fmt_datetime (klass, dt):
+    return [dt.hour, dt.minute, dt.second, lib.HighByte(dt.year), lib.LowByte(dt.year), dt.month, dt.day]
 
 class ReadPumpID(PumpCommand):
   """
@@ -809,30 +854,77 @@ class ReadLanguage (PumpCommand):
 # MMPump512/	CMD_READ_BOLUS_WIZARD_SETUP_STATUS	135	0x87	('\x87')	??
 class ReadBolusWizardSetupStatus (PumpCommand):
   code = 135
+
 # MMPump512/	CMD_READ_CARB_UNITS	136	0x88	('\x88')	OK
 class ReadCarbUnits (PumpCommand):
   code = 136
+  def getData (self):
+    labels = { 1 : 'grams', 2: 'exchanges' }
+    return dict(carb_units=labels.get(self.data[0], self.data[0]))
+
 # MMPump512/	CMD_READ_BG_UNITS	137	0x89	('\x89')	??
 class ReadBGUnits (PumpCommand):
   code = 137
+  def getData (self):
+    labels = { 1 : 'mg/dL', 2: 'mmol/L' }
+    return dict(bg_units=labels.get(self.data[0], self.data[0]))
+
 # MMPump512/	CMD_READ_CARB_RATIOS	138	0x8a	('\x8a')	OK
 class ReadCarbRatios (PumpCommand):
   code = 138
+  def getData (self):
+    units = self.data[0]
+    labels = { 1 : 'grams', 2: 'exchanges' }
+    fixed = self.data[1]
+    data = self.data[2:2+(fixed *3)]
+    schedule = [ ]
+    for x in range(8):
+      start = x * 3
+      end = start + 3
+      (i, q, r) = data[start:end]
+      ratio = r/10.0
+      if q:
+        ratio = lib.BangInt([q, r]) / 1000.0
+      schedule.append(dict(x=x, i=i, offset=i*30, q=q, ratio=ratio, r=r))
+    return dict(schedule=schedule, units=labels.get(units), first=self.data[0])
+
 # MMPump512/	CMD_READ_INSULIN_SENSITIVITIES	139	0x8b	('\x8b')	OK
 class ReadInsulinSensitivities (PumpCommand):
   code = 139
   resp_1 = bytearray(b'\x01\x00-\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
 
   def getData (self):
-    data = self.data
-    isFast = data[17] == 0
-    if isFast:
-      return 'Fast'
-    return 'Regular'
+    # isFast = data[17] == 0
+    isFast = self.data[0] is 1
+    data = self.data[1:1+16]
+    schedule = [ ]
+    for x in range(8):
+      start = x * 2
+      end = start + 2
+      (i, sensitivity) = data[start:end]
+      schedule.append(dict(x=x, i=i, offset=i*30, sensitivity=sensitivity))
+    labels = { True: 'Fast', False: 'Regular' }
+    return dict(sensitivities=schedule, first=self.data[0], action_type=labels[isFast])
 
 # MMPump512/	CMD_READ_BG_TARGETS	140	0x8c	('\x8c')	??
 class ReadBGTargets (PumpCommand):
   code = 140
+class ReadBGTargets515 (PumpCommand):
+  code = 159
+  def getData (self):
+    units = self.data[0]
+    labels = { 1 : 'mg/dL', 2: 'mmol/L' }
+    data = self.data[1:1+24]
+    schedule = [ ]
+    for x in range(8):
+      start = x * 3
+      end = start + 3
+      (i, low, high) = data[start:end]
+      if units is 2:
+        low = low / 10.0
+        high = high / 10.0
+      schedule.append(dict(x=x, i=i, offset=i*30, low=low, high=high))
+    return dict(targets=schedule, units=labels.get(units), first=self.data[0])
 
 # MMPump512/	CMD_READ_BG_ALARM_CLOCKS	142	0x8e	('\x8e')	??
 class ReadBGAlarmCLocks (PumpCommand):
@@ -1377,6 +1469,10 @@ __all__ = [
   'ReadSettings', 'ReadTotalsToday', 'SetSuspend',
   'PushEASY', 'PushUP', 'PushDOWN', 'PushACT', 'PushESC',
   'TempBasal', 'ManualCommand', 'ReadCurGlucosePageNumber',
+  'SetAutoOff',
+  'SetEnabledEasyBolus',
+  'SetBasalType',
+  'TempBasalPercent',
   'Bolus',
   'ReadErrorStatus508',
   'ReadBolusHistory',
@@ -1416,6 +1512,7 @@ __all__ = [
   'ReadCarbRatios',
   'ReadInsulinSensitivities',
   'ReadBGTargets',
+  'ReadBGTargets515',
   'ReadBGAlarmCLocks',
   'ReadReservoirWarning',
   'ReadBGReminderEnable',

@@ -1,0 +1,27 @@
+[
+  {
+    "_type": "BasalProfileStart", 
+    "_description": "BasalProfileStart 2015-03-11T15:48:02 head[2], body[3] op[0x7b]", 
+    "date": 1426117682000.0, 
+    "timestamp": "2015-03-11T15:48:02", 
+    "_body": "000400", 
+    "offset": 0, 
+    "_head": "7b00", 
+    "rate": 0.1, 
+    "_date": "02f00f0b0f"
+  }, 
+  {
+    "programmed": 1.2, 
+    "_type": "Bolus", 
+    "_description": "Bolus 2015-03-11T15:57:24 head[8], body[0] op[0x01]", 
+    "timestamp": "2015-03-11T15:57:24", 
+    "_body": "", 
+    "_head": "0100300030000000", 
+    "duration": 0, 
+    "amount": 1.2, 
+    "unabsorbed": 0.0, 
+    "date": 1426118244000.0, 
+    "type": "normal", 
+    "_date": "18f94f4b0f"
+  }
+]

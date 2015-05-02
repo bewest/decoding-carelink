@@ -4,6 +4,7 @@ import time
 log = logging.getLogger( ).getChild(__name__)
 import commands
 import lib
+import models
 from errors import StickError, AckError, BadDeviceCommError
 
 
@@ -84,9 +85,15 @@ class Pump(Session):
     log.info("ENDING manual download:\n%s" % lib.hexdump(data))
     return data
 
+  def setModel (self, model=None, number=None):
+    if number:
+      self.model = models.lookup(number, self)
+    if model:
+      self.model = model
   def read_model(self):
     model = self.query(commands.ReadPumpModel)
-    self.model = model
+    self.modelNumber = model.getData( )
+    self.setModel(number=self.modelNumber)
     return model
 
   def read_history_0(self):

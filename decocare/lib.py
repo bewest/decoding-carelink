@@ -42,7 +42,7 @@ from datetime import datetime
 
 import dateutil.parser
 from dateutil import relativedelta
-from binascii import unhexlify
+from binascii import unhexlify, hexlify
 
 def _fmt_hex( bytez ):
   return ' '.join( [ '%#04x' % x for x in list( bytez ) ] )

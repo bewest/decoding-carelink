@@ -15,7 +15,7 @@ setup(name='decocare',
     author_email="bewest+insulaudit@gmail.com",
     url="https://github.com/bewest/decoding-carelink",
     #namespace_packages = ['insulaudit'],
-    packages=['decocare'],
+    packages=find_packages( ),
     install_requires = [
       'pyserial', 'python-dateutil', 'argcomplete'
     ],
@@ -27,6 +27,7 @@ setup(name='decocare',
       'bin/mm-decode-history-page.py',
       'bin/mm-latest.py',
       'bin/mm-bolus.py',
+      'bin/mm-set-rtc.py',
     ],
     classifiers = [
         'Development Status :: 3 - Alpha',

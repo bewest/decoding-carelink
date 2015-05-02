@@ -109,7 +109,7 @@ class LatestActivity (cli.CommandApp):
     self.since = self.time - self.delta
     results = dict(now=self.time.isoformat( )
               , observed_at=datetime.now(args.timezone).isoformat( )
-              , model=self.pump.model.getData( )
+              , model=self.pump.modelNumber
               , _type='RTC')
 
     print "```json"
@@ -152,15 +152,13 @@ class LatestActivity (cli.CommandApp):
     return page
 
   def find_records (self, page, larger=None):
-    if larger is None:
-      larger = int(self.pump.model.getData( )[1:]) > 22
-    decoder = HistoryPage(page)
-    records = decoder.decode(larger=larger)
+    decoder = HistoryPage(page, self.pump.model)
+    records = decoder.decode( )
     print "SINCE", self.since.isoformat( )
     for record in records:
       print "  * found record", record['_type'], record.get('timestamp')
-      print "  * should quit", record['timestamp'] < self.since.isoformat( ), self.enough_history
-      if record['timestamp']:
+      print "  * should quit", record.get('timestamp') < self.since.isoformat( ), self.enough_history
+      if record.get('timestamp'):
         dt = parse(record['timestamp'])
         dt = dt.replace(tzinfo=self.timezone)
         record.update(timestamp=dt.isoformat( ))

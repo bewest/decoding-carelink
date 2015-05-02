@@ -1,6 +1,7 @@
 
+# PYTHON_ARGCOMPLETE_OK
 import sys
-import argparse
+import argparse, argcomplete
 import textwrap
 
 from pprint import pprint, pformat
@@ -9,9 +10,12 @@ from binascii import hexlify
 # from scapy.all import *
 import json
 
-from decocare import lib, history
+from decocare import lib, history, models
 
 from decocare.history import parse_record, HistoryPage
+
+def get_model (spec):
+  return models.known.get(spec, models.PumpModel)(spec, None)
 
 def get_opt_parser( ):
   parser = argparse.ArgumentParser( )
@@ -25,6 +29,9 @@ def get_opt_parser( ):
                       default=False,
                       action='store_true')
 
+  parser.add_argument('--model',
+                      # type=get_model,
+                      choices=models.known.keys( ))
   parser.add_argument('--larger',
                       dest='larger', action='store_true')
   parser.add_argument('--no-larger',
@@ -35,6 +42,7 @@ def get_opt_parser( ):
                       type=argparse.FileType('w'),
                       help="Write records here.")
   parser.set_defaults(larger=False)
+  argcomplete.autocomplete(parser)
   return parser
 
 ##
@@ -76,7 +84,7 @@ def find_records(stream, opts):
       print lib.int_dump(extra, indent=11)
       # print "XXX:???:XXX", history.parse_date(bolus).isoformat( )
       break
-    record = parse_record( stream, B, larger=opts.larger )
+    record = parse_record( stream, B, model=opts.model, larger=opts.larger )
     records.append(record)
 
   return records
@@ -84,6 +92,7 @@ def find_records(stream, opts):
 def main( ):
   parser = get_opt_parser( )
   opts = parser.parse_args( )
+  opts.model = get_model(opts.model)
   tw_opts = {
     'width': 50,
     'subsequent_indent': '          ',
@@ -94,7 +103,7 @@ def main( ):
   for stream in opts.infile:
     print "## START %s" % (stream.name)
     if opts.collate:
-      page = HistoryPage(bytearray(stream.read( )))
+      page = HistoryPage(bytearray(stream.read( )), opts.model)
       records.extend(page.decode(larger=opts.larger ))
     else:
       records = find_records(stream, opts)

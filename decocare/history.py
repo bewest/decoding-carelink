@@ -57,7 +57,7 @@ class MResultTotals(InvalidRecord):
   #body_length = 2
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
-    if larger:
+    if self.larger:
       self.body_length = 3
   def parse_time(self):
     mid = unmask_m_midnight(self.date)
@@ -85,9 +85,10 @@ class ChangeBasalProfile_old_profile (KnownRecord):
   # body_length = 46
   # XXX: on LeDanaScott's, 522, this seems right
   body_length = 145
+  # head_length = 3 # XXX: # for 554!?
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
-    if larger:
+    if self.larger:
       self.body_length = 145
   def decode (self):
     self.parse_time( )
@@ -113,6 +114,8 @@ def describe_rate (offset, rate, q):
 class ChangeBasalProfile_new_profile (KnownRecord):
   opcode = 0x09
   body_length = 145
+  # body_length = 144 # XXX: # for 554!?
+  # head_length = 3 # XXX: # for 554!?
   def decode (self):
     self.parse_time( )
     rates = [ ]
@@ -144,8 +147,11 @@ class PumpResume(KnownRecord):
 
 class Rewind(KnownRecord):
   opcode = 0x21
+
 class EnableDisableRemote(KnownRecord):
   opcode = 0x26
+  # body_length = 14
+  # head_length = 3 # XXX: for 554
   body_length = 14
 class ChangeRemoteID(KnownRecord):
   opcode = 0x27
@@ -217,15 +223,22 @@ class Ian54(KnownRecord):
   body_length = 57
 _confirmed.append(Ian54)
 
-class Ian0B(KnownRecord):
+class SensorAlert (KnownRecord):
   opcode = 0x0B
   head_length = 3
-_confirmed.append(Ian0B)
+  def decode (self):
+    self.parse_time( )
+    amount = self.head[2]
+    return dict(alarm_type=self.head[1], amount_maybe=amount)
+_confirmed.append(SensorAlert)
 
-class Ian3F(KnownRecord):
+class BGReceived (KnownRecord):
   opcode = 0x3F
   body_length = 3
-_confirmed.append(Ian3F)
+  def decode (self):
+    self.parse_time( )
+    return dict(link=str(self.body).encode('hex'), amount='???')
+_confirmed.append(BGReceived)
 
 class IanA8(KnownRecord):
   opcode = 0xA8
@@ -237,7 +250,7 @@ class BasalProfileStart(KnownRecord):
   body_length = 3
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
-    if larger:
+    if self.larger:
       # body_length = 1
       pass
       # self.body_length = 48
@@ -253,18 +266,223 @@ _confirmed.append(BasalProfileStart)
 class OldBolusWizardChange (KnownRecord):
   opcode = 0x5a
   body_length = 117
+  def __init__(self, head, larger=False):
+    super(type(self), self).__init__(head, larger)
+    if self.larger:
+      self.body_length = 117 + 17 + 3
+      pass
+  def decode (self):
+    self.parse_time( )
+    half = (self.body_length - 1) / 2
+    stale = self.body[0:half]
+    changed = self.body[half:-1]
+    tail = self.body[-1]
+    return dict(stale=decode_wizard_settings(stale)
+    # , _changed=changed
+    , changed=decode_wizard_settings(changed)
+    , tail=tail
+    )
+
 _confirmed.append(OldBolusWizardChange)
+def decode_wizard_settings (data, num=8):
+  head = data[0:2]
+  tail = data[len(head):]
+  carb_ratios = tail[0:num*3]
+  tail = tail[num*3:]
+  insulin_sensitivies = tail[0:(num*2)]
+  tail = tail[num*2:]
+  isMg = head[0] & 0b00000100
+  isMmol = head[0] & 0b00001000
+  bg_units = 1
+  if isMmol and not isMg:
+    bg_units = 2
+  bg_targets = tail[0:(num*3)+2]
+  return dict(head=str(head).encode('hex')
+  , carb_ratios=decode_carb_ratios(carb_ratios)
+  # , _carb_ratios=str(carb_ratios).encode('hex')
+  # , cr_len=len(carb_ratios)
+  , insulin_sensitivies=decode_insulin_sensitivies(insulin_sensitivies)
+  # , _insulin_sensitivies=str(insulin_sensitivies).encode('hex')
+  # , is_len=len(insulin_sensitivies)
+  # , bg_len=len(bg_targets)
+  , bg_targets=decode_bg_targets(bg_targets, bg_units)
+  # , _o_len=len(data)
+  # , _bg_targets=str(bg_targets).encode('hex')
+  , _head = "{0:#010b} {1:#010b}".format(*head)
+  )
+
+def decode_carb_ratios (data):
+  ratios = [ ]
+  for x in range(8):
+    start = x * 3
+    end = start + 3
+    (offset, q, r) = data[start:end]
+    ratio = r/10.0
+    if q:
+      ratio = lib.BangInt([q, r]) / 1000.0
+    ratios.append(dict(i=x, offset=offset*30, q=q, _offset=offset,
+                       ratio=ratio, r=r))
+  return ratios
+
+def decode_insulin_sensitivies (data):
+  sensitivities = [ ]
+  for x in range(8):
+    start = x * 2
+    end = start + 2
+    (offset, sensitivity) = data[start:end]
+    sensitivities.append(dict(i=x, offset=offset*30, _offset=offset,
+                       sensitivity=sensitivity))
+  return sensitivities
+
+def decode_bg_targets (data, bg_units):
+  data = data[2:]
+  targets = [ ]
+  for x in range(8):
+    start = x * 3
+    end = start + 3
+    # (low, high, offset) = data[start:end]
+    (offset, low, high) = data[start:end]
+    if bg_units is 2:
+      low = low / 10.0
+      high = high / 10.0
+    targets.append(dict( #i=x,
+                       offset=offset*30, _offset=offset,
+                       # _raw=str(data[start:end]).encode('hex'),
+                       low=low, high=high))
+  return targets 
 
 class BigBolusWizardChange (KnownRecord):
   opcode = 0x5a
   body_length = 143
-  
+
+class SetAutoOff (KnownRecord):
+  opcode = 0x1b
+_confirmed.append(SetAutoOff)
+
+class SetEasyBolusEnabled (KnownRecord):
+  opcode = 0x5f
+_confirmed.append(SetEasyBolusEnabled)
+
 class old6c(InvalidRecord):
   opcode = 0x6c
   #head_length = 45
   body_length = 38
   # body_length = 34
 _confirmed.append(old6c)
+
+class hack83 (KnownRecord):
+  opcode = 0x83
+  # body_length = 1
+_confirmed.append(hack83)
+
+class hack53 (KnownRecord):
+  opcode = 0x53
+  body_length = 1
+_confirmed.append(hack53)
+
+class hack52 (KnownRecord):
+  opcode = 0x52
+  # body_length = 1
+_confirmed.append(hack52)
+
+class hack51 (KnownRecord):
+  opcode = 0x51
+  # body_length = 1
+_confirmed.append(hack51)
+
+class hack55 (KnownRecord):
+  opcode = 0x55
+  # body_length = 1 + 47
+  # body_length = 2 + 46
+  def __init__(self, head, larger=False):
+    super(type(self), self).__init__(head, larger)
+    # self.larger = larger
+    self.body_length = (self.head[1] - 1) * 3
+_confirmed.append(hack55)
+
+
+class hack56 (KnownRecord):
+  opcode = 0x56
+  body_length = 5
+_confirmed.append(hack56)
+
+class hack82 (KnownRecord):
+  opcode = 0x82
+  body_length = 5
+_confirmed.append(hack82)
+
+class hack7d (KnownRecord):
+  opcode = 0x7d
+  body_length = 30
+_confirmed.append(hack7d)
+
+class SetBolusWizardEnabled (KnownRecord):
+  opcode = 0x2d
+  def decode (self):
+    self.parse_time( )
+    return dict(enabled=self.head[1] is 1)
+_confirmed.append(SetBolusWizardEnabled)
+
+
+class SettingSomething57 (KnownRecord):
+  opcode = 0x57
+  # body_length = 1
+_confirmed.append(SettingSomething57)
+
+class questionable2c (KnownRecord):
+  opcode = 0x2c
+_confirmed.append(questionable2c)
+
+class questionable22 (KnownRecord):
+  opcode = 0x22
+_confirmed.append(questionable22)
+
+class questionable23 (KnownRecord):
+  opcode = 0x23
+_confirmed.append(questionable23)
+
+class questionable24 (KnownRecord):
+  opcode = 0x24
+_confirmed.append(questionable24)
+
+class questionable60 (KnownRecord):
+  opcode = 0x60
+_confirmed.append(questionable60)
+
+class questionable61 (KnownRecord):
+  opcode = 0x61
+_confirmed.append(questionable61)
+
+class hack62 (KnownRecord):
+  opcode = 0x62
+  # body_length = 1
+_confirmed.append(hack62)
+
+class questionable65 (KnownRecord):
+  opcode = 0x65
+_confirmed.append(questionable65)
+
+class questionable66 (KnownRecord):
+  opcode = 0x66
+_confirmed.append(questionable66)
+
+class questionable6f (KnownRecord):
+  opcode = 0x6f
+_confirmed.append(questionable6f)
+
+class questionable5e (KnownRecord):
+  opcode = 0x5e
+_confirmed.append(questionable5e)
+
+class questionable3c (KnownRecord):
+  opcode = 0x3c
+  body_length = 14
+_confirmed.append(questionable3c)
+
+
+class questionable7c (KnownRecord):
+  opcode = 0x7c
+_confirmed.append(questionable7c)
 
 class Model522ResultTotals(KnownRecord):
   opcode = 0x6d
@@ -332,7 +550,7 @@ class Sara6E(Model522ResultTotals):
   #body_length = 0
   def __init__(self, head, larger=False):
     super(type(self), self).__init__(head, larger)
-    if larger:
+    if self.larger:
       self.body_length = 48
 _confirmed.append(Sara6E)
 
@@ -345,16 +563,16 @@ for x in _confirmed:
 
 del x
 
-def suggest(head, larger=False):
+def suggest(head, larger=False, model=None):
   """
   Look in the known table of commands to find a suitable record type
   for this opcode.
   """
   klass = _known.get(head[0], Base)
-  record = klass(head, larger)
+  record = klass(head, model)
   return record
 
-def parse_record(fd, head=bytearray( ), larger=False):
+def parse_record(fd, head=bytearray( ), larger=False, model=None):
   """
   Given a file-like object, and the head of a record, parse the rest
   of the record.
@@ -364,7 +582,7 @@ def parse_record(fd, head=bytearray( ), larger=False):
   # head    = bytearray(fd.read(2))
   date    = bytearray( )
   body    = bytearray( )
-  record  = suggest(head, larger)
+  record  = suggest(head, larger, model=model)
   remaining = record.head_length - len(head)
   if remaining > 0:
     head.extend(bytearray(fd.read(remaining)))
@@ -390,7 +608,8 @@ class PagedData (object):
     PagedData - context for parsing a page of cgm data.
   """
 
-  def __init__ (self, raw):
+  def __init__ (self, raw, model):
+    self.model = model
     data, crc = raw[0:1022], raw[1022:]
     computed = lib.CRC16CCITT.compute(bytearray(data))
     if lib.BangInt(crc) != computed:
@@ -412,28 +631,38 @@ class PagedData (object):
 
 class HistoryPage (PagedData):
   def clean (self, data):
-    data.reverse( )
-    self.data = self.eat_nulls(data)
-    self.data.reverse( )
+    # data.reverse( )
+    # self.data = self.eat_nulls(data)
+    #self.data.reverse( )
+    self.data = data[:]
     # XXX: under some circumstances, zero is the correct value and
     # eat_nulls actually eats valid data.  This ugly hack restores two
     # nulls back ot the end.
+    """
     self.data.append(0x00)
     self.data.append(0x00)
     self.data.append(0x00)
     self.data.append(0x00)
+    self.data.append(0x00)
+    """
     self.stream = io.BufferedReader(io.BytesIO(self.data))
   def decode (self, larger=False):
     records = [ ]
     skipped = [ ]
     for B in iter(lambda: bytearray(self.stream.read(2)), bytearray("")):
       if B == bytearray( [ 0x00, 0x00 ] ):
+        if skipped:
+          records.extend(skipped)
+          skipped = [ ]
         break
-      record = parse_record(self.stream, B, larger=larger )
+      record = parse_record(self.stream, B, larger=larger, model=self.model)
       if record.datetime:
         rec = dict(timestamp=record.datetime.isoformat( ),
                    date=lib.epochize(record.datetime),
                    _type=str(record.__class__.__name__),
+                   _body=lib.hexlify(record.body),
+                   _head=lib.hexlify(record.head),
+                   _date=lib.hexlify(record.date),
                    _description=str(record))
         data = record.decode( )
         if data is not None:
@@ -444,6 +673,9 @@ class HistoryPage (PagedData):
           records.append(rec)
       else:
         rec = dict(_type=str(record.__class__.__name__),
+                   _body=lib.hexlify(record.body),
+                   _head=lib.hexlify(record.head),
+                   _date=lib.hexlify(record.date),
                    _description=str(record))
         data = record.decode( )
         if data is not None:
