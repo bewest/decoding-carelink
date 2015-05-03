@@ -18,6 +18,7 @@ from dateutil.relativedelta import relativedelta
 
 from decocare import lib
 from decocare.records import times
+from pprint import pprint
 
 ###################
 #
@@ -115,7 +116,7 @@ class PagedData (object):
       0x08: dict(name='SensorTimestamp',packet_size=4,date_type='minSpecific',op='0x08'),
       0x0a: dict(name='BatteryChange',packet_size=4,date_type='minSpecific',op='0x0a'),
       0x0b: dict(name='SensorStatus',packet_size=4,date_type='minSpecific',op='0x0b'),
-      0x0c: dict(name='DateTimeChange',packet_size=14,date_type='secSpecific',op='0x0c'),
+      0x0c: dict(name='DateTimeChange',packet_size=4,date_type='secSpecific',op='0x0c'),
       0x0d: dict(name='SensorSync',packet_size=4,date_type='minSpecific',op='0x0d'),
       0x0e: dict(name='CalBGForGH',packet_size=5,date_type='minSpecific',op='0x0e'),
       0x0f: dict(name='SensorCalFactor',packet_size=6,date_type='minSpecific',op='0x0f'),
@@ -193,7 +194,7 @@ class PagedData (object):
         if record['name'] == 'SensorCalFactor': 
           factor = lib.BangInt([ body[0], body[1] ]) / 1000.0
           record.update(factor=factor) 
-        records.append(mapped_glucose_records)
+        records.extend(mapped_glucose_records)
         records.append(record)
         prefix_records = []
 
@@ -201,13 +202,20 @@ class PagedData (object):
       elif record['name'] in ['SensorStatus', 'DateTimeChange', 'SensorSync', '10-Something', 'CalBGForGH', 'BatteryChange' ]:
         # independent record => parse and add to records list
         record.update(raw=self.byte_to_str(raw_packet))
-        if record['name'] in ['SensorStatus', 'SensorSync', 'CalBGForGH', 'BatteryChange']:
+        if record['name'] in ['SensorStatus', 'SensorSync', 'CalBGForGH', 'BatteryChange', 'DateTimeChange']:
           date, body = raw_packet[:4], raw_packet[4:]
           date.reverse()
           date = parse_date(date)
           record.update(date=date.isoformat())
           record.update(body=self.byte_to_str(body))
           # Update cal amount
+          if record['name'] == 'DateTimeChange':
+            """
+            changed = body[1:5]
+            changed.reverse( )
+            changed = parse_date(changed)
+            record.update(change=changed.isoformat( ), body=self.byte_to_str(body[5:]))
+            """
           if record['name'] == 'CalBGForGH':
             amount = int(body[0])
             if amount < 32:
