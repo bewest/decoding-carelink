@@ -274,18 +274,20 @@ class OldBolusWizardChange (KnownRecord):
     stale = self.body[0:half]
     changed = self.body[half:-1]
     tail = self.body[-1]
-    return dict(stale=decode_wizard_settings(stale)
+    return dict(stale=decode_wizard_settings(stale, model=self.model)
     # , _changed=changed
-    , changed=decode_wizard_settings(changed)
+    , changed=decode_wizard_settings(changed, model=self.model)
     , tail=tail
     )
 
 _confirmed.append(OldBolusWizardChange)
-def decode_wizard_settings (data, num=8):
+def decode_wizard_settings (data, num=8, model=None):
   head = data[0:2]
   tail = data[len(head):]
-  carb_ratios = tail[0:num*3]
-  tail = tail[num*3:]
+  carb_reader = model.read_carb_ratios.msg
+  cr_size = carb_reader.item_size
+  carb_ratios = tail[0:num*cr_size]
+  tail = tail[num*cr_size:]
   insulin_sensitivies = tail[0:(num*2)]
   tail = tail[num*2:]
   isMg = head[0] & 0b00000100
@@ -294,8 +296,11 @@ def decode_wizard_settings (data, num=8):
   if isMmol and not isMg:
     bg_units = 2
   bg_targets = tail[0:(num*3)+2]
+  if model and model.larger:
+    bg_targets = bg_targets[2:]
   return dict(head=str(head).encode('hex')
-  , carb_ratios=decode_carb_ratios(carb_ratios)
+  # , carb_ratios=decode_carb_ratios(carb_ratios)
+  , carb_ratios=carb_reader.decode_ratios(carb_ratios)
   # , _carb_ratios=str(carb_ratios).encode('hex')
   # , cr_len=len(carb_ratios)
   , insulin_sensitivies=decode_insulin_sensitivies(insulin_sensitivies)
@@ -332,7 +337,7 @@ def decode_insulin_sensitivies (data):
   return sensitivities
 
 def decode_bg_targets (data, bg_units):
-  data = data[2:]
+  # data = data[2:]
   targets = [ ]
   for x in range(8):
     start = x * 3
