@@ -60,14 +60,11 @@ class MResultTotals(InvalidRecord):
     if self.larger:
       self.body_length = 3
   def parse_time(self):
-    mid = unmask_m_midnight(self.date)
-    try:
-      self.datetime = date = datetime(*mid)
-      return date
-    except ValueError, e:
-      print "ERROR", e, mid, lib.hexdump(self.date)
-      pass
-    return mid
+    date = parse_midnight(self.date)
+    self.datetime = date
+    if not hasattr(date, 'isoformat'):
+      self.datetime = None
+    return date
 
 
   def date_str(self):
@@ -363,19 +360,6 @@ class SetEasyBolusEnabled (KnownRecord):
   opcode = 0x5f
 _confirmed.append(SetEasyBolusEnabled)
 
-class old6c(InvalidRecord):
-  opcode = 0x6c
-  #head_length = 45
-  #xxx non 515
-  # body_length = 38
-  # body_length = 34
-  # XXX: 515 only?
-  # body_length = 31
-  def __init__ (self, head, model, **kwds):
-    super(old6c, self).__init__(head, model, **kwds)
-    self.body_length = model.old6cBody
-_confirmed.append(old6c)
-
 class hack83 (KnownRecord):
   opcode = 0x83
   # body_length = 1
@@ -496,16 +480,12 @@ class Model522ResultTotals(KnownRecord):
   date_length = 2
   body_length = 40
   def parse_time(self):
-    mid = unmask_m_midnight(self.date)
-    try:
-      self.datetime = date = datetime(*mid)
-      return date
-    except ValueError, e:
-      print "ERROR", e, lib.hexdump(self.date)
-      pass
-    return mid
-      
-    
+    date = parse_midnight(self.date)
+    self.datetime = date
+    if not hasattr(date, 'isoformat'):
+      self.datetime = None
+    return date
+
   def date_str(self):
     result = 'unknown'
     if self.datetime is not None:
@@ -514,6 +494,37 @@ class Model522ResultTotals(KnownRecord):
       if len(self.date) >=2:
         result = "{}".format(unmask_m_midnight(self.date))
     return result
+
+# class Model522ResultTotals(KnownRecord):
+class old6c(Model522ResultTotals):
+  opcode = 0x6c
+  #head_length = 45
+  #xxx non 515
+  # body_length = 38
+  # body_length = 34
+  # XXX: 515 only?
+  # body_length = 31
+  def __init__ (self, head, model, **kwds):
+    super(old6c, self).__init__(head, model, **kwds)
+    self.body_length = model.old6cBody + 3
+_confirmed.append(old6c)
+
+class questionable3b (KnownRecord):
+  opcode = 0x3b
+_confirmed.append(questionable3b)
+
+
+from dateutil.relativedelta import relativedelta
+def parse_midnight (data):
+    mid = unmask_m_midnight(data)
+    oneday = relativedelta(days=1)
+    try:
+      date = datetime(*mid) + oneday
+      return date
+    except ValueError, e:
+      print "ERROR", e, lib.hexdump(data)
+      pass
+    return mid
 
 def unmask_m_midnight(data):
   """
@@ -540,7 +551,7 @@ def unmask_m_midnight(data):
   mhigh = (data[0] & 0xE0) >> 4
   mlow  = (data[1] & 0x80) >> 7
   month =  int(mhigh + mlow)
-  day = int(low) + 1
+  day = int(low)
 
   year = parse_years(data[1])
   return (year, month, day, hours, minutes, seconds)
