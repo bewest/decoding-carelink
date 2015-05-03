@@ -698,6 +698,7 @@ class HistoryPage (PagedData):
         if data is not None:
           rec.update(data=data)
         skipped.append(rec)
+    records.reverse( )
     return records
 
 if __name__ == '__main__':
