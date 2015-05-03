@@ -859,20 +859,8 @@ class ReadBolusWizardSetupStatus (PumpCommand):
 class ReadCarbUnits (PumpCommand):
   code = 136
   def getData (self):
-    raw = self.data[:]
-    units = raw[0]
     labels = { 1 : 'grams', 2: 'exchanges' }
-    schedule = [ ]
-    data = raw[1:1+(8 *2)]
-    for x in range(len(data)/ 2):
-      start = x * 2
-      end = start + 2
-      (i, r) = data[start:end]
-      ratio = r/10.0
-      if units == 2:
-        ratio = r / 100.0
-      schedule.append(dict(x=x, i=i, offset=i*30, ratio=ratio, r=r))
-    return dict(schedule=schedule, units=labels.get(units), first=raw[0])
+    return dict(carb_units=labels.get(self.data[0], self.data[0]))
 
 # MMPump512/	CMD_READ_BG_UNITS	137	0x89	('\x89')	??
 class ReadBGUnits (PumpCommand):
