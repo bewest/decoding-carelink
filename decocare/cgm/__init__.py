@@ -188,7 +188,7 @@ class PagedData (object):
           break
         prefix_records.reverse()
         mapped_glucose_records = self.map_glucose(prefix_records, start=date, delta=self.delta_ago(reverse=True))
-#       mapped_glucose_records.reverse()
+        mapped_glucose_records.reverse()
         # And this ResetGlucose has a payload indicating calibration factor
         # Update sensor cal factor
         if record['name'] == 'SensorCalFactor': 
