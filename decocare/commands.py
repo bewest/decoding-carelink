@@ -859,8 +859,20 @@ class ReadBolusWizardSetupStatus (PumpCommand):
 class ReadCarbUnits (PumpCommand):
   code = 136
   def getData (self):
+    raw = self.data[:]
+    units = raw[0]
     labels = { 1 : 'grams', 2: 'exchanges' }
-    return dict(carb_units=labels.get(self.data[0], self.data[0]))
+    schedule = [ ]
+    data = raw[1:1+(8 *2)]
+    for x in range(len(data)/ 2):
+      start = x * 2
+      end = start + 2
+      (i, r) = data[start:end]
+      ratio = r/10.0
+      if units == 2:
+        ratio = r / 100.0
+      schedule.append(dict(x=x, i=i, offset=i*30, ratio=ratio, r=r))
+    return dict(schedule=schedule, units=labels.get(units), first=raw[0])
 
 # MMPump512/	CMD_READ_BG_UNITS	137	0x89	('\x89')	??
 class ReadBGUnits (PumpCommand):
@@ -870,6 +882,26 @@ class ReadBGUnits (PumpCommand):
     return dict(bg_units=labels.get(self.data[0], self.data[0]))
 
 # MMPump512/	CMD_READ_CARB_RATIOS	138	0x8a	('\x8a')	OK
+class ReadCarbRatios512 (PumpCommand):
+  code = 138
+  def getData (self):
+    # return self.model.decode_carb_ratios(self.data[:])
+    units = self.data[0]
+    labels = { 1 : 'grams', 2: 'exchanges' }
+    fixed = self.data[1]
+    data = self.data[1:1+(8 *2)]
+    print lib.hexdump(data)
+    schedule = [ ]
+    for x in range(len(data)/ 2):
+      start = x * 2
+      end = start + 2
+      (i, r) = data[start:end]
+      ratio = int(r)
+      if units == 2:
+        ratio = r / 10.0
+      schedule.append(dict(x=x, i=i, offset=i*30, ratio=ratio, r=r))
+    return dict(schedule=schedule, units=labels.get(units), first=self.data[0])
+
 class ReadCarbRatios (PumpCommand):
   code = 138
   def getData (self):
@@ -878,7 +910,7 @@ class ReadCarbRatios (PumpCommand):
     fixed = self.data[1]
     data = self.data[2:2+(fixed *3)]
     schedule = [ ]
-    for x in range(8):
+    for x in range(len(data)/ 3):
       start = x * 3
       end = start + 3
       (i, q, r) = data[start:end]
@@ -1510,6 +1542,7 @@ __all__ = [
   'ReadCarbUnits',
   'ReadBGUnits',
   'ReadCarbRatios',
+  'ReadCarbRatios512',
   'ReadInsulinSensitivities',
   'ReadBGTargets',
   'ReadBGTargets515',

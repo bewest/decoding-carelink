@@ -82,7 +82,7 @@ class PumpModel (object):
   read_temp_basal = Task(commands.ReadBasalTemp)
   read_settings = Task(commands.ReadSettings)
   read_reservoir = Task(commands.ReadRemainingInsulin)
-  read_carb_ratios = Task(commands.ReadCarbRatios)
+  read_carb_ratios = Task(commands.ReadCarbRatios512)
   read_current_glucose_pages = Task(commands.ReadCurGlucosePageNumber)
   read_current_history_pages = Task(commands.ReadCurPageNumber)
 
@@ -154,7 +154,7 @@ class Model522 (Model515):
 
 class Model523 (Model522):
   larger = True
-  pass
+  read_carb_ratios = Task(commands.ReadCarbRatios)
 
 class Model530 (Model523):
   pass
