@@ -249,7 +249,7 @@ reading more to debug 0x00
     0000   0x40 0x0b 0x32 0xb8 0x0f                   @.2..
     body (0)
 
-#### RECORD 18 ChangeUtility 2015-04-24T18:12:29 head[2], body[0] op[0x63]
+#### RECORD 18 ChangeAlarmNotifyMode 2015-04-24T18:12:29 head[2], body[0] op[0x63]
 
     op hex (2)
     0000   0x63 0x04                                  c.

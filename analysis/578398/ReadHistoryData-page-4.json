@@ -1051,8 +1051,8 @@
     "_date": "682132780f"
   }, 
   {
-    "_type": "ChangeUtility", 
-    "_description": "ChangeUtility 2015-04-24T18:12:29 head[2], body[0] op[0x63]", 
+    "_type": "ChangeAlarmNotifyMode", 
+    "_description": "ChangeAlarmNotifyMode 2015-04-24T18:12:29 head[2], body[0] op[0x63]", 
     "date": 1429927949000.0, 
     "timestamp": "2015-04-24T18:12:29", 
     "_body": "", 
