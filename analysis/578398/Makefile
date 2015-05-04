@@ -35,7 +35,7 @@ clean:
 	echo ${JSONS} ${MARKDOWNS} | xargs rm -f
 
 ReadGlucose%.markdown: ReadGlucose%.data
-	mm-decode-history-page.py --out $@ --data glucose --model 522 $<
+	mm-decode-history-page.py --data glucose --model 522 $< | tee $@
 
 ReadGlucose%.json: ReadGlucose%.data
 	echo $@ $<
@@ -43,7 +43,7 @@ ReadGlucose%.json: ReadGlucose%.data
 
 ReadHistoryData%.markdown: ReadHistoryData%.data
 	echo $@ $<
-	mm-decode-history-page.py  --out $@  --model 522 $<
+	mm-decode-history-page.py  --model 522 $< | tee $@
 
 ReadHistoryData%.json: ReadHistoryData%.data
 	echo $@ $<
