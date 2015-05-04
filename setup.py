@@ -8,7 +8,7 @@ def readme():
         return f.read()
 
 setup(name='decocare',
-    version='0.0.9', # http://semver.org/
+    version='0.0.10', # http://semver.org/
     description='Audit, inspect, and command MM insulin pumps.',
     long_description=readme(),
     author="Ben West",
@@ -28,6 +28,7 @@ setup(name='decocare',
       'bin/mm-latest.py',
       'bin/mm-bolus.py',
       'bin/mm-set-rtc.py',
+      'bin/mm-pretty-csv',
     ],
     classifiers = [
         'Development Status :: 3 - Alpha',
