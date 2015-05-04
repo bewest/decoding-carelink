@@ -784,8 +784,11 @@
               0    0    0    0    0    0    0    0
               0    0    0    0   70
 
-#### RECORD 29 questionable3c 2015-04-13T14:49:25 head[2], body[14] op[0x3c]
-
+#### RECORD 29 ChangeParadigmLinkID 2015-04-13T14:49:25 head[2], body[14] op[0x3c]
+###### DECODED
+```python
+{'links': ['000000', '000000', '000000']}
+```
     op hex (2)
     0000   0x3c 0x01                                  <.
     decimal
@@ -800,8 +803,11 @@
              61    0    0    0    0    0    0   62
               0    0    0    0    0    0
 
-#### RECORD 30 questionable3c 2015-04-13T14:50:00 head[2], body[14] op[0x3c]
-
+#### RECORD 30 ChangeParadigmLinkID 2015-04-13T14:50:00 head[2], body[14] op[0x3c]
+###### DECODED
+```python
+{'links': ['783436', '000000', '000000']}
+```
     op hex (2)
     0000   0x3c 0x01                                  <.
     decimal

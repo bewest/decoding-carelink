@@ -475,10 +475,18 @@ class questionable5e (KnownRecord):
   opcode = 0x5e
 _confirmed.append(questionable5e)
 
-class questionable3c (KnownRecord):
+class ChangeParadigmLinkID (KnownRecord):
   opcode = 0x3c
   body_length = 14
-_confirmed.append(questionable3c)
+  def decode (self):
+    self.parse_time( )
+    data = self.body[1:]
+    links = [ ]
+    links.append(str(data[0:3]).encode('hex'))
+    links.append(str(data[3:6]).encode('hex'))
+    links.append(str(data[7:10]).encode('hex'))
+    return dict(links=links)
+_confirmed.append(ChangeParadigmLinkID)
 
 
 class questionable7c (KnownRecord):

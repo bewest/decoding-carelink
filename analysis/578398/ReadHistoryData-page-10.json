@@ -153,8 +153,13 @@
     "_date": "72322e6d0f"
   }, 
   {
-    "_type": "questionable3c", 
-    "_description": "questionable3c 2015-04-13T14:50:00 head[2], body[14] op[0x3c]", 
+    "_type": "ChangeParadigmLinkID", 
+    "links": [
+      "783436", 
+      "000000", 
+      "000000"
+    ], 
+    "_description": "ChangeParadigmLinkID 2015-04-13T14:50:00 head[2], body[14] op[0x3c]", 
     "date": 1428965400000.0, 
     "timestamp": "2015-04-13T14:50:00", 
     "_body": "3d7834360000003e000000000000", 
@@ -162,8 +167,13 @@
     "_date": "40320e0d0f"
   }, 
   {
-    "_type": "questionable3c", 
-    "_description": "questionable3c 2015-04-13T14:49:25 head[2], body[14] op[0x3c]", 
+    "_type": "ChangeParadigmLinkID", 
+    "links": [
+      "000000", 
+      "000000", 
+      "000000"
+    ], 
+    "_description": "ChangeParadigmLinkID 2015-04-13T14:49:25 head[2], body[14] op[0x3c]", 
     "date": 1428965365000.0, 
     "timestamp": "2015-04-13T14:49:25", 
     "_body": "3d0000000000003e000000000000", 
