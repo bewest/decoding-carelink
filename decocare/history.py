@@ -188,10 +188,15 @@ class LowReservoir(KnownRecord):
     return reservoir
 
 
-class ChangeUtility(KnownRecord):
+class ChangeAlarmNotifyMode (KnownRecord):
   opcode = 0x63
+  body_length = 0
 class ChangeTimeDisplay(KnownRecord):
   opcode = 0x64
+
+class ChangeBolusWizardSetup (KnownRecord):
+  opcode = 0x4f
+  body_length = 40
 
 _confirmed = [ Bolus, Prime, NoDelivery, MResultTotals,
                ChangeBasalProfile_old_profile,
@@ -200,7 +205,8 @@ _confirmed = [ Bolus, Prime, NoDelivery, MResultTotals,
                NewTimeSet, LowBattery, Battery, PumpSuspend,
                PumpResume, CalBGForPH, Rewind, EnableDisableRemote,
                ChangeRemoteID, TempBasal, LowReservoir, BolusWizard,
-               UnabsorbedInsulinBolus, ChangeUtility, ChangeTimeDisplay ]
+               UnabsorbedInsulinBolus, ChangeAlarmNotifyMode, ChangeTimeDisplay,
+               ChangeBolusWizardSetup, ]
 
 # _confirmed.append(DanaScott0x09)
 
