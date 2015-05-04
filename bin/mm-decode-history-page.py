@@ -111,7 +111,7 @@ def main( ):
     if opts.collate and opts.data == 'pump':
       page = HistoryPage(bytearray(stream.read( )), opts.model)
       records.extend(page.decode(larger=opts.larger ))
-    if opts.data == 'glucose':
+    elif opts.data == 'glucose':
       page = Response(data=bytearray(stream.read( )))
       records.extend(opts.model.iter_glucose_pages.Cursor(opts.model).find_records(page))
     else:
