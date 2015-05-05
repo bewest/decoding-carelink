@@ -1,19 +1,5 @@
 [
   {
-    "_type": "UnabsorbedInsulinBolus", 
-    "_description": "UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]", 
-    "data": [
-      {
-        "amount": 5.0, 
-        "curve": 4, 
-        "age": 181
-      }
-    ], 
-    "_body": "", 
-    "_head": "5c05c8b504", 
-    "_date": ""
-  }, 
-  {
     "_type": "BolusWizard", 
     "bg": 0, 
     "bg_target_high": 120, 
@@ -31,6 +17,22 @@
     "_byte[7]": 0, 
     "_date": "58140c180f", 
     "bolus_estimate": 4.3, 
+    "appended": [
+      {
+        "_type": "UnabsorbedInsulinBolus", 
+        "_description": "UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]", 
+        "data": [
+          {
+            "amount": 5.0, 
+            "curve": 4, 
+            "age": 181
+          }
+        ], 
+        "_body": "", 
+        "_head": "5c05c8b504", 
+        "_date": ""
+      }
+    ], 
     "unknown_byte[8]": 0, 
     "carb_ratio": 8, 
     "food_estimate": 4.3, 
