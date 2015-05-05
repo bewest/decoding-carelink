@@ -140,10 +140,26 @@ class Model508 (PumpModel):
   pass
 
 class Model511 (Model508):
-  pass
+  read_basal_profile_std = Task(commands.ReadProfiles511_STD)
+  read_basal_profile_a = Task(commands.ReadProfiles511_A)
+  read_basal_profile_b = Task(commands.ReadProfiles511_B)
+
+  def read_selected_basal_profile (self, **kwds):
+    settings = self.read_settings( )
+    selected = settings['selected_pattern']
+    patterns = {
+        0 : self.read_basal_profile_std
+      , 1 : self.read_basal_profile_a
+      , 2 : self.read_basal_profile_b
+      }
+    return patterns[selected](**kwds)
+
 
 class Model512 (Model511):
-  pass
+  read_basal_profile_std = Task(commands.ReadProfile_STD512)
+  read_basal_profile_a = Task(commands.ReadProfile_A512)
+  read_basal_profile_b = Task(commands.ReadProfile_B512)
+
 
 class Model515 (Model512):
   pass
