@@ -227,12 +227,42 @@ class Ian54(KnownRecord):
 _confirmed.append(Ian54)
 
 class SensorAlert (KnownRecord):
+  """Glucose sensor alarms.
+    The second byte of the head represents the alarm subtype.
+    The third byte seems to contain an alarm-specific value.
+
+    For example, a "Low Glucose" alarm is:
+    [
+      0x0b,  # 11: Opcode
+      0x66,  # 102: Low glucose subtype
+      0x50   # 80: Glucose level (For a pump configured to mg/dL)
+    ]
+    """
   opcode = 0x0B
   head_length = 3
-  def decode (self):
-    self.parse_time( )
-    amount = self.head[2]
-    return dict(alarm_type=self.head[1], amount_maybe=amount)
+
+  alarm_subtypes = {
+    101: 'High Glucose',
+    102: 'Low Glucose',
+    105: 'Cal Reminder',
+    107: 'Sensor End',
+    115: 'Low Glucose Predicted'
+  }
+
+  def decode(self):
+    super(AlarmSensor, self).decode()
+
+    subtype = self.head[1]
+
+    decoded_dict = {
+      'alarm_type': self.alarm_subtypes.get(self.head[1], 'Unknown subtype with code {}'.format(self.head[1]))
+    }
+
+    if subtype in (101, 102,):
+      year_bits = extra_year_bits(self.date[4])
+      decoded_dict['glucose'] = int(lib.BangInt([year_bits[0], self.head[2]]))
+
+    return decoded_dict
 _confirmed.append(SensorAlert)
 
 class BGReceived (KnownRecord):
@@ -357,7 +387,7 @@ def decode_bg_targets (data, bg_units):
                        offset=offset*30, _offset=offset,
                        # _raw=str(data[start:end]).encode('hex'),
                        low=low, high=high))
-  return targets 
+  return targets
 
 class BigBolusWizardChange (KnownRecord):
   opcode = 0x5a
