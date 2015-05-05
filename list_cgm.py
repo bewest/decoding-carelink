@@ -23,7 +23,6 @@ def get_opt_parser( ):
 
   return parser
 
-
 import json
 class ListCGM (object):
 
@@ -42,4 +41,5 @@ class ListCGM (object):
 if __name__ == '__main__':
   app = ListCGM( )
   app.main( )
-#####
+
+##### EOF
