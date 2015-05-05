@@ -1,0 +1,66 @@
+Page,Record,CSV Index,Record type,DIFF (CSV value),DIFF (Carelink value —larger),Notes
+0,0,340,BolusWizardBolusEstimate,"CARB_RATIO=6, BG_TARGET_HIGH=120","carb_ratio=12.0, bg_target_high=60",
+0,1,325,UnabsorbedInsulin,INSULIN_ACTION_CURVE=240,curve=4,
+0,1,332,UnabsorbedInsulin,"RECORD_AGE=270, INSULIN_ACTION_CURVE=240","age=14, curve=20",
+0,2,341,BolusNormal,,,
+0,3,343,AlarmSensor,"ALARM_TYPE=101, AMOUNT=330, ACTION_REQUESTOR=sensor","OpHex[1] = 101
+OpHex[2] = 74 (Amount?)",Sensor Alert: High Glucose (101). 
+0,4,349,BasalProfileStart,PROFILE_INDEX=6,OpHex[1] = 6,
+0,5,362,AlarmSensor,"ALARM_TYPE=105, AMOUNT=0, ACTION_REQUESTOR=sensor","OpHex[1] = 105
+OpHex[2] = 0","Sensor Alarm (105)
+
+This is a “Meter BG in 1 hour” alarm
+"
+0,6,375,CalBGForPH,ACTION_REQUESTOR=paradigm link or b key,OpHex[0] = 10,
+0,7,376,BGReceived,"AMOUNT=91, ACTION_REQUESTOR=paradigm link or b key, PARADIGM_LINK_ID=783436","OpHex[] = [63, 11]
+Body[] = [120, 52, 54]",
+0,8,378,BasalProfileStart,PROFILE_INDEX=0,OpHex[1] = 0,
+0,9,–,MResultTotals,,OpHex[] = 7    0    0    8  166,
+0,10,,Sara6E,,OpHex[] = 110,
+0,11,393,AlarmSensor,"ALARM_TYPE=115, AMOUNT=0, ACTION_REQUESTOR=sensor","OpHex[1] = 115
+OpHex[2] = 0",Sensor Alert: Low Glucose Predicted (115)
+0,12,396,AlarmSensor,"ALARM_TYPE=102, AMOUNT=80, ACTION_REQUESTOR=sensor","OpHex[1] = 102
+OpHex[2] = 80",Sensor Alert: Low Glucose (102)
+0,13,430,BasalProfileStart,PROFILE_INDEX=1,OpHex[1] = 1,
+0,14,467,BasalProfileStart,PROFILE_INDEX=2,OpHex[1] = 2,
+0,15,495,AlarmSensor,"ALARM_TYPE=115, AMOUNT=0, ACTION_REQUESTOR=sensor","OpHex[1] = 115
+OpHex[2] = 0",Sensor Alert: Low Glucose Predicted (115)
+0,16,497,AlarmSensor,"ALARM_TYPE=102, AMOUNT=80, ACTION_REQUESTOR=sensor","OpHex[1] = 102
+OpHex[2] = 80",Sensor Alert: Low Glucose (102)
+0,17,504,AlarmSensor,"ALARM_TYPE=102, AMOUNT=76, ACTION_REQUESTOR=sensor","OpHex[1] = 102
+OpHex[2] = 76",Sensor Alert: Low Glucose (102)
+0,18,510,AlarmSensor,"ALARM_TYPE=107, AMOUNT=0, ACTION_REQUESTOR=sensor","OpHex[1] = 107
+OpHex[2] = 0",Sensor Alert: Sensor End (107)
+0,19,511,BasalProfileStart,PROFILE_INDEX=3,OpHex[1] = 3,
+0,20,512,BolusNormal,,,
+0,21,513,BasalProfileStart,PROFILE_INDEX=4,OpHex[1] = 4,
+0,22,514,BasalProfileStart,PROFILE_INDEX=5,OpHex[1] = 5,
+0,23,516,BolusWizardBolusEstimate,"CARB_RATIO=8, BG_TARGET_HIGH=120","carb_ratio=12.0
+bg_target_high=80",
+0,24,517,UnabsorbedInsulin,"RECORD_AGE=324, INSULIN_ACTION_CURVE=240","age=68,
+curve=20",
+0,24,515,UnabsorbedInsulin,"RECORD_AGE=334, INSULIN_ACTION_CURVE=240","age=78,
+curve=20",
+0,25,520,BolusWizardBolusEstimate,"CARB_RATIO=8, BG_TARGET_HIGH=120","carb_ratio=12.0
+bg_target_high=80",
+0,26,518,UnabsorbedInsulin,"RECORD_AGE=324, INSULIN_ACTION_CURVE=240","age=68,
+curve=20",
+0,26,519,UnabsorbedInsulin,"RECORD_AGE=334, INSULIN_ACTION_CURVE=240","age=78,
+curve=20",
+0,27,521,BolusNormal,,,
+0,28,523,CalBGForPH,AMOUNT=315,"amount=315
+
+OpHex[1] = 59",
+0,29,522,BGReceived,"AMOUNT=315, ACTION_REQUESTOR=paradigm link or b key, PARADIGM_LINK_ID=783436","OpHex[] = [63, 39]
+Body[] = [120, 52, 54]",
+0,30,526,BolusWizardBolusEstimate,"CARB_RATIO=8, BG_TARGET_HIGH=120, CORRECTION_ESTIMATE=4.8,","carb_ratio=12.0, bg_target_high=60,
+correction_estimate=-1.6",
+0,31,525,UnabsorbedInsulin,INSULIN_ACTION_CURVE=240,curve=4,
+0,31,524,UnabsorbedInsulin,"RECORD_AGE=333, 
+INSULIN_ACTION_CURVE=240","age=77,
+curve=20",
+0,31,528,UnabsorbedInsulin,"RECORD_AGE=343,
+INSULIN_ACTION_CURVE=240","age=87,
+curve=20",
+0,32,529,BolusSquare,"DURATION=3600000, IS_DUAL_COMPONENT=true",,
+0,33,527,BolusNormal,IS_DUAL_COMPONENT=true,,
