@@ -95,7 +95,7 @@ reading more to debug 0x00
 #### RECORD 4 BGReceived 2015-04-19T22:38:26 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 51, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x06                                  ?.
@@ -264,7 +264,7 @@ reading more to debug 0x00
 #### RECORD 15 BGReceived 2015-04-20T13:48:50 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 206, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x19                                  ?.
@@ -498,7 +498,7 @@ reading more to debug 0x00
 #### RECORD 30 BGReceived 2015-04-20T22:19:04 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 336, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x2a                                  ?*
@@ -824,7 +824,7 @@ reading more to debug 0x00
 #### RECORD 50 BGReceived 2015-04-21T10:20:48 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 87, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x0a                                  ?.
@@ -991,7 +991,7 @@ reading more to debug 0x00
 #### RECORD 61 BGReceived 2015-04-21T22:44:32 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 54, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x06                                  ?.
@@ -1264,7 +1264,7 @@ reading more to debug 0x00
 #### RECORD 82 BGReceived 2015-04-22T07:57:10 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 327, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x28                                  ?(
@@ -1379,7 +1379,7 @@ reading more to debug 0x00
 #### RECORD 89 BGReceived 2015-04-22T11:54:50 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 365, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x2d                                  ?-

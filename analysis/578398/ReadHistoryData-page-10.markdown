@@ -838,7 +838,7 @@
 #### RECORD 32 BGReceived 2015-04-13T14:50:50 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 122, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x0f                                  ?.
@@ -966,7 +966,7 @@
 #### RECORD 40 BGReceived 2015-04-13T19:26:36 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 120, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x0f                                  ?.

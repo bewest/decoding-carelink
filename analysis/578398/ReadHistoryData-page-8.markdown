@@ -53,7 +53,7 @@ reading more to debug 0x00
 #### RECORD 3 BGReceived 2015-04-15T12:00:28 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 178, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x16                                  ?.
@@ -160,7 +160,7 @@ reading more to debug 0x00
 #### RECORD 9 BGReceived 2015-04-15T13:14:00 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 103, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x0c                                  ?.
@@ -203,7 +203,7 @@ reading more to debug 0x00
 #### RECORD 12 BGReceived 2015-04-15T15:19:40 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 52, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x06                                  ?.
@@ -298,7 +298,7 @@ reading more to debug 0x00
 #### RECORD 19 BGReceived 2015-04-15T22:07:44 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 291, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x24                                  ?$
@@ -579,7 +579,7 @@ reading more to debug 0x00
 #### RECORD 37 BGReceived 2015-04-16T10:08:16 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 182, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x16                                  ?.
@@ -720,7 +720,7 @@ reading more to debug 0x00
 #### RECORD 46 BGReceived 2015-04-16T15:34:42 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 220, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x1b                                  ?.
@@ -1222,7 +1222,7 @@ reading more to debug 0x00
 #### RECORD 81 BGReceived 2015-04-17T10:48:54 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 283, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x23                                  ?#

@@ -275,7 +275,7 @@ reading more to debug 0x00
 #### RECORD 20 BGReceived 2015-04-24T18:33:40 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 99, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x0c                                  ?.
@@ -508,7 +508,7 @@ reading more to debug 0x00
 #### RECORD 34 BGReceived 2015-04-25T01:14:48 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 76, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x09                                  ?.
@@ -825,7 +825,7 @@ reading more to debug 0x00
 #### RECORD 55 BGReceived 2015-04-25T13:35:02 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 137, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x11                                  ?.
@@ -1013,7 +1013,7 @@ reading more to debug 0x00
 #### RECORD 66 BGReceived 2015-04-25T23:52:56 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 170, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x15                                  ?.
@@ -1423,7 +1423,7 @@ reading more to debug 0x00
 #### RECORD 92 BGReceived 2015-04-26T13:14:00 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 234, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x1d                                  ?.

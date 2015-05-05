@@ -253,7 +253,7 @@ reading more to debug 0x00
 #### RECORD 12 BGReceived 2015-04-26T17:21:10 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 212, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x1a                                  ?.
@@ -415,7 +415,7 @@ reading more to debug 0x00
 #### RECORD 22 BGReceived 2015-04-26T22:43:12 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 48, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x06                                  ?.
@@ -584,7 +584,7 @@ reading more to debug 0x00
 #### RECORD 33 BGReceived 2015-04-27T10:05:30 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 319, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x27                                  ?'
@@ -709,7 +709,7 @@ reading more to debug 0x00
 #### RECORD 40 BGReceived 2015-04-27T10:19:48 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 301, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x25                                  ?%
@@ -837,7 +837,7 @@ reading more to debug 0x00
 #### RECORD 47 BGReceived 2015-04-27T11:24:24 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 290, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x24                                  ?$
@@ -1225,7 +1225,7 @@ reading more to debug 0x00
 #### RECORD 64 BGReceived 2015-04-27T15:38:40 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 61, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x07                                  ?.
@@ -1307,7 +1307,7 @@ reading more to debug 0x00
 #### RECORD 70 BGReceived 2015-04-27T16:53:58 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 104, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x0d                                  ?.

@@ -270,7 +270,8 @@ class BGReceived (KnownRecord):
   body_length = 3
   def decode (self):
     self.parse_time( )
-    return dict(link=str(self.body).encode('hex'), amount='???')
+    bg = (self.head[1] << 3) + (self.date[2] >> 5)
+    return dict(link=str(self.body).encode('hex'), amount=bg)
 _confirmed.append(BGReceived)
 
 class IanA8(KnownRecord):

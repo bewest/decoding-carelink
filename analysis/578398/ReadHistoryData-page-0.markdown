@@ -85,7 +85,7 @@ reading more to debug 0x00
 #### RECORD 4 BGReceived 2015-04-29T17:40:56 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 216, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x1b                                  ?.
