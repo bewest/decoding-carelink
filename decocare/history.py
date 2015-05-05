@@ -250,7 +250,7 @@ class SensorAlert (KnownRecord):
   }
 
   def decode(self):
-    super(AlarmSensor, self).decode()
+    super(SensorAlert, self).decode()
 
     subtype = self.head[1]
 

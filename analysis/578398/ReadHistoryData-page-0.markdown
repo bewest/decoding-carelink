@@ -59,7 +59,7 @@ reading more to debug 0x00
 #### RECORD 2 SensorAlert 2015-04-29T17:28:17 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 101, 'amount_maybe': 42}
+{'alarm_type': 'High Glucose', 'glucose': 298}
 ```
     op hex (3)
     0000   0x0b 0x65 0x2a                             .e*

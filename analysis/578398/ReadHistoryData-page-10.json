@@ -108,15 +108,15 @@
     "sensitivity": 40
   }, 
   {
-    "alarm_type": 101, 
+    "alarm_type": "High Glucose", 
     "_type": "SensorAlert", 
-    "amount_maybe": 181, 
     "_description": "SensorAlert 2015-04-13T17:32:52 head[3], body[0] op[0x0b]", 
     "date": 1428975172000.0, 
     "timestamp": "2015-04-13T17:32:52", 
     "_body": "", 
     "_head": "0b65b5", 
-    "_date": "742031ad0f"
+    "_date": "742031ad0f", 
+    "glucose": 181
   }, 
   {
     "programmed": 1.0, 
