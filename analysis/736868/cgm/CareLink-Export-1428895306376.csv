@@ -1,0 +1,451 @@
+Medtronic Diabetes CareLink Personal Data Export File (v1.0.1) 
+PATIENT INFO
+Name,Fred Flintstone
+Report Range,4/11/15,to,4/12/15
+DEVICE INFO
+Meter:,Paradigm System,#783436,
+Pump:,Paradigm Revel - 523,#736868,
+Sensor:,In use," ",
+Data Exported on,4/12/15 8:21 PM
+DEVICE DATA (635 records)
+Data Range,4/11/15 00:00:00,to,4/12/15 20:12:54
+Index,Date,Time,Timestamp,New Device Time,BG Reading (mg/dL),Linked BG Meter ID,Temp Basal Amount (U/h),Temp Basal Type,Temp Basal Duration (hh:mm:ss),Bolus Type,Bolus Volume Selected (U),Bolus Volume Delivered (U),Programmed Bolus Duration (hh:mm:ss),Prime Type,Prime Volume Delivered (U),Suspend,Rewind,BWZ Estimate (U),BWZ Target High BG (mg/dL),BWZ Target Low BG (mg/dL),BWZ Carb Ratio (grams),BWZ Insulin Sensitivity (mg/dL),BWZ Carb Input (grams),BWZ BG Input (mg/dL),BWZ Correction Estimate (U),BWZ Food Estimate (U),BWZ Active Insulin (U),Alarm,Sensor Calibration BG (mg/dL),Sensor Glucose (mg/dL),ISIG Value,Daily Insulin Total (U),Raw-Type,Raw-Values,Raw-ID,Raw-Upload ID,Raw-Seq Num,Raw-Device Type
+198,4/11/15,13:59:37,4/11/15 13:59:37,,,,,,,,,,,,,,,,,,,,,,,,,,136,,,,CalBGForPH,"AMOUNT=136, ACTION_REQUESTOR=paradigm link or b key",14831518381,53822015,167,Paradigm Revel - 523
+199,4/11/15,13:59:37,4/11/15 13:59:37,,136,#783436,,,,,,,,,,,,,,,,,,,,,,,,,,,BGReceived,"AMOUNT=136, ACTION_REQUESTOR=paradigm link or b key, PARADIGM_LINK_ID=783436",14831518380,53822015,166,Paradigm Revel - 523
+200,4/11/15,14:00:00,4/11/15 14:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=meter_bg_now, ISIG=22.08, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519095,53822015,881,Paradigm Revel - 523
+201,4/11/15,14:02:00,4/11/15 14:02:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CalBGForGH,"AMOUNT=136, ORIGIN_TYPE=rf_modified",14831519094,53822015,880,Paradigm Revel - 523
+202,4/11/15,14:02:00,4/11/15 14:02:00,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Meter BG Now (104),,,,,AlarmSensor,"ALARM_TYPE=104, AMOUNT=0, ACTION_REQUESTOR=sensor",14831518379,53822015,165,Paradigm Revel - 523
+203,4/11/15,14:02:10,4/11/15 14:02:10,,,,,,,,,,,,,,,0.4,120,90,8,40,0,136,0.4,0,0.0,,,,,,BolusWizardBolusEstimate,"BG_INPUT=136, BG_UNITS=mg dl, CARB_INPUT=0, CARB_UNITS=grams, CARB_RATIO=8, INSULIN_SENSITIVITY=40, BG_TARGET_LOW=90, BG_TARGET_HIGH=120, BOLUS_ESTIMATE=0.4, CORRECTION_ESTIMATE=0.4, FOOD_ESTIMATE=0, UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=1, ACTION_REQUESTOR=pump",14831518377,53822015,163,Paradigm Revel - 523
+204,4/11/15,14:02:10,4/11/15 14:02:10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831518377, INDEX=0, AMOUNT=3, RECORD_AGE=323, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831518378,53822015,164,Paradigm Revel - 523
+205,4/11/15,14:02:11,4/11/15 14:02:11,,,,,,,Normal,0.4,0.4,,,,,,,,,,,,,,,,,,,,,BolusNormal,"AMOUNT=0.4, CONCENTRATION=null, PROGRAMMED_AMOUNT=0.4, ACTION_REQUESTOR=pump, ENABLE=true, IS_DUAL_COMPONENT=false, UNABSORBED_INSULIN_TOTAL=0",14831518376,53822015,162,Paradigm Revel - 523
+206,4/11/15,14:05:00,4/11/15 14:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=waiting, ISIG=22.16, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519093,53822015,879,Paradigm Revel - 523
+207,4/11/15,14:10:00,4/11/15 14:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=waiting, ISIG=22.16, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831519092,53822015,878,Paradigm Revel - 523
+208,4/11/15,14:15:00,4/11/15 14:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,136,22.1,,GlucoseSensorData,"AMOUNT=136, ISIG=22.1, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831519091,53822015,877,Paradigm Revel - 523
+209,4/11/15,14:17:00,4/11/15 14:17:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCalFactor,CAL_FACTOR=6.13,14831519090,53822015,876,Paradigm Revel - 523
+210,4/11/15,14:20:00,4/11/15 14:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,135,21.96,,GlucoseSensorData,"AMOUNT=135, ISIG=21.96, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831519089,53822015,875,Paradigm Revel - 523
+211,4/11/15,14:25:00,4/11/15 14:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,135,21.96,,GlucoseSensorData,"AMOUNT=135, ISIG=21.96, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831519088,53822015,874,Paradigm Revel - 523
+212,4/11/15,14:30:00,4/11/15 14:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,135,22,,GlucoseSensorData,"AMOUNT=135, ISIG=22, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519087,53822015,873,Paradigm Revel - 523
+213,4/11/15,14:35:00,4/11/15 14:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,135,22.1,,GlucoseSensorData,"AMOUNT=135, ISIG=22.1, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519086,53822015,872,Paradigm Revel - 523
+214,4/11/15,14:40:00,4/11/15 14:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,136,22.18,,GlucoseSensorData,"AMOUNT=136, ISIG=22.18, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519085,53822015,871,Paradigm Revel - 523
+215,4/11/15,14:45:00,4/11/15 14:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,136,22.12,,GlucoseSensorData,"AMOUNT=136, ISIG=22.12, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519084,53822015,870,Paradigm Revel - 523
+216,4/11/15,14:50:00,4/11/15 14:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,135,22.02,,GlucoseSensorData,"AMOUNT=135, ISIG=22.02, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831519083,53822015,869,Paradigm Revel - 523
+217,4/11/15,14:55:00,4/11/15 14:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,135,21.9,,GlucoseSensorData,"AMOUNT=135, ISIG=21.9, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519082,53822015,868,Paradigm Revel - 523
+218,4/11/15,15:00:00,4/11/15 15:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,134,21.7,,GlucoseSensorData,"AMOUNT=134, ISIG=21.7, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519081,53822015,867,Paradigm Revel - 523
+219,4/11/15,15:00:00,4/11/15 15:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,BasalProfileStart,"PATTERN_NAME=standard, PROFILE_INDEX=5, RATE=0.8, START_TIME=54000000, ACTION_REQUESTOR=pump",14831518375,53822015,161,Paradigm Revel - 523
+220,4/11/15,15:05:00,4/11/15 15:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,133,21.36,,GlucoseSensorData,"AMOUNT=133, ISIG=21.36, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519080,53822015,866,Paradigm Revel - 523
+221,4/11/15,15:10:00,4/11/15 15:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,131,21.18,,GlucoseSensorData,"AMOUNT=131, ISIG=21.18, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831519079,53822015,865,Paradigm Revel - 523
+222,4/11/15,15:15:00,4/11/15 15:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,130,21.16,,GlucoseSensorData,"AMOUNT=130, ISIG=21.16, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831519078,53822015,864,Paradigm Revel - 523
+223,4/11/15,15:20:00,4/11/15 15:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,130,21.08,,GlucoseSensorData,"AMOUNT=130, ISIG=21.08, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831519077,53822015,863,Paradigm Revel - 523
+224,4/11/15,15:25:00,4/11/15 15:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,129,21.08,,GlucoseSensorData,"AMOUNT=129, ISIG=21.08, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519076,53822015,862,Paradigm Revel - 523
+225,4/11/15,15:30:00,4/11/15 15:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,129,21.1,,GlucoseSensorData,"AMOUNT=129, ISIG=21.1, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519075,53822015,861,Paradigm Revel - 523
+226,4/11/15,15:35:00,4/11/15 15:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,130,21.2,,GlucoseSensorData,"AMOUNT=130, ISIG=21.2, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519074,53822015,860,Paradigm Revel - 523
+227,4/11/15,15:40:00,4/11/15 15:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,130,21.26,,GlucoseSensorData,"AMOUNT=130, ISIG=21.26, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519073,53822015,859,Paradigm Revel - 523
+228,4/11/15,15:45:00,4/11/15 15:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,130,21.18,,GlucoseSensorData,"AMOUNT=130, ISIG=21.18, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519072,53822015,858,Paradigm Revel - 523
+229,4/11/15,15:50:00,4/11/15 15:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,130,21.38,,GlucoseSensorData,"AMOUNT=130, ISIG=21.38, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519071,53822015,857,Paradigm Revel - 523
+230,4/11/15,15:55:00,4/11/15 15:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,131,21.44,,GlucoseSensorData,"AMOUNT=131, ISIG=21.44, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519070,53822015,856,Paradigm Revel - 523
+231,4/11/15,16:00:00,4/11/15 16:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,131,21.2,,GlucoseSensorData,"AMOUNT=131, ISIG=21.2, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519069,53822015,855,Paradigm Revel - 523
+232,4/11/15,16:05:00,4/11/15 16:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,129,20.9,,GlucoseSensorData,"AMOUNT=129, ISIG=20.9, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831519068,53822015,854,Paradigm Revel - 523
+233,4/11/15,16:10:00,4/11/15 16:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,130,21.26,,GlucoseSensorData,"AMOUNT=130, ISIG=21.26, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519067,53822015,853,Paradigm Revel - 523
+234,4/11/15,16:15:00,4/11/15 16:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,129,20.84,,GlucoseSensorData,"AMOUNT=129, ISIG=20.84, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831519066,53822015,852,Paradigm Revel - 523
+235,4/11/15,16:20:00,4/11/15 16:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,128,20.82,,GlucoseSensorData,"AMOUNT=128, ISIG=20.82, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831519065,53822015,851,Paradigm Revel - 523
+236,4/11/15,16:25:00,4/11/15 16:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,130,21.56,,GlucoseSensorData,"AMOUNT=130, ISIG=21.56, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831519064,53822015,850,Paradigm Revel - 523
+237,4/11/15,16:30:00,4/11/15 16:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,133,22.44,,GlucoseSensorData,"AMOUNT=133, ISIG=22.44, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831519063,53822015,849,Paradigm Revel - 523
+238,4/11/15,16:35:00,4/11/15 16:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,137,22.92,,GlucoseSensorData,"AMOUNT=137, ISIG=22.92, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831519062,53822015,848,Paradigm Revel - 523
+239,4/11/15,16:40:00,4/11/15 16:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,140,23.28,,GlucoseSensorData,"AMOUNT=140, ISIG=23.28, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519061,53822015,847,Paradigm Revel - 523
+240,4/11/15,16:45:00,4/11/15 16:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,143,23.74,,GlucoseSensorData,"AMOUNT=143, ISIG=23.74, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831519060,53822015,846,Paradigm Revel - 523
+241,4/11/15,16:48:37,4/11/15 16:48:37,,,,,,,Normal,4.5,4.5,,,,,,,,,,,,,,,,,,,,,BolusNormal,"AMOUNT=4.5, CONCENTRATION=null, PROGRAMMED_AMOUNT=4.5, ACTION_REQUESTOR=paradigm link or b key, ENABLE=true, IS_DUAL_COMPONENT=false, UNABSORBED_INSULIN_TOTAL=0.1",14831518374,53822015,160,Paradigm Revel - 523
+242,4/11/15,16:50:00,4/11/15 16:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,145,24.1,,GlucoseSensorData,"AMOUNT=145, ISIG=24.1, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519059,53822015,845,Paradigm Revel - 523
+243,4/11/15,16:55:00,4/11/15 16:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,147,24.32,,GlucoseSensorData,"AMOUNT=147, ISIG=24.32, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831519058,53822015,844,Paradigm Revel - 523
+244,4/11/15,17:00:00,4/11/15 17:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,150,24.96,,GlucoseSensorData,"AMOUNT=150, ISIG=24.96, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831519057,53822015,843,Paradigm Revel - 523
+245,4/11/15,17:05:00,4/11/15 17:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,154,25.68,,GlucoseSensorData,"AMOUNT=154, ISIG=25.68, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519056,53822015,842,Paradigm Revel - 523
+246,4/11/15,17:10:00,4/11/15 17:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,155,25.44,,GlucoseSensorData,"AMOUNT=155, ISIG=25.44, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519055,53822015,841,Paradigm Revel - 523
+247,4/11/15,17:15:00,4/11/15 17:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,153,24.42,,GlucoseSensorData,"AMOUNT=153, ISIG=24.42, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831519054,53822015,840,Paradigm Revel - 523
+248,4/11/15,17:20:00,4/11/15 17:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,146,22.5,,GlucoseSensorData,"AMOUNT=146, ISIG=22.5, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831519053,53822015,839,Paradigm Revel - 523
+249,4/11/15,17:25:00,4/11/15 17:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,136,20.32,,GlucoseSensorData,"AMOUNT=136, ISIG=20.32, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519052,53822015,838,Paradigm Revel - 523
+250,4/11/15,17:30:00,4/11/15 17:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,124,18.36,,GlucoseSensorData,"AMOUNT=124, ISIG=18.36, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831519051,53822015,837,Paradigm Revel - 523
+251,4/11/15,17:35:00,4/11/15 17:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,113,16.84,,GlucoseSensorData,"AMOUNT=113, ISIG=16.84, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831519050,53822015,836,Paradigm Revel - 523
+252,4/11/15,17:40:00,4/11/15 17:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,102,15.04,,GlucoseSensorData,"AMOUNT=102, ISIG=15.04, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831519049,53822015,835,Paradigm Revel - 523
+253,4/11/15,17:42:13,4/11/15 17:42:13,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose Predicted (115),,,,,AlarmSensor,"ALARM_TYPE=115, AMOUNT=0, ACTION_REQUESTOR=sensor",14831518373,53822015,159,Paradigm Revel - 523
+254,4/11/15,17:45:00,4/11/15 17:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,94,14.3,,GlucoseSensorData,"AMOUNT=94, ISIG=14.3, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831519048,53822015,834,Paradigm Revel - 523
+255,4/11/15,17:50:00,4/11/15 17:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,87,13.06,,GlucoseSensorData,"AMOUNT=87, ISIG=13.06, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831519047,53822015,833,Paradigm Revel - 523
+256,4/11/15,17:55:00,4/11/15 17:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,81,12.48,,GlucoseSensorData,"AMOUNT=81, ISIG=12.48, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519046,53822015,832,Paradigm Revel - 523
+257,4/11/15,18:00:00,4/11/15 18:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,77,12.14,,GlucoseSensorData,"AMOUNT=77, ISIG=12.14, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831519045,53822015,831,Paradigm Revel - 523
+258,4/11/15,18:01:15,4/11/15 18:01:15,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=77, ACTION_REQUESTOR=sensor",14831518372,53822015,158,Paradigm Revel - 523
+259,4/11/15,18:05:00,4/11/15 18:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,76,12.16,,GlucoseSensorData,"AMOUNT=76, ISIG=12.16, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831519044,53822015,830,Paradigm Revel - 523
+260,4/11/15,18:10:00,4/11/15 18:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,75,12.22,,GlucoseSensorData,"AMOUNT=75, ISIG=12.22, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831519043,53822015,829,Paradigm Revel - 523
+261,4/11/15,18:15:00,4/11/15 18:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,74,11.94,,GlucoseSensorData,"AMOUNT=74, ISIG=11.94, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831519042,53822015,828,Paradigm Revel - 523
+262,4/11/15,18:20:00,4/11/15 18:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,73,11.54,,GlucoseSensorData,"AMOUNT=73, ISIG=11.54, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831519041,53822015,827,Paradigm Revel - 523
+263,4/11/15,18:25:00,4/11/15 18:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,72,11.76,,GlucoseSensorData,"AMOUNT=72, ISIG=11.76, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519040,53822015,826,Paradigm Revel - 523
+264,4/11/15,18:30:00,4/11/15 18:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,71,11.5,,GlucoseSensorData,"AMOUNT=71, ISIG=11.5, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519039,53822015,825,Paradigm Revel - 523
+265,4/11/15,18:32:04,4/11/15 18:32:04,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=71, ACTION_REQUESTOR=sensor",14831518371,53822015,157,Paradigm Revel - 523
+266,4/11/15,18:35:00,4/11/15 18:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,69,10.78,,GlucoseSensorData,"AMOUNT=69, ISIG=10.78, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519038,53822015,824,Paradigm Revel - 523
+267,4/11/15,18:40:00,4/11/15 18:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,67,10.48,,GlucoseSensorData,"AMOUNT=67, ISIG=10.48, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519037,53822015,823,Paradigm Revel - 523
+268,4/11/15,18:45:00,4/11/15 18:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,65,10.32,,GlucoseSensorData,"AMOUNT=65, ISIG=10.32, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519036,53822015,822,Paradigm Revel - 523
+269,4/11/15,18:50:00,4/11/15 18:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,64,10.34,,GlucoseSensorData,"AMOUNT=64, ISIG=10.34, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519035,53822015,821,Paradigm Revel - 523
+270,4/11/15,18:55:00,4/11/15 18:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,64,10.36,,GlucoseSensorData,"AMOUNT=64, ISIG=10.36, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831519034,53822015,820,Paradigm Revel - 523
+271,4/11/15,19:00:00,4/11/15 19:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,64,10.46,,GlucoseSensorData,"AMOUNT=64, ISIG=10.46, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519033,53822015,819,Paradigm Revel - 523
+272,4/11/15,19:02:13,4/11/15 19:02:13,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=64, ACTION_REQUESTOR=sensor",14831518370,53822015,156,Paradigm Revel - 523
+273,4/11/15,19:05:00,4/11/15 19:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,64,10.62,,GlucoseSensorData,"AMOUNT=64, ISIG=10.62, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519032,53822015,818,Paradigm Revel - 523
+274,4/11/15,19:10:00,4/11/15 19:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,65,10.8,,GlucoseSensorData,"AMOUNT=65, ISIG=10.8, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831519031,53822015,817,Paradigm Revel - 523
+275,4/11/15,19:15:00,4/11/15 19:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,66,10.92,,GlucoseSensorData,"AMOUNT=66, ISIG=10.92, VCNTR=-0.626, BACKFILL_INDICATOR=false",14831519030,53822015,816,Paradigm Revel - 523
+276,4/11/15,19:20:00,4/11/15 19:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,66,10.82,,GlucoseSensorData,"AMOUNT=66, ISIG=10.82, VCNTR=-0.626, BACKFILL_INDICATOR=false",14831519029,53822015,815,Paradigm Revel - 523
+277,4/11/15,19:25:00,4/11/15 19:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,66,10.78,,GlucoseSensorData,"AMOUNT=66, ISIG=10.78, VCNTR=-0.626, BACKFILL_INDICATOR=false",14831519028,53822015,814,Paradigm Revel - 523
+278,4/11/15,19:30:00,4/11/15 19:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,66,10.78,,GlucoseSensorData,"AMOUNT=66, ISIG=10.78, VCNTR=-0.626, BACKFILL_INDICATOR=false",14831519027,53822015,813,Paradigm Revel - 523
+279,4/11/15,19:32:32,4/11/15 19:32:32,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=66, ACTION_REQUESTOR=sensor",14831518369,53822015,155,Paradigm Revel - 523
+280,4/11/15,19:35:00,4/11/15 19:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,66,10.82,,GlucoseSensorData,"AMOUNT=66, ISIG=10.82, VCNTR=-0.626, BACKFILL_INDICATOR=false",14831519026,53822015,812,Paradigm Revel - 523
+281,4/11/15,19:40:00,4/11/15 19:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,66,10.9,,GlucoseSensorData,"AMOUNT=66, ISIG=10.9, VCNTR=-0.626, BACKFILL_INDICATOR=false",14831519025,53822015,811,Paradigm Revel - 523
+282,4/11/15,19:45:00,4/11/15 19:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,67,10.98,,GlucoseSensorData,"AMOUNT=67, ISIG=10.98, VCNTR=-0.638, BACKFILL_INDICATOR=false",14831519024,53822015,810,Paradigm Revel - 523
+283,4/11/15,19:50:00,4/11/15 19:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,67,11.02,,GlucoseSensorData,"AMOUNT=67, ISIG=11.02, VCNTR=-0.651, BACKFILL_INDICATOR=false",14831519023,53822015,809,Paradigm Revel - 523
+284,4/11/15,19:55:00,4/11/15 19:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,67,11.04,,GlucoseSensorData,"AMOUNT=67, ISIG=11.04, VCNTR=-0.651, BACKFILL_INDICATOR=false",14831519022,53822015,808,Paradigm Revel - 523
+285,4/11/15,20:00:00,4/11/15 20:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,68,11.22,,GlucoseSensorData,"AMOUNT=68, ISIG=11.22, VCNTR=-0.638, BACKFILL_INDICATOR=false",14831519021,53822015,807,Paradigm Revel - 523
+286,4/11/15,20:01:15,4/11/15 20:01:15,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=68, ACTION_REQUESTOR=sensor",14831518368,53822015,154,Paradigm Revel - 523
+287,4/11/15,20:05:00,4/11/15 20:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,69,11.28,,GlucoseSensorData,"AMOUNT=69, ISIG=11.28, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831519020,53822015,806,Paradigm Revel - 523
+288,4/11/15,20:10:00,4/11/15 20:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,69,11.46,,GlucoseSensorData,"AMOUNT=69, ISIG=11.46, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831519019,53822015,805,Paradigm Revel - 523
+289,4/11/15,20:15:00,4/11/15 20:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,70,11.66,,GlucoseSensorData,"AMOUNT=70, ISIG=11.66, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831519018,53822015,804,Paradigm Revel - 523
+290,4/11/15,20:20:00,4/11/15 20:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,71,11.68,,GlucoseSensorData,"AMOUNT=71, ISIG=11.68, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831519017,53822015,803,Paradigm Revel - 523
+291,4/11/15,20:25:00,4/11/15 20:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,72,11.72,,GlucoseSensorData,"AMOUNT=72, ISIG=11.72, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831519016,53822015,802,Paradigm Revel - 523
+292,4/11/15,20:30:00,4/11/15 20:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,72,11.72,,GlucoseSensorData,"AMOUNT=72, ISIG=11.72, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831519015,53822015,801,Paradigm Revel - 523
+293,4/11/15,20:32:04,4/11/15 20:32:04,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=72, ACTION_REQUESTOR=sensor",14831518367,53822015,153,Paradigm Revel - 523
+294,4/11/15,20:35:00,4/11/15 20:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,73,12.14,,GlucoseSensorData,"AMOUNT=73, ISIG=12.14, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831519014,53822015,800,Paradigm Revel - 523
+295,4/11/15,20:40:00,4/11/15 20:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,76,12.96,,GlucoseSensorData,"AMOUNT=76, ISIG=12.96, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519013,53822015,799,Paradigm Revel - 523
+296,4/11/15,20:45:00,4/11/15 20:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,80,13.58,,GlucoseSensorData,"AMOUNT=80, ISIG=13.58, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519012,53822015,798,Paradigm Revel - 523
+297,4/11/15,20:50:00,4/11/15 20:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,82,13.86,,GlucoseSensorData,"AMOUNT=82, ISIG=13.86, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519011,53822015,797,Paradigm Revel - 523
+298,4/11/15,20:55:00,4/11/15 20:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,84,13.78,,GlucoseSensorData,"AMOUNT=84, ISIG=13.78, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519010,53822015,796,Paradigm Revel - 523
+299,4/11/15,21:00:00,4/11/15 21:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,83,13.48,,GlucoseSensorData,"AMOUNT=83, ISIG=13.48, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519009,53822015,795,Paradigm Revel - 523
+300,4/11/15,21:05:00,4/11/15 21:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,83,13.48,,GlucoseSensorData,"AMOUNT=83, ISIG=13.48, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519008,53822015,794,Paradigm Revel - 523
+301,4/11/15,21:10:00,4/11/15 21:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,83,13.64,,GlucoseSensorData,"AMOUNT=83, ISIG=13.64, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519007,53822015,793,Paradigm Revel - 523
+302,4/11/15,21:15:00,4/11/15 21:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,83,13.56,,GlucoseSensorData,"AMOUNT=83, ISIG=13.56, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519006,53822015,792,Paradigm Revel - 523
+303,4/11/15,21:20:00,4/11/15 21:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,82,13.24,,GlucoseSensorData,"AMOUNT=82, ISIG=13.24, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519005,53822015,791,Paradigm Revel - 523
+304,4/11/15,21:25:00,4/11/15 21:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,81,12.92,,GlucoseSensorData,"AMOUNT=81, ISIG=12.92, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519003,53822015,789,Paradigm Revel - 523
+305,4/11/15,21:25:00,4/11/15 21:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CalBGForGH,"AMOUNT=66, ORIGIN_TYPE=rf",14831519004,53822015,790,Paradigm Revel - 523
+306,4/11/15,21:25:23,4/11/15 21:25:23,,,,,,,,,,,,,,,,,,,,,,,,,,66,,,,CalBGForPH,"AMOUNT=66, ACTION_REQUESTOR=paradigm link or b key",14831518366,53822015,152,Paradigm Revel - 523
+307,4/11/15,21:25:23,4/11/15 21:25:23,,66,#783436,,,,,,,,,,,,,,,,,,,,,,,,,,,BGReceived,"AMOUNT=66, ACTION_REQUESTOR=paradigm link or b key, PARADIGM_LINK_ID=783436",14831518365,53822015,151,Paradigm Revel - 523
+308,4/11/15,21:26:37,4/11/15 21:26:37,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose Predicted (115),,,,,AlarmSensor,"ALARM_TYPE=115, AMOUNT=0, ACTION_REQUESTOR=sensor",14831518364,53822015,150,Paradigm Revel - 523
+309,4/11/15,21:30:00,4/11/15 21:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,79,12.56,,GlucoseSensorData,"AMOUNT=79, ISIG=12.56, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519002,53822015,788,Paradigm Revel - 523
+310,4/11/15,21:32:32,4/11/15 21:32:32,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=79, ACTION_REQUESTOR=sensor",14831518363,53822015,149,Paradigm Revel - 523
+311,4/11/15,21:35:00,4/11/15 21:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,71,12.12,,GlucoseSensorData,"AMOUNT=71, ISIG=12.12, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831519001,53822015,787,Paradigm Revel - 523
+312,4/11/15,21:37:00,4/11/15 21:37:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCalFactor,CAL_FACTOR=5.718,14831519000,53822015,786,Paradigm Revel - 523
+313,4/11/15,21:40:00,4/11/15 21:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,70,12.1,,GlucoseSensorData,"AMOUNT=70, ISIG=12.1, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518999,53822015,785,Paradigm Revel - 523
+314,4/11/15,21:45:00,4/11/15 21:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,70,12.32,,GlucoseSensorData,"AMOUNT=70, ISIG=12.32, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518998,53822015,784,Paradigm Revel - 523
+315,4/11/15,21:50:00,4/11/15 21:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,70,12.2,,GlucoseSensorData,"AMOUNT=70, ISIG=12.2, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518997,53822015,783,Paradigm Revel - 523
+316,4/11/15,21:55:00,4/11/15 21:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,70,12.3,,GlucoseSensorData,"AMOUNT=70, ISIG=12.3, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518996,53822015,782,Paradigm Revel - 523
+317,4/11/15,22:00:00,4/11/15 22:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,71,12.66,,GlucoseSensorData,"AMOUNT=71, ISIG=12.66, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518995,53822015,781,Paradigm Revel - 523
+318,4/11/15,22:00:00,4/11/15 22:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,BasalProfileStart,"PATTERN_NAME=standard, PROFILE_INDEX=6, RATE=0.9, START_TIME=79200000, ACTION_REQUESTOR=pump",14831518362,53822015,148,Paradigm Revel - 523
+319,4/11/15,22:01:15,4/11/15 22:01:15,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=71, ACTION_REQUESTOR=sensor",14831518361,53822015,147,Paradigm Revel - 523
+320,4/11/15,22:05:00,4/11/15 22:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,71,12.52,,GlucoseSensorData,"AMOUNT=71, ISIG=12.52, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518994,53822015,780,Paradigm Revel - 523
+321,4/11/15,22:10:00,4/11/15 22:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,72,12.8,,GlucoseSensorData,"AMOUNT=72, ISIG=12.8, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518993,53822015,779,Paradigm Revel - 523
+322,4/11/15,22:15:00,4/11/15 22:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,75,13.58,,GlucoseSensorData,"AMOUNT=75, ISIG=13.58, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518992,53822015,778,Paradigm Revel - 523
+323,4/11/15,22:20:00,4/11/15 22:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,78,14.04,,GlucoseSensorData,"AMOUNT=78, ISIG=14.04, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518991,53822015,777,Paradigm Revel - 523
+324,4/11/15,22:25:00,4/11/15 22:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,80,14.4,,GlucoseSensorData,"AMOUNT=80, ISIG=14.4, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518990,53822015,776,Paradigm Revel - 523
+325,4/11/15,22:30:00,4/11/15 22:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,82,14.72,,GlucoseSensorData,"AMOUNT=82, ISIG=14.72, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518989,53822015,775,Paradigm Revel - 523
+326,4/11/15,22:35:00,4/11/15 22:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,84,14.96,,GlucoseSensorData,"AMOUNT=84, ISIG=14.96, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518988,53822015,774,Paradigm Revel - 523
+327,4/11/15,22:40:00,4/11/15 22:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,85,15.08,,GlucoseSensorData,"AMOUNT=85, ISIG=15.08, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518987,53822015,773,Paradigm Revel - 523
+328,4/11/15,22:45:00,4/11/15 22:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,86,15.1,,GlucoseSensorData,"AMOUNT=86, ISIG=15.1, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831518986,53822015,772,Paradigm Revel - 523
+329,4/11/15,22:50:00,4/11/15 22:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,86,15.02,,GlucoseSensorData,"AMOUNT=86, ISIG=15.02, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831518985,53822015,771,Paradigm Revel - 523
+330,4/11/15,22:55:00,4/11/15 22:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,86,14.84,,GlucoseSensorData,"AMOUNT=86, ISIG=14.84, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831518984,53822015,770,Paradigm Revel - 523
+331,4/11/15,23:00:00,4/11/15 23:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,85,14.66,,GlucoseSensorData,"AMOUNT=85, ISIG=14.66, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831518983,53822015,769,Paradigm Revel - 523
+332,4/11/15,23:05:00,4/11/15 23:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,84,14.46,,GlucoseSensorData,"AMOUNT=84, ISIG=14.46, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831518982,53822015,768,Paradigm Revel - 523
+333,4/11/15,23:10:00,4/11/15 23:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,83,14.26,,GlucoseSensorData,"AMOUNT=83, ISIG=14.26, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518981,53822015,767,Paradigm Revel - 523
+334,4/11/15,23:15:00,4/11/15 23:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,82,14.22,,GlucoseSensorData,"AMOUNT=82, ISIG=14.22, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518980,53822015,766,Paradigm Revel - 523
+335,4/11/15,23:15:58,4/11/15 23:15:58,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose Predicted (115),,,,,AlarmSensor,"ALARM_TYPE=115, AMOUNT=0, ACTION_REQUESTOR=sensor",14831518360,53822015,146,Paradigm Revel - 523
+336,4/11/15,23:20:00,4/11/15 23:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,82,14.28,,GlucoseSensorData,"AMOUNT=82, ISIG=14.28, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518979,53822015,765,Paradigm Revel - 523
+337,4/11/15,23:25:00,4/11/15 23:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,82,14.26,,GlucoseSensorData,"AMOUNT=82, ISIG=14.26, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518978,53822015,764,Paradigm Revel - 523
+338,4/11/15,23:30:00,4/11/15 23:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,81,13.92,,GlucoseSensorData,"AMOUNT=81, ISIG=13.92, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518977,53822015,763,Paradigm Revel - 523
+339,4/11/15,23:35:00,4/11/15 23:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,79,13.48,,GlucoseSensorData,"AMOUNT=79, ISIG=13.48, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518976,53822015,762,Paradigm Revel - 523
+340,4/11/15,23:37:25,4/11/15 23:37:25,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=79, ACTION_REQUESTOR=sensor",14831518359,53822015,145,Paradigm Revel - 523
+341,4/11/15,23:40:00,4/11/15 23:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,78,13.4,,GlucoseSensorData,"AMOUNT=78, ISIG=13.4, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518975,53822015,761,Paradigm Revel - 523
+342,4/11/15,23:45:00,4/11/15 23:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,77,13.46,,GlucoseSensorData,"AMOUNT=77, ISIG=13.46, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518974,53822015,760,Paradigm Revel - 523
+343,4/11/15,23:50:00,4/11/15 23:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,77,13.46,,GlucoseSensorData,"AMOUNT=77, ISIG=13.46, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518973,53822015,759,Paradigm Revel - 523
+344,4/11/15,23:55:00,4/11/15 23:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,77,13.32,,GlucoseSensorData,"AMOUNT=77, ISIG=13.32, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518972,53822015,758,Paradigm Revel - 523
+345,4/12/15,00:00:00,4/12/15 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,76,13.08,,GlucoseSensorData,"AMOUNT=76, ISIG=13.08, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831518971,53822015,757,Paradigm Revel - 523
+346,4/12/15,00:00:00,4/12/15 00:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,BasalProfileStart,"PATTERN_NAME=standard, PROFILE_INDEX=0, RATE=0.9, START_TIME=0, ACTION_REQUESTOR=pump",14831518358,53822015,144,Paradigm Revel - 523
+347,4/12/15,00:05:00,4/12/15 00:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,74,12.7,,GlucoseSensorData,"AMOUNT=74, ISIG=12.7, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831518970,53822015,756,Paradigm Revel - 523
+348,4/12/15,00:06:37,4/12/15 00:06:37,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=74, ACTION_REQUESTOR=sensor",14831518356,53822015,142,Paradigm Revel - 523
+349,4/12/15,00:10:00,4/12/15 00:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,72,12.28,,GlucoseSensorData,"AMOUNT=72, ISIG=12.28, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831518969,53822015,755,Paradigm Revel - 523
+350,4/12/15,00:15:00,4/12/15 00:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,70,12.04,,GlucoseSensorData,"AMOUNT=70, ISIG=12.04, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831518968,53822015,754,Paradigm Revel - 523
+351,4/12/15,00:20:00,4/12/15 00:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,69,11.96,,GlucoseSensorData,"AMOUNT=69, ISIG=11.96, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831518967,53822015,753,Paradigm Revel - 523
+352,4/12/15,00:25:00,4/12/15 00:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,68,11.84,,GlucoseSensorData,"AMOUNT=68, ISIG=11.84, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831518966,53822015,752,Paradigm Revel - 523
+353,4/12/15,00:30:00,4/12/15 00:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,68,11.7,,GlucoseSensorData,"AMOUNT=68, ISIG=11.7, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831518965,53822015,751,Paradigm Revel - 523
+354,4/12/15,00:35:00,4/12/15 00:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,67,11.6,,GlucoseSensorData,"AMOUNT=67, ISIG=11.6, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518964,53822015,750,Paradigm Revel - 523
+355,4/12/15,00:40:00,4/12/15 00:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,66,11.5,,GlucoseSensorData,"AMOUNT=66, ISIG=11.5, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518963,53822015,749,Paradigm Revel - 523
+356,4/12/15,00:45:00,4/12/15 00:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,66,11.54,,GlucoseSensorData,"AMOUNT=66, ISIG=11.54, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518962,53822015,748,Paradigm Revel - 523
+357,4/12/15,00:50:00,4/12/15 00:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,66,11.46,,GlucoseSensorData,"AMOUNT=66, ISIG=11.46, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518961,53822015,747,Paradigm Revel - 523
+358,4/12/15,00:55:00,4/12/15 00:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,65,11.38,,GlucoseSensorData,"AMOUNT=65, ISIG=11.38, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831518960,53822015,746,Paradigm Revel - 523
+359,4/12/15,01:00:00,4/12/15 01:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,66,11.5,,GlucoseSensorData,"AMOUNT=66, ISIG=11.5, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831518959,53822015,745,Paradigm Revel - 523
+360,4/12/15,01:05:00,4/12/15 01:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,66,11.72,,GlucoseSensorData,"AMOUNT=66, ISIG=11.72, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831518958,53822015,744,Paradigm Revel - 523
+361,4/12/15,01:05:56,4/12/15 01:05:56,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=66, ACTION_REQUESTOR=sensor",14831518355,53822015,141,Paradigm Revel - 523
+362,4/12/15,01:10:00,4/12/15 01:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,67,11.96,,GlucoseSensorData,"AMOUNT=67, ISIG=11.96, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831518957,53822015,743,Paradigm Revel - 523
+363,4/12/15,01:15:00,4/12/15 01:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,68,12.12,,GlucoseSensorData,"AMOUNT=68, ISIG=12.12, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831518956,53822015,742,Paradigm Revel - 523
+364,4/12/15,01:20:00,4/12/15 01:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,69,12.16,,GlucoseSensorData,"AMOUNT=69, ISIG=12.16, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831518955,53822015,741,Paradigm Revel - 523
+365,4/12/15,01:25:00,4/12/15 01:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,69,12,,GlucoseSensorData,"AMOUNT=69, ISIG=12, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518954,53822015,740,Paradigm Revel - 523
+366,4/12/15,01:30:00,4/12/15 01:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,68,11.78,,GlucoseSensorData,"AMOUNT=68, ISIG=11.78, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518953,53822015,739,Paradigm Revel - 523
+367,4/12/15,01:35:00,4/12/15 01:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,69,12.16,,GlucoseSensorData,"AMOUNT=69, ISIG=12.16, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518952,53822015,738,Paradigm Revel - 523
+368,4/12/15,01:37:25,4/12/15 01:37:25,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=69, ACTION_REQUESTOR=sensor",14831518354,53822015,140,Paradigm Revel - 523
+369,4/12/15,01:40:00,4/12/15 01:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,69,12.22,,GlucoseSensorData,"AMOUNT=69, ISIG=12.22, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518951,53822015,737,Paradigm Revel - 523
+370,4/12/15,01:45:00,4/12/15 01:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,70,12.28,,GlucoseSensorData,"AMOUNT=70, ISIG=12.28, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831518950,53822015,736,Paradigm Revel - 523
+371,4/12/15,01:50:00,4/12/15 01:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,70,12.1,,GlucoseSensorData,"AMOUNT=70, ISIG=12.1, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831518949,53822015,735,Paradigm Revel - 523
+372,4/12/15,01:55:00,4/12/15 01:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,69,12,,GlucoseSensorData,"AMOUNT=69, ISIG=12, VCNTR=-0.663, BACKFILL_INDICATOR=false",14831518948,53822015,734,Paradigm Revel - 523
+373,4/12/15,02:00:00,4/12/15 02:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,68,11.6,,GlucoseSensorData,"AMOUNT=68, ISIG=11.6, VCNTR=-0.651, BACKFILL_INDICATOR=false",14831518947,53822015,733,Paradigm Revel - 523
+374,4/12/15,02:05:00,4/12/15 02:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,69,12.28,,GlucoseSensorData,"AMOUNT=69, ISIG=12.28, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518946,53822015,732,Paradigm Revel - 523
+375,4/12/15,02:06:36,4/12/15 02:06:36,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=69, ACTION_REQUESTOR=sensor",14831518353,53822015,139,Paradigm Revel - 523
+376,4/12/15,02:10:00,4/12/15 02:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,71,12.76,,GlucoseSensorData,"AMOUNT=71, ISIG=12.76, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831518945,53822015,731,Paradigm Revel - 523
+377,4/12/15,02:15:00,4/12/15 02:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,72,12.9,,GlucoseSensorData,"AMOUNT=72, ISIG=12.9, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518944,53822015,730,Paradigm Revel - 523
+378,4/12/15,02:20:00,4/12/15 02:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,73,12.82,,GlucoseSensorData,"AMOUNT=73, ISIG=12.82, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518943,53822015,729,Paradigm Revel - 523
+379,4/12/15,02:25:00,4/12/15 02:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,73,12.74,,GlucoseSensorData,"AMOUNT=73, ISIG=12.74, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518942,53822015,728,Paradigm Revel - 523
+380,4/12/15,02:30:00,4/12/15 02:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,73,12.94,,GlucoseSensorData,"AMOUNT=73, ISIG=12.94, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518941,53822015,727,Paradigm Revel - 523
+381,4/12/15,02:35:00,4/12/15 02:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,74,13.06,,GlucoseSensorData,"AMOUNT=74, ISIG=13.06, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518940,53822015,726,Paradigm Revel - 523
+382,4/12/15,02:35:57,4/12/15 02:35:57,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=74, ACTION_REQUESTOR=sensor",14831518352,53822015,138,Paradigm Revel - 523
+383,4/12/15,02:40:00,4/12/15 02:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,75,13.1,,GlucoseSensorData,"AMOUNT=75, ISIG=13.1, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518939,53822015,725,Paradigm Revel - 523
+384,4/12/15,02:45:00,4/12/15 02:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,75,13.18,,GlucoseSensorData,"AMOUNT=75, ISIG=13.18, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518938,53822015,724,Paradigm Revel - 523
+385,4/12/15,02:50:00,4/12/15 02:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,75,13.1,,GlucoseSensorData,"AMOUNT=75, ISIG=13.1, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518937,53822015,723,Paradigm Revel - 523
+386,4/12/15,02:55:00,4/12/15 02:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,75,12.92,,GlucoseSensorData,"AMOUNT=75, ISIG=12.92, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518936,53822015,722,Paradigm Revel - 523
+387,4/12/15,03:00:00,4/12/15 03:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,74,12.78,,GlucoseSensorData,"AMOUNT=74, ISIG=12.78, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518935,53822015,721,Paradigm Revel - 523
+388,4/12/15,03:05:00,4/12/15 03:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,73,12.48,,GlucoseSensorData,"AMOUNT=73, ISIG=12.48, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518934,53822015,720,Paradigm Revel - 523
+389,4/12/15,03:05:55,4/12/15 03:05:55,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=73, ACTION_REQUESTOR=sensor",14831518351,53822015,137,Paradigm Revel - 523
+390,4/12/15,03:10:00,4/12/15 03:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,72,12.54,,GlucoseSensorData,"AMOUNT=72, ISIG=12.54, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831518933,53822015,719,Paradigm Revel - 523
+391,4/12/15,03:15:00,4/12/15 03:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,72,12.54,,GlucoseSensorData,"AMOUNT=72, ISIG=12.54, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831518932,53822015,718,Paradigm Revel - 523
+392,4/12/15,03:20:00,4/12/15 03:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,71,12.44,,GlucoseSensorData,"AMOUNT=71, ISIG=12.44, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831518931,53822015,717,Paradigm Revel - 523
+393,4/12/15,03:25:00,4/12/15 03:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,71,12.2,,GlucoseSensorData,"AMOUNT=71, ISIG=12.2, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831518930,53822015,716,Paradigm Revel - 523
+394,4/12/15,03:30:00,4/12/15 03:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,70,12.04,,GlucoseSensorData,"AMOUNT=70, ISIG=12.04, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831518929,53822015,715,Paradigm Revel - 523
+395,4/12/15,03:35:00,4/12/15 03:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,69,11.92,,GlucoseSensorData,"AMOUNT=69, ISIG=11.92, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831518928,53822015,714,Paradigm Revel - 523
+396,4/12/15,03:37:24,4/12/15 03:37:24,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=69, ACTION_REQUESTOR=sensor",14831518350,53822015,136,Paradigm Revel - 523
+397,4/12/15,03:40:00,4/12/15 03:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,68,11.72,,GlucoseSensorData,"AMOUNT=68, ISIG=11.72, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518927,53822015,713,Paradigm Revel - 523
+398,4/12/15,03:45:00,4/12/15 03:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,67,11.48,,GlucoseSensorData,"AMOUNT=67, ISIG=11.48, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518926,53822015,712,Paradigm Revel - 523
+399,4/12/15,03:50:00,4/12/15 03:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,66,11.24,,GlucoseSensorData,"AMOUNT=66, ISIG=11.24, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518925,53822015,711,Paradigm Revel - 523
+400,4/12/15,03:55:00,4/12/15 03:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,64,11.02,,GlucoseSensorData,"AMOUNT=64, ISIG=11.02, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831518924,53822015,710,Paradigm Revel - 523
+401,4/12/15,04:00:00,4/12/15 04:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,63,10.78,,GlucoseSensorData,"AMOUNT=63, ISIG=10.78, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518923,53822015,709,Paradigm Revel - 523
+402,4/12/15,04:00:00,4/12/15 04:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,BasalProfileStart,"PATTERN_NAME=standard, PROFILE_INDEX=1, RATE=0.95, START_TIME=14400000, ACTION_REQUESTOR=pump",14831518349,53822015,135,Paradigm Revel - 523
+403,4/12/15,04:05:00,4/12/15 04:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,62,10.66,,GlucoseSensorData,"AMOUNT=62, ISIG=10.66, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518922,53822015,708,Paradigm Revel - 523
+404,4/12/15,04:06:36,4/12/15 04:06:36,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=62, ACTION_REQUESTOR=sensor",14831518348,53822015,134,Paradigm Revel - 523
+405,4/12/15,04:10:00,4/12/15 04:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,61,10.36,,GlucoseSensorData,"AMOUNT=61, ISIG=10.36, VCNTR=-0.626, BACKFILL_INDICATOR=false",14831518921,53822015,707,Paradigm Revel - 523
+406,4/12/15,04:15:00,4/12/15 04:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,59,10.02,,GlucoseSensorData,"AMOUNT=59, ISIG=10.02, VCNTR=-0.626, BACKFILL_INDICATOR=false",14831518920,53822015,706,Paradigm Revel - 523
+407,4/12/15,04:20:00,4/12/15 04:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,57,9.72,,GlucoseSensorData,"AMOUNT=57, ISIG=9.72, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518919,53822015,705,Paradigm Revel - 523
+408,4/12/15,04:25:00,4/12/15 04:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,55,9.38,,GlucoseSensorData,"AMOUNT=55, ISIG=9.38, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518918,53822015,704,Paradigm Revel - 523
+409,4/12/15,04:30:00,4/12/15 04:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,54,9.14,,GlucoseSensorData,"AMOUNT=54, ISIG=9.14, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518917,53822015,703,Paradigm Revel - 523
+410,4/12/15,04:35:00,4/12/15 04:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,52,8.94,,GlucoseSensorData,"AMOUNT=52, ISIG=8.94, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518916,53822015,702,Paradigm Revel - 523
+411,4/12/15,04:35:57,4/12/15 04:35:57,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=52, ACTION_REQUESTOR=sensor",14831518347,53822015,133,Paradigm Revel - 523
+412,4/12/15,04:40:00,4/12/15 04:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,51,8.78,,GlucoseSensorData,"AMOUNT=51, ISIG=8.78, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518915,53822015,701,Paradigm Revel - 523
+413,4/12/15,04:45:00,4/12/15 04:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,50,8.62,,GlucoseSensorData,"AMOUNT=50, ISIG=8.62, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518914,53822015,700,Paradigm Revel - 523
+414,4/12/15,04:50:00,4/12/15 04:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,50,8.6,,GlucoseSensorData,"AMOUNT=50, ISIG=8.6, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518913,53822015,699,Paradigm Revel - 523
+415,4/12/15,04:55:00,4/12/15 04:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,50,8.68,,GlucoseSensorData,"AMOUNT=50, ISIG=8.68, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518912,53822015,698,Paradigm Revel - 523
+416,4/12/15,05:00:00,4/12/15 05:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,50,8.68,,GlucoseSensorData,"AMOUNT=50, ISIG=8.68, VCNTR=-0.626, BACKFILL_INDICATOR=false",14831518911,53822015,697,Paradigm Revel - 523
+417,4/12/15,05:05:00,4/12/15 05:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,50,8.84,,GlucoseSensorData,"AMOUNT=50, ISIG=8.84, VCNTR=-0.626, BACKFILL_INDICATOR=false",14831518910,53822015,696,Paradigm Revel - 523
+418,4/12/15,05:05:55,4/12/15 05:05:55,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=50, ACTION_REQUESTOR=sensor",14831518346,53822015,132,Paradigm Revel - 523
+419,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfilePre,"PATTERN_DATUM=14831518338, PROFILE_INDEX=6, RATE=0.9, START_TIME=79200000",14831518345,53822015,131,Paradigm Revel - 523
+420,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfilePre,"PATTERN_DATUM=14831518338, PROFILE_INDEX=1, RATE=0.95, START_TIME=14400000",14831518340,53822015,126,Paradigm Revel - 523
+421,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfilePre,"PATTERN_DATUM=14831518338, PROFILE_INDEX=0, RATE=0.9, START_TIME=0",14831518339,53822015,125,Paradigm Revel - 523
+422,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfilePatternPre,"PATTERN_NAME=standard, NUM_PROFILES=7, ACTION_REQUESTOR=pump",14831518338,53822015,124,Paradigm Revel - 523
+423,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfile,"PATTERN_DATUM=14831518330, PROFILE_INDEX=6, RATE=0.9, START_TIME=79200000",14831518337,53822015,123,Paradigm Revel - 523
+424,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfile,"PATTERN_DATUM=14831518330, PROFILE_INDEX=5, RATE=0.8, START_TIME=54000000",14831518336,53822015,122,Paradigm Revel - 523
+425,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfile,"PATTERN_DATUM=14831518330, PROFILE_INDEX=4, RATE=0.75, START_TIME=43200000",14831518335,53822015,121,Paradigm Revel - 523
+426,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfile,"PATTERN_DATUM=14831518330, PROFILE_INDEX=3, RATE=0.875, START_TIME=36000000",14831518334,53822015,120,Paradigm Revel - 523
+427,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfile,"PATTERN_DATUM=14831518330, PROFILE_INDEX=2, RATE=0.85, START_TIME=25200000",14831518333,53822015,119,Paradigm Revel - 523
+428,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfile,"PATTERN_DATUM=14831518330, PROFILE_INDEX=1, RATE=0.9, START_TIME=14400000",14831518332,53822015,118,Paradigm Revel - 523
+429,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfile,"PATTERN_DATUM=14831518330, PROFILE_INDEX=0, RATE=0.9, START_TIME=0",14831518331,53822015,117,Paradigm Revel - 523
+430,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfilePattern,"PATTERN_NAME=standard, NUM_PROFILES=7, ACTION_REQUESTOR=pump",14831518330,53822015,116,Paradigm Revel - 523
+431,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfilePre,"PATTERN_DATUM=14831518338, PROFILE_INDEX=3, RATE=0.875, START_TIME=36000000",14831518342,53822015,128,Paradigm Revel - 523
+432,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfilePre,"PATTERN_DATUM=14831518338, PROFILE_INDEX=4, RATE=0.75, START_TIME=43200000",14831518343,53822015,129,Paradigm Revel - 523
+433,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfilePre,"PATTERN_DATUM=14831518338, PROFILE_INDEX=5, RATE=0.8, START_TIME=54000000",14831518344,53822015,130,Paradigm Revel - 523
+434,4/12/15,05:08:54,4/12/15 05:08:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeBasalProfilePre,"PATTERN_DATUM=14831518338, PROFILE_INDEX=2, RATE=0.85, START_TIME=25200000",14831518341,53822015,127,Paradigm Revel - 523
+435,4/12/15,05:08:55,4/12/15 05:08:55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,BasalProfileStart,"PATTERN_NAME=standard, PROFILE_INDEX=1, RATE=0.9, START_TIME=14400000, ACTION_REQUESTOR=pump",14831518329,53822015,115,Paradigm Revel - 523
+436,4/12/15,05:10:00,4/12/15 05:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,51,9.22,,GlucoseSensorData,"AMOUNT=51, ISIG=9.22, VCNTR=-0.663, BACKFILL_INDICATOR=false",14831518909,53822015,695,Paradigm Revel - 523
+437,4/12/15,05:15:00,4/12/15 05:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,53,9.78,,GlucoseSensorData,"AMOUNT=53, ISIG=9.78, VCNTR=-0.676, BACKFILL_INDICATOR=false",14831518908,53822015,694,Paradigm Revel - 523
+438,4/12/15,05:20:00,4/12/15 05:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,56,10.36,,GlucoseSensorData,"AMOUNT=56, ISIG=10.36, VCNTR=-0.663, BACKFILL_INDICATOR=false",14831518907,53822015,693,Paradigm Revel - 523
+439,4/12/15,05:25:00,4/12/15 05:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,58,10.42,,GlucoseSensorData,"AMOUNT=58, ISIG=10.42, VCNTR=-0.651, BACKFILL_INDICATOR=false",14831518906,53822015,692,Paradigm Revel - 523
+440,4/12/15,05:30:00,4/12/15 05:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,59,10.52,,GlucoseSensorData,"AMOUNT=59, ISIG=10.52, VCNTR=-0.638, BACKFILL_INDICATOR=false",14831518905,53822015,691,Paradigm Revel - 523
+441,4/12/15,05:35:00,4/12/15 05:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,61,10.82,,GlucoseSensorData,"AMOUNT=61, ISIG=10.82, VCNTR=-0.626, BACKFILL_INDICATOR=false",14831518904,53822015,690,Paradigm Revel - 523
+442,4/12/15,05:37:24,4/12/15 05:37:24,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=61, ACTION_REQUESTOR=sensor",14831518328,53822015,114,Paradigm Revel - 523
+443,4/12/15,05:40:00,4/12/15 05:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,63,11.3,,GlucoseSensorData,"AMOUNT=63, ISIG=11.3, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518903,53822015,689,Paradigm Revel - 523
+444,4/12/15,05:45:00,4/12/15 05:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,65,11.94,,GlucoseSensorData,"AMOUNT=65, ISIG=11.94, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518902,53822015,688,Paradigm Revel - 523
+445,4/12/15,05:50:00,4/12/15 05:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,69,12.62,,GlucoseSensorData,"AMOUNT=69, ISIG=12.62, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518901,53822015,687,Paradigm Revel - 523
+446,4/12/15,05:55:00,4/12/15 05:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,72,12.94,,GlucoseSensorData,"AMOUNT=72, ISIG=12.94, VCNTR=-0.626, BACKFILL_INDICATOR=false",14831518900,53822015,686,Paradigm Revel - 523
+447,4/12/15,06:00:00,4/12/15 06:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,74,13.28,,GlucoseSensorData,"AMOUNT=74, ISIG=13.28, VCNTR=-0.638, BACKFILL_INDICATOR=false",14831518899,53822015,685,Paradigm Revel - 523
+448,4/12/15,06:05:00,4/12/15 06:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,77,13.86,,GlucoseSensorData,"AMOUNT=77, ISIG=13.86, VCNTR=-0.638, BACKFILL_INDICATOR=false",14831518898,53822015,684,Paradigm Revel - 523
+449,4/12/15,06:06:36,4/12/15 06:06:36,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Low Glucose (102),,,,,AlarmSensor,"ALARM_TYPE=102, AMOUNT=77, ACTION_REQUESTOR=sensor",14831518327,53822015,113,Paradigm Revel - 523
+450,4/12/15,06:10:00,4/12/15 06:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,79,14.24,,GlucoseSensorData,"AMOUNT=79, ISIG=14.24, VCNTR=-0.638, BACKFILL_INDICATOR=false",14831518897,53822015,683,Paradigm Revel - 523
+451,4/12/15,06:15:00,4/12/15 06:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,79,13.78,,GlucoseSensorData,"AMOUNT=79, ISIG=13.78, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518896,53822015,682,Paradigm Revel - 523
+452,4/12/15,06:20:00,4/12/15 06:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,78,13.5,,GlucoseSensorData,"AMOUNT=78, ISIG=13.5, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831518895,53822015,681,Paradigm Revel - 523
+453,4/12/15,06:25:00,4/12/15 06:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,81,14.78,,GlucoseSensorData,"AMOUNT=81, ISIG=14.78, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831518894,53822015,680,Paradigm Revel - 523
+454,4/12/15,06:30:00,4/12/15 06:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,87,16.56,,GlucoseSensorData,"AMOUNT=87, ISIG=16.56, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831518893,53822015,679,Paradigm Revel - 523
+455,4/12/15,06:35:00,4/12/15 06:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,93,17.34,,GlucoseSensorData,"AMOUNT=93, ISIG=17.34, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518892,53822015,678,Paradigm Revel - 523
+456,4/12/15,06:40:00,4/12/15 06:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,99,18.12,,GlucoseSensorData,"AMOUNT=99, ISIG=18.12, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831518891,53822015,677,Paradigm Revel - 523
+457,4/12/15,06:45:00,4/12/15 06:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,104,18.92,,GlucoseSensorData,"AMOUNT=104, ISIG=18.92, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831518890,53822015,676,Paradigm Revel - 523
+458,4/12/15,06:50:00,4/12/15 06:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,108,19.58,,GlucoseSensorData,"AMOUNT=108, ISIG=19.58, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831518889,53822015,675,Paradigm Revel - 523
+459,4/12/15,06:55:00,4/12/15 06:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,112,20.4,,GlucoseSensorData,"AMOUNT=112, ISIG=20.4, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831518888,53822015,674,Paradigm Revel - 523
+460,4/12/15,07:00:00,4/12/15 07:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,117,21.42,,GlucoseSensorData,"AMOUNT=117, ISIG=21.42, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831518887,53822015,673,Paradigm Revel - 523
+461,4/12/15,07:00:00,4/12/15 07:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,BasalProfileStart,"PATTERN_NAME=standard, PROFILE_INDEX=2, RATE=0.85, START_TIME=25200000, ACTION_REQUESTOR=pump",14831518326,53822015,112,Paradigm Revel - 523
+462,4/12/15,07:05:00,4/12/15 07:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,122,22.26,,GlucoseSensorData,"AMOUNT=122, ISIG=22.26, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518886,53822015,672,Paradigm Revel - 523
+463,4/12/15,07:10:00,4/12/15 07:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,127,22.96,,GlucoseSensorData,"AMOUNT=127, ISIG=22.96, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518885,53822015,671,Paradigm Revel - 523
+464,4/12/15,07:15:00,4/12/15 07:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,131,23.58,,GlucoseSensorData,"AMOUNT=131, ISIG=23.58, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518884,53822015,670,Paradigm Revel - 523
+465,4/12/15,07:20:00,4/12/15 07:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,135,24.14,,GlucoseSensorData,"AMOUNT=135, ISIG=24.14, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518883,53822015,669,Paradigm Revel - 523
+466,4/12/15,07:25:00,4/12/15 07:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,137,24.26,,GlucoseSensorData,"AMOUNT=137, ISIG=24.26, VCNTR=-0.55, BACKFILL_INDICATOR=false",14831518882,53822015,668,Paradigm Revel - 523
+467,4/12/15,07:30:00,4/12/15 07:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,139,24.44,,GlucoseSensorData,"AMOUNT=139, ISIG=24.44, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831518881,53822015,667,Paradigm Revel - 523
+468,4/12/15,07:35:00,4/12/15 07:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,140,24.76,,GlucoseSensorData,"AMOUNT=140, ISIG=24.76, VCNTR=-0.55, BACKFILL_INDICATOR=true",14831518880,53822015,666,Paradigm Revel - 523
+469,4/12/15,07:40:00,4/12/15 07:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,142,25.06,,GlucoseSensorData,"AMOUNT=142, ISIG=25.06, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518879,53822015,665,Paradigm Revel - 523
+470,4/12/15,07:45:00,4/12/15 07:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,144,25.66,,GlucoseSensorData,"AMOUNT=144, ISIG=25.66, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518878,53822015,664,Paradigm Revel - 523
+471,4/12/15,07:50:00,4/12/15 07:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,147,26.4,,GlucoseSensorData,"AMOUNT=147, ISIG=26.4, VCNTR=-0.651, BACKFILL_INDICATOR=false",14831518877,53822015,663,Paradigm Revel - 523
+472,4/12/15,07:55:00,4/12/15 07:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,152,27.22,,GlucoseSensorData,"AMOUNT=152, ISIG=27.22, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518876,53822015,662,Paradigm Revel - 523
+473,4/12/15,08:00:00,4/12/15 08:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,156,27.96,,GlucoseSensorData,"AMOUNT=156, ISIG=27.96, VCNTR=-0.663, BACKFILL_INDICATOR=false",14831518875,53822015,661,Paradigm Revel - 523
+474,4/12/15,08:05:00,4/12/15 08:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,159,28.36,,GlucoseSensorData,"AMOUNT=159, ISIG=28.36, VCNTR=-0.663, BACKFILL_INDICATOR=false",14831518874,53822015,660,Paradigm Revel - 523
+475,4/12/15,08:10:00,4/12/15 08:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,159,27.58,,GlucoseSensorData,"AMOUNT=159, ISIG=27.58, VCNTR=-0.726, BACKFILL_INDICATOR=false",14831518873,53822015,659,Paradigm Revel - 523
+476,4/12/15,08:15:00,4/12/15 08:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,140,20.08,,GlucoseSensorData,"AMOUNT=140, ISIG=20.08, VCNTR=-0.764, BACKFILL_INDICATOR=false",14831518872,53822015,658,Paradigm Revel - 523
+477,4/12/15,08:20:00,4/12/15 08:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,138,24.62,,GlucoseSensorData,"AMOUNT=138, ISIG=24.62, VCNTR=-0.663, BACKFILL_INDICATOR=false",14831518871,53822015,657,Paradigm Revel - 523
+478,4/12/15,08:25:00,4/12/15 08:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,149,28.92,,GlucoseSensorData,"AMOUNT=149, ISIG=28.92, VCNTR=-0.613, BACKFILL_INDICATOR=false",14831518870,53822015,656,Paradigm Revel - 523
+479,4/12/15,08:25:00,4/12/15 08:25:00,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alarm (105),,,,,AlarmSensor,"ALARM_TYPE=105, AMOUNT=0, ACTION_REQUESTOR=sensor",14831518325,53822015,111,Paradigm Revel - 523
+480,4/12/15,08:30:00,4/12/15 08:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,158,28.88,,GlucoseSensorData,"AMOUNT=158, ISIG=28.88, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831518869,53822015,655,Paradigm Revel - 523
+481,4/12/15,08:35:00,4/12/15 08:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,162,28.62,,GlucoseSensorData,"AMOUNT=162, ISIG=28.62, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518868,53822015,654,Paradigm Revel - 523
+482,4/12/15,08:40:00,4/12/15 08:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,164,28.92,,GlucoseSensorData,"AMOUNT=164, ISIG=28.92, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518867,53822015,653,Paradigm Revel - 523
+483,4/12/15,08:41:14,4/12/15 08:41:14,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: High Glucose Predicted (114),,,,,AlarmSensor,"ALARM_TYPE=114, AMOUNT=0, ACTION_REQUESTOR=sensor",14831518324,53822015,110,Paradigm Revel - 523
+484,4/12/15,08:45:00,4/12/15 08:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,166,29.26,,GlucoseSensorData,"AMOUNT=166, ISIG=29.26, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518866,53822015,652,Paradigm Revel - 523
+485,4/12/15,08:50:00,4/12/15 08:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,168,29.66,,GlucoseSensorData,"AMOUNT=168, ISIG=29.66, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518865,53822015,651,Paradigm Revel - 523
+486,4/12/15,08:55:00,4/12/15 08:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,170,30.2,,GlucoseSensorData,"AMOUNT=170, ISIG=30.2, VCNTR=-0.601, BACKFILL_INDICATOR=false",14831518864,53822015,650,Paradigm Revel - 523
+487,4/12/15,09:00:00,4/12/15 09:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,173,30.66,,GlucoseSensorData,"AMOUNT=173, ISIG=30.66, VCNTR=-0.588, BACKFILL_INDICATOR=false",14831518863,53822015,649,Paradigm Revel - 523
+488,4/12/15,09:05:00,4/12/15 09:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,175,31.06,,GlucoseSensorData,"AMOUNT=175, ISIG=31.06, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518862,53822015,648,Paradigm Revel - 523
+489,4/12/15,09:07:04,4/12/15 09:07:04,,,,,,,Normal,5.1,5.1,,,,,,,,,,,,,,,,,,,,,BolusNormal,"AMOUNT=5.1, CONCENTRATION=null, PROGRAMMED_AMOUNT=5.1, ACTION_REQUESTOR=paradigm link or b key, ENABLE=true, IS_DUAL_COMPONENT=false, UNABSORBED_INSULIN_TOTAL=0",14831518322,53822015,108,Paradigm Revel - 523
+490,4/12/15,09:07:04,4/12/15 09:07:04,,,,,,,,,,,,,,,5.1,120,90,10,40,51,0,0,5.1,0.0,,,,,,BolusWizardBolusEstimate,"BG_INPUT=0, BG_UNITS=mg dl, CARB_INPUT=51, CARB_UNITS=grams, CARB_RATIO=10, INSULIN_SENSITIVITY=40, BG_TARGET_LOW=90, BG_TARGET_HIGH=120, BOLUS_ESTIMATE=5.1, CORRECTION_ESTIMATE=0, FOOD_ESTIMATE=5.1, UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=0, ACTION_REQUESTOR=paradigm link or b key",14831518323,53822015,109,Paradigm Revel - 523
+491,4/12/15,09:10:00,4/12/15 09:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,179,32.06,,GlucoseSensorData,"AMOUNT=179, ISIG=32.06, VCNTR=-0.638, BACKFILL_INDICATOR=false",14831518861,53822015,647,Paradigm Revel - 523
+492,4/12/15,09:15:00,4/12/15 09:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,183,32.52,,GlucoseSensorData,"AMOUNT=183, ISIG=32.52, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518860,53822015,646,Paradigm Revel - 523
+493,4/12/15,09:15:57,4/12/15 09:15:57,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: High Glucose (101),,,,,AlarmSensor,"ALARM_TYPE=101, AMOUNT=183, ACTION_REQUESTOR=sensor",14831518321,53822015,107,Paradigm Revel - 523
+494,4/12/15,09:20:00,4/12/15 09:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,186,33.08,,GlucoseSensorData,"AMOUNT=186, ISIG=33.08, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518859,53822015,645,Paradigm Revel - 523
+495,4/12/15,09:25:00,4/12/15 09:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=meter_bg_now, ISIG=33.8, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518858,53822015,644,Paradigm Revel - 523
+496,4/12/15,09:25:00,4/12/15 09:25:00,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Meter BG Now (104),,,,,AlarmSensor,"ALARM_TYPE=104, AMOUNT=0, ACTION_REQUESTOR=sensor",14831518320,53822015,106,Paradigm Revel - 523
+497,4/12/15,09:30:00,4/12/15 09:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=meter_bg_now, ISIG=34.44, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518857,53822015,643,Paradigm Revel - 523
+498,4/12/15,09:35:00,4/12/15 09:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=meter_bg_now, ISIG=35.02, VCNTR=-0.563, BACKFILL_INDICATOR=false",14831518856,53822015,642,Paradigm Revel - 523
+499,4/12/15,09:40:00,4/12/15 09:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=meter_bg_now, ISIG=35.58, VCNTR=-0.638, BACKFILL_INDICATOR=false",14831518855,53822015,641,Paradigm Revel - 523
+500,4/12/15,09:45:00,4/12/15 09:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=meter_bg_now, ISIG=36.2, VCNTR=-0.751, BACKFILL_INDICATOR=false",14831518854,53822015,640,Paradigm Revel - 523
+501,4/12/15,09:50:00,4/12/15 09:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=meter_bg_now, ISIG=36.18, VCNTR=-0.789, BACKFILL_INDICATOR=false",14831518853,53822015,639,Paradigm Revel - 523
+502,4/12/15,09:55:00,4/12/15 09:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=meter_bg_now, ISIG=35.68, VCNTR=-0.776, BACKFILL_INDICATOR=false",14831518852,53822015,638,Paradigm Revel - 523
+503,4/12/15,09:55:00,4/12/15 09:55:00,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Meter BG Now (104),,,,,AlarmSensor,"ALARM_TYPE=104, AMOUNT=0, ACTION_REQUESTOR=sensor",14831518319,53822015,105,Paradigm Revel - 523
+504,4/12/15,10:00:00,4/12/15 10:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=meter_bg_now, ISIG=34.96, VCNTR=-0.751, BACKFILL_INDICATOR=false",14831518851,53822015,637,Paradigm Revel - 523
+505,4/12/15,10:00:00,4/12/15 10:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,BasalProfileStart,"PATTERN_NAME=standard, PROFILE_INDEX=3, RATE=0.875, START_TIME=36000000, ACTION_REQUESTOR=pump",14831518318,53822015,104,Paradigm Revel - 523
+506,4/12/15,10:05:00,4/12/15 10:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=meter_bg_now, ISIG=33.74, VCNTR=-0.751, BACKFILL_INDICATOR=false",14831518850,53822015,636,Paradigm Revel - 523
+507,4/12/15,10:07:00,4/12/15 10:07:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CalBGForGH,"AMOUNT=225, ORIGIN_TYPE=rf",14831518849,53822015,635,Paradigm Revel - 523
+508,4/12/15,10:07:17,4/12/15 10:07:17,,225,#783436,,,,,,,,,,,,,,,,,,,,,,,,,,,BGReceived,"AMOUNT=225, ACTION_REQUESTOR=paradigm link or b key, PARADIGM_LINK_ID=783436",14831518316,53822015,102,Paradigm Revel - 523
+509,4/12/15,10:07:17,4/12/15 10:07:17,,,,,,,,,,,,,,,,,,,,,,,,,,225,,,,CalBGForPH,"AMOUNT=225, ACTION_REQUESTOR=paradigm link or b key",14831518317,53822015,103,Paradigm Revel - 523
+510,4/12/15,10:10:00,4/12/15 10:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=waiting, ISIG=32, VCNTR=-0.714, BACKFILL_INDICATOR=false",14831518848,53822015,634,Paradigm Revel - 523
+511,4/12/15,10:15:00,4/12/15 10:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCal,"CAL_TYPE=waiting, ISIG=30.16, VCNTR=-0.701, BACKFILL_INDICATOR=false",14831518847,53822015,633,Paradigm Revel - 523
+512,4/12/15,10:20:00,4/12/15 10:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,222,27.46,,GlucoseSensorData,"AMOUNT=222, ISIG=27.46, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518846,53822015,632,Paradigm Revel - 523
+513,4/12/15,10:22:00,4/12/15 10:22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorCalFactor,CAL_FACTOR=7.479,14831518845,53822015,631,Paradigm Revel - 523
+514,4/12/15,10:22:12,4/12/15 10:22:12,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: High Glucose (101),,,,,AlarmSensor,"ALARM_TYPE=101, AMOUNT=222, ACTION_REQUESTOR=sensor",14831518315,53822015,101,Paradigm Revel - 523
+515,4/12/15,10:24:30,4/12/15 10:24:30,,,,,,,Normal,2.5,2.5,,,,,,,,,,,,,,,,,,,,,BolusNormal,"AMOUNT=2.5, CONCENTRATION=null, PROGRAMMED_AMOUNT=2.5, ACTION_REQUESTOR=paradigm link or b key, ENABLE=true, IS_DUAL_COMPONENT=false, UNABSORBED_INSULIN_TOTAL=3.6",14831518314,53822015,100,Paradigm Revel - 523
+516,4/12/15,10:25:00,4/12/15 10:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,207,25.76,,GlucoseSensorData,"AMOUNT=207, ISIG=25.76, VCNTR=-0.575, BACKFILL_INDICATOR=false",14831518844,53822015,630,Paradigm Revel - 523
+517,4/12/15,10:30:00,4/12/15 10:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,193,24.06,,GlucoseSensorData,"AMOUNT=193, ISIG=24.06, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831518843,53822015,629,Paradigm Revel - 523
+518,4/12/15,10:35:00,4/12/15 10:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,177,21.54,,GlucoseSensorData,"AMOUNT=177, ISIG=21.54, VCNTR=-0.5, BACKFILL_INDICATOR=false",14831518842,53822015,628,Paradigm Revel - 523
+519,4/12/15,10:40:00,4/12/15 10:40:00,,,,,,,,,,,,,,,,,,,,,,,,,,,164,20.48,,GlucoseSensorData,"AMOUNT=164, ISIG=20.48, VCNTR=-0.5, BACKFILL_INDICATOR=false",14831518841,53822015,627,Paradigm Revel - 523
+520,4/12/15,10:45:00,4/12/15 10:45:00,,,,,,,,,,,,,,,,,,,,,,,,,,,155,19.68,,GlucoseSensorData,"AMOUNT=155, ISIG=19.68, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831518840,53822015,626,Paradigm Revel - 523
+521,4/12/15,10:50:00,4/12/15 10:50:00,,,,,,,,,,,,,,,,,,,,,,,,,,,149,19.34,,GlucoseSensorData,"AMOUNT=149, ISIG=19.34, VCNTR=-0.538, BACKFILL_INDICATOR=false",14831518839,53822015,625,Paradigm Revel - 523
+522,4/12/15,10:55:00,4/12/15 10:55:00,,,,,,,,,,,,,,,,,,,,,,,,,,,144,18.66,,GlucoseSensorData,"AMOUNT=144, ISIG=18.66, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831518838,53822015,624,Paradigm Revel - 523
+523,4/12/15,11:00:00,4/12/15 11:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,139,17.98,,GlucoseSensorData,"AMOUNT=139, ISIG=17.98, VCNTR=-0.525, BACKFILL_INDICATOR=false",14831518837,53822015,623,Paradigm Revel - 523
+524,4/12/15,11:05:00,4/12/15 11:05:00,,,,,,,,,,,,,,,,,,,,,,,,,,,134,17.22,,GlucoseSensorData,"AMOUNT=134, ISIG=17.22, VCNTR=-0.5, BACKFILL_INDICATOR=false",14831518836,53822015,622,Paradigm Revel - 523
+525,4/12/15,11:10:00,4/12/15 11:10:00,,,,,,,,,,,,,,,,,,,,,,,,,,,129,16.72,,GlucoseSensorData,"AMOUNT=129, ISIG=16.72, VCNTR=-0.488, BACKFILL_INDICATOR=false",14831518835,53822015,621,Paradigm Revel - 523
+526,4/12/15,11:15:00,4/12/15 11:15:00,,,,,,,,,,,,,,,,,,,,,,,,,,,126,16.38,,GlucoseSensorData,"AMOUNT=126, ISIG=16.38, VCNTR=-0.488, BACKFILL_INDICATOR=false",14831518834,53822015,620,Paradigm Revel - 523
+527,4/12/15,11:20:00,4/12/15 11:20:00,,,,,,,,,,,,,,,,,,,,,,,,,,,123,16.08,,GlucoseSensorData,"AMOUNT=123, ISIG=16.08, VCNTR=-0.488, BACKFILL_INDICATOR=false",14831518833,53822015,619,Paradigm Revel - 523
+528,4/12/15,11:25:00,4/12/15 11:25:00,,,,,,,,,,,,,,,,,,,,,,,,,,,120,15.72,,GlucoseSensorData,"AMOUNT=120, ISIG=15.72, VCNTR=-0.488, BACKFILL_INDICATOR=false",14831518832,53822015,618,Paradigm Revel - 523
+529,4/12/15,11:30:00,4/12/15 11:30:00,,,,,,,,,,,,,,,,,,,,,,,,,,,117,15.38,,GlucoseSensorData,"AMOUNT=117, ISIG=15.38, VCNTR=-0.488, BACKFILL_INDICATOR=false",14831518831,53822015,617,Paradigm Revel - 523
+530,4/12/15,11:35:00,4/12/15 11:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorError,"ERROR_TYPE=end, ISIG=null, VCNTR=-0.488, BACKFILL_INDICATOR=false",14831518830,53822015,616,Paradigm Revel - 523
+531,4/12/15,11:35:00,4/12/15 11:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorTimestamp,TIMESTAMP_TYPE=gap,14831518829,53822015,615,Paradigm Revel - 523
+532,4/12/15,11:35:00,4/12/15 11:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorTimestamp,TIMESTAMP_TYPE=last_rf,14831518827,53822015,613,Paradigm Revel - 523
+533,4/12/15,11:35:00,4/12/15 11:35:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorTimestamp,TIMESTAMP_TYPE=last_rf,14831518826,53822015,612,Paradigm Revel - 523
+534,4/12/15,11:37:00,4/12/15 11:37:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SensorStatus,STATUS_TYPE=lost,14831518828,53822015,614,Paradigm Revel - 523
+535,4/12/15,11:37:24,4/12/15 11:37:24,,,,,,,,,,,,,,,,,,,,,,,,,Sensor Alert: Sensor End (107),,,,,AlarmSensor,"ALARM_TYPE=107, AMOUNT=0, ACTION_REQUESTOR=sensor",14831518313,53822015,99,Paradigm Revel - 523
+536,4/12/15,12:00:00,4/12/15 12:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,BasalProfileStart,"PATTERN_NAME=standard, PROFILE_INDEX=4, RATE=0.75, START_TIME=43200000, ACTION_REQUESTOR=pump",14831518312,53822015,98,Paradigm Revel - 523
+537,4/12/15,15:00:00,4/12/15 15:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,BasalProfileStart,"PATTERN_NAME=standard, PROFILE_INDEX=5, RATE=0.8, START_TIME=54000000, ACTION_REQUESTOR=pump",14831518311,53822015,97,Paradigm Revel - 523
+538,4/12/15,16:15:49,4/12/15 16:15:49,,295,#783436,,,,,,,,,,,,,,,,,,,,,,,,,,,BGReceived,"AMOUNT=295, ACTION_REQUESTOR=paradigm link or b key, PARADIGM_LINK_ID=783436",14831518309,53822015,95,Paradigm Revel - 523
+539,4/12/15,16:15:49,4/12/15 16:15:49,,,,,,,,,,,,,,,,,,,,,,,,,,295,,,,CalBGForPH,"AMOUNT=295, ACTION_REQUESTOR=paradigm link or b key",14831518310,53822015,96,Paradigm Revel - 523
+540,4/12/15,16:16:01,4/12/15 16:16:01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831518305, INDEX=0, AMOUNT=2.5, RECORD_AGE=357, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831518306,53822015,92,Paradigm Revel - 523
+541,4/12/15,16:16:01,4/12/15 16:16:01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831518305, INDEX=2, AMOUNT=2.85, RECORD_AGE=437, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831518308,53822015,94,Paradigm Revel - 523
+542,4/12/15,16:16:01,4/12/15 16:16:01,,,,,,,,,,,,,,,4.3,120,90,8,40,0,295,4.3,0,0.0,,,,,,BolusWizardBolusEstimate,"BG_INPUT=295, BG_UNITS=mg dl, CARB_INPUT=0, CARB_UNITS=grams, CARB_RATIO=8, INSULIN_SENSITIVITY=40, BG_TARGET_LOW=90, BG_TARGET_HIGH=120, BOLUS_ESTIMATE=4.3, CORRECTION_ESTIMATE=4.3, FOOD_ESTIMATE=0, UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=3, ACTION_REQUESTOR=pump",14831518305,53822015,91,Paradigm Revel - 523
+543,4/12/15,16:16:01,4/12/15 16:16:01,,,,,,,Normal,4.3,4.3,,,,,,,,,,,,,,,,,,,,,BolusNormal,"AMOUNT=4.3, CONCENTRATION=null, PROGRAMMED_AMOUNT=4.3, ACTION_REQUESTOR=pump, ENABLE=true, IS_DUAL_COMPONENT=false, UNABSORBED_INSULIN_TOTAL=0",14831518304,53822015,90,Paradigm Revel - 523
+544,4/12/15,16:16:01,4/12/15 16:16:01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831518305, INDEX=1, AMOUNT=2.25, RECORD_AGE=427, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831518307,53822015,93,Paradigm Revel - 523
+545,4/12/15,18:30:35,4/12/15 18:30:35,,,,,,,Dual/Normal,4.5,4.5,,,,,,,,,,,,,,,,,,,,,BolusNormal,"AMOUNT=4.5, CONCENTRATION=null, PROGRAMMED_AMOUNT=4.5, ACTION_REQUESTOR=paradigm link or b key, ENABLE=true, IS_DUAL_COMPONENT=true, UNABSORBED_INSULIN_TOTAL=1.5",14831518300,53822015,86,Paradigm Revel - 523
+546,4/12/15,18:30:35,4/12/15 18:30:35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831518302, INDEX=0, AMOUNT=4.3, RECORD_AGE=141, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831518303,53822015,89,Paradigm Revel - 523
+547,4/12/15,18:30:35,4/12/15 18:30:35,,,,,,,,,,,,,,,9.1,120,90,6,40,55,0,0,9.1,0.0,,,,,,BolusWizardBolusEstimate,"BG_INPUT=0, BG_UNITS=mg dl, CARB_INPUT=55, CARB_UNITS=grams, CARB_RATIO=6, INSULIN_SENSITIVITY=40, BG_TARGET_LOW=90, BG_TARGET_HIGH=120, BOLUS_ESTIMATE=9.1, CORRECTION_ESTIMATE=0, FOOD_ESTIMATE=9.1, UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=1, ACTION_REQUESTOR=paradigm link or b key",14831518302,53822015,88,Paradigm Revel - 523
+548,4/12/15,18:33:35,4/12/15 18:33:35,,,,,,,Dual/Square,3.5,1.8,03:00:00,,,,,,,,,,,,,,,,,,,,BolusSquare,"AMOUNT=1.8, CONCENTRATION=null, PROGRAMMED_AMOUNT=3.5, ACTION_REQUESTOR=paradigm link or b key, DURATION=10800000, IS_DUAL_COMPONENT=true, UNABSORBED_INSULIN_TOTAL=1.5",14831518301,53822015,87,Paradigm Revel - 523
+549,4/12/15,20:07:12,4/12/15 20:07:12,,,,,,,,,,,,,Suspended,,,,,,,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=user_suspend, ACTION_REQUESTOR=pump, PRE_ENABLE=null",14831518299,53822015,85,Paradigm Revel - 523
+550,4/12/15,20:07:18,4/12/15 20:07:18,,,,,,,,,,,,,Resume,,,,,,,,,,,,,,,,,ChangeSuspendEnable,"ENABLE=normal_pumping, ACTION_REQUESTOR=pump, PRE_ENABLE=null",14831518297,53822015,83,Paradigm Revel - 523
+551,4/12/15,20:07:18,4/12/15 20:07:18,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,BasalProfileStart,"PATTERN_NAME=standard, PROFILE_INDEX=5, RATE=0.8, START_TIME=54000000, ACTION_REQUESTOR=pump",14831518298,53822015,84,Paradigm Revel - 523
+552,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=2, PARADIGM_LINK_ID=------",14831518255,53822015,42,Paradigm Revel - 523
+553,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=3, PARADIGM_LINK_ID=------",14831518256,53822015,43,Paradigm Revel - 523
+554,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardSetupStatus,"IS_SETUP_COMPLETE=true, IS_BOLUS_WIZARD_ENABLED=true, IS_CARB_UNITS_COMPLETE=true, IS_CARB_RATIOS_COMPLETE=true, IS_BG_UNITS_COMPLETE=true, IS_INSULIN_SENSITIVITIES_COMPLETE=true, IS_BG_TARGETS_COMPLETE=true",14831518257,53822015,44,Paradigm Revel - 523
+555,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGTargetRangePattern,"ORIGINAL_UNITS=mg dl, SIZE=1",14831518258,53822015,45,Paradigm Revel - 523
+556,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGTargetRange,"PATTERN_DATUM=14831518258, INDEX=0, AMOUNT_LOW=90, AMOUNT_HIGH=120, START_TIME=0",14831518259,53822015,46,Paradigm Revel - 523
+557,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatioPattern,SIZE=4,14831518260,53822015,47,Paradigm Revel - 523
+558,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatio,"PATTERN_DATUM=14831518260, INDEX=0, AMOUNT=10, UNITS=grams, START_TIME=0",14831518261,53822015,48,Paradigm Revel - 523
+559,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatio,"PATTERN_DATUM=14831518260, INDEX=1, AMOUNT=8, UNITS=grams, START_TIME=41400000",14831518262,53822015,49,Paradigm Revel - 523
+560,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatio,"PATTERN_DATUM=14831518260, INDEX=2, AMOUNT=6, UNITS=grams, START_TIME=64800000",14831518263,53822015,50,Paradigm Revel - 523
+561,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatio,"PATTERN_DATUM=14831518260, INDEX=3, AMOUNT=10, UNITS=grams, START_TIME=81000000",14831518264,53822015,51,Paradigm Revel - 523
+562,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinSensitivityPattern,"ORIGINAL_UNITS=mg dl, SIZE=1",14831518265,53822015,52,Paradigm Revel - 523
+563,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinSensitivity,"PATTERN_DATUM=14831518265, INDEX=0, AMOUNT=40, START_TIME=0",14831518266,53822015,53,Paradigm Revel - 523
+564,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentReservoirWarningUnits,UNITS=insulin,14831518267,53822015,54,Paradigm Revel - 523
+565,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentReservoirWarningValueInsulin,AMOUNT=20,14831518268,53822015,55,Paradigm Revel - 523
+566,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentKeypadLockedEnable,ENABLE=false,14831518269,53822015,56,Paradigm Revel - 523
+567,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusReminderEnable,ENABLE=false,14831518270,53822015,57,Paradigm Revel - 523
+568,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSavedSettingsTime,SAVE_TIME=1427709365000,14831518271,53822015,58,Paradigm Revel - 523
+569,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentHistoryPageNumber,PAGE_NUMBER=426,14831518272,53822015,59,Paradigm Revel - 523
+570,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentGlucoseHistoryPageNumber,PAGE_NUMBER=249,14831518273,53822015,60,Paradigm Revel - 523
+571,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorCalFactor,CAL_FACTOR=7.479,14831518274,53822015,60,Paradigm Revel - 523
+572,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorCalReminderEnable,ENABLE=true,14831518275,53822015,61,Paradigm Revel - 523
+573,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorEnable,ENABLE=true,14831518276,53822015,62,Paradigm Revel - 523
+574,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorCalReminderTime,TIME=3600000,14831518277,53822015,63,Paradigm Revel - 523
+575,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTimeDisplayFormat,FORMAT=d12,14831518213,53822015,0,Paradigm Revel - 523
+576,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorAlarmSnoozeTime,TIME=1800000,14831518278,53822015,64,Paradigm Revel - 523
+577,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorHighGlucoseSnoozeTime,TIME=5400000,14831518279,53822015,65,Paradigm Revel - 523
+578,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorLowGlucoseSnoozeTime,TIME=1800000,14831518280,53822015,66,Paradigm Revel - 523
+579,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorMissedDataTime,TIME=2400000,14831518281,53822015,67,Paradigm Revel - 523
+580,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorTransmitterID,TRANSMITTER_ID=2172258,14831518282,53822015,68,Paradigm Revel - 523
+581,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorBGUnits,UNITS=mg dl,14831518283,53822015,69,Paradigm Revel - 523
+582,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorAlarmSilenceConfig,"DURATION=0, SCOPE=all",14831518284,53822015,70,Paradigm Revel - 523
+583,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorGraphConfig,"ENABLE=false, DURATION=120000",14831518285,53822015,71,Paradigm Revel - 523
+584,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorRateOfChangeAlertConfig,"LIMIT_UNITS=mg_dl_minute, RISING_LIMIT_ENABLE=false, RISING_LIMIT=4, FALLING_LIMIT_ENABLE=false, FALLING_LIMIT=4",14831518286,53822015,72,Paradigm Revel - 523
+585,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorAreaUnderCurveConfig,"HIGH_AREA_UNDER_CURVE=180, LOW_AREA_UNDER_CURVE=70",14831518287,53822015,73,Paradigm Revel - 523
+586,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorPredictiveAlertPattern,"ENABLE=true, NUM_PROFILES=1",14831518288,53822015,74,Paradigm Revel - 523
+587,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorPredictiveAlertProfile,"PATTERN_DATUM=14831518288, PROFILE_INDEX=0, LOW_ENABLE=true, LOW_DURATION=600000, HIGH_ENABLE=true, HIGH_DURATION=900000, START_TIME=0",14831518289,53822015,75,Paradigm Revel - 523
+588,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorGlucoseLimitPattern,"ENABLE=true, NUM_PROFILES=1",14831518290,53822015,76,Paradigm Revel - 523
+589,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorGlucoseLimitProfile,"PATTERN_DATUM=14831518290, PROFILE_INDEX=0, LOW_LIMIT_ENABLE=true, LOW_LIMIT=80, HIGH_LIMIT_ENABLE=true, HIGH_LIMIT=180, START_TIME=0",14831518291,53822015,77,Paradigm Revel - 523
+590,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorAutoCalEnable,ENABLE=false,14831518292,53822015,78,Paradigm Revel - 523
+591,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusScrollStepSize,STEP_SIZE=step_0_point_1,14831518293,53822015,79,Paradigm Revel - 523
+592,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCaptureEventEnable,ENABLE=true,14831518294,53822015,80,Paradigm Revel - 523
+593,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentOtherDeviceEnable,ENABLE=true,14831518295,53822015,81,Paradigm Revel - 523
+594,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentOtherDeviceMarried,MARRIED=false,14831518296,53822015,82,Paradigm Revel - 523
+595,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAudioBolusStep,"AMOUNT=0.5, ENABLE=true",14831518214,53822015,1,Paradigm Revel - 523
+596,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentVariableBolusEnable,ENABLE=true,14831518215,53822015,2,Paradigm Revel - 523
+597,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAutoOffDuration,DURATION=0,14831518216,53822015,3,Paradigm Revel - 523
+598,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalToday,AMOUNT=35.275,14831518217,53822015,4,Paradigm Revel - 523
+599,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTempBasal,"RATE=1.3, DURATION=0",14831518218,53822015,5,Paradigm Revel - 523
+600,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentMaxBasal,RATE=2,14831518219,53822015,6,Paradigm Revel - 523
+601,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentMaxBolus,AMOUNT=14,14831518220,53822015,7,Paradigm Revel - 523
+602,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentActiveBasalProfilePattern,PATTERN_NAME=standard,14831518221,53822015,8,Paradigm Revel - 523
+603,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=standard, NUM_PROFILES=7",14831518222,53822015,9,Paradigm Revel - 523
+604,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=14831518222, PROFILE_INDEX=0, RATE=0.9, START_TIME=0",14831518223,53822015,10,Paradigm Revel - 523
+605,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=14831518222, PROFILE_INDEX=1, RATE=0.9, START_TIME=14400000",14831518224,53822015,11,Paradigm Revel - 523
+606,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=14831518222, PROFILE_INDEX=2, RATE=0.85, START_TIME=25200000",14831518225,53822015,12,Paradigm Revel - 523
+607,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=14831518222, PROFILE_INDEX=3, RATE=0.875, START_TIME=36000000",14831518226,53822015,13,Paradigm Revel - 523
+608,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=14831518222, PROFILE_INDEX=4, RATE=0.75, START_TIME=43200000",14831518227,53822015,14,Paradigm Revel - 523
+609,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=14831518222, PROFILE_INDEX=5, RATE=0.8, START_TIME=54000000",14831518228,53822015,15,Paradigm Revel - 523
+610,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=14831518222, PROFILE_INDEX=6, RATE=0.9, START_TIME=79200000",14831518229,53822015,16,Paradigm Revel - 523
+611,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=pattern a, NUM_PROFILES=0",14831518230,53822015,17,Paradigm Revel - 523
+612,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=pattern b, NUM_PROFILES=0",14831518231,53822015,18,Paradigm Revel - 523
+613,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentVariableBasalProfilePatternEnable,ENABLE=false,14831518232,53822015,19,Paradigm Revel - 523
+614,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentChildBlockEnable,ENABLE=false,14831518233,53822015,20,Paradigm Revel - 523
+615,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAlarmNotifyMode,MODE=vibration,14831518234,53822015,21,Paradigm Revel - 523
+616,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRFEnable,ENABLE=false,14831518235,53822015,22,Paradigm Revel - 523
+617,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalYesterday,AMOUNT=28.025,14831518236,53822015,23,Paradigm Revel - 523
+618,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBatteryStatus,"STATUS=normal, VOLTAGE=129",14831518237,53822015,24,Paradigm Revel - 523
+619,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalRemaining,AMOUNT=60,14831518238,53822015,25,Paradigm Revel - 523
+620,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentErrorStatus,RAW_STATUS=0,14831518239,53822015,26,Paradigm Revel - 523
+621,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=1, REMOTE_CONTROL_ID=------",14831518240,53822015,27,Paradigm Revel - 523
+622,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=2, REMOTE_CONTROL_ID=------",14831518241,53822015,28,Paradigm Revel - 523
+623,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=3, REMOTE_CONTROL_ID=------",14831518242,53822015,29,Paradigm Revel - 523
+624,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentPumpStatus,STATUS=normal,14831518243,53822015,30,Paradigm Revel - 523
+625,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTempBasalType,TEMP_BASAL_TYPE=percentage,14831518244,53822015,31,Paradigm Revel - 523
+626,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkEnable,ENABLE=true,14831518245,53822015,32,Paradigm Revel - 523
+627,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinActionCurve,AMOUNT=240,14831518246,53822015,33,Paradigm Revel - 523
+628,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentPumpModelNumber,MODEL_NUMBER=523,14831518247,53822015,34,Paradigm Revel - 523
+629,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAlarmClockEnable,ENABLE=false,14831518248,53822015,35,Paradigm Revel - 523
+630,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGReminderEnable,ENABLE=false,14831518249,53822015,36,Paradigm Revel - 523
+631,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardEnable,ENABLE=true,14831518250,53822015,37,Paradigm Revel - 523
+632,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardBGUnits,UNITS=mg dl,14831518251,53822015,38,Paradigm Revel - 523
+633,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardCarbUnits,UNITS=grams,14831518252,53822015,39,Paradigm Revel - 523
+634,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentDisplayLanguage,LANGUAGE=english,14831518253,53822015,40,Paradigm Revel - 523
+635,4/12/15,20:12:54,4/12/15 20:12:54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=1, PARADIGM_LINK_ID=783436",14831518254,53822015,41,Paradigm Revel - 523
+
