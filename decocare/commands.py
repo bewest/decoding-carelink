@@ -249,6 +249,10 @@ class SetSuspend(PumpCommand):
   params = [ ]
   retries = 2
   maxRecords = 1
+  def getData(self):
+    status = { 0: 'resumed', 1: 'suspended' }
+    received = True if self.data[0] is 0 else False
+    return dict(recieved=received, status=status.get(self.params[0]))
 
 class PumpSuspend(SetSuspend):
   descr = "Suspend pump"

@@ -85,6 +85,8 @@ class PumpModel (object):
   read_carb_ratios = Task(commands.ReadCarbRatios512)
   read_current_glucose_pages = Task(commands.ReadCurGlucosePageNumber)
   read_current_history_pages = Task(commands.ReadCurPageNumber)
+  suspend_pump = Task(commands.PumpSuspend)
+  resume_pump = Task(commands.PumpResume)
 
 
   def decode_unabsorbed (self, raw):
