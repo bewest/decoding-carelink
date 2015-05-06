@@ -21,12 +21,12 @@ mm-pretty-csv ../CareLink-Export-1427693806171.csv  |  grep Wizard |
       export $food_estimate
       export $unabsorbed_total
 
-      echo -n $CARB_INPUT $CARB_$RATIO ''
+      echo -n $CARB_INPUT $CARB_RATIO ''
       echo -n $INSULIN_SENSITIVITY ''
       echo -n $BG_TARGET_LOW $BG_TARGET_HIGH ''
       echo -n $BOLUS_ESTIMATE $CORRECTION_ESTIMATE $FOOD_ESTIMATE $UNABSORBED_INSULIN_TOTAL
       echo
-      # echo 'xx' $sensitivity bglo $bg_target_low bghi $bg_target_high
+      # echo 'xx' $carb_ratio
     fi
   done
 
