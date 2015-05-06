@@ -226,7 +226,7 @@ reading more to debug 0x00
  'bolus_estimate': 1.8,
  'carb_input': 0,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 2.2,
+ 'correction_estimate': 2.2,
  'food_estimate': 0.0,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.4}
@@ -522,7 +522,7 @@ reading more to debug 0x00
  'bolus_estimate': 0.2,
  'carb_input': 0,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 0.2,
+ 'correction_estimate': 0.2,
  'food_estimate': 0.0,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.0}
@@ -594,10 +594,10 @@ reading more to debug 0x00
 {'bg': 0,
  'bg_target_high': 120,
  'bg_target_low': 90,
- 'bolus_estimate': 0.1,
+ 'bolus_estimate': 6.5,
  'carb_input': 65,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 0.0,
+ 'correction_estimate': 0.0,
  'food_estimate': 6.5,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.0}
@@ -783,10 +783,10 @@ reading more to debug 0x00
 {'bg': 0,
  'bg_target_high': 120,
  'bg_target_low': 90,
- 'bolus_estimate': 1.1,
+ 'bolus_estimate': 7.5,
  'carb_input': 60,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 0.0,
+ 'correction_estimate': 0.0,
  'food_estimate': 7.5,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.0}
@@ -947,7 +947,7 @@ reading more to debug 0x00
  'bolus_estimate': 6.0,
  'carb_input': 48,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 0.0,
+ 'correction_estimate': 0.0,
  'food_estimate': 6.0,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.0}

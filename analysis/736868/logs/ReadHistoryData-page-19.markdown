@@ -98,7 +98,7 @@ reading more to debug 0x00
  'bolus_estimate': 0.0,
  'carb_input': 0,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 0.5,
+ 'correction_estimate': 0.5,
  'food_estimate': 0.0,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.7}
@@ -204,7 +204,7 @@ reading more to debug 0x00
  'bolus_estimate': 3.7,
  'carb_input': 30,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 0.0,
+ 'correction_estimate': 0.0,
  'food_estimate': 3.7,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.0}
@@ -296,7 +296,7 @@ reading more to debug 0x00
  'bolus_estimate': 3.7,
  'carb_input': 30,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 0.0,
+ 'correction_estimate': 0.0,
  'food_estimate': 3.7,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.0}
@@ -405,7 +405,7 @@ reading more to debug 0x00
  'bolus_estimate': 5.6,
  'carb_input': 45,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 0.0,
+ 'correction_estimate': 0.0,
  'food_estimate': 5.6,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.0}
@@ -511,7 +511,7 @@ reading more to debug 0x00
  'bolus_estimate': 4.3,
  'carb_input': 35,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 2.2,
+ 'correction_estimate': 2.2,
  'food_estimate': 4.3,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 5.7}
@@ -693,7 +693,7 @@ reading more to debug 0x00
  'bolus_estimate': 3.0,
  'carb_input': 0,
  'carb_ratio': 8.1,
- 'correction_maybe_estimate': -1.7,
+ 'correction_estimate': 4.7,
  'food_estimate': 0.0,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 1.7}
@@ -803,7 +803,7 @@ reading more to debug 0x00
  'bolus_estimate': 0.5,
  'carb_input': 0,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 2.3,
+ 'correction_estimate': 2.3,
  'food_estimate': 0.0,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 1.8}
@@ -1083,10 +1083,10 @@ reading more to debug 0x00
 {'bg': 0,
  'bg_target_high': 120,
  'bg_target_low': 90,
- 'bolus_estimate': 0.6,
+ 'bolus_estimate': 7.0,
  'carb_input': 70,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 0.0,
+ 'correction_estimate': 0.0,
  'food_estimate': 7.0,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.0}

@@ -94,7 +94,7 @@
  'bolus_estimate': 5.8,
  'carb_input': 47,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 0.0,
+ 'correction_estimate': 0.0,
  'food_estimate': 5.8,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.0}
@@ -216,7 +216,7 @@
  'bolus_estimate': 5.6,
  'carb_input': 45,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 0.0,
+ 'correction_estimate': 0.0,
  'food_estimate': 5.6,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.0}
@@ -493,7 +493,7 @@
  'bolus_estimate': 2.2,
  'carb_input': 0,
  'carb_ratio': 8.1,
- 'correction_maybe_estimate': -2.4,
+ 'correction_estimate': 4.0,
  'food_estimate': 0.0,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 1.8}
@@ -1189,10 +1189,10 @@
 {'bg': 0,
  'bg_target_high': 120,
  'bg_target_low': 90,
- 'bolus_estimate': 5.2,
+ 'bolus_estimate': 11.6,
  'carb_input': 70,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 0.0,
+ 'correction_estimate': 0.0,
  'food_estimate': 11.6,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.0}
@@ -1345,7 +1345,7 @@
  'bolus_estimate': 0.0,
  'carb_input': 0,
  'carb_ratio': 8.0,
- 'correction_maybe_estimate': 0.0,
+ 'correction_estimate': 0.0,
  'food_estimate': 0.0,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.0}
