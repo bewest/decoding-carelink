@@ -7,7 +7,7 @@ reading more to debug 0x00
     0000   0xdf 0xe8                                  ..
 ##### DEBUG DECIMAL
             223  232
-#### RECORD 0 UnabsorbedInsulinBolus unknown head[44], body[0] op[0x5c]
+#### RECORD 0 UnabsorbedInsulin unknown head[44], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 204, 'amount': 0.15, 'curve': 4},
@@ -132,7 +132,7 @@ reading more to debug 0x00
               0   80    8   40   90   24    0    0
               0   28    0    0  120
 
-#### RECORD 6 UnabsorbedInsulinBolus unknown head[44], body[0] op[0x5c]
+#### RECORD 6 UnabsorbedInsulin unknown head[44], body[0] op[0x5c]
 ###### DECODED
 ```python
 [{'age': 42, 'amount': 3.0, 'curve': 4},

@@ -40,6 +40,8 @@ class Bolus(KnownRecord):
                'duration': duration,
                'type': duration > 0 and 'square' or 'normal',
              }
+    if dose.get('type', None) is 'normal':
+      self.name = 'BolusNormal'
     return dose
 
 class BolusWizard(KnownRecord):
@@ -148,26 +150,26 @@ def decode_unabsorbed(amount, age, curve,strokes=40.0):
   return unabsorbed
 """
 
-class UnabsorbedInsulinBolus(VariableHead):
+class UnabsorbedInsulin (VariableHead):
   """
   This data is not made available at the time of therapy in the pump
   UI, but could easily change my dosing decision.
 
   >>> from decocare import models
   >>> model = models.PumpModel('522', None)
-  >>> rec = UnabsorbedInsulinBolus( UnabsorbedInsulinBolus._test_1[:2], model)
+  >>> rec = UnabsorbedInsulin( UnabsorbedInsulin._test_1[:2], model)
   >>> print str(rec)
-  UnabsorbedInsulinBolus unknown head[2], body[0] op[0x5c]
+  UnabsorbedInsulin unknown head[2], body[0] op[0x5c]
 
-  >>> print pformat(rec.parse( UnabsorbedInsulinBolus._test_1 ))
+  >>> print pformat(rec.parse( UnabsorbedInsulin._test_1 ))
   [{'age': 78, 'amount': 1.25, 'curve': 4},
    {'age': 88, 'amount': 0.95, 'curve': 4}]
 
-  >>> rec = UnabsorbedInsulinBolus( UnabsorbedInsulinBolus._test_2[:2], model )
+  >>> rec = UnabsorbedInsulin( UnabsorbedInsulin._test_2[:2], model )
   >>> print str(rec)
-  UnabsorbedInsulinBolus unknown head[2], body[0] op[0x5c]
+  UnabsorbedInsulin unknown head[2], body[0] op[0x5c]
 
-  >>> print pformat(rec.parse( UnabsorbedInsulinBolus._test_2 ))
+  >>> print pformat(rec.parse( UnabsorbedInsulin._test_2 ))
   [{'age': 60, 'amount': 2.6, 'curve': 4},
    {'age': 160, 'amount': 2.5, 'curve': 4}]
 
@@ -180,6 +182,8 @@ class UnabsorbedInsulinBolus(VariableHead):
                         0x64, 0xa0, 0x04, ])
   opcode = 0x5c
   date_length = 0
+  attaches_to = [ Bolus ]
+  attaches_any = False
   def decode(self):
     raw = self.head[2:]
     return self.model.decode_unabsorbed(raw)

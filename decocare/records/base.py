@@ -26,7 +26,16 @@ class Base(object):
     self.date = bytearray( )
     self.datetime = None
     self.body = bytearray( )
+    self.name = self.__class__.__name__
 
+  attaches_to = [ ]
+  attaches_any = True
+  @classmethod
+  def appends_to (klass, inst):
+    for T in klass.attaches_to:
+      if isinstance(inst, T) or klass.attaches_any:
+        return True
+    return False
   @classmethod
   def describe(klass):
     opstring = "0x%02x" % (getattr(klass, 'opcode', 0))

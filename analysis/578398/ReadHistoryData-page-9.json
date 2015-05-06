@@ -75,37 +75,37 @@
   }, 
   {
     "programmed": 4.0, 
-    "_type": "Bolus", 
+    "_type": "BolusNormal", 
     "_description": "Bolus 2015-04-15T07:14:49 head[4], body[0] op[0x01]", 
     "timestamp": "2015-04-15T07:14:49", 
     "_body": "", 
-    "appended": [
-      {
-        "_type": "UnabsorbedInsulinBolus", 
-        "_description": "UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]", 
-        "data": [
-          {
-            "amount": 1.1, 
-            "curve": 4, 
-            "age": 175
-          }, 
-          {
-            "amount": 2.1, 
-            "curve": 4, 
-            "age": 185
-          }
-        ], 
-        "_body": "", 
-        "_head": "5c082caf0454b904", 
-        "_date": ""
-      }
-    ], 
     "_head": "01282800", 
     "duration": 0, 
     "amount": 4.0, 
     "date": 1429110889000.0, 
     "type": "normal", 
     "_date": "710e470f0f"
+  }, 
+  {
+    "_type": "UnabsorbedInsulin", 
+    "timestamp": "2015-04-15T04:17:36", 
+    "_description": "UnabsorbedInsulin unknown head[8], body[0] op[0x5c]", 
+    "date": 1429100256000.0, 
+    "data": [
+      {
+        "amount": 1.1, 
+        "curve": 4, 
+        "age": 175
+      }, 
+      {
+        "amount": 2.1, 
+        "curve": 4, 
+        "age": 185
+      }
+    ], 
+    "_body": "", 
+    "_head": "5c082caf0454b904", 
+    "_date": ""
   }, 
   {
     "_type": "BolusWizard", 
@@ -176,42 +176,42 @@
   }, 
   {
     "programmed": 3.2, 
-    "_type": "Bolus", 
+    "_type": "BolusNormal", 
     "_description": "Bolus 2015-04-15T04:17:36 head[4], body[0] op[0x01]", 
     "timestamp": "2015-04-15T04:17:36", 
     "_body": "", 
-    "appended": [
-      {
-        "_type": "UnabsorbedInsulinBolus", 
-        "_description": "UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]", 
-        "data": [
-          {
-            "amount": 3.15, 
-            "curve": 20, 
-            "age": 132
-          }, 
-          {
-            "amount": 1.45, 
-            "curve": 21, 
-            "age": 142
-          }, 
-          {
-            "amount": 4.0, 
-            "curve": 20, 
-            "age": 212
-          }
-        ], 
-        "_body": "", 
-        "_head": "5c0b7e84143a8e15a0d414", 
-        "_date": ""
-      }
-    ], 
     "_head": "01202000", 
     "duration": 0, 
     "amount": 3.2, 
     "date": 1429100256000.0, 
     "type": "normal", 
     "_date": "6411440f0f"
+  }, 
+  {
+    "_type": "UnabsorbedInsulin", 
+    "timestamp": "2015-04-14T21:47:44", 
+    "_description": "UnabsorbedInsulin unknown head[11], body[0] op[0x5c]", 
+    "date": 1429076864000.0, 
+    "data": [
+      {
+        "amount": 3.15, 
+        "curve": 20, 
+        "age": 132
+      }, 
+      {
+        "amount": 1.45, 
+        "curve": 21, 
+        "age": 142
+      }, 
+      {
+        "amount": 4.0, 
+        "curve": 20, 
+        "age": 212
+      }
+    ], 
+    "_body": "", 
+    "_head": "5c0b7e84143a8e15a0d414", 
+    "_date": ""
   }, 
   {
     "_type": "BolusWizard", 
@@ -652,7 +652,7 @@
   }, 
   {
     "programmed": 5.0, 
-    "_type": "Bolus", 
+    "_type": "BolusNormal", 
     "_description": "Bolus 2015-04-14T21:47:44 head[4], body[0] op[0x01]", 
     "timestamp": "2015-04-14T21:47:44", 
     "_body": "", 
@@ -665,7 +665,7 @@
   }, 
   {
     "programmed": 6.0, 
-    "_type": "Bolus", 
+    "_type": "BolusNormal", 
     "_description": "Bolus 2015-04-14T21:40:00 head[4], body[0] op[0x01]", 
     "timestamp": "2015-04-14T21:40:00", 
     "_body": "", 
@@ -698,37 +698,37 @@
   }, 
   {
     "programmed": 4.0, 
-    "_type": "Bolus", 
+    "_type": "BolusNormal", 
     "_description": "Bolus 2015-04-14T20:30:04 head[4], body[0] op[0x01]", 
     "timestamp": "2015-04-14T20:30:04", 
     "_body": "", 
-    "appended": [
-      {
-        "_type": "UnabsorbedInsulinBolus", 
-        "_description": "UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]", 
-        "data": [
-          {
-            "amount": 2.15, 
-            "curve": 20, 
-            "age": 35
-          }, 
-          {
-            "amount": 0.85, 
-            "curve": 20, 
-            "age": 45
-          }
-        ], 
-        "_body": "", 
-        "_head": "5c08562314222d14", 
-        "_date": ""
-      }
-    ], 
     "_head": "01282800", 
     "duration": 0, 
     "amount": 4.0, 
     "date": 1429072204000.0, 
     "type": "normal", 
     "_date": "441e540e0f"
+  }, 
+  {
+    "_type": "UnabsorbedInsulin", 
+    "timestamp": "2015-04-14T15:38:27", 
+    "_description": "UnabsorbedInsulin unknown head[8], body[0] op[0x5c]", 
+    "date": 1429054707000.0, 
+    "data": [
+      {
+        "amount": 2.15, 
+        "curve": 20, 
+        "age": 35
+      }, 
+      {
+        "amount": 0.85, 
+        "curve": 20, 
+        "age": 45
+      }
+    ], 
+    "_body": "", 
+    "_head": "5c08562314222d14", 
+    "_date": ""
   }, 
   {
     "_type": "BolusWizard", 
@@ -776,7 +776,7 @@
   }, 
   {
     "programmed": 3.0, 
-    "_type": "Bolus", 
+    "_type": "BolusNormal", 
     "_description": "Bolus 2015-04-14T15:38:27 head[4], body[0] op[0x01]", 
     "timestamp": "2015-04-14T15:38:27", 
     "_body": "", 
@@ -822,32 +822,32 @@
   }, 
   {
     "programmed": 2.7, 
-    "_type": "Bolus", 
+    "_type": "BolusNormal", 
     "_description": "Bolus 2015-04-14T11:36:18 head[4], body[0] op[0x01]", 
     "timestamp": "2015-04-14T11:36:18", 
     "_body": "", 
-    "appended": [
-      {
-        "_type": "UnabsorbedInsulinBolus", 
-        "_description": "UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]", 
-        "data": [
-          {
-            "amount": 3.4, 
-            "curve": 4, 
-            "age": 187
-          }
-        ], 
-        "_body": "", 
-        "_head": "5c0588bb04", 
-        "_date": ""
-      }
-    ], 
     "_head": "011b1b00", 
     "duration": 0, 
     "amount": 2.7, 
     "date": 1429040178000.0, 
     "type": "normal", 
     "_date": "52244b0e0f"
+  }, 
+  {
+    "_type": "UnabsorbedInsulin", 
+    "timestamp": "2015-04-14T08:29:02", 
+    "_description": "UnabsorbedInsulin unknown head[5], body[0] op[0x5c]", 
+    "date": 1429028942000.0, 
+    "data": [
+      {
+        "amount": 3.4, 
+        "curve": 4, 
+        "age": 187
+      }
+    ], 
+    "_body": "", 
+    "_head": "5c0588bb04", 
+    "_date": ""
   }, 
   {
     "_type": "BolusWizard", 
@@ -986,7 +986,7 @@
   }, 
   {
     "programmed": 3.4, 
-    "_type": "Bolus", 
+    "_type": "BolusNormal", 
     "_description": "Bolus 2015-04-14T08:29:02 head[4], body[0] op[0x01]", 
     "timestamp": "2015-04-14T08:29:02", 
     "_body": "", 
@@ -1253,7 +1253,7 @@
   }, 
   {
     "programmed": 3.9, 
-    "_type": "Bolus", 
+    "_type": "BolusNormal", 
     "_description": "Bolus 2015-04-13T21:33:41 head[4], body[0] op[0x01]", 
     "timestamp": "2015-04-13T21:33:41", 
     "_body": "", 

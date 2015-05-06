@@ -205,7 +205,7 @@ _confirmed = [ Bolus, Prime, NoDelivery, MResultTotals,
                NewTimeSet, LowBattery, Battery, PumpSuspend,
                PumpResume, CalBGForPH, Rewind, EnableDisableRemote,
                ChangeRemoteID, TempBasal, LowReservoir, BolusWizard,
-               UnabsorbedInsulinBolus, ChangeAlarmNotifyMode, ChangeTimeDisplay,
+               UnabsorbedInsulin, ChangeAlarmNotifyMode, ChangeTimeDisplay,
                ChangeBolusWizardSetup, ]
 
 # _confirmed.append(DanaScott0x09)
@@ -722,11 +722,19 @@ class HistoryPage (PagedData):
   def decode (self, larger=False):
     records = [ ]
     skipped = [ ]
+    done    = [ ]
     for B in iter(lambda: bytearray(self.stream.read(2)), bytearray("")):
       if B == bytearray( [ 0x00, 0x00 ] ):
         if skipped:
+          for item in reversed(skipped):
+            for i, rec in enumerate(reversed(done)):
+              if item.appends_to(rec):
+                joinkey = '-'.join([rec.get('_description'), item.get('_description')])
+                item.update(timestamp=rec.get('timestamp'), date=rec.get('date'))
+                records.insert(len(records)-i, item)
+
           last = records[-1]
-          last.update(appended=last.get('appended', [ ]) + skipped)
+          # last.update(appended=last.get('appended', [ ]) + skipped)
           # records.extend(skipped)
           skipped = [ ]
         break
@@ -735,7 +743,7 @@ class HistoryPage (PagedData):
       if record.datetime:
         rec = dict(timestamp=record.datetime.isoformat( ),
                    date=lib.epochize(record.datetime),
-                   _type=str(record.__class__.__name__),
+                   _type=str(record.name),
                    _body=lib.hexlify(record.body),
                    _head=lib.hexlify(record.head),
                    _date=lib.hexlify(record.date),
@@ -743,11 +751,12 @@ class HistoryPage (PagedData):
         if data is not None:
           rec.update(data)
           if skipped:
-            rec.update(appended=skipped)
+            # rec.update(appended=skipped)
             skipped = [ ]
+        done.append(record)
         records.append(rec)
       else:
-        rec = dict(_type=str(record.__class__.__name__),
+        rec = dict(_type=str(record.name),
                    _body=lib.hexlify(record.body),
                    _head=lib.hexlify(record.head),
                    _date=lib.hexlify(record.date),
@@ -755,7 +764,16 @@ class HistoryPage (PagedData):
         data = record.decode( )
         if data is not None:
           rec.update(data=data)
-        skipped.append(rec)
+        for i, known in enumerate(reversed(done)):
+          if record.appends_to(known):
+            joinkey = '-'.join([str(known), rec.get('_description')])
+            rec.update(timestamp=known.datetime.isoformat( ), date=lib.epochize(known.datetime))
+            records.append(rec)
+            rec = None
+            break
+        done.append(record)
+        if rec:
+          skipped.append(rec)
     records.reverse( )
     return records
 
