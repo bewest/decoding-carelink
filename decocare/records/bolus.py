@@ -114,24 +114,33 @@ class BolusWizard(KnownRecord):
              }
 
     if self.larger:
-      correction = ( twos_comp( self.body[6], 8 ) ) / 40.0
+      # correction = ( twos_comp( self.body[6], (self.body[9] & 0x38) << 5 ) ) / 40.0
+      bg = ((self.body[1] & 0x03) << 8) + self.head[1]
+      carb_input = ((self.body[1] & 0x0c) << 6) + self.body[0]
+      carb_ratio = (((self.body[2] & 0x07) << 8) + self.body[3]) / 10.0
+      # xxx: not sure about this
+      # https://github.com/ps2/minimed_rf/blob/master/lib/minimed_rf/log_entries/bolus_wizard.rb#L102
+      sensitivity = ((self.date[2] & 0xE0) << 2) + self.body[4]
       wizard = { 'bg': bg, 'carb_input': carb_input,
                  'carb_ratio': int(self.body[1])/ 10.0,
-                 'sensitivity': int(self.body[4]),
+                 'sensitivity': sensitivity,
                  'bg_target_low': int(self.body[5]),
                  'bg_target_high': int(self.body[14]),
-                 'bolus_estimate': int(self.body[13])/40.0,
+                 # 'bolus_estimate': int(self.body[13])/40.0,
 
-                 # 'correction_estimate': int(self.body[6])/40.0,
-                 'correction_maybe_estimate': correction,
+                 'correction_estimate': (((self.body[9] & 0x38) << 5) + self.body[6]) / 40.0,
+                 # 'correction_maybe_estimate': correction,
 
-                 'food_estimate': int(self.body[8])/40.0,
-                 'unabsorbed_insulin_total': int(self.body[11])/40.0,
+                 'food_estimate': insulin_decode(self.body[7], self.body[8]),
+                 'unabsorbed_insulin_total': insulin_decode(self.body[10], self.body[11]),
+                 'bolus_estimate': insulin_decode(self.body[12], self.body[13]),
                  # 'unknown_bytes': map(int, list(self.body)),
                }
 
     return wizard
 
+def insulin_decode (a, b, strokes=40.0):
+  return ((a << 8) + b) / strokes
 def twos_comp(val, bits):
     # http://stackoverflow.com/a/9147327
     """compute the 2's compliment of int value val"""
