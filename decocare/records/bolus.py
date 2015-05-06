@@ -46,7 +46,8 @@ class BolusWizard(KnownRecord):
   """
   Decode/parse bolus wizard records.
 
-  >>> rec = BolusWizard(BolusWizard._test_1[:2])
+  >>> from decocare import models
+  >>> rec = BolusWizard(BolusWizard._test_1[:2], model=models.PumpModel('522', None))
   >>> decoded = rec.parse(BolusWizard._test_1)
   >>> print str(rec)
   BolusWizard 2013-01-20T13:07:45 head[2], body[13] op[0x5b]
@@ -81,8 +82,8 @@ class BolusWizard(KnownRecord):
                         0x00, 0x00, 0x00, 0x38, 0x7d, ])
   opcode = 0x5b
   body_length = 13
-  def __init__(self, head, larger=False):
-    super(type(self), self).__init__(head, larger)
+  def __init__(self, head, model=None):
+    super(type(self), self).__init__(head, model)
     # self.larger = larger
     if self.larger:
       self.body_length = 15
@@ -152,7 +153,9 @@ class UnabsorbedInsulinBolus(VariableHead):
   This data is not made available at the time of therapy in the pump
   UI, but could easily change my dosing decision.
 
-  >>> rec = UnabsorbedInsulinBolus( UnabsorbedInsulinBolus._test_1[:2] )
+  >>> from decocare import models
+  >>> model = models.PumpModel('522', None)
+  >>> rec = UnabsorbedInsulinBolus( UnabsorbedInsulinBolus._test_1[:2], model)
   >>> print str(rec)
   UnabsorbedInsulinBolus unknown head[2], body[0] op[0x5c]
 
@@ -160,7 +163,7 @@ class UnabsorbedInsulinBolus(VariableHead):
   [{'age': 78, 'amount': 1.25, 'curve': 4},
    {'age': 88, 'amount': 0.95, 'curve': 4}]
 
-  >>> rec = UnabsorbedInsulinBolus( UnabsorbedInsulinBolus._test_2[:2] )
+  >>> rec = UnabsorbedInsulinBolus( UnabsorbedInsulinBolus._test_2[:2], model )
   >>> print str(rec)
   UnabsorbedInsulinBolus unknown head[2], body[0] op[0x5c]
 
