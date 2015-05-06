@@ -86,6 +86,21 @@ class PumpModel (object):
   read_current_glucose_pages = Task(commands.ReadCurGlucosePageNumber)
   read_current_history_pages = Task(commands.ReadCurPageNumber)
 
+
+  def decode_unabsorbed (self, raw):
+    doses = [ ]
+    while raw and len(raw) > 2:
+      head, tail = raw[:3], raw[3:]
+      doses.append(self.decode_unabsorbed_component(*head) )
+      raw = tail
+    return doses
+
+  def decode_unabsorbed_component (self, amount, age, curve,strokes=40.0):
+    unabsorbed = { 'amount': amount/strokes,
+                   'age': age,
+                   'curve': curve, }
+    return unabsorbed
+
   @PageIterator.handler( )
   class iter_glucose_pages (Cursor):
     Info = commands.ReadCurGlucosePageNumber

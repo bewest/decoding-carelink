@@ -138,11 +138,14 @@ def twos_comp(val, bits):
         val = val - (1<<bits)
     return val
 
+"""
+moved to models
 def decode_unabsorbed(amount, age, curve,strokes=40.0):
   unabsorbed = { 'amount': amount/strokes,
                  'age': age,
                  'curve': curve, }
   return unabsorbed
+"""
 
 class UnabsorbedInsulinBolus(VariableHead):
   """
@@ -176,12 +179,7 @@ class UnabsorbedInsulinBolus(VariableHead):
   date_length = 0
   def decode(self):
     raw = self.head[2:]
-    doses = [ ]
-    while raw and len(raw) > 2:
-      head, tail = raw[:3], raw[3:]
-      doses.append( decode_unabsorbed(*head) )
-      raw = tail
-    return doses
+    return self.model.decode_unabsorbed(raw)
 
 class CalBGForPH(KnownRecord):
   """
