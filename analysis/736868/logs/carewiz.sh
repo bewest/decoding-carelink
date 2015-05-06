@@ -31,6 +31,8 @@ mm-pretty-csv ../CareLink-Export-1427693806171.csv  |  grep Wizard |
   done
 
 #
-# for x in ReadHistory*.json ; do cat $x |  json -a timestamp _type bg carb_input carb_ratio sensitivity bg_target_low bg_target_high bolus_estimate correction_estimate food_estimate unabsorbed_insulin_total _head _date _body ; done | grep Wiz | sort | tee wizards.tsv
+# a script like this will make matching output from decoded json files
+# the two files can be compared with diff tools.
+# for x in ReadHistory*.json ; do cat $x |  json -a timestamp _type bg carb_input carb_ratio sensitivity bg_target_low bg_target_high bolus_estimate correction_estimate food_estimate unabsorbed_insulin_total _head _date _body ; done | grep Wiz | sed -e "s/BolusWizard/BolusWizardBolusEstimate/g" | sort | tee wizards.tsv
 #
 
