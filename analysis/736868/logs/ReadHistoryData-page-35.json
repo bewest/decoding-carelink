@@ -897,12 +897,13 @@
   }, 
   {
     "_type": "TempBasal", 
+    "temp": "percent", 
     "_description": "TempBasal 2015-02-06T23:39:06 head[2], body[1] op[0x33]", 
     "date": 1423294746000.0, 
     "timestamp": "2015-02-06T23:39:06", 
     "_body": "08", 
     "_head": "337d", 
-    "rate": 3.125, 
+    "rate": 125, 
     "_date": "06a717060f"
   }, 
   {

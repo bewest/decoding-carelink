@@ -610,7 +610,7 @@ reading more to debug 0x00
 #### RECORD 35 TempBasal 2015-02-11T23:15:33 head[2], body[1] op[0x33]
 ###### DECODED
 ```python
-{'rate': 3.675}
+{'rate': 147, 'temp': 'percent'}
 ```
     op hex (2)
     0000   0x33 0x93                                  3.
