@@ -494,6 +494,7 @@
   }, 
   {
     "_type": "TempBasal", 
+    "temp": "absolute", 
     "_description": "TempBasal 2015-04-14T23:16:01 head[2], body[1] op[0x33]", 
     "date": 1429082161000.0, 
     "timestamp": "2015-04-14T23:16:01", 
@@ -575,6 +576,7 @@
   }, 
   {
     "_type": "TempBasal", 
+    "temp": "absolute", 
     "_description": "TempBasal 2015-04-14T22:56:57 head[2], body[1] op[0x33]", 
     "date": 1429081017000.0, 
     "timestamp": "2015-04-14T22:56:57", 

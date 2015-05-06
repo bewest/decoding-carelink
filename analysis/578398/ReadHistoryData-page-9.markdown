@@ -802,7 +802,7 @@
 #### RECORD 58 TempBasal 2015-04-14T22:56:57 head[2], body[1] op[0x33]
 ###### DECODED
 ```python
-{'rate': 0.05}
+{'rate': 0.05, 'temp': 'absolute'}
 ```
     op hex (2)
     0000   0x33 0x02                                  3.
@@ -912,7 +912,7 @@
 #### RECORD 66 TempBasal 2015-04-14T23:16:01 head[2], body[1] op[0x33]
 ###### DECODED
 ```python
-{'rate': 0.0}
+{'rate': 0.0, 'temp': 'absolute'}
 ```
     op hex (2)
     0000   0x33 0x00                                  3.

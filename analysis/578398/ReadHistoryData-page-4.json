@@ -323,6 +323,7 @@
   }, 
   {
     "_type": "TempBasal", 
+    "temp": "absolute", 
     "_description": "TempBasal 2015-04-26T03:01:24 head[2], body[1] op[0x33]", 
     "date": 1430046084000.0, 
     "timestamp": "2015-04-26T03:01:24", 
