@@ -71,73 +71,59 @@
         "data": [
           {
             "amount": 0.1, 
-            "curve": 4, 
             "age": 4
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 14
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 24
           }, 
           {
             "amount": 0.2, 
-            "curve": 4, 
             "age": 34
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 44
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 54
           }, 
           {
             "amount": 0.2, 
-            "curve": 4, 
             "age": 64
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 74
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 84
           }, 
           {
             "amount": 4.05, 
-            "curve": 4, 
             "age": 94
           }, 
           {
             "amount": 1.8, 
-            "curve": 4, 
             "age": 234
           }, 
           {
             "amount": 2.8, 
-            "curve": 20, 
-            "age": 58
+            "age": 314
           }, 
           {
             "amount": 4.05, 
-            "curve": 20, 
-            "age": 68
+            "age": 324
           }, 
           {
             "amount": 0.55, 
-            "curve": 20, 
-            "age": 78
+            "age": 334
           }
         ], 
         "_body": "", 
@@ -200,33 +186,27 @@
         "data": [
           {
             "amount": 1.8, 
-            "curve": 4, 
             "age": 145
           }, 
           {
             "amount": 2.8, 
-            "curve": 4, 
             "age": 225
           }, 
           {
             "amount": 4.05, 
-            "curve": 4, 
             "age": 235
           }, 
           {
             "amount": 0.55, 
-            "curve": 4, 
             "age": 245
           }, 
           {
             "amount": 3.15, 
-            "curve": 20, 
-            "age": 149
+            "age": 405
           }, 
           {
             "amount": 2.05, 
-            "curve": 20, 
-            "age": 159
+            "age": 415
           }
         ], 
         "_body": "", 
@@ -289,28 +269,23 @@
         "data": [
           {
             "amount": 2.8, 
-            "curve": 4, 
             "age": 84
           }, 
           {
             "amount": 4.05, 
-            "curve": 4, 
             "age": 94
           }, 
           {
             "amount": 0.55, 
-            "curve": 4, 
             "age": 104
           }, 
           {
             "amount": 3.15, 
-            "curve": 20, 
-            "age": 8
+            "age": 264
           }, 
           {
             "amount": 2.05, 
-            "curve": 20, 
-            "age": 18
+            "age": 274
           }
         ], 
         "_body": "", 
@@ -362,22 +337,18 @@
         "data": [
           {
             "amount": 4.05, 
-            "curve": 4, 
             "age": 10
           }, 
           {
             "amount": 0.55, 
-            "curve": 4, 
             "age": 20
           }, 
           {
             "amount": 3.15, 
-            "curve": 4, 
             "age": 180
           }, 
           {
             "amount": 2.05, 
-            "curve": 4, 
             "age": 190
           }
         ], 
@@ -430,17 +401,14 @@
         "data": [
           {
             "amount": 0.4, 
-            "curve": 4, 
             "age": 9
           }, 
           {
             "amount": 3.15, 
-            "curve": 4, 
             "age": 169
           }, 
           {
             "amount": 2.05, 
-            "curve": 4, 
             "age": 179
           }
         ], 
@@ -493,12 +461,10 @@
         "data": [
           {
             "amount": 3.15, 
-            "curve": 4, 
             "age": 162
           }, 
           {
             "amount": 2.05, 
-            "curve": 4, 
             "age": 172
           }
         ], 
@@ -630,78 +596,63 @@
         "data": [
           {
             "amount": 0.05, 
-            "curve": 20, 
-            "age": 82
+            "age": 338
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 92
+            "age": 348
           }, 
           {
             "amount": 3.1, 
-            "curve": 20, 
-            "age": 102
+            "age": 358
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 112
+            "age": 368
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 122
+            "age": 378
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 132
+            "age": 388
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 142
+            "age": 398
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 152
+            "age": 408
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 162
+            "age": 418
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 172
+            "age": 428
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 182
+            "age": 438
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 192
+            "age": 448
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 202
+            "age": 458
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 212
+            "age": 468
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 222
+            "age": 478
           }
         ], 
         "_body": "", 
@@ -848,123 +799,99 @@
         "data": [
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 12
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 22
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 32
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 42
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 52
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 62
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 72
           }, 
           {
             "amount": 0.1, 
-            "curve": 4, 
             "age": 82
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 92
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 102
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 112
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 122
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 132
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 142
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 152
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 162
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 172
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 182
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 192
           }, 
           {
             "amount": 0.1, 
-            "curve": 4, 
             "age": 202
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 212
           }, 
           {
             "amount": 1.75, 
-            "curve": 4, 
             "age": 222
           }, 
           {
             "amount": 2.9, 
-            "curve": 4, 
             "age": 232
           }, 
           {
             "amount": 4.3, 
-            "curve": 20, 
-            "age": 6
+            "age": 262
           }
         ], 
         "_body": "", 
@@ -1016,103 +943,83 @@
         "data": [
           {
             "amount": 4.3, 
-            "curve": 4, 
             "age": 38
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 32
+            "age": 288
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 42
+            "age": 298
           }, 
           {
             "amount": 2.6, 
-            "curve": 20, 
-            "age": 52
+            "age": 308
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 62
+            "age": 318
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 72
+            "age": 328
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 82
+            "age": 338
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 92
+            "age": 348
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 102
+            "age": 358
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 112
+            "age": 368
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 122
+            "age": 378
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 132
+            "age": 388
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 142
+            "age": 398
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 152
+            "age": 408
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 162
+            "age": 418
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 172
+            "age": 428
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 182
+            "age": 438
           }, 
           {
             "amount": 1.6, 
-            "curve": 20, 
-            "age": 192
+            "age": 448
           }, 
           {
             "amount": 1.95, 
-            "curve": 20, 
-            "age": 202
+            "age": 458
           }, 
           {
             "amount": 2.15, 
-            "curve": 20, 
-            "age": 212
+            "age": 468
           }
         ], 
         "_body": "", 
@@ -1164,108 +1071,87 @@
         "data": [
           {
             "amount": 0.1, 
-            "curve": 4, 
             "age": 250
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 4
+            "age": 260
           }, 
           {
             "amount": 2.6, 
-            "curve": 20, 
-            "age": 14
+            "age": 270
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 24
+            "age": 280
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 34
+            "age": 290
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 44
+            "age": 300
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 54
+            "age": 310
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 64
+            "age": 320
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 74
+            "age": 330
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 84
+            "age": 340
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 94
+            "age": 350
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 104
+            "age": 360
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 114
+            "age": 370
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 124
+            "age": 380
           }, 
           {
             "amount": 0.15, 
-            "curve": 20, 
-            "age": 134
+            "age": 390
           }, 
           {
             "amount": 0.1, 
-            "curve": 20, 
-            "age": 144
+            "age": 400
           }, 
           {
             "amount": 1.6, 
-            "curve": 20, 
-            "age": 154
+            "age": 410
           }, 
           {
             "amount": 1.95, 
-            "curve": 20, 
-            "age": 164
+            "age": 420
           }, 
           {
             "amount": 2.15, 
-            "curve": 20, 
-            "age": 174
+            "age": 430
           }, 
           {
             "amount": 2.1, 
-            "curve": 20, 
-            "age": 204
+            "age": 460
           }, 
           {
             "amount": 0.8, 
-            "curve": 20, 
-            "age": 214
+            "age": 470
           }
         ], 
         "_body": "", 
@@ -1349,113 +1235,91 @@
         "data": [
           {
             "amount": 0.05, 
-            "curve": 4, 
             "age": 2
           }, 
           {
             "amount": 0.1, 
-            "curve": 4, 
             "age": 12
           }, 
           {
             "amount": 0.1, 
-            "curve": 4, 
             "age": 22
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 32
           }, 
           {
             "amount": 0.1, 
-            "curve": 4, 
             "age": 42
           }, 
           {
             "amount": 0.1, 
-            "curve": 4, 
             "age": 52
           }, 
           {
             "amount": 0.1, 
-            "curve": 4, 
             "age": 62
           }, 
           {
             "amount": 0.1, 
-            "curve": 4, 
             "age": 72
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 82
           }, 
           {
             "amount": 0.1, 
-            "curve": 4, 
             "age": 92
           }, 
           {
             "amount": 0.1, 
-            "curve": 4, 
             "age": 102
           }, 
           {
             "amount": 0.1, 
-            "curve": 4, 
             "age": 112
           }, 
           {
             "amount": 0.15, 
-            "curve": 4, 
             "age": 122
           }, 
           {
             "amount": 0.1, 
-            "curve": 4, 
             "age": 132
           }, 
           {
             "amount": 1.6, 
-            "curve": 4, 
             "age": 142
           }, 
           {
             "amount": 1.95, 
-            "curve": 4, 
             "age": 152
           }, 
           {
             "amount": 2.15, 
-            "curve": 4, 
             "age": 162
           }, 
           {
             "amount": 2.1, 
-            "curve": 4, 
             "age": 192
           }, 
           {
             "amount": 0.8, 
-            "curve": 4, 
             "age": 202
           }, 
           {
             "amount": 2.0, 
-            "curve": 4, 
             "age": 222
           }, 
           {
             "amount": 3.0, 
-            "curve": 20, 
-            "age": 66
+            "age": 322
           }, 
           {
             "amount": 2.4, 
-            "curve": 20, 
-            "age": 106
+            "age": 362
           }
         ], 
         "_body": "", 

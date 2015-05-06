@@ -97,10 +97,12 @@ class PumpModel (object):
       raw = tail
     return doses
 
-  def decode_unabsorbed_component (self, amount, age, curve,strokes=40.0):
+  def decode_unabsorbed_component (self, amount, age, _curve,strokes=40.0):
+    curve = ((_curve & 0b110000) << 4)
     unabsorbed = { 'amount': amount/strokes,
-                   'age': age,
-                   'curve': curve, }
+                   'age': age + curve,
+                   # 'curve': curve,
+                 }
     return unabsorbed
 
   @PageIterator.handler( )

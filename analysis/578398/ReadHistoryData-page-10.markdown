@@ -914,7 +914,7 @@
 #### RECORD 36 UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 24, 'amount': 1.0, 'curve': 4}]
+[{'age': 24, 'amount': 1.0}]
 ```
     op hex (5)
     0000   0x5c 0x05 0x28 0x18 0x04                   \.(..
@@ -1016,8 +1016,7 @@
 #### RECORD 42 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 234, 'amount': 5.6, 'curve': 4},
- {'age': 254, 'amount': 1.0, 'curve': 4}]
+[{'age': 234, 'amount': 5.6}, {'age': 254, 'amount': 1.0}]
 ```
     op hex (8)
     0000   0x5c 0x08 0xe0 0xea 0x04 0x28 0xfe 0x04    \....(..

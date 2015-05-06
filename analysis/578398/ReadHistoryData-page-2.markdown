@@ -10,21 +10,21 @@ reading more to debug 0x00
 #### RECORD 0 UnabsorbedInsulinBolus unknown head[47], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 252, 'amount': 0.2, 'curve': 4},
- {'age': 6, 'amount': 0.25, 'curve': 20},
- {'age': 16, 'amount': 0.2, 'curve': 20},
- {'age': 26, 'amount': 0.25, 'curve': 20},
- {'age': 36, 'amount': 2.0, 'curve': 20},
- {'age': 46, 'amount': 0.25, 'curve': 20},
- {'age': 56, 'amount': 0.25, 'curve': 20},
- {'age': 66, 'amount': 0.2, 'curve': 20},
- {'age': 76, 'amount': 0.25, 'curve': 20},
- {'age': 86, 'amount': 0.25, 'curve': 20},
- {'age': 96, 'amount': 1.2, 'curve': 20},
- {'age': 106, 'amount': 0.25, 'curve': 20},
- {'age': 116, 'amount': 3.45, 'curve': 20},
- {'age': 126, 'amount': 2.2, 'curve': 20},
- {'age': 196, 'amount': 2.1, 'curve': 20}]
+[{'age': 252, 'amount': 0.2},
+ {'age': 262, 'amount': 0.25},
+ {'age': 272, 'amount': 0.2},
+ {'age': 282, 'amount': 0.25},
+ {'age': 292, 'amount': 2.0},
+ {'age': 302, 'amount': 0.25},
+ {'age': 312, 'amount': 0.25},
+ {'age': 322, 'amount': 0.2},
+ {'age': 332, 'amount': 0.25},
+ {'age': 342, 'amount': 0.25},
+ {'age': 352, 'amount': 1.2},
+ {'age': 362, 'amount': 0.25},
+ {'age': 372, 'amount': 3.45},
+ {'age': 382, 'amount': 2.2},
+ {'age': 452, 'amount': 2.1}]
 ```
     op hex (47)
     0000   0x5c 0x2f 0x08 0xfc 0x04 0x0a 0x06 0x14    \/......
@@ -162,22 +162,22 @@ reading more to debug 0x00
 #### RECORD 9 UnabsorbedInsulinBolus unknown head[50], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 47, 'amount': 0.05, 'curve': 4},
- {'age': 57, 'amount': 3.7, 'curve': 4},
- {'age': 51, 'amount': 0.2, 'curve': 20},
- {'age': 61, 'amount': 0.25, 'curve': 20},
- {'age': 71, 'amount': 0.2, 'curve': 20},
- {'age': 81, 'amount': 0.25, 'curve': 20},
- {'age': 91, 'amount': 2.0, 'curve': 20},
- {'age': 101, 'amount': 0.25, 'curve': 20},
- {'age': 111, 'amount': 0.25, 'curve': 20},
- {'age': 121, 'amount': 0.2, 'curve': 20},
- {'age': 131, 'amount': 0.25, 'curve': 20},
- {'age': 141, 'amount': 0.25, 'curve': 20},
- {'age': 151, 'amount': 1.2, 'curve': 20},
- {'age': 161, 'amount': 0.25, 'curve': 20},
- {'age': 171, 'amount': 3.45, 'curve': 20},
- {'age': 181, 'amount': 2.2, 'curve': 20}]
+[{'age': 47, 'amount': 0.05},
+ {'age': 57, 'amount': 3.7},
+ {'age': 307, 'amount': 0.2},
+ {'age': 317, 'amount': 0.25},
+ {'age': 327, 'amount': 0.2},
+ {'age': 337, 'amount': 0.25},
+ {'age': 347, 'amount': 2.0},
+ {'age': 357, 'amount': 0.25},
+ {'age': 367, 'amount': 0.25},
+ {'age': 377, 'amount': 0.2},
+ {'age': 387, 'amount': 0.25},
+ {'age': 397, 'amount': 0.25},
+ {'age': 407, 'amount': 1.2},
+ {'age': 417, 'amount': 0.25},
+ {'age': 427, 'amount': 3.45},
+ {'age': 437, 'amount': 2.2}]
 ```
     op hex (50)
     0000   0x5c 0x32 0x02 0x2f 0x04 0x94 0x39 0x04    \2./..9.
@@ -261,23 +261,23 @@ reading more to debug 0x00
 #### RECORD 13 UnabsorbedInsulinBolus unknown head[53], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 48, 'amount': 3.1, 'curve': 4},
- {'age': 88, 'amount': 0.05, 'curve': 4},
- {'age': 98, 'amount': 3.7, 'curve': 4},
- {'age': 92, 'amount': 0.2, 'curve': 20},
- {'age': 102, 'amount': 0.25, 'curve': 20},
- {'age': 112, 'amount': 0.2, 'curve': 20},
- {'age': 122, 'amount': 0.25, 'curve': 20},
- {'age': 132, 'amount': 2.0, 'curve': 20},
- {'age': 142, 'amount': 0.25, 'curve': 20},
- {'age': 152, 'amount': 0.25, 'curve': 20},
- {'age': 162, 'amount': 0.2, 'curve': 20},
- {'age': 172, 'amount': 0.25, 'curve': 20},
- {'age': 182, 'amount': 0.25, 'curve': 20},
- {'age': 192, 'amount': 1.2, 'curve': 20},
- {'age': 202, 'amount': 0.25, 'curve': 20},
- {'age': 212, 'amount': 3.45, 'curve': 20},
- {'age': 222, 'amount': 2.2, 'curve': 20}]
+[{'age': 48, 'amount': 3.1},
+ {'age': 88, 'amount': 0.05},
+ {'age': 98, 'amount': 3.7},
+ {'age': 348, 'amount': 0.2},
+ {'age': 358, 'amount': 0.25},
+ {'age': 368, 'amount': 0.2},
+ {'age': 378, 'amount': 0.25},
+ {'age': 388, 'amount': 2.0},
+ {'age': 398, 'amount': 0.25},
+ {'age': 408, 'amount': 0.25},
+ {'age': 418, 'amount': 0.2},
+ {'age': 428, 'amount': 0.25},
+ {'age': 438, 'amount': 0.25},
+ {'age': 448, 'amount': 1.2},
+ {'age': 458, 'amount': 0.25},
+ {'age': 468, 'amount': 3.45},
+ {'age': 478, 'amount': 2.2}]
 ```
     op hex (53)
     0000   0x5c 0x35 0x7c 0x30 0x04 0x02 0x58 0x04    \5|0..X.
@@ -348,24 +348,24 @@ reading more to debug 0x00
 #### RECORD 16 UnabsorbedInsulinBolus unknown head[56], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 4, 'amount': 1.85, 'curve': 4},
- {'age': 14, 'amount': 2.75, 'curve': 4},
- {'age': 54, 'amount': 3.1, 'curve': 4},
- {'age': 94, 'amount': 0.05, 'curve': 4},
- {'age': 104, 'amount': 3.7, 'curve': 4},
- {'age': 98, 'amount': 0.2, 'curve': 20},
- {'age': 108, 'amount': 0.25, 'curve': 20},
- {'age': 118, 'amount': 0.2, 'curve': 20},
- {'age': 128, 'amount': 0.25, 'curve': 20},
- {'age': 138, 'amount': 2.0, 'curve': 20},
- {'age': 148, 'amount': 0.25, 'curve': 20},
- {'age': 158, 'amount': 0.25, 'curve': 20},
- {'age': 168, 'amount': 0.2, 'curve': 20},
- {'age': 178, 'amount': 0.25, 'curve': 20},
- {'age': 188, 'amount': 0.25, 'curve': 20},
- {'age': 198, 'amount': 1.2, 'curve': 20},
- {'age': 208, 'amount': 0.25, 'curve': 20},
- {'age': 218, 'amount': 3.45, 'curve': 20}]
+[{'age': 4, 'amount': 1.85},
+ {'age': 14, 'amount': 2.75},
+ {'age': 54, 'amount': 3.1},
+ {'age': 94, 'amount': 0.05},
+ {'age': 104, 'amount': 3.7},
+ {'age': 354, 'amount': 0.2},
+ {'age': 364, 'amount': 0.25},
+ {'age': 374, 'amount': 0.2},
+ {'age': 384, 'amount': 0.25},
+ {'age': 394, 'amount': 2.0},
+ {'age': 404, 'amount': 0.25},
+ {'age': 414, 'amount': 0.25},
+ {'age': 424, 'amount': 0.2},
+ {'age': 434, 'amount': 0.25},
+ {'age': 444, 'amount': 0.25},
+ {'age': 454, 'amount': 1.2},
+ {'age': 464, 'amount': 0.25},
+ {'age': 474, 'amount': 3.45}]
 ```
     op hex (56)
     0000   0x5c 0x38 0x4a 0x04 0x04 0x6e 0x0e 0x04    \8J..n..
@@ -479,12 +479,12 @@ reading more to debug 0x00
 #### RECORD 22 UnabsorbedInsulinBolus unknown head[20], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 124, 'amount': 3.85, 'curve': 4},
- {'age': 134, 'amount': 2.75, 'curve': 4},
- {'age': 174, 'amount': 3.1, 'curve': 4},
- {'age': 214, 'amount': 0.05, 'curve': 4},
- {'age': 224, 'amount': 3.7, 'curve': 4},
- {'age': 218, 'amount': 0.2, 'curve': 20}]
+[{'age': 124, 'amount': 3.85},
+ {'age': 134, 'amount': 2.75},
+ {'age': 174, 'amount': 3.1},
+ {'age': 214, 'amount': 0.05},
+ {'age': 224, 'amount': 3.7},
+ {'age': 474, 'amount': 0.2}]
 ```
     op hex (20)
     0000   0x5c 0x14 0x9a 0x7c 0x04 0x6e 0x86 0x04    \..|.n..
@@ -560,12 +560,12 @@ reading more to debug 0x00
 #### RECORD 26 UnabsorbedInsulinBolus unknown head[20], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 30, 'amount': 5.0, 'curve': 4},
- {'age': 150, 'amount': 3.85, 'curve': 4},
- {'age': 160, 'amount': 2.75, 'curve': 4},
- {'age': 200, 'amount': 3.1, 'curve': 4},
- {'age': 240, 'amount': 0.05, 'curve': 4},
- {'age': 250, 'amount': 3.7, 'curve': 4}]
+[{'age': 30, 'amount': 5.0},
+ {'age': 150, 'amount': 3.85},
+ {'age': 160, 'amount': 2.75},
+ {'age': 200, 'amount': 3.1},
+ {'age': 240, 'amount': 0.05},
+ {'age': 250, 'amount': 3.7}]
 ```
     op hex (20)
     0000   0x5c 0x14 0xc8 0x1e 0x04 0x9a 0x96 0x04    \.......
@@ -794,14 +794,14 @@ reading more to debug 0x00
 #### RECORD 41 UnabsorbedInsulinBolus unknown head[26], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 151, 'amount': 0.1, 'curve': 20},
- {'age': 161, 'amount': 0.2, 'curve': 20},
- {'age': 171, 'amount': 0.2, 'curve': 20},
- {'age': 181, 'amount': 0.2, 'curve': 20},
- {'age': 191, 'amount': 0.2, 'curve': 20},
- {'age': 201, 'amount': 0.2, 'curve': 20},
- {'age': 211, 'amount': 0.2, 'curve': 20},
- {'age': 221, 'amount': 0.2, 'curve': 20}]
+[{'age': 407, 'amount': 0.1},
+ {'age': 417, 'amount': 0.2},
+ {'age': 427, 'amount': 0.2},
+ {'age': 437, 'amount': 0.2},
+ {'age': 447, 'amount': 0.2},
+ {'age': 457, 'amount': 0.2},
+ {'age': 467, 'amount': 0.2},
+ {'age': 477, 'amount': 0.2}]
 ```
     op hex (26)
     0000   0x5c 0x1a 0x04 0x97 0x14 0x08 0xa1 0x14    \.......
@@ -879,11 +879,11 @@ reading more to debug 0x00
 #### RECORD 45 UnabsorbedInsulinBolus unknown head[17], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 44, 'amount': 2.4, 'curve': 4},
- {'age': 188, 'amount': 0.1, 'curve': 20},
- {'age': 198, 'amount': 0.2, 'curve': 20},
- {'age': 208, 'amount': 0.2, 'curve': 20},
- {'age': 218, 'amount': 0.2, 'curve': 20}]
+[{'age': 44, 'amount': 2.4},
+ {'age': 444, 'amount': 0.1},
+ {'age': 454, 'amount': 0.2},
+ {'age': 464, 'amount': 0.2},
+ {'age': 474, 'amount': 0.2}]
 ```
     op hex (17)
     0000   0x5c 0x11 0x60 0x2c 0x04 0x04 0xbc 0x14    \.`,....
@@ -989,8 +989,7 @@ reading more to debug 0x00
 #### RECORD 51 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 108, 'amount': 3.0, 'curve': 4},
- {'age': 148, 'amount': 2.4, 'curve': 4}]
+[{'age': 108, 'amount': 3.0}, {'age': 148, 'amount': 2.4}]
 ```
     op hex (8)
     0000   0x5c 0x08 0x78 0x6c 0x04 0x60 0x94 0x04    \.xl.`..
@@ -1049,9 +1048,9 @@ reading more to debug 0x00
 #### RECORD 54 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 29, 'amount': 2.0, 'curve': 4},
- {'age': 129, 'amount': 3.0, 'curve': 4},
- {'age': 169, 'amount': 2.4, 'curve': 4}]
+[{'age': 29, 'amount': 2.0},
+ {'age': 129, 'amount': 3.0},
+ {'age': 169, 'amount': 2.4}]
 ```
     op hex (11)
     0000   0x5c 0x0b 0x50 0x1d 0x04 0x78 0x81 0x04    \.P..x..
@@ -1155,11 +1154,11 @@ reading more to debug 0x00
 #### RECORD 60 UnabsorbedInsulinBolus unknown head[17], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 38, 'amount': 2.1, 'curve': 4},
- {'age': 48, 'amount': 0.8, 'curve': 4},
- {'age': 68, 'amount': 2.0, 'curve': 4},
- {'age': 168, 'amount': 3.0, 'curve': 4},
- {'age': 208, 'amount': 2.4, 'curve': 4}]
+[{'age': 38, 'amount': 2.1},
+ {'age': 48, 'amount': 0.8},
+ {'age': 68, 'amount': 2.0},
+ {'age': 168, 'amount': 3.0},
+ {'age': 208, 'amount': 2.4}]
 ```
     op hex (17)
     0000   0x5c 0x11 0x54 0x26 0x04 0x20 0x30 0x04    \.T&. 0.
@@ -1222,14 +1221,14 @@ reading more to debug 0x00
 #### RECORD 63 UnabsorbedInsulinBolus unknown head[26], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 3, 'amount': 0.05, 'curve': 4},
- {'age': 13, 'amount': 1.95, 'curve': 4},
- {'age': 23, 'amount': 2.15, 'curve': 4},
- {'age': 53, 'amount': 2.1, 'curve': 4},
- {'age': 63, 'amount': 0.8, 'curve': 4},
- {'age': 83, 'amount': 2.0, 'curve': 4},
- {'age': 183, 'amount': 3.0, 'curve': 4},
- {'age': 223, 'amount': 2.4, 'curve': 4}]
+[{'age': 3, 'amount': 0.05},
+ {'age': 13, 'amount': 1.95},
+ {'age': 23, 'amount': 2.15},
+ {'age': 53, 'amount': 2.1},
+ {'age': 63, 'amount': 0.8},
+ {'age': 83, 'amount': 2.0},
+ {'age': 183, 'amount': 3.0},
+ {'age': 223, 'amount': 2.4}]
 ```
     op hex (26)
     0000   0x5c 0x1a 0x02 0x03 0x04 0x4e 0x0d 0x04    \....N..

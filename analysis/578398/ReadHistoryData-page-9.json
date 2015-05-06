@@ -86,12 +86,10 @@
         "data": [
           {
             "amount": 1.1, 
-            "curve": 4, 
             "age": 175
           }, 
           {
             "amount": 2.1, 
-            "curve": 4, 
             "age": 185
           }
         ], 
@@ -187,18 +185,15 @@
         "data": [
           {
             "amount": 3.15, 
-            "curve": 20, 
-            "age": 132
+            "age": 388
           }, 
           {
             "amount": 1.45, 
-            "curve": 21, 
-            "age": 142
+            "age": 398
           }, 
           {
             "amount": 4.0, 
-            "curve": 20, 
-            "age": 212
+            "age": 468
           }
         ], 
         "_body": "", 
@@ -709,13 +704,11 @@
         "data": [
           {
             "amount": 2.15, 
-            "curve": 20, 
-            "age": 35
+            "age": 291
           }, 
           {
             "amount": 0.85, 
-            "curve": 20, 
-            "age": 45
+            "age": 301
           }
         ], 
         "_body": "", 
@@ -833,7 +826,6 @@
         "data": [
           {
             "amount": 3.4, 
-            "curve": 4, 
             "age": 187
           }
         ], 

@@ -10,20 +10,20 @@ reading more to debug 0x00
 #### RECORD 0 UnabsorbedInsulinBolus unknown head[44], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 204, 'amount': 0.15, 'curve': 4},
- {'age': 214, 'amount': 0.15, 'curve': 4},
- {'age': 224, 'amount': 0.15, 'curve': 4},
- {'age': 234, 'amount': 2.6, 'curve': 4},
- {'age': 244, 'amount': 0.15, 'curve': 4},
- {'age': 254, 'amount': 0.15, 'curve': 4},
- {'age': 8, 'amount': 0.2, 'curve': 20},
- {'age': 18, 'amount': 0.15, 'curve': 20},
- {'age': 28, 'amount': 0.15, 'curve': 20},
- {'age': 38, 'amount': 0.2, 'curve': 20},
- {'age': 48, 'amount': 0.15, 'curve': 20},
- {'age': 58, 'amount': 0.15, 'curve': 20},
- {'age': 68, 'amount': 4.05, 'curve': 20},
- {'age': 208, 'amount': 1.8, 'curve': 20}]
+[{'age': 204, 'amount': 0.15},
+ {'age': 214, 'amount': 0.15},
+ {'age': 224, 'amount': 0.15},
+ {'age': 234, 'amount': 2.6},
+ {'age': 244, 'amount': 0.15},
+ {'age': 254, 'amount': 0.15},
+ {'age': 264, 'amount': 0.2},
+ {'age': 274, 'amount': 0.15},
+ {'age': 284, 'amount': 0.15},
+ {'age': 294, 'amount': 0.2},
+ {'age': 304, 'amount': 0.15},
+ {'age': 314, 'amount': 0.15},
+ {'age': 324, 'amount': 4.05},
+ {'age': 464, 'amount': 1.8}]
 ```
     op hex (44)
     0000   0x5c 0x2c 0x06 0xcc 0x04 0x06 0xd6 0x04    \,......
@@ -135,20 +135,20 @@ reading more to debug 0x00
 #### RECORD 6 UnabsorbedInsulinBolus unknown head[44], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 42, 'amount': 3.0, 'curve': 4},
- {'age': 242, 'amount': 0.15, 'curve': 4},
- {'age': 252, 'amount': 0.15, 'curve': 4},
- {'age': 6, 'amount': 0.15, 'curve': 20},
- {'age': 16, 'amount': 2.6, 'curve': 20},
- {'age': 26, 'amount': 0.15, 'curve': 20},
- {'age': 36, 'amount': 0.15, 'curve': 20},
- {'age': 46, 'amount': 0.2, 'curve': 20},
- {'age': 56, 'amount': 0.15, 'curve': 20},
- {'age': 66, 'amount': 0.15, 'curve': 20},
- {'age': 76, 'amount': 0.2, 'curve': 20},
- {'age': 86, 'amount': 0.15, 'curve': 20},
- {'age': 96, 'amount': 0.15, 'curve': 20},
- {'age': 106, 'amount': 4.05, 'curve': 20}]
+[{'age': 42, 'amount': 3.0},
+ {'age': 242, 'amount': 0.15},
+ {'age': 252, 'amount': 0.15},
+ {'age': 262, 'amount': 0.15},
+ {'age': 272, 'amount': 2.6},
+ {'age': 282, 'amount': 0.15},
+ {'age': 292, 'amount': 0.15},
+ {'age': 302, 'amount': 0.2},
+ {'age': 312, 'amount': 0.15},
+ {'age': 322, 'amount': 0.15},
+ {'age': 332, 'amount': 0.2},
+ {'age': 342, 'amount': 0.15},
+ {'age': 352, 'amount': 0.15},
+ {'age': 362, 'amount': 4.05}]
 ```
     op hex (44)
     0000   0x5c 0x2c 0x78 0x2a 0x04 0x06 0xf2 0x04    \,x*....

@@ -160,14 +160,17 @@ class UnabsorbedInsulinBolus(VariableHead):
   UnabsorbedInsulinBolus unknown head[2], body[0] op[0x5c]
 
   >>> print pformat(rec.parse( UnabsorbedInsulinBolus._test_1 ))
-  [{'age': 78, 'amount': 1.25, 'curve': 4},
-   {'age': 88, 'amount': 0.95, 'curve': 4}]
+  [{'age': 78, 'amount': 1.25}, {'age': 88, 'amount': 0.95}]
 
   >>> rec = UnabsorbedInsulinBolus( UnabsorbedInsulinBolus._test_2[:2], model )
   >>> print str(rec)
   UnabsorbedInsulinBolus unknown head[2], body[0] op[0x5c]
 
   >>> print pformat(rec.parse( UnabsorbedInsulinBolus._test_2 ))
+  [{'age': 60, 'amount': 2.6}, {'age': 160, 'amount': 2.5}]
+
+
+
   [{'age': 60, 'amount': 2.6, 'curve': 4},
    {'age': 160, 'amount': 2.5, 'curve': 4}]
 

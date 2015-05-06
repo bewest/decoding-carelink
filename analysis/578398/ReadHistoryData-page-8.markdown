@@ -10,9 +10,9 @@ reading more to debug 0x00
 #### RECORD 0 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 121, 'amount': 4.0, 'curve': 4},
- {'age': 35, 'amount': 1.1, 'curve': 20},
- {'age': 45, 'amount': 2.1, 'curve': 20}]
+[{'age': 121, 'amount': 4.0},
+ {'age': 291, 'amount': 1.1},
+ {'age': 301, 'amount': 2.1}]
 ```
     op hex (11)
     0000   0x5c 0x0b 0xa0 0x79 0x04 0x2c 0x23 0x14    \..y.,#.
@@ -116,10 +116,10 @@ reading more to debug 0x00
 #### RECORD 6 UnabsorbedInsulinBolus unknown head[14], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 179, 'amount': 2.0, 'curve': 4},
- {'age': 43, 'amount': 4.0, 'curve': 20},
- {'age': 213, 'amount': 1.1, 'curve': 20},
- {'age': 223, 'amount': 2.1, 'curve': 20}]
+[{'age': 179, 'amount': 2.0},
+ {'age': 299, 'amount': 4.0},
+ {'age': 469, 'amount': 1.1},
+ {'age': 479, 'amount': 2.1}]
 ```
     op hex (14)
     0000   0x5c 0x0e 0x50 0xb3 0x04 0xa0 0x2b 0x14    \.P...+.
@@ -348,7 +348,7 @@ reading more to debug 0x00
 #### RECORD 21 UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 222, 'amount': 0.05, 'curve': 20}]
+[{'age': 478, 'amount': 0.05}]
 ```
     op hex (5)
     0000   0x5c 0x05 0x02 0xde 0x14                   \....
@@ -420,8 +420,7 @@ reading more to debug 0x00
 #### RECORD 25 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 94, 'amount': 2.65, 'curve': 4},
- {'age': 104, 'amount': 1.55, 'curve': 4}]
+[{'age': 94, 'amount': 2.65}, {'age': 104, 'amount': 1.55}]
 ```
     op hex (8)
     0000   0x5c 0x08 0x6a 0x5e 0x04 0x3e 0x68 0x04    \.j^.>h.
@@ -770,8 +769,7 @@ reading more to debug 0x00
 #### RECORD 48 UnabsorbedInsulinBolus unknown head[8], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 70, 'amount': 0.6, 'curve': 20},
- {'age': 80, 'amount': 0.9, 'curve': 20}]
+[{'age': 326, 'amount': 0.6}, {'age': 336, 'amount': 0.9}]
 ```
     op hex (8)
     0000   0x5c 0x08 0x18 0x46 0x14 0x24 0x50 0x14    \..F.$P.
@@ -856,7 +854,7 @@ reading more to debug 0x00
 #### RECORD 53 UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 179, 'amount': 2.5, 'curve': 4}]
+[{'age': 179, 'amount': 2.5}]
 ```
     op hex (5)
     0000   0x5c 0x05 0x64 0xb3 0x04                   \.d..
@@ -1331,7 +1329,7 @@ reading more to debug 0x00
 #### RECORD 86 UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 92, 'amount': 4.0, 'curve': 4}]
+[{'age': 92, 'amount': 4.0}]
 ```
     op hex (5)
     0000   0x5c 0x05 0xa0 0x5c 0x04                   \..\.
@@ -1416,26 +1414,26 @@ reading more to debug 0x00
 #### RECORD 91 UnabsorbedInsulinBolus unknown head[62], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 105, 'amount': 0.05, 'curve': 4},
- {'age': 115, 'amount': 0.15, 'curve': 4},
- {'age': 125, 'amount': 0.15, 'curve': 4},
- {'age': 135, 'amount': 0.15, 'curve': 4},
- {'age': 145, 'amount': 0.15, 'curve': 4},
- {'age': 155, 'amount': 0.15, 'curve': 4},
- {'age': 165, 'amount': 0.15, 'curve': 4},
- {'age': 175, 'amount': 0.1, 'curve': 4},
- {'age': 185, 'amount': 0.15, 'curve': 4},
- {'age': 195, 'amount': 0.15, 'curve': 4},
- {'age': 205, 'amount': 0.15, 'curve': 4},
- {'age': 215, 'amount': 0.15, 'curve': 4},
- {'age': 225, 'amount': 0.15, 'curve': 4},
- {'age': 235, 'amount': 0.15, 'curve': 4},
- {'age': 245, 'amount': 0.15, 'curve': 4},
- {'age': 255, 'amount': 0.15, 'curve': 4},
- {'age': 9, 'amount': 0.1, 'curve': 20},
- {'age': 19, 'amount': 0.15, 'curve': 20},
- {'age': 29, 'amount': 3.1, 'curve': 20},
- {'age': 119, 'amount': 4.0, 'curve': 20}]
+[{'age': 105, 'amount': 0.05},
+ {'age': 115, 'amount': 0.15},
+ {'age': 125, 'amount': 0.15},
+ {'age': 135, 'amount': 0.15},
+ {'age': 145, 'amount': 0.15},
+ {'age': 155, 'amount': 0.15},
+ {'age': 165, 'amount': 0.15},
+ {'age': 175, 'amount': 0.1},
+ {'age': 185, 'amount': 0.15},
+ {'age': 195, 'amount': 0.15},
+ {'age': 205, 'amount': 0.15},
+ {'age': 215, 'amount': 0.15},
+ {'age': 225, 'amount': 0.15},
+ {'age': 235, 'amount': 0.15},
+ {'age': 245, 'amount': 0.15},
+ {'age': 255, 'amount': 0.15},
+ {'age': 265, 'amount': 0.1},
+ {'age': 275, 'amount': 0.15},
+ {'age': 285, 'amount': 3.1},
+ {'age': 375, 'amount': 4.0}]
 ```
     op hex (62)
     0000   0x5c 0x3e 0x02 0x69 0x04 0x06 0x73 0x04    \>.i..s.
