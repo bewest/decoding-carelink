@@ -120,7 +120,7 @@ class BolusWizard(KnownRecord):
       carb_ratio = (((self.body[2] & 0x07) << 8) + self.body[3]) / 10.0
       # xxx: not sure about this
       # https://github.com/ps2/minimed_rf/blob/master/lib/minimed_rf/log_entries/bolus_wizard.rb#L102
-      sensitivity = ((self.date[2] & 0xE0) << 2) + self.body[4]
+      sensitivity = int(self.body[4])
       wizard = { 'bg': bg, 'carb_input': carb_input,
                  'carb_ratio': int(self.body[1])/ 10.0,
                  'sensitivity': sensitivity,
