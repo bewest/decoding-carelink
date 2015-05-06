@@ -777,7 +777,7 @@
     0000   0x76 0x1f 0x36 0xae 0x0f                   v.6..
     body (0)
 
-#### RECORD 56 SetEasyBolusEnabled 2015-04-14T22:44:58 head[2], body[0] op[0x5f]
+#### RECORD 56 ChangeAudioBolus 2015-04-14T22:44:58 head[2], body[0] op[0x5f]
 
     op hex (2)
     0000   0x5f 0x15                                  _.
@@ -1163,7 +1163,7 @@
     decimal
             120   52   54
 
-#### RECORD 83 SetEasyBolusEnabled 2015-04-15T00:19:41 head[2], body[0] op[0x5f]
+#### RECORD 83 ChangeAudioBolus 2015-04-15T00:19:41 head[2], body[0] op[0x5f]
 
     op hex (2)
     0000   0x5f 0x14                                  _.
@@ -1173,8 +1173,11 @@
     0000   0x69 0x13 0x00 0x0f 0x0f                   i....
     body (0)
 
-#### RECORD 84 questionable60 2015-04-15T00:19:47 head[2], body[0] op[0x60]
-
+#### RECORD 84 ChangeBGReminderEnable 2015-04-15T00:19:47 head[2], body[0] op[0x60]
+###### DECODED
+```python
+{'enabled': True}
+```
     op hex (2)
     0000   0x60 0x01                                  `.
     decimal
@@ -1183,8 +1186,11 @@
     0000   0x6f 0x13 0x00 0x0f 0x0f                   o....
     body (0)
 
-#### RECORD 85 questionable60 2015-04-15T00:19:52 head[2], body[0] op[0x60]
-
+#### RECORD 85 ChangeBGReminderEnable 2015-04-15T00:19:52 head[2], body[0] op[0x60]
+###### DECODED
+```python
+{'enabled': False}
+```
     op hex (2)
     0000   0x60 0x00                                  `.
     decimal

@@ -303,8 +303,9 @@
     "glucose": 50
   }, 
   {
-    "_type": "questionable60", 
-    "_description": "questionable60 2015-04-15T00:19:52 head[2], body[0] op[0x60]", 
+    "enabled": false, 
+    "_type": "ChangeBGReminderEnable", 
+    "_description": "ChangeBGReminderEnable 2015-04-15T00:19:52 head[2], body[0] op[0x60]", 
     "date": 1429085992000.0, 
     "timestamp": "2015-04-15T00:19:52", 
     "_body": "", 
@@ -312,8 +313,9 @@
     "_date": "7413000f0f"
   }, 
   {
-    "_type": "questionable60", 
-    "_description": "questionable60 2015-04-15T00:19:47 head[2], body[0] op[0x60]", 
+    "enabled": true, 
+    "_type": "ChangeBGReminderEnable", 
+    "_description": "ChangeBGReminderEnable 2015-04-15T00:19:47 head[2], body[0] op[0x60]", 
     "date": 1429085987000.0, 
     "timestamp": "2015-04-15T00:19:47", 
     "_body": "", 
@@ -321,8 +323,8 @@
     "_date": "6f13000f0f"
   }, 
   {
-    "_type": "SetEasyBolusEnabled", 
-    "_description": "SetEasyBolusEnabled 2015-04-15T00:19:41 head[2], body[0] op[0x5f]", 
+    "_type": "ChangeAudioBolus", 
+    "_description": "ChangeAudioBolus 2015-04-15T00:19:41 head[2], body[0] op[0x5f]", 
     "date": 1429085981000.0, 
     "timestamp": "2015-04-15T00:19:41", 
     "_body": "", 
@@ -598,8 +600,8 @@
     "glucose": 41
   }, 
   {
-    "_type": "SetEasyBolusEnabled", 
-    "_description": "SetEasyBolusEnabled 2015-04-14T22:44:58 head[2], body[0] op[0x5f]", 
+    "_type": "ChangeAudioBolus", 
+    "_description": "ChangeAudioBolus 2015-04-14T22:44:58 head[2], body[0] op[0x5f]", 
     "date": 1429080298000.0, 
     "timestamp": "2015-04-14T22:44:58", 
     "_body": "", 

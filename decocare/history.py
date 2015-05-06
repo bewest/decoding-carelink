@@ -398,9 +398,11 @@ class SetAutoOff (KnownRecord):
   opcode = 0x1b
 _confirmed.append(SetAutoOff)
 
-class SetEasyBolusEnabled (KnownRecord):
+class ChangeAudioBolus (KnownRecord):
   opcode = 0x5f
-_confirmed.append(SetEasyBolusEnabled)
+  def decode (self):
+    self.parse_time( )
+_confirmed.append(ChangeAudioBolus)
 
 class hack83 (KnownRecord):
   opcode = 0x83
@@ -477,9 +479,13 @@ class questionable24 (KnownRecord):
   opcode = 0x24
 _confirmed.append(questionable24)
 
-class questionable60 (KnownRecord):
+class ChangeBGReminderEnable (KnownRecord):
   opcode = 0x60
-_confirmed.append(questionable60)
+  def decode (self):
+    self.parse_time( )
+    enabled = self.head[1] is 1
+    return dict(enabled=enabled)
+_confirmed.append(ChangeBGReminderEnable)
 
 class questionable61 (KnownRecord):
   opcode = 0x61
