@@ -1,4 +1,4 @@
-## START analysis/736868/logs/ReadHistoryData-page-30.data
+## START ReadHistoryData-page-30.data
 #### STOPPING DOUBLE NULLS @ 1007, found 15 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
@@ -17,7 +17,7 @@ reading more to debug 0x00
  'carb_input': 50,
  'carb_ratio': 8.0,
  'correction_maybe_estimate': 0.0,
- 'food_estimate': 1.9,
+ 'food_estimate': 8.3,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -38,9 +38,9 @@ reading more to debug 0x00
 #### RECORD 1 UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 162, 'amount': 5.55, 'curve': 4},
- {'age': 172, 'amount': 0.45, 'curve': 4},
- {'age': 96, 'amount': 2.0, 'curve': 20}]
+[{'age': 162, 'amount': 5.55},
+ {'age': 172, 'amount': 0.45},
+ {'age': 352, 'amount': 2.0}]
 ```
     op hex (11)
     0000   0x5c 0x0b 0xde 0xa2 0x04 0x12 0xac 0x04    \.......
@@ -72,7 +72,7 @@ reading more to debug 0x00
 #### RECORD 3 SensorAlert 2015-02-12T21:19:16 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 114, 'amount_maybe': 0}
+{'alarm_type': 'Unknown subtype with code 114'}
 ```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
@@ -102,7 +102,7 @@ reading more to debug 0x00
 #### RECORD 5 SensorAlert 2015-02-12T21:29:07 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 101, 'amount_maybe': 190}
+{'alarm_type': 'High Glucose', 'glucose': 190}
 ```
     op hex (3)
     0000   0x0b 0x65 0xbe                             .e.
@@ -143,11 +143,11 @@ reading more to debug 0x00
 #### RECORD 7 UnabsorbedInsulinBolus unknown head[17], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 3, 'amount': 0.1, 'curve': 4},
- {'age': 13, 'amount': 4.0, 'curve': 4},
- {'age': 173, 'amount': 5.55, 'curve': 4},
- {'age': 183, 'amount': 0.45, 'curve': 4},
- {'age': 107, 'amount': 2.0, 'curve': 20}]
+[{'age': 3, 'amount': 0.1},
+ {'age': 13, 'amount': 4.0},
+ {'age': 173, 'amount': 5.55},
+ {'age': 183, 'amount': 0.45},
+ {'age': 363, 'amount': 2.0}]
 ```
     op hex (17)
     0000   0x5c 0x11 0x04 0x03 0x04 0xa0 0x0d 0x04    \.......
@@ -198,7 +198,7 @@ reading more to debug 0x00
 #### RECORD 10 SensorAlert 2015-02-12T22:58:18 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 101, 'amount_maybe': 183}
+{'alarm_type': 'High Glucose', 'glucose': 183}
 ```
     op hex (3)
     0000   0x0b 0x65 0xb7                             .e.
@@ -211,7 +211,7 @@ reading more to debug 0x00
 #### RECORD 11 SensorAlert 2015-02-12T23:49:35 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 114, 'amount_maybe': 0}
+{'alarm_type': 'Unknown subtype with code 114'}
 ```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
@@ -281,7 +281,7 @@ reading more to debug 0x00
 #### RECORD 15 SensorAlert 2015-02-13T00:29:35 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 101, 'amount_maybe': 215}
+{'alarm_type': 'High Glucose', 'glucose': 215}
 ```
     op hex (3)
     0000   0x0b 0x65 0xd7                             .e.
@@ -338,7 +338,7 @@ reading more to debug 0x00
 #### RECORD 19 SensorAlert 2015-02-13T01:59:16 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 101, 'amount_maybe': 215}
+{'alarm_type': 'High Glucose', 'glucose': 215}
 ```
     op hex (3)
     0000   0x0b 0x65 0xd7                             .e.
@@ -402,7 +402,7 @@ reading more to debug 0x00
 #### RECORD 23 SensorAlert 2015-02-13T04:53:01 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 114, 'amount_maybe': 0}
+{'alarm_type': 'Unknown subtype with code 114'}
 ```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
@@ -415,7 +415,7 @@ reading more to debug 0x00
 #### RECORD 24 SensorAlert 2015-02-13T05:03:40 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 101, 'amount_maybe': 183}
+{'alarm_type': 'High Glucose', 'glucose': 183}
 ```
     op hex (3)
     0000   0x0b 0x65 0xb7                             .e.
@@ -445,7 +445,7 @@ reading more to debug 0x00
 #### RECORD 26 SensorAlert 2015-02-13T06:34:28 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 101, 'amount_maybe': 222}
+{'alarm_type': 'High Glucose', 'glucose': 222}
 ```
     op hex (3)
     0000   0x0b 0x65 0xde                             .e.
@@ -458,7 +458,7 @@ reading more to debug 0x00
 #### RECORD 27 SensorAlert 2015-02-13T06:45:00 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 105, 'amount_maybe': 0}
+{'alarm_type': 'Cal Reminder'}
 ```
     op hex (3)
     0000   0x0b 0x69 0x00                             .i.
@@ -562,7 +562,7 @@ reading more to debug 0x00
 #### RECORD 35 SensorAlert 2015-02-13T07:45:00 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 104, 'amount_maybe': 0}
+{'alarm_type': 'Unknown subtype with code 104'}
 ```
     op hex (3)
     0000   0x0b 0x68 0x00                             .h.
@@ -575,7 +575,7 @@ reading more to debug 0x00
 #### RECORD 36 SensorAlert 2015-02-13T08:15:00 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 104, 'amount_maybe': 0}
+{'alarm_type': 'Unknown subtype with code 104'}
 ```
     op hex (3)
     0000   0x0b 0x68 0x00                             .h.
@@ -588,7 +588,7 @@ reading more to debug 0x00
 #### RECORD 37 SensorAlert 2015-02-13T08:45:00 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 104, 'amount_maybe': 0}
+{'alarm_type': 'Unknown subtype with code 104'}
 ```
     op hex (3)
     0000   0x0b 0x68 0x00                             .h.
@@ -614,7 +614,7 @@ reading more to debug 0x00
 #### RECORD 39 BGReceived 2015-02-13T08:49:52 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 99, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x0c                                  ?.
@@ -659,29 +659,29 @@ reading more to debug 0x00
 #### RECORD 41 UnabsorbedInsulinBolus unknown head[71], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 126, 'amount': 3.5, 'curve': 4},
- {'age': 216, 'amount': 2.5, 'curve': 4},
- {'age': 20, 'amount': 0.15, 'curve': 20},
- {'age': 30, 'amount': 0.15, 'curve': 20},
- {'age': 40, 'amount': 0.15, 'curve': 20},
- {'age': 50, 'amount': 0.2, 'curve': 20},
- {'age': 60, 'amount': 0.15, 'curve': 20},
- {'age': 70, 'amount': 0.15, 'curve': 20},
- {'age': 80, 'amount': 0.2, 'curve': 20},
- {'age': 90, 'amount': 0.15, 'curve': 20},
- {'age': 100, 'amount': 0.15, 'curve': 20},
- {'age': 110, 'amount': 0.2, 'curve': 20},
- {'age': 120, 'amount': 0.15, 'curve': 20},
- {'age': 130, 'amount': 3.65, 'curve': 20},
- {'age': 140, 'amount': 4.15, 'curve': 20},
- {'age': 150, 'amount': 0.15, 'curve': 20},
- {'age': 160, 'amount': 0.2, 'curve': 20},
- {'age': 170, 'amount': 0.15, 'curve': 20},
- {'age': 180, 'amount': 0.15, 'curve': 20},
- {'age': 190, 'amount': 0.2, 'curve': 20},
- {'age': 200, 'amount': 0.15, 'curve': 20},
- {'age': 210, 'amount': 0.15, 'curve': 20},
- {'age': 220, 'amount': 0.2, 'curve': 20}]
+[{'age': 126, 'amount': 3.5},
+ {'age': 216, 'amount': 2.5},
+ {'age': 276, 'amount': 0.15},
+ {'age': 286, 'amount': 0.15},
+ {'age': 296, 'amount': 0.15},
+ {'age': 306, 'amount': 0.2},
+ {'age': 316, 'amount': 0.15},
+ {'age': 326, 'amount': 0.15},
+ {'age': 336, 'amount': 0.2},
+ {'age': 346, 'amount': 0.15},
+ {'age': 356, 'amount': 0.15},
+ {'age': 366, 'amount': 0.2},
+ {'age': 376, 'amount': 0.15},
+ {'age': 386, 'amount': 3.65},
+ {'age': 396, 'amount': 4.15},
+ {'age': 406, 'amount': 0.15},
+ {'age': 416, 'amount': 0.2},
+ {'age': 426, 'amount': 0.15},
+ {'age': 436, 'amount': 0.15},
+ {'age': 446, 'amount': 0.2},
+ {'age': 456, 'amount': 0.15},
+ {'age': 466, 'amount': 0.15},
+ {'age': 476, 'amount': 0.2}]
 ```
     op hex (71)
     0000   0x5c 0x47 0x8c 0x7e 0x04 0x64 0xd8 0x04    \G.~.d..
@@ -761,7 +761,7 @@ reading more to debug 0x00
 #### RECORD 45 SensorAlert 2015-02-13T10:39:16 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 114, 'amount_maybe': 0}
+{'alarm_type': 'Unknown subtype with code 114'}
 ```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
@@ -774,7 +774,7 @@ reading more to debug 0x00
 #### RECORD 46 SensorAlert 2015-02-13T10:49:07 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 101, 'amount_maybe': 180}
+{'alarm_type': 'High Glucose', 'glucose': 180}
 ```
     op hex (3)
     0000   0x0b 0x65 0xb4                             .e.
@@ -804,7 +804,7 @@ reading more to debug 0x00
 #### RECORD 48 SensorAlert 2015-02-13T12:18:18 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 101, 'amount_maybe': 188}
+{'alarm_type': 'High Glucose', 'glucose': 188}
 ```
     op hex (3)
     0000   0x0b 0x65 0xbc                             .e.
@@ -845,21 +845,21 @@ reading more to debug 0x00
 #### RECORD 50 UnabsorbedInsulinBolus unknown head[47], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 98, 'amount': 0.15, 'curve': 4},
- {'age': 108, 'amount': 0.25, 'curve': 4},
- {'age': 118, 'amount': 0.2, 'curve': 4},
- {'age': 128, 'amount': 0.25, 'curve': 4},
- {'age': 138, 'amount': 0.2, 'curve': 4},
- {'age': 148, 'amount': 0.25, 'curve': 4},
- {'age': 158, 'amount': 0.2, 'curve': 4},
- {'age': 168, 'amount': 0.25, 'curve': 4},
- {'age': 178, 'amount': 0.2, 'curve': 4},
- {'age': 188, 'amount': 0.25, 'curve': 4},
- {'age': 198, 'amount': 0.2, 'curve': 4},
- {'age': 208, 'amount': 0.25, 'curve': 4},
- {'age': 218, 'amount': 1.85, 'curve': 4},
- {'age': 82, 'amount': 3.5, 'curve': 20},
- {'age': 172, 'amount': 2.5, 'curve': 20}]
+[{'age': 98, 'amount': 0.15},
+ {'age': 108, 'amount': 0.25},
+ {'age': 118, 'amount': 0.2},
+ {'age': 128, 'amount': 0.25},
+ {'age': 138, 'amount': 0.2},
+ {'age': 148, 'amount': 0.25},
+ {'age': 158, 'amount': 0.2},
+ {'age': 168, 'amount': 0.25},
+ {'age': 178, 'amount': 0.2},
+ {'age': 188, 'amount': 0.25},
+ {'age': 198, 'amount': 0.2},
+ {'age': 208, 'amount': 0.25},
+ {'age': 218, 'amount': 1.85},
+ {'age': 338, 'amount': 3.5},
+ {'age': 428, 'amount': 2.5}]
 ```
     op hex (47)
     0000   0x5c 0x2f 0x06 0x62 0x04 0x0a 0x6c 0x04    \/.b..l.
@@ -910,21 +910,21 @@ reading more to debug 0x00
 #### RECORD 52 UnabsorbedInsulinBolus unknown head[47], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 98, 'amount': 0.15, 'curve': 4},
- {'age': 108, 'amount': 0.25, 'curve': 4},
- {'age': 118, 'amount': 0.2, 'curve': 4},
- {'age': 128, 'amount': 0.25, 'curve': 4},
- {'age': 138, 'amount': 0.2, 'curve': 4},
- {'age': 148, 'amount': 0.25, 'curve': 4},
- {'age': 158, 'amount': 0.2, 'curve': 4},
- {'age': 168, 'amount': 0.25, 'curve': 4},
- {'age': 178, 'amount': 0.2, 'curve': 4},
- {'age': 188, 'amount': 0.25, 'curve': 4},
- {'age': 198, 'amount': 0.2, 'curve': 4},
- {'age': 208, 'amount': 0.25, 'curve': 4},
- {'age': 218, 'amount': 1.85, 'curve': 4},
- {'age': 82, 'amount': 3.5, 'curve': 20},
- {'age': 172, 'amount': 2.5, 'curve': 20}]
+[{'age': 98, 'amount': 0.15},
+ {'age': 108, 'amount': 0.25},
+ {'age': 118, 'amount': 0.2},
+ {'age': 128, 'amount': 0.25},
+ {'age': 138, 'amount': 0.2},
+ {'age': 148, 'amount': 0.25},
+ {'age': 158, 'amount': 0.2},
+ {'age': 168, 'amount': 0.25},
+ {'age': 178, 'amount': 0.2},
+ {'age': 188, 'amount': 0.25},
+ {'age': 198, 'amount': 0.2},
+ {'age': 208, 'amount': 0.25},
+ {'age': 218, 'amount': 1.85},
+ {'age': 338, 'amount': 3.5},
+ {'age': 428, 'amount': 2.5}]
 ```
     op hex (47)
     0000   0x5c 0x2f 0x06 0x62 0x04 0x0a 0x6c 0x04    \/.b..l.
@@ -954,7 +954,7 @@ reading more to debug 0x00
  'carb_input': 64,
  'carb_ratio': 8.0,
  'correction_maybe_estimate': 0.0,
- 'food_estimate': 1.6,
+ 'food_estimate': 8.0,
  'sensitivity': 40,
  'unabsorbed_insulin_total': 0.0}
 ```
@@ -975,21 +975,21 @@ reading more to debug 0x00
 #### RECORD 54 UnabsorbedInsulinBolus unknown head[47], body[0] op[0x5c]
 ###### DECODED
 ```python
-[{'age': 98, 'amount': 0.15, 'curve': 4},
- {'age': 108, 'amount': 0.25, 'curve': 4},
- {'age': 118, 'amount': 0.2, 'curve': 4},
- {'age': 128, 'amount': 0.25, 'curve': 4},
- {'age': 138, 'amount': 0.2, 'curve': 4},
- {'age': 148, 'amount': 0.25, 'curve': 4},
- {'age': 158, 'amount': 0.2, 'curve': 4},
- {'age': 168, 'amount': 0.25, 'curve': 4},
- {'age': 178, 'amount': 0.2, 'curve': 4},
- {'age': 188, 'amount': 0.25, 'curve': 4},
- {'age': 198, 'amount': 0.2, 'curve': 4},
- {'age': 208, 'amount': 0.25, 'curve': 4},
- {'age': 218, 'amount': 1.85, 'curve': 4},
- {'age': 82, 'amount': 3.5, 'curve': 20},
- {'age': 172, 'amount': 2.5, 'curve': 20}]
+[{'age': 98, 'amount': 0.15},
+ {'age': 108, 'amount': 0.25},
+ {'age': 118, 'amount': 0.2},
+ {'age': 128, 'amount': 0.25},
+ {'age': 138, 'amount': 0.2},
+ {'age': 148, 'amount': 0.25},
+ {'age': 158, 'amount': 0.2},
+ {'age': 168, 'amount': 0.25},
+ {'age': 178, 'amount': 0.2},
+ {'age': 188, 'amount': 0.25},
+ {'age': 198, 'amount': 0.2},
+ {'age': 208, 'amount': 0.25},
+ {'age': 218, 'amount': 1.85},
+ {'age': 338, 'amount': 3.5},
+ {'age': 428, 'amount': 2.5}]
 ```
     op hex (47)
     0000   0x5c 0x2f 0x06 0x62 0x04 0x0a 0x6c 0x04    \/.b..l.
@@ -1093,7 +1093,7 @@ reading more to debug 0x00
 #### RECORD 60 SensorAlert 2015-02-13T16:13:01 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 114, 'amount_maybe': 0}
+{'alarm_type': 'Unknown subtype with code 114'}
 ```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
@@ -1106,7 +1106,7 @@ reading more to debug 0x00
 #### RECORD 61 SensorAlert 2015-02-13T16:23:40 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 101, 'amount_maybe': 185}
+{'alarm_type': 'High Glucose', 'glucose': 185}
 ```
     op hex (3)
     0000   0x0b 0x65 0xb9                             .e.
@@ -1136,7 +1136,7 @@ reading more to debug 0x00
 #### RECORD 63 SensorAlert 2015-02-13T17:54:28 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 101, 'amount_maybe': 217}
+{'alarm_type': 'High Glucose', 'glucose': 217}
 ```
     op hex (3)
     0000   0x0b 0x65 0xd9                             .e.
@@ -1179,7 +1179,7 @@ reading more to debug 0x00
 #### RECORD 66 SensorAlert 2015-02-13T18:53:01 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 115, 'amount_maybe': 0}
+{'alarm_type': 'Low Glucose Predicted'}
 ```
     op hex (3)
     0000   0x0b 0x73 0x00                             .s.
@@ -1192,7 +1192,7 @@ reading more to debug 0x00
 #### RECORD 67 SensorAlert 2015-02-13T19:09:35 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 102, 'amount_maybe': 79}
+{'alarm_type': 'Low Glucose', 'glucose': 79}
 ```
     op hex (3)
     0000   0x0b 0x66 0x4f                             .fO
@@ -1205,7 +1205,7 @@ reading more to debug 0x00
 #### RECORD 68 SensorAlert 2015-02-13T19:38:18 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 102, 'amount_maybe': 73}
+{'alarm_type': 'Low Glucose', 'glucose': 73}
 ```
     op hex (3)
     0000   0x0b 0x66 0x49                             .fI
@@ -1218,7 +1218,7 @@ reading more to debug 0x00
 #### RECORD 69 SensorAlert 2015-02-13T19:51:00 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 105, 'amount_maybe': 0}
+{'alarm_type': 'Cal Reminder'}
 ```
     op hex (3)
     0000   0x0b 0x69 0x00                             .i.
@@ -1231,7 +1231,7 @@ reading more to debug 0x00
 #### RECORD 70 SensorAlert 2015-02-13T20:42:59 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 114, 'amount_maybe': 0}
+{'alarm_type': 'Unknown subtype with code 114'}
 ```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
@@ -1244,7 +1244,7 @@ reading more to debug 0x00
 #### RECORD 71 SensorAlert 2015-02-13T20:51:00 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 104, 'amount_maybe': 0}
+{'alarm_type': 'Unknown subtype with code 104'}
 ```
     op hex (3)
     0000   0x0b 0x68 0x00                             .h.
@@ -1270,7 +1270,7 @@ reading more to debug 0x00
 #### RECORD 73 BGReceived 2015-02-13T20:53:08 head[2], body[3] op[0x3f]
 ###### DECODED
 ```python
-{'amount': '???', 'link': '783436'}
+{'amount': 245, 'link': '783436'}
 ```
     op hex (2)
     0000   0x3f 0x1e                                  ?.
@@ -1284,4 +1284,4 @@ reading more to debug 0x00
     decimal
             120   52   54
 
-`end analysis/736868/logs/ReadHistoryData-page-30.data: 74 records`
+`end ReadHistoryData-page-30.data: 74 records`
