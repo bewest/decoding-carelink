@@ -166,8 +166,15 @@ class TempBasal(KnownRecord):
   _test_1 = bytearray([ ])
   def decode(self):
     self.parse_time( )
-    basal = { 'rate': self.head[1] / 40.0, }
-    return basal
+    temp = { 0: 'absolute', 1: 'percent' }[(self.body[0] >> 3)]
+    status = dict(temp=temp)
+    if temp is 'absolute':
+      rate = self.head[1] / 40.0
+      status.update(rate=rate)
+    if temp is 'percent':
+      rate = int(self.head[1])
+      status.update(rate=rate)
+    return status
 
 class LowReservoir(KnownRecord):
   """
@@ -491,10 +498,14 @@ class questionable61 (KnownRecord):
   opcode = 0x61
 _confirmed.append(questionable61)
 
-class hack62 (KnownRecord):
+class ChangeTempBasalType (KnownRecord):
   opcode = 0x62
+  def decode (self):
+    self.parse_time( )
+    temp = { 0: 'absolute', 1: 'percent' }[self.head[1]]
+    return dict(temp=temp)
   # body_length = 1
-_confirmed.append(hack62)
+_confirmed.append(ChangeTempBasalType)
 
 class questionable65 (KnownRecord):
   opcode = 0x65

@@ -1079,10 +1079,18 @@ class ReadBasalTemp(PumpCommand):
 
   def getData(self):
     data = self.data
-    rate = lib.BangInt(data[2:4])/40.0
-    duration = lib.BangInt(data[4:6])
+    temp = { 0: 'absolute', 1: 'percent' }[self.data[0]]
+    status = dict(temp=temp)
+    if temp is 'absolute':
+      rate = lib.BangInt(data[2:4])/40.0
+      duration = lib.BangInt(data[4:6])
+      status.update(rate=rate, duration=duration)
+    if temp is 'percent':
+      rate = int(data[1])
+      duration = lib.BangInt(data[4:6])
+      status.update(rate=rate, duration=duration)
     log.info("READ temporary basal:\n%s" % lib.hexdump(data))
-    return { 'rate': rate, 'duration': duration }
+    return status
 
 # MMGuardian3/	CMD_READ_SENSOR_SETTINGS	207	0xcf	('\xcf')	??
 class GuardianSensorSettings (PumpCommand):
