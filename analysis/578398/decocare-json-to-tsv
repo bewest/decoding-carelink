@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for x in  ReadHistoryData-page-*.json ; do
+  cat $x | json -a  timestamp _type _head _date _body
+done  | sort | tr ' ' ',' 
+# INPUT=${1-'-'}
+# cat $INPUT | cut -d',' -f 1,2 | tr ',' ' '
+
