@@ -446,6 +446,9 @@ class Bolus (PumpCommand):
   code = 66
   descr = "Bolus"
   params = [ ]
+  def getData(self):
+    received = True if self.data[0] is 0x0c else False
+    return dict(recieved=received, _type='BolusRequest')
 
 
 class ReadErrorStatus(PumpCommand):

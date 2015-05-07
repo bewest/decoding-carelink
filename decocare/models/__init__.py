@@ -155,6 +155,21 @@ class PumpModel (object):
 
   _set_temp_basal = Task(commands.TempBasal.Program)
 
+  _bolus = Task(commands.Bolus)
+  strokes_per_unit = 10
+  def bolus (self, units=None, **kwds):
+    params = self.fmt_bolus_params(units)
+    program = dict(requested=dict(units=units, params=list(params)))
+    results = self._bolus(params=params, **kwds)
+    program.update(**results)
+    program.update(**self.read_status( ))
+    return program
+  def fmt_bolus_params (self, units):
+    strokes = int(float(units) * self.strokes_per_unit)
+    if (self.larger or self.strokes_per_unit > 10):
+      return [lib.HighByte(strokes), lib.LowByte(strokes)]
+    return [strokes]
+
   def set_temp_basal (self, rate=None, duration=None, temp=None, **kwds):
     basals = dict(rate=rate, duration=duration, temp=temp)
     result = self._set_temp_basal(**basals)
@@ -198,6 +213,7 @@ class Model522 (Model515):
   pass
 
 class Model523 (Model522):
+  strokes_per_unit = 40
   larger = True
   read_carb_ratios = Task(commands.ReadCarbRatios)
 
