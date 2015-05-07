@@ -76,8 +76,8 @@ class Pump(Session):
     log.info('setting up to talk with %s' % serial)
 
   def power_control(self, minutes=None):
-    log.info('BEGIN POWER CONTROL')
-    print "PowerControl SERIAL", self.serial
+    log.info('BEGIN POWER CONTROL %s' % self.serial)
+    # print "PowerControl SERIAL", self.serial
     response = self.query(commands.PowerControl, minutes=minutes)
     power = self.command
     log.info('manually download PowerControl serial %s' % self.serial)
