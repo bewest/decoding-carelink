@@ -130,6 +130,9 @@ class PumpModel (object):
       records = decoder.decode( )
       return records
 
+  filter_glucose_date = Task(commands.FilterGlucoseHistory.ISO)
+  filter_isig_date = Task(commands.FilterISIGHistory.ISO)
+
   @Task.handler(commands.ReadHistoryData)
   def read_history_data (self, response):
     decoder = history.HistoryPage(response.data, self)

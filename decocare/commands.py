@@ -1379,7 +1379,7 @@ class FilterHistory (PumpCommand):
       return bytearray(data)
     begin = lib.BangInt(data[0:2])
     end = lib.BangInt(data[2:4])
-    return dict(begin=begin, end=end)
+    return dict(begin=begin, end=end, params=self.params)
 
   @classmethod
   def ISO (klass, begin=None, end=None, **kwds):
