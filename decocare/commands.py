@@ -249,8 +249,8 @@ class TempBasal(PumpCommand):
     return dict(recieved=received, temp=status.get(self.params[0], 'percent'))
   @classmethod
   def Program (klass, rate=None, duration=None, temp=None, **kwds):
-    assert duration % 30 is 0, "duration {0:s} is not a whole multiple of 30".format(duration)
-    assert temp in [ 'percent', 'absolute' ], "temp field <{0:s}> should be one of {1:r}".format(temp, ['percent', 'absolute' ])
+    assert duration % 30 is 0, "duration {0} is not a whole multiple of 30".format(duration)
+    assert temp in [ 'percent', 'absolute' ], "temp field <{0}> should be one of {1}".format(temp, ['percent', 'absolute' ])
     if temp in [ 'percent' ]:
       return TempBasalPercent(params=klass.format_percent_params(rate, duration), **kwds)
 
