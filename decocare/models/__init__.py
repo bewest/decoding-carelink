@@ -87,6 +87,7 @@ class PumpModel (object):
   read_current_history_pages = Task(commands.ReadCurPageNumber)
   suspend_pump = Task(commands.PumpSuspend)
   resume_pump = Task(commands.PumpResume)
+  read_battery_status = Task(commands.ReadBatteryStatus)
 
 
   def decode_unabsorbed (self, raw):
