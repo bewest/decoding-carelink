@@ -243,6 +243,34 @@ class TempBasal(PumpCommand):
   #maxRecords = 0
   #timeout = 1
 
+  def getData(self):
+    status = { 0: 'absolute' }
+    received = True if self.data[0] is 0 else False
+    return dict(recieved=received, temp=status.get(self.params[0], 'percent'))
+  @classmethod
+  def Program (klass, rate=None, duration=None, temp=None, **kwds):
+    assert duration % 30 is 0, "duration {0} is not a whole multiple of 30".format(duration)
+    assert temp in [ 'percent', 'absolute' ], "temp field <{0}> should be one of {1:r}".format(temp, ['percent', 'absolute' ])
+    if temp in [ 'percent' ]:
+      return TempBasalPercent(params=klass.format_percent_params(rate, duration), **kwds)
+
+    return klass(params=klass.format_params(rate, duration), **kwds)
+  @classmethod
+  def format_percent_params (klass, rate, duration):
+    duration = int(duration / 30)
+    rate = int(rate)
+    params = [rate, duration]
+    return params
+
+  @classmethod
+  def format_params (klass, rate, duration):
+    duration = duration / 30
+    rate = int(rate / 0.025)
+    params = [0x00, rate, duration]
+    return params
+
+
+
 class SetSuspend(PumpCommand):
   code = 77
   descr = "Set Pump Suspend/Resume status"
@@ -273,7 +301,7 @@ class SetEnabledEasyBolus (PumpCommand):
 class SetBasalType (PumpCommand):
   code = 104
 
-class TempBasalPercent (PumpCommand):
+class TempBasalPercent (TempBasal):
   """
 
   """

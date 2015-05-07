@@ -153,6 +153,14 @@ class PumpModel (object):
     clock = lib.parse.date(response.getData( ))
     return clock
 
+  _set_temp_basal = Task(commands.TempBasal.Program)
+
+  def set_temp_basal (self, rate=None, duration=None, temp=None, **kwds):
+    basals = dict(rate=rate, duration=duration, temp=temp)
+    result = self._set_temp_basal(**basals)
+    result.update(**self.read_temp_basal( ))
+    return result
+
 
 class Model508 (PumpModel):
   old6cBody = 31
