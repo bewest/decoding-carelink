@@ -158,6 +158,8 @@ class PumpModel (object):
   def set_temp_basal (self, rate=None, duration=None, temp=None, **kwds):
     basals = dict(rate=rate, duration=duration, temp=temp)
     result = self._set_temp_basal(**basals)
+    if not result.get('recieved'):
+      result.update(requested=basals)
     result.update(**self.read_temp_basal( ))
     return result
 
