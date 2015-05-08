@@ -1036,13 +1036,13 @@ class ReadProfile_STD512 (PumpCommand):
     >>> len(schedule)
     4
     >>> print json.dumps(schedule[0])
-    {"start": "00:00:00", "rate": 0.8}
+    {"i": 0, "start": "00:00:00", "rate": 0.8, "minutes": 0}
     >>> print json.dumps(schedule[1])
-    {"start": "06:30:00", "rate": 0.9500000000000001}
+    {"i": 1, "start": "06:30:00", "rate": 0.9500000000000001, "minutes": 390}
     >>> print json.dumps(schedule[2])
-    {"start": "09:30:00", "rate": 1.1}
+    {"i": 2, "start": "09:30:00", "rate": 1.1, "minutes": 570}
     >>> print json.dumps(schedule[3])
-    {"start": "14:00:00", "rate": 0.9500000000000001}
+    {"i": 3, "start": "14:00:00", "rate": 0.9500000000000001, "minutes": 840}
 
   """
   _test_result_1 = bytearray([
@@ -1072,7 +1072,7 @@ class ReadProfile_STD512 (PumpCommand):
       r, z, m = data[off : off + 3]
       if [r,z,m] in [end, none]:
         break
-      schedule.append(dict(start=str(lib.basal_time(m)), rate=r*.025))
+      schedule.append(dict(i=i, minutes=m*30, start=str(lib.basal_time(m)), rate=r*.025))
     return schedule
   def getData (self):
     return self.decode(self.data)
