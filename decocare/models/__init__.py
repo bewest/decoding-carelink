@@ -83,6 +83,8 @@ class PumpModel (object):
   read_settings = Task(commands.ReadSettings)
   read_reservoir = Task(commands.ReadRemainingInsulin)
   read_carb_ratios = Task(commands.ReadCarbRatios512)
+  read_bg_targets = Task(commands.ReadBGTargets)
+  read_insulin_sensitivies = Task(commands.ReadInsulinSensitivities)
   read_current_glucose_pages = Task(commands.ReadCurGlucosePageNumber)
   read_current_history_pages = Task(commands.ReadCurPageNumber)
   suspend_pump = Task(commands.PumpSuspend)
@@ -210,6 +212,7 @@ class Model512 (Model511):
 
 
 class Model515 (Model512):
+  read_bg_targets = Task(commands.ReadBGTargets515)
   pass
 
 class Model522 (Model515):
