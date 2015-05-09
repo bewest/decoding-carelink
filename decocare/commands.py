@@ -1194,8 +1194,8 @@ class ReadSettings(PumpCommand):
     paradigm_enabled = data[16]
     """
     # MM12
-    """
     insulin_action_type = data[17] == 0 and 'Fast' or 'Regular'
+    """
     #MM15
     # insulin_action_type = data[17]
     insulin_action_curve = data[17]
