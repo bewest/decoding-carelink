@@ -251,7 +251,7 @@ class SensorAlert (KnownRecord):
   alarm_types = {
     101: 'High Glucose',
     102: 'Low Glucose',
-    104: 'Meter BG Now'
+    104: 'Meter BG Now',
     105: 'Cal Reminder',
     106: 'Calibration Error',
     107: 'Sensor End',
