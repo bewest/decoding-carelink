@@ -1,0 +1,13 @@
+#!/bin/bash
+
+INPUT=${1-'-'}
+
+cat $INPUT \
+  | cut -d',' -f 1-4,34- \
+  | while IFS=',' read x dd tt dt name details; do
+    if [[ -n "$details" && -n "$dd$tt$dt$name" ]] ; then
+      _date=$( (date --date="$dt" +%FT%T || echo $dt) 2>/dev/null)
+      echo "$_date,$name,$details"
+    fi
+  done 
+

@@ -243,12 +243,44 @@ class TempBasal(PumpCommand):
   #maxRecords = 0
   #timeout = 1
 
+  def getData(self):
+    status = { 0: 'absolute' }
+    received = True if self.data[0] is 0 else False
+    return dict(recieved=received, temp=status.get(self.params[0], 'percent'))
+  @classmethod
+  def Program (klass, rate=None, duration=None, temp=None, **kwds):
+    assert duration % 30 is 0, "duration {0} is not a whole multiple of 30".format(duration)
+    assert temp in [ 'percent', 'absolute' ], "temp field <{0}> should be one of {1}".format(temp, ['percent', 'absolute' ])
+    if temp in [ 'percent' ]:
+      return TempBasalPercent(params=klass.format_percent_params(rate, duration), **kwds)
+
+    return klass(params=klass.format_params(rate, duration), **kwds)
+  @classmethod
+  def format_percent_params (klass, rate, duration):
+    duration = int(duration / 30)
+    rate = int(rate)
+    params = [rate, duration]
+    return params
+
+  @classmethod
+  def format_params (klass, rate, duration):
+    duration = duration / 30
+    rate = int(rate / 0.025)
+    params = [0x00, rate, duration]
+    return params
+
+
+
 class SetSuspend(PumpCommand):
   code = 77
   descr = "Set Pump Suspend/Resume status"
   params = [ ]
   retries = 2
   maxRecords = 1
+  def getData(self):
+    status = { 0: 'resumed', 1: 'suspended' }
+    received = True if self.data[0] is 0 else False
+    return dict(recieved=received, status=status.get(self.params[0]))
 
 class PumpSuspend(SetSuspend):
   descr = "Suspend pump"
@@ -269,7 +301,7 @@ class SetEnabledEasyBolus (PumpCommand):
 class SetBasalType (PumpCommand):
   code = 104
 
-class TempBasalPercent (PumpCommand):
+class TempBasalPercent (TempBasal):
   """
 
   """
@@ -414,6 +446,9 @@ class Bolus (PumpCommand):
   code = 66
   descr = "Bolus"
   params = [ ]
+  def getData(self):
+    received = True if self.data[0] is 0x0c else False
+    return dict(recieved=received, _type='BolusRequest')
 
 
 class ReadErrorStatus(PumpCommand):
@@ -870,15 +905,57 @@ class ReadBGUnits (PumpCommand):
     return dict(bg_units=labels.get(self.data[0], self.data[0]))
 
 # MMPump512/	CMD_READ_CARB_RATIOS	138	0x8a	('\x8a')	OK
+class ReadCarbRatios512 (PumpCommand):
+  code = 138
+  def getData (self):
+    # return self.model.decode_carb_ratios(self.data[:])
+    units = self.data[0]
+    labels = { 1 : 'grams', 2: 'exchanges' }
+    fixed = self.data[1]
+    data = self.data[1:1+(8 *2)]
+    print lib.hexdump(data)
+    return dict(schedule=self.decode_ratios(data[1:], units=units), units=labels.get(units), first=self.data[0])
+    # xxx: remove
+    schedule = [ ]
+    for x in range(len(data)/ 2):
+      start = x * 2
+      end = start + 2
+      (i, r) = data[start:end]
+      ratio = int(r)
+      if units == 2:
+        ratio = r / 10.0
+      schedule.append(dict(x=x, i=i, offset=i*30, ratio=ratio, r=r))
+    return dict(schedule=schedule, units=labels.get(units), first=self.data[0])
+
+  item_size = 2
+  num_items = 8
+  @classmethod
+  def decode_ratios (klass, data, units=0):
+    data = data[0:(8 *2)]
+    schedule = [ ]
+    for x in range(len(data)/ 2):
+      start = x * 2
+      end = start + 2
+      (i, r) = data[start:end]
+      ratio = int(r)
+      if units == 2:
+        ratio = r / 10.0
+      schedule.append(dict(x=x, i=i, offset=i*30, ratio=ratio, r=r))
+    return schedule
+
 class ReadCarbRatios (PumpCommand):
   code = 138
+  item_size = 3
+  num_items = 8
   def getData (self):
     units = self.data[0]
     labels = { 1 : 'grams', 2: 'exchanges' }
     fixed = self.data[1]
     data = self.data[2:2+(fixed *3)]
+    return dict(schedule=self.decode_ratios(data, units=units), units=labels.get(units), first=self.data[0])
+    # xxx: remove
     schedule = [ ]
-    for x in range(8):
+    for x in range(len(data)/ 3):
       start = x * 3
       end = start + 3
       (i, q, r) = data[start:end]
@@ -887,6 +964,19 @@ class ReadCarbRatios (PumpCommand):
         ratio = lib.BangInt([q, r]) / 1000.0
       schedule.append(dict(x=x, i=i, offset=i*30, q=q, ratio=ratio, r=r))
     return dict(schedule=schedule, units=labels.get(units), first=self.data[0])
+
+  @classmethod
+  def decode_ratios (klass, data, units=0):
+    schedule = [ ]
+    for x in range(len(data)/ 3):
+      start = x * 3
+      end = start + 3
+      (i, q, r) = data[start:end]
+      ratio = r/10.0
+      if q:
+        ratio = lib.BangInt([q, r]) / 1000.0
+      schedule.append(dict(x=x, i=i, offset=i*30, q=q, ratio=ratio, r=r))
+    return schedule
 
 # MMPump512/	CMD_READ_INSULIN_SENSITIVITIES	139	0x8b	('\x8b')	OK
 class ReadInsulinSensitivities (PumpCommand):
@@ -946,13 +1036,13 @@ class ReadProfile_STD512 (PumpCommand):
     >>> len(schedule)
     4
     >>> print json.dumps(schedule[0])
-    {"start": "00:00:00", "rate": 0.8}
+    {"i": 0, "start": "00:00:00", "rate": 0.8, "minutes": 0}
     >>> print json.dumps(schedule[1])
-    {"start": "06:30:00", "rate": 0.9500000000000001}
+    {"i": 1, "start": "06:30:00", "rate": 0.9500000000000001, "minutes": 390}
     >>> print json.dumps(schedule[2])
-    {"start": "09:30:00", "rate": 1.1}
+    {"i": 2, "start": "09:30:00", "rate": 1.1, "minutes": 570}
     >>> print json.dumps(schedule[3])
-    {"start": "14:00:00", "rate": 0.9500000000000001}
+    {"i": 3, "start": "14:00:00", "rate": 0.9500000000000001, "minutes": 840}
 
   """
   _test_result_1 = bytearray([
@@ -982,7 +1072,7 @@ class ReadProfile_STD512 (PumpCommand):
       r, z, m = data[off : off + 3]
       if [r,z,m] in [end, none]:
         break
-      schedule.append(dict(start=str(lib.basal_time(m)), rate=r*.025))
+      schedule.append(dict(i=i, minutes=m*30, start=str(lib.basal_time(m)), rate=r*.025))
     return schedule
   def getData (self):
     return self.decode(self.data)
@@ -1020,10 +1110,18 @@ class ReadBasalTemp(PumpCommand):
 
   def getData(self):
     data = self.data
-    rate = lib.BangInt(data[2:4])/40.0
-    duration = lib.BangInt(data[4:6])
+    temp = { 0: 'absolute', 1: 'percent' }[self.data[0]]
+    status = dict(temp=temp)
+    if temp is 'absolute':
+      rate = lib.BangInt(data[2:4])/40.0
+      duration = lib.BangInt(data[4:6])
+      status.update(rate=rate, duration=duration)
+    if temp is 'percent':
+      rate = int(data[1])
+      duration = lib.BangInt(data[4:6])
+      status.update(rate=rate, duration=duration)
     log.info("READ temporary basal:\n%s" % lib.hexdump(data))
-    return { 'rate': rate, 'duration': duration }
+    return status
 
 # MMGuardian3/	CMD_READ_SENSOR_SETTINGS	207	0xcf	('\xcf')	??
 class GuardianSensorSettings (PumpCommand):
@@ -1099,7 +1197,8 @@ class ReadSettings(PumpCommand):
     insulin_action_type = data[17] == 0 and 'Fast' or 'Regular'
     """
     #MM15
-    insulin_action_type = data[17]
+    # insulin_action_type = data[17]
+    insulin_action_curve = data[17]
     low_reservoir_warn_type = data[18]
     low_reservoir_warn_point = data[19]
     keypad_lock_status = data[20]
@@ -1281,7 +1380,7 @@ class FilterHistory (PumpCommand):
       return bytearray(data)
     begin = lib.BangInt(data[0:2])
     end = lib.BangInt(data[2:4])
-    return dict(begin=begin, end=end)
+    return dict(begin=begin, end=end, params=self.params)
 
   @classmethod
   def ISO (klass, begin=None, end=None, **kwds):
@@ -1510,6 +1609,7 @@ __all__ = [
   'ReadCarbUnits',
   'ReadBGUnits',
   'ReadCarbRatios',
+  'ReadCarbRatios512',
   'ReadInsulinSensitivities',
   'ReadBGTargets',
   'ReadBGTargets515',

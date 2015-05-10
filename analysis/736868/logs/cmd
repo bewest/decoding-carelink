@@ -1,0 +1,1 @@
+for x in ReadHistory*.json ; do cat $x |  json -a timestamp _type bg carb_input carb_ratio sensitivity bg_target_low bg_target_high bolus_estimate correction_estimate food_estimate unabsorbed_insulin_total _head _date _body ; done | grep Wiz | sort | tee wizards.tsv

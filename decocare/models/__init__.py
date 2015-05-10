@@ -82,9 +82,31 @@ class PumpModel (object):
   read_temp_basal = Task(commands.ReadBasalTemp)
   read_settings = Task(commands.ReadSettings)
   read_reservoir = Task(commands.ReadRemainingInsulin)
-  read_carb_ratios = Task(commands.ReadCarbRatios)
+  read_carb_ratios = Task(commands.ReadCarbRatios512)
+  read_bg_targets = Task(commands.ReadBGTargets)
+  read_insulin_sensitivies = Task(commands.ReadInsulinSensitivities)
   read_current_glucose_pages = Task(commands.ReadCurGlucosePageNumber)
   read_current_history_pages = Task(commands.ReadCurPageNumber)
+  suspend_pump = Task(commands.PumpSuspend)
+  resume_pump = Task(commands.PumpResume)
+  read_battery_status = Task(commands.ReadBatteryStatus)
+
+
+  def decode_unabsorbed (self, raw):
+    doses = [ ]
+    while raw and len(raw) > 2:
+      head, tail = raw[:3], raw[3:]
+      doses.append(self.decode_unabsorbed_component(*head) )
+      raw = tail
+    return doses
+
+  def decode_unabsorbed_component (self, amount, age, _curve,strokes=40.0):
+    curve = ((_curve & 0b110000) << 4)
+    unabsorbed = { 'amount': amount/strokes,
+                   'age': age + curve,
+                   # 'curve': curve,
+                 }
+    return unabsorbed
 
   @PageIterator.handler( )
   class iter_glucose_pages (Cursor):
@@ -111,6 +133,9 @@ class PumpModel (object):
       records = decoder.decode( )
       return records
 
+  filter_glucose_date = Task(commands.FilterGlucoseHistory.ISO)
+  filter_isig_date = Task(commands.FilterISIGHistory.ISO)
+
   @Task.handler(commands.ReadHistoryData)
   def read_history_data (self, response):
     decoder = history.HistoryPage(response.data, self)
@@ -134,25 +159,70 @@ class PumpModel (object):
     clock = lib.parse.date(response.getData( ))
     return clock
 
+  _set_temp_basal = Task(commands.TempBasal.Program)
+
+  _bolus = Task(commands.Bolus)
+  strokes_per_unit = 10
+  def bolus (self, units=None, **kwds):
+    params = self.fmt_bolus_params(units)
+    program = dict(requested=dict(units=units, params=list(params)))
+    results = self._bolus(params=params, **kwds)
+    program.update(**results)
+    program.update(**self.read_status( ))
+    return program
+  def fmt_bolus_params (self, units):
+    strokes = int(float(units) * self.strokes_per_unit)
+    if (self.larger or self.strokes_per_unit > 10):
+      return [lib.HighByte(strokes), lib.LowByte(strokes)]
+    return [strokes]
+
+  def set_temp_basal (self, rate=None, duration=None, temp=None, **kwds):
+    basals = dict(rate=rate, duration=duration, temp=temp)
+    result = self._set_temp_basal(**basals)
+    if not result.get('recieved'):
+      result.update(requested=basals)
+    result.update(**self.read_temp_basal( ))
+    return result
+
 
 class Model508 (PumpModel):
+  old6cBody = 31
   pass
 
 class Model511 (Model508):
-  pass
+  read_basal_profile_std = Task(commands.ReadProfiles511_STD)
+  read_basal_profile_a = Task(commands.ReadProfiles511_A)
+  read_basal_profile_b = Task(commands.ReadProfiles511_B)
+
+  def read_selected_basal_profile (self, **kwds):
+    settings = self.read_settings( )
+    selected = settings['selected_pattern']
+    patterns = {
+        0 : self.read_basal_profile_std
+      , 1 : self.read_basal_profile_a
+      , 2 : self.read_basal_profile_b
+      }
+    return patterns[selected](**kwds)
+
 
 class Model512 (Model511):
-  pass
+  read_basal_profile_std = Task(commands.ReadProfile_STD512)
+  read_basal_profile_a = Task(commands.ReadProfile_A512)
+  read_basal_profile_b = Task(commands.ReadProfile_B512)
+
 
 class Model515 (Model512):
+  read_bg_targets = Task(commands.ReadBGTargets515)
   pass
 
 class Model522 (Model515):
+  old6cBody = 38
   pass
 
 class Model523 (Model522):
+  strokes_per_unit = 40
   larger = True
-  pass
+  read_carb_ratios = Task(commands.ReadCarbRatios)
 
 class Model530 (Model523):
   pass

@@ -55,7 +55,7 @@ class SetRTCApp (cli.CommandApp):
     new_time =  new_time.replace(tzinfo=self.args.timezone)
     results = dict(clock=new_time.isoformat( )
               , observed_at=datetime.now(self.args.timezone).isoformat( )
-              , model=self.pump.model.getData( )
+              , model=self.pump.model.model
               , _type='RTC')
 
     print "```json"

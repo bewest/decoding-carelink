@@ -29,6 +29,9 @@ def get_opt_parser( ):
                       default=False,
                       action='store_true')
 
+  parser.add_argument('--data',
+                      choices=['glucose', 'pump'],
+                      default='pump')
   parser.add_argument('--model',
                       # type=get_model,
                       choices=models.known.keys( ))
@@ -89,6 +92,9 @@ def find_records(stream, opts):
 
   return records
 
+import collections
+Response = collections.namedtuple('Response', 'data')
+
 def main( ):
   parser = get_opt_parser( )
   opts = parser.parse_args( )
@@ -102,9 +108,12 @@ def main( ):
   records = [ ]
   for stream in opts.infile:
     print "## START %s" % (stream.name)
-    if opts.collate:
+    if opts.collate and opts.data == 'pump':
       page = HistoryPage(bytearray(stream.read( )), opts.model)
       records.extend(page.decode(larger=opts.larger ))
+    elif opts.data == 'glucose':
+      page = Response(data=bytearray(stream.read( )))
+      records.extend(opts.model.iter_glucose_pages.Cursor(opts.model).find_records(page))
     else:
       records = find_records(stream, opts)
     i = 0
@@ -114,7 +123,8 @@ def main( ):
       if getattr(record, 'pformat', None):
         print record.pformat(prefix)
       else:
-        json.dumps(record, indent=2)
+        # json.dumps(record, indent=2)
+        print prefix
       i += 1
     print "`end %s: %s records`" % (stream.name, len(records))
     stream.close( )

@@ -1,0 +1,126 @@
+Medtronic Diabetes CareLink Personal Data Export File (v1.0.1) 
+PATIENT INFO
+Name,Fred Flintstone
+Report Range,4/12/15,to,4/12/15
+DEVICE INFO
+Meter:,Paradigm System,#783436,
+Pump:,Paradigm Revel - 523,#736868,
+Sensor:,In use," ",
+Data Exported on,4/12/15 10:20 PM
+DEVICE DATA (405 records)
+Data Range,4/12/15 00:00:00,to,4/12/15 22:18:00
+Index,Date,Time,Timestamp,New Device Time,BG Reading (mg/dL),Linked BG Meter ID,Temp Basal Amount (U/h),Temp Basal Type,Temp Basal Duration (hh:mm:ss),Bolus Type,Bolus Volume Selected (U),Bolus Volume Delivered (U),Programmed Bolus Duration (hh:mm:ss),Prime Type,Prime Volume Delivered (U),Suspend,Rewind,BWZ Estimate (U),BWZ Target High BG (mg/dL),BWZ Target Low BG (mg/dL),BWZ Carb Ratio (grams),BWZ Insulin Sensitivity (mg/dL),BWZ Carb Input (grams),BWZ BG Input (mg/dL),BWZ Correction Estimate (U),BWZ Food Estimate (U),BWZ Active Insulin (U),Alarm,Sensor Calibration BG (mg/dL),Sensor Glucose (mg/dL),ISIG Value,Daily Insulin Total (U),Raw-Type,Raw-Values,Raw-ID,Raw-Upload ID,Raw-Seq Num,Raw-Device Type
+293,4/12/15,21:43:24,4/12/15 21:43:24,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ChangeTempBasalType,"TEMP_BASAL_TYPE=insulin_units, ACTION_REQUESTOR=pump",14831874519,53822077,111,Paradigm Revel - 523
+294,4/12/15,22:00:00,4/12/15 22:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,BasalProfileStart,"PATTERN_NAME=standard, PROFILE_INDEX=6, RATE=0.9, START_TIME=79200000, ACTION_REQUESTOR=pump",14831874518,53822077,110,Paradigm Revel - 523
+295,4/12/15,22:07:07,4/12/15 22:07:07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874506, INDEX=7, AMOUNT=0.2, RECORD_AGE=198, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874514,53822077,106,Paradigm Revel - 523
+296,4/12/15,22:07:07,4/12/15 22:07:07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874506, INDEX=6, AMOUNT=0.2, RECORD_AGE=188, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874513,53822077,105,Paradigm Revel - 523
+297,4/12/15,22:07:07,4/12/15 22:07:07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874506, INDEX=5, AMOUNT=0.2, RECORD_AGE=178, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874512,53822077,104,Paradigm Revel - 523
+298,4/12/15,22:07:07,4/12/15 22:07:07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874506, INDEX=4, AMOUNT=0.2, RECORD_AGE=168, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874511,53822077,103,Paradigm Revel - 523
+299,4/12/15,22:07:07,4/12/15 22:07:07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874506, INDEX=3, AMOUNT=0.15, RECORD_AGE=158, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874510,53822077,102,Paradigm Revel - 523
+300,4/12/15,22:07:07,4/12/15 22:07:07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874506, INDEX=1, AMOUNT=0.2, RECORD_AGE=138, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874508,53822077,100,Paradigm Revel - 523
+301,4/12/15,22:07:07,4/12/15 22:07:07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874506, INDEX=0, AMOUNT=0.15, RECORD_AGE=128, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874507,53822077,99,Paradigm Revel - 523
+302,4/12/15,22:07:07,4/12/15 22:07:07,,,,,,,,,,,,,,,0.0,120,90,6,40,0,0,0,0,0.0,,,,,,BolusWizardBolusEstimate,"BG_INPUT=0, BG_UNITS=mg dl, CARB_INPUT=0, CARB_UNITS=grams, CARB_RATIO=6, INSULIN_SENSITIVITY=40, BG_TARGET_LOW=90, BG_TARGET_HIGH=120, BOLUS_ESTIMATE=0, CORRECTION_ESTIMATE=0, FOOD_ESTIMATE=0, UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=11, ACTION_REQUESTOR=paradigm link or b key",14831874506,53822077,98,Paradigm Revel - 523
+303,4/12/15,22:07:07,4/12/15 22:07:07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874506, INDEX=8, AMOUNT=0.2, RECORD_AGE=208, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874515,53822077,107,Paradigm Revel - 523
+304,4/12/15,22:07:07,4/12/15 22:07:07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874506, INDEX=2, AMOUNT=0.2, RECORD_AGE=148, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874509,53822077,101,Paradigm Revel - 523
+305,4/12/15,22:07:07,4/12/15 22:07:07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874506, INDEX=9, AMOUNT=4.6, RECORD_AGE=218, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874516,53822077,108,Paradigm Revel - 523
+306,4/12/15,22:07:07,4/12/15 22:07:07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874506, INDEX=10, AMOUNT=4.3, RECORD_AGE=358, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874517,53822077,109,Paradigm Revel - 523
+307,4/12/15,22:08:15,4/12/15 22:08:15,,,,0.1,Rate,02:00:00,,,,,,,,,,,,,,,,,,,,,,,,ChangeTempBasal,"RATE=0.1, DURATION=7200000, ACTION_REQUESTOR=rf_diagnostic",14831874505,53822077,97,Paradigm Revel - 523
+308,4/12/15,22:10:57,4/12/15 22:10:57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874493, INDEX=9, AMOUNT=4.6, RECORD_AGE=221, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874503,53822077,95,Paradigm Revel - 523
+309,4/12/15,22:10:57,4/12/15 22:10:57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874493, INDEX=8, AMOUNT=0.2, RECORD_AGE=211, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874502,53822077,94,Paradigm Revel - 523
+310,4/12/15,22:10:57,4/12/15 22:10:57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874493, INDEX=7, AMOUNT=0.2, RECORD_AGE=201, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874501,53822077,93,Paradigm Revel - 523
+311,4/12/15,22:10:57,4/12/15 22:10:57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874493, INDEX=6, AMOUNT=0.2, RECORD_AGE=191, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874500,53822077,92,Paradigm Revel - 523
+312,4/12/15,22:10:57,4/12/15 22:10:57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874493, INDEX=5, AMOUNT=0.2, RECORD_AGE=181, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874499,53822077,91,Paradigm Revel - 523
+313,4/12/15,22:10:57,4/12/15 22:10:57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874493, INDEX=4, AMOUNT=0.2, RECORD_AGE=171, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874498,53822077,90,Paradigm Revel - 523
+314,4/12/15,22:10:57,4/12/15 22:10:57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874493, INDEX=3, AMOUNT=0.15, RECORD_AGE=161, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874497,53822077,89,Paradigm Revel - 523
+315,4/12/15,22:10:57,4/12/15 22:10:57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874493, INDEX=2, AMOUNT=0.2, RECORD_AGE=151, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874496,53822077,88,Paradigm Revel - 523
+316,4/12/15,22:10:57,4/12/15 22:10:57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874493, INDEX=1, AMOUNT=0.2, RECORD_AGE=141, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874495,53822077,87,Paradigm Revel - 523
+317,4/12/15,22:10:57,4/12/15 22:10:57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874493, INDEX=0, AMOUNT=0.15, RECORD_AGE=131, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874494,53822077,86,Paradigm Revel - 523
+318,4/12/15,22:10:57,4/12/15 22:10:57,,,,,,,,,,,,,,,0.0,120,90,6,40,0,0,0,0,0.0,,,,,,BolusWizardBolusEstimate,"BG_INPUT=0, BG_UNITS=mg dl, CARB_INPUT=0, CARB_UNITS=grams, CARB_RATIO=6, INSULIN_SENSITIVITY=40, BG_TARGET_LOW=90, BG_TARGET_HIGH=120, BOLUS_ESTIMATE=0, CORRECTION_ESTIMATE=0, FOOD_ESTIMATE=0, UNABSORBED_INSULIN_TOTAL=0, UNABSORBED_INSULIN_COUNT=11, ACTION_REQUESTOR=paradigm link or b key",14831874493,53822077,85,Paradigm Revel - 523
+319,4/12/15,22:10:57,4/12/15 22:10:57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,UnabsorbedInsulin,"BOLUS_ESTIMATE_DATUM=14831874493, INDEX=10, AMOUNT=4.3, RECORD_AGE=361, INSULIN_TYPE=null, INSULIN_ACTION_CURVE=240",14831874504,53822077,96,Paradigm Revel - 523
+320,4/12/15,22:12:44,4/12/15 22:12:44,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,BasalProfileStart,"PATTERN_NAME=standard, PROFILE_INDEX=6, RATE=0.9, START_TIME=79200000, ACTION_REQUESTOR=pump",14831874491,53822077,83,Paradigm Revel - 523
+321,4/12/15,22:12:44,4/12/15 22:12:44,,,,0.0,Rate,00:00:00,,,,,,,,,,,,,,,,,,,,,,,,ChangeTempBasal,"RATE=0, DURATION=0, ACTION_REQUESTOR=pump",14831874492,53822077,84,Paradigm Revel - 523
+322,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBatteryStatus,"STATUS=normal, VOLTAGE=128",14831874431,53822077,24,Paradigm Revel - 523
+323,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalRemaining,AMOUNT=59,14831874432,53822077,25,Paradigm Revel - 523
+324,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentErrorStatus,RAW_STATUS=0,14831874433,53822077,26,Paradigm Revel - 523
+325,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=1, REMOTE_CONTROL_ID=------",14831874434,53822077,27,Paradigm Revel - 523
+326,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=2, REMOTE_CONTROL_ID=------",14831874435,53822077,28,Paradigm Revel - 523
+327,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRemoteControlID,"PROGRAMMER_NUM=3, REMOTE_CONTROL_ID=------",14831874436,53822077,29,Paradigm Revel - 523
+328,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentPumpStatus,STATUS=normal,14831874437,53822077,30,Paradigm Revel - 523
+329,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTempBasalType,TEMP_BASAL_TYPE=insulin_units,14831874438,53822077,31,Paradigm Revel - 523
+330,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkEnable,ENABLE=true,14831874439,53822077,32,Paradigm Revel - 523
+331,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinActionCurve,AMOUNT=240,14831874440,53822077,33,Paradigm Revel - 523
+332,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentPumpModelNumber,MODEL_NUMBER=523,14831874441,53822077,34,Paradigm Revel - 523
+333,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAlarmClockEnable,ENABLE=false,14831874442,53822077,35,Paradigm Revel - 523
+334,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGReminderEnable,ENABLE=false,14831874443,53822077,36,Paradigm Revel - 523
+335,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardEnable,ENABLE=true,14831874444,53822077,37,Paradigm Revel - 523
+336,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardBGUnits,UNITS=mg dl,14831874445,53822077,38,Paradigm Revel - 523
+337,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardCarbUnits,UNITS=grams,14831874446,53822077,39,Paradigm Revel - 523
+338,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentDisplayLanguage,LANGUAGE=english,14831874447,53822077,40,Paradigm Revel - 523
+339,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=1, PARADIGM_LINK_ID=783436",14831874448,53822077,41,Paradigm Revel - 523
+340,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=2, PARADIGM_LINK_ID=------",14831874449,53822077,42,Paradigm Revel - 523
+341,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentParadigmLinkID,"PROGRAMMER_NUM=3, PARADIGM_LINK_ID=------",14831874450,53822077,43,Paradigm Revel - 523
+342,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusWizardSetupStatus,"IS_SETUP_COMPLETE=true, IS_BOLUS_WIZARD_ENABLED=true, IS_CARB_UNITS_COMPLETE=true, IS_CARB_RATIOS_COMPLETE=true, IS_BG_UNITS_COMPLETE=true, IS_INSULIN_SENSITIVITIES_COMPLETE=true, IS_BG_TARGETS_COMPLETE=true",14831874451,53822077,44,Paradigm Revel - 523
+343,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGTargetRangePattern,"ORIGINAL_UNITS=mg dl, SIZE=1",14831874452,53822077,45,Paradigm Revel - 523
+344,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBGTargetRange,"PATTERN_DATUM=14831874452, INDEX=0, AMOUNT_LOW=90, AMOUNT_HIGH=120, START_TIME=0",14831874453,53822077,46,Paradigm Revel - 523
+345,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatioPattern,SIZE=4,14831874454,53822077,47,Paradigm Revel - 523
+346,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatio,"PATTERN_DATUM=14831874454, INDEX=0, AMOUNT=10, UNITS=grams, START_TIME=0",14831874455,53822077,48,Paradigm Revel - 523
+347,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatio,"PATTERN_DATUM=14831874454, INDEX=1, AMOUNT=8, UNITS=grams, START_TIME=41400000",14831874456,53822077,49,Paradigm Revel - 523
+348,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatio,"PATTERN_DATUM=14831874454, INDEX=2, AMOUNT=6, UNITS=grams, START_TIME=64800000",14831874457,53822077,50,Paradigm Revel - 523
+349,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCarbRatio,"PATTERN_DATUM=14831874454, INDEX=3, AMOUNT=10, UNITS=grams, START_TIME=81000000",14831874458,53822077,51,Paradigm Revel - 523
+350,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinSensitivityPattern,"ORIGINAL_UNITS=mg dl, SIZE=1",14831874459,53822077,52,Paradigm Revel - 523
+351,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentInsulinSensitivity,"PATTERN_DATUM=14831874459, INDEX=0, AMOUNT=40, START_TIME=0",14831874460,53822077,53,Paradigm Revel - 523
+352,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentReservoirWarningUnits,UNITS=insulin,14831874461,53822077,54,Paradigm Revel - 523
+353,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentReservoirWarningValueInsulin,AMOUNT=20,14831874462,53822077,55,Paradigm Revel - 523
+354,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentKeypadLockedEnable,ENABLE=false,14831874463,53822077,56,Paradigm Revel - 523
+355,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusReminderEnable,ENABLE=false,14831874464,53822077,57,Paradigm Revel - 523
+356,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSavedSettingsTime,SAVE_TIME=1427709365000,14831874465,53822077,58,Paradigm Revel - 523
+357,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentHistoryPageNumber,PAGE_NUMBER=426,14831874466,53822077,59,Paradigm Revel - 523
+358,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentGlucoseHistoryPageNumber,PAGE_NUMBER=249,14831874467,53822077,60,Paradigm Revel - 523
+359,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorCalFactor,CAL_FACTOR=7.479,14831874468,53822077,60,Paradigm Revel - 523
+360,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorCalReminderEnable,ENABLE=true,14831874469,53822077,61,Paradigm Revel - 523
+361,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorEnable,ENABLE=true,14831874470,53822077,62,Paradigm Revel - 523
+362,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorCalReminderTime,TIME=3600000,14831874471,53822077,63,Paradigm Revel - 523
+363,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorAlarmSnoozeTime,TIME=1800000,14831874472,53822077,64,Paradigm Revel - 523
+364,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorHighGlucoseSnoozeTime,TIME=5400000,14831874473,53822077,65,Paradigm Revel - 523
+365,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorLowGlucoseSnoozeTime,TIME=1800000,14831874474,53822077,66,Paradigm Revel - 523
+366,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorMissedDataTime,TIME=2400000,14831874475,53822077,67,Paradigm Revel - 523
+367,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorTransmitterID,TRANSMITTER_ID=2172258,14831874476,53822077,68,Paradigm Revel - 523
+368,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorBGUnits,UNITS=mg dl,14831874477,53822077,69,Paradigm Revel - 523
+369,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorAlarmSilenceConfig,"DURATION=0, SCOPE=all",14831874478,53822077,70,Paradigm Revel - 523
+370,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorGraphConfig,"ENABLE=false, DURATION=120000",14831874479,53822077,71,Paradigm Revel - 523
+371,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorRateOfChangeAlertConfig,"LIMIT_UNITS=mg_dl_minute, RISING_LIMIT_ENABLE=false, RISING_LIMIT=4, FALLING_LIMIT_ENABLE=false, FALLING_LIMIT=4",14831874480,53822077,72,Paradigm Revel - 523
+372,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorAreaUnderCurveConfig,"HIGH_AREA_UNDER_CURVE=180, LOW_AREA_UNDER_CURVE=70",14831874481,53822077,73,Paradigm Revel - 523
+373,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorPredictiveAlertPattern,"ENABLE=true, NUM_PROFILES=1",14831874482,53822077,74,Paradigm Revel - 523
+374,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorPredictiveAlertProfile,"PATTERN_DATUM=14831874482, PROFILE_INDEX=0, LOW_ENABLE=true, LOW_DURATION=600000, HIGH_ENABLE=true, HIGH_DURATION=900000, START_TIME=0",14831874483,53822077,75,Paradigm Revel - 523
+375,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorGlucoseLimitPattern,"ENABLE=true, NUM_PROFILES=1",14831874484,53822077,76,Paradigm Revel - 523
+376,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorGlucoseLimitProfile,"PATTERN_DATUM=14831874484, PROFILE_INDEX=0, LOW_LIMIT_ENABLE=true, LOW_LIMIT=80, HIGH_LIMIT_ENABLE=true, HIGH_LIMIT=180, START_TIME=0",14831874485,53822077,77,Paradigm Revel - 523
+377,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentSensorAutoCalEnable,ENABLE=false,14831874486,53822077,78,Paradigm Revel - 523
+378,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBolusScrollStepSize,STEP_SIZE=step_0_point_1,14831874487,53822077,79,Paradigm Revel - 523
+379,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentCaptureEventEnable,ENABLE=true,14831874488,53822077,80,Paradigm Revel - 523
+380,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentOtherDeviceEnable,ENABLE=true,14831874489,53822077,81,Paradigm Revel - 523
+381,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentOtherDeviceMarried,MARRIED=false,14831874490,53822077,82,Paradigm Revel - 523
+382,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTimeDisplayFormat,FORMAT=d12,14831874407,53822077,0,Paradigm Revel - 523
+383,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAudioBolusStep,"AMOUNT=0.5, ENABLE=true",14831874408,53822077,1,Paradigm Revel - 523
+384,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentVariableBolusEnable,ENABLE=true,14831874409,53822077,2,Paradigm Revel - 523
+385,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAutoOffDuration,DURATION=0,14831874410,53822077,3,Paradigm Revel - 523
+386,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalToday,AMOUNT=36.9,14831874411,53822077,4,Paradigm Revel - 523
+387,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTempBasal,"RATE=0, DURATION=0",14831874412,53822077,5,Paradigm Revel - 523
+388,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentMaxBasal,RATE=2,14831874413,53822077,6,Paradigm Revel - 523
+389,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentMaxBolus,AMOUNT=14,14831874414,53822077,7,Paradigm Revel - 523
+390,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentActiveBasalProfilePattern,PATTERN_NAME=standard,14831874415,53822077,8,Paradigm Revel - 523
+391,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=standard, NUM_PROFILES=7",14831874416,53822077,9,Paradigm Revel - 523
+392,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=14831874416, PROFILE_INDEX=0, RATE=0.9, START_TIME=0",14831874417,53822077,10,Paradigm Revel - 523
+393,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=14831874416, PROFILE_INDEX=1, RATE=0.9, START_TIME=14400000",14831874418,53822077,11,Paradigm Revel - 523
+394,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=14831874416, PROFILE_INDEX=2, RATE=0.85, START_TIME=25200000",14831874419,53822077,12,Paradigm Revel - 523
+395,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=14831874416, PROFILE_INDEX=3, RATE=0.875, START_TIME=36000000",14831874420,53822077,13,Paradigm Revel - 523
+396,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=14831874416, PROFILE_INDEX=4, RATE=0.75, START_TIME=43200000",14831874421,53822077,14,Paradigm Revel - 523
+397,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=14831874416, PROFILE_INDEX=5, RATE=0.8, START_TIME=54000000",14831874422,53822077,15,Paradigm Revel - 523
+398,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfile,"PATTERN_DATUM=14831874416, PROFILE_INDEX=6, RATE=0.9, START_TIME=79200000",14831874423,53822077,16,Paradigm Revel - 523
+399,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=pattern a, NUM_PROFILES=0",14831874424,53822077,17,Paradigm Revel - 523
+400,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentBasalProfilePattern,"PATTERN_NAME=pattern b, NUM_PROFILES=0",14831874425,53822077,18,Paradigm Revel - 523
+401,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentVariableBasalProfilePatternEnable,ENABLE=false,14831874426,53822077,19,Paradigm Revel - 523
+402,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentChildBlockEnable,ENABLE=false,14831874427,53822077,20,Paradigm Revel - 523
+403,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentAlarmNotifyMode,MODE=vibration,14831874428,53822077,21,Paradigm Revel - 523
+404,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentRFEnable,ENABLE=false,14831874429,53822077,22,Paradigm Revel - 523
+405,4/12/15,22:18:00,4/12/15 22:18:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CurrentTotalYesterday,AMOUNT=28.025,14831874430,53822077,23,Paradigm Revel - 523
+

@@ -60,14 +60,11 @@ class MResultTotals(InvalidRecord):
     if self.larger:
       self.body_length = 3
   def parse_time(self):
-    mid = unmask_m_midnight(self.date)
-    try:
-      self.datetime = date = datetime(*mid)
-      return date
-    except ValueError, e:
-      print "ERROR", e, mid, lib.hexdump(self.date)
-      pass
-    return mid
+    date = parse_midnight(self.date)
+    self.datetime = date
+    if not hasattr(date, 'isoformat'):
+      self.datetime = None
+    return date
 
 
   def date_str(self):
@@ -169,8 +166,15 @@ class TempBasal(KnownRecord):
   _test_1 = bytearray([ ])
   def decode(self):
     self.parse_time( )
-    basal = { 'rate': self.head[1] / 40.0, }
-    return basal
+    temp = { 0: 'absolute', 1: 'percent' }[(self.body[0] >> 3)]
+    status = dict(temp=temp)
+    if temp is 'absolute':
+      rate = self.head[1] / 40.0
+      status.update(rate=rate)
+    if temp is 'percent':
+      rate = int(self.head[1])
+      status.update(rate=rate)
+    return status
 
 class LowReservoir(KnownRecord):
   """
@@ -191,10 +195,15 @@ class LowReservoir(KnownRecord):
     return reservoir
 
 
-class ChangeUtility(KnownRecord):
+class ChangeAlarmNotifyMode (KnownRecord):
   opcode = 0x63
+  body_length = 0
 class ChangeTimeDisplay(KnownRecord):
   opcode = 0x64
+
+class ChangeBolusWizardSetup (KnownRecord):
+  opcode = 0x4f
+  body_length = 40
 
 _confirmed = [ Bolus, Prime, NoDelivery, MResultTotals,
                ChangeBasalProfile_old_profile,
@@ -203,7 +212,8 @@ _confirmed = [ Bolus, Prime, NoDelivery, MResultTotals,
                NewTimeSet, LowBattery, Battery, PumpSuspend,
                PumpResume, CalBGForPH, Rewind, EnableDisableRemote,
                ChangeRemoteID, TempBasal, LowReservoir, BolusWizard,
-               UnabsorbedInsulinBolus, ChangeUtility, ChangeTimeDisplay ]
+               UnabsorbedInsulinBolus, ChangeAlarmNotifyMode, ChangeTimeDisplay,
+               ChangeBolusWizardSetup, ]
 
 # _confirmed.append(DanaScott0x09)
 
@@ -224,12 +234,42 @@ class Ian54(KnownRecord):
 _confirmed.append(Ian54)
 
 class SensorAlert (KnownRecord):
+  """Glucose sensor alarms.
+    The second byte of the head represents the alarm subtype.
+    The third byte seems to contain an alarm-specific value.
+
+    For example, a "Low Glucose" alarm is:
+    [
+      0x0b,  # 11: Opcode
+      0x66,  # 102: Low glucose subtype
+      0x50   # 80: Glucose level (For a pump configured to mg/dL)
+    ]
+    """
   opcode = 0x0B
   head_length = 3
-  def decode (self):
-    self.parse_time( )
-    amount = self.head[2]
-    return dict(alarm_type=self.head[1], amount_maybe=amount)
+
+  alarm_subtypes = {
+    101: 'High Glucose',
+    102: 'Low Glucose',
+    105: 'Cal Reminder',
+    107: 'Sensor End',
+    115: 'Low Glucose Predicted'
+  }
+
+  def decode(self):
+    super(SensorAlert, self).decode()
+
+    subtype = self.head[1]
+
+    decoded_dict = {
+      'alarm_type': self.alarm_subtypes.get(self.head[1], 'Unknown subtype with code {}'.format(self.head[1]))
+    }
+
+    if subtype in (101, 102,):
+      year_bits = extra_year_bits(self.date[4])
+      decoded_dict['glucose'] = int(lib.BangInt([year_bits[0], self.head[2]]))
+
+    return decoded_dict
 _confirmed.append(SensorAlert)
 
 class BGReceived (KnownRecord):
@@ -237,7 +277,8 @@ class BGReceived (KnownRecord):
   body_length = 3
   def decode (self):
     self.parse_time( )
-    return dict(link=str(self.body).encode('hex'), amount='???')
+    bg = (self.head[1] << 3) + (self.date[2] >> 5)
+    return dict(link=str(self.body).encode('hex'), amount=bg)
 _confirmed.append(BGReceived)
 
 class IanA8(KnownRecord):
@@ -277,18 +318,20 @@ class OldBolusWizardChange (KnownRecord):
     stale = self.body[0:half]
     changed = self.body[half:-1]
     tail = self.body[-1]
-    return dict(stale=decode_wizard_settings(stale)
+    return dict(stale=decode_wizard_settings(stale, model=self.model)
     # , _changed=changed
-    , changed=decode_wizard_settings(changed)
+    , changed=decode_wizard_settings(changed, model=self.model)
     , tail=tail
     )
 
 _confirmed.append(OldBolusWizardChange)
-def decode_wizard_settings (data, num=8):
+def decode_wizard_settings (data, num=8, model=None):
   head = data[0:2]
   tail = data[len(head):]
-  carb_ratios = tail[0:num*3]
-  tail = tail[num*3:]
+  carb_reader = model.read_carb_ratios.msg
+  cr_size = carb_reader.item_size
+  carb_ratios = tail[0:num*cr_size]
+  tail = tail[num*cr_size:]
   insulin_sensitivies = tail[0:(num*2)]
   tail = tail[num*2:]
   isMg = head[0] & 0b00000100
@@ -297,8 +340,11 @@ def decode_wizard_settings (data, num=8):
   if isMmol and not isMg:
     bg_units = 2
   bg_targets = tail[0:(num*3)+2]
+  if model and model.larger:
+    bg_targets = bg_targets[2:]
   return dict(head=str(head).encode('hex')
-  , carb_ratios=decode_carb_ratios(carb_ratios)
+  # , carb_ratios=decode_carb_ratios(carb_ratios)
+  , carb_ratios=carb_reader.decode_ratios(carb_ratios)
   # , _carb_ratios=str(carb_ratios).encode('hex')
   # , cr_len=len(carb_ratios)
   , insulin_sensitivies=decode_insulin_sensitivies(insulin_sensitivies)
@@ -335,7 +381,7 @@ def decode_insulin_sensitivies (data):
   return sensitivities
 
 def decode_bg_targets (data, bg_units):
-  data = data[2:]
+  # data = data[2:]
   targets = [ ]
   for x in range(8):
     start = x * 3
@@ -349,7 +395,7 @@ def decode_bg_targets (data, bg_units):
                        offset=offset*30, _offset=offset,
                        # _raw=str(data[start:end]).encode('hex'),
                        low=low, high=high))
-  return targets 
+  return targets
 
 class BigBolusWizardChange (KnownRecord):
   opcode = 0x5a
@@ -359,16 +405,11 @@ class SetAutoOff (KnownRecord):
   opcode = 0x1b
 _confirmed.append(SetAutoOff)
 
-class SetEasyBolusEnabled (KnownRecord):
+class ChangeAudioBolus (KnownRecord):
   opcode = 0x5f
-_confirmed.append(SetEasyBolusEnabled)
-
-class old6c(InvalidRecord):
-  opcode = 0x6c
-  #head_length = 45
-  body_length = 38
-  # body_length = 34
-_confirmed.append(old6c)
+  def decode (self):
+    self.parse_time( )
+_confirmed.append(ChangeAudioBolus)
 
 class hack83 (KnownRecord):
   opcode = 0x83
@@ -445,18 +486,26 @@ class questionable24 (KnownRecord):
   opcode = 0x24
 _confirmed.append(questionable24)
 
-class questionable60 (KnownRecord):
+class ChangeBGReminderEnable (KnownRecord):
   opcode = 0x60
-_confirmed.append(questionable60)
+  def decode (self):
+    self.parse_time( )
+    enabled = self.head[1] is 1
+    return dict(enabled=enabled)
+_confirmed.append(ChangeBGReminderEnable)
 
 class questionable61 (KnownRecord):
   opcode = 0x61
 _confirmed.append(questionable61)
 
-class hack62 (KnownRecord):
+class ChangeTempBasalType (KnownRecord):
   opcode = 0x62
+  def decode (self):
+    self.parse_time( )
+    temp = { 0: 'absolute', 1: 'percent' }[self.head[1]]
+    return dict(temp=temp)
   # body_length = 1
-_confirmed.append(hack62)
+_confirmed.append(ChangeTempBasalType)
 
 class questionable65 (KnownRecord):
   opcode = 0x65
@@ -474,10 +523,18 @@ class questionable5e (KnownRecord):
   opcode = 0x5e
 _confirmed.append(questionable5e)
 
-class questionable3c (KnownRecord):
+class ChangeParadigmLinkID (KnownRecord):
   opcode = 0x3c
   body_length = 14
-_confirmed.append(questionable3c)
+  def decode (self):
+    self.parse_time( )
+    data = self.body[1:]
+    links = [ ]
+    links.append(str(data[0:3]).encode('hex'))
+    links.append(str(data[3:6]).encode('hex'))
+    links.append(str(data[7:10]).encode('hex'))
+    return dict(links=links)
+_confirmed.append(ChangeParadigmLinkID)
 
 
 class questionable7c (KnownRecord):
@@ -490,16 +547,12 @@ class Model522ResultTotals(KnownRecord):
   date_length = 2
   body_length = 40
   def parse_time(self):
-    mid = unmask_m_midnight(self.date)
-    try:
-      self.datetime = date = datetime(*mid)
-      return date
-    except ValueError, e:
-      print "ERROR", e, lib.hexdump(self.date)
-      pass
-    return mid
-      
-    
+    date = parse_midnight(self.date)
+    self.datetime = date
+    if not hasattr(date, 'isoformat'):
+      self.datetime = None
+    return date
+
   def date_str(self):
     result = 'unknown'
     if self.datetime is not None:
@@ -508,6 +561,37 @@ class Model522ResultTotals(KnownRecord):
       if len(self.date) >=2:
         result = "{}".format(unmask_m_midnight(self.date))
     return result
+
+# class Model522ResultTotals(KnownRecord):
+class old6c(Model522ResultTotals):
+  opcode = 0x6c
+  #head_length = 45
+  #xxx non 515
+  # body_length = 38
+  # body_length = 34
+  # XXX: 515 only?
+  # body_length = 31
+  def __init__ (self, head, model, **kwds):
+    super(old6c, self).__init__(head, model, **kwds)
+    self.body_length = model.old6cBody + 3
+_confirmed.append(old6c)
+
+class questionable3b (KnownRecord):
+  opcode = 0x3b
+_confirmed.append(questionable3b)
+
+
+from dateutil.relativedelta import relativedelta
+def parse_midnight (data):
+    mid = unmask_m_midnight(data)
+    oneday = relativedelta(days=1)
+    try:
+      date = datetime(*mid) + oneday
+      return date
+    except ValueError, e:
+      print "ERROR", e, lib.hexdump(data)
+      pass
+    return mid
 
 def unmask_m_midnight(data):
   """
@@ -534,7 +618,7 @@ def unmask_m_midnight(data):
   mhigh = (data[0] & 0xE0) >> 4
   mlow  = (data[1] & 0x80) >> 7
   month =  int(mhigh + mlow)
-  day = int(low) + 1
+  day = int(low)
 
   year = parse_years(data[1])
   return (year, month, day, hours, minutes, seconds)
@@ -652,10 +736,13 @@ class HistoryPage (PagedData):
     for B in iter(lambda: bytearray(self.stream.read(2)), bytearray("")):
       if B == bytearray( [ 0x00, 0x00 ] ):
         if skipped:
-          records.extend(skipped)
+          last = records[-1]
+          last.update(appended=last.get('appended', [ ]) + skipped)
+          # records.extend(skipped)
           skipped = [ ]
         break
       record = parse_record(self.stream, B, larger=larger, model=self.model)
+      data = record.decode( )
       if record.datetime:
         rec = dict(timestamp=record.datetime.isoformat( ),
                    date=lib.epochize(record.datetime),
@@ -664,13 +751,12 @@ class HistoryPage (PagedData):
                    _head=lib.hexlify(record.head),
                    _date=lib.hexlify(record.date),
                    _description=str(record))
-        data = record.decode( )
         if data is not None:
           rec.update(data)
           if skipped:
             rec.update(appended=skipped)
             skipped = [ ]
-          records.append(rec)
+        records.append(rec)
       else:
         rec = dict(_type=str(record.__class__.__name__),
                    _body=lib.hexlify(record.body),
@@ -681,6 +767,7 @@ class HistoryPage (PagedData):
         if data is not None:
           rec.update(data=data)
         skipped.append(rec)
+    records.reverse( )
     return records
 
 if __name__ == '__main__':
