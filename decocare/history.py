@@ -235,10 +235,10 @@ _confirmed.append(Ian54)
 
 class SensorAlert (KnownRecord):
   """Glucose sensor alarms.
-    The second byte of the head represents the alarm subtype.
-    The third byte seems to contain an alarm-specific value.
+    The second byte of the head represents the alarm type.
+    The third byte contains an alarm-specific value.
 
-    For example, a "Low Glucose" alarm is:
+    For example, a "Low Glucose" alarm type is:
     [
       0x0b,  # 11: Opcode
       0x66,  # 102: Low glucose subtype
@@ -248,26 +248,31 @@ class SensorAlert (KnownRecord):
   opcode = 0x0B
   head_length = 3
 
-  alarm_subtypes = {
+  alarm_types = {
     101: 'High Glucose',
     102: 'Low Glucose',
+    104: 'Meter BG Now',
     105: 'Cal Reminder',
+    106: 'Calibration Error',
     107: 'Sensor End',
+    112: 'Weak Signal',
+    113: 'Lost Sensor',
     115: 'Low Glucose Predicted'
   }
 
   def decode(self):
     super(SensorAlert, self).decode()
 
-    subtype = self.head[1]
+    alarm_type = self.head[1]
 
     decoded_dict = {
-      'alarm_type': self.alarm_subtypes.get(self.head[1], 'Unknown subtype with code {}'.format(self.head[1]))
+      'alarm_type': alarm_type,
+      'alarm_description': self.alarm_types.get(alarm_type, 'Unknown sensor alarm ({})'.format(alarm_type))
     }
 
-    if subtype in (101, 102,):
+    if alarm_type in (101, 102,):
       year_bits = extra_year_bits(self.date[4])
-      decoded_dict['glucose'] = int(lib.BangInt([year_bits[0], self.head[2]]))
+      decoded_dict['amount'] = int(lib.BangInt([year_bits[0], self.head[2]]))
 
     return decoded_dict
 _confirmed.append(SensorAlert)
