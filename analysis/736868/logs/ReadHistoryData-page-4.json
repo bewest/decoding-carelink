@@ -41,15 +41,16 @@
     "_date": "2bde36770f"
   }, 
   {
-    "alarm_type": "High Glucose", 
+    "alarm_type": 101, 
     "_type": "SensorAlert", 
+    "alarm_description": "High Glucose", 
     "_description": "SensorAlert 2015-03-23T22:21:49 head[3], body[0] op[0x0b]", 
     "date": 1427178109000.0, 
     "timestamp": "2015-03-23T22:21:49", 
     "_body": "", 
     "_head": "0b65b9", 
-    "_date": "31d536b70f", 
-    "glucose": 185
+    "amount": 185, 
+    "_date": "31d536b70f"
   }, 
   {
     "programmed": 5.5, 
@@ -122,8 +123,9 @@
     "sensitivity": 40
   }, 
   {
-    "alarm_type": "Unknown subtype with code 114", 
+    "alarm_type": 114, 
     "_type": "SensorAlert", 
+    "alarm_description": "Unknown sensor alarm (114)", 
     "_description": "SensorAlert 2015-03-23T22:12:38 head[3], body[0] op[0x0b]", 
     "date": 1427177558000.0, 
     "timestamp": "2015-03-23T22:12:38", 
@@ -237,19 +239,21 @@
     "_date": "38d052770f"
   }, 
   {
-    "alarm_type": "High Glucose", 
+    "alarm_type": 101, 
     "_type": "SensorAlert", 
+    "alarm_description": "High Glucose", 
     "_description": "SensorAlert 2015-03-23T18:16:33 head[3], body[0] op[0x0b]", 
     "date": 1427163393000.0, 
     "timestamp": "2015-03-23T18:16:33", 
     "_body": "", 
     "_head": "0b65b6", 
-    "_date": "21d032b70f", 
-    "glucose": 182
+    "amount": 182, 
+    "_date": "21d032b70f"
   }, 
   {
-    "alarm_type": "Unknown subtype with code 114", 
+    "alarm_type": 114, 
     "_type": "SensorAlert", 
+    "alarm_description": "Unknown sensor alarm (114)", 
     "_description": "SensorAlert 2015-03-23T18:12:39 head[3], body[0] op[0x0b]", 
     "date": 1427163159000.0, 
     "timestamp": "2015-03-23T18:12:39", 
@@ -258,15 +262,16 @@
     "_date": "27cc32b70f"
   }, 
   {
-    "alarm_type": "High Glucose", 
+    "alarm_type": 101, 
     "_type": "SensorAlert", 
+    "alarm_description": "High Glucose", 
     "_description": "SensorAlert 2015-03-23T16:06:31 head[3], body[0] op[0x0b]", 
     "date": 1427155591000.0, 
     "timestamp": "2015-03-23T16:06:31", 
     "_body": "", 
     "_head": "0b65b8", 
-    "_date": "1fc630b70f", 
-    "glucose": 184
+    "amount": 184, 
+    "_date": "1fc630b70f"
   }, 
   {
     "_type": "BasalProfileStart", 
@@ -415,8 +420,9 @@
     "_date": "03ec2e770f"
   }, 
   {
-    "alarm_type": "Cal Reminder", 
+    "alarm_type": 105, 
     "_type": "SensorAlert", 
+    "alarm_description": "Cal Reminder", 
     "_description": "SensorAlert 2015-03-23T14:43:00 head[3], body[0] op[0x0b]", 
     "date": 1427150580000.0, 
     "timestamp": "2015-03-23T14:43:00", 
@@ -425,19 +431,21 @@
     "_date": "00eb2eb70f"
   }, 
   {
-    "alarm_type": "High Glucose", 
+    "alarm_type": 101, 
     "_type": "SensorAlert", 
+    "alarm_description": "High Glucose", 
     "_description": "SensorAlert 2015-03-23T14:38:00 head[3], body[0] op[0x0b]", 
     "date": 1427150280000.0, 
     "timestamp": "2015-03-23T14:38:00", 
     "_body": "", 
     "_head": "0b65b4", 
-    "_date": "00e62eb70f", 
-    "glucose": 180
+    "amount": 180, 
+    "_date": "00e62eb70f"
   }, 
   {
-    "alarm_type": "Unknown subtype with code 114", 
+    "alarm_type": 114, 
     "_type": "SensorAlert", 
+    "alarm_description": "Unknown sensor alarm (114)", 
     "_description": "SensorAlert 2015-03-23T14:27:12 head[3], body[0] op[0x0b]", 
     "date": 1427149632000.0, 
     "timestamp": "2015-03-23T14:27:12", 
@@ -446,15 +454,16 @@
     "_date": "0cdb2eb70f"
   }, 
   {
-    "alarm_type": "High Glucose", 
+    "alarm_type": 101, 
     "_type": "SensorAlert", 
+    "alarm_description": "High Glucose", 
     "_description": "SensorAlert 2015-03-23T12:12:39 head[3], body[0] op[0x0b]", 
     "date": 1427141559000.0, 
     "timestamp": "2015-03-23T12:12:39", 
     "_body": "", 
     "_head": "0b65c4", 
-    "_date": "27cc2cb70f", 
-    "glucose": 196
+    "amount": 196, 
+    "_date": "27cc2cb70f"
   }, 
   {
     "_type": "BasalProfileStart", 
@@ -554,19 +563,21 @@
     "sensitivity": 40
   }, 
   {
-    "alarm_type": "High Glucose", 
+    "alarm_type": 101, 
     "_type": "SensorAlert", 
+    "alarm_description": "High Glucose", 
     "_description": "SensorAlert 2015-03-23T10:42:48 head[3], body[0] op[0x0b]", 
     "date": 1427136168000.0, 
     "timestamp": "2015-03-23T10:42:48", 
     "_body": "", 
     "_head": "0b65b4", 
-    "_date": "30ea2ab70f", 
-    "glucose": 180
+    "amount": 180, 
+    "_date": "30ea2ab70f"
   }, 
   {
-    "alarm_type": "Unknown subtype with code 114", 
+    "alarm_type": 114, 
     "_type": "SensorAlert", 
+    "alarm_description": "Unknown sensor alarm (114)", 
     "_description": "SensorAlert 2015-03-23T10:33:07 head[3], body[0] op[0x0b]", 
     "date": 1427135587000.0, 
     "timestamp": "2015-03-23T10:33:07", 
@@ -607,8 +618,9 @@
     "_date": "31ea29770f"
   }, 
   {
-    "alarm_type": "Unknown subtype with code 104", 
+    "alarm_type": 104, 
     "_type": "SensorAlert", 
+    "alarm_description": "Meter BG Now", 
     "_description": "SensorAlert 2015-03-23T09:41:50 head[3], body[0] op[0x0b]", 
     "date": 1427132510000.0, 
     "timestamp": "2015-03-23T09:41:50", 
@@ -1030,8 +1042,9 @@
     "_date": "00c00c160f"
   }, 
   {
-    "alarm_type": "Sensor End", 
+    "alarm_type": 107, 
     "_type": "SensorAlert", 
+    "alarm_description": "Sensor End", 
     "_description": "SensorAlert 2015-03-22T10:01:04 head[3], body[0] op[0x0b]", 
     "date": 1427047264000.0, 
     "timestamp": "2015-03-22T10:01:04", 
@@ -1040,15 +1053,16 @@
     "_date": "04c12ab60f"
   }, 
   {
-    "alarm_type": "High Glucose", 
+    "alarm_type": 101, 
     "_type": "SensorAlert", 
+    "alarm_description": "High Glucose", 
     "_description": "SensorAlert 2015-03-22T10:01:04 head[3], body[0] op[0x0b]", 
     "date": 1427047264000.0, 
     "timestamp": "2015-03-22T10:01:04", 
     "_body": "", 
     "_head": "0b65b4", 
-    "_date": "04c12ab60f", 
-    "glucose": 180
+    "amount": 180, 
+    "_date": "04c12ab60f"
   }, 
   {
     "_type": "BasalProfileStart", 
@@ -1095,8 +1109,9 @@
     "sensitivity": 40
   }, 
   {
-    "alarm_type": "Unknown subtype with code 114", 
+    "alarm_type": 114, 
     "_type": "SensorAlert", 
+    "alarm_description": "Unknown sensor alarm (114)", 
     "_description": "SensorAlert 2015-03-22T09:44:54 head[3], body[0] op[0x0b]", 
     "date": 1427046294000.0, 
     "timestamp": "2015-03-22T09:44:54", 
@@ -1116,25 +1131,27 @@
     "_date": "00c007160f"
   }, 
   {
-    "alarm_type": "High Glucose", 
+    "alarm_type": 101, 
     "_type": "SensorAlert", 
+    "alarm_description": "High Glucose", 
     "_description": "SensorAlert 2015-03-22T05:50:16 head[3], body[0] op[0x0b]", 
     "date": 1427032216000.0, 
     "timestamp": "2015-03-22T05:50:16", 
     "_body": "", 
     "_head": "0b65ba", 
-    "_date": "10f225b60f", 
-    "glucose": 186
+    "amount": 186, 
+    "_date": "10f225b60f"
   }, 
   {
-    "alarm_type": "High Glucose", 
+    "alarm_type": 101, 
     "_type": "SensorAlert", 
+    "alarm_description": "High Glucose", 
     "_description": "SensorAlert 2015-03-22T04:19:37 head[3], body[0] op[0x0b]", 
     "date": 1427026777000.0, 
     "timestamp": "2015-03-22T04:19:37", 
     "_body": "", 
     "_head": "0b65ca", 
-    "_date": "25d324b60f", 
-    "glucose": 202
+    "amount": 202, 
+    "_date": "25d324b60f"
   }
 ]

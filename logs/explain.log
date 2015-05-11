@@ -1,115 +1,170 @@
 OUT
 ## Observations
-Tue Apr  8 17:05:18 PDT 2014
+Fri Aug  8 15:25:12 PDT 2014
 
 ## stick
 
-* stick runs appear to be ok
+* not ok
 
 ## pump
 
 
-## downloaded: 36
+## downloaded: 0
 
 ```
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][10]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][11]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][12]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][13]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][14]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][15]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][16]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][17]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][18]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][19]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][20]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][21]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][22]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][23]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][24]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][25]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][26]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][27]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][28]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][29]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][30]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][31]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][32]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][33]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][34]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][35]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][36]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][36]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][9]:data[1024]:
 ```
 
 
-## commands session:finished: 50
+## commands session:finished: 0
 
 ```
-INFO:session:finished executing:ReadBasalTemp:size[64]:data:{'duration': 0, 'rate': 0.0}
-INFO:session:finished executing:ReadBatteryStatus:size[64]:data:{'status': 'normal', 'voltage': 1.24}
-INFO:session:finished executing:ReadContrast:size[64]:data:bytearray(b'\x02\x07\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-INFO:session:finished executing:ReadCurPageNumber:pages:36
-INFO:session:finished executing:ReadFirmwareVersion:size[64]:data:'VER 2.4A1.1'
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][0]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][10]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][11]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][12]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][13]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][14]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][15]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][16]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][17]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][18]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][19]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][1]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][20]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][21]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][22]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][23]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][24]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][25]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][26]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][27]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][28]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][29]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][2]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][30]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][31]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][32]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][33]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][34]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][35]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][36]:data[1]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][36]:data[2]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][3]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][4]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][5]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][6]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][7]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][8]:data[1024]:
-INFO:session:finished executing:ReadHistoryData:size[1024]:[page][9]:data[1024]:
-INFO:session:finished executing:ReadPumpID:size[64]:data:'665455'
-INFO:session:finished executing:ReadPumpModel:size[64]:data:'522'
-INFO:session:finished executing:ReadRadioCtrlACL:size[64]:data:['------', '------', '------']
-INFO:session:finished executing:ReadRemainingInsulin:size[64]:data:125.8
-INFO:session:finished executing:ReadRTC:size[64]:data:'2014-4-8T16:11:56'
-INFO:session:finished executing:ReadSettings:size[64]:data:{'low_reservoir_warn_point': 20, 'keypad_lock_status': 0, 'maxBasal': 2, 'temp_basal': {'percent': 100, 'type': 'Units/hour'}, 'paradigm_enabled': 1, 'insulinConcentration': 100, 'audio_bolus_enable': False, 'variable_bolus_enable': True, 'alarm': {'volume': 1, 'mode': 2}, 'rf_enable': False, 'block_enable': False, 'timeformat': 0, 'auto_off_duration_hrs': 0, 'audio_bolus_size': 0, 'selected_pattern': 0, 'patterns_enabled': True, 'insulin_action_type': 4, 'maxBolus': 10.0, 'low_reservoir_warn_type': 0}
-INFO:session:finished executing:ReadTotalsToday:size[64]:data:{'yesterday': 28.9, 'today': 24.1}
 ```
 
-## howdy! pump runs appear to be OK
+howdy! pump runs were NOT OK
 
+### Last send command
+
+```
+INFO:stick:send_force_read: attempt 0/5 send command, read until we get something within some timeout
+INFO:stick:link Stick transmit[TransmitPacket:ReadHistoryData:size[1024]:[page][0]:data[0]:] reader[None] download_i[1] status[None] poll_size[0] poll_i[0] command[<LinkStatus:0x03:status:size=64:size(64)>] sending LinkStatus:0x03:status:size=64)
+INFO:root:usb.write.len: 3
+0000   0x03 0x00 0x00                             ...
+```
+### stats before traceback
+
+```
+184:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1833724270L, 'errors.naks': 0, 'errors.sequence': 15, 'packets.received': 82799L, 'errors.crc': 163}
+204:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 103L, 'errors.naks': 5, 'errors.sequence': 0, 'packets.received': 98L, 'errors.crc': 0}
+206:INFO:__main__:{'radio': {'errors.crc': 0,
+207:           'errors.naks': 5,
+208:           'errors.sequence': 0,
+209:           'errors.timeouts': 0,
+210:           'packets.received': 98L,
+211:           'packets.transmit': 103L},
+212: 'usb': {'errors.crc': 163,
+213:         'errors.naks': 0,
+214:         'errors.sequence': 15,
+215:         'errors.timeouts': 0,
+216:         'packets.received': 82799L,
+217:         'packets.transmit': 1833724270L}}
+539:INFO:stick:finished processing UsbStats:0x05 0x01, {'errors.timeouts': 0, 'packets.transmit': 1833724270L, 'errors.naks': 0, 'errors.sequence': 15, 'packets.received': 82799L, 'errors.crc': 162}
+559:INFO:stick:finished processing RadioStats:0x05 0x00, {'errors.timeouts': 0, 'packets.transmit': 115L, 'errors.naks': 5, 'errors.sequence': 0, 'packets.received': 110L, 'errors.crc': 0}
+561:INFO:__main__:{'radio': {'errors.crc': 0,
+562:           'errors.naks': 5,
+563:           'errors.sequence': 0,
+564:           'errors.timeouts': 0,
+```
+### Traceback
+
+```
+INFO:stick:zero length READ, try once more sleep .250
+INFO:root:usb.read.len: 0
+INFO:root:usb.read.raw:
+
+CRITICAL:stick:FAILED TO DOWNLOAD ANYTHING, after 4  expected:64
+INFO:stick:process zero length READ, try once more sleep .010
+INFO:root:usb.read.len: 0
+INFO:root:usb.read.raw:
+
+ERROR:stick:ACK is zero bytes!
+Traceback (most recent call last):
+  File "decocare/session.py", line 126, in <module>
+    session.power_control( )
+  File "decocare/session.py", line 83, in power_control
+    data = self.stick.download( )
+  File "/home/ian/diacon/decoding-carelink/decocare/stick.py", line 718, in download
+    size = self.poll_size( )
+  File "/home/ian/diacon/decoding-carelink/decocare/stick.py", line 549, in poll_size
+    size  = self.read_status( )
+  File "/home/ian/diacon/decoding-carelink/decocare/stick.py", line 565, in read_status
+    result = self.query(LinkStatus)
+  File "/home/ian/diacon/decoding-carelink/decocare/stick.py", line 502, in query
+    return self.process( )
+  File "/home/ian/diacon/decoding-carelink/decocare/stick.py", line 489, in process
+    ack, response = self.command.respond(raw)
+  File "/home/ian/diacon/decoding-carelink/decocare/stick.py", line 65, in respond
+--
+
+INFO:stick:attempt another read
+INFO:root:usb.read.len: 0
+INFO:root:usb.read.raw:
+
+INFO:stick:NESTED zero length READ, try once more sleep .100
+INFO:root:usb.read.len: 0
+INFO:root:usb.read.raw:
+
+ERROR:stick:ACK is zero bytes!
+Traceback (most recent call last):
+  File "decocare/commands.py", line 1485, in <module>
+    log.info('PUMP MODEL: %s' % session.read_model( ))
+  File "/home/ian/diacon/decoding-carelink/decocare/session.py", line 88, in read_model
+    model = self.query(commands.ReadPumpModel)
+  File "/home/ian/diacon/decoding-carelink/decocare/session.py", line 103, in query
+    self.execute(command)
+  File "/home/ian/diacon/decoding-carelink/decocare/session.py", line 100, in execute
+    return super(type(self), self).execute(command)
+  File "/home/ian/diacon/decoding-carelink/decocare/session.py", line 38, in execute
+    self.download( )
+  File "/home/ian/diacon/decoding-carelink/decocare/session.py", line 51, in download
+    data = self.stick.download( )
+  File "/home/ian/diacon/decoding-carelink/decocare/stick.py", line 743, in download
+    data = self.download_packet(size)
+  File "/home/ian/diacon/decoding-carelink/decocare/stick.py", line 688, in download_packet
+--
+INFO:root:usb.read.raw:
+0000   0x02 0x00 0x03 0x00 0xd9 0x80 0x40 0xa7    ......@.
+0008   0x01 0x91 0x39 0x95 0x29 0x03 0x35 0x35    ..9.).55
+0010   0x34 0x00 0x00 0x00 0x00 0x00 0x00 0x00    4.......
+0018   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+INFO:__main__:quit send_force_read, found len: 64 expected 64 after 0 attempts
+Traceback (most recent call last):
+  File "decocare/stick.py", line 884, in <module>
+    stick.open( )
+  File "decocare/stick.py", line 857, in open
+    log.info('%s' % self.product_info( ))
+  File "decocare/stick.py", line 508, in product_info
+    return self.query(ProductInfo)
+  File "decocare/stick.py", line 502, in query
+    return self.process( )
+  File "decocare/stick.py", line 489, in process
+    ack, response = self.command.respond(raw)
+  File "decocare/stick.py", line 68, in respond
+    assert commStatus == 1, ('commStatus: %02x expected 0x1' % commStatus)
+AssertionError: commStatus: 02 expected 0x1
+Command exited with non-zero status 1
+python decocare/stick.py /dev/ttyUSB0
+--
+0010   0x20 0x49 0x49 0x01 0x10 0x02 0x00 0x01     II.....
+0018   0x01 0x03 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0020   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0028   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0030   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+0038   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00    ........
+INFO:stick:quit send_force_read, found len: 64 expected 64 after 0 attempts
+INFO:stick:LinkStatus:0x03:status:size=??LinkStatus:error:True:reason:['OK']
+STATUS: receive in progress!|STATUS: transmit overflow!|STATUS: OK
+ERROR:stick:readStatus: non-zero status: a3
+Traceback (most recent call last):
+  File "decocare/download.py", line 84, in <module>
+    downloader.download( )
+  File "decocare/download.py", line 24, in download
+    self.device.execute(comm)
+  File "/home/ian/diacon/decoding-carelink/decocare/session.py", line 100, in execute
+    return super(type(self), self).execute(command)
+  File "/home/ian/diacon/decoding-carelink/decocare/session.py", line 38, in execute
+    self.download( )
+  File "/home/ian/diacon/decoding-carelink/decocare/session.py", line 51, in download
+    data = self.stick.download( )
+  File "/home/ian/diacon/decoding-carelink/decocare/stick.py", line 718, in download
+    size = self.poll_size( )
+  File "/home/ian/diacon/decoding-carelink/decocare/stick.py", line 549, in poll_size
+    size  = self.read_status( )
+  File "/home/ian/diacon/decoding-carelink/decocare/stick.py", line 565, in read_status
+```
 * NO CRC ERROR FOUND
 * no nak found
-* SUCCESS, GOOD CLEAN RUN
+* NOT A CLEAN RUN
