@@ -8,7 +8,7 @@ def readme():
         return f.read()
 
 setup(name='decocare',
-    version='0.0.10', # http://semver.org/
+    version='0.0.11', # http://semver.org/
     description='Audit, inspect, and command MM insulin pumps.',
     long_description=readme(),
     author="Ben West",
@@ -38,7 +38,8 @@ setup(name='decocare',
         'Topic :: Scientific/Engineering',
         'Topic :: Software Development :: Libraries'
     ],
-    zip_safe=False,
+    include_package_data=True,
+    zip_safe=False
 )
 
 #####
