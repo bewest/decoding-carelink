@@ -161,15 +161,16 @@
     "_date": "7828317d0f"
   }, 
   {
-    "alarm_type": "High Glucose", 
+    "alarm_type": 101, 
     "_type": "SensorAlert", 
+    "alarm_description": "High Glucose", 
     "_description": "SensorAlert 2015-04-29T17:28:17 head[3], body[0] op[0x0b]", 
     "date": 1430357297000.0, 
     "timestamp": "2015-04-29T17:28:17", 
     "_body": "", 
     "_head": "0b652a", 
-    "_date": "511c31bd8f", 
-    "glucose": 298
+    "amount": 298, 
+    "_date": "511c31bd8f"
   }, 
   {
     "programmed": 3.0, 
