@@ -72,7 +72,7 @@ reading more to debug 0x00
 #### RECORD 3 SensorAlert 2015-02-12T21:19:16 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'Unknown subtype with code 114'}
+{'alarm_description': 'Unknown sensor alarm (114)', 'alarm_type': 114}
 ```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
@@ -102,7 +102,7 @@ reading more to debug 0x00
 #### RECORD 5 SensorAlert 2015-02-12T21:29:07 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'High Glucose', 'glucose': 190}
+{'alarm_description': 'High Glucose', 'alarm_type': 101, 'amount': 190}
 ```
     op hex (3)
     0000   0x0b 0x65 0xbe                             .e.
@@ -198,7 +198,7 @@ reading more to debug 0x00
 #### RECORD 10 SensorAlert 2015-02-12T22:58:18 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'High Glucose', 'glucose': 183}
+{'alarm_description': 'High Glucose', 'alarm_type': 101, 'amount': 183}
 ```
     op hex (3)
     0000   0x0b 0x65 0xb7                             .e.
@@ -211,7 +211,7 @@ reading more to debug 0x00
 #### RECORD 11 SensorAlert 2015-02-12T23:49:35 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'Unknown subtype with code 114'}
+{'alarm_description': 'Unknown sensor alarm (114)', 'alarm_type': 114}
 ```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
@@ -281,7 +281,7 @@ reading more to debug 0x00
 #### RECORD 15 SensorAlert 2015-02-13T00:29:35 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'High Glucose', 'glucose': 215}
+{'alarm_description': 'High Glucose', 'alarm_type': 101, 'amount': 215}
 ```
     op hex (3)
     0000   0x0b 0x65 0xd7                             .e.
@@ -338,7 +338,7 @@ reading more to debug 0x00
 #### RECORD 19 SensorAlert 2015-02-13T01:59:16 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'High Glucose', 'glucose': 215}
+{'alarm_description': 'High Glucose', 'alarm_type': 101, 'amount': 215}
 ```
     op hex (3)
     0000   0x0b 0x65 0xd7                             .e.
@@ -402,7 +402,7 @@ reading more to debug 0x00
 #### RECORD 23 SensorAlert 2015-02-13T04:53:01 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'Unknown subtype with code 114'}
+{'alarm_description': 'Unknown sensor alarm (114)', 'alarm_type': 114}
 ```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
@@ -415,7 +415,7 @@ reading more to debug 0x00
 #### RECORD 24 SensorAlert 2015-02-13T05:03:40 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'High Glucose', 'glucose': 183}
+{'alarm_description': 'High Glucose', 'alarm_type': 101, 'amount': 183}
 ```
     op hex (3)
     0000   0x0b 0x65 0xb7                             .e.
@@ -445,7 +445,7 @@ reading more to debug 0x00
 #### RECORD 26 SensorAlert 2015-02-13T06:34:28 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'High Glucose', 'glucose': 222}
+{'alarm_description': 'High Glucose', 'alarm_type': 101, 'amount': 222}
 ```
     op hex (3)
     0000   0x0b 0x65 0xde                             .e.
@@ -458,7 +458,7 @@ reading more to debug 0x00
 #### RECORD 27 SensorAlert 2015-02-13T06:45:00 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'Cal Reminder'}
+{'alarm_description': 'Cal Reminder', 'alarm_type': 105}
 ```
     op hex (3)
     0000   0x0b 0x69 0x00                             .i.
@@ -562,7 +562,7 @@ reading more to debug 0x00
 #### RECORD 35 SensorAlert 2015-02-13T07:45:00 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'Unknown subtype with code 104'}
+{'alarm_description': 'Meter BG Now', 'alarm_type': 104}
 ```
     op hex (3)
     0000   0x0b 0x68 0x00                             .h.
@@ -575,7 +575,7 @@ reading more to debug 0x00
 #### RECORD 36 SensorAlert 2015-02-13T08:15:00 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'Unknown subtype with code 104'}
+{'alarm_description': 'Meter BG Now', 'alarm_type': 104}
 ```
     op hex (3)
     0000   0x0b 0x68 0x00                             .h.
@@ -588,7 +588,7 @@ reading more to debug 0x00
 #### RECORD 37 SensorAlert 2015-02-13T08:45:00 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'Unknown subtype with code 104'}
+{'alarm_description': 'Meter BG Now', 'alarm_type': 104}
 ```
     op hex (3)
     0000   0x0b 0x68 0x00                             .h.
@@ -761,7 +761,7 @@ reading more to debug 0x00
 #### RECORD 45 SensorAlert 2015-02-13T10:39:16 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'Unknown subtype with code 114'}
+{'alarm_description': 'Unknown sensor alarm (114)', 'alarm_type': 114}
 ```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
@@ -774,7 +774,7 @@ reading more to debug 0x00
 #### RECORD 46 SensorAlert 2015-02-13T10:49:07 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'High Glucose', 'glucose': 180}
+{'alarm_description': 'High Glucose', 'alarm_type': 101, 'amount': 180}
 ```
     op hex (3)
     0000   0x0b 0x65 0xb4                             .e.
@@ -804,7 +804,7 @@ reading more to debug 0x00
 #### RECORD 48 SensorAlert 2015-02-13T12:18:18 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'High Glucose', 'glucose': 188}
+{'alarm_description': 'High Glucose', 'alarm_type': 101, 'amount': 188}
 ```
     op hex (3)
     0000   0x0b 0x65 0xbc                             .e.
@@ -1093,7 +1093,7 @@ reading more to debug 0x00
 #### RECORD 60 SensorAlert 2015-02-13T16:13:01 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'Unknown subtype with code 114'}
+{'alarm_description': 'Unknown sensor alarm (114)', 'alarm_type': 114}
 ```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
@@ -1106,7 +1106,7 @@ reading more to debug 0x00
 #### RECORD 61 SensorAlert 2015-02-13T16:23:40 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'High Glucose', 'glucose': 185}
+{'alarm_description': 'High Glucose', 'alarm_type': 101, 'amount': 185}
 ```
     op hex (3)
     0000   0x0b 0x65 0xb9                             .e.
@@ -1136,7 +1136,7 @@ reading more to debug 0x00
 #### RECORD 63 SensorAlert 2015-02-13T17:54:28 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'High Glucose', 'glucose': 217}
+{'alarm_description': 'High Glucose', 'alarm_type': 101, 'amount': 217}
 ```
     op hex (3)
     0000   0x0b 0x65 0xd9                             .e.
@@ -1179,7 +1179,7 @@ reading more to debug 0x00
 #### RECORD 66 SensorAlert 2015-02-13T18:53:01 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'Low Glucose Predicted'}
+{'alarm_description': 'Low Glucose Predicted', 'alarm_type': 115}
 ```
     op hex (3)
     0000   0x0b 0x73 0x00                             .s.
@@ -1192,7 +1192,7 @@ reading more to debug 0x00
 #### RECORD 67 SensorAlert 2015-02-13T19:09:35 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'Low Glucose', 'glucose': 79}
+{'alarm_description': 'Low Glucose', 'alarm_type': 102, 'amount': 79}
 ```
     op hex (3)
     0000   0x0b 0x66 0x4f                             .fO
@@ -1205,7 +1205,7 @@ reading more to debug 0x00
 #### RECORD 68 SensorAlert 2015-02-13T19:38:18 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'Low Glucose', 'glucose': 73}
+{'alarm_description': 'Low Glucose', 'alarm_type': 102, 'amount': 73}
 ```
     op hex (3)
     0000   0x0b 0x66 0x49                             .fI
@@ -1218,7 +1218,7 @@ reading more to debug 0x00
 #### RECORD 69 SensorAlert 2015-02-13T19:51:00 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'Cal Reminder'}
+{'alarm_description': 'Cal Reminder', 'alarm_type': 105}
 ```
     op hex (3)
     0000   0x0b 0x69 0x00                             .i.
@@ -1231,7 +1231,7 @@ reading more to debug 0x00
 #### RECORD 70 SensorAlert 2015-02-13T20:42:59 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'Unknown subtype with code 114'}
+{'alarm_description': 'Unknown sensor alarm (114)', 'alarm_type': 114}
 ```
     op hex (3)
     0000   0x0b 0x72 0x00                             .r.
@@ -1244,7 +1244,7 @@ reading more to debug 0x00
 #### RECORD 71 SensorAlert 2015-02-13T20:51:00 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
-{'alarm_type': 'Unknown subtype with code 104'}
+{'alarm_description': 'Meter BG Now', 'alarm_type': 104}
 ```
     op hex (3)
     0000   0x0b 0x68 0x00                             .h.
