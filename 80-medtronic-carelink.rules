@@ -5,6 +5,7 @@
 # udev can only match one entry at a time, but this triggers additional add entries.
 # 0a21 8001
 ATTRS{idVendor}=="0a21", ATTRS{idProduct}=="8001", \
+  ENV{ID_MTP_DEVICE_IGNORE}="1", \
   ENV{ID_MM_DEVICE_IGNORE}="1"
 
 # when linux 3.18 becomes normal, comment this out
@@ -16,13 +17,15 @@ RUN+="/sbin/modprobe usbserial vendor=0x0a21 product=0x8001"
 ACTION=="add",                                       \
   SUBSYSTEM=="tty", \
   ATTRS{idVendor}=="0a21", ATTRS{idProduct}=="8001", \
+  GROUP="plugdev", \
   SYMLINK+="ttyUSB.Carelink%n"
 
-# this allows other applications to re-use ftdi_sio
-#ACTION=="remove",         \
-#  SUBSYSTEM=="usb",        \
-#  ENV{ID_MODEL_ID}=="0a21", \
-#  ENV{ID_VENDOR_ID}=="8001", \
-#  RUN+="/sbin/modprobe -r usbserial"
+# this allows other applications to re-use usbserial
+ACTION=="remove",         \
+  SUBSYSTEM=="usb",        \
+  ATTR{idVendor}=="0a21", ATTR{idProduct}=="8001", \
+  ENV{ID_MODEL_ID}=="0a21", \
+  ENV{ID_VENDOR_ID}=="8001", \
+  RUN+="/sbin/modprobe -r usbserial"
 
 

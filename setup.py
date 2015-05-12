@@ -1,11 +1,18 @@
 #!/usr/bin/python
 
 from setuptools import setup, find_packages
+import platform
 
 import decocare
 def readme():
     with open("README.markdown") as f:
         return f.read()
+
+dataFiles = [ ]
+if platform.system( ) == 'Linux':
+  dataFiles = [
+      ('/etc/udev/rules.d', ['80-medtronic-carelink.rules' ]),
+    ]
 
 setup(name='decocare',
     version='0.0.13', # http://semver.org/
@@ -39,6 +46,7 @@ setup(name='decocare',
         'Topic :: Software Development :: Libraries'
     ],
     include_package_data=True,
+    data_files=dataFiles,
     zip_safe=False
 )
 
