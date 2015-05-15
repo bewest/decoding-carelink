@@ -19,6 +19,7 @@ def readme():
 dataFiles = [ ]
 if platform.system( ) == 'Linux':
   prefix = '/etc/udev/rules.d'
+  prefix = ''
   if is_virtualenv( ):
     prefix = ''
   dataFiles = [
