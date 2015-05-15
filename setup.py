@@ -2,29 +2,12 @@
 
 from setuptools import setup, find_packages
 import platform
-import subprocess
-
-def is_virtualenv ( ):
-  import os
-  proc = subprocess.Popen(['which', 'virtualenvwrapper'], stderr=subprocess.PIPE, stdout=subprocess.PIPE)
-  has_venv = proc.poll( ) == 0
-  return os.environ.get('VIRTUAL_ENV', has_venv)
-
 
 import decocare
+
 def readme():
     with open("README.markdown") as f:
         return f.read()
-
-dataFiles = [ ]
-if platform.system( ) == 'Linux':
-  prefix = '/etc/udev/rules.d'
-  prefix = ''
-  if is_virtualenv( ):
-    prefix = ''
-  dataFiles = [
-      (prefix, ['80-medtronic-carelink.rules' ]),
-    ]
 
 setup(name='decocare',
     version='0.0.14', # http://semver.org/
@@ -58,7 +41,9 @@ setup(name='decocare',
         'Topic :: Software Development :: Libraries'
     ],
     include_package_data=True,
-    data_files=dataFiles,
+    package_data = {
+      'decocare': ['etc/*.rules']
+    },
     zip_safe=False
 )
 
