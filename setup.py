@@ -2,6 +2,14 @@
 
 from setuptools import setup, find_packages
 import platform
+import subprocess
+
+def is_virtualenv ( ):
+  import os
+  proc = subprocess.Popen(['which', 'virtualenvwrapper'], stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+  has_venv = proc.poll( ) == 0
+  return os.environ.get('VIRTUAL_ENV', has_venv)
+
 
 import decocare
 def readme():
@@ -10,8 +18,11 @@ def readme():
 
 dataFiles = [ ]
 if platform.system( ) == 'Linux':
+  prefix = '/etc/udev/rules.d'
+  if is_virtualenv( ):
+    prefix = ''
   dataFiles = [
-      ('/etc/udev/rules.d', ['80-medtronic-carelink.rules' ]),
+      (prefix, ['80-medtronic-carelink.rules' ]),
     ]
 
 setup(name='decocare',
