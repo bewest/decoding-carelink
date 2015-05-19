@@ -4,7 +4,7 @@ test:
 
 install:
 	python setup.py develop
-	install 80-medtronic-carelink.rules /etc/udev/rules.d/
+	install decocare/etc/80-medtronic-carelink.rules /etc/udev/rules.d/
 	udevadm control --reload-rules
 
 ci-install:

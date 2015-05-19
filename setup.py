@@ -4,18 +4,13 @@ from setuptools import setup, find_packages
 import platform
 
 import decocare
+
 def readme():
     with open("README.markdown") as f:
         return f.read()
 
-dataFiles = [ ]
-if platform.system( ) == 'Linux':
-  dataFiles = [
-      ('/etc/udev/rules.d', ['80-medtronic-carelink.rules' ]),
-    ]
-
 setup(name='decocare',
-    version='0.0.13', # http://semver.org/
+    version='0.0.14', # http://semver.org/
     description='Audit, inspect, and command MM insulin pumps.',
     long_description=readme(),
     author="Ben West",
@@ -46,7 +41,9 @@ setup(name='decocare',
         'Topic :: Software Development :: Libraries'
     ],
     include_package_data=True,
-    data_files=dataFiles,
+    package_data = {
+      'decocare': ['etc/*.rules']
+    },
     zip_safe=False
 )
 
