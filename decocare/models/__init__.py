@@ -243,6 +243,7 @@ known = {
 , '530': Model530
 , '540': Model540
 , '554': Model554
+, '723': Model523
 }
 
 def lookup (model, session):
