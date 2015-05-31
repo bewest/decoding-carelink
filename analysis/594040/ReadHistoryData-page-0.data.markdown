@@ -1,18 +1,12 @@
 ## START analysis/594040/logs/ReadHistoryData-page-0.data
-#### STOPPING DOUBLE NULLS @ 146, found 1 nulls
+#### STOPPING DOUBLE NULLS @ 185, found 837 nulls
 reading more to debug 0x00
     0000   0x00 0x00                                  ..
               0    0
 ##### DEBUG HEX
-    0000   0x78 0x5c 0x14 0x68 0x39 0x04 0x28 0x7f    x\.h9.(.
-    0008   0x04 0x98 0x1f 0x14 0x4e 0x79 0x14 0x62    ....Ny.b
-    0010   0x83 0x14 0x4c 0x8d 0x14 0x33 0x5a 0x7b    ..L..3Z{
-    0018   0x68 0x11 0x1e 0x0f 0x08 0x16 0x01 0x7b    h......{
+    0000   0x4f 0xd2                                  O.
 ##### DEBUG DECIMAL
-            120   92   20  104   57    4   40  127
-              4  152   31   20   78  121   20   98
-            131   20   76  141   20   51   90  123
-            104   17   30   15    8   22    1  123
+             79  210
 #### RECORD 0 SensorAlert 2015-05-30T15:26:10 head[3], body[0] op[0x0b]
 ###### DECODED
 ```python
@@ -168,41 +162,101 @@ reading more to debug 0x00
     0000   0x73 0x77 0x30 0xbe 0x0f                   sw0..
     body (0)
 
-#### RECORD 8 Base (2015, 5, 30, 17, 24, 12) head[2], body[0] op[0x40]
-
+#### RECORD 8 JournalEntryMealMarker 2015-05-30T17:24:12 head[2], body[2] op[0x40]
+###### DECODED
+```python
+{'carb_input': 1}
+```
     op hex (2)
     0000   0x40 0x00                                  @.
     decimal
              64    0
-    datetime ((2015, 5, 30, 17, 24, 12))
+    datetime (2015-05-30T17:24:12)
     0000   0x4c 0x58 0x11 0x1e 0x0f                   LX...
-    body (0)
+    body (2)
+    hex
+    0000   0x01 0x01                                  ..
+    decimal
+              1    1
 
-#### RECORD 9 Bolus (2000, 0, 0, 16, 0, 15) head[8], body[0] op[0x01]
+#### RECORD 9 BolusWizard 2015-05-30T17:25:33 head[2], body[15] op[0x5b]
 ###### DECODED
 ```python
-{'amount': 2.425,
- 'duration': 3780,
- 'programmed': 2.275,
- 'type': 'square',
- 'unabsorbed': 0.425}
+{'bg': 0,
+ 'bg_target_high': 120,
+ 'bg_target_low': 90,
+ 'bolus_estimate': 0.0,
+ 'carb_input': 0,
+ 'carb_ratio': 8.0,
+ 'correction_estimate': 0.0,
+ 'food_estimate': 0.0,
+ 'sensitivity': 40,
+ 'unabsorbed_insulin_total': 0.0}
 ```
-    op hex (8)
-    0000   0x01 0x01 0x5b 0x00 0x61 0x59 0x11 0x7e    ..[.aY.~
-    decimal
-              1    1   91    0   97   89   17  126
-    datetime ((2000, 0, 0, 16, 0, 15))
-    0000   0x0f 0x00 0x50 0x00 0x50                   ..P.P
-    body (0)
-
-#### RECORD 10 Base (2000, 0, 0, 0, 0, 0) head[2], body[0] op[0x28]
-
     op hex (2)
-    0000   0x28 0x5a                                  (Z
+    0000   0x5b 0x00                                  [.
     decimal
-             40   90
-    datetime ((2000, 0, 0, 0, 0, 0))
-    0000   0x00 0x00 0x00 0x00 0x00                   .....
+             91    0
+    datetime (2015-05-30T17:25:33)
+    0000   0x61 0x59 0x11 0x7e 0x0f                   aY.~.
+    body (15)
+    hex
+    0000   0x00 0x50 0x00 0x50 0x28 0x5a 0x00 0x00    .P.P(Z..
+    0008   0x00 0x00 0x00 0x00 0x00 0x00 0x78         ......x
+    decimal
+              0   80    0   80   40   90    0    0
+              0    0    0    0    0    0  120
+
+#### RECORD 10 UnabsorbedInsulinBolus unknown head[20], body[0] op[0x5c]
+###### DECODED
+```python
+[{'age': 57, 'amount': 2.6},
+ {'age': 127, 'amount': 1.0},
+ {'age': 287, 'amount': 3.8},
+ {'age': 377, 'amount': 1.95},
+ {'age': 387, 'amount': 2.45},
+ {'age': 397, 'amount': 1.9}]
+```
+    op hex (20)
+    0000   0x5c 0x14 0x68 0x39 0x04 0x28 0x7f 0x04    \.h9.(..
+    0008   0x98 0x1f 0x14 0x4e 0x79 0x14 0x62 0x83    ...Ny.b.
+    0010   0x14 0x4c 0x8d 0x14                        .L..
+    decimal
+             92   20  104   57    4   40  127    4
+            152   31   20   78  121   20   98  131
+             20   76  141   20
+    datetime (unknown)
+
     body (0)
 
-`end analysis/594040/logs/ReadHistoryData-page-0.data: 11 records`
+#### RECORD 11 TempBasal 2015-05-30T17:40:59 head[2], body[1] op[0x33]
+###### DECODED
+```python
+{'rate': 90, 'temp': 'percent'}
+```
+    op hex (2)
+    0000   0x33 0x5a                                  3Z
+    decimal
+             51   90
+    datetime (2015-05-30T17:40:59)
+    0000   0x7b 0x68 0x11 0x1e 0x0f                   {h...
+    body (1)
+    hex
+    0000   0x08                                       .
+    decimal
+              8
+
+#### RECORD 12 TempBasalDuration 2015-05-30T17:40:59 head[2], body[0] op[0x16]
+###### DECODED
+```python
+{'duration (min)': 30}
+```
+    op hex (2)
+    0000   0x16 0x01                                  ..
+    decimal
+             22    1
+    datetime (2015-05-30T17:40:59)
+    0000   0x7b 0x68 0x11 0x1e 0x0f                   {h...
+    body (0)
+
+`end analysis/594040/logs/ReadHistoryData-page-0.data: 13 records`
