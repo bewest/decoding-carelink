@@ -226,8 +226,7 @@ class JournalEntryMealMarker(KnownRecord):
   def decode(self):
     super(JournalEntryMealMarker, self).decode()
 
-    # TODO: There is probably an extra bit somewhere, since carb_input values can go up to 300.
-    return dict(carb_input=self.body[0])
+    return dict(carb_input=int(lib.BangInt([self.head[1], self.body[0]])))
 
 _confirmed.append(JournalEntryMealMarker)
 
