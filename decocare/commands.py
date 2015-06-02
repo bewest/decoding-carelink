@@ -482,9 +482,7 @@ class ReadHistoryData(PumpCommand):
     [3]
   """
   __fields__ = PumpCommand.__fields__ + ['page']
-  _test_ok = bytearray([ 0x01, 0x00, 0xA7, 0x01, 0x20, 0x88, 0x50, 0x80,
-               0x01, 0x00, 0x02, 0x02, 0x00, 0x80, 0x9B, 0x03,
-               0x36, ])
+  _test_ok = bytearray([ 0x01, 0x00, 0xA7, 0x01, 0x20, 0x88, 0x50, 0x80, 0x01, 0x00, 0x02, 0x02, 0x00, 0x80, 0x9B, 0x03, 0x36, ])
 
   page = None
   def __init__(self, page=None, **kwds):
@@ -592,8 +590,7 @@ class ReadCurGlucosePageNumber(PumpCommand):
     log.info("XXX: READ cur page number:\n%s" % lib.hexdump(data))
     if len(data) == 1:
       return int(data[0])
-    result = dict(page= lib.BangLong(data[0:4]), glucose=data[5], isig=data[7])
-    return result
+    return dict(page= lib.BangLong(data[0:4]), glucose=data[5], isig=data[7])
 
 
 class ReadRTC(PumpCommand):

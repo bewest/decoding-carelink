@@ -32,7 +32,7 @@ class DownloadHistory (cli.CommandApp):
 
 
     def download_page (self, number):
-        return self.exec_request(self.pump, commands.ReadHistoryData, args=dict(page=number), render_decoded=False,render_hexdump=False)
+        return self.exec_request(self.pump, commands.ReadGlucoseHistory, args=dict(page=number), render_decoded=False,render_hexdump=False)
 
     def find_records (self, page):
         decoder = HistoryPage(page, self.pump.model)
@@ -49,14 +49,14 @@ class DownloadHistory (cli.CommandApp):
 
     def download_history (self, args):
         records = [ ]
-        for i in range(1, 38):
+        for i in range(0, 10):
             print "Next page ", i
             pageHistory = self.download_page(i)
             records.extend(self.find_records(pageHistory.data))
         args.parsed_data.write(json.dumps(records))
 
     def getRange(self):
-        range = self.exec_request(self.pump, commands.ReadCurPageNumber, render_decoded=False,render_hexdump=False)
+        range = self.exec_request(self.pump, commands.ReadCurGlucosePageNumber, render_decoded=False,render_hexdump=False)
         return range.getData
 
     def main (self, args):
