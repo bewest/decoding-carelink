@@ -11,7 +11,7 @@ from binascii import hexlify
 # from scapy.all import *
 import json
 
-from decocare import lib, history
+from decocare import lib, history, models
 
 from decocare.history import parse_record, HistoryPage
 
@@ -29,8 +29,13 @@ def get_opt_parser( ):
 
   parser.add_argument('--larger',
                       dest='larger', action='store_true')
+  
   parser.add_argument('--no-larger',
                       dest='larger', action='store_false')
+
+  parser.add_argument('--model',
+                      # type=get_model,
+                      choices=models.known.keys( ))
 
   parser.add_argument('--out',
                       default=sys.stdout,
@@ -96,7 +101,7 @@ def main( ):
     print "## START %s" % (stream.name)
     records = [ ]
     if opts.collate:
-      page = HistoryPage(bytearray(stream.read( )))
+      page = HistoryPage(bytearray(stream.read( )), opts.model)
       records.extend(page.decode(larger=opts.larger ))
     else:
       records = find_records(stream, opts)
