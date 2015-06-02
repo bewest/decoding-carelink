@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python
+# PYTHON_ARGCOMPLETE_OK
 
 from setuptools import setup, find_packages
 import platform

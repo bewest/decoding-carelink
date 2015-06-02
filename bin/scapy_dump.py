@@ -1,4 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/env python
+# PYTHON_ARGCOMPLETE_OK
+
 """
 decoder.py - An analysis of Medtronic Carelink Diabetes protocol using
 scapy.
