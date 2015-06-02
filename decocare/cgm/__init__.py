@@ -113,6 +113,7 @@ class PagedData (object):
       0x01: dict(name='DataEnd',packet_size=0,date_type='none',op='0x01'),
       0x02: dict(name='SensorWeakSignal',packet_size=0,date_type='prevTimestamp',op='0x02'),
       0x03: dict(name='SensorCal',packet_size=1,date_type='prevTimestamp',op='0x03'),
+      0x07: dict(name='Fokko-07',packet_size=1,date_type='prevTimestamp',op='0x07'),
       0x08: dict(name='SensorTimestamp',packet_size=4,date_type='minSpecific',op='0x08'),
       0x0a: dict(name='BatteryChange',packet_size=4,date_type='minSpecific',op='0x0a'),
       0x0b: dict(name='SensorStatus',packet_size=4,date_type='minSpecific',op='0x0b'),
@@ -151,6 +152,7 @@ class PagedData (object):
     for B in iter(lambda: self.stream.read(1), ""):
       B = bytearray(B)
       record = self.suggest(B[0])
+      record['_tell'] = self.stream.tell( )
       # read packet if needed
       if not record is None and record['packet_size'] > 0:
         raw_packet = bytearray(self.stream.read(record['packet_size']))
@@ -206,7 +208,10 @@ class PagedData (object):
           date, body = raw_packet[:4], raw_packet[4:]
           date.reverse()
           date = parse_date(date)
-          record.update(date=date.isoformat())
+          if date is not None:
+            record.update(date=date.isoformat())
+          else:
+            record.update(_date=str(raw_packet[:4]).encode('hex'))
           record.update(body=self.byte_to_str(body))
           # Update cal amount
           if record['name'] == 'DateTimeChange':
