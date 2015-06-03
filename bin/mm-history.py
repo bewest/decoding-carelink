@@ -2,7 +2,7 @@
 # PYTHON_ARGCOMPLETE_OK
 
 from decocare import commands, models
-import json, argparse
+import json, argparse, sys
 
 from decocare.history import HistoryPage
 from decocare.helpers import cli
@@ -35,7 +35,7 @@ class DownloadHistory (cli.CommandApp):
         return self.exec_request(self.pump, commands.ReadHistoryData, args=dict(page=number), render_decoded=False,render_hexdump=False)
 
     def find_records (self, page):
-        decoder = HistoryPage(page, self.pump.model)
+
         records = decoder.decode( )
 
         print "Found " , len(records), " records."
@@ -47,31 +47,34 @@ class DownloadHistory (cli.CommandApp):
                 record.update(timestamp=dt.isoformat( ))
         return records
 
-    def download_history (self, args):
+    def download_history (self, args, nrPages):
         records = [ ]
-        for i in range(1, 38):
+        for i in range(1, nrPages):
             print "Next page ", i
-            pageHistory = self.download_page(i)
-            records.extend(self.find_records(pageHistory.data))
-        args.parsed_data.write(json.dumps(records))
+            try:
+                pageRaw = self.download_page(i)
+                pageResult = HistoryPage(pageRaw.data, self.pump.model)
+                records.extend(pageResult.decode())
+            except:
+                print "Unexpected error when downloading cgm-page ", i, " from pump:", sys.exc_info()[0]
 
-    def getRange(self):
+        recordsJson = json.dumps(records);
+        args.parsed_data.write(recordsJson)
+
+        handle = open('history.json', 'wb')
+        handle.write(recordsJson)
+        handle.close( )
+
+    def getNumberOfPages(self):
         range = self.exec_request(self.pump, commands.ReadCurPageNumber, render_decoded=False,render_hexdump=False)
-        return range.getData
+        return range.getData()
 
     def main (self, args):
         # Set Global variables..
         self.timezone = args.timezone
 
-        info = self.getRange()
-        print "yes"
-        print info
-        print vars(info)
-        print repr(info)
-        print "yes"
-
-
-        #self.download_history(args)
+        nrPages = self.getNumberOfPages()
+        self.download_history(args, nrPages)
 
 if __name__ == '__main__':
     app = DownloadHistory( )

@@ -34,19 +34,6 @@ class DownloadHistory (cli.CommandApp):
     def download_page (self, number):
         return self.exec_request(self.pump, commands.ReadGlucoseHistory, args=dict(page=number), render_decoded=False,render_hexdump=False)
 
-    def find_records (self, page):
-        decoder = HistoryPage(page, self.pump.model)
-        records = decoder.decode( )
-
-        print "Found " , len(records), " records."
-        for record in records:
-            print "  * found record", record.get('timestamp'), record['_type']
-            if record.get('timestamp'):
-                dt = parse(record['timestamp'])
-                dt = dt.replace(tzinfo=self.timezone)
-                record.update(timestamp=dt.isoformat( ))
-        return records
-
     def download_history (self, args, pageRange):
         records = [ ]
         for i in range(1 + pageRange['page'] - pageRange['isig'], pageRange['page']):
@@ -61,7 +48,7 @@ class DownloadHistory (cli.CommandApp):
         recordsJson = json.dumps(records);
         args.parsed_data.write(recordsJson)
 
-        handle = open('cgm.json', 'wb')
+        handle = open('glucose.json', 'wb')
         handle.write(recordsJson)
         handle.close( )
 
