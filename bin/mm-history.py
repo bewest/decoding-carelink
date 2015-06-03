@@ -71,7 +71,7 @@ class DownloadHistory (cli.CommandApp):
         print "yes"
 
 
-        self.download_history(args)
+        #self.download_history(args)
 
 if __name__ == '__main__':
     app = DownloadHistory( )
