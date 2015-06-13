@@ -1,5 +1,6 @@
-
+#!/usr/bin/env python
 # PYTHON_ARGCOMPLETE_OK
+
 import sys
 import argparse, argcomplete
 import textwrap

@@ -1,4 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/env python
+# PYTHON_ARGCOMPLETE_OK
+
 import argparse
 
 from pprint import pprint, pformat
