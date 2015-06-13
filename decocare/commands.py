@@ -913,7 +913,6 @@ class ReadCarbRatios512 (PumpCommand):
     labels = { 1 : 'grams', 2: 'exchanges' }
     fixed = self.data[1]
     data = self.data[1:1+(8 *2)]
-    print lib.hexdump(data)
     return dict(schedule=self.decode_ratios(data[1:], units=units), units=labels.get(units), first=self.data[0])
     # xxx: remove
     schedule = [ ]
