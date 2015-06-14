@@ -219,10 +219,16 @@ class Model522 (Model515):
   old6cBody = 38
   pass
 
+class Model722 (Model522):
+  pass
+
 class Model523 (Model522):
   strokes_per_unit = 40
   larger = True
   read_carb_ratios = Task(commands.ReadCarbRatios)
+
+class Model723 (Model523):
+  pass
 
 class Model530 (Model523):
   pass
@@ -243,7 +249,8 @@ known = {
 , '530': Model530
 , '540': Model540
 , '554': Model554
-, '723': Model523
+, '722': Model722
+, '723': Model723
 }
 
 def lookup (model, session):
