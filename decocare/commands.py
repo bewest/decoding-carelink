@@ -913,19 +913,7 @@ class ReadCarbRatios512 (PumpCommand):
     labels = { 1 : 'grams', 2: 'exchanges' }
     fixed = self.data[1]
     data = self.data[1:1+(8 *2)]
-    print lib.hexdump(data)
-    return dict(schedule=self.decode_ratios(data[1:], units=units), units=labels.get(units), first=self.data[0])
-    # xxx: remove
-    schedule = [ ]
-    for x in range(len(data)/ 2):
-      start = x * 2
-      end = start + 2
-      (i, r) = data[start:end]
-      ratio = int(r)
-      if units == 2:
-        ratio = r / 10.0
-      schedule.append(dict(x=x, i=i, offset=i*30, ratio=ratio, r=r))
-    return dict(schedule=schedule, units=labels.get(units), first=self.data[0])
+    return dict(schedule=self.decode_ratios(data[0:], units=units), units=labels.get(units), first=self.data[0])
 
   item_size = 2
   num_items = 8
