@@ -919,7 +919,7 @@ class ReadCarbRatios512 (PumpCommand):
     for x in range(len(data)/ 2):
       start = x * 2
       end = start + 2
-      (i, r) = data[start:end]
+      (r, i) = data[start:end]
       ratio = int(r)
       if units == 2:
         ratio = r / 10.0
