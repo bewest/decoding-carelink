@@ -233,10 +233,19 @@ class Model723 (Model523):
 class Model530 (Model523):
   pass
 
+class Model730 (Model530):
+  pass
+
 class Model540 (Model530):
   pass
 
+class Model740 (Model540):
+  pass
+
 class Model554 (Model540):
+  pass
+
+class Model754 (Model554):
   pass
 
 known = {
@@ -251,6 +260,10 @@ known = {
 , '554': Model554
 , '722': Model722
 , '723': Model723
+, '723': Model723
+, '730': Model730
+, '740': Model740
+, '754': Model754
 }
 
 def lookup (model, session):
