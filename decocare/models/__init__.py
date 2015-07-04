@@ -118,7 +118,7 @@ class PumpModel (object):
       return xrange(start, end, -1)
     def find_records (self, response):
       page = cgm.PagedData.Data(response.data, larger=self.inst.larger)
-      return page.decode( )
+      return reversed(page.decode( ))
 
   @PageIterator.handler( )
   class iter_history_pages (Cursor):
