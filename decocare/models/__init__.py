@@ -242,7 +242,13 @@ class Model540 (Model530):
 class Model740 (Model540):
   pass
 
-class Model554 (Model540):
+class Model551 (Model540):
+  pass
+
+class Model751 (Model551):
+  pass
+
+class Model554 (Model551):
   pass
 
 class Model754 (Model554):
@@ -257,12 +263,14 @@ known = {
 , '523': Model523
 , '530': Model530
 , '540': Model540
+, '551': Model551
 , '554': Model554
 , '722': Model722
 , '723': Model723
 , '723': Model723
 , '730': Model730
 , '740': Model740
+, '751': Model751
 , '754': Model754
 }
 
