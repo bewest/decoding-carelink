@@ -1247,7 +1247,7 @@ class ReadPumpStatus(PumpCommand):
              }
     return status
 
-class ReadPumpState(ReadPumpStatus):
+class ReadPumpState(PumpCommand):
   """
     >>> ReadPumpState(serial='665455').format() == ReadPumpState._test_ok
     True

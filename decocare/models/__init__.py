@@ -78,7 +78,8 @@ class PumpModel (object):
     self.model = model
     self.session = session
 
-  read_status = Task(commands.ReadPumpState)
+  read_model = Task(commands.ReadPumpModel)
+  read_status = Task(commands.ReadPumpStatus)
   read_temp_basal = Task(commands.ReadBasalTemp)
   read_settings = Task(commands.ReadSettings)
   read_reservoir = Task(commands.ReadRemainingInsulin)
@@ -187,7 +188,11 @@ class PumpModel (object):
 
 class Model508 (PumpModel):
   old6cBody = 31
-  pass
+  # XXX: hack to return something.
+  def read_status (self, **kwds):
+    number = self.read_model( )
+    status = dict(model=number, error="not supported")
+    return status
 
 class Model511 (Model508):
   read_basal_profile_std = Task(commands.ReadProfiles511_STD)
