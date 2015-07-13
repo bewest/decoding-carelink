@@ -163,9 +163,14 @@ class TempBasalDuration(KnownRecord):
 class ChangeMazaheri2e (KnownRecord):
   opcode = 0x2e
   body_length = 100
-class ChangeMazaheri2f (KnownRecord):
+
+# class BolusWizard512 (BolusWizard):
+class BolusWizard512 (KnownRecord):
   opcode = 0x2f
   body_length = 12
+
+class UnabsorbedInsulin512 (UnabsorbedInsulinBolus):
+  opcode = 0x30
 
 class TempBasal (KnownRecord):
   opcode = 0x33
@@ -224,7 +229,8 @@ _confirmed = [ Bolus, Prime, NoDelivery, MResultTotals,
 
 # _confirmed.append(DanaScott0x09)
 _confirmed.append(ChangeMazaheri2e)
-_confirmed.append(ChangeMazaheri2f)
+_confirmed.append(BolusWizard512)
+_confirmed.append(UnabsorbedInsulin512)
 
 
 class JournalEntryMealMarker(KnownRecord):
