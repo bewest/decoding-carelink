@@ -78,7 +78,7 @@ class PumpModel (object):
     self.model = model
     self.session = session
 
-  read_status = Task(commands.ReadPumpStatus)
+  read_status = Task(commands.ReadPumpState)
   read_temp_basal = Task(commands.ReadBasalTemp)
   read_settings = Task(commands.ReadSettings)
   read_reservoir = Task(commands.ReadRemainingInsulin)
@@ -213,6 +213,7 @@ class Model512 (Model511):
 
 class Model515 (Model512):
   read_bg_targets = Task(commands.ReadBGTargets515)
+  read_status = Task(commands.ReadPumpStatus)
   pass
 
 class Model522 (Model515):
