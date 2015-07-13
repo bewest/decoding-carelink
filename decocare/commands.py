@@ -1228,20 +1228,6 @@ class ReadBolusReminders (PumpCommand):
 class ReadFactoryParameters (PumpCommand):
   code = 199
 
-class ReadPumpState(PumpCommand):
-  """
-    >>> ReadPumpState(serial='665455').format() == ReadPumpState._test_ok
-    True
-  """
-  _test_ok = bytearray([ 0x01, 0x00, 0xA7, 0x01, 0x66, 0x54, 0x55, 0x80,
-                         0x00, 0x00, 0x02, 0x01, 0x00, 0x83, 0x2E, 0x00 ])
-
-  code = 131
-  descr = "Read Pump State"
-  params = [ ]
-  retries = 2
-  maxRecords = 1
-
 class ReadPumpStatus(PumpCommand):
   """
   """
@@ -1260,6 +1246,21 @@ class ReadPumpStatus(PumpCommand):
                'suspended': data[2] == 1
              }
     return status
+
+class ReadPumpState(ReadPumpStatus):
+  """
+    >>> ReadPumpState(serial='665455').format() == ReadPumpState._test_ok
+    True
+  """
+  _test_ok = bytearray([ 0x01, 0x00, 0xA7, 0x01, 0x66, 0x54, 0x55, 0x80,
+                         0x00, 0x00, 0x02, 0x01, 0x00, 0x83, 0x2E, 0x00 ])
+
+  code = 131
+  descr = "Read Pump State"
+  params = [ ]
+  retries = 2
+  maxRecords = 1
+
 
 
 # MMX22/	CMD_READ_SENSOR_SETTINGS	153	0x99	('\x99')	??
