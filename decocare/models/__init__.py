@@ -223,6 +223,7 @@ class Model523 (Model522):
   strokes_per_unit = 40
   larger = True
   read_carb_ratios = Task(commands.ReadCarbRatios)
+  read_reservoir = Task(commands.ReadRemainingInsulin523)
 
 class Model530 (Model523):
   pass
