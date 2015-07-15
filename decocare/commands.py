@@ -699,11 +699,24 @@ class ReadRemainingInsulin(PumpCommand):
   params = [ ]
   retries = 2
   maxRecords = 1
-
+  basalStrokes = 10.0
+  startByte = 0
+  endByte = 2
+  
   def getData(self):
     data = self.data
     log.info("READ remaining insulin:\n%s" % lib.hexdump(data))
-    return lib.BangInt(data[0:2])/10.0
+    return lib.BangInt(data[startByte:endByte])/basalStrokes
+
+
+class ReadRemainingInsulin523(ReadRemainingInsulin):
+  """
+  """
+  
+  basalStrokes = 40.0
+  startByte = 2
+  endByte = 4
+
 
 class ReadBasalTemp508 (PumpCommand):
   """
