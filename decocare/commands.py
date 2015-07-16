@@ -706,7 +706,7 @@ class ReadRemainingInsulin(PumpCommand):
   def getData(self):
     data = self.data
     log.info("READ remaining insulin:\n%s" % lib.hexdump(data))
-    return lib.BangInt(data[startByte:endByte])/basalStrokes
+    return lib.BangInt(data[self.startByte:self.endByte])/self.basalStrokes
 
 
 class ReadRemainingInsulin523(ReadRemainingInsulin):
