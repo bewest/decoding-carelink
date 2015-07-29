@@ -926,19 +926,7 @@ class ReadCarbRatios512 (PumpCommand):
     labels = { 1 : 'grams', 2: 'exchanges' }
     fixed = self.data[1]
     data = self.data[1:1+(8 *2)]
-    print lib.hexdump(data)
-    return dict(schedule=self.decode_ratios(data[1:], units=units), units=labels.get(units), first=self.data[0])
-    # xxx: remove
-    schedule = [ ]
-    for x in range(len(data)/ 2):
-      start = x * 2
-      end = start + 2
-      (i, r) = data[start:end]
-      ratio = int(r)
-      if units == 2:
-        ratio = r / 10.0
-      schedule.append(dict(x=x, i=i, offset=i*30, ratio=ratio, r=r))
-    return dict(schedule=schedule, units=labels.get(units), first=self.data[0])
+    return dict(schedule=self.decode_ratios(data[0:], units=units), units=labels.get(units), first=self.data[0])
 
   item_size = 2
   num_items = 8
@@ -950,10 +938,12 @@ class ReadCarbRatios512 (PumpCommand):
       start = x * 2
       end = start + 2
       (i, r) = data[start:end]
+      if x > 0 and i == 0:
+        break
       ratio = int(r)
       if units == 2:
         ratio = r / 10.0
-      schedule.append(dict(x=x, i=i, offset=i*30, ratio=ratio, r=r))
+      schedule.append(dict(x=x, i=i, start=lib.basal_time(i), offset=i*30, ratio=ratio, r=r))
     return schedule
 
 class ReadCarbRatios (PumpCommand):
@@ -966,17 +956,6 @@ class ReadCarbRatios (PumpCommand):
     fixed = self.data[1]
     data = self.data[2:2+(fixed *3)]
     return dict(schedule=self.decode_ratios(data, units=units), units=labels.get(units), first=self.data[0])
-    # xxx: remove
-    schedule = [ ]
-    for x in range(len(data)/ 3):
-      start = x * 3
-      end = start + 3
-      (i, q, r) = data[start:end]
-      ratio = r/10.0
-      if q:
-        ratio = lib.BangInt([q, r]) / 1000.0
-      schedule.append(dict(x=x, i=i, offset=i*30, q=q, ratio=ratio, r=r))
-    return dict(schedule=schedule, units=labels.get(units), first=self.data[0])
 
   @classmethod
   def decode_ratios (klass, data, units=0):
@@ -985,10 +964,12 @@ class ReadCarbRatios (PumpCommand):
       start = x * 3
       end = start + 3
       (i, q, r) = data[start:end]
+      if x > 0 and i == 0:
+        break
       ratio = r/10.0
       if q:
         ratio = lib.BangInt([q, r]) / 1000.0
-      schedule.append(dict(x=x, i=i, offset=i*30, q=q, ratio=ratio, r=r))
+      schedule.append(dict(x=x, i=i, start=lib.basal_time(i), offset=i*30, q=q, ratio=ratio, r=r))
     return schedule
 
 # MMPump512/	CMD_READ_INSULIN_SENSITIVITIES	139	0x8b	('\x8b')	OK
@@ -1005,7 +986,9 @@ class ReadInsulinSensitivities (PumpCommand):
       start = x * 2
       end = start + 2
       (i, sensitivity) = data[start:end]
-      schedule.append(dict(x=x, i=i, offset=i*30, sensitivity=sensitivity))
+      if x > 0 and i == 0:
+        break
+      schedule.append(dict(x=x, i=i, start=lib.basal_time(i), offset=i*30, sensitivity=sensitivity))
     labels = { True: 'Fast', False: 'Regular' }
     return dict(sensitivities=schedule, first=self.data[0], action_type=labels[isFast])
 
@@ -1023,10 +1006,12 @@ class ReadBGTargets515 (PumpCommand):
       start = x * 3
       end = start + 3
       (i, low, high) = data[start:end]
+      if x > 0 and i == 0:
+        break
       if units is 2:
         low = low / 10.0
         high = high / 10.0
-      schedule.append(dict(x=x, i=i, offset=i*30, low=low, high=high))
+      schedule.append(dict(x=x, i=i, start=lib.basal_time(i), offset=i*30, low=low, high=high))
     return dict(targets=schedule, units=labels.get(units), first=self.data[0])
 
 # MMPump512/	CMD_READ_BG_ALARM_CLOCKS	142	0x8e	('\x8e')	??
@@ -1256,20 +1241,6 @@ class ReadBolusReminders (PumpCommand):
 class ReadFactoryParameters (PumpCommand):
   code = 199
 
-class ReadPumpState(PumpCommand):
-  """
-    >>> ReadPumpState(serial='665455').format() == ReadPumpState._test_ok
-    True
-  """
-  _test_ok = bytearray([ 0x01, 0x00, 0xA7, 0x01, 0x66, 0x54, 0x55, 0x80,
-                         0x00, 0x00, 0x02, 0x01, 0x00, 0x83, 0x2E, 0x00 ])
-
-  code = 131
-  descr = "Read Pump State"
-  params = [ ]
-  retries = 2
-  maxRecords = 1
-
 class ReadPumpStatus(PumpCommand):
   """
   """
@@ -1288,6 +1259,21 @@ class ReadPumpStatus(PumpCommand):
                'suspended': data[2] == 1
              }
     return status
+
+class ReadPumpState(PumpCommand):
+  """
+    >>> ReadPumpState(serial='665455').format() == ReadPumpState._test_ok
+    True
+  """
+  _test_ok = bytearray([ 0x01, 0x00, 0xA7, 0x01, 0x66, 0x54, 0x55, 0x80,
+                         0x00, 0x00, 0x02, 0x01, 0x00, 0x83, 0x2E, 0x00 ])
+
+  code = 131
+  descr = "Read Pump State"
+  params = [ ]
+  retries = 2
+  maxRecords = 1
+
 
 
 # MMX22/	CMD_READ_SENSOR_SETTINGS	153	0x99	('\x99')	??

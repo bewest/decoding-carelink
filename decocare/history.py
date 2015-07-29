@@ -160,7 +160,19 @@ class TempBasalDuration(KnownRecord):
     self.parse_time( )
     basal = { 'duration (min)': self.head[1] * 30, }
     return basal
-class TempBasal(KnownRecord):
+class ChangeMazaheri2e (KnownRecord):
+  opcode = 0x2e
+  body_length = 100
+
+# class BolusWizard512 (BolusWizard):
+class BolusWizard512 (KnownRecord):
+  opcode = 0x2f
+  body_length = 12
+
+class UnabsorbedInsulin512 (UnabsorbedInsulinBolus):
+  opcode = 0x30
+
+class TempBasal (KnownRecord):
   opcode = 0x33
   body_length = 1
   _test_1 = bytearray([ ])
@@ -216,6 +228,28 @@ _confirmed = [ Bolus, Prime, NoDelivery, MResultTotals,
                ChangeBolusWizardSetup, ]
 
 # _confirmed.append(DanaScott0x09)
+_confirmed.append(ChangeMazaheri2e)
+_confirmed.append(BolusWizard512)
+_confirmed.append(UnabsorbedInsulin512)
+
+
+class JournalEntryMealMarker(KnownRecord):
+  """Capture Event > Meal marker"""
+  opcode = 0x40
+  body_length = 2
+
+  def decode(self):
+    super(JournalEntryMealMarker, self).decode()
+
+    return dict(carb_input=int(lib.BangInt([self.head[1], self.body[0]])))
+
+_confirmed.append(JournalEntryMealMarker)
+
+class JournalEntryOtherMarker(KnownRecord):
+  """Capture Event > Other"""
+  opcode = 0x43
+  body_length = 0
+_confirmed.append(JournalEntryOtherMarker)
 
 class Ian69(KnownRecord):
   opcode = 0x69
@@ -416,10 +450,10 @@ class ChangeAudioBolus (KnownRecord):
     self.parse_time( )
 _confirmed.append(ChangeAudioBolus)
 
-class hack83 (KnownRecord):
+class ChangeCaptureEventEnable (KnownRecord):
   opcode = 0x83
   # body_length = 1
-_confirmed.append(hack83)
+_confirmed.append(ChangeCaptureEventEnable)
 
 class hack53 (KnownRecord):
   opcode = 0x53

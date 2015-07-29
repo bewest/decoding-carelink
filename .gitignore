@@ -14,3 +14,4 @@ node_modules/
 *.egg-info/
 doc/_build/
 dist/
+.idea/

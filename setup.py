@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python
+# PYTHON_ARGCOMPLETE_OK
 
 from setuptools import setup, find_packages
 import platform
@@ -10,7 +11,7 @@ def readme():
         return f.read()
 
 setup(name='decocare',
-    version='0.0.14', # http://semver.org/
+    version='0.0.17', # http://semver.org/
     description='Audit, inspect, and command MM insulin pumps.',
     long_description=readme(),
     author="Ben West",
