@@ -1564,6 +1564,7 @@ __all__ = [
   'ReadGlucoseHistory', 'ReadHistoryData', 'ReadPumpID',
   'ReadPumpModel', 'ReadPumpState', 'ReadPumpStatus',
   'ReadRTC', 'ReadRadioCtrlACL', 'ReadRemainingInsulin',
+  'ReadRemainingInsulin523',
   'ReadSettings', 'ReadTotalsToday', 'SetSuspend',
   'PushEASY', 'PushUP', 'PushDOWN', 'PushACT', 'PushESC',
   'TempBasal', 'ManualCommand', 'ReadCurGlucosePageNumber',
