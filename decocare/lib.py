@@ -191,7 +191,7 @@ class CRC16CCITT:
     result = 65535
     #result = 0
     for i in xrange( len( block ) ):
-      tmp = block[ i ] ^ result >> 8 
+      tmp = block[ i ] ^ result >> 8
       result = ( klass.lookup[ tmp ] ^ result << 8 ) & 0xFFFF
     return result
 
@@ -296,7 +296,7 @@ def encodeDC(msg):
     low2Bits  = dcValue2 >> 4 & 0x3
     nibbles.append( high2Bits << 2 | low2Bits )
     nibbles.append( dcValue2 & 0xF )
-  
+
   for i in xrange(0, len(nibbles), 2):
     # last item gets a padding terminator
     high, low = nibbles[i], 5
@@ -343,7 +343,7 @@ def decodeDC(msg):
   sixBitValue =  0
   highValue   =  0
   highNibble  =  0
-  # 
+  #
   for B in msg:
     bP = 7
     while bP >= 0:
@@ -373,12 +373,6 @@ def decodeDCByte(B):
   # look up in decode table
   return ENCODE_TABLE.index(B)
 
-
-
-def epochize (dt):
-  epoch = datetime.fromtimestamp(0)
-  delta = dt - epoch
-  return delta.total_seconds( ) * 1000
 
 def hexbytes (hexstr):
     return bytearray(unhexlify(hexstr))
