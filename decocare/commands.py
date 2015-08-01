@@ -913,7 +913,7 @@ class ReadCarbRatios512 (PumpCommand):
     labels = { 1 : 'grams', 2: 'exchanges' }
     fixed = self.data[1]
     data = self.data[1:1+(8 *2)]
-    return dict(schedule=self.decode_ratios(data[0:], units=units), units=labels.get(units), first=self.data[0])
+    return dict(schedule=self.decode_ratios(data[0:], units=units), units=labels.get(units), first=self.data[0], raw=' '.join('0x{:02x}'.format(x) for x in self.data))
 
   item_size = 2
   num_items = 8
@@ -999,7 +999,7 @@ class ReadBGTargets515 (PumpCommand):
         low = low / 10.0
         high = high / 10.0
       schedule.append(dict(x=x, i=i, start=lib.basal_time(i), offset=i*30, low=low, high=high))
-    return dict(targets=schedule, units=labels.get(units), first=self.data[0])
+    return dict(targets=schedule, units=labels.get(units), first=self.data[0], raw=' '.join('0x{:02x}'.format(x) for x in self.data))
 
 # MMPump512/	CMD_READ_BG_ALARM_CLOCKS	142	0x8e	('\x8e')	??
 class ReadBGAlarmCLocks (PumpCommand):
