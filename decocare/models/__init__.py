@@ -233,6 +233,7 @@ class Model523 (Model522):
   larger = True
   read_carb_ratios = Task(commands.ReadCarbRatios)
   read_reservoir = Task(commands.ReadRemainingInsulin523)
+  read_settings = Task(commands.ReadSettings523)
 
 class Model723 (Model523):
   pass

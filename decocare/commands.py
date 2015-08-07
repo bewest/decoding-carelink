@@ -1178,7 +1178,7 @@ class ReadSettings(PumpCommand):
     #MM23 is different
     maxBolus = data[5]/ 10.0
     # MM512 and up
-    maxBasal = lib.BangInt(data[6:8]) / 40
+    maxBasal = lib.BangInt(data[6:8]) / 40.0
     timeformat = data[8]
     insulinConcentration = {0: 100, 1: 50}[data[9]]
     patterns_enabled = data[10] == 1
@@ -1202,6 +1202,17 @@ class ReadSettings(PumpCommand):
     # safety
     values.pop('self')
     values.pop('data')
+
+    return values
+
+class ReadSettings523(ReadSettings):
+
+  def getData(self):
+    values = super(ReadSettings523, self).getData()
+    data = self.data
+
+    values['maxBasal'] = lib.BangInt(data[7:9]) / 40.0
+    values['maxBolus'] = data[6]/ 10.0
 
     return values
 
@@ -1562,7 +1573,7 @@ __all__ = [
   'ReadPumpModel', 'ReadPumpState', 'ReadPumpStatus',
   'ReadRTC', 'ReadRadioCtrlACL', 'ReadRemainingInsulin',
   'ReadRemainingInsulin523',
-  'ReadSettings', 'ReadTotalsToday', 'SetSuspend',
+  'ReadSettings', 'ReadSettings523', 'ReadTotalsToday', 'SetSuspend',
   'PushEASY', 'PushUP', 'PushDOWN', 'PushACT', 'PushESC',
   'TempBasal', 'ManualCommand', 'ReadCurGlucosePageNumber',
   'SetAutoOff',
