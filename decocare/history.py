@@ -775,8 +775,9 @@ class HistoryPage (PagedData):
     for B in iter(lambda: bytearray(self.stream.read(2)), bytearray("")):
       if B == bytearray( [ 0x00, 0x00 ] ):
         if skipped:
-          last = records[-1]
-          last.update(appended=last.get('appended', [ ]) + skipped)
+          if len(records) > 0:
+            last = records[-1]
+            last.update(appended=last.get('appended', [ ]) + skipped)
           # records.extend(skipped)
           skipped = [ ]
         break
@@ -784,7 +785,6 @@ class HistoryPage (PagedData):
       data = record.decode( )
       if record.datetime:
         rec = dict(timestamp=record.datetime.isoformat( ),
-                   date=lib.epochize(record.datetime),
                    _type=str(record.__class__.__name__),
                    _body=lib.hexlify(record.body),
                    _head=lib.hexlify(record.head),

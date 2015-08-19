@@ -119,7 +119,7 @@ class PumpModel (object):
       return xrange(start, end, -1)
     def find_records (self, response):
       page = cgm.PagedData.Data(response.data, larger=self.inst.larger)
-      return page.decode( )
+      return reversed(page.decode( ))
 
   @PageIterator.handler( )
   class iter_history_pages (Cursor):
@@ -233,6 +233,7 @@ class Model523 (Model522):
   larger = True
   read_carb_ratios = Task(commands.ReadCarbRatios)
   read_reservoir = Task(commands.ReadRemainingInsulin523)
+  read_settings = Task(commands.ReadSettings523)
 
 class Model723 (Model523):
   pass

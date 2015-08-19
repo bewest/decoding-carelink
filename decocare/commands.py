@@ -482,9 +482,7 @@ class ReadHistoryData(PumpCommand):
     [3]
   """
   __fields__ = PumpCommand.__fields__ + ['page']
-  _test_ok = bytearray([ 0x01, 0x00, 0xA7, 0x01, 0x20, 0x88, 0x50, 0x80,
-               0x01, 0x00, 0x02, 0x02, 0x00, 0x80, 0x9B, 0x03,
-               0x36, ])
+  _test_ok = bytearray([ 0x01, 0x00, 0xA7, 0x01, 0x20, 0x88, 0x50, 0x80, 0x01, 0x00, 0x02, 0x02, 0x00, 0x80, 0x9B, 0x03, 0x36, ])
 
   page = None
   def __init__(self, page=None, **kwds):
@@ -592,8 +590,7 @@ class ReadCurGlucosePageNumber(PumpCommand):
     log.info("XXX: READ cur page number:\n%s" % lib.hexdump(data))
     if len(data) == 1:
       return int(data[0])
-    result = dict(page= lib.BangLong(data[0:4]), glucose=data[5], isig=data[7])
-    return result
+    return dict(page= lib.BangLong(data[0:4]), glucose=data[5], isig=data[7])
 
 
 class ReadRTC(PumpCommand):
@@ -926,7 +923,7 @@ class ReadCarbRatios512 (PumpCommand):
     labels = { 1 : 'grams', 2: 'exchanges' }
     fixed = self.data[1]
     data = self.data[1:1+(8 *2)]
-    return dict(schedule=self.decode_ratios(data[0:], units=units), units=labels.get(units), first=self.data[0])
+    return dict(schedule=self.decode_ratios(data[0:], units=units), units=labels.get(units), first=self.data[0], raw=' '.join('0x{:02x}'.format(x) for x in self.data))
 
   item_size = 2
   num_items = 8
@@ -1012,7 +1009,7 @@ class ReadBGTargets515 (PumpCommand):
         low = low / 10.0
         high = high / 10.0
       schedule.append(dict(x=x, i=i, start=lib.basal_time(i), offset=i*30, low=low, high=high))
-    return dict(targets=schedule, units=labels.get(units), first=self.data[0])
+    return dict(targets=schedule, units=labels.get(units), first=self.data[0], raw=' '.join('0x{:02x}'.format(x) for x in self.data))
 
 # MMPump512/	CMD_READ_BG_ALARM_CLOCKS	142	0x8e	('\x8e')	??
 class ReadBGAlarmCLocks (PumpCommand):
@@ -1181,7 +1178,7 @@ class ReadSettings(PumpCommand):
     #MM23 is different
     maxBolus = data[5]/ 10.0
     # MM512 and up
-    maxBasal = lib.BangInt(data[6:8]) / 40
+    maxBasal = lib.BangInt(data[6:8]) / 40.0
     timeformat = data[8]
     insulinConcentration = {0: 100, 1: 50}[data[9]]
     patterns_enabled = data[10] == 1
@@ -1205,6 +1202,17 @@ class ReadSettings(PumpCommand):
     # safety
     values.pop('self')
     values.pop('data')
+
+    return values
+
+class ReadSettings523(ReadSettings):
+
+  def getData(self):
+    values = super(ReadSettings523, self).getData()
+    data = self.data
+
+    values['maxBasal'] = lib.BangInt(data[7:9]) / 40.0
+    values['maxBolus'] = data[6]/ 10.0
 
     return values
 
@@ -1319,7 +1327,7 @@ class ReadGlucoseHistory (ReadSensorHistoryData):
     >>> ReadGlucoseHistory(params=[3]).params
     [3]
   """
-  descr = "read glucose history"
+  descr = "Read glucose history"
   code = 154
   params = [ ]
 
@@ -1336,7 +1344,7 @@ class ReadISIGHistory (ReadSensorHistoryData):
     [0, 0, 0, 2]
 
   """
-  descr = "read ISIG history"
+  descr = "Read ISIG history"
   code = 155
   params = [ ]
   maxRecords = 32
@@ -1564,7 +1572,8 @@ __all__ = [
   'ReadGlucoseHistory', 'ReadHistoryData', 'ReadPumpID',
   'ReadPumpModel', 'ReadPumpState', 'ReadPumpStatus',
   'ReadRTC', 'ReadRadioCtrlACL', 'ReadRemainingInsulin',
-  'ReadSettings', 'ReadTotalsToday', 'SetSuspend',
+  'ReadRemainingInsulin523',
+  'ReadSettings', 'ReadSettings523', 'ReadTotalsToday', 'SetSuspend',
   'PushEASY', 'PushUP', 'PushDOWN', 'PushACT', 'PushESC',
   'TempBasal', 'ManualCommand', 'ReadCurGlucosePageNumber',
   'SetAutoOff',
