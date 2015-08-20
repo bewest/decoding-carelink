@@ -20,7 +20,7 @@ class Bolus(KnownRecord):
   opcode = 0x01
   head_length = 4
   def __init__(self, head, larger=False):
-    super(type(self), self).__init__(head, larger)
+    super(Bolus, self).__init__(head, larger)
     # self.larger = larger
     if self.larger:
       self.head_length = 8
@@ -83,7 +83,7 @@ class BolusWizard(KnownRecord):
   opcode = 0x5b
   body_length = 13
   def __init__(self, head, model=None):
-    super(type(self), self).__init__(head, model)
+    super(BolusWizard, self).__init__(head, model)
     # self.larger = larger
     if self.larger:
       self.body_length = 15

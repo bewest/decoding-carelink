@@ -78,6 +78,7 @@ class PumpModel (object):
     self.model = model
     self.session = session
 
+  read_model = Task(commands.ReadPumpModel)
   read_status = Task(commands.ReadPumpStatus)
   read_temp_basal = Task(commands.ReadBasalTemp)
   read_settings = Task(commands.ReadSettings)
@@ -118,7 +119,7 @@ class PumpModel (object):
       return xrange(start, end, -1)
     def find_records (self, response):
       page = cgm.PagedData.Data(response.data, larger=self.inst.larger)
-      return page.decode( )
+      return reversed(page.decode( ))
 
   @PageIterator.handler( )
   class iter_history_pages (Cursor):
@@ -187,7 +188,11 @@ class PumpModel (object):
 
 class Model508 (PumpModel):
   old6cBody = 31
-  pass
+  # XXX: hack to return something.
+  def read_status (self, **kwds):
+    number = self.read_model( )
+    status = dict(model=number, error="not supported")
+    return status
 
 class Model511 (Model508):
   read_basal_profile_std = Task(commands.ReadProfiles511_STD)
@@ -213,6 +218,7 @@ class Model512 (Model511):
 
 class Model515 (Model512):
   read_bg_targets = Task(commands.ReadBGTargets515)
+  read_status = Task(commands.ReadPumpStatus)
   pass
 
 class Model522 (Model515):
@@ -226,6 +232,8 @@ class Model523 (Model522):
   strokes_per_unit = 40
   larger = True
   read_carb_ratios = Task(commands.ReadCarbRatios)
+  read_reservoir = Task(commands.ReadRemainingInsulin523)
+  read_settings = Task(commands.ReadSettings523)
 
 class Model723 (Model523):
   pass
@@ -242,7 +250,13 @@ class Model540 (Model530):
 class Model740 (Model540):
   pass
 
-class Model554 (Model540):
+class Model551 (Model540):
+  pass
+
+class Model751 (Model551):
+  pass
+
+class Model554 (Model551):
   pass
 
 class Model754 (Model554):
@@ -257,12 +271,14 @@ known = {
 , '523': Model523
 , '530': Model530
 , '540': Model540
+, '551': Model551
 , '554': Model554
 , '722': Model722
 , '723': Model723
 , '723': Model723
 , '730': Model730
 , '740': Model740
+, '751': Model751
 , '754': Model754
 }
 
