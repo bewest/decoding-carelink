@@ -246,7 +246,7 @@ class JournalEntryMealMarker(KnownRecord):
 _confirmed.append(JournalEntryMealMarker)
 
 class JournalEntryExerciseMarker(KnownRecord):
-  """Capture Event > Other"""
+  """Capture Event > Exercise marker"""
   opcode = 0x41
   body_length = 1
 _confirmed.append(JournalEntryExerciseMarker)
