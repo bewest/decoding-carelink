@@ -245,6 +245,12 @@ class JournalEntryMealMarker(KnownRecord):
 
 _confirmed.append(JournalEntryMealMarker)
 
+class JournalEntryExerciseMarker(KnownRecord):
+  """Capture Event > Other"""
+  opcode = 0x41
+  body_length = 1
+_confirmed.append(JournalEntryExerciseMarker)
+
 class JournalEntryOtherMarker(KnownRecord):
   """Capture Event > Other"""
   opcode = 0x43
