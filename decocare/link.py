@@ -6,8 +6,12 @@
 import serial 
 import logging
 import lib
+import fuser
 io  = logging.getLogger( )
 log = io.getChild(__name__)
+
+class AlreadyInUseException (Exception):
+  pass
 
 class Link( object ):
   __timeout__ = .500
@@ -15,6 +19,8 @@ class Link( object ):
   def __init__( self, port, timeout=None ):
     if timeout is not None:
       self.__timeout__ = timeout
+    if fuser.in_use(port):
+      raise AlreadyInUseException("{port} already in use".format(port=port))
     self.open( port )
 
 
