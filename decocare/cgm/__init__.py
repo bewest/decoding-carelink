@@ -222,9 +222,7 @@ class PagedData (object):
             record.update(change=changed.isoformat( ), body=self.byte_to_str(body[5:]))
             """
           if record['name'] == 'CalBGForGH':
-            amount = int(body[0])
-            if amount < 32:
-              amount = 0x100 + amount
+            amount = lib.BangInt([ (raw_packet[2] & 0b00100000) >> 5, body[0] ])
             record.update(body=self.byte_to_str(body))
             record.update(amount=amount)
         records.append(record)
