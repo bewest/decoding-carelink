@@ -20,7 +20,7 @@ class Link( object ):
     if timeout is not None:
       self.__timeout__ = timeout
     if fuser.in_use(port):
-      raise AlreadyInUseException(msg="{port} already in use".format(port=port))
+      raise AlreadyInUseException("{port} already in use".format(port=port))
     self.open( port )
 
 
