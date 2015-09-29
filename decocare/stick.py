@@ -875,7 +875,9 @@ class Stick(object):
         return True
       except AckError, e:
         log.info('failed:(%s):\n%s' % (attempt, e))
-    
+
+  def close (self):
+    self.link.close( )
   @staticmethod
   def decode_hex (msg, Candidate):
     candidate = Candidate( )
