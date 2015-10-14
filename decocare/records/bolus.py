@@ -34,9 +34,9 @@ class Bolus(KnownRecord):
            }
     if self.larger:
       duration = self.head[7] * 30
-      dose = { 'amount': self.head[4]/40.0,
-               'programmed': self.head[2]/40.0,
-               'unabsorbed': self.head[6] / 40.0,
+      dose = { 'amount': lib.BangInt(self.head[3:5])/40.0,
+               'programmed':  lib.BangInt(self.head[1:3])/40.0,
+               'unabsorbed': lib.BangInt(self.head[5:7])/40.0,
                'duration': duration,
                'type': duration > 0 and 'square' or 'normal',
              }
