@@ -878,6 +878,9 @@ class Stick(object):
         log.info('failed:(%s):\n%s' % (attempt, e))
         raise
     
+  def close (self):
+    self.link.close( )
+
   @staticmethod
   def decode_hex (msg, Candidate):
     candidate = Candidate( )
