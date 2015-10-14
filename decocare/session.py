@@ -53,15 +53,6 @@ class Session(object):
       #self.command.data = data
       self.command.respond(data)
       return data
-      # remove
-      for i in xrange(3):
-        pass
-        try:
-          pass
-        except AckError, e:
-          time.sleep(.010)
-          log.error(e)
-          errors.append(e)
     else:
       log.info('no download required')
     assert not errors, ("with errors:%s" %"\n".join( map(str, errors) ))
