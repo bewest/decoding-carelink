@@ -10,6 +10,9 @@ install:
 ci-install:
 	python setup.py develop
 
+ci-test: ci-install test
+	# do the travis dance
+
 docs:
 	(cd doc; make)
 travis: test
