@@ -181,7 +181,7 @@ class PowerControl(PumpCommand):
   maxRecords = 0
   #timeout = 1
   # effectTime = 7
-  effectTime = 17
+  effectTime = 12
   def __init__(self, minutes=None, **kwds):
     if minutes is not None:
       self.minutes = int(minutes)
