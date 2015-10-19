@@ -4,6 +4,9 @@ import time
 
 import lib
 
+class BadResponse (Exception):
+  pass
+
 """
 
 Implementation and decoding of lots of commands.
@@ -58,6 +61,20 @@ class BaseCommand(object):
   def hexdump (self):
     return lib.hexdump(self.data)
 
+class FieldChecker (object):
+  def __init__ (self, msg, required=[]):
+    self.msg = msg
+    self.required = required
+
+  def check_fields (self, data):
+    for field in self.required:
+      if field not in data:
+        raise BadResponse( )
+  def __call__ (self, data):
+    self.msg.validate(data)
+    self.check_fields(data)
+    return True
+
 class PumpCommand(BaseCommand):
   #serial = '665455'
   #serial = '206525'
@@ -69,6 +86,8 @@ class PumpCommand(BaseCommand):
   retries = 2
   effectTime = .500
   data = bytearray( )
+  Validator = FieldChecker
+  output_fields = [ ]
   __fields__ = ['maxRecords', 'code', 'descr',
                 'serial', 'bytesPerRecord', 'retries', 'params']
   def __init__(self, **kwds):
@@ -78,6 +97,7 @@ class PumpCommand(BaseCommand):
     self.allocateRawData( )
     self.data = bytearray( )
     self.name = self.log_name( )
+    self.checker = self.Validator(self, required=self.output_fields)
 
   def log_name(self, prefix=''):
     return prefix + '{}.data'.format(self.__class__.__name__)
@@ -96,6 +116,11 @@ class PumpCommand(BaseCommand):
 
   def __repr__(self):
     return '<{0}>'.format( self)
+
+  def validate (self, data):
+    return True
+  def check_output (self, data):
+    return self.checker(data)
 
   def getData(self):
     return self.data
@@ -917,6 +942,7 @@ class ReadBGUnits (PumpCommand):
 # MMPump512/	CMD_READ_CARB_RATIOS	138	0x8a	('\x8a')	OK
 class ReadCarbRatios512 (PumpCommand):
   code = 138
+  output_fields = ['units', 'schedule' ]
   def getData (self):
     # return self.model.decode_carb_ratios(self.data[:])
     units = self.data[0]
@@ -947,6 +973,7 @@ class ReadCarbRatios (PumpCommand):
   code = 138
   item_size = 3
   num_items = 8
+  output_fields = ['units', 'schedule' ]
   def getData (self):
     units = self.data[0]
     labels = { 1 : 'grams', 2: 'exchanges' }
@@ -974,6 +1001,7 @@ class ReadInsulinSensitivities (PumpCommand):
   code = 139
   resp_1 = bytearray(b'\x01\x00-\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
 
+  output_fields = ['action_type', 'sensitivities' ]
   def getData (self):
     # isFast = data[17] == 0
     isFast = self.data[0] is 1
@@ -994,6 +1022,7 @@ class ReadBGTargets (PumpCommand):
   code = 140
 class ReadBGTargets515 (PumpCommand):
   code = 159
+  output_fields = ['units', 'targets' ]
   def getData (self):
     units = self.data[0]
     labels = { 1 : 'mg/dL', 2: 'mmol/L' }
@@ -1056,6 +1085,38 @@ class ReadProfile_STD512 (PumpCommand):
     { 'start': '2:00P', 'rate': 0.95 },
   ]}
   code = 146
+  output_fields = [ ]
+  def validate (self, data):
+    i = 0
+    valid = True
+    last = None
+    for profile in data:
+      start = str(lib.basal_time(profile['minutes']/30))
+      if 'rate' in profile and profile['i'] == i and start == profile['start']:
+        if last and profile['minutes'] <= last['minutes']:
+          template = "{name} next scheduled item occurs before previous %s" % profile
+          raise BadResponse(template.format(name=self.__class__.__name__))
+      else:
+        bad_profile = """Current profile: %s""" % (profile)
+        template = """{bad_profile} Found in response to {name}
+          i: {i} matches? {matches_i}
+          our calcstart: {start}
+          profile start: {profile_start}
+          has a rate: {has_rate}
+          start matches: {matches_start}
+        """
+        raise BadResponse(template.format(bad_profile=bad_profile
+                  , name=self.__class__.__name__
+                  , start=start
+                  , profile_start=profile['start']
+                  , has_rate= 'rate' in profile
+                  , matches_i= profile['i'] == i
+                  , matches_start=  start == profile['start']
+                  , i=i))
+        valid = False
+      last = profile
+      i = i + 1
+    return True
   @staticmethod
   def decode (data):
     i = 0
@@ -1146,6 +1207,7 @@ class ReadSettings(PumpCommand):
   retries = 2
   maxRecords = 1
 
+  output_fields = ['maxBolus', 'maxBasal', 'insulin_action_curve' ]
   byte_map = {
 
   }
