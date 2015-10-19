@@ -1093,9 +1093,17 @@ class ReadProfile_STD512 (PumpCommand):
     for profile in data:
       start = str(lib.basal_time(profile['minutes']/30))
       if 'rate' in profile and profile['i'] == i and start == profile['start']:
+        if i == 0:
+          if profile['minutes'] != 0:
+            template = "{name} first scheduled item should be 00:00:00."
+            msg = template.format(name=self.__class__.__name__)
+            msg = "%s\n%s" % (msg, profile)
+            raise BadResponse(msg)
         if last and profile['minutes'] <= last['minutes']:
-          template = "{name} next scheduled item occurs before previous %s" % profile
-          raise BadResponse(template.format(name=self.__class__.__name__))
+          template = "{name} next scheduled item occurs before previous"
+          msg = template.format(name=self.__class__.__name__)
+          msg = "%s\n%s" % (msg, profile)
+          raise BadResponse(msg)
       else:
         bad_profile = """Current profile: %s""" % (profile)
         template = """{bad_profile} Found in response to {name}
