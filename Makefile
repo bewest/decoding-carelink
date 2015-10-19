@@ -8,7 +8,10 @@ install:
 	udevadm control --reload-rules
 
 ci-install:
-	sudo python setup.py develop
+	python setup.py develop
+
+ci-test: ci-install test
+	# do the travis dance
 
 docs:
 	(cd doc; make)

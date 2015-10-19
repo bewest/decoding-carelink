@@ -13,6 +13,9 @@ class Task (object):
       return self
     else:
       return types.MethodType(self, obj)
+  def validate (self):
+    data = self.response.getData( )
+    self.response.check_output(data)
   @staticmethod
   def func (self, response):
     return response.getData( )
@@ -20,6 +23,7 @@ class Task (object):
     # print "__calll__", inst, self.func
     # self.func( )
     self.response = inst.session.query(self.msg, **kwds)
+    self.validate( )
     return types.MethodType(self.func, inst)(self.response)
     # return self.response.getData( )
 
