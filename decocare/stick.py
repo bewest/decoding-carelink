@@ -20,6 +20,7 @@ log = logging.getLogger( ).getChild(__name__)
 from errors import StickError, AckError, BadDeviceCommError
 
 class BadCRC(StickError): pass
+class UnresponsiveError (StickError): pass
 
 def CRC8(data):
   return lib.CRC8.compute(data)
@@ -577,7 +578,7 @@ class Stick(object):
     packet = self.process( )
     return packet
 
-  def send_force_read(self, retries=2, timeout=1):
+  def send_force_read(self, retries=1, timeout=1):
     """
     Pretty simple, try really hard to ensure that we've sent our bytes, and we
     get a response.
@@ -727,7 +728,7 @@ class Stick(object):
       if size == 0:
         if i % 3 == 0:
           time.sleep(1.5)
-        time.sleep(1.5)
+        #time.sleep(1.5)
         size = self.poll_size( )
       """
       if size == 0:
@@ -741,7 +742,7 @@ class Stick(object):
         log.warn("%s:BAD AILING" % (stats.format(self, i, size,
                                         len(results), len(data))))
         ailing = ailing + 1
-        if ailing > 2:
+        if ailing > 1:
           break
         continue
           # break
@@ -861,7 +862,7 @@ class Stick(object):
     """
     self.link.baudrate = 9600
     self.timer = lib.Timer( )
-    for attempt in xrange( 3 ):
+    for attempt in xrange( 1 ):
       try:
         msg = ':'.join(['PROCESS', 'OPEN', str(self.timer.millis( ))] )
         log.info(msg)
@@ -875,7 +876,11 @@ class Stick(object):
         return True
       except AckError, e:
         log.info('failed:(%s):\n%s' % (attempt, e))
+        raise
     
+  def close (self):
+    self.link.close( )
+
   @staticmethod
   def decode_hex (msg, Candidate):
     candidate = Candidate( )
