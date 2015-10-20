@@ -515,9 +515,12 @@ class SettingSomething57 (KnownRecord):
   # body_length = 1
 _confirmed.append(SettingSomething57)
 
-class questionable2c (KnownRecord):
+class ChangeMaxBasal (KnownRecord):
   opcode = 0x2c
-_confirmed.append(questionable2c)
+  def decode (self):
+    self.parse_time( )
+    return dict(maxBasal=self.head[1] / 40.0)
+_confirmed.append(ChangeMaxBasal)
 
 class questionable22 (KnownRecord):
   opcode = 0x22
