@@ -225,6 +225,9 @@ class Model515 (Model512):
   read_status = Task(commands.ReadPumpStatus)
   pass
 
+class Model715 (Model515):
+  pass
+
 class Model522 (Model515):
   old6cBody = 38
   pass
@@ -277,6 +280,7 @@ known = {
 , '540': Model540
 , '551': Model551
 , '554': Model554
+, '715': Model715
 , '722': Model722
 , '723': Model723
 , '723': Model723
