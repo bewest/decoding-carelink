@@ -1000,11 +1000,26 @@ class ReadCarbRatios (PumpCommand):
 class ReadInsulinSensitivities (PumpCommand):
   code = 139
   resp_1 = bytearray(b'\x01\x00-\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+  resp_uk_1 = bytearray(str("""
+02001600000000
+00000000000000
+00000000000000
+00000000000000
+00000000000000
+00000000000000
+00000000000000
+00000000000000
+""".strip( ).replace("\n", "").decode('hex')))
 
-  output_fields = ['action_type', 'sensitivities' ]
+  output_fields = ['units', 'sensitivities' ]
+  UNITS = {
+    1: 'mg/dL',
+    2: 'mmol/L'
+  }
   def getData (self):
     # isFast = data[17] == 0
     isFast = self.data[0] is 1
+    units = self.data[0]
     data = self.data[1:1+16]
     schedule = [ ]
     for x in range(8):
@@ -1013,9 +1028,11 @@ class ReadInsulinSensitivities (PumpCommand):
       (i, sensitivity) = data[start:end]
       if x > 0 and i == 0:
         break
+      if units == 2:
+        sensitivity = sensitivity / 10.0
       schedule.append(dict(x=x, i=i, start=lib.basal_time(i), offset=i*30, sensitivity=sensitivity))
     labels = { True: 'Fast', False: 'Regular' }
-    return dict(sensitivities=schedule, first=self.data[0], action_type=labels[isFast])
+    return dict(sensitivities=schedule, first=self.data[0], units=self.UNITS.get(units))
 
 # MMPump512/	CMD_READ_BG_TARGETS	140	0x8c	('\x8c')	??
 class ReadBGTargets (PumpCommand):
