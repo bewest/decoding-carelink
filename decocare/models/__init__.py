@@ -90,6 +90,7 @@ class PumpModel (object):
   read_carb_ratios = Task(commands.ReadCarbRatios512)
   read_bg_targets = Task(commands.ReadBGTargets)
   read_insulin_sensitivies = Task(commands.ReadInsulinSensitivities)
+  read_insulin_sensitivities = Task(commands.ReadInsulinSensitivities)
   read_current_glucose_pages = Task(commands.ReadCurGlucosePageNumber)
   read_current_history_pages = Task(commands.ReadCurPageNumber)
   suspend_pump = Task(commands.PumpSuspend)
