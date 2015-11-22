@@ -343,7 +343,9 @@ class BasalProfileStart(KnownRecord):
   def decode (self):
     self.parse_time( )
     if (len(self.body) % 3 == 0):
-      return describe_rate(*self.body)
+      rate = describe_rate(*self.body)
+      rate['profile_index'] = self.head[1]
+      return rate
     else:
       return dict(raw=hexlify(self.body))
 _confirmed.append(BasalProfileStart)
