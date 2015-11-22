@@ -105,7 +105,7 @@ class ChangeBasalProfile_old_profile (KnownRecord):
     return rates
 
 def describe_rate (offset, rate, q):
-  return (dict(offset=(30*1000*60)*offset, rate=rate*0.025))
+  return (dict(offset=(30*1000*60)*offset, rate=rate/40.0))
 
 
 class ChangeBasalProfile_new_profile (KnownRecord):
