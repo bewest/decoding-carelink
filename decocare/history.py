@@ -9,6 +9,7 @@ from binascii import hexlify
 
 import lib
 from records import *
+from datetime import date
 
 _remote_ids = [
   bytearray([ 0x01, 0xe2, 0x40 ]),
@@ -66,6 +67,10 @@ class MResultTotals(InvalidRecord):
       self.datetime = None
     return date
 
+  def decode (self):
+    self.parse_time( )
+    mid = unmask_m_midnight(self.date)[0:3]
+    return (dict(valid_date=date(*mid).isoformat()))
 
   def date_str(self):
     result = 'unknown'
@@ -686,6 +691,11 @@ class Sara6E(Model522ResultTotals):
     super(type(self), self).__init__(head, larger)
     if self.larger:
       self.body_length = 48
+  def decode (self):
+    self.parse_time( )
+    mid = unmask_m_midnight(self.date)[0:3]
+    return (dict(valid_date=date(*mid).isoformat()))
+
 _confirmed.append(Sara6E)
 
 _known = { }
