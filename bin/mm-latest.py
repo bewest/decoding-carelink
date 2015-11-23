@@ -88,6 +88,12 @@ class LatestActivity (cli.CommandApp):
             type=argparse.FileType('w'),
             help="Put basal schedules json in this file"
           )
+    parser.add_argument('--status-out',
+            dest="status",
+            default='-',
+            type=argparse.FileType('w'),
+            help="Put status json in this file"
+          )
     parser.add_argument('--timezone',
             default=gettz( ),
             type=gettz,
@@ -121,6 +127,7 @@ class LatestActivity (cli.CommandApp):
   def report_status (self, args):
     status = self.exec_request(self.pump, commands.ReadPumpStatus)
     self.status = status.getData( )
+    args.status.write(json.dumps(self.status, indent=2))
 
   def report_temp (self, args):
     temp = self.exec_request(self.pump, commands.ReadBasalTemp)

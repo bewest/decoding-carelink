@@ -90,6 +90,7 @@ class PumpModel (object):
   read_carb_ratios = Task(commands.ReadCarbRatios512)
   read_bg_targets = Task(commands.ReadBGTargets)
   read_insulin_sensitivies = Task(commands.ReadInsulinSensitivities)
+  read_insulin_sensitivities = Task(commands.ReadInsulinSensitivities)
   read_current_glucose_pages = Task(commands.ReadCurGlucosePageNumber)
   read_current_history_pages = Task(commands.ReadCurPageNumber)
   suspend_pump = Task(commands.PumpSuspend)
@@ -225,6 +226,9 @@ class Model515 (Model512):
   read_status = Task(commands.ReadPumpStatus)
   pass
 
+class Model715 (Model515):
+  pass
+
 class Model522 (Model515):
   old6cBody = 38
   pass
@@ -277,6 +281,7 @@ known = {
 , '540': Model540
 , '551': Model551
 , '554': Model554
+, '715': Model715
 , '722': Model722
 , '723': Model723
 , '723': Model723

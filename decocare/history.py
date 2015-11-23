@@ -9,6 +9,7 @@ from binascii import hexlify
 
 import lib
 from records import *
+from datetime import date
 
 _remote_ids = [
   bytearray([ 0x01, 0xe2, 0x40 ]),
@@ -66,6 +67,10 @@ class MResultTotals(InvalidRecord):
       self.datetime = None
     return date
 
+  def decode (self):
+    self.parse_time( )
+    mid = unmask_m_midnight(self.date)[0:3]
+    return (dict(valid_date=date(*mid).isoformat()))
 
   def date_str(self):
     result = 'unknown'
@@ -105,7 +110,7 @@ class ChangeBasalProfile_old_profile (KnownRecord):
     return rates
 
 def describe_rate (offset, rate, q):
-  return (dict(offset=(30*1000*60)*offset, rate=rate*0.025))
+  return (dict(offset=(30*1000*60)*offset, rate=rate/40.0))
 
 
 class ChangeBasalProfile_new_profile (KnownRecord):
@@ -343,7 +348,9 @@ class BasalProfileStart(KnownRecord):
   def decode (self):
     self.parse_time( )
     if (len(self.body) % 3 == 0):
-      return describe_rate(*self.body)
+      rate = describe_rate(*self.body)
+      rate['profile_index'] = self.head[1]
+      return rate
     else:
       return dict(raw=hexlify(self.body))
 _confirmed.append(BasalProfileStart)
@@ -515,9 +522,12 @@ class SettingSomething57 (KnownRecord):
   # body_length = 1
 _confirmed.append(SettingSomething57)
 
-class questionable2c (KnownRecord):
+class ChangeMaxBasal (KnownRecord):
   opcode = 0x2c
-_confirmed.append(questionable2c)
+  def decode (self):
+    self.parse_time( )
+    return dict(maxBasal=self.head[1] / 40.0)
+_confirmed.append(ChangeMaxBasal)
 
 class questionable22 (KnownRecord):
   opcode = 0x22
@@ -681,6 +691,11 @@ class Sara6E(Model522ResultTotals):
     super(type(self), self).__init__(head, larger)
     if self.larger:
       self.body_length = 48
+  def decode (self):
+    self.parse_time( )
+    mid = unmask_m_midnight(self.date)[0:3]
+    return (dict(valid_date=date(*mid).isoformat()))
+
 _confirmed.append(Sara6E)
 
 _known = { }
