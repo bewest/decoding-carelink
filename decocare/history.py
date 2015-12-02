@@ -278,7 +278,7 @@ class Ian54(KnownRecord):
   body_length = 57
 _confirmed.append(Ian54)
 
-class SensorAlert (KnownRecord):
+class AlarmSensor (KnownRecord):
   """Glucose sensor alarms.
     The second byte of the head represents the alarm type.
     The third byte contains an alarm-specific value.
@@ -306,7 +306,7 @@ class SensorAlert (KnownRecord):
   }
 
   def decode(self):
-    super(SensorAlert, self).decode()
+    super(AlarmSensor, self).decode()
 
     alarm_type = self.head[1]
 
@@ -320,7 +320,7 @@ class SensorAlert (KnownRecord):
       decoded_dict['amount'] = int(lib.BangInt([year_bits[0], self.head[2]]))
 
     return decoded_dict
-_confirmed.append(SensorAlert)
+_confirmed.append(AlarmSensor)
 
 class BGReceived (KnownRecord):
   opcode = 0x3F
