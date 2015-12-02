@@ -44,7 +44,7 @@ def decode_remote_id(msg):
   low    = msg[ 2 ]
   return str(high + middle + low)
 
-class NoDelivery(KnownRecord):
+class AlarmPump(KnownRecord):
   opcode = 0x06
   head_length = 4
 #class ResultTotals(KnownRecord):
@@ -222,7 +222,7 @@ class ChangeBolusWizardSetup (KnownRecord):
   opcode = 0x4f
   body_length = 40
 
-_confirmed = [ Bolus, Prime, NoDelivery, ResultDailyTotal,
+_confirmed = [ Bolus, Prime, AlarmPump, ResultDailyTotal,
                ChangeBasalProfile_old_profile,
                ChangeBasalProfile_new_profile,
                ClearAlarm, SelectBasalProfile, TempBasalDuration, ChangeTime,
