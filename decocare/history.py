@@ -48,7 +48,7 @@ class NoDelivery(KnownRecord):
   opcode = 0x06
   head_length = 4
 #class ResultTotals(KnownRecord):
-class MResultTotals(InvalidRecord):
+class ResultDailyTotal(InvalidRecord):
   """On 722 this seems like two records."""
   opcode = 0x07
   #head_length = 5
@@ -222,7 +222,7 @@ class ChangeBolusWizardSetup (KnownRecord):
   opcode = 0x4f
   body_length = 40
 
-_confirmed = [ Bolus, Prime, NoDelivery, MResultTotals,
+_confirmed = [ Bolus, Prime, NoDelivery, ResultDailyTotal,
                ChangeBasalProfile_old_profile,
                ChangeBasalProfile_new_profile,
                ClearAlarm, SelectBasalProfile, TempBasalDuration, ChangeTime,
