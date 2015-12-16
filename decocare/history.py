@@ -499,15 +499,20 @@ class hack56 (KnownRecord):
   body_length = 5
 _confirmed.append(hack56)
 
-class hack82 (KnownRecord):
+class ChangeWatchdogMarriageProfile(KnownRecord):
+  opcode = 0x81
+  body_length = 5
+_confirmed.append(ChangeWatchdogMarriageProfile)
+
+class DeleteOtherDeviceID (KnownRecord):
   opcode = 0x82
   body_length = 5
-_confirmed.append(hack82)
+_confirmed.append(DeleteOtherDeviceID)
 
-class hack7d (KnownRecord):
+class ChangeOtherDeviceID (KnownRecord):
   opcode = 0x7d
   body_length = 30
-_confirmed.append(hack7d)
+_confirmed.append(ChangeOtherDeviceID)
 
 class SetBolusWizardEnabled (KnownRecord):
   opcode = 0x2d
