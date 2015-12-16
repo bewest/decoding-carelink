@@ -77,6 +77,7 @@ class PageIterator (Task):
 class PumpModel (object):
   bolus_strokes = 20
   basal_strokes = 40
+  MMOL_DEFAULT = False
   larger = False
   def __init__(self, model, session):
     self.model = model

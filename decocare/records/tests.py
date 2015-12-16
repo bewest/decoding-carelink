@@ -385,9 +385,11 @@ _wizards = [
   # bytearray([ ]),
 ]
 
+from decocare import models
+model522 = models.PumpModel('522', None)
 def _test_bolus_wizards( ):
   """
-  >>> rec = BolusWizard( _wizards[0][:2] )
+  >>> rec = BolusWizard( _wizards[0][:2], model522 )
   >>> print pformat(rec.parse( _wizards[0] ))
   {'_byte[5]': 249,
    '_byte[7]': 240,
@@ -408,7 +410,7 @@ def _test_bolus_wizards( ):
   BolusWizard 2013-01-19T21:50:15 head[2], body[13] op[0x5b]
 
 
-  >>> rec = BolusWizard( _wizards[1][:2] )
+  >>> rec = BolusWizard( _wizards[1][:2], model522 )
   >>> print pformat(rec.parse( _wizards[1] ))
   {'_byte[5]': 251,
    '_byte[7]': 240,
