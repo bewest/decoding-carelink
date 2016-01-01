@@ -85,6 +85,7 @@ class BolusWizard(KnownRecord):
   def __init__(self, head, model=None):
     super(BolusWizard, self).__init__(head, model)
     # self.larger = larger
+    self.MMOL_DEFAULT = model.MMOL_DEFAULT
     if self.larger:
       self.body_length = 15
   def decode(self):
@@ -137,6 +138,9 @@ class BolusWizard(KnownRecord):
                  # 'unknown_bytes': map(int, list(self.body)),
                }
 
+    if self.MMOL_DEFAULT:
+      for key in [ 'bg', 'bg_target_high', 'bg_target_low', 'sensitivity' ]:
+        wizard[key] = wizard[key] / 10.0
     return wizard
 
 def insulin_decode (a, b, strokes=40.0):
