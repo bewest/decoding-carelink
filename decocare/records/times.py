@@ -9,7 +9,7 @@ class Mask:
   """
   time   = 0xC0
   invert = 0x3F
-  year   = 0x0F
+  year   = 0x7F
   day    = 0x1F
 
 
@@ -77,31 +77,31 @@ def extra_year_bits(year=0x86):
   """
   practice getting some extra bits out of the year byte
   >>> extra_year_bits( )
-  [1, 0, 0, 0]
+  [1]
 
   >>> extra_year_bits(0x06)
-  [0, 0, 0, 0]
+  [0]
 
   >>> extra_year_bits(0x86)
-  [1, 0, 0, 0]
+  [1]
 
   >>> extra_year_bits(0x46)
-  [0, 1, 0, 0]
+  [0]
 
   >>> extra_year_bits(0x26)
-  [0, 0, 1, 0]
+  [0]
 
   >>> extra_year_bits(0x16)
-  [0, 0, 0, 1]
+  [0]
 
   """
   # year = year[0]
-  masks = [ ( 0x80, 7), (0x40, 6), (0x20, 5), (0x10, 4) ]
+  masks = [ ( 0x80, 7) ]
   nibbles = [ ]
   for mask, shift in masks:
     nibbles.append( ( (year & mask) >> shift ) )
   return nibbles
-  
+
 def extra_hour_bits(value):
   """
   practice getting extra bits out of the hours bytes
@@ -117,7 +117,7 @@ def extra_hour_bits(value):
   for mask, shift in masks:
     nibbles.append( ( (value & mask) >> shift ) )
   return nibbles
-  
+
 def parse_years(year):
   """
     simple mask plus correction
