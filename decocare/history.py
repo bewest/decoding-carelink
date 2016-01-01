@@ -44,11 +44,11 @@ def decode_remote_id(msg):
   low    = msg[ 2 ]
   return str(high + middle + low)
 
-class NoDelivery(KnownRecord):
+class AlarmPump(KnownRecord):
   opcode = 0x06
   head_length = 4
 #class ResultTotals(KnownRecord):
-class MResultTotals(InvalidRecord):
+class ResultDailyTotal(InvalidRecord):
   """On 722 this seems like two records."""
   opcode = 0x07
   #head_length = 5
@@ -222,7 +222,7 @@ class ChangeBolusWizardSetup (KnownRecord):
   opcode = 0x4f
   body_length = 40
 
-_confirmed = [ Bolus, Prime, NoDelivery, MResultTotals,
+_confirmed = [ Bolus, Prime, AlarmPump, ResultDailyTotal,
                ChangeBasalProfile_old_profile,
                ChangeBasalProfile_new_profile,
                ClearAlarm, SelectBasalProfile, TempBasalDuration, ChangeTime,
@@ -278,7 +278,7 @@ class Ian54(KnownRecord):
   body_length = 57
 _confirmed.append(Ian54)
 
-class SensorAlert (KnownRecord):
+class AlarmSensor (KnownRecord):
   """Glucose sensor alarms.
     The second byte of the head represents the alarm type.
     The third byte contains an alarm-specific value.
@@ -306,7 +306,7 @@ class SensorAlert (KnownRecord):
   }
 
   def decode(self):
-    super(SensorAlert, self).decode()
+    super(AlarmSensor, self).decode()
 
     alarm_type = self.head[1]
 
@@ -320,7 +320,7 @@ class SensorAlert (KnownRecord):
       decoded_dict['amount'] = int(lib.BangInt([year_bits[0], self.head[2]]))
 
     return decoded_dict
-_confirmed.append(SensorAlert)
+_confirmed.append(AlarmSensor)
 
 class BGReceived (KnownRecord):
   opcode = 0x3F
@@ -499,15 +499,20 @@ class hack56 (KnownRecord):
   body_length = 5
 _confirmed.append(hack56)
 
-class hack82 (KnownRecord):
+class ChangeWatchdogMarriageProfile(KnownRecord):
+  opcode = 0x81
+  body_length = 5
+_confirmed.append(ChangeWatchdogMarriageProfile)
+
+class DeleteOtherDeviceID (KnownRecord):
   opcode = 0x82
   body_length = 5
-_confirmed.append(hack82)
+_confirmed.append(DeleteOtherDeviceID)
 
-class hack7d (KnownRecord):
+class ChangeOtherDeviceID (KnownRecord):
   opcode = 0x7d
   body_length = 30
-_confirmed.append(hack7d)
+_confirmed.append(ChangeOtherDeviceID)
 
 class SetBolusWizardEnabled (KnownRecord):
   opcode = 0x2d
