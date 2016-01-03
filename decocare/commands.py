@@ -270,7 +270,7 @@ class TempBasal(PumpCommand):
 
   def getData(self):
     status = { 0: 'absolute' }
-    received = True if self.data[0] is 0 else False
+    received = True if (len(self.data) > 0 and self.data[0] is 0) else False
     return dict(recieved=received, temp=status.get(self.params[0], 'percent'))
   @classmethod
   def Program (klass, rate=None, duration=None, temp=None, **kwds):
