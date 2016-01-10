@@ -699,7 +699,10 @@ class Sara6E(Model522ResultTotals):
   def decode (self):
     self.parse_time( )
     mid = unmask_m_midnight(self.date)[0:3]
-    return (dict(valid_date=date(*mid).isoformat()))
+    try:
+      return (dict(valid_date=date(*mid).isoformat()))
+    except ValueError, e:
+      return (dict(error_date=mid))
 
 _confirmed.append(Sara6E)
 
