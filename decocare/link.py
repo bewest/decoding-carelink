@@ -3,7 +3,7 @@
 # TODO: move all constants to config module.
 #
 
-import serial 
+import serial
 import logging
 import lib
 import fuser
@@ -29,6 +29,8 @@ class Link( object ):
       self.port = newPort
     if 'timeout' not in kwds:
       kwds['timeout'] = self.__timeout__
+    kwds['rtscts'] = True
+    kwds['dsrdtr'] = True
 
     self.serial = serial.Serial( self.port, **kwds )
 
@@ -40,7 +42,7 @@ class Link( object ):
   def close( self ):
     io.info( 'closing serial port' )
     return self.serial.close( )
-    
+
   def write( self, string ):
     r = self.serial.write( string )
     io.info( 'usb.write.len: %s\n%s' % ( len( string ),
@@ -52,13 +54,13 @@ class Link( object ):
     io.info( 'usb.read.len: %s'   % ( len( r ) ) )
     io.info( 'usb.read.raw:\n%s' % ( lib.hexdump( bytearray( r ) ) ) )
     return r
-    
+
   def readline( self ):
     r = self.serial.readline( )
     io.info( 'usb.read.len: %s\n%s' % ( len( r ),
                                         lib.hexdump( bytearray( r ) ) ) )
     return r
-      
+
   def readlines( self ):
     r = self.serial.readlines( )
     io.info( 'usb.read.len: %s\n%s' % ( len( r ),
