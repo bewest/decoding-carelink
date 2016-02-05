@@ -5,5 +5,7 @@ class AckError(StickError): pass
 
 class BadDeviceCommError(AckError): pass
 
+class DataTransferCorruptionError(Exception): pass
+
 #####
 # EOF
