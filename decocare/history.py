@@ -270,6 +270,12 @@ _confirmed.append(Ian69)
 class Ian50(KnownRecord):
   opcode = 0x50
   body_length = 34
+
+  # XXX: tghoward testing on 723 at length 30
+  body_length = 30
+  def __init__ (self, head, model, **kwds):
+    super(Ian50, self).__init__(head, model, **kwds)
+    self.body_length = model.Ian50Body
 _confirmed.append(Ian50)
 
 class Ian54(KnownRecord):
@@ -699,7 +705,10 @@ class Sara6E(Model522ResultTotals):
   def decode (self):
     self.parse_time( )
     mid = unmask_m_midnight(self.date)[0:3]
-    return (dict(valid_date=date(*mid).isoformat()))
+    try:
+      return (dict(valid_date=date(*mid).isoformat()))
+    except ValueError, e:
+      return (dict(error_date=mid, error=str(e)))
 
 _confirmed.append(Sara6E)
 
