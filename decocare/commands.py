@@ -590,9 +590,13 @@ class ReadCurPageNumber(PumpCommand):
   def getData(self):
     data = self.data
     log.info("XXX: READ cur page number:\n%s" % lib.hexdump(data))
+    # MM12 does not support this command, but has 28 pages
+    # Thanks to @amazaheri
+    page = 28
     if len(data) == 1:
       return int(data[0])
-    page = lib.BangLong(data[0:4])
+    if len(data) > 3:
+      page = lib.BangLong(data[0:4])
     # https://bitbucket.org/bewest/carelink/src/419fbf23495a/ddmsDTWApplet.src/minimed/ddms/deviceportreader/MMX15.java#cl-157
     if page <= 0 or page > 36:
       page = 36
