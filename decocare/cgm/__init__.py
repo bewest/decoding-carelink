@@ -18,6 +18,7 @@ from dateutil.relativedelta import relativedelta
 
 from decocare import lib
 from decocare.records import times
+from decocare.errors import DataTransferCorruptionError
 from pprint import pprint
 
 ###################
@@ -87,7 +88,7 @@ class PagedData (object):
     computed = lib.CRC16CCITT.compute(bytearray(data))
     self.larger = larger
     if lib.BangInt(crc) != computed:
-      assert lib.BangInt(crc) == computed, "CRC does not match page data"
+      raise DataTransferCorruptionError("CRC does not match page data")
     
     data.reverse( )
     self.data = self.eat_nulls(data)
