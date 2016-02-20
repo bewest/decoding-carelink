@@ -590,9 +590,9 @@ class ReadCurPageNumber(PumpCommand):
   def getData(self):
     data = self.data
     log.info("XXX: READ cur page number:\n%s" % lib.hexdump(data))
-    # MM12 does not support this command, but has 28 pages
+    # MM12 does not support this command, but has 31 pages
     # Thanks to @amazaheri
-    page = 28
+    page = 32
     if len(data) == 1:
       return int(data[0])
     if len(data) > 3:
