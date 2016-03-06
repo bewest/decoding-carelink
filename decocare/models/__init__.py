@@ -79,6 +79,7 @@ class PumpModel (object):
   basal_strokes = 40
   MMOL_DEFAULT = False
   larger = False
+  Ian50Body = 30
   def __init__(self, model, session):
     self.model = model
     self.session = session
@@ -254,9 +255,11 @@ class Model723 (Model523):
   pass
 
 class Model530 (Model523):
+  Ian50Body = 34
   pass
 
 class Model730 (Model530):
+  Ian50Body = 34
   pass
 
 class Model540 (Model530):

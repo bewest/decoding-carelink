@@ -270,7 +270,7 @@ class TempBasal(PumpCommand):
 
   def getData(self):
     status = { 0: 'absolute' }
-    received = True if self.data[0] is 0 else False
+    received = True if (len(self.data) > 0 and self.data[0] is 0) else False
     return dict(recieved=received, temp=status.get(self.params[0], 'percent'))
   @classmethod
   def Program (klass, rate=None, duration=None, temp=None, **kwds):
@@ -590,9 +590,13 @@ class ReadCurPageNumber(PumpCommand):
   def getData(self):
     data = self.data
     log.info("XXX: READ cur page number:\n%s" % lib.hexdump(data))
+    # MM12 does not support this command, but has 31 pages
+    # Thanks to @amazaheri
+    page = 32
     if len(data) == 1:
       return int(data[0])
-    page = lib.BangLong(data[0:4])
+    if len(data) > 3:
+      page = lib.BangLong(data[0:4])
     # https://bitbucket.org/bewest/carelink/src/419fbf23495a/ddmsDTWApplet.src/minimed/ddms/deviceportreader/MMX15.java#cl-157
     if page <= 0 or page > 36:
       page = 36

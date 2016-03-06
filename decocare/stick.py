@@ -13,6 +13,11 @@ stick.
 Consumes a :ref:`link`, which allows us to debug everything on the
 wire.
 
+This module contains a class for each logical operation available in
+the stick's firmware.  Each operation is sent has a string of bytes
+over the serial/usb interface, and then a response with a particular
+format can be read.
+
 """
 
 log = logging.getLogger( ).getChild(__name__)
@@ -36,7 +41,7 @@ class StickCommand(object):
   allows you to send recieve commands to the pump, by formatting your
   message into payloads with opcodes, and then letting the stick work
   on what you've given it.  It's kind of like a modem with this funky
-  binary interface.
+  binary interface and 64 byte payloads.
   """
   code = [ 0x00 ]
   label = 'example stick command'
