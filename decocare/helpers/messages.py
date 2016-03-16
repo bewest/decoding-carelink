@@ -94,6 +94,12 @@ class SendMsgApp(CommandApp):
                             help="parameters to format into sent message",
                             default=commands.ManualCommand.params
                            )
+    all_parser.add_argument('--params_hexline', dest='params', type=lib.decode_hexline,
+                            help="hex string, parameters to format into sent message"
+                            # default=commands.ManualCommand.params
+                           )
+
+
     all_parser.add_argument('--descr', type=str, default="Experimental command",
                             help="Description of command"
                            )

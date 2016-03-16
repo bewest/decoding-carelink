@@ -43,7 +43,7 @@ class CommandApp(object):
                         help="serial number of pump [default: %(default)s]")
     parser.add_argument('--port', type=str,
                         dest='port',
-                        default=self.env.get('port', 'scan'),
+                        default=(self.env.get('port') or 'scan'),
                         help="Path to device [default: %(default)s]")
     parser.add_argument('--no-op',
                         dest='dryrun',

@@ -1517,6 +1517,10 @@ class TweakAnotherCommand (ManualCommand):
     parser.add_argument('--params', type=int, action="append",
                         help="parameters to format into sent message"
                        )
+    parser.add_argument('--params_hexline', dest='params', type=lib.decode_hexline,
+                        help="hex string, parameters to format into sent message"
+                        # default=commands.ManualCommand.params
+                       )
     parser.add_argument('--descr', type=str,
                         help="Description of command"
                        )

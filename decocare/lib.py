@@ -374,6 +374,10 @@ def decodeDCByte(B):
   return ENCODE_TABLE.index(B)
 
 
+def decode_hexline (line):
+  return bytearray(str(''.join(line.split( ))).decode('hex'))
+
+
 def hexbytes (hexstr):
     return bytearray(unhexlify(hexstr))
 
