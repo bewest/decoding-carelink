@@ -603,9 +603,13 @@ class ChangeParadigmLinkID (KnownRecord):
 _confirmed.append(ChangeParadigmLinkID)
 
 
-class questionable7c (KnownRecord):
+class ConnectDevicesOtherDevicesEnabled (KnownRecord):
   opcode = 0x7c
-_confirmed.append(questionable7c)
+  def decode(self):
+    super(ConnectDevicesOtherDevicesEnabled, self).decode()
+    return dict(enabled=self.head[1] == 1)
+
+_confirmed.append(ConnectDevicesOtherDevicesEnabled)
 
 class Model522ResultTotals(KnownRecord):
   opcode = 0x6d
