@@ -3,6 +3,10 @@ from pprint import pformat
 from cli import CommandApp
 from decocare import link, stick, session, commands, lib, scan
 
+def get_parser ( ):
+  app = SendMsgApp( )
+  return app.get_parser( )
+
 class SendMsgApp(CommandApp):
   """
   %(prog)s - send messages to a compatible MM insulin pump
