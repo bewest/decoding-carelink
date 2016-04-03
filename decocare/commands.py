@@ -1106,6 +1106,7 @@ class ReadProfile_STD512 (PumpCommand):
     { 'start': '2:00P', 'rate': 0.95 },
   ]}
   code = 146
+  maxRecords = 2
   output_fields = [ ]
   def validate (self, data):
     i = 0
