@@ -54,7 +54,10 @@ class BaseCommand(object):
     pass
 
   def respond(self, data):
-    self.data = data
+    if getattr(self, 'data', None):
+      self.data.extend(data)
+    else:
+      self.data = data
     self.getData( )
     self.responded = True
 
