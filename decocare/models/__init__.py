@@ -167,6 +167,22 @@ class PumpModel (object):
     clock = lib.parse.date(response.getData( ))
     return clock
 
+  @Task.handler(commands.SetRTC)
+  def _set_clock (self, response):
+    raw = response.getData( )
+    # TODO: fix mmeowlink's zero responses
+    # print "SET RESPONSE RAW", raw, response
+    # clock = lib.parse.date(raw)
+    return raw
+  def set_clock (self, clock=None, **kwds):
+    params = commands.SetRTC.fmt_datetime(clock)
+    old = self.read_clock( )
+    program = dict(requested=dict(clock=clock, params=list(params), old=old))
+    results = self._set_clock(params=params, **kwds)
+    program.update(raw=list(results))
+    program.update(clock=self.read_clock( ))
+    return program
+
   _set_temp_basal = Task(commands.TempBasal.Program)
 
   _bolus = Task(commands.Bolus)

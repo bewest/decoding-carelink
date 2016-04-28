@@ -3,6 +3,10 @@ from pprint import pformat
 from cli import CommandApp
 from decocare import link, stick, session, commands, lib, scan
 
+def get_parser ( ):
+  app = SendMsgApp( )
+  return app.get_parser( )
+
 class SendMsgApp(CommandApp):
   """
   %(prog)s - send messages to a compatible MM insulin pump
@@ -94,6 +98,12 @@ class SendMsgApp(CommandApp):
                             help="parameters to format into sent message",
                             default=commands.ManualCommand.params
                            )
+    all_parser.add_argument('--params_hexline', dest='params', type=lib.decode_hexline,
+                            help="hex string, parameters to format into sent message"
+                            # default=commands.ManualCommand.params
+                           )
+
+
     all_parser.add_argument('--descr', type=str, default="Experimental command",
                             help="Description of command"
                            )
