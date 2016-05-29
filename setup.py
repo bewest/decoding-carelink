@@ -43,7 +43,7 @@ setup(name='decocare',
     ],
     include_package_data=True,
     package_data = {
-      'decocare': ['etc/*', '*.rules' ]
+      'decocare': ['etc/*', '*.rules' ],
       'etc': ['decocare/etc/*', '*.rules' ]
     },
     data_files = [
