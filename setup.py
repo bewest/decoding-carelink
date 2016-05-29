@@ -43,10 +43,10 @@ setup(name='decocare',
     ],
     include_package_data=True,
     package_data = {
-      'decocare': ['etc/*']
+      'decocare': ['etc/*', '*.rules' ]
     },
     data_files = [
-      ('/etc/udev/rules.d/', ['etc/80-medtronic-carelink.rules'] )
+      ('/etc/udev/rules.d/', ['decocare/etc/80-medtronic-carelink.rules'] )
     ],
     zip_safe=False
 )
