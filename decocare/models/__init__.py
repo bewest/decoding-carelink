@@ -100,6 +100,23 @@ class PumpModel (object):
   read_battery_status = Task(commands.ReadBatteryStatus)
 
 
+  KEYPAD = dict(ESC=commands.KeypadPush.ESC
+    , ACT= commands.KeypadPush.ACT
+    , UP= commands.KeypadPush.UP
+    , DOWN= commands.KeypadPush.DOWN
+    , EASY= commands.KeypadPush.EASY
+  )
+  def press_key (self, key=None, **kwds):
+    press = self.KEYPAD.get(key, None)
+    err = "Tried to press {key}, but only support {keys}".format(key=key, keys=', '.join(self.KEYPAD.keys( )))
+    assert press, err
+    # req = press(**kwds)
+    resp = self.session.query(press, **kwds)
+    packet = resp.getData( )
+    raw = str(packet).encode('hex')
+    result = dict(raw=raw, received=len(packet) > 1, key=key)
+
+    return result
   def decode_unabsorbed (self, raw):
     doses = [ ]
     while raw and len(raw) > 2:
