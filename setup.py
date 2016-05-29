@@ -11,14 +11,14 @@ def readme():
         return f.read()
 
 setup(name='decocare',
-    version='0.0.27', # http://semver.org/
+    version='0.0.28-dev', # http://semver.org/
     description='Audit, inspect, and command MM insulin pumps.',
     long_description=readme(),
     author="Ben West",
     author_email="bewest+insulaudit@gmail.com",
     url="https://github.com/bewest/decoding-carelink",
     #namespace_packages = ['insulaudit'],
-    packages=find_packages( ) + [ 'etc' ],
+    packages=find_packages( ),
     install_requires = [
       'pyserial', 'python-dateutil', 'argcomplete'
     ],
@@ -44,10 +44,10 @@ setup(name='decocare',
     include_package_data=True,
     package_data = {
       'decocare': ['etc/*', '*.rules' ],
-      'etc': ['decocare/etc/*', '*.rules' ]
+      # 'decocare.etc': ['*.rules' ],
     },
     data_files = [
-      ('/etc/udev/rules.d/', ['decocare/etc/80-medtronic-carelink.rules'] )
+      ('/etc/udev/rules.d', ['decocare/etc/80-medtronic-carelink.rules'] )
     ],
     zip_safe=False
 )
