@@ -11,7 +11,7 @@ def readme():
         return f.read()
 
 setup(name='decocare',
-    version='0.0.23', # http://semver.org/
+    version='0.0.24-dev', # http://semver.org/
     description='Audit, inspect, and command MM insulin pumps.',
     long_description=readme(),
     author="Ben West",
@@ -43,8 +43,11 @@ setup(name='decocare',
     ],
     include_package_data=True,
     package_data = {
-      'decocare': ['etc/*.rules']
+      'decocare': ['etc/*']
     },
+    data_files = [
+      ('/etc/udev/rules.d/', ['etc/80-medtronic-carelink.rules'] )
+    ],
     zip_safe=False
 )
 
