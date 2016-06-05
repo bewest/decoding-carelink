@@ -47,7 +47,8 @@ setup(name='decocare',
       # 'decocare.etc': ['*.rules' ],
     },
     data_files = [
-      ('/etc/udev/rules.d', ['decocare/etc/80-medtronic-carelink.rules'] )
+      # commenting out for readthedocs and virtualenv users.
+      # ('/etc/udev/rules.d', ['decocare/etc/80-medtronic-carelink.rules'] )
     ],
     zip_safe=False
 )
