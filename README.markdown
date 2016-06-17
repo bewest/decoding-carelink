@@ -1,4 +1,11 @@
 
+# MOVED
+
+This repository has moved:
+* https://github.com/openaps/decocare
+
+-----------------------------------------
+
 # Decoding carelink
 
 For an intro, see
