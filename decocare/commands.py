@@ -1159,7 +1159,7 @@ class ReadProfile_STD512 (PumpCommand):
     for i in xrange(len(data)/3):
       off = i*3
       r, z, m = data[off : off + 3]
-      if [r,z,m] in [end, none]:
+      if i > 0 and [r,z,m] in [end, none]:
         break
       schedule.append(dict(i=i, minutes=m*30, start=str(lib.basal_time(m)), rate=r*.025))
     return schedule
@@ -1817,4 +1817,3 @@ if __name__ == '__main__':
   #log.info(pformat(stick.interface_stats( )))
   log.info("howdy! we downloaded a lot of pump info successfully.")
   # stick.open( )
-
