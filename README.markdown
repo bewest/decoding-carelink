@@ -4,7 +4,14 @@
 This repository has moved:
 * https://github.com/openaps/decocare
 
------------------------------------------
+This repository is pinned to the development branch of
+`0.0.30-dev`, just before it was released.  `0.0.30` was
+released, while ongoing releases and further development
+work happen in the community area: 
+* https://github.com/openaps/decocare
+
+------------------------------------------
+------------------------------------------
 
 # Decoding carelink
 
